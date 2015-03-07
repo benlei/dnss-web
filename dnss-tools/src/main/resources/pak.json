@@ -1,0 +1,29 @@
+{
+  "extract": [
+    {
+      "file": "C:/Nexon/DragonNest/Resource00.pak",
+      "output": "X:/Resource00",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource01.pak",
+      "output": "X:/Resource01",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    }
+  ],
+/* These properties are added before each pak's allow/ignore list
+  "allowPathNames": [
+    "^resource/ui/(mainbar|skill)",
+    "^resource/uistring",
+    "^resource/ext"
+  ],
+  "ignorePathNames": [
+
+  ],
+*/
+  "maxThreads": 10
+}
