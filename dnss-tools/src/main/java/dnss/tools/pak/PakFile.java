@@ -2,6 +2,7 @@ package dnss.tools.pak;
 
 import dnss.tools.commons.FileTree;
 import dnss.tools.commons.ReadStream;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,7 +12,7 @@ import java.util.zip.Inflater;
 
 
 public class PakFile {
-    public static final int BUFSIZ = 10240; // 10K
+    final static Logger logger = Logger.getLogger(PakFile.class);
 
     private PakProperties properties;
 
@@ -69,7 +70,7 @@ public class PakFile {
         this.fileTree = fileTree;
     }
 
-    public void createDirectories(FileTree fileTree) {
+    private void createDirectories(FileTree fileTree) {
         if (fileTree == null) {
             return;
         }
@@ -79,7 +80,7 @@ public class PakFile {
         synchronized (pakFile) {
             File dir = new File(properties.getOutput(), pakFile.getPath());
             if (! dir.exists() && ! dir.mkdir()) { // note: the output dir must be fully made outside of this method
-                // something went wrong...
+                logger.error("Could not create directories for " + dir.getPath());
             }
         }
     }
@@ -89,9 +90,10 @@ public class PakFile {
             return;
         }
 
-        synchronized (fileTree.getFile()) {
+        File pakFile = fileTree.getFile();
+        synchronized (pakFile) {
             ReadStream readStream = new ReadStream(properties.getFile());
-            File file = new File(properties.getOutput(), fileTree.getFile().getPath());
+            File absoluteFile = new File(properties.getOutput(), pakFile.getPath());
             createDirectories(fileTree.getParent());
 
             readStream.seek(streamOffset);
@@ -100,17 +102,25 @@ public class PakFile {
             readStream.readFully(pakContents);
             readStream.close();
 
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            byte[] inflatedPakContents = new byte[10240];
+            int totalInflatedSize = 0;
+            FileOutputStream fileOutputStream = new FileOutputStream(absoluteFile);
             Inflater inflater = new Inflater();
             inflater.setInput(pakContents);
-            while (!inflater.finished()) {
-                byte[] inflatedPakContents = new byte[BUFSIZ];
+            while (! inflater.finished()) {
                 int inflatedSize = inflater.inflate(inflatedPakContents);
+                totalInflatedSize += inflatedSize;
                 fileOutputStream.write(inflatedPakContents, 0, inflatedSize);
             }
 
             inflater.end();
             fileOutputStream.close();
+
+            logger.info("[x] " + absoluteFile.getPath() +
+                    " | compressedSize: " + compressedSize +
+                    " | decompressedSize: " + totalInflatedSize +
+                    " | specifiedSize: " + fileSize);
+
         }
     }
 }

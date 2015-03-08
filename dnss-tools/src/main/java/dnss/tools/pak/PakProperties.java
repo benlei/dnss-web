@@ -1,13 +1,15 @@
 package dnss.tools.pak;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class PakProperties {
     private File file;
     private File output;
-    private List<String> allow;
-    private List<String> ignore;
+    private HashMap<String, Pattern> allow;
+    private HashMap<String, Pattern> ignore;
     private boolean extractDeleted;
 
     public File getFile() {
@@ -26,19 +28,19 @@ public class PakProperties {
         this.output = output;
     }
 
-    public List<String> getAllow() {
+    public HashMap<String, Pattern> getAllow() {
         return allow;
     }
 
-    public void setAllow(List<String> allow) {
+    public void setAllow(HashMap<String, Pattern> allow) {
         this.allow = allow;
     }
 
-    public List<String> getIgnore() {
+    public HashMap<String, Pattern> getIgnore() {
         return ignore;
     }
 
-    public void setIgnore(List<String> ignore) {
+    public void setIgnore(HashMap<String, Pattern> ignore) {
         this.ignore = ignore;
     }
 

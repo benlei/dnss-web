@@ -28,7 +28,7 @@ public class ReadStream {
      *         occurs while opening or creating the file.
      */
     public ReadStream(File file) throws FileNotFoundException {
-        RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
+        randomAccessFile = new RandomAccessFile(file, "r");
     }
 
     /**
