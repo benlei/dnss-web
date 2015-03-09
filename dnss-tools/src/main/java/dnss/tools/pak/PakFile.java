@@ -84,11 +84,14 @@ public class PakFile implements Runnable {
             return;
         }
 
-        createDirectories(fileTree.getParent());
-        File dirTree = fileTree.getFile();
-        synchronized (dirTree) {
-            File dir = new File(properties.getOutput(), dirTree.getPath());
-            if (! dir.exists() && ! dir.mkdir()) { // note: the output dir must be fully made outside of this method
+        File fileLock = fileTree.getFile();
+        File dir = new File(properties.getOutput(), fileLock.getPath());
+        if (! dir.exists()) {
+            createDirectories(fileTree.getParent());
+        }
+
+        synchronized (fileLock) {
+            if (! dir.mkdir()) { // note: the output dir must be fully made outside of this method
                 logger.error("Could not create directories for " + dir.getPath());
             }
         }
