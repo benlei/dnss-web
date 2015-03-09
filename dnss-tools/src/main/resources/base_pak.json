@@ -1,0 +1,92 @@
+{
+  "extract": [
+    {
+      "file": "C:/Nexon/DragonNest/Resource00.pak",
+      "output": "E:/Resource00",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource01.pak",
+      "output": "E:/Resource01",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource02.pak",
+      "output": "E:/Resource02",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource03.pak",
+      "output": "E:/Resource03",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource04.pak",
+      "output": "E:/Resource04",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource05.pak",
+      "output": "E:/Resource05",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource06.pak",
+      "output": "E:/Resource06",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource07.pak",
+      "output": "E:/Resource07",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource08.pak",
+      "output": "E:/Resource08",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource09.pak",
+      "output": "E:/Resource09",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource10.pak",
+      "output": "E:/Resource10",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    },
+    {
+      "file": "C:/Nexon/DragonNest/Resource11.pak",
+      "output": "E:/Resource11",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
+    }
+  ],
+  "allow": [],
+  "ignore": [],
+  "logUnextracted": false,
+  "maxThreads": 10
+}

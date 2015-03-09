@@ -6,13 +6,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
+import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
-import java.util.zip.DataFormatException;
-
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -20,9 +17,12 @@ public class Tool {
     final static Logger logger = Logger.getLogger(Tool.class);
     final static String jsonFile = "pak.json";
     private static JSONObject json;
-    private static HashMap<String, Pattern> globalAllowMap = new HashMap<String, Pattern>();
-    private static HashMap<String, Pattern> globalIgnoreMap = new HashMap<String, Pattern>();
+    private static ArrayList<Pattern> globalAllowList = new ArrayList<Pattern>();
+    private static ArrayList<Pattern> globalIgnoreList = new ArrayList<Pattern>();
     private static ArrayList<PakProperties> propertiesList = new ArrayList<PakProperties>();
+    private static int maxThreads = 10;
+    protected static boolean logUnextracted = false;
+    protected static Semaphore semaphore;
 
     static {
         InputStream inputStream = Tool.class.getClassLoader().getResourceAsStream(jsonFile);
@@ -31,34 +31,40 @@ public class Tool {
         json = new JSONObject(jsonContents);
     }
 
-    private static HashMap<String, Pattern> loadPatternMap(JSONArray json) {
-        HashMap<String, Pattern> patternMap = new HashMap<String, Pattern>();
+    private static ArrayList<Pattern> loadPatternList(JSONArray json) {
+        ArrayList<Pattern> patternList = new ArrayList<Pattern>();
         for (int i = 0; i < json.length(); i++) {
-            String pattern = json.getString(i);
-            patternMap.put(pattern, Pattern.compile(pattern));
-            logger.info("Loaded pattern " + pattern);
+            String patternString = json.getString(i).replaceAll("\\/", "\\\\\\\\");
+            Pattern pattern = Pattern.compile(patternString);
+            patternList.add(pattern);
         }
 
-        return patternMap;
+        return patternList;
     }
 
-    private static void loadGlobalAllowMap() {
+    private static void loadGlobalAllowList() {
         if (json.has("allow")) {
-            logger.info("Loading global allow patterns...");
-            globalAllowMap = loadPatternMap(json.getJSONArray("allow"));
-            logger.info("Successfully loaded " + globalAllowMap.size() + " global allowed patterns.");
-        } else {
-            logger.info("No global allowed patterns have been loaded.");
+            globalAllowList = loadPatternList(json.getJSONArray("allow"));
         }
     }
 
-    private static void loadGlobalIgnoreMap() {
+    private static void loadGlobalIgnoreList() {
         if (json.has("ignore")) {
-            logger.info("Loading global ignore patterns...");
-            globalIgnoreMap = loadPatternMap(json.getJSONArray("ignore"));
-            logger.info("Successfully loaded " + globalIgnoreMap.size() + " global ignore patterns.");
-        } else {
-            logger.info("No global ignore patterns have been loaded.");
+            globalIgnoreList = loadPatternList(json.getJSONArray("ignore"));
+        }
+    }
+
+    private static void loadMaxThreadCount() {
+        if (json.has("maxThreads")) {
+            maxThreads = json.getInt("maxThreads");
+        }
+
+        semaphore = new Semaphore(maxThreads);
+    }
+
+    private static void loadLogUnextracted() {
+        if (json.has("logUnextracted")) {
+            logUnextracted = json.getBoolean("logUnextracted");
         }
     }
 
@@ -69,8 +75,6 @@ public class Tool {
             PakProperties properties = new PakProperties();
             properties.setFile(new File(propertiesJSON.getString("file")));
             if (! properties.getFile().exists()) {
-                logger.warn("Could not find pak file " + properties.getFile().getPath());
-                logger.warn("Skipping...");
                 continue;
             }
 
@@ -82,76 +86,106 @@ public class Tool {
                 properties.setExtractDeleted(false);
             }
 
-            if (properties.canExtractDeleted()) {
-                logger.info(properties.getFile().getPath() + " will extract files that are set as deleted.");
-            } else {
-                logger.info(properties.getFile().getPath() + " will NOT extract files that are set as deleted.");
-            }
-
-            logger.info("Found file " + properties.getFile().getPath());
-            logger.info("Output directory is set to " + properties.getOutput().getPath());
-
             if (propertiesJSON.has("allow")) {
-                HashMap<String, Pattern> map = new HashMap<String, Pattern>(globalAllowMap);
-                logger.info("Loading " + properties.getFile().getPath() + " allow patterns");
-                map.putAll(loadPatternMap(propertiesJSON.getJSONArray("allow")));
-                properties.setAllow(map);
-                logger.info(properties.getFile().getPath() + " has a total of " + map.size() + " allow patterns" +
-                        " (including the global allow patterns)");
+                ArrayList<Pattern> list = new ArrayList<Pattern>(globalAllowList);
+                list.addAll(loadPatternList(propertiesJSON.getJSONArray("allow")));
+                properties.setAllow(list);
             } else {
-                properties.setAllow(new HashMap<String, Pattern>(globalAllowMap));
-                logger.info("Using global allow patterns for " + properties.getFile().getPath());
+                properties.setAllow(globalAllowList);
             }
 
             if (propertiesJSON.has("ignore")) {
-                HashMap<String, Pattern> map = new HashMap<String, Pattern>(globalIgnoreMap);
-                logger.info("Loading " + properties.getFile().getPath() + " ignore patterns");
-                map.putAll(loadPatternMap(propertiesJSON.getJSONArray("ignore")));
-                properties.setIgnore(map);
-                logger.info(properties.getFile().getPath() + " has a total of " + map.size() + " ignore patterns" +
-                        " (including the global ignore patterns)");
+                ArrayList<Pattern> list = new ArrayList<Pattern>(globalIgnoreList);
+                list.addAll(loadPatternList(propertiesJSON.getJSONArray("ignore")));
+                properties.setIgnore(list);
             } else {
-                properties.setIgnore(new HashMap<String, Pattern>(globalIgnoreMap));
-                logger.info("Using global ignore patterns for " + properties.getFile().getPath());
+                properties.setIgnore(globalIgnoreList);
             }
 
             propertiesList.add(properties);
         }
     }
 
+    public static void debugProperties() {
+        logger.info("================================================================================");
+        logger.info("DNSS Tool - Pak - Properties");
+        logger.info("================================================================================");
+        logger.info(String.format("%-40s = %d", "maxThreads", maxThreads));
+        logger.info(String.format("%-40s = %s", "logUnextracted", String.valueOf(logUnextracted)));
+        for (int i = 0; i < globalAllowList.size(); i++) {
+            logger.info(String.format("%-40s = %s", "allow[" + i + "]", globalAllowList.get(i).pattern()));
+        }
+
+        for (int i = 0; i < globalIgnoreList.size(); i++) {
+            logger.info(String.format("%-40s = %s", "ignore[" + i + "]", globalIgnoreList.get(i).pattern()));
+        }
+
+        for (int i = 0; i < propertiesList.size(); i++) {
+            PakProperties properties = propertiesList.get(i);
+            logger.info(String.format("%-40s = %s", "extract[" + i + "].file", properties.getFilePath()));
+            logger.info(String.format("%-40s = %s", "extract[" + i + "].output", properties.getOutputPath()));
+            for (int j = 0; i < properties.getAllow().size(); j++) {
+                logger.info(String.format("%-40s = %s", "extract[" + i + "].allow[" + j + "]",
+                        properties.getAllow().get(j).pattern()));
+            }
+
+            for (int j = 0; i < properties.getIgnore().size(); j++) {
+                logger.info(String.format("%-40s = %s", "extract[" + i + "].ignore[" + j + "]",
+                        properties.getIgnore().get(j).pattern()));
+            }
+
+            logger.info(String.format("%-40s = %s", "extract[" + i + "].extractDeleted",
+                    String.valueOf(properties.canExtractDeleted())));
+        }
+    }
+
     public static void main(String[] args)  {
-        loadGlobalAllowMap();
-        loadGlobalIgnoreMap();
+        loadMaxThreadCount();
+        loadLogUnextracted();
+        loadGlobalAllowList();
+        loadGlobalIgnoreList();
         loadAllPakProperties();
 
+        debugProperties();
+
+        long startTime = System.currentTimeMillis();
         for (PakProperties properties : propertiesList) {
-            File file = properties.getFile();
-            File output = properties.getOutput();
-            logger.info("================================================");
-            logger.info("Beginning to extract " + file.getPath());
-            logger.info("================================================");
             try {
+                File output = properties.getOutput();
                 if (! output.exists() && ! output.mkdirs()) {
                     logger.error("Could not create output directory " + output.getPath());
                     continue;
                 }
 
                 PakParser pakParser = new PakParser(properties);
-                ArrayList<PakFile> pakFiles = pakParser.parse();
-
-                if (pakFiles == null) {
-                    continue;
-                }
-
-                for (PakFile pakFile : pakFiles) {
-                    pakFile.extract();
-                }
+                (new Thread(pakParser)).start();
             } catch (IOException e) {
-                logger.error(e);
-            } catch (DataFormatException e) {
                 logger.error(e);
             }
         }
 
+        boolean allDone = false;
+        while (! allDone) {
+            allDone = true;
+            for (PakProperties properties : propertiesList) {
+                allDone = allDone && properties.getTotalFiles() > 0 && (properties.getTotalFiles() == properties.getIterFiles());
+            }
+
+            if (! allDone) {
+                Thread.yield();
+            }
+        }
+
+
+        long endTime = System.currentTimeMillis();
+        for (PakProperties properties : propertiesList) {
+            logger.info("================================================");
+            logger.info("Extraction information for " + properties.getFilePath());
+            logger.info("================================================");
+            logger.info("Total files in pak: " + properties.getTotalFiles());
+            logger.info("Total files extracted from pak: " + properties.getExtractedFiles());
+        }
+
+        logger.info("Total execution time: " + (endTime-startTime) + "ms");
     }
 }

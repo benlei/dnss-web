@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 import java.util.HashMap;
 
-public class PakParser {
+public class PakParser implements Runnable {
     final static Logger logger = Logger.getLogger(PakParser.class);
     public static final String HEADER = "EyedentityGames Packing File 0.1";
     public static final long START_POS = 260;
@@ -21,7 +21,15 @@ public class PakParser {
 
     public PakParser(PakProperties properties) throws IOException {
         this.properties = properties;
-        readStream = new ReadStream(properties.getFile());
+    }
+
+
+    public PakProperties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(PakProperties properties) {
+        this.properties = properties;
     }
 
     private boolean isValidPak() throws IOException {
@@ -31,8 +39,10 @@ public class PakParser {
     }
 
     public ArrayList<PakFile> parse() throws IOException {
+        readStream = new ReadStream(properties.getFile());
+
         if (! isValidPak()) {
-            logger.error("Invalid pak file header, aborting parsing " + properties.getFile().getPath());
+            logger.error("Invalid pak file header, aborting parsing " + properties.getFilePath());
             return null;
         }
 
@@ -63,7 +73,9 @@ public class PakParser {
             pakFiles.add(pakFile);
         }
 
-        logger.info("Total files found in " + properties.getFile().getPath() +": " + pakFiles.size());
+        properties.setTotalFiles(pakFiles.size());
+        logger.info("Total files found in " + properties.getFilePath() +": " + pakFiles.size());
+        readStream.close();
         return pakFiles;
     }
 
@@ -105,5 +117,21 @@ public class PakParser {
 
     public void close() throws IOException {
         readStream.close();
+    }
+
+    public void run() {
+        try {
+            Tool.semaphore.acquireUninterruptibly();
+            ArrayList<PakFile> pakFiles = parse();
+            if (pakFiles != null) {
+                for (PakFile pakFile : pakFiles) {
+                    new Thread(pakFile).start();
+                }
+            }
+        } catch (IOException e) {
+            logger.error("Could not parse " + properties.getFilePath(), e);
+        } finally {
+            Tool.semaphore.release();
+        }
     }
 }

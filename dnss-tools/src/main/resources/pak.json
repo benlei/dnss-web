@@ -2,19 +2,14 @@
   "extract": [
     {
       "file": "C:/Nexon/DragonNest/Resource00.pak",
-      "output": "E:/Resource00"
-    },
-    {
-      "file": "C:/Nexon/DragonNest/Resource01.pak",
-      "output": "E:/Resource01"
+      "output": "E:/Resource00",
+      "allow": [],
+      "ignore": [],
+      "extractDeleted": false
     }
   ],
-
-  "allow": [
-    "^/resource/ui/(mainbar|skill)",
-    "^/resource/uistring",
-    "^/resource/ext"
-  ],
-
-  "maxThreads": 10
+  "allow": [],
+  "ignore": [],
+  "logUnextracted": true,
+  "maxThreads": 25
 }
