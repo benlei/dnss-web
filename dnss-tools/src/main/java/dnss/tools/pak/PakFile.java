@@ -79,6 +79,7 @@ public class PakFile implements Runnable {
         this.properties = properties;
     }
 
+    // make iterative, not recursive.
     private void createDirectories(FileTree fileTree) {
         if (fileTree == null) {
             return;
@@ -88,13 +89,13 @@ public class PakFile implements Runnable {
         File dir = new File(properties.getOutput(), fileLock.getPath());
         if (! dir.exists()) {
             createDirectories(fileTree.getParent());
-        }
-
-        synchronized (fileLock) {
-            if (! dir.mkdir()) { // note: the output dir must be fully made outside of this method
-                logger.error("Could not create directories for " + dir.getPath());
+            synchronized (fileLock) {
+                if (! dir.mkdir()) { // note: the output dir must be fully made outside of this method
+                    logger.error("Could not create directories for " + dir.getPath());
+                }
             }
         }
+
     }
 
 
