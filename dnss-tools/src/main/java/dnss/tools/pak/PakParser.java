@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Semaphore;
 
 public class PakParser implements Runnable {
     final static Logger logger = Logger.getLogger(PakParser.class);
@@ -87,13 +88,14 @@ public class PakParser implements Runnable {
     }
 
     public void run() {
+        Semaphore semaphore = properties.getSemaphore();
         try {
-            properties.getSemaphore().acquireUninterruptibly();
+            semaphore.acquireUninterruptibly();
             parse();
         } catch (IOException e) {
             logger.error("Could not parse " + properties.getFilePath(), e);
         } finally {
-            properties.getSemaphore().release();
+            semaphore.release();
         }
     }
 }

@@ -161,27 +161,37 @@ public class Tool {
         while (wait) {
             Thread.yield();
             Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
-            boolean stillWait = false;
+            wait = false;
             for (Thread t : threadSet) {
                 if (t.getName().equals("dnss.tools.pak")) {
-                    stillWait = true;
+                    wait = true;
                     break;
                 }
             }
-
-            wait = stillWait;
         }
 
         long endTime = System.currentTimeMillis();
 
+        logger.info("================================================================================");
+        logger.info("Extraction Summary");
+        logger.info("================================================================================");
         for (PakProperties properties : propertiesList) {
-            logger.info("================================================");
-            logger.info("Extraction information for " + properties.getFilePath());
-            logger.info("================================================");
-            logger.info("Total files in pak: " + properties.getTotalFiles());
-            logger.info("Total files extracted from pak: " + properties.getExtractedFiles());
+            logger.info(properties.getFilePath());
+            logger.info("    Total Files Discovered: " + properties.getTotalFiles());
+            logger.info("    Total Files Extracted: " + properties.getExtractedFiles());
         }
 
-        logger.info("Total execution time: " + (endTime-startTime) + "ms");
+        long timeInMS  = endTime - startTime;
+        long timeInS   = timeInMS / 1000;
+        long timeInM_M = timeInS / 60;
+        long timeInM_S = timeInS - (timeInM_M * 60);
+        long timeInH_H = timeInM_M / 60;
+        long timeInH_M = timeInM_M - (timeInH_H * 60);
+
+        logger.info("Total execution time: " + timeInH_H + " hr, " + timeInH_M + " min, and " + timeInM_S + " s, or");
+        logger.info("                      " + timeInM_M + " min and " + timeInM_S + " s, or");
+        logger.info("                      " + timeInS + " s, or");
+        logger.info("                      " + timeInMS + " ms");
+
     }
 }
