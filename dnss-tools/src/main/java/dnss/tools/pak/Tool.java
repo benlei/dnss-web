@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -21,8 +23,7 @@ public class Tool {
     private static ArrayList<Pattern> globalIgnoreList = new ArrayList<Pattern>();
     private static ArrayList<PakProperties> propertiesList = new ArrayList<PakProperties>();
     private static int maxThreads = 10;
-    protected static boolean logUnextracted = false;
-    protected static Semaphore semaphore;
+    private static Semaphore semaphore;
 
     static {
         InputStream inputStream = Tool.class.getClassLoader().getResourceAsStream(jsonFile);
@@ -62,12 +63,6 @@ public class Tool {
         semaphore = new Semaphore(maxThreads);
     }
 
-    private static void loadLogUnextracted() {
-        if (json.has("logUnextracted")) {
-            logUnextracted = json.getBoolean("logUnextracted");
-        }
-    }
-
     private static void loadAllPakProperties() {
         JSONArray propertiesListJSON = json.getJSONArray("extract");
         for (int i = 0; i < propertiesListJSON.length(); i++) {
@@ -102,6 +97,9 @@ public class Tool {
                 properties.setIgnore(globalIgnoreList);
             }
 
+            properties.setSemaphore(semaphore);
+            properties.setMaxThreads(maxThreads);
+            properties.setAccumulator(new PakAccumulator(properties));
             propertiesList.add(properties);
         }
     }
@@ -111,7 +109,6 @@ public class Tool {
         logger.info("DNSS Tool - Pak - Properties");
         logger.info("================================================================================");
         logger.info(String.format("%-40s = %d", "maxThreads", maxThreads));
-        logger.info(String.format("%-40s = %s", "logUnextracted", String.valueOf(logUnextracted)));
         for (int i = 0; i < globalAllowList.size(); i++) {
             logger.info(String.format("%-40s = %s", "allow[" + i + "]", globalAllowList.get(i).pattern()));
         }
@@ -139,45 +136,44 @@ public class Tool {
         }
     }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws InterruptedException {
         loadMaxThreadCount();
-        loadLogUnextracted();
         loadGlobalAllowList();
         loadGlobalIgnoreList();
-        loadAllPakProperties();
+        loadAllPakProperties(); // must be done last
 
         debugProperties();
 
         long startTime = System.currentTimeMillis();
         for (PakProperties properties : propertiesList) {
             try {
-                File output = properties.getOutput();
-                if (! output.exists() && ! output.mkdirs()) {
-                    logger.error("Could not create output directory " + output.getPath());
-                    continue;
-                }
-
                 PakParser pakParser = new PakParser(properties);
-                (new Thread(pakParser)).start();
+                Thread t = new Thread(pakParser);
+                t.setName("dnss.tools.pak");
+                t.start();
             } catch (IOException e) {
-                logger.error(e);
+                logger.error("Could not read " + properties.getFilePath(), e);
             }
         }
 
-        boolean allDone = false;
-        while (! allDone) {
-            allDone = true;
-            for (PakProperties properties : propertiesList) {
-                allDone = allDone && properties.getTotalFiles() > 0 && (properties.getTotalFiles() == properties.getIterFiles());
+
+        boolean wait = true;
+        while (wait) {
+            Thread.yield();
+            Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
+            boolean stillWait = false;
+            for (Thread t : threadSet) {
+                if (t.getName().equals("dnss.tools.pak")) {
+                    stillWait = true;
+                    break;
+                }
             }
 
-            if (! allDone) {
-                Thread.yield();
-            }
+            wait = stillWait;
         }
-
 
         long endTime = System.currentTimeMillis();
+
         for (PakProperties properties : propertiesList) {
             logger.info("================================================");
             logger.info("Extraction information for " + properties.getFilePath());

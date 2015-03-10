@@ -1,7 +1,9 @@
 package dnss.tools.pak;
 
+import dnss.tools.commons.Accumulator;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
 
 public class PakProperties {
@@ -12,7 +14,9 @@ public class PakProperties {
     private boolean extractDeleted;
     private int totalFiles;
     private int extractedFiles;
-    private int iterFiles;
+    private Semaphore semaphore;
+    private Accumulator accumulator;
+    private int maxThreads;
 
     public File getFile() {
         return file;
@@ -78,11 +82,27 @@ public class PakProperties {
         ++extractedFiles;
     }
 
-    public int getIterFiles() {
-        return iterFiles;
+    public Semaphore getSemaphore() {
+        return semaphore;
     }
 
-    public synchronized void increaseIterFiles() {
-        ++iterFiles;
+    public void setSemaphore(Semaphore semaphore) {
+        this.semaphore = semaphore;
+    }
+
+    public Accumulator getAccumulator() {
+        return accumulator;
+    }
+
+    public void setAccumulator(Accumulator accumulator) {
+        this.accumulator = accumulator;
+    }
+
+    public int getMaxThreads() {
+        return maxThreads;
+    }
+
+    public void setMaxThreads(int maxThreads) {
+        this.maxThreads = maxThreads;
     }
 }

@@ -1,9 +1,7 @@
 package dnss.tools.pak;
 
-import dnss.tools.commons.FileTree;
 import dnss.tools.commons.ReadStream;
 import org.apache.log4j.Logger;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,7 +23,9 @@ public class PakFile implements Runnable {
 
     private String filePath;
 
-    private FileTree fileTree;
+    private File file;
+
+    private static Object LOCK = new Object();
 
     public PakFile(PakProperties properties) {
         this.properties = properties;
@@ -63,12 +63,12 @@ public class PakFile implements Runnable {
         this.fileSize = fileSize;
     }
 
-    public FileTree getFileTree() {
-        return fileTree;
+    public File getFile() {
+        return file;
     }
 
-    public void setFileTree(FileTree fileTree) {
-        this.fileTree = fileTree;
+    public void setFile(File file) {
+        this.file = file;
     }
 
     public PakProperties getProperties() {
@@ -78,26 +78,6 @@ public class PakFile implements Runnable {
     public void setProperties(PakProperties properties) {
         this.properties = properties;
     }
-
-    // make iterative, not recursive.
-    private void createDirectories(FileTree fileTree) {
-        if (fileTree == null) {
-            return;
-        }
-
-        File fileLock = fileTree.getFile();
-        File dir = new File(properties.getOutput(), fileLock.getPath());
-        if (! dir.exists()) {
-            createDirectories(fileTree.getParent());
-            synchronized (fileLock) {
-                if (! dir.mkdir()) { // note: the output dir must be fully made outside of this method
-                    logger.error("Could not create directories for " + dir.getPath());
-                }
-            }
-        }
-
-    }
-
 
     public boolean isExtractAllowed() {
         boolean allowed = false, ignored = false;
@@ -120,26 +100,27 @@ public class PakFile implements Runnable {
         return allowed && ! ignored;
     }
 
+
     public void extract() throws IOException, DataFormatException {
-        File pakFile = fileTree.getFile();
-        File absoluteFile = new File(properties.getOutput(), pakFile.getPath());
+        File absoluteFile = new File(properties.getOutput(), filePath);
 
         if (! properties.canExtractDeleted() && fileSize == 0) {
             logger.info("[d] " + absoluteFile.getPath());
-            properties.increaseIterFiles();
             return;
         } else  if (! isExtractAllowed()) {
-            if (Tool.logUnextracted) {
-                logger.info("[ ] " + absoluteFile.getPath());
-            }
-
-            properties.increaseIterFiles();
+            logger.info("[ ] " + absoluteFile.getPath());
             return;
         }
 
-        synchronized (pakFile) {
+        synchronized (file) {
             ReadStream readStream = new ReadStream(properties.getFile());
-            createDirectories(fileTree.getParent());
+
+            synchronized (LOCK) {
+                File dir = absoluteFile.getParentFile();
+                if (! dir.exists() && ! dir.mkdirs()) {
+                    logger.error("Could not create directory " + dir.getPath());
+                }
+            }
 
             readStream.seek(streamOffset);
 
@@ -147,7 +128,7 @@ public class PakFile implements Runnable {
             readStream.readFully(pakContents);
             readStream.close();
 
-            byte[] inflatedPakContents = new byte[1024];
+            byte[] inflatedPakContents = new byte[8192];
             FileOutputStream fileOutputStream = new FileOutputStream(absoluteFile);
             Inflater inflater = new Inflater();
             inflater.setInput(pakContents);
@@ -161,20 +142,20 @@ public class PakFile implements Runnable {
 
             logger.info("[x] " + absoluteFile.getPath());
             properties.increaseExtractedFilesCount();
-            properties.increaseIterFiles();
         }
     }
 
     public void run() {
         try {
-            Tool.semaphore.acquireUninterruptibly();
+            properties.getSemaphore().acquireUninterruptibly();
             extract();
         } catch(IOException e) {
             logger.error("Could not extract " + filePath + " from " + properties.getFilePath(), e);
         } catch (DataFormatException e) {
             logger.error("Could not extract zipped content " + filePath + " from " +  properties.getFilePath(), e);
         } finally {
-            Tool.semaphore.release();
+            properties.getAccumulator().dissipate();
+            properties.getSemaphore().release();
         }
     }
 }

@@ -87,6 +87,5 @@
   ],
   "allow": [],
   "ignore": [],
-  "logUnextracted": false,
   "maxThreads": 10
 }

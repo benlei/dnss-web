@@ -1,21 +1,19 @@
 package dnss.tools.pak;
 
 import dnss.tools.commons.ReadStream;
-import dnss.tools.commons.FileTree;
+import dnss.tools.commons.Accumulator;
 import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Stack;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class PakParser implements Runnable {
     final static Logger logger = Logger.getLogger(PakParser.class);
     public static final String HEADER = "EyedentityGames Packing File 0.1";
     public static final long START_POS = 260;
     private static final Object LOCK = new Object();
-    private static HashMap<String, FileTree> hashMap = new HashMap<String, FileTree>();
+    private static ConcurrentHashMap<String, File> map = new ConcurrentHashMap<String, File>();
     private PakProperties properties;
     private ReadStream readStream;
 
@@ -38,15 +36,15 @@ public class PakParser implements Runnable {
         return header.equals(HEADER);
     }
 
-    public ArrayList<PakFile> parse() throws IOException {
+    public void parse() throws IOException {
         readStream = new ReadStream(properties.getFile());
 
         if (! isValidPak()) {
             logger.error("Invalid pak file header, aborting parsing " + properties.getFilePath());
-            return null;
+            return;
         }
 
-        ArrayList<PakFile> pakFiles = new ArrayList<PakFile>();
+        Accumulator accumulator = properties.getAccumulator();
 
         // gets # of files and start offset
         readStream.seek(START_POS);
@@ -66,53 +64,22 @@ public class PakParser implements Runnable {
             pakFile.setStreamOffset(readStream.readInt());
 
             // setup the file tree for synchronization when extracting/making directories
-            File file = new File(pakFile.getFilePath());
-            FileTree fileTree = generateFileTree(file);
-            pakFile.setFileTree(fileTree);
+            pakFile.setFile(getFile(pakFile.getFilePath()));
 
-            pakFiles.add(pakFile);
+            accumulator.accumulate(pakFile);
         }
 
-        properties.setTotalFiles(pakFiles.size());
-        logger.info("Total files found in " + properties.getFilePath() +": " + pakFiles.size());
+        properties.setTotalFiles(accumulator.accumulations());
         readStream.close();
-        return pakFiles;
     }
 
-    private FileTree generateFileTree(File file) {
-        synchronized (LOCK) {
-            Stack<File> stack = new Stack<File>();
-            File absoluteFile;
-            File output = properties.getOutput();
-            FileTree fileTree = null;
-
-            while (!file.getPath().equals(File.separator)) {
-                absoluteFile = new File(output, file.getPath());
-                if (hashMap.containsKey(absoluteFile.getPath())) {
-                    fileTree = hashMap.get(absoluteFile.getPath());
-                    break;
-                }
-
-                stack.push(file);
-                file = file.getParentFile();
-            }
-
-            if (fileTree == null) {
-                file = stack.pop();
-                fileTree = new FileTree(file);
-                absoluteFile = new File(output, file.getPath());
-                hashMap.put(absoluteFile.getPath(), fileTree);
-            }
-
-            while (!stack.empty()) {
-                file = stack.pop();
-                absoluteFile = new File(output, file.getPath());
-                fileTree = fileTree.createChild(file);
-                hashMap.put(absoluteFile.getPath(), fileTree);
-            }
-
-            return fileTree;
+    private File getFile(String filePath) {
+        File dir = new File(properties.getOutput(), filePath);
+        if (! map.containsKey(dir.getPath())) {
+            map.put(dir.getPath(), new File(filePath));
         }
+
+        return map.get(dir.getPath());
     }
 
     public void close() throws IOException {
@@ -121,17 +88,12 @@ public class PakParser implements Runnable {
 
     public void run() {
         try {
-            Tool.semaphore.acquireUninterruptibly();
-            ArrayList<PakFile> pakFiles = parse();
-            if (pakFiles != null) {
-                for (PakFile pakFile : pakFiles) {
-                    new Thread(pakFile).start();
-                }
-            }
+            properties.getSemaphore().acquireUninterruptibly();
+            parse();
         } catch (IOException e) {
             logger.error("Could not parse " + properties.getFilePath(), e);
         } finally {
-            Tool.semaphore.release();
+            properties.getSemaphore().release();
         }
     }
 }
