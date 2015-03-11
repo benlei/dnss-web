@@ -12,7 +12,7 @@ import java.util.zip.Inflater;
 
 
 public class PakFile implements Runnable {
-    final static Logger logger = Logger.getLogger(PakFile.class);
+    private final static Logger logger = Logger.getLogger(PakFile.class);
 
     private PakProperties properties;
 

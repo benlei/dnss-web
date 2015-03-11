@@ -15,8 +15,8 @@ import org.json.JSONObject;
 
 
 public class Tool {
-    final static Logger logger = Logger.getLogger(Tool.class);
-    final static String jsonFile = "pak.json";
+    private final static Logger logger = Logger.getLogger(Tool.class);
+    private final static String jsonFile = "pak.json";
     private static JSONObject json;
     private static ArrayList<Pattern> globalAllowList = new ArrayList<Pattern>();
     private static ArrayList<Pattern> globalIgnoreList = new ArrayList<Pattern>();

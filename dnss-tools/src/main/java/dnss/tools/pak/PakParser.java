@@ -9,37 +9,26 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Semaphore;
 
 public class PakParser implements Runnable {
-    final static Logger logger = Logger.getLogger(PakParser.class);
+    private final static Logger logger = Logger.getLogger(PakParser.class);
     public static final String HEADER = "EyedentityGames Packing File 0.1";
     public static final long START_POS = 260;
-    private static final Object LOCK = new Object();
     private static ConcurrentHashMap<String, File> map = new ConcurrentHashMap<String, File>();
     private PakProperties properties;
-    private ReadStream readStream;
 
     public PakParser(PakProperties properties) throws IOException {
         this.properties = properties;
     }
 
-
-    public PakProperties getProperties() {
-        return properties;
-    }
-
-    public void setProperties(PakProperties properties) {
-        this.properties = properties;
-    }
-
-    private boolean isValidPak() throws IOException {
+    private boolean isValidPak(ReadStream readStream) throws IOException {
         readStream.seek(0);
         String header = readStream.readString(HEADER.length());
         return header.equals(HEADER);
     }
 
     public void parse() throws IOException {
-        readStream = new ReadStream(properties.getFile());
+        ReadStream readStream = new ReadStream(properties.getFile());
 
-        if (! isValidPak()) {
+        if (! isValidPak(readStream)) {
             logger.error("Invalid pak file header, aborting parsing " + properties.getFilePath());
             return;
         }
@@ -80,10 +69,6 @@ public class PakParser implements Runnable {
         }
 
         return map.get(dir.getPath());
-    }
-
-    public void close() throws IOException {
-        readStream.close();
     }
 
     public void run() {
