@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 
-
 public class PakFile implements Runnable {
     private final static Logger logger = Logger.getLogger(PakFile.class);
 
@@ -123,10 +122,8 @@ public class PakFile implements Runnable {
                 }
             }
 
-            readStream.seek(streamOffset);
-
             byte[] pakContents = new byte[compressedSize];
-            readStream.readFully(pakContents);
+            readStream.seek(streamOffset).readFully(pakContents);
             readStream.close();
 
             byte[] inflatedPakContents = new byte[8192];

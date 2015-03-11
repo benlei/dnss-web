@@ -15,13 +15,12 @@ public class PakParser implements Runnable {
     private static ConcurrentHashMap<String, File> map = new ConcurrentHashMap<String, File>();
     private PakProperties properties;
 
-    public PakParser(PakProperties properties) throws IOException {
+    public PakParser(PakProperties properties) {
         this.properties = properties;
     }
 
     private boolean isValidPak(ReadStream readStream) throws IOException {
-        readStream.seek(0);
-        String header = readStream.readString(HEADER.length());
+        String header = readStream.seek(0).readString(HEADER.length());
         return header.equals(HEADER);
     }
 
@@ -36,8 +35,7 @@ public class PakParser implements Runnable {
         PakFileQueue queue = properties.getQueue();
 
         // gets # of files and start offset
-        readStream.seek(START_POS);
-        int numOfFiles = readStream.readInt();
+        int numOfFiles = readStream.seek(START_POS).readInt();
         readStream.seek(readStream.readInt());
 
         // the skip amount is for after the first iteration

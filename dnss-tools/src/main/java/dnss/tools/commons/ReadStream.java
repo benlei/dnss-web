@@ -98,8 +98,9 @@ public class ReadStream {
      * @param pos the position to move the file pointer to.
      * @throws IOException if an I/O error occurs.
      */
-    public void seek(long pos) throws IOException {
+    public ReadStream seek(long pos) throws IOException {
         randomAccessFile.seek(pos);
+        return this;
     }
 
     /**
@@ -115,16 +116,6 @@ public class ReadStream {
     public ReadStream skip(int n) throws IOException {
         randomAccessFile.skipBytes(n);
         return this;
-    }
-
-    /**
-     * Gets the current position the file pointer is at.
-     *
-     * @return the position the current file pointer.
-     * @throws IOException if an I/O error occurs.
-     */
-    public long getPos() throws IOException {
-        return randomAccessFile.getFilePointer();
     }
 
     /**

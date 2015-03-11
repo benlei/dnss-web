@@ -3,11 +3,9 @@ package dnss.tools.pak;
 import org.apache.log4j.Logger;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
 import org.json.JSONArray;
@@ -145,23 +143,18 @@ public class Tool {
 
         long startTime = System.currentTimeMillis();
         for (PakProperties properties : propertiesList) {
-            try {
-                PakParser pakParser = new PakParser(properties);
-                Thread t = new Thread(pakParser);
-                t.setName("dnss.tools.pak");
-                t.start();
-            } catch (IOException e) {
-                logger.error("Could not read " + properties.getFilePath(), e);
-            }
+            PakParser pakParser = new PakParser(properties);
+            Thread t = new Thread(pakParser);
+            t.setName("dnss.tools.pak");
+            t.start();
         }
 
 
         boolean wait = true;
         while (wait) {
             Thread.yield();
-            Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
             wait = false;
-            for (Thread t : threadSet) {
+            for (Thread t : Thread.getAllStackTraces().keySet()) {
                 if (t.getName().equals("dnss.tools.pak")) {
                     wait = true;
                     break;

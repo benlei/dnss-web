@@ -33,10 +33,6 @@ public class PakFileQueue {
         }
     }
 
-    public int size() {
-        return queue.size();
-    }
-
     public int total() {
         return total;
     }
