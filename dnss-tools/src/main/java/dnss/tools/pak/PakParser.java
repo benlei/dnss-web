@@ -1,7 +1,6 @@
 package dnss.tools.pak;
 
 import dnss.tools.commons.ReadStream;
-import dnss.tools.commons.Accumulator;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -45,7 +44,7 @@ public class PakParser implements Runnable {
             return;
         }
 
-        Accumulator accumulator = properties.getAccumulator();
+        PakFileQueue queue = properties.getQueue();
 
         // gets # of files and start offset
         readStream.seek(START_POS);
@@ -67,10 +66,10 @@ public class PakParser implements Runnable {
             // setup the file tree for synchronization when extracting/making directories
             pakFile.setFile(getFile(pakFile.getFilePath()));
 
-            accumulator.accumulate(pakFile);
+            queue.enqueue(pakFile);
         }
 
-        properties.setTotalFiles(accumulator.accumulations());
+        properties.setTotalFiles(queue.total());
         readStream.close();
     }
 

@@ -98,7 +98,7 @@ public class Tool {
 
             properties.setSemaphore(semaphore);
             properties.setMaxThreads(maxThreads);
-            properties.setAccumulator(new PakAccumulator(properties));
+            properties.setQueue(new PakFileQueue(properties));
             propertiesList.add(properties);
         }
     }

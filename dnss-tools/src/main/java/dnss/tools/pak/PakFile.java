@@ -1,6 +1,5 @@
 package dnss.tools.pak;
 
-import dnss.tools.commons.Accumulator;
 import dnss.tools.commons.ReadStream;
 import org.apache.log4j.Logger;
 import java.io.File;
@@ -148,7 +147,7 @@ public class PakFile implements Runnable {
     }
 
     public void run() {
-        Accumulator accumulator = properties.getAccumulator();
+        PakFileQueue queue = properties.getQueue();
         Semaphore semaphore = properties.getSemaphore();
         try {
             semaphore.acquireUninterruptibly();
@@ -158,7 +157,7 @@ public class PakFile implements Runnable {
         } catch (DataFormatException e) {
             logger.error("Could not extract zipped content " + filePath + " from " +  properties.getFilePath(), e);
         } finally {
-            accumulator.dissipate();
+            queue.dequeue();
             semaphore.release();
         }
     }

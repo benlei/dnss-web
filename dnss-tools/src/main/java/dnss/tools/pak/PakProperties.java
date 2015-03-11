@@ -1,6 +1,5 @@
 package dnss.tools.pak;
 
-import dnss.tools.commons.Accumulator;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
@@ -15,7 +14,7 @@ public class PakProperties {
     private int totalFiles;
     private int extractedFiles;
     private Semaphore semaphore;
-    private Accumulator accumulator;
+    private PakFileQueue queue;
     private int maxThreads;
 
     public File getFile() {
@@ -90,12 +89,12 @@ public class PakProperties {
         this.semaphore = semaphore;
     }
 
-    public Accumulator getAccumulator() {
-        return accumulator;
+    public PakFileQueue getQueue() {
+        return queue;
     }
 
-    public void setAccumulator(Accumulator accumulator) {
-        this.accumulator = accumulator;
+    public void setQueue(PakFileQueue queue) {
+        this.queue = queue;
     }
 
     public int getMaxThreads() {
