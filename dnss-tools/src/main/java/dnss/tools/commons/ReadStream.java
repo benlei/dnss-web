@@ -31,15 +31,22 @@ public class ReadStream {
         randomAccessFile = new RandomAccessFile(file, "r");
     }
 
+    public int read() throws IOException {
+        int b = randomAccessFile.read();
+        if (b < 0) {
+            throw new EOFException();
+        }
+
+        return b;
+    }
+
     /**
      * Reads an int from file stream in Little Endian notation
      *
      * @return an int in Little Endian.
      * @throws IOException if an I/O error occurs.
-     * @throws EOFException
-     *         if this file reaches the end before reading four bytes.
      */
-    public int readInt() throws IOException, EOFException {
+    public int readInt() throws IOException {
         int ch1 = randomAccessFile.read();
         int ch2 = randomAccessFile.read();
         int ch3 = randomAccessFile.read();
@@ -54,10 +61,8 @@ public class ReadStream {
      *
      * @return a short in Little Endian.
      * @throws IOException if an I/O error occurs.
-     * @throws EOFException
-     *         if this file reaches the end before reading four bytes.
      */
-    public short readShort() throws IOException, EOFException {
+    public short readShort() throws IOException {
         int ch1 = randomAccessFile.read();
         int ch2 = randomAccessFile.read();
         if ((ch1 | ch2) < 0)
@@ -70,10 +75,8 @@ public class ReadStream {
      *
      * @return a float in Little Endian.
      * @throws IOException if an I/O error occurs.
-     * @throws EOFException
-     *         if this file reaches the end before reading four bytes.
      */
-    public float readFloat() throws IOException, EOFException {
+    public float readFloat() throws IOException {
         return Float.intBitsToFloat(readInt());
     }
 
