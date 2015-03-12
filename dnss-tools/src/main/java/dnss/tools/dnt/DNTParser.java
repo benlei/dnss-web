@@ -3,6 +3,7 @@ package dnss.tools.dnt;
 import dnss.tools.commons.ReadStream;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 public class DNTParser {
@@ -26,12 +27,11 @@ public class DNTParser {
         }
 
         for (int i = 0; i < numRows; i++) {
-            DNTEntry dntEntry = table.newEntry();
+            HashMap<String, Object> row = new HashMap<String, Object>();
             for (Map.Entry<String, DNT> entry : table.getFields().entrySet()) {
-                String col = entry.getKey();
-                DNT dnt = entry.getValue();
-                dntEntry.put(col, dnt.read(readStream));
+                row.put(entry.getKey(), entry.getValue().read(readStream));
             }
+            table.add(row);
         }
 
         readStream.close();
