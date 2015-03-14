@@ -5,6 +5,7 @@
       "output": "E:/Resource00",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -12,6 +13,7 @@
       "output": "E:/Resource01",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -19,6 +21,7 @@
       "output": "E:/Resource02",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -26,6 +29,7 @@
       "output": "E:/Resource03",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -33,6 +37,7 @@
       "output": "E:/Resource04",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -40,6 +45,7 @@
       "output": "E:/Resource05",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -47,6 +53,7 @@
       "output": "E:/Resource06",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -54,6 +61,7 @@
       "output": "E:/Resource07",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -61,6 +69,7 @@
       "output": "E:/Resource08",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -68,6 +77,7 @@
       "output": "E:/Resource09",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -75,6 +85,7 @@
       "output": "E:/Resource10",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     },
     {
@@ -82,10 +93,12 @@
       "output": "E:/Resource11",
       "allow": [],
       "ignore": [],
+      "flatten": false,
       "extractDeleted": false
     }
   ],
   "allow": [],
   "ignore": [],
+  "flatten": false,
   "maxThreads": 10
 }

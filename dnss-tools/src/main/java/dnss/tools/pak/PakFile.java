@@ -7,11 +7,13 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
+import java.nio.file.Files;
 
 public class PakFile implements Runnable {
     private final static Logger logger = Logger.getLogger(PakFile.class);
@@ -40,6 +42,9 @@ public class PakFile implements Runnable {
 
     public void setFilePath(String filePath) {
         this.filePath =  filePath.substring(0, filePath.indexOf('\0')).trim();
+        if (DNSS.get("flatten", false, Boolean.TYPE) || properties.get("flatten", false, Boolean.TYPE)) {
+            this.filePath = this.filePath.substring(this.filePath.lastIndexOf('/'));
+        }
     }
 
     public int getStreamOffset() {
@@ -129,7 +134,7 @@ public class PakFile implements Runnable {
     public void extract() throws IOException, DataFormatException {
         File absoluteFile = new File(properties.get("output", String.class), filePath);
 
-        if (! properties.get("extractDeleted", Boolean.TYPE) && fileSize == 0) {
+        if (! properties.get("extractDeleted", false, Boolean.TYPE) && fileSize == 0) {
             logger.info("[d] " + absoluteFile.getPath());
             return;
         } else  if (! isExtractAllowed()) {
@@ -151,20 +156,26 @@ public class PakFile implements Runnable {
         readStream.close();
 
         synchronized (file) {
-            int i = 1;
-            File outputFile = absoluteFile;
-            while (outputFile.exists()) {
+            if (absoluteFile.exists()) {
+                int i = 1;
                 int extPos = filePath.lastIndexOf('.');
+                File outputFile;
                 if (extPos == -1) {
                     extPos = filePath.length();
                 }
 
-                String newPath = filePath.substring(0, extPos) + i++ + filePath.substring(extPos);
-                outputFile = new File(properties.get("output", String.class), newPath);
+                String fileWithoutExt = filePath.substring(0, extPos);
+                String fileExt = filePath.substring(extPos);
+                do {
+                    outputFile = new File(properties.get("output", String.class), fileWithoutExt + "+" + i + fileExt);
+                    i++;
+                } while (outputFile.exists());
+
+                Files.move(absoluteFile.toPath(), outputFile.toPath());
             }
 
             byte[] inflatedPakContents = new byte[8192];
-            FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
+            FileOutputStream fileOutputStream = new FileOutputStream(absoluteFile);
             Inflater inflater = new Inflater();
             inflater.setInput(pakContents);
             while (! inflater.finished()) {
@@ -174,11 +185,11 @@ public class PakFile implements Runnable {
 
             inflater.end();
             fileOutputStream.close();
-            logger.info("[x] " + outputFile.getPath());
+            logger.info("[x] " + absoluteFile.getPath());
         }
 
         synchronized (properties) {
-            properties.set("extractCount", properties.get("extractCount", Integer.TYPE) + 1);
+            properties.set("extractCount", properties.get("extractCount", 0, Integer.TYPE) + 1);
         }
 
     }

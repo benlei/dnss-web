@@ -43,13 +43,8 @@ public class Tool {
         }
     }
 
-    private static void loadMaxThreadCount() {
-        int defaultVal = 1;
-        if (DNSS.has("maxThreads")) {
-            defaultVal = DNSS.get("maxThreads", Integer.TYPE);
-        }
-
-        DNSS.set("semaphore", new Semaphore(defaultVal));
+    private static void loadSemaphore() {
+        DNSS.set("semaphore", new Semaphore(DNSS.get("maxThreads", 1, Integer.TYPE)));
     }
 
     private static void loadAllPakProperties() {
@@ -65,20 +60,19 @@ public class Tool {
             }
 
             pak.set("accumulator", new PakAccumulator());
-            pak.set("extractCount", 0);
         }
     }
 
     public static void main(String[] args) throws FileNotFoundException {
         InputStream inputStream;
         if (args.length == 1) {
-            inputStream = new FileInputStream(args[1]);
+            inputStream = new FileInputStream(args[0]);
         } else {
             inputStream = Tool.class.getClassLoader().getResourceAsStream(jsonFile);
         }
         JSONPropertiesParser.parse(inputStream);
 
-        loadMaxThreadCount();
+        loadSemaphore();
         loadGlobalAllowList();
         loadGlobalIgnoreList();
         loadAllPakProperties();
@@ -114,7 +108,7 @@ public class Tool {
             Properties p = prop.get(i, Properties.class);
             logger.info(p.get("file", String.class));
             logger.info("    Total Files Discovered: " + p.get("totalFiles", Integer.TYPE));
-            logger.info("    Total Files Extracted: " + p.get("extractCount", Integer.TYPE));
+            logger.info("    Total Files Extracted: " + p.get("extractCount", 0, Integer.TYPE));
         }
 
         long timeInMS  = endTime - startTime;
