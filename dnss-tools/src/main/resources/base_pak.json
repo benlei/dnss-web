@@ -1,5 +1,5 @@
 {
-  "extract": [
+  "paks": [
     {
       "file": "C:/Nexon/DragonNest/Resource00.pak",
       "output": "E:/Resource00",

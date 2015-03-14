@@ -1,10 +1,13 @@
 package dnss.tools.pak;
 
+import dnss.tools.commons.DNSS;
+import dnss.tools.commons.Properties;
 import dnss.tools.commons.ReadStream;
 import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
 import java.util.zip.DataFormatException;
@@ -13,7 +16,7 @@ import java.util.zip.Inflater;
 public class PakFile implements Runnable {
     private final static Logger logger = Logger.getLogger(PakFile.class);
 
-    private PakProperties properties;
+    private Properties properties;
 
     private int streamOffset;
 
@@ -27,7 +30,7 @@ public class PakFile implements Runnable {
 
     private static Object LOCK = new Object();
 
-    public PakFile(PakProperties properties) {
+    public PakFile(Properties properties) {
         this.properties = properties;
     }
 
@@ -71,30 +74,52 @@ public class PakFile implements Runnable {
         this.file = file;
     }
 
-    public PakProperties getProperties() {
+    public Properties getProperties() {
         return properties;
     }
 
-    public void setProperties(PakProperties properties) {
+    public void setProperties(Properties properties) {
         this.properties = properties;
     }
 
     public boolean isExtractAllowed() {
         boolean allowed = false, ignored = false;
-        if (properties.getAllow().size() == 0) {
-            allowed = true;
-        } else {
-            for (Pattern pattern : properties.getAllow()) {
+
+        // global check first
+        if (DNSS.has("allowPatterns")) {
+            ArrayList<Pattern> allowPatterns = DNSS.get("allowPatterns", ArrayList.class);
+            for (Pattern pattern : allowPatterns) {
                 allowed |= pattern.matcher(filePath).find();
             }
         }
 
-        if (properties.getIgnore().size() == 0) {
-            ignored = false;
-        } else {
-            for (Pattern pattern : properties.getAllow()) {
+        if (properties.has("allowPatterns")) {
+            ArrayList<Pattern> allowPatterns = properties.get("allowPatterns", ArrayList.class);
+            for (Pattern pattern : allowPatterns) {
+                allowed |= pattern.matcher(filePath).find();
+            }
+        }
+
+        if (! DNSS.has("allowPatterns") && ! properties.has("allowPatterns")) {
+            allowed = true;
+        }
+
+        if (DNSS.has("ignorePatterns")) {
+            ArrayList<Pattern> ignorePatterns = DNSS.get("ignorePatterns", ArrayList.class);
+            for (Pattern pattern : ignorePatterns) {
                 ignored |= pattern.matcher(filePath).find();
             }
+        }
+
+        if (properties.has("ignorePatterns")) {
+            ArrayList<Pattern> ignorePatterns = properties.get("ignorePatterns", ArrayList.class);
+            for (Pattern pattern : ignorePatterns) {
+                ignored |= pattern.matcher(filePath).find();
+            }
+        }
+
+        if (! DNSS.has("ignorePatterns") && ! properties.has("ignorePatterns")) {
+            ignored = false;
         }
 
         return allowed && ! ignored;
@@ -102,9 +127,9 @@ public class PakFile implements Runnable {
 
 
     public void extract() throws IOException, DataFormatException {
-        File absoluteFile = new File(properties.getOutput(), filePath);
+        File absoluteFile = new File(properties.get("output", String.class), filePath);
 
-        if (! properties.canExtractDeleted() && fileSize == 0) {
+        if (! properties.get("extractDeleted", Boolean.TYPE) && fileSize == 0) {
             logger.info("[d] " + absoluteFile.getPath());
             return;
         } else  if (! isExtractAllowed()) {
@@ -112,20 +137,20 @@ public class PakFile implements Runnable {
             return;
         }
 
-        synchronized (file) {
-            ReadStream readStream = new ReadStream(properties.getFile());
+        ReadStream readStream = new ReadStream(properties.get("file", String.class));
 
-            synchronized (LOCK) {
-                File dir = absoluteFile.getParentFile();
-                if (! dir.exists() && ! dir.mkdirs()) {
-                    logger.error("Could not create directory " + dir.getPath());
-                }
+        synchronized (LOCK) {
+            File dir = absoluteFile.getParentFile();
+            if (! dir.exists() && ! dir.mkdirs()) {
+                logger.error("Could not create directory " + dir.getPath());
             }
+        }
 
-            byte[] pakContents = new byte[compressedSize];
-            readStream.seek(streamOffset).readFully(pakContents);
-            readStream.close();
+        byte[] pakContents = new byte[compressedSize];
+        readStream.seek(streamOffset).readFully(pakContents);
+        readStream.close();
 
+        synchronized (file) {
             byte[] inflatedPakContents = new byte[8192];
             FileOutputStream fileOutputStream = new FileOutputStream(absoluteFile);
             Inflater inflater = new Inflater();
@@ -137,24 +162,27 @@ public class PakFile implements Runnable {
 
             inflater.end();
             fileOutputStream.close();
-
             logger.info("[x] " + absoluteFile.getPath());
-            properties.increaseExtractedFilesCount();
         }
+
+        synchronized (properties) {
+            properties.set("extractCount", properties.get("extractCount", Integer.TYPE) + 1);
+        }
+
     }
 
     public void run() {
-        PakFileQueue queue = properties.getQueue();
-        Semaphore semaphore = properties.getSemaphore();
+        PakAccumulator accumulator = properties.get("accumulator", PakAccumulator.class);
+        Semaphore semaphore = DNSS.get("semaphore", Semaphore.class);
         try {
             semaphore.acquireUninterruptibly();
             extract();
         } catch(IOException e) {
-            logger.error("Could not extract " + filePath + " from " + properties.getFilePath(), e);
+            logger.error("Could not extract " + filePath + " from " + properties.get("file", String.class), e);
         } catch (DataFormatException e) {
-            logger.error("Could not extract zipped content " + filePath + " from " +  properties.getFilePath(), e);
+            logger.error("Could not extract zipped content " + filePath + " from " +  properties.get("file", String.class), e);
         } finally {
-            queue.dequeue();
+            accumulator.dissipate();
             semaphore.release();
         }
     }

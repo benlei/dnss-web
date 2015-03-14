@@ -31,6 +31,19 @@ public class ReadStream {
         randomAccessFile = new RandomAccessFile(file, "r");
     }
 
+    /**
+     * Opens a file stream to navigate around file
+     *
+     * @param file the file to read.
+     * @throws FileNotFoundException
+     *         if the the given string does not denote an
+     *         existing regular file, or if some other error
+     *         occurs while opening or creating the file.
+     */
+    public ReadStream(String file) throws FileNotFoundException {
+        randomAccessFile = new RandomAccessFile(file, "r");
+    }
+
     public int read() throws IOException {
         int b = randomAccessFile.read();
         if (b < 0) {

@@ -1,149 +1,89 @@
 package dnss.tools.pak;
 
+import dnss.tools.commons.DNSS;
+import dnss.tools.commons.JSONPropertiesParser;
+import dnss.tools.commons.Properties;
 import org.apache.log4j.Logger;
 
-import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 
 public class Tool {
     private final static Logger logger = Logger.getLogger(Tool.class);
     private final static String jsonFile = "pak.json";
-    private static JSONObject json;
-    private static ArrayList<Pattern> globalAllowList = new ArrayList<Pattern>();
-    private static ArrayList<Pattern> globalIgnoreList = new ArrayList<Pattern>();
-    private static ArrayList<PakProperties> propertiesList = new ArrayList<PakProperties>();
-    private static int maxThreads = 10;
-    private static Semaphore semaphore;
 
-    static {
-        InputStream inputStream = Tool.class.getClassLoader().getResourceAsStream(jsonFile);
-        Scanner scanner = new Scanner(inputStream);
-        String jsonContents = scanner.useDelimiter("\\Z").next();
-        json = new JSONObject(jsonContents);
-    }
-
-    private static ArrayList<Pattern> loadPatternList(JSONArray json) {
+    private static void loadPatternList(String property, String propertyPattern) {
         ArrayList<Pattern> patternList = new ArrayList<Pattern>();
-        for (int i = 0; i < json.length(); i++) {
-            String patternString = json.getString(i).replaceAll("\\/", "\\\\\\\\");
+        Properties properties = DNSS.get(property, Properties.class);
+        for (int i = 0; i < properties.size(); i++) {
+            String patternString = properties.get(i, String.class).replaceAll("\\/", "\\\\\\\\");
             Pattern pattern = Pattern.compile(patternString);
             patternList.add(pattern);
         }
-
-        return patternList;
+        properties.set(propertyPattern, patternList);
     }
 
     private static void loadGlobalAllowList() {
-        if (json.has("allow")) {
-            globalAllowList = loadPatternList(json.getJSONArray("allow"));
+        if (DNSS.has("allow")) {
+            loadPatternList("allow", "allowPattern");
         }
     }
 
     private static void loadGlobalIgnoreList() {
-        if (json.has("ignore")) {
-            globalIgnoreList = loadPatternList(json.getJSONArray("ignore"));
+        if (DNSS.has("ignore")) {
+            loadPatternList("ignore", "ignorePattern");
         }
     }
 
     private static void loadMaxThreadCount() {
-        if (json.has("maxThreads")) {
-            maxThreads = json.getInt("maxThreads");
+        int defaultVal = 1;
+        if (DNSS.has("maxThreads")) {
+            defaultVal = DNSS.get("maxThreads", Integer.TYPE);
         }
 
-        semaphore = new Semaphore(maxThreads);
+        DNSS.set("semaphore", new Semaphore(defaultVal));
     }
 
     private static void loadAllPakProperties() {
-        JSONArray propertiesListJSON = json.getJSONArray("extract");
-        for (int i = 0; i < propertiesListJSON.length(); i++) {
-            JSONObject propertiesJSON = propertiesListJSON.getJSONObject(i);
-            PakProperties properties = new PakProperties();
-            properties.setFile(new File(propertiesJSON.getString("file")));
-            if (! properties.getFile().exists()) {
-                continue;
+        Properties paks = DNSS.get("paks", Properties.class);
+        for (int i = 0; i < paks.size(); i++) {
+            Properties pak = paks.get(i, Properties.class);
+            if (pak.has("allow")) {
+                loadPatternList("paks."+i+".allow", "paks."+i+".allowPatterns");
             }
 
-            properties.setOutput(new File(propertiesJSON.getString("output")));
-
-            if (propertiesJSON.has("extractDeleted")) {
-                properties.setExtractDeleted(propertiesJSON.getBoolean("extractDeleted"));
-            } else {
-                properties.setExtractDeleted(false);
+            if (pak.has("ignore")) {
+                loadPatternList("paks."+i+".ignore", "paks."+i+".ignorePatterns");
             }
 
-            if (propertiesJSON.has("allow")) {
-                ArrayList<Pattern> list = new ArrayList<Pattern>(globalAllowList);
-                list.addAll(loadPatternList(propertiesJSON.getJSONArray("allow")));
-                properties.setAllow(list);
-            } else {
-                properties.setAllow(globalAllowList);
-            }
-
-            if (propertiesJSON.has("ignore")) {
-                ArrayList<Pattern> list = new ArrayList<Pattern>(globalIgnoreList);
-                list.addAll(loadPatternList(propertiesJSON.getJSONArray("ignore")));
-                properties.setIgnore(list);
-            } else {
-                properties.setIgnore(globalIgnoreList);
-            }
-
-            properties.setSemaphore(semaphore);
-            properties.setMaxThreads(maxThreads);
-            properties.setQueue(new PakFileQueue(properties));
-            propertiesList.add(properties);
+            pak.set("accumulator", new PakAccumulator());
+            pak.set("extractCount", 0);
         }
     }
 
-    public static void debugProperties() {
-        logger.info("================================================================================");
-        logger.info("DNSS Tool - Pak - Properties");
-        logger.info("================================================================================");
-        logger.info(String.format("%-40s = %d", "maxThreads", maxThreads));
-        for (int i = 0; i < globalAllowList.size(); i++) {
-            logger.info(String.format("%-40s = %s", "allow[" + i + "]", globalAllowList.get(i).pattern()));
+    public static void main(String[] args) throws FileNotFoundException {
+        InputStream inputStream;
+        if (args.length == 1) {
+            inputStream = new FileInputStream(args[1]);
+        } else {
+            inputStream = Tool.class.getClassLoader().getResourceAsStream(jsonFile);
         }
+        JSONPropertiesParser.parse(inputStream);
 
-        for (int i = 0; i < globalIgnoreList.size(); i++) {
-            logger.info(String.format("%-40s = %s", "ignore[" + i + "]", globalIgnoreList.get(i).pattern()));
-        }
-
-        for (int i = 0; i < propertiesList.size(); i++) {
-            PakProperties properties = propertiesList.get(i);
-            logger.info(String.format("%-40s = %s", "extract[" + i + "].file", properties.getFilePath()));
-            logger.info(String.format("%-40s = %s", "extract[" + i + "].output", properties.getOutputPath()));
-            for (int j = 0; i < properties.getAllow().size(); j++) {
-                logger.info(String.format("%-40s = %s", "extract[" + i + "].allow[" + j + "]",
-                        properties.getAllow().get(j).pattern()));
-            }
-
-            for (int j = 0; i < properties.getIgnore().size(); j++) {
-                logger.info(String.format("%-40s = %s", "extract[" + i + "].ignore[" + j + "]",
-                        properties.getIgnore().get(j).pattern()));
-            }
-
-            logger.info(String.format("%-40s = %s", "extract[" + i + "].extractDeleted",
-                    String.valueOf(properties.canExtractDeleted())));
-        }
-    }
-
-    public static void main(String[] args) throws InterruptedException {
         loadMaxThreadCount();
         loadGlobalAllowList();
         loadGlobalIgnoreList();
-        loadAllPakProperties(); // must be done last
-
-        debugProperties();
+        loadAllPakProperties();
 
         long startTime = System.currentTimeMillis();
-        for (PakProperties properties : propertiesList) {
-            PakParser pakParser = new PakParser(properties);
+        Properties prop = DNSS.get("paks", Properties.class);
+        for (int i = 0; i < prop.size(); i++) {
+            PakParser pakParser = new PakParser(prop.get(i, Properties.class));
             Thread t = new Thread(pakParser);
             t.setName("dnss.tools.pak");
             t.start();
@@ -167,10 +107,11 @@ public class Tool {
         logger.info("================================================================================");
         logger.info("Extraction Summary");
         logger.info("================================================================================");
-        for (PakProperties properties : propertiesList) {
-            logger.info(properties.getFilePath());
-            logger.info("    Total Files Discovered: " + properties.getTotalFiles());
-            logger.info("    Total Files Extracted: " + properties.getExtractedFiles());
+        for (int i = 0; i < prop.size(); i++) {
+            Properties p = prop.get(i, Properties.class);
+            logger.info(p.get("file", String.class));
+            logger.info("    Total Files Discovered: " + p.get("totalFiles", Integer.TYPE));
+            logger.info("    Total Files Extracted: " + p.get("extractCount", Integer.TYPE));
         }
 
         long timeInMS  = endTime - startTime;

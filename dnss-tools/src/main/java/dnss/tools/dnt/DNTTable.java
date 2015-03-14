@@ -18,7 +18,7 @@ public class DNTTable {
 
     // note: this also destroys any existing data from the arraylist
     public void addField(String name, DNT type) {
-        fields.put(name.replaceAll("([A-Z])", "_$1").toLowerCase().substring(2), type);
+        fields.put(name.replaceAll("([A-Z])", "_$1").substring(2).toLowerCase(), type);
         clearMapCache = true;
     }
 

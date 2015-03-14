@@ -1,5 +1,7 @@
 package dnss.tools.pak;
 
+import dnss.tools.commons.DNSS;
+import dnss.tools.commons.Properties;
 import dnss.tools.commons.ReadStream;
 import org.apache.log4j.Logger;
 
@@ -13,9 +15,9 @@ public class PakParser implements Runnable {
     public static final String HEADER = "EyedentityGames Packing File 0.1";
     public static final long START_POS = 260;
     private static ConcurrentHashMap<String, File> map = new ConcurrentHashMap<String, File>();
-    private PakProperties properties;
+    private Properties properties;
 
-    public PakParser(PakProperties properties) {
+    public PakParser(Properties properties) {
         this.properties = properties;
     }
 
@@ -25,14 +27,15 @@ public class PakParser implements Runnable {
     }
 
     public void parse() throws IOException {
-        ReadStream readStream = new ReadStream(properties.getFile());
+        String file = properties.get("file", String.class);
+        ReadStream readStream = new ReadStream(file);
 
         if (! isValidPak(readStream)) {
-            logger.error("Invalid pak file header, aborting parsing " + properties.getFilePath());
+            logger.error("Invalid pak file header, aborting parsing " + file);
             return;
         }
 
-        PakFileQueue queue = properties.getQueue();
+        PakAccumulator accumulator = properties.get("accumulator", PakAccumulator.class);
 
         // gets # of files and start offset
         int numOfFiles = readStream.seek(START_POS).readInt();
@@ -53,15 +56,15 @@ public class PakParser implements Runnable {
             // setup the file tree for synchronization when extracting/making directories
             pakFile.setFile(getFile(pakFile.getFilePath()));
 
-            queue.enqueue(pakFile);
+            accumulator.accumulate(pakFile);
         }
 
-        properties.setTotalFiles(queue.total());
+        properties.set("totalFiles", accumulator.total());
         readStream.close();
     }
 
     private File getFile(String filePath) {
-        File dir = new File(properties.getOutput(), filePath);
+        File dir = new File(properties.get("output", String.class), filePath);
         if (! map.containsKey(dir.getPath())) {
             map.put(dir.getPath(), new File(filePath));
         }
@@ -70,12 +73,12 @@ public class PakParser implements Runnable {
     }
 
     public void run() {
-        Semaphore semaphore = properties.getSemaphore();
+        Semaphore semaphore = DNSS.get("semaphore", Semaphore.class);
         try {
             semaphore.acquireUninterruptibly();
             parse();
         } catch (IOException e) {
-            logger.error("Could not parse " + properties.getFilePath(), e);
+            logger.error("Could not parse " + properties.get("file", String.class), e);
         } finally {
             semaphore.release();
         }
