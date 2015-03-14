@@ -59,6 +59,10 @@ public class Tool {
                 loadPatternList("paks."+i+".ignore", "paks."+i+".ignorePatterns");
             }
 
+            if (! pak.has("output")) {
+                pak.set("output", DNSS.get("output", String.class));
+            }
+
             pak.set("accumulator", new PakAccumulator());
         }
     }

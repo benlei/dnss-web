@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
@@ -42,9 +41,6 @@ public class PakFile implements Runnable {
 
     public void setFilePath(String filePath) {
         this.filePath =  filePath.substring(0, filePath.indexOf('\0')).trim();
-        if (DNSS.get("flatten", false, Boolean.TYPE) || properties.get("flatten", false, Boolean.TYPE)) {
-            this.filePath = this.filePath.substring(this.filePath.lastIndexOf('/'));
-        }
     }
 
     public int getStreamOffset() {
@@ -130,15 +126,47 @@ public class PakFile implements Runnable {
         return allowed && ! ignored;
     }
 
+    private boolean canLog(String logType) {
+        if (DNSS.has("disabledLogs")) {
+            Properties prop = DNSS.get("disabledLogs", Properties.class);
+            for (int i = 0; i < prop.size(); i++) {
+                if (logType.equals(prop.get(i, String.class))) {
+                    return false;
+                }
+            }
+        }
+
+        if (properties.has("disabledLogs")) {
+            Properties prop = properties.get("disabledLogs", Properties.class);
+            for (int i = 0; i < prop.size(); i++) {
+                if (logType.equals(prop.get(i, String.class))) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
 
     public void extract() throws IOException, DataFormatException {
-        File absoluteFile = new File(properties.get("output", String.class), filePath);
+        String outputPath;
+        if (DNSS.get("flatten", false, Boolean.TYPE) || properties.get("flatten", false, Boolean.TYPE)) {
+            outputPath = filePath.substring(filePath.lastIndexOf('\\'));
+        } else {
+            outputPath = filePath;
+        }
+        File absoluteFile = new File(properties.get("output", String.class), outputPath);
 
         if (! properties.get("extractDeleted", false, Boolean.TYPE) && fileSize == 0) {
-            logger.info("[d] " + absoluteFile.getPath());
+            if (canLog("deleted")) {
+                logger.info("[d] " + absoluteFile.getPath());
+            }
             return;
         } else  if (! isExtractAllowed()) {
-            logger.info("[ ] " + absoluteFile.getPath());
+            if (canLog("ignored")) {
+                logger.info("[ ] " + absoluteFile.getPath());
+            }
             return;
         }
 
@@ -158,14 +186,14 @@ public class PakFile implements Runnable {
         synchronized (file) {
             if (absoluteFile.exists()) {
                 int i = 1;
-                int extPos = filePath.lastIndexOf('.');
+                int extPos = outputPath.lastIndexOf('.');
                 File outputFile;
                 if (extPos == -1) {
-                    extPos = filePath.length();
+                    extPos = outputPath.length();
                 }
 
-                String fileWithoutExt = filePath.substring(0, extPos);
-                String fileExt = filePath.substring(extPos);
+                String fileWithoutExt = outputPath.substring(0, extPos);
+                String fileExt = outputPath.substring(extPos);
                 do {
                     outputFile = new File(properties.get("output", String.class), fileWithoutExt + "+" + i + fileExt);
                     i++;
@@ -185,7 +213,12 @@ public class PakFile implements Runnable {
 
             inflater.end();
             fileOutputStream.close();
-            logger.info("[x] " + absoluteFile.getPath());
+
+            if (canLog("allowedExtended")) {
+                logger.info("[x] src: " + properties.get("file", String.class) + ", dest: " + absoluteFile.getPath());
+            } else if (canLog("allowed")) {
+                logger.info("[x] " + absoluteFile.getPath());
+            }
         }
 
         synchronized (properties) {

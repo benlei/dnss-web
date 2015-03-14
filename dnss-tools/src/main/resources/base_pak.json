@@ -6,7 +6,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource01.pak",
@@ -14,7 +15,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource02.pak",
@@ -22,7 +24,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource03.pak",
@@ -30,7 +33,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource04.pak",
@@ -38,7 +42,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource05.pak",
@@ -46,7 +51,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource06.pak",
@@ -54,7 +60,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource07.pak",
@@ -62,7 +69,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource08.pak",
@@ -70,7 +78,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource09.pak",
@@ -78,7 +87,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource10.pak",
@@ -86,7 +96,8 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     },
     {
       "file": "C:/Nexon/DragonNest/Resource11.pak",
@@ -94,11 +105,13 @@
       "allow": [],
       "ignore": [],
       "flatten": false,
-      "extractDeleted": false
+      "extractDeleted": false,
+      "disabledLogs": []
     }
   ],
   "allow": [],
   "ignore": [],
   "flatten": false,
-  "maxThreads": 10
+  "maxThreads": 10,
+  "disabledLogs": []
 }
