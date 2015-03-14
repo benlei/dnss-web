@@ -151,8 +151,20 @@ public class PakFile implements Runnable {
         readStream.close();
 
         synchronized (file) {
+            int i = 1;
+            File outputFile = absoluteFile;
+            while (outputFile.exists()) {
+                int extPos = filePath.lastIndexOf('.');
+                if (extPos == -1) {
+                    extPos = filePath.length();
+                }
+
+                String newPath = filePath.substring(0, extPos) + i++ + filePath.substring(extPos);
+                outputFile = new File(properties.get("output", String.class), newPath);
+            }
+
             byte[] inflatedPakContents = new byte[8192];
-            FileOutputStream fileOutputStream = new FileOutputStream(absoluteFile);
+            FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
             Inflater inflater = new Inflater();
             inflater.setInput(pakContents);
             while (! inflater.finished()) {
@@ -162,7 +174,7 @@ public class PakFile implements Runnable {
 
             inflater.end();
             fileOutputStream.close();
-            logger.info("[x] " + absoluteFile.getPath());
+            logger.info("[x] " + outputFile.getPath());
         }
 
         synchronized (properties) {
