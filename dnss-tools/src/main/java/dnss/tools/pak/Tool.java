@@ -25,18 +25,21 @@ public class Tool {
             Pattern pattern = Pattern.compile(patternString);
             patternList.add(pattern);
         }
-        properties.set(propertyPattern, patternList);
+
+        if (! patternList.isEmpty()) {
+            DNSS.set(propertyPattern, patternList);
+        }
     }
 
     private static void loadGlobalAllowList() {
         if (DNSS.has("allow")) {
-            loadPatternList("allow", "allowPattern");
+            loadPatternList("allow", "allowPatterns");
         }
     }
 
     private static void loadGlobalIgnoreList() {
         if (DNSS.has("ignore")) {
-            loadPatternList("ignore", "ignorePattern");
+            loadPatternList("ignore", "ignorePatterns");
         }
     }
 
