@@ -30,7 +30,7 @@ public class DNTParser implements Parser, Runnable {
 
         // could also use a linkedhashmap
         ArrayList<Pair<String, Types>> fieldList = new ArrayList<Pair<String, Types>>();
-        fieldList.add(new Pair<String, Types>("id", Types.INT));
+        fieldList.add(new Pair<String, Types>("ID", Types.INT));
         for (int i = 0; i < numCols; i++) {
             String fieldName = readStream.readString(readStream.readShort());
             fieldName = fieldName.substring(1);
