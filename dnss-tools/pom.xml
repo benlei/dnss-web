@@ -10,9 +10,6 @@
     <packaging>jar</packaging>
     <name>DNSS Tools</name>
 
-    <dependencies>
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>

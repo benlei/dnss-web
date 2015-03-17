@@ -1,41 +1,46 @@
 package dnss.tools.pak;
 
-import dnss.tools.commons.DNSS;
-import dnss.tools.commons.Properties;
+import dnss.tools.commons.Parser;
+import dnss.tools.commons.Producer;
 import dnss.tools.commons.ReadStream;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Semaphore;
 
-public class PakParser implements Runnable {
-    private final static Logger logger = Logger.getLogger(PakParser.class);
+public class PakParser implements Parser, Producer<PakFile>, Runnable {
+    private static final Logger log = LoggerFactory.getLogger(PakFile.class);
     public static final String HEADER = "EyedentityGames Packing File 0.1";
     public static final long START_POS = 260;
     private static ConcurrentHashMap<String, File> map = new ConcurrentHashMap<String, File>();
-    private Properties properties;
 
-    public PakParser(Properties properties) {
-        this.properties = properties;
+    private Pak pak;
+    private PakItems items;
+
+
+    public PakParser(Pak pak, PakItems items) {
+        this.pak = pak;
+        this.items = items;
     }
 
-    private boolean isValidPak(ReadStream readStream) throws IOException {
-        String header = readStream.seek(0).readString(HEADER.length());
-        return header.equals(HEADER);
+    private boolean isValidPak(ReadStream readStream) {
+        try {
+            String header = readStream.seek(0).readString(HEADER.length());
+            return header.equals(HEADER);
+        } catch (IOException e) {
+            return false;
+        }
     }
 
     public void parse() throws IOException {
-        String file = properties.get("file", String.class);
-        ReadStream readStream = new ReadStream(file);
+        ReadStream readStream = new ReadStream(pak.getLocation());
 
         if (! isValidPak(readStream)) {
-            logger.error("Invalid pak file header, aborting parsing " + file);
+            log.error("Invalid pak file header, aborting parsing " + pak.getLocation().getPath());
             return;
         }
-
-        PakAccumulator accumulator = properties.get("accumulator", PakAccumulator.class);
 
         // gets # of files and start offset
         int numOfFiles = readStream.seek(START_POS).readInt();
@@ -44,43 +49,46 @@ public class PakParser implements Runnable {
         // the skip amount is for after the first iteration
         // It is possible this is better because we can avoid
         // doing an extra skip of 44 bytes for the last iteration
-        for (int i = 0, skipAmount = 0; i < numOfFiles; i++, skipAmount = 44) {
-            PakFile pakFile = new PakFile(properties);
+        int i, skipAmount;
+        for (i = 0, skipAmount = 0; i < numOfFiles; i++, skipAmount = 44) {
+            PakFile pakFile = new PakFile(pak);
 
             // Split up the path after into a HashMap
-            pakFile.setFilePath(readStream.skip(skipAmount).readString(256));
+            pakFile.setPakPath(readStream.skip(skipAmount).readString(256));
             pakFile.setFileSize(readStream.skip(4).readInt()); // potentially useless
             pakFile.setCompressedSize(readStream.readInt());
             pakFile.setStreamOffset(readStream.readInt());
 
             // setup the file tree for synchronization when extracting/making directories
-            pakFile.setFile(getFile(pakFile.getFilePath()));
+            pakFile.setDestination(resolve(pakFile));
 
-            accumulator.accumulate(pakFile);
+            produce(pakFile);
         }
 
-        properties.set("totalFiles", accumulator.total());
+        pak.setTotalFiles(i);
         readStream.close();
     }
 
-    private File getFile(String filePath) {
-        File dir = new File(properties.get("output", String.class), filePath);
+    private File resolve(PakFile pakFile) {
+        File dir = new File(pak.getDestination(), pakFile.getPakPath());
         if (! map.containsKey(dir.getPath())) {
-            map.put(dir.getPath(), new File(filePath));
+            map.put(dir.getPath(), dir);
         }
 
         return map.get(dir.getPath());
     }
 
+    @Override
+    public void produce(PakFile item) {
+        items.add(item);
+    }
+
     public void run() {
-        Semaphore semaphore = DNSS.get("semaphore", Semaphore.class);
         try {
-            semaphore.acquireUninterruptibly();
+            Thread.currentThread().setName(pak.getId());
             parse();
         } catch (IOException e) {
-            logger.error("Could not parse " + properties.get("file", String.class), e);
-        } finally {
-            semaphore.release();
+//            logger.error("Could not parse " + pak.getLocation().getPath(), e);
         }
     }
 }

@@ -1,46 +1,50 @@
 package dnss.tools.pak;
 
-import dnss.tools.commons.DNSS;
-import dnss.tools.commons.Properties;
 import dnss.tools.commons.ReadStream;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.concurrent.Semaphore;
 import java.util.regex.Pattern;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
-import java.nio.file.Files;
 
-public class PakFile implements Runnable {
-    private final static Logger logger = Logger.getLogger(PakFile.class);
+public class PakFile {
+    private static final Logger log = LoggerFactory.getLogger(PakFile.class);
 
-    private Properties properties;
-
+    private String pakPath;
+    private File destination;
     private int streamOffset;
-
-    private int compressedSize;
-
     private int fileSize;
-
-    private String filePath;
-
-    private File file;
+    private int compressedSize;
 
     private static Object LOCK = new Object();
 
-    public PakFile(Properties properties) {
-        this.properties = properties;
+    private Pak pak;
+
+    public PakFile(Pak pak) {
+        this.pak = pak;
     }
 
-    public String getFilePath() {
-        return filePath;
+    public String getPakPath() {
+        return pakPath;
     }
 
-    public void setFilePath(String filePath) {
-        this.filePath =  filePath.substring(0, filePath.indexOf('\0')).trim();
+    public void setPakPath(String pakPath) {
+        this.pakPath = pakPath.substring(0, pakPath.indexOf('\0')).trim();
+    }
+
+    public File getDestination() {
+        return destination;
+    }
+
+    public void setDestination(File destination) {
+        this.destination = destination;
     }
 
     public int getStreamOffset() {
@@ -51,14 +55,6 @@ public class PakFile implements Runnable {
         this.streamOffset = streamOffset;
     }
 
-    public int getCompressedSize() {
-        return compressedSize;
-    }
-
-    public void setCompressedSize(int compressedSize) {
-        this.compressedSize = compressedSize;
-    }
-
     public int getFileSize() {
         return fileSize;
     }
@@ -67,179 +63,123 @@ public class PakFile implements Runnable {
         this.fileSize = fileSize;
     }
 
-    public File getFile() {
-        return file;
+    public int getCompressedSize() {
+        return compressedSize;
     }
 
-    public void setFile(File file) {
-        this.file = file;
+    public void setCompressedSize(int compressedSize) {
+        this.compressedSize = compressedSize;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public Pak getPak() {
+        return pak;
     }
 
-    public void setProperties(Properties properties) {
-        this.properties = properties;
-    }
-
-    public boolean isExtractAllowed() {
+    private boolean canExtract() {
         boolean allowed = false, ignored = false;
 
-        // global check first
-        if (DNSS.has("allowPatterns")) {
-            ArrayList<Pattern> allowPatterns = DNSS.get("allowPatterns", ArrayList.class);
+        ArrayList<Pattern> allowPatterns = pak.getAllow();
+        if (allowPatterns != null && allowPatterns.size() != 0) {
             for (Pattern pattern : allowPatterns) {
-                allowed |= pattern.matcher(filePath).find();
+                allowed |= pattern.matcher(getPakPath()).find();
             }
-        }
-
-        if (properties.has("allowPatterns")) {
-            ArrayList<Pattern> allowPatterns = properties.get("allowPatterns", ArrayList.class);
-            for (Pattern pattern : allowPatterns) {
-                allowed |= pattern.matcher(filePath).find();
-            }
-        }
-
-        if (! DNSS.has("allowPatterns") && ! properties.has("allowPatterns")) {
+        } else {
             allowed = true;
         }
 
-        if (DNSS.has("ignorePatterns")) {
-            ArrayList<Pattern> ignorePatterns = DNSS.get("ignorePatterns", ArrayList.class);
+        ArrayList<Pattern> ignorePatterns = pak.getIgnore();
+        if (ignorePatterns != null && ignorePatterns.size() != 0) {
             for (Pattern pattern : ignorePatterns) {
-                ignored |= pattern.matcher(filePath).find();
+                ignored |= pattern.matcher(pakPath).find();
             }
-        }
-
-        if (properties.has("ignorePatterns")) {
-            ArrayList<Pattern> ignorePatterns = properties.get("ignorePatterns", ArrayList.class);
-            for (Pattern pattern : ignorePatterns) {
-                ignored |= pattern.matcher(filePath).find();
-            }
-        }
-
-        if (! DNSS.has("ignorePatterns") && ! properties.has("ignorePatterns")) {
+        } else {
             ignored = false;
         }
 
         return allowed && ! ignored;
     }
 
-    private boolean canLog(String logType) {
-        if (DNSS.has("disabledLogs")) {
-            Properties prop = DNSS.get("disabledLogs", Properties.class);
-            for (int i = 0; i < prop.size(); i++) {
-                if (logType.equals(prop.get(i, String.class))) {
-                    return false;
-                }
-            }
-        }
-
-        if (properties.has("disabledLogs")) {
-            Properties prop = properties.get("disabledLogs", Properties.class);
-            for (int i = 0; i < prop.size(); i++) {
-                if (logType.equals(prop.get(i, String.class))) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
-    }
-
 
     public void extract() throws IOException, DataFormatException {
-        String outputPath;
-        if (DNSS.get("flatten", false, Boolean.TYPE) || properties.get("flatten", false, Boolean.TYPE)) {
-            outputPath = filePath.substring(filePath.lastIndexOf('\\'));
-        } else {
-            outputPath = filePath;
-        }
-        File absoluteFile = new File(properties.get("output", String.class), outputPath);
-
-        if (! properties.get("extractDeleted", false, Boolean.TYPE) && fileSize == 0) {
-            if (canLog("deleted")) {
-                logger.info("[d] " + absoluteFile.getPath());
-            }
-            return;
-        } else  if (! isExtractAllowed()) {
-            if (canLog("ignored")) {
-                logger.info("[ ] " + absoluteFile.getPath());
-            }
-            return;
+        String outputPakPath = pakPath;
+        File outputDestination = destination;
+        if (pak.isFlatten()) {
+            outputPakPath = pakPath.substring(pakPath.lastIndexOf('\\'));
+            outputDestination = new File(pak.getDestination(), outputPakPath);
         }
 
-        ReadStream readStream = new ReadStream(properties.get("file", String.class));
+        if (! canExtract()) {
+            if (System.getProperty("log.ignored").equals("true")) {
+                log.warn("[ ] " + outputDestination.getPath());
+            }
+            synchronized (pak) {
+                pak.setTotalSkippedFiles(pak.getTotalSkippedFiles() + 1);
+            }
+            return;
+        } else if (!pak.isExtractDeleted() && fileSize == 0) {
+            if (System.getProperty("log.deleted").equals("true") ) {
+                log.warn("[d] " + outputDestination.getPath());
+            }
+            synchronized (pak) {
+                pak.setTotalDeletedFiles(pak.getTotalDeletedFiles() + 1);
+            }
+            return;
+        }
 
         synchronized (LOCK) {
-            File dir = absoluteFile.getParentFile();
+            File dir = outputDestination.getParentFile();
             if (! dir.exists() && ! dir.mkdirs()) {
-                logger.error("Could not create directory " + dir.getPath());
+                log.error("[e] " + outputDestination.getPath() + ", directory could not be created.");
+                return;
             }
         }
 
+        ReadStream readStream = new ReadStream(pak.getLocation());
         byte[] pakContents = new byte[compressedSize];
         readStream.seek(streamOffset).readFully(pakContents);
         readStream.close();
 
-        synchronized (file) {
-            if (absoluteFile.exists()) {
+        byte[] inflatedPakContents = new byte[8192];
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        Inflater inflater = new Inflater();
+        inflater.setInput(pakContents);
+        while (! inflater.finished()) {
+            int inflatedSize = inflater.inflate(inflatedPakContents);
+            byteArrayOutputStream.write(inflatedPakContents, 0, inflatedSize);
+        }
+
+        inflater.end();
+
+        synchronized (getDestination()) {
+            if (outputDestination.exists()) {
                 int i = 1;
-                int extPos = outputPath.lastIndexOf('.');
+                int extPos = outputPakPath.lastIndexOf('.');
                 File outputFile;
                 if (extPos == -1) {
-                    extPos = outputPath.length();
+                    extPos = outputPakPath.length();
                 }
 
-                String fileWithoutExt = outputPath.substring(0, extPos);
-                String fileExt = outputPath.substring(extPos);
+                String fileWithoutExt = outputPakPath.substring(0, extPos);
+                String fileExt = outputPakPath.substring(extPos);
                 do {
-                    outputFile = new File(properties.get("output", String.class), fileWithoutExt + "+" + i + fileExt);
+                    outputFile = new File(pak.getDestination(), fileWithoutExt + "+" + i + fileExt);
                     i++;
                 } while (outputFile.exists());
 
-                Files.move(absoluteFile.toPath(), outputFile.toPath());
+                Files.move(outputDestination.toPath(), outputFile.toPath());
             }
 
-            byte[] inflatedPakContents = new byte[8192];
-            FileOutputStream fileOutputStream = new FileOutputStream(absoluteFile);
-            Inflater inflater = new Inflater();
-            inflater.setInput(pakContents);
-            while (! inflater.finished()) {
-                int inflatedSize = inflater.inflate(inflatedPakContents);
-                fileOutputStream.write(inflatedPakContents, 0, inflatedSize);
-            }
-
-            inflater.end();
+            FileOutputStream fileOutputStream = new FileOutputStream(outputDestination);
+            fileOutputStream.write(byteArrayOutputStream.toByteArray());
             fileOutputStream.close();
-
-            if (canLog("allowedExtended")) {
-                logger.info("[x] src: " + properties.get("file", String.class) + ", dest: " + absoluteFile.getPath());
-            } else if (canLog("allowed")) {
-                logger.info("[x] " + absoluteFile.getPath());
-            }
         }
 
-        synchronized (properties) {
-            properties.set("extractCount", properties.get("extractCount", 0, Integer.TYPE) + 1);
+        if (System.getProperty("log.extracted").equals("true")) {
+            log.info("[x] " + outputDestination.getPath());
         }
 
-    }
-
-    public void run() {
-        PakAccumulator accumulator = properties.get("accumulator", PakAccumulator.class);
-        Semaphore semaphore = DNSS.get("semaphore", Semaphore.class);
-        try {
-            semaphore.acquireUninterruptibly();
-            extract();
-        } catch(IOException e) {
-            logger.error("Could not extract " + filePath + " from " + properties.get("file", String.class), e);
-        } catch (DataFormatException e) {
-            logger.error("Could not extract zipped content " + filePath + " from " +  properties.get("file", String.class), e);
-        } finally {
-            accumulator.dissipate();
-            semaphore.release();
+        synchronized (pak) {
+            pak.setTotalExtractedFiles(pak.getTotalExtractedFiles() + 1);
         }
     }
 }
