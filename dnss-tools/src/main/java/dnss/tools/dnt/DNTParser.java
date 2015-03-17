@@ -1,6 +1,7 @@
 package dnss.tools.dnt;
 
 import dnss.tools.commons.Pair;
+import dnss.tools.commons.Parser;
 import dnss.tools.commons.ReadStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class DNTParser implements Runnable {
+public class DNTParser implements Parser, Runnable {
     private final static Logger log = LoggerFactory.getLogger(DNTParser.class);
     private final static Object LOCK = new Object();
     private DNT dnt;
