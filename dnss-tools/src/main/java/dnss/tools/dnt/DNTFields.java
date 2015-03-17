@@ -9,11 +9,12 @@ import dnss.tools.commons.Pair;
  */
 public class DNTFields implements Accumulator<Pair<String, Types>, StringBuilder> {
     private StringBuilder buf = new StringBuilder();
+    public static String id = "_ID";
 
     public DNTFields(DNT dnt) {
         buf.append("DROP TABLE IF EXISTS " + dnt.getId() + ";\n");
         buf.append("CREATE TABLE " + dnt.getId() + "(\n");
-        buf.append("  id serial PRIMARY KEY");
+        buf.append("  " + id + " serial PRIMARY KEY");
 
     }
 

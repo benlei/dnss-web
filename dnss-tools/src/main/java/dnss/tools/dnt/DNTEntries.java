@@ -35,7 +35,7 @@ public class DNTEntries implements Accumulator<ArrayList<Object>, StringBuilder>
             buf.append(',');
             switch (fields.get(i).getRight()) {
                 case STRING:
-                    String insert = ((String)element.get(i)).replace("\\", "\\\\").replace("'", "\\'");
+                    String insert = ((String)element.get(i)).replaceAll("'", "''");
                     insert = insert.isEmpty() ? "null" : "'" + insert + "'";
                     buf.append(insert);
                     break;
