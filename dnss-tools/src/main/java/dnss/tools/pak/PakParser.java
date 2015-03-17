@@ -88,7 +88,7 @@ public class PakParser implements Parser, Producer<PakFile>, Runnable {
             Thread.currentThread().setName(pak.getId());
             parse();
         } catch (IOException e) {
-//            logger.error("Could not parse " + pak.getLocation().getPath(), e);
+            log.error("Could not parse " + pak.getLocation().getPath(), e);
         }
     }
 }
