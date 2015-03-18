@@ -58,11 +58,13 @@ public class DNTtoSQL {
         }
 
         // add message table
-        DNT messageDNT = new DNT();
-        messageDNT.setId("messages");
-        messageDNT.setLocation(new File(properties.getProperty("xml.uistring.location")));
-        messageDNT.setDestination(new File(properties.getProperty("xml.uistring.destination")));
-        dntMap.put("messages", messageDNT);
+        if (properties.contains("xml.uistring.location")) {
+            DNT dnt = new DNT();
+            dnt.setId("messages");
+            dnt.setLocation(new File(properties.getProperty("xml.uistring.location")));
+            dnt.setDestination(new File(properties.getProperty("xml.uistring.destination")));
+            dntMap.put("messages", dnt);
+        }
 
         ExecutorService service = Executors.newFixedThreadPool(maxThreads);
         for (DNT dnt : dntMap.values()) {
