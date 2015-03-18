@@ -1,5 +1,6 @@
 package dnss.tools.dnt;
 
+import dnss.tools.commons.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,6 +37,7 @@ public class DNTtoSQL {
         int maxThreads = Integer.valueOf(properties.getProperty("system.max.threads", System.getProperty("max.threads", "1")));
         System.setProperty("max.threads", String.valueOf(maxThreads));
 
+        // ordinary dnt properties
         HashMap<String, DNT> dntMap = new HashMap<String, DNT>();
         for (String name : properties.stringPropertyNames()) {
             if (! name.startsWith("dnt.")) {
@@ -55,9 +57,21 @@ public class DNTtoSQL {
             }
         }
 
+        // add message table
+        DNT messageDNT = new DNT();
+        messageDNT.setId("messages");
+        messageDNT.setLocation(new File(properties.getProperty("xml.uistring.location")));
+        messageDNT.setDestination(new File(properties.getProperty("xml.uistring.destination")));
+        dntMap.put("messages", messageDNT);
+
         ExecutorService service = Executors.newFixedThreadPool(maxThreads);
         for (DNT dnt : dntMap.values()) {
-            DNTParser parser = new DNTParser(dnt);
+            Runnable parser;
+            if (dnt.getId().equals("messages")) {
+                parser = new XMLParser(dnt);
+            } else {
+                parser = new DNTParser(dnt);
+            }
             service.submit(parser);
         }
 

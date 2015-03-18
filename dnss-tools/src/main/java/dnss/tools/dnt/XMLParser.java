@@ -2,60 +2,62 @@ package dnss.tools.dnt;
 
 import dnss.tools.commons.Pair;
 import dnss.tools.commons.Parser;
-import dnss.tools.commons.ReadStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.CharacterData;
 
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class DNTParser implements Parser, Runnable {
+
+public class XMLParser implements Parser, Runnable {
     private final static Logger log = LoggerFactory.getLogger(DNTParser.class);
-    public final static Object LOCK = new Object();
+
     private DNT dnt;
 
-    public DNTParser(DNT dnt) {
+    public XMLParser(DNT dnt) {
         this.dnt = dnt;
     }
 
+    @Override
     public void parse() throws IOException {
-        ReadStream readStream = new ReadStream(dnt.getLocation());
-        DNTFields fields = new DNTFields(dnt);
-
-        // # of cols EXCLUDING the Id column.
-        int numCols = readStream.seek(4).readShort();
-        int numRows = readStream.readInt();
-
-        // could also use a linkedhashmap
-        ArrayList<Pair<String, Types>> fieldList = new ArrayList<Pair<String, Types>>();
-        fieldList.add(new Pair<String, Types>(DNTFields.id, Types.INT));
-        for (int i = 0; i < numCols; i++) {
-            String fieldName = readStream.readString(readStream.readShort());
-            Types type = Types.resolve(readStream.read());
-            Pair<String, Types> pair = new Pair<String, Types>(fieldName, type);
-            fields.accumulate(pair);
-            fieldList.add(pair);
+        Document document;
+        try {
+            document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(dnt.getLocation());
+            document.getDocumentElement().normalize();
+        } catch (Exception e) {
+            log.error("Could not open XML document", e);
+            return;
         }
 
+        ArrayList<Pair<String, Types>> fieldList = new ArrayList<Pair<String, Types>>();
+        DNTFields fields = new DNTFields(dnt);
+        fieldList.add(new Pair(DNTFields.id, Types.INT));
+        fieldList.add(new Pair<String, Types>("_Data", Types.STRING));
+        fields.accumulate(fieldList.get(1));
+
         DNTEntries entries = new DNTEntries(dnt, fieldList);
-
-        for (int i = 0; i < numRows; i++) {
+        NodeList nodeList = document.getElementsByTagName("message");
+        for (int i = 0; i < nodeList.getLength(); i++) {
             ArrayList<Object> values = new ArrayList<Object>();
-            for (Pair<String, Types> field: fieldList) {
-                values.add(field.getRight().read(readStream));
-            }
-
+            Element element = (Element) nodeList.item(i);
+            CharacterData characterData = (CharacterData)element.getFirstChild();
+            values.add(Integer.valueOf(element.getAttribute("mid")));
+            values.add(characterData.getData());
             entries.accumulate(values);
         }
 
-        readStream.close();
 
         File destination = dnt.getDestination();
         File destinationDir = destination.getParentFile();
 
-        synchronized (LOCK) {
+        synchronized (DNTParser.LOCK) {
             if (!destinationDir.exists() && !destinationDir.mkdirs()) {
                 throw new IOException("Unable to create directory " + destinationDir.getPath());
             }
