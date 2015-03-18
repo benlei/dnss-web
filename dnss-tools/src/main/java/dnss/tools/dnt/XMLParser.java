@@ -64,8 +64,7 @@ public class XMLParser implements Parser, Runnable {
         }
 
         FileWriter writer = new FileWriter(destination);
-        writer.write(fields.dissipate().toString());
-        writer.write(entries.dissipate().toString());
+        writer.write(fields.dissipate().append(entries.dissipate()).toString());
         writer.close();
     }
 
