@@ -3,10 +3,12 @@ Here is where I make some tools I plan to be using for the Dragon Nest Skill Sim
 
 ## Current Tools
 DNT to SQL Converter
+
 Pak Extracter
 
 ## How To Extract Template - Basis
 See ResourceUnpacker.bms
+
 See http://aluigi.altervista.org/papers/quickbms.txt
 
 ## DDS Image Converter
