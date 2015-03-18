@@ -32,3 +32,12 @@ As a note to self:
 The 20 x 10 equally spaced skill icon grid is referenced by an index.
 Index 0 refers to the first icon, 1 refers to to the one to the right of it, etc.
 Index 10 refers to the second row, first item. Index 11 refers to the one to the right of it, etc.
+
+### Simplest way to import all .sql files
+Windows:
+`copy /b *.sql dnss.sql`
+
+Unix:
+`cat *.sql > dnss.sql`
+
+Then import dnss.sql
