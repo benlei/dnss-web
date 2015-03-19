@@ -58,7 +58,7 @@ public class DNTtoSQL {
         }
 
         // add message table
-        if (properties.contains("xml.uistring.location")) {
+        if (properties.containsKey("xml.uistring.location")) {
             DNT dnt = new DNT();
             dnt.setId("messages");
             dnt.setLocation(new File(properties.getProperty("xml.uistring.location")));
