@@ -7,30 +7,24 @@ import java.util.ArrayList;
 
 public class DNTEntries implements Accumulator<ArrayList<Object>, StringBuilder> {
     private StringBuilder buf = new StringBuilder();
-    private DNT dnt;
     private ArrayList<Pair<String, Types>> fields;
-    private String columns;
 
     public DNTEntries(DNT dnt, ArrayList<Pair<String, Types>> fields) {
-        this.dnt = dnt;
         this.fields = fields;
 
-        StringBuilder columnsBuf = new StringBuilder();
-        columnsBuf.append('(');
+        buf.append("INSERT INTO " + dnt.getId() + " (");
         for (Pair<String, Types> pair : fields) {
-            columnsBuf.append(pair.getLeft());
-            columnsBuf.append(',');
+            buf.append(pair.getLeft());
+            buf.append(',');
         }
 
-        columnsBuf.deleteCharAt(columnsBuf.length() - 1);
-        columnsBuf.append(')');
-        columns = columnsBuf.toString();
+        buf.deleteCharAt(buf.length() - 1);
+        buf.append(") VALUES \n");
     }
 
     @Override
     public void accumulate(ArrayList<Object> element) {
-        buf.append("INSERT INTO " + dnt.getId() + " " + columns + " VALUES (");
-        buf.append(element.get(0)); // the id
+        buf.append("  (" + element.get(0));
         for (int i = 1; i < element.size(); i++) {
             buf.append(',');
             switch (fields.get(i).getRight()) {
@@ -44,13 +38,14 @@ public class DNTEntries implements Accumulator<ArrayList<Object>, StringBuilder>
                     break;
             }
         }
-        buf.append(");\n");
+        buf.append("),\n");
     }
 
     @Override
     public StringBuilder dissipate() {
         StringBuilder newBuf = new StringBuilder(buf);
-        newBuf.deleteCharAt(newBuf.length() - 1);
+        newBuf.delete(newBuf.length() - 2, newBuf.length());
+        newBuf.append(';');
         return newBuf;
     }
 }
