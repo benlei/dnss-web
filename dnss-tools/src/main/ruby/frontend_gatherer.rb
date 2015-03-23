@@ -11,8 +11,6 @@ require_relative 'dn-skills'
 JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json'
 # JSON_DIRECTORY = 'E:\\json'
 
-PRETTY = true
-
 ##############################################################################
 # get all messages
 ##############################################################################
@@ -198,18 +196,26 @@ mkdir_p(JSON_DIRECTORY)
 ##############################################################################
 path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'weapon_types']
 stream = open(path, 'w')
-stream.write(JSON.pretty_generate(DN_WEAPON_TYPES)) unless ! PRETTY
-stream.write(DN_WEAPON_TYPES.to_json) unless PRETTY
+stream.write(JSON.pretty_generate(DN_WEAPON_TYPES))
 stream.close()
-puts '%s created' % path
+
+path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'weapon_types']
+stream = open(path, 'w')
+stream.write(DN_WEAPON_TYPES.to_json)
+stream.close()
 
 ##############################################################################
 # WRITE: skill types
 ##############################################################################
 path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'skill_types']
 stream = open(path, 'w')
-stream.write(JSON.pretty_generate(DN_SKILL_TYPES)) unless ! PRETTY
-stream.write(DN_SKILL_TYPES.to_json) unless PRETTY
+stream.write(JSON.pretty_generate(DN_SKILL_TYPES))
+stream.close()
+puts '%s created' % path
+
+path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'skill_types']
+stream = open(path, 'w')
+stream.write(DN_SKILL_TYPES.to_json)
 stream.close()
 puts '%s created' % path
 
@@ -217,14 +223,20 @@ puts '%s created' % path
 # WRITE: all jobs
 ##############################################################################
 jobs.each_value do |job|
-  path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, job['englishname']]
+  englishname = job['englishname']
 
   # deletes unneeded fields
   ['englishname', 'jobnumber', 'parentjob', 'jobname'].each {|a| job.delete(a)}
 
+  path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
   stream = open(path, 'w')
-  stream.write(JSON.pretty_generate(job)) unless ! PRETTY
-  stream.write(job.to_json) unless PRETTY
+  stream.write(JSON.pretty_generate(job))
+  stream.close()
+  puts '%s created' % path
+
+  path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
+  stream = open(path, 'w')
+  stream.write(job.to_json)
   stream.close()
   puts '%s created' % path
 end
@@ -234,8 +246,13 @@ end
 ##############################################################################
 path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
 stream = open(path, 'w')
-stream.write(JSON.pretty_generate(job_tree)) unless ! PRETTY
-stream.write(job_tree.to_json) unless PRETTY
+stream.write(JSON.pretty_generate(job_tree))
+stream.close()
+puts '%s created' % path
+
+path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
+stream = open(path, 'w')
+stream.write(job_tree.to_json)
 stream.close()
 puts '%s created' % path
 
