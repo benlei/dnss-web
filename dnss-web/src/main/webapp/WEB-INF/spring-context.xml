@@ -1,16 +1,2657 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-                           http://www.springframework.org/schema/beans/spring-beans.xsd">
-<!--
-ADD DEPENDENCIES HERE; EXAMPLE:z
-   <bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
-       <property name="message" value="Hello World!"/>
-   </bean>
-
--->
-
-
+<?xml version="1.0"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+  <bean id="warrior" class="dnss.model.Job">
+    <property name="name" value="Warrior"/>
+    <property name="identifier" value="warrior"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>28</value>
+          <value>2</value>
+          <value>11</value>
+          <value>10</value>
+        </list>
+        <list>
+          <value>6</value>
+          <value>12</value>
+          <value>8</value>
+          <value>15</value>
+        </list>
+        <list>
+          <value>5</value>
+          <value>18</value>
+          <value>29</value>
+          <value>9</value>
+        </list>
+        <list>
+          <value>7</value>
+          <value>20</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>24</value>
+          <value>30</value>
+          <value>31</value>
+        </list>
+        <list>
+          <value>33</value>
+          <value>17</value>
+          <value>0</value>
+          <value>32</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="archer" class="dnss.model.Job">
+    <property name="name" value="Archer"/>
+    <property name="identifier" value="archer"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>1001</value>
+          <value>1026</value>
+          <value>1017</value>
+          <value>1013</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1008</value>
+          <value>1019</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1003</value>
+          <value>1027</value>
+          <value>1028</value>
+          <value>1023</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1021</value>
+          <value>1018</value>
+          <value>1016</value>
+        </list>
+        <list>
+          <value>1009</value>
+          <value>1024</value>
+          <value>1029</value>
+          <value>1030</value>
+        </list>
+        <list>
+          <value>1032</value>
+          <value>0</value>
+          <value>0</value>
+          <value>1031</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="soceress" class="dnss.model.Job">
+    <property name="name" value="Sorceress"/>
+    <property name="identifier" value="soceress"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>2002</value>
+          <value>2031</value>
+          <value>2015</value>
+          <value>2013</value>
+        </list>
+        <list>
+          <value>2034</value>
+          <value>2026</value>
+          <value>2012</value>
+          <value>2016</value>
+        </list>
+        <list>
+          <value>2035</value>
+          <value>2022</value>
+          <value>0</value>
+          <value>2014</value>
+        </list>
+        <list>
+          <value>2033</value>
+          <value>2029</value>
+          <value>2023</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2024</value>
+          <value>2036</value>
+          <value>2037</value>
+        </list>
+        <list>
+          <value>2039</value>
+          <value>0</value>
+          <value>0</value>
+          <value>2038</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="cleric" class="dnss.model.Job">
+    <property name="name" value="Cleric"/>
+    <property name="identifier" value="cleric"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>3028</value>
+          <value>3002</value>
+          <value>3015</value>
+          <value>3017</value>
+        </list>
+        <list>
+          <value>3030</value>
+          <value>3022</value>
+          <value>3031</value>
+          <value>3020</value>
+        </list>
+        <list>
+          <value>3019</value>
+          <value>3016</value>
+          <value>3018</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3029</value>
+          <value>3021</value>
+          <value>3003</value>
+          <value>3023</value>
+        </list>
+        <list>
+          <value>3032</value>
+          <value>3024</value>
+          <value>3033</value>
+          <value>3034</value>
+        </list>
+        <list>
+          <value>3036</value>
+          <value>0</value>
+          <value>0</value>
+          <value>3035</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="academic" class="dnss.model.Job">
+    <property name="name" value="Tinkerer"/>
+    <property name="identifier" value="academic"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>4001</value>
+          <value>4002</value>
+          <value>4004</value>
+          <value>4006</value>
+        </list>
+        <list>
+          <value>4222</value>
+          <value>4005</value>
+          <value>4009</value>
+          <value>4003</value>
+        </list>
+        <list>
+          <value>4014</value>
+          <value>4011</value>
+          <value>4010</value>
+          <value>4007</value>
+        </list>
+        <list>
+          <value>4015</value>
+          <value>4008</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4223</value>
+          <value>4016</value>
+          <value>4018</value>
+          <value>4017</value>
+        </list>
+        <list>
+          <value>4020</value>
+          <value>0</value>
+          <value>0</value>
+          <value>4019</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="kali" class="dnss.model.Job">
+    <property name="name" value="Kali"/>
+    <property name="identifier" value="kali"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>5000</value>
+          <value>5001</value>
+          <value>5008</value>
+          <value>5009</value>
+        </list>
+        <list>
+          <value>5003</value>
+          <value>5002</value>
+          <value>5011</value>
+          <value>5010</value>
+        </list>
+        <list>
+          <value>5004</value>
+          <value>5005</value>
+          <value>5012</value>
+          <value>5014</value>
+        </list>
+        <list>
+          <value>5006</value>
+          <value>5015</value>
+          <value>5013</value>
+          <value>5016</value>
+        </list>
+        <list>
+          <value>5007</value>
+          <value>0</value>
+          <value>5017</value>
+          <value>5018</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="assassin" class="dnss.model.Job">
+    <property name="name" value="Assassin"/>
+    <property name="identifier" value="assassin"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>6001</value>
+          <value>6003</value>
+          <value>6010</value>
+          <value>6007</value>
+        </list>
+        <list>
+          <value>6002</value>
+          <value>6013</value>
+          <value>6011</value>
+          <value>6012</value>
+        </list>
+        <list>
+          <value>6004</value>
+          <value>6005</value>
+          <value>6015</value>
+          <value>6016</value>
+        </list>
+        <list>
+          <value>6006</value>
+          <value>6008</value>
+          <value>6014</value>
+          <value>6019</value>
+        </list>
+        <list>
+          <value>6009</value>
+          <value>6017</value>
+          <value>6018</value>
+          <value>6020</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="lencea" class="dnss.model.Job">
+    <property name="name" value="Lencea"/>
+    <property name="identifier" value="lencea"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio1" value="1.0"/>
+    <property name="spRatio2" value="0.0"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>7001</value>
+          <value>7002</value>
+          <value>7003</value>
+          <value>7004</value>
+        </list>
+        <list>
+          <value>7005</value>
+          <value>0</value>
+          <value>7006</value>
+          <value>7007</value>
+        </list>
+        <list>
+          <value>7008</value>
+          <value>7009</value>
+          <value>0</value>
+          <value>7010</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>7011</value>
+          <value>7012</value>
+          <value>7013</value>
+        </list>
+        <list>
+          <value>7014</value>
+          <value>7015</value>
+          <value>7016</value>
+          <value>7017</value>
+        </list>
+        <list>
+          <value>7019</value>
+          <value>0</value>
+          <value>0</value>
+          <value>7018</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="swordmaster" class="dnss.model.Job">
+    <property name="name" value="Swordsman"/>
+    <property name="identifier" value="swordmaster"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="warrior"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>206</value>
+          <value>201</value>
+          <value>220</value>
+          <value>208</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>215</value>
+          <value>202</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>204</value>
+          <value>210</value>
+          <value>219</value>
+          <value>203</value>
+        </list>
+        <list>
+          <value>207</value>
+          <value>221</value>
+          <value>216</value>
+          <value>209</value>
+        </list>
+        <list>
+          <value>205</value>
+          <value>212</value>
+          <value>218</value>
+          <value>211</value>
+        </list>
+        <list>
+          <value>213</value>
+          <value>0</value>
+          <value>0</value>
+          <value>214</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="mercenary" class="dnss.model.Job">
+    <property name="name" value="Mercenary"/>
+    <property name="identifier" value="mercenary"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="warrior"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>408</value>
+          <value>405</value>
+          <value>403</value>
+          <value>418</value>
+        </list>
+        <list>
+          <value>409</value>
+          <value>406</value>
+          <value>412</value>
+          <value>420</value>
+        </list>
+        <list>
+          <value>407</value>
+          <value>410</value>
+          <value>404</value>
+          <value>419</value>
+        </list>
+        <list>
+          <value>401</value>
+          <value>411</value>
+          <value>414</value>
+          <value>402</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>0</value>
+          <value>413</value>
+          <value>417</value>
+        </list>
+        <list>
+          <value>415</value>
+          <value>416</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="bowmaster" class="dnss.model.Job">
+    <property name="name" value="Sharpshooter"/>
+    <property name="identifier" value="bowmaster"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="archer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>1201</value>
+          <value>1208</value>
+          <value>0</value>
+          <value>1205</value>
+        </list>
+        <list>
+          <value>1202</value>
+          <value>1209</value>
+          <value>1215</value>
+          <value>1217</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>0</value>
+          <value>1212</value>
+          <value>1206</value>
+        </list>
+        <list>
+          <value>1220</value>
+          <value>1210</value>
+          <value>1213</value>
+          <value>1221</value>
+        </list>
+        <list>
+          <value>1207</value>
+          <value>1203</value>
+          <value>1218</value>
+          <value>1219</value>
+        </list>
+        <list>
+          <value>1204</value>
+          <value>1211</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="acrobat" class="dnss.model.Job">
+    <property name="name" value="Acrobat"/>
+    <property name="identifier" value="acrobat"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="archer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>1405</value>
+          <value>1416</value>
+          <value>1408</value>
+          <value>1404</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1417</value>
+          <value>1409</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1402</value>
+          <value>1401</value>
+          <value>1418</value>
+          <value>1403</value>
+        </list>
+        <list>
+          <value>1411</value>
+          <value>1415</value>
+          <value>1412</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1406</value>
+          <value>1410</value>
+          <value>1419</value>
+          <value>1407</value>
+        </list>
+        <list>
+          <value>1413</value>
+          <value>0</value>
+          <value>0</value>
+          <value>1414</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="elementallord" class="dnss.model.Job">
+    <property name="name" value="Elementalist"/>
+    <property name="identifier" value="elementallord"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="soceress"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>2220</value>
+          <value>2217</value>
+          <value>2218</value>
+          <value>2204</value>
+        </list>
+        <list>
+          <value>2206</value>
+          <value>0</value>
+          <value>2363</value>
+          <value>2203</value>
+        </list>
+        <list>
+          <value>2202</value>
+          <value>2207</value>
+          <value>2209</value>
+          <value>2211</value>
+        </list>
+        <list>
+          <value>2213</value>
+          <value>2208</value>
+          <value>2212</value>
+          <value>2214</value>
+        </list>
+        <list>
+          <value>2205</value>
+          <value>2219</value>
+          <value>2221</value>
+          <value>2210</value>
+        </list>
+        <list>
+          <value>2215</value>
+          <value>0</value>
+          <value>0</value>
+          <value>2216</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="forceuser" class="dnss.model.Job">
+    <property name="name" value="Mystic"/>
+    <property name="identifier" value="forceuser"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="soceress"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>2403</value>
+          <value>2409</value>
+          <value>0</value>
+          <value>2406</value>
+        </list>
+        <list>
+          <value>2404</value>
+          <value>2416</value>
+          <value>2417</value>
+          <value>2413</value>
+        </list>
+        <list>
+          <value>2405</value>
+          <value>2412</value>
+          <value>2411</value>
+          <value>2420</value>
+        </list>
+        <list>
+          <value>2408</value>
+          <value>2418</value>
+          <value>0</value>
+          <value>2410</value>
+        </list>
+        <list>
+          <value>2401</value>
+          <value>2415</value>
+          <value>2419</value>
+          <value>2407</value>
+        </list>
+        <list>
+          <value>2402</value>
+          <value>0</value>
+          <value>0</value>
+          <value>2414</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="paladin" class="dnss.model.Job">
+    <property name="name" value="Paladin"/>
+    <property name="identifier" value="paladin"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="cleric"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>3222</value>
+          <value>3208</value>
+          <value>3217</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3224</value>
+          <value>3223</value>
+          <value>3221</value>
+          <value>3218</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3207</value>
+          <value>3220</value>
+          <value>3219</value>
+        </list>
+        <list>
+          <value>3202</value>
+          <value>0</value>
+          <value>3205</value>
+          <value>3211</value>
+        </list>
+        <list>
+          <value>3203</value>
+          <value>3201</value>
+          <value>3214</value>
+          <value>3213</value>
+        </list>
+        <list>
+          <value>3209</value>
+          <value>0</value>
+          <value>3210</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="priest" class="dnss.model.Job">
+    <property name="name" value="Priest"/>
+    <property name="identifier" value="priest"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="cleric"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>3402</value>
+          <value>0</value>
+          <value>3426</value>
+          <value>3409</value>
+        </list>
+        <list>
+          <value>3425</value>
+          <value>3418</value>
+          <value>3414</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3407</value>
+          <value>3401</value>
+          <value>3416</value>
+          <value>3403</value>
+        </list>
+        <list>
+          <value>3408</value>
+          <value>0</value>
+          <value>3421</value>
+          <value>3422</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3406</value>
+          <value>3420</value>
+          <value>3423</value>
+        </list>
+        <list>
+          <value>3411</value>
+          <value>0</value>
+          <value>0</value>
+          <value>3412</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="gladiator" class="dnss.model.Job">
+    <property name="name" value="Gladiator"/>
+    <property name="identifier" value="gladiator"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="swordmaster"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>301</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>303</value>
+          <value>302</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>304</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>305</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>307</value>
+          <value>306</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>308</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="moonlord" class="dnss.model.Job">
+    <property name="name" value="Lunar Knight"/>
+    <property name="identifier" value="moonlord"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="swordmaster"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>351</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>353</value>
+          <value>352</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>354</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>355</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>357</value>
+          <value>356</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>358</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="barbarian" class="dnss.model.Job">
+    <property name="name" value="Barbarian"/>
+    <property name="identifier" value="barbarian"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="mercenary"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>501</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>503</value>
+          <value>502</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>504</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>505</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>507</value>
+          <value>506</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>511</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="destroyer" class="dnss.model.Job">
+    <property name="name" value="Destroyer"/>
+    <property name="identifier" value="destroyer"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="mercenary"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>551</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>553</value>
+          <value>552</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>554</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>555</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>557</value>
+          <value>556</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>558</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="sniper" class="dnss.model.Job">
+    <property name="name" value="Sniper"/>
+    <property name="identifier" value="sniper"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="bowmaster"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>1301</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1303</value>
+          <value>1302</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1304</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1305</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1307</value>
+          <value>1306</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1308</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="artillery" class="dnss.model.Job">
+    <property name="name" value="Warden"/>
+    <property name="identifier" value="artillery"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="bowmaster"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>1351</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1353</value>
+          <value>1352</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1354</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1355</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1357</value>
+          <value>1356</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1358</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="tempest" class="dnss.model.Job">
+    <property name="name" value="Tempest"/>
+    <property name="identifier" value="tempest"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="acrobat"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>1501</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1503</value>
+          <value>1502</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1504</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1505</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1507</value>
+          <value>1506</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1508</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="windwalker" class="dnss.model.Job">
+    <property name="name" value="Windwalker"/>
+    <property name="identifier" value="windwalker"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="acrobat"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>1551</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1553</value>
+          <value>1552</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1554</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1555</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>1557</value>
+          <value>1556</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>1558</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="saleana" class="dnss.model.Job">
+    <property name="name" value="Pyromancer"/>
+    <property name="identifier" value="saleana"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="elementallord"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>2301</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2303</value>
+          <value>2302</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2304</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2305</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2307</value>
+          <value>2306</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2308</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="elestra" class="dnss.model.Job">
+    <property name="name" value="Ice Witch"/>
+    <property name="identifier" value="elestra"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="elementallord"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>2351</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2353</value>
+          <value>2352</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2354</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2355</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2357</value>
+          <value>2356</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2358</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="smasher" class="dnss.model.Job">
+    <property name="name" value="War Mage"/>
+    <property name="identifier" value="smasher"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="forceuser"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>2501</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2503</value>
+          <value>2502</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2504</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2505</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2507</value>
+          <value>2506</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2508</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="majesty" class="dnss.model.Job">
+    <property name="name" value="Chaos Mage"/>
+    <property name="identifier" value="majesty"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="forceuser"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>2551</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2553</value>
+          <value>2552</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2554</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2555</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>2557</value>
+          <value>2556</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>2558</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="guardian" class="dnss.model.Job">
+    <property name="name" value="Guardian"/>
+    <property name="identifier" value="guardian"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="paladin"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>3302</value>
+          <value>3301</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3303</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3304</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3305</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3307</value>
+          <value>3306</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3308</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="crusades" class="dnss.model.Job">
+    <property name="name" value="Crusader"/>
+    <property name="identifier" value="crusades"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="paladin"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>3351</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3353</value>
+          <value>3352</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3354</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3355</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3357</value>
+          <value>3356</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3358</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="saint" class="dnss.model.Job">
+    <property name="name" value="Saint"/>
+    <property name="identifier" value="saint"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="priest"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>3501</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3503</value>
+          <value>3502</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3504</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3505</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3507</value>
+          <value>3506</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3508</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="inquisitor" class="dnss.model.Job">
+    <property name="name" value="Inquisitor"/>
+    <property name="identifier" value="inquisitor"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="priest"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>3551</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3553</value>
+          <value>3552</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3554</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3555</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>3557</value>
+          <value>3556</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>3558</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="engineer" class="dnss.model.Job">
+    <property name="name" value="Engineer"/>
+    <property name="identifier" value="engineer"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="academic"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>4201</value>
+          <value>7303</value>
+          <value>4206</value>
+          <value>4216</value>
+        </list>
+        <list>
+          <value>7301</value>
+          <value>4212</value>
+          <value>4203</value>
+          <value>4217</value>
+        </list>
+        <list>
+          <value>7302</value>
+          <value>4213</value>
+          <value>4207</value>
+          <value>4219</value>
+        </list>
+        <list>
+          <value>4202</value>
+          <value>4215</value>
+          <value>4209</value>
+          <value>4218</value>
+        </list>
+        <list>
+          <value>4204</value>
+          <value>4214</value>
+          <value>4208</value>
+          <value>7304</value>
+        </list>
+        <list>
+          <value>4205</value>
+          <value>0</value>
+          <value>4221</value>
+          <value>4220</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="shootingstar" class="dnss.model.Job">
+    <property name="name" value="Shooting Star"/>
+    <property name="identifier" value="shootingstar"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="engineer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>4301</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4303</value>
+          <value>4302</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4559</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4305</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4307</value>
+          <value>4306</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4308</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="gearmaster" class="dnss.model.Job">
+    <property name="name" value="Gear Master"/>
+    <property name="identifier" value="gearmaster"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="engineer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>4351</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4353</value>
+          <value>4352</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4354</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4355</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4357</value>
+          <value>4356</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4358</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="alchemist" class="dnss.model.Job">
+    <property name="name" value="Alchemist"/>
+    <property name="identifier" value="alchemist"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="academic"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>4409</value>
+          <value>4401</value>
+          <value>4405</value>
+          <value>4415</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4407</value>
+          <value>4404</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4410</value>
+          <value>4406</value>
+          <value>4414</value>
+          <value>4417</value>
+        </list>
+        <list>
+          <value>4411</value>
+          <value>4408</value>
+          <value>4418</value>
+          <value>4416</value>
+        </list>
+        <list>
+          <value>4412</value>
+          <value>4403</value>
+          <value>4402</value>
+          <value>4419</value>
+        </list>
+        <list>
+          <value>4413</value>
+          <value>0</value>
+          <value>0</value>
+          <value>4420</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="adept" class="dnss.model.Job">
+    <property name="name" value="Adept"/>
+    <property name="identifier" value="adept"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="alchemist"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>4501</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4503</value>
+          <value>4502</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4504</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4505</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4507</value>
+          <value>4506</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4508</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="physician" class="dnss.model.Job">
+    <property name="name" value="Physician"/>
+    <property name="identifier" value="physician"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="alchemist"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>4551</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4553</value>
+          <value>4552</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4554</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4555</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>4557</value>
+          <value>4556</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>4558</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="screamer" class="dnss.model.Job">
+    <property name="name" value="Screamer"/>
+    <property name="identifier" value="screamer"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="kali"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>5201</value>
+          <value>5202</value>
+          <value>5211</value>
+          <value>5214</value>
+        </list>
+        <list>
+          <value>5205</value>
+          <value>5204</value>
+          <value>5213</value>
+          <value>5215</value>
+        </list>
+        <list>
+          <value>5208</value>
+          <value>5206</value>
+          <value>5212</value>
+          <value>5216</value>
+        </list>
+        <list>
+          <value>5203</value>
+          <value>5207</value>
+          <value>5218</value>
+          <value>5217</value>
+        </list>
+        <list>
+          <value>5210</value>
+          <value>5209</value>
+          <value>0</value>
+          <value>5220</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="darksummoner" class="dnss.model.Job">
+    <property name="name" value="Dark Summoner"/>
+    <property name="identifier" value="darksummoner"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="screamer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>5301</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5303</value>
+          <value>5302</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5304</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5305</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5307</value>
+          <value>5306</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5308</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="souleater" class="dnss.model.Job">
+    <property name="name" value="Soul Eater"/>
+    <property name="identifier" value="souleater"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="screamer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>5401</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5403</value>
+          <value>5402</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5404</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5405</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5407</value>
+          <value>5406</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5408</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="dancer" class="dnss.model.Job">
+    <property name="name" value="Dancer"/>
+    <property name="identifier" value="dancer"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="kali"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>5103</value>
+          <value>5101</value>
+          <value>5109</value>
+          <value>5111</value>
+        </list>
+        <list>
+          <value>5104</value>
+          <value>5102</value>
+          <value>5110</value>
+          <value>5112</value>
+        </list>
+        <list>
+          <value>5105</value>
+          <value>5121</value>
+          <value>5117</value>
+          <value>5113</value>
+        </list>
+        <list>
+          <value>5106</value>
+          <value>5122</value>
+          <value>5118</value>
+          <value>5114</value>
+        </list>
+        <list>
+          <value>5107</value>
+          <value>0</value>
+          <value>5119</value>
+          <value>5115</value>
+        </list>
+        <list>
+          <value>5108</value>
+          <value>0</value>
+          <value>0</value>
+          <value>5116</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="bladedancer" class="dnss.model.Job">
+    <property name="name" value="Blade Dancer"/>
+    <property name="identifier" value="bladedancer"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="dancer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>5501</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5505</value>
+          <value>5502</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5503</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5504</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5507</value>
+          <value>5506</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5508</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="spiritdancer" class="dnss.model.Job">
+    <property name="name" value="Spirit Dancer"/>
+    <property name="identifier" value="spiritdancer"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="dancer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>5601</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5605</value>
+          <value>5602</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5603</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5604</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>5607</value>
+          <value>5606</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>5608</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="chaser" class="dnss.model.Job">
+    <property name="name" value="Shinobi"/>
+    <property name="identifier" value="chaser"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="assassin"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>6201</value>
+          <value>6207</value>
+          <value>6214</value>
+          <value>6213</value>
+        </list>
+        <list>
+          <value>6202</value>
+          <value>6209</value>
+          <value>6215</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6203</value>
+          <value>6210</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6204</value>
+          <value>6208</value>
+          <value>6217</value>
+          <value>6216</value>
+        </list>
+        <list>
+          <value>6205</value>
+          <value>6211</value>
+          <value>6218</value>
+          <value>6219</value>
+        </list>
+        <list>
+          <value>6206</value>
+          <value>6212</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="ripper" class="dnss.model.Job">
+    <property name="name" value="Reaper"/>
+    <property name="identifier" value="ripper"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="chaser"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>6501</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6502</value>
+          <value>6503</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6505</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6506</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6550</value>
+          <value>6507</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6554</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="raven" class="dnss.model.Job">
+    <property name="name" value="Raven"/>
+    <property name="identifier" value="raven"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="chaser"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>6401</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6402</value>
+          <value>6403</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6404</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6405</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6551</value>
+          <value>6407</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6553</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="bringer" class="dnss.model.Job">
+    <property name="name" value="Taoist"/>
+    <property name="identifier" value="bringer"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="assassin"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>6301</value>
+          <value>6313</value>
+          <value>6316</value>
+          <value>6308</value>
+        </list>
+        <list>
+          <value>6303</value>
+          <value>6314</value>
+          <value>6317</value>
+          <value>6307</value>
+        </list>
+        <list>
+          <value>6304</value>
+          <value>6320</value>
+          <value>6319</value>
+          <value>6309</value>
+        </list>
+        <list>
+          <value>6305</value>
+          <value>0</value>
+          <value>0</value>
+          <value>6310</value>
+        </list>
+        <list>
+          <value>6302</value>
+          <value>6315</value>
+          <value>6318</value>
+          <value>6311</value>
+        </list>
+        <list>
+          <value>6306</value>
+          <value>0</value>
+          <value>0</value>
+          <value>6312</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="lightfury" class="dnss.model.Job">
+    <property name="name" value="Light Bringer"/>
+    <property name="identifier" value="lightfury"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="bringer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>6601</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6603</value>
+          <value>6604</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6606</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6607</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6602</value>
+          <value>6605</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6608</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="abysswalker" class="dnss.model.Job">
+    <property name="name" value="Abyss Walker"/>
+    <property name="identifier" value="abysswalker"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="bringer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>6701</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6703</value>
+          <value>6705</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6704</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6706</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>6702</value>
+          <value>6707</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>6708</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="piercer" class="dnss.model.Job">
+    <property name="name" value="Lancer"/>
+    <property name="identifier" value="piercer"/>
+    <property name="advancement" value="1"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.0"/>
+    <property name="parent" ref="lencea"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>7020</value>
+          <value>7021</value>
+          <value>7022</value>
+          <value>7023</value>
+        </list>
+        <list>
+          <value>7024</value>
+          <value>0</value>
+          <value>7025</value>
+          <value>7026</value>
+        </list>
+        <list>
+          <value>7027</value>
+          <value>7028</value>
+          <value>7029</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>7030</value>
+          <value>7031</value>
+          <value>7032</value>
+          <value>7033</value>
+        </list>
+        <list>
+          <value>7034</value>
+          <value>7035</value>
+          <value>7036</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>7037</value>
+          <value>0</value>
+          <value>7038</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="flurry" class="dnss.model.Job">
+    <property name="name" value="Dragoon"/>
+    <property name="identifier" value="flurry"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="piercer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>7101</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>7102</value>
+          <value>7103</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>7104</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>7105</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>7107</value>
+          <value>7106</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>7108</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="stingbreezer" class="dnss.model.Job">
+    <property name="name" value="Valkyrie"/>
+    <property name="identifier" value="stingbreezer"/>
+    <property name="advancement" value="2"/>
+    <property name="spRatio1" value="0.625"/>
+    <property name="spRatio2" value="0.645"/>
+    <property name="spRatio3" value="0.625"/>
+    <property name="parent" ref="piercer"/>
+    <property name="skillTree">
+      <list>
+        <list>
+          <value>7201</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>7202</value>
+          <value>7203</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>7204</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>7205</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>7207</value>
+          <value>7206</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>7208</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <util:list id="levels">
+    <value>0</value>
+    <value>0</value>
+    <value>3</value>
+    <value>6</value>
+    <value>9</value>
+    <value>12</value>
+    <value>15</value>
+    <value>18</value>
+    <value>21</value>
+    <value>24</value>
+    <value>27</value>
+    <value>30</value>
+    <value>33</value>
+    <value>36</value>
+    <value>39</value>
+    <value>42</value>
+    <value>45</value>
+    <value>48</value>
+    <value>51</value>
+    <value>54</value>
+    <value>57</value>
+    <value>60</value>
+    <value>63</value>
+    <value>66</value>
+    <value>69</value>
+    <value>72</value>
+    <value>75</value>
+    <value>78</value>
+    <value>81</value>
+    <value>84</value>
+    <value>87</value>
+    <value>90</value>
+    <value>93</value>
+    <value>96</value>
+    <value>99</value>
+    <value>102</value>
+    <value>105</value>
+    <value>108</value>
+    <value>111</value>
+    <value>114</value>
+    <value>117</value>
+    <value>120</value>
+    <value>123</value>
+    <value>126</value>
+    <value>129</value>
+    <value>132</value>
+    <value>135</value>
+    <value>138</value>
+    <value>141</value>
+    <value>144</value>
+    <value>147</value>
+    <value>149</value>
+    <value>151</value>
+    <value>153</value>
+    <value>155</value>
+    <value>157</value>
+    <value>159</value>
+    <value>161</value>
+    <value>163</value>
+    <value>165</value>
+    <value>167</value>
+    <value>169</value>
+    <value>171</value>
+    <value>173</value>
+    <value>175</value>
+    <value>177</value>
+    <value>179</value>
+    <value>181</value>
+    <value>183</value>
+    <value>185</value>
+    <value>187</value>
+    <value>189</value>
+    <value>191</value>
+    <value>193</value>
+    <value>195</value>
+    <value>197</value>
+    <value>199</value>
+    <value>201</value>
+    <value>203</value>
+    <value>205</value>
+    <value>207</value>
+  </util:list>
 </beans>
