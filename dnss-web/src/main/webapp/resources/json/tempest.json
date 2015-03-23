@@ -1,1 +1,456 @@
-{"jobicon":21,"skills":{"1506":{"type":3,"nameid":0,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":14}],"image":"02","icon":80,"needweapon":[],"requires":[{"id":1406,"level":1}],"sp_requires":[0,65]},"1507":{"type":1,"nameid":1,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":15}],"image":"02","icon":86,"needweapon":[],"requires":[],"sp_requires":[0,65]},"1508":{"type":3,"nameid":2,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":16}],"image":"02","icon":90,"needweapon":[],"requires":[{"id":1503,"level":1}],"sp_requires":[0,0]},"1501":{"type":1,"nameid":3,"maxlevel":6,"levels":[{"required_level":45,"sp_consumed":1,"decreasesp":17,"skillexplanationid":9},{"required_level":55,"sp_consumed":1,"decreasesp":20,"skillexplanationid":9},{"required_level":65,"sp_consumed":1,"decreasesp":23,"skillexplanationid":9},{"required_level":75,"sp_consumed":1,"decreasesp":26,"skillexplanationid":9},{"required_level":85,"sp_consumed":1,"decreasesp":29,"skillexplanationid":9},{"required_level":95,"sp_consumed":1,"decreasesp":32,"skillexplanationid":9}],"image":"02","icon":64,"needweapon":[4,15],"requires":[{"id":1413,"level":1}],"sp_requires":[0,65]},"1502":{"type":3,"nameid":4,"maxlevel":1,"levels":[{"required_level":48,"sp_consumed":3,"decreasesp":0,"skillexplanationid":10}],"image":"02","icon":65,"needweapon":[],"requires":[{"id":1405,"level":6}],"sp_requires":[0,65]},"1503":{"type":0,"nameid":5,"maxlevel":13,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":20,"skillexplanationid":11},{"required_level":53,"sp_consumed":1,"decreasesp":23,"skillexplanationid":11},{"required_level":56,"sp_consumed":1,"decreasesp":25,"skillexplanationid":11},{"required_level":59,"sp_consumed":1,"decreasesp":27,"skillexplanationid":11},{"required_level":62,"sp_consumed":1,"decreasesp":30,"skillexplanationid":11},{"required_level":65,"sp_consumed":1,"decreasesp":33,"skillexplanationid":11},{"required_level":68,"sp_consumed":1,"decreasesp":35,"skillexplanationid":11},{"required_level":71,"sp_consumed":1,"decreasesp":38,"skillexplanationid":11},{"required_level":74,"sp_consumed":1,"decreasesp":40,"skillexplanationid":11},{"required_level":77,"sp_consumed":1,"decreasesp":42,"skillexplanationid":11},{"required_level":80,"sp_consumed":1,"decreasesp":46,"skillexplanationid":11},{"required_level":83,"sp_consumed":1,"decreasesp":48,"skillexplanationid":11},{"required_level":86,"sp_consumed":1,"decreasesp":50,"skillexplanationid":11}],"image":"02","icon":66,"needweapon":[],"requires":[{"id":1501,"level":1}],"sp_requires":[0,65]},"95056":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95055":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95054":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95053":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95052":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95051":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95050":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95049":{"type":0,"nameid":6,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"1504":{"type":3,"nameid":7,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":12}],"image":"02","icon":74,"needweapon":[],"requires":[{"id":1402,"level":1},{"id":1502,"level":1}],"sp_requires":[0,65]},"1505":{"type":3,"nameid":8,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":13}],"image":"02","icon":75,"needweapon":[],"requires":[{"id":1411,"level":1}],"sp_requires":[0,65]}},"message":["Furious Winds +","Kick Combo","Hurricane Dance +","Untouchable","Kick Shot +","Hurricane Dance","Tempest","Marionette +","Somersault Dance +","Dodge {0}% of enemy attacks. #ySpirit Shot, Spiral Kick,#w and #yButterfly Float#w can be used when this skill triggers.","Enhances Kick Shot's charge distance, so attacks can be launched immediately with the regular attack button. Also, shoots more arrows.\\n#yKick Shot Damage: +{0}%","#y[Physical Attack]#wKick the enemy in front of you so hard that all of their skills are nullified, then launch into a powerful combo attack.\\n#yPhysical Damage {0}% + {1}\\nIgnores block\\nCannot use skills for 2 seconds","Enhances Marionette's attack range and damage. Makes enemies more vulnerable to Physical Damage. Also increases the chance to destroy Super Armor.\\n#yMarionette Damage: +{0}%\\nEnemy Physical Damage Taken: +{1}% for {2} sec","Enhances Somersault Dance's damage and creates a whirlwind.\\n#ySomersault Dance Damage: +{0}%","Enhances Furious Winds to leave additional whirlwinds. Pressing the regular attack button creates stationary whirlwinds. Pressing the special attack button leaves moving whirlwinds. \\n#yAdditional Hit Damage: {0}% of Furious Winds damage","Increases Physical Damage after using Kick Shot or Somersault Dance. Also decreases Cooldown of #yNature's Rage#w when hitting the enemy with #y[Physical Attack] #w. Cooldown decreases once during the first attack for each skill.\\n#yDuration: {0} sec\\nPhysical Damage +{1}%\\n#yDecreases [Physical Skill] cooldown by {2} sec per attack","Enhances Hurricane Dance. Deals an extra #y{0}% of Max Physical Damage#w every time you hit, and the final attack deals more damage. \\n#yFinal Attack Damage: {1}%"]}
+{
+  "jobicon": 21,
+  "skills": {
+    "1506": {
+      "type": 3,
+      "nameid": 0,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 14,
+          "spcost": 2
+        }
+      ],
+      "image": "02",
+      "icon": 80,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 1406,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "1507": {
+      "type": 1,
+      "nameid": 1,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 1
+        }
+      ],
+      "image": "02",
+      "icon": 86,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "1508": {
+      "type": 3,
+      "nameid": 2,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 16,
+          "spcost": 2
+        }
+      ],
+      "image": "02",
+      "icon": 90,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 1503,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    },
+    "1501": {
+      "type": 1,
+      "nameid": 3,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 17,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 55,
+          "mpcost": 20,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 23,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 26,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 85,
+          "mpcost": 29,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 95,
+          "mpcost": 32,
+          "explanationid": 9,
+          "spcost": 1
+        }
+      ],
+      "image": "02",
+      "icon": 64,
+      "needweapon": [
+        4,
+        15
+      ],
+      "requires": [
+        {
+          "id": 1413,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "1502": {
+      "type": 3,
+      "nameid": 4,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": 0,
+          "explanationid": 10,
+          "spcost": 3
+        }
+      ],
+      "image": "02",
+      "icon": 65,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 1405,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "1503": {
+      "type": 0,
+      "nameid": 5,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 20,
+          "explanationid": 11,
+          "spcost": 3
+        },
+        {
+          "required_level": 53,
+          "mpcost": 23,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 25,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 27,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 30,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 33,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 35,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 38,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 40,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 42,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 46,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 83,
+          "mpcost": 48,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 50,
+          "explanationid": 11,
+          "spcost": 1
+        }
+      ],
+      "image": "02",
+      "icon": 66,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 1501,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "95056": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95055": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95054": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95053": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95052": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95051": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95050": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95049": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "1504": {
+      "type": 3,
+      "nameid": 7,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 12,
+          "spcost": 0
+        }
+      ],
+      "image": "02",
+      "icon": 74,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 1402,
+          "level": 1
+        },
+        {
+          "id": 1502,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "1505": {
+      "type": 3,
+      "nameid": 8,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 0
+        }
+      ],
+      "image": "02",
+      "icon": 75,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 1411,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    }
+  },
+  "message": [
+    "Furious Winds +",
+    "Kick Combo",
+    "Hurricane Dance +",
+    "Untouchable",
+    "Kick Shot +",
+    "Hurricane Dance",
+    "Tempest",
+    "Marionette +",
+    "Somersault Dance +",
+    "Dodge {0}% of enemy attacks. #ySpirit Shot, Spiral Kick,#w and #yButterfly Float#w can be used when this skill triggers.",
+    "Enhances Kick Shot's charge distance, so attacks can be launched immediately with the regular attack button. Also, shoots more arrows.\\n#yKick Shot Damage: +{0}%",
+    "#y[Physical Attack]#wKick the enemy in front of you so hard that all of their skills are nullified, then launch into a powerful combo attack.\\n#yPhysical Damage {0}% + {1}\\nIgnores block\\nCannot use skills for 2 seconds",
+    "Enhances Marionette's attack range and damage. Makes enemies more vulnerable to Physical Damage. Also increases the chance to destroy Super Armor.\\n#yMarionette Damage: +{0}%\\nEnemy Physical Damage Taken: +{1}% for {2} sec",
+    "Enhances Somersault Dance's damage and creates a whirlwind.\\n#ySomersault Dance Damage: +{0}%",
+    "Enhances Furious Winds to leave additional whirlwinds. Pressing the regular attack button creates stationary whirlwinds. Pressing the special attack button leaves moving whirlwinds. \\n#yAdditional Hit Damage: {0}% of Furious Winds damage",
+    "Increases Physical Damage after using Kick Shot or Somersault Dance. Also decreases Cooldown of #yNature's Rage#w when hitting the enemy with #y[Physical Attack] #w. Cooldown decreases once during the first attack for each skill.\\n#yDuration: {0} sec\\nPhysical Damage +{1}%\\n#yDecreases [Physical Skill] cooldown by {2} sec per attack",
+    "Enhances Hurricane Dance. Deals an extra #y{0}% of Max Physical Damage#w every time you hit, and the final attack deals more damage. \\n#yFinal Attack Damage: {1}%"
+  ]
+}

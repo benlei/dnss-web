@@ -1,1 +1,1750 @@
-{"jobicon":9,"skills":{"409":{"type":0,"nameid":0,"maxlevel":19,"levels":[{"required_level":20,"sp_consumed":3,"decreasesp":15,"skillexplanationid":29},{"required_level":23,"sp_consumed":1,"decreasesp":18,"skillexplanationid":29},{"required_level":26,"sp_consumed":1,"decreasesp":21,"skillexplanationid":29},{"required_level":29,"sp_consumed":1,"decreasesp":23,"skillexplanationid":29},{"required_level":32,"sp_consumed":1,"decreasesp":25,"skillexplanationid":29},{"required_level":35,"sp_consumed":1,"decreasesp":28,"skillexplanationid":29},{"required_level":38,"sp_consumed":1,"decreasesp":30,"skillexplanationid":29},{"required_level":41,"sp_consumed":1,"decreasesp":33,"skillexplanationid":29},{"required_level":44,"sp_consumed":1,"decreasesp":35,"skillexplanationid":29},{"required_level":47,"sp_consumed":1,"decreasesp":38,"skillexplanationid":29},{"required_level":50,"sp_consumed":1,"decreasesp":41,"skillexplanationid":29},{"required_level":53,"sp_consumed":1,"decreasesp":43,"skillexplanationid":29},{"required_level":56,"sp_consumed":1,"decreasesp":45,"skillexplanationid":29},{"required_level":59,"sp_consumed":1,"decreasesp":48,"skillexplanationid":29},{"required_level":62,"sp_consumed":1,"decreasesp":50,"skillexplanationid":29},{"required_level":65,"sp_consumed":1,"decreasesp":53,"skillexplanationid":29},{"required_level":68,"sp_consumed":1,"decreasesp":55,"skillexplanationid":29},{"required_level":71,"sp_consumed":1,"decreasesp":58,"skillexplanationid":29},{"required_level":74,"sp_consumed":1,"decreasesp":60,"skillexplanationid":29}],"image":"01","icon":64,"needweapon":[],"requires":[{"id":408,"level":1}],"sp_requires":[25,0]},"401":{"type":0,"nameid":1,"maxlevel":15,"levels":[{"required_level":32,"sp_consumed":3,"decreasesp":18,"skillexplanationid":21},{"required_level":35,"sp_consumed":1,"decreasesp":20,"skillexplanationid":21},{"required_level":38,"sp_consumed":1,"decreasesp":22,"skillexplanationid":21},{"required_level":41,"sp_consumed":1,"decreasesp":25,"skillexplanationid":21},{"required_level":44,"sp_consumed":1,"decreasesp":27,"skillexplanationid":21},{"required_level":47,"sp_consumed":1,"decreasesp":31,"skillexplanationid":21},{"required_level":50,"sp_consumed":1,"decreasesp":33,"skillexplanationid":21},{"required_level":53,"sp_consumed":1,"decreasesp":35,"skillexplanationid":21},{"required_level":56,"sp_consumed":1,"decreasesp":38,"skillexplanationid":21},{"required_level":59,"sp_consumed":1,"decreasesp":40,"skillexplanationid":21},{"required_level":62,"sp_consumed":1,"decreasesp":43,"skillexplanationid":21},{"required_level":65,"sp_consumed":1,"decreasesp":46,"skillexplanationid":21},{"required_level":68,"sp_consumed":1,"decreasesp":48,"skillexplanationid":21},{"required_level":71,"sp_consumed":1,"decreasesp":51,"skillexplanationid":21},{"required_level":74,"sp_consumed":1,"decreasesp":53,"skillexplanationid":21}],"image":"01","icon":14,"needweapon":[2,3],"requires":[{"id":407,"level":1}],"sp_requires":[35,0]},"402":{"type":0,"nameid":2,"maxlevel":7,"levels":[{"required_level":28,"sp_consumed":1,"decreasesp":15,"skillexplanationid":22},{"required_level":38,"sp_consumed":1,"decreasesp":18,"skillexplanationid":22},{"required_level":48,"sp_consumed":1,"decreasesp":21,"skillexplanationid":22},{"required_level":58,"sp_consumed":1,"decreasesp":25,"skillexplanationid":22},{"required_level":68,"sp_consumed":1,"decreasesp":28,"skillexplanationid":22},{"required_level":78,"sp_consumed":1,"decreasesp":31,"skillexplanationid":22},{"required_level":88,"sp_consumed":1,"decreasesp":34,"skillexplanationid":22}],"image":"01","icon":27,"needweapon":[],"requires":[],"sp_requires":[35,0]},"403":{"type":1,"nameid":3,"maxlevel":13,"levels":[{"required_level":18,"sp_consumed":3,"decreasesp":15,"skillexplanationid":23},{"required_level":23,"sp_consumed":1,"decreasesp":17,"skillexplanationid":23},{"required_level":28,"sp_consumed":1,"decreasesp":20,"skillexplanationid":23},{"required_level":33,"sp_consumed":1,"decreasesp":22,"skillexplanationid":23},{"required_level":38,"sp_consumed":1,"decreasesp":25,"skillexplanationid":23},{"required_level":43,"sp_consumed":1,"decreasesp":28,"skillexplanationid":23},{"required_level":48,"sp_consumed":1,"decreasesp":30,"skillexplanationid":23},{"required_level":53,"sp_consumed":1,"decreasesp":33,"skillexplanationid":23},{"required_level":58,"sp_consumed":1,"decreasesp":35,"skillexplanationid":23},{"required_level":63,"sp_consumed":1,"decreasesp":38,"skillexplanationid":23},{"required_level":68,"sp_consumed":1,"decreasesp":40,"skillexplanationid":23},{"required_level":73,"sp_consumed":1,"decreasesp":43,"skillexplanationid":23},{"required_level":78,"sp_consumed":1,"decreasesp":45,"skillexplanationid":23}],"image":"01","icon":28,"needweapon":[],"requires":[],"sp_requires":[20,0]},"404":{"type":0,"nameid":4,"maxlevel":4,"levels":[{"required_level":30,"sp_consumed":1,"decreasesp":15,"skillexplanationid":24},{"required_level":40,"sp_consumed":1,"decreasesp":18,"skillexplanationid":24},{"required_level":50,"sp_consumed":1,"decreasesp":21,"skillexplanationid":24},{"required_level":60,"sp_consumed":1,"decreasesp":24,"skillexplanationid":24}],"image":"01","icon":18,"needweapon":[],"requires":[],"sp_requires":[30,0]},"405":{"type":0,"nameid":5,"maxlevel":21,"levels":[{"required_level":15,"sp_consumed":3,"decreasesp":14,"skillexplanationid":25},{"required_level":18,"sp_consumed":1,"decreasesp":17,"skillexplanationid":25},{"required_level":21,"sp_consumed":1,"decreasesp":19,"skillexplanationid":25},{"required_level":24,"sp_consumed":1,"decreasesp":22,"skillexplanationid":25},{"required_level":27,"sp_consumed":1,"decreasesp":24,"skillexplanationid":25},{"required_level":30,"sp_consumed":1,"decreasesp":27,"skillexplanationid":25},{"required_level":33,"sp_consumed":1,"decreasesp":29,"skillexplanationid":25},{"required_level":36,"sp_consumed":1,"decreasesp":32,"skillexplanationid":25},{"required_level":39,"sp_consumed":1,"decreasesp":34,"skillexplanationid":25},{"required_level":42,"sp_consumed":1,"decreasesp":36,"skillexplanationid":25},{"required_level":45,"sp_consumed":1,"decreasesp":39,"skillexplanationid":25},{"required_level":48,"sp_consumed":1,"decreasesp":42,"skillexplanationid":25},{"required_level":51,"sp_consumed":1,"decreasesp":44,"skillexplanationid":25},{"required_level":54,"sp_consumed":1,"decreasesp":46,"skillexplanationid":25},{"required_level":57,"sp_consumed":1,"decreasesp":49,"skillexplanationid":25},{"required_level":60,"sp_consumed":1,"decreasesp":51,"skillexplanationid":25},{"required_level":63,"sp_consumed":1,"decreasesp":54,"skillexplanationid":25},{"required_level":66,"sp_consumed":1,"decreasesp":56,"skillexplanationid":25},{"required_level":69,"sp_consumed":1,"decreasesp":58,"skillexplanationid":25},{"required_level":72,"sp_consumed":1,"decreasesp":61,"skillexplanationid":25},{"required_level":75,"sp_consumed":1,"decreasesp":63,"skillexplanationid":25}],"image":"01","icon":60,"needweapon":[2,3],"requires":[],"sp_requires":[20,0]},"406":{"type":0,"nameid":6,"maxlevel":13,"levels":[{"required_level":20,"sp_consumed":3,"decreasesp":15,"skillexplanationid":26},{"required_level":25,"sp_consumed":1,"decreasesp":18,"skillexplanationid":26},{"required_level":30,"sp_consumed":1,"decreasesp":20,"skillexplanationid":26},{"required_level":35,"sp_consumed":1,"decreasesp":23,"skillexplanationid":26},{"required_level":40,"sp_consumed":1,"decreasesp":25,"skillexplanationid":26},{"required_level":45,"sp_consumed":1,"decreasesp":28,"skillexplanationid":26},{"required_level":50,"sp_consumed":1,"decreasesp":30,"skillexplanationid":26},{"required_level":55,"sp_consumed":1,"decreasesp":33,"skillexplanationid":26},{"required_level":60,"sp_consumed":1,"decreasesp":35,"skillexplanationid":26},{"required_level":65,"sp_consumed":1,"decreasesp":38,"skillexplanationid":26},{"required_level":70,"sp_consumed":1,"decreasesp":41,"skillexplanationid":26},{"required_level":75,"sp_consumed":1,"decreasesp":43,"skillexplanationid":26},{"required_level":80,"sp_consumed":1,"decreasesp":46,"skillexplanationid":26}],"image":"01","icon":61,"needweapon":[2,3],"requires":[{"id":405,"level":1}],"sp_requires":[25,0]},"407":{"type":0,"nameid":7,"maxlevel":17,"levels":[{"required_level":26,"sp_consumed":3,"decreasesp":17,"skillexplanationid":27},{"required_level":29,"sp_consumed":1,"decreasesp":20,"skillexplanationid":27},{"required_level":32,"sp_consumed":1,"decreasesp":22,"skillexplanationid":27},{"required_level":35,"sp_consumed":1,"decreasesp":24,"skillexplanationid":27},{"required_level":38,"sp_consumed":1,"decreasesp":27,"skillexplanationid":27},{"required_level":41,"sp_consumed":1,"decreasesp":30,"skillexplanationid":27},{"required_level":44,"sp_consumed":1,"decreasesp":32,"skillexplanationid":27},{"required_level":47,"sp_consumed":1,"decreasesp":35,"skillexplanationid":27},{"required_level":50,"sp_consumed":1,"decreasesp":37,"skillexplanationid":27},{"required_level":53,"sp_consumed":1,"decreasesp":40,"skillexplanationid":27},{"required_level":56,"sp_consumed":1,"decreasesp":43,"skillexplanationid":27},{"required_level":59,"sp_consumed":1,"decreasesp":45,"skillexplanationid":27},{"required_level":62,"sp_consumed":1,"decreasesp":48,"skillexplanationid":27},{"required_level":65,"sp_consumed":1,"decreasesp":50,"skillexplanationid":27},{"required_level":68,"sp_consumed":1,"decreasesp":52,"skillexplanationid":27},{"required_level":71,"sp_consumed":1,"decreasesp":56,"skillexplanationid":27},{"required_level":74,"sp_consumed":1,"decreasesp":58,"skillexplanationid":27}],"image":"01","icon":62,"needweapon":[2,3],"requires":[{"id":409,"level":1}],"sp_requires":[30,0]},"408":{"type":0,"nameid":8,"maxlevel":14,"levels":[{"required_level":15,"sp_consumed":3,"decreasesp":14,"skillexplanationid":28},{"required_level":20,"sp_consumed":1,"decreasesp":17,"skillexplanationid":28},{"required_level":25,"sp_consumed":1,"decreasesp":20,"skillexplanationid":28},{"required_level":30,"sp_consumed":1,"decreasesp":22,"skillexplanationid":28},{"required_level":35,"sp_consumed":1,"decreasesp":25,"skillexplanationid":28},{"required_level":40,"sp_consumed":1,"decreasesp":27,"skillexplanationid":28},{"required_level":45,"sp_consumed":1,"decreasesp":30,"skillexplanationid":28},{"required_level":50,"sp_consumed":1,"decreasesp":33,"skillexplanationid":28},{"required_level":55,"sp_consumed":1,"decreasesp":35,"skillexplanationid":28},{"required_level":60,"sp_consumed":1,"decreasesp":38,"skillexplanationid":28},{"required_level":65,"sp_consumed":1,"decreasesp":40,"skillexplanationid":28},{"required_level":70,"sp_consumed":1,"decreasesp":43,"skillexplanationid":28},{"required_level":75,"sp_consumed":1,"decreasesp":45,"skillexplanationid":28},{"required_level":80,"sp_consumed":1,"decreasesp":48,"skillexplanationid":28}],"image":"01","icon":63,"needweapon":[],"requires":[],"sp_requires":[20,0]},"410":{"type":0,"nameid":9,"maxlevel":17,"levels":[{"required_level":26,"sp_consumed":3,"decreasesp":17,"skillexplanationid":30},{"required_level":29,"sp_consumed":1,"decreasesp":20,"skillexplanationid":30},{"required_level":32,"sp_consumed":1,"decreasesp":22,"skillexplanationid":30},{"required_level":35,"sp_consumed":1,"decreasesp":24,"skillexplanationid":30},{"required_level":38,"sp_consumed":1,"decreasesp":27,"skillexplanationid":30},{"required_level":41,"sp_consumed":1,"decreasesp":30,"skillexplanationid":30},{"required_level":44,"sp_consumed":1,"decreasesp":32,"skillexplanationid":30},{"required_level":47,"sp_consumed":1,"decreasesp":35,"skillexplanationid":30},{"required_level":50,"sp_consumed":1,"decreasesp":37,"skillexplanationid":30},{"required_level":53,"sp_consumed":1,"decreasesp":40,"skillexplanationid":30},{"required_level":56,"sp_consumed":1,"decreasesp":43,"skillexplanationid":30},{"required_level":59,"sp_consumed":1,"decreasesp":45,"skillexplanationid":30},{"required_level":62,"sp_consumed":1,"decreasesp":48,"skillexplanationid":30},{"required_level":65,"sp_consumed":1,"decreasesp":50,"skillexplanationid":30},{"required_level":68,"sp_consumed":1,"decreasesp":52,"skillexplanationid":30},{"required_level":71,"sp_consumed":1,"decreasesp":56,"skillexplanationid":30},{"required_level":74,"sp_consumed":1,"decreasesp":58,"skillexplanationid":30}],"image":"01","icon":65,"needweapon":[2,3],"requires":[{"id":406,"level":1}],"sp_requires":[30,0]},"411":{"type":0,"nameid":10,"maxlevel":15,"levels":[{"required_level":32,"sp_consumed":3,"decreasesp":18,"skillexplanationid":31},{"required_level":35,"sp_consumed":1,"decreasesp":20,"skillexplanationid":31},{"required_level":38,"sp_consumed":1,"decreasesp":22,"skillexplanationid":31},{"required_level":41,"sp_consumed":1,"decreasesp":25,"skillexplanationid":31},{"required_level":44,"sp_consumed":1,"decreasesp":27,"skillexplanationid":31},{"required_level":47,"sp_consumed":1,"decreasesp":31,"skillexplanationid":31},{"required_level":50,"sp_consumed":1,"decreasesp":33,"skillexplanationid":31},{"required_level":53,"sp_consumed":1,"decreasesp":35,"skillexplanationid":31},{"required_level":56,"sp_consumed":1,"decreasesp":38,"skillexplanationid":31},{"required_level":59,"sp_consumed":1,"decreasesp":40,"skillexplanationid":31},{"required_level":62,"sp_consumed":1,"decreasesp":43,"skillexplanationid":31},{"required_level":65,"sp_consumed":1,"decreasesp":46,"skillexplanationid":31},{"required_level":68,"sp_consumed":1,"decreasesp":48,"skillexplanationid":31},{"required_level":71,"sp_consumed":1,"decreasesp":51,"skillexplanationid":31},{"required_level":74,"sp_consumed":1,"decreasesp":53,"skillexplanationid":31}],"image":"01","icon":66,"needweapon":[2,3],"requires":[{"id":410,"level":1}],"sp_requires":[35,0]},"412":{"type":0,"nameid":11,"maxlevel":7,"levels":[{"required_level":24,"sp_consumed":1,"decreasesp":15,"skillexplanationid":32},{"required_level":34,"sp_consumed":1,"decreasesp":18,"skillexplanationid":32},{"required_level":44,"sp_consumed":1,"decreasesp":21,"skillexplanationid":32},{"required_level":54,"sp_consumed":1,"decreasesp":24,"skillexplanationid":32},{"required_level":64,"sp_consumed":1,"decreasesp":28,"skillexplanationid":32},{"required_level":74,"sp_consumed":1,"decreasesp":31,"skillexplanationid":32},{"required_level":84,"sp_consumed":1,"decreasesp":34,"skillexplanationid":32}],"image":"01","icon":67,"needweapon":[],"requires":[],"sp_requires":[25,0]},"413":{"type":0,"nameid":12,"maxlevel":4,"levels":[{"required_level":34,"sp_consumed":3,"decreasesp":16,"skillexplanationid":33},{"required_level":44,"sp_consumed":1,"decreasesp":19,"skillexplanationid":33},{"required_level":54,"sp_consumed":1,"decreasesp":22,"skillexplanationid":33},{"required_level":64,"sp_consumed":1,"decreasesp":25,"skillexplanationid":33}],"image":"01","icon":68,"needweapon":[],"requires":[],"sp_requires":[40,0]},"414":{"type":0,"nameid":13,"maxlevel":5,"levels":[{"required_level":30,"sp_consumed":1,"decreasesp":16,"skillexplanationid":34},{"required_level":40,"sp_consumed":1,"decreasesp":19,"skillexplanationid":34},{"required_level":50,"sp_consumed":1,"decreasesp":22,"skillexplanationid":34},{"required_level":60,"sp_consumed":1,"decreasesp":25,"skillexplanationid":34},{"required_level":70,"sp_consumed":1,"decreasesp":28,"skillexplanationid":34}],"image":"01","icon":69,"needweapon":[],"requires":[],"sp_requires":[35,0]},"415":{"type":0,"nameid":14,"maxlevel":2,"levels":[{"required_level":40,"sp_consumed":3,"decreasesp":27,"skillexplanationid":35},{"required_level":60,"sp_consumed":1,"decreasesp":33,"skillexplanationid":35}],"image":"01","icon":70,"needweapon":[],"requires":[{"id":401,"level":1}],"sp_requires":[45,0]},"416":{"type":0,"nameid":15,"maxlevel":2,"levels":[{"required_level":40,"sp_consumed":3,"decreasesp":27,"skillexplanationid":36},{"required_level":60,"sp_consumed":1,"decreasesp":33,"skillexplanationid":36}],"image":"01","icon":71,"needweapon":[],"requires":[{"id":411,"level":1}],"sp_requires":[45,0]},"417":{"type":0,"nameid":16,"maxlevel":6,"levels":[{"required_level":36,"sp_consumed":3,"decreasesp":17,"skillexplanationid":37},{"required_level":46,"sp_consumed":1,"decreasesp":20,"skillexplanationid":37},{"required_level":56,"sp_consumed":1,"decreasesp":23,"skillexplanationid":37},{"required_level":66,"sp_consumed":1,"decreasesp":26,"skillexplanationid":37},{"required_level":76,"sp_consumed":1,"decreasesp":29,"skillexplanationid":37},{"required_level":86,"sp_consumed":1,"decreasesp":32,"skillexplanationid":37}],"image":"01","icon":72,"needweapon":[],"requires":[],"sp_requires":[40,0]},"418":{"type":1,"nameid":17,"maxlevel":13,"levels":[{"required_level":16,"sp_consumed":1,"decreasesp":14,"skillexplanationid":38},{"required_level":21,"sp_consumed":1,"decreasesp":17,"skillexplanationid":38},{"required_level":26,"sp_consumed":1,"decreasesp":20,"skillexplanationid":38},{"required_level":31,"sp_consumed":1,"decreasesp":22,"skillexplanationid":38},{"required_level":36,"sp_consumed":1,"decreasesp":25,"skillexplanationid":38},{"required_level":41,"sp_consumed":1,"decreasesp":27,"skillexplanationid":38},{"required_level":46,"sp_consumed":1,"decreasesp":30,"skillexplanationid":38},{"required_level":51,"sp_consumed":1,"decreasesp":32,"skillexplanationid":38},{"required_level":56,"sp_consumed":1,"decreasesp":35,"skillexplanationid":38},{"required_level":61,"sp_consumed":1,"decreasesp":37,"skillexplanationid":38},{"required_level":66,"sp_consumed":1,"decreasesp":40,"skillexplanationid":38},{"required_level":71,"sp_consumed":1,"decreasesp":43,"skillexplanationid":38},{"required_level":76,"sp_consumed":1,"decreasesp":45,"skillexplanationid":38}],"image":"01","icon":36,"needweapon":[2,3],"requires":[{"id":18,"level":1}],"sp_requires":[20,0]},"419":{"type":1,"nameid":18,"maxlevel":12,"levels":[{"required_level":22,"sp_consumed":1,"decreasesp":15,"skillexplanationid":39},{"required_level":27,"sp_consumed":1,"decreasesp":18,"skillexplanationid":39},{"required_level":32,"sp_consumed":1,"decreasesp":21,"skillexplanationid":39},{"required_level":37,"sp_consumed":1,"decreasesp":23,"skillexplanationid":39},{"required_level":42,"sp_consumed":1,"decreasesp":26,"skillexplanationid":39},{"required_level":47,"sp_consumed":1,"decreasesp":29,"skillexplanationid":39},{"required_level":52,"sp_consumed":1,"decreasesp":31,"skillexplanationid":39},{"required_level":57,"sp_consumed":1,"decreasesp":34,"skillexplanationid":39},{"required_level":62,"sp_consumed":1,"decreasesp":36,"skillexplanationid":39},{"required_level":67,"sp_consumed":1,"decreasesp":39,"skillexplanationid":39},{"required_level":72,"sp_consumed":1,"decreasesp":42,"skillexplanationid":39},{"required_level":77,"sp_consumed":1,"decreasesp":44,"skillexplanationid":39}],"image":"01","icon":37,"needweapon":[],"requires":[{"id":9,"level":1}],"sp_requires":[30,0]},"420":{"type":1,"nameid":19,"maxlevel":5,"levels":[{"required_level":22,"sp_consumed":1,"decreasesp":0,"skillexplanationid":40},{"required_level":32,"sp_consumed":1,"decreasesp":0,"skillexplanationid":40},{"required_level":42,"sp_consumed":1,"decreasesp":0,"skillexplanationid":40},{"required_level":52,"sp_consumed":1,"decreasesp":0,"skillexplanationid":40},{"required_level":62,"sp_consumed":1,"decreasesp":0,"skillexplanationid":40}],"image":"01","icon":38,"needweapon":[],"requires":[],"sp_requires":[25,0]},"421":{"type":0,"nameid":20,"maxlevel":1,"levels":[{"required_level":1,"sp_consumed":0,"decreasesp":0,"skillexplanationid":41}],"image":"01","icon":38,"needweapon":[]}},"message":["Demolition Fist","Whirlwind","Battle Howl","Crisis Howl","Iron Skin","Flying Swing","Punishing Swing","Circle Swing","Stomp","Bombs Away","Roll Attack","Taunting Howl","Enervating Howl","Empowering Howl","Cleaving Gale","Calamity Crush","Devastating Howl","Dash Uppercut","Soccer Kick Combo","Toughness","터프니스_액티브","Uses centrifugal force to spin and inflict multiple attacks on nearby enemies.\\n#yAttack Power: {0}% + {1}","Energizes party members with a battle cry. Increases Physical Damage, Magic Damage, Critical Chance, and Stun Chance. \\n#yDuration: {0} sec\\nPhysical Damage: +{1}\\nMagic Damage: +{2}\\nCritical Chance: +{3}\\nStun Chance: +{4}%","Press the special attack button when attacked to instantly release powerful energy that sends nearby enemies flying. \\n#yAttack Power: {0}% + {1}","Enter a powerful #ySuper Armor#w state for {0} seconds, decreasing the damage you take and preventing you from being stunned. \\n#yDamage Taken: -{1}","Swings your weapon up to launch an enemy into the air. Damage taken decreases while you're charging this skill. \\n#yAttack Power: {0}% + {1}\\nDamage Taken (while charging): -{2}%","Brandishes your weapon forward to launch and detonate a small bomb toward an enemy in front of you. \\n#yPhysical Damage: {0}% + {1}","Jump forward two steps to swing your weapon, dealing damage to nearby enemies. \\n#yAttack Power: {0}% + {1}","Stomps on the ground with great force to pull enemies and deal damage. Enemies will slow down for #y{0} seconds#w.  \\n#yPhysical Attack Rate {1}%+{2}\\nMovement Speed decreased by {3}%.","Gathers strength to inflict a powerful punch while dashing forward. \\nAttack Power: {0}% + {1}","Slam your weapon into the ground to send out an explosive shockwave. Deals an extra 20% damage to any nearby enemies who suffer a direct hit.\\n#yPhysical Damage: {0}%+{1}","Roll through the air and then slam into the ground with great force, sending out a shock wave that deals damage to nearby enemies. \\n#yAttack Power: {0}% + {1}","Your provoking howl unleashes a burst of energy that deals damage and increases threat. The howl decreases the Damage and Critical Chance of enemies in range.\\n#yPhysical Damage: 100%\\n#yThreat Gained: +{0}\\nEnemy Physical Damage: -{1}%\\nEnemy Magic Damage: -{2}%\\nEnemy Critical Chance: -{3}%\\nDuration: {4} sec","Your angry cry removes enemy buffs and disables enemies from using skills. \\n#yAttack Power: {0}% + {1}\\nBuffs Removed: {2} \\nEnemy skills disabled for {3} sec","Steel your party members with an empowering shout while increasing your own maximum HP. Increases Super Armor, Defense, and Magic Defense. \\n#yDuration: {0} sec\\nParty Stats\\nPhysical Damage Taken: -{1}%\\nMagic Damage Taken: -{2}%\\nSuper Armor: +{3}%\\nFor {4} sec, Caster's Max HP: +{5}%","Uses centrifugal force to spin and create a powerful tornado, inflicting multiple attacks on nearby enemies.\\n#yPhysical Damage: {0}%+{1}","Jumps high into the air and then slams the ground with great force, setting off a powerful explosive.\\n#yAttack Power: {0}% + {1}","Release a furious roar that stuns enemies, greatly decreasing their damage. \\n#yPhysical Damage: {0}%\\nEnemy Physical Damage: -{1}%\\nEnemy Magic Damage: -{2}%\\nRoar Duration: {3} sec","During #y[Dash]#w, press the attack button to uppercut the enemy with your weapon. \\n#yAttack Power: {0}% + {1}","Use a special attack after using #y[Soccer Kick/Dash Upper/Rising Slash 3-hit attack]#w to strike an enemy down with a kick. This last attack will create a shockwave to damage nearby enemies. \\n#yAttack Power: {0}% + {1}","Decreases physical damage taken by #y{0}%#w. If you take damage when your HP is at or below #y{1}%#w, you will deal more physical damage. \\n#yBelow {2}% HP: Physical Damage +{3}%\\nDamage Buff Duration: {4} sec\\nDamage Buff Cooldown: {5} sec",null]}
+{
+  "jobicon": 9,
+  "skills": {
+    "409": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 19,
+      "levels": [
+        {
+          "required_level": 20,
+          "mpcost": 15,
+          "explanationid": 29,
+          "spcost": 3
+        },
+        {
+          "required_level": 23,
+          "mpcost": 18,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 26,
+          "mpcost": 21,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 29,
+          "mpcost": 23,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 32,
+          "mpcost": 25,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 35,
+          "mpcost": 28,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 38,
+          "mpcost": 30,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 41,
+          "mpcost": 33,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 44,
+          "mpcost": 35,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 47,
+          "mpcost": 38,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 41,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 53,
+          "mpcost": 43,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 45,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 48,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 50,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 53,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 55,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 58,
+          "explanationid": 29,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 60,
+          "explanationid": 29,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 64,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 408,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        25,
+        0
+      ]
+    },
+    "401": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 15,
+      "levels": [
+        {
+          "required_level": 32,
+          "mpcost": 18,
+          "explanationid": 21,
+          "spcost": 3
+        },
+        {
+          "required_level": 35,
+          "mpcost": 20,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 38,
+          "mpcost": 22,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 41,
+          "mpcost": 25,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 44,
+          "mpcost": 27,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 47,
+          "mpcost": 31,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 33,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 53,
+          "mpcost": 35,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 38,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 40,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 43,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 46,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 48,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 51,
+          "explanationid": 21,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 53,
+          "explanationid": 21,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 14,
+      "needweapon": [
+        2,
+        3
+      ],
+      "requires": [
+        {
+          "id": 407,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        35,
+        0
+      ]
+    },
+    "402": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 7,
+      "levels": [
+        {
+          "required_level": 28,
+          "mpcost": 15,
+          "explanationid": 22,
+          "spcost": 1
+        },
+        {
+          "required_level": 38,
+          "mpcost": 18,
+          "explanationid": 22,
+          "spcost": 1
+        },
+        {
+          "required_level": 48,
+          "mpcost": 21,
+          "explanationid": 22,
+          "spcost": 1
+        },
+        {
+          "required_level": 58,
+          "mpcost": 25,
+          "explanationid": 22,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 28,
+          "explanationid": 22,
+          "spcost": 1
+        },
+        {
+          "required_level": 78,
+          "mpcost": 31,
+          "explanationid": 22,
+          "spcost": 1
+        },
+        {
+          "required_level": 88,
+          "mpcost": 34,
+          "explanationid": 22,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 27,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        35,
+        0
+      ]
+    },
+    "403": {
+      "type": 1,
+      "nameid": 3,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 18,
+          "mpcost": 15,
+          "explanationid": 23,
+          "spcost": 3
+        },
+        {
+          "required_level": 23,
+          "mpcost": 17,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 28,
+          "mpcost": 20,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 33,
+          "mpcost": 22,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 38,
+          "mpcost": 25,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 43,
+          "mpcost": 28,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 48,
+          "mpcost": 30,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 53,
+          "mpcost": 33,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 58,
+          "mpcost": 35,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 63,
+          "mpcost": 38,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 40,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 73,
+          "mpcost": 43,
+          "explanationid": 23,
+          "spcost": 1
+        },
+        {
+          "required_level": 78,
+          "mpcost": 45,
+          "explanationid": 23,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 28,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        20,
+        0
+      ]
+    },
+    "404": {
+      "type": 0,
+      "nameid": 4,
+      "maxlevel": 4,
+      "levels": [
+        {
+          "required_level": 30,
+          "mpcost": 15,
+          "explanationid": 24,
+          "spcost": 1
+        },
+        {
+          "required_level": 40,
+          "mpcost": 18,
+          "explanationid": 24,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 21,
+          "explanationid": 24,
+          "spcost": 1
+        },
+        {
+          "required_level": 60,
+          "mpcost": 24,
+          "explanationid": 24,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 18,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        30,
+        0
+      ]
+    },
+    "405": {
+      "type": 0,
+      "nameid": 5,
+      "maxlevel": 21,
+      "levels": [
+        {
+          "required_level": 15,
+          "mpcost": 14,
+          "explanationid": 25,
+          "spcost": 3
+        },
+        {
+          "required_level": 18,
+          "mpcost": 17,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 21,
+          "mpcost": 19,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 24,
+          "mpcost": 22,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 27,
+          "mpcost": 24,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 30,
+          "mpcost": 27,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 33,
+          "mpcost": 29,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 36,
+          "mpcost": 32,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 39,
+          "mpcost": 34,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 42,
+          "mpcost": 36,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 45,
+          "mpcost": 39,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 48,
+          "mpcost": 42,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 51,
+          "mpcost": 44,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 54,
+          "mpcost": 46,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 57,
+          "mpcost": 49,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 60,
+          "mpcost": 51,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 63,
+          "mpcost": 54,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 66,
+          "mpcost": 56,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 69,
+          "mpcost": 58,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 72,
+          "mpcost": 61,
+          "explanationid": 25,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 63,
+          "explanationid": 25,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 60,
+      "needweapon": [
+        2,
+        3
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        20,
+        0
+      ]
+    },
+    "406": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 20,
+          "mpcost": 15,
+          "explanationid": 26,
+          "spcost": 3
+        },
+        {
+          "required_level": 25,
+          "mpcost": 18,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 30,
+          "mpcost": 20,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 35,
+          "mpcost": 23,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 40,
+          "mpcost": 25,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 45,
+          "mpcost": 28,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 30,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 55,
+          "mpcost": 33,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 60,
+          "mpcost": 35,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 38,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 70,
+          "mpcost": 41,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 43,
+          "explanationid": 26,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 46,
+          "explanationid": 26,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 61,
+      "needweapon": [
+        2,
+        3
+      ],
+      "requires": [
+        {
+          "id": 405,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        25,
+        0
+      ]
+    },
+    "407": {
+      "type": 0,
+      "nameid": 7,
+      "maxlevel": 17,
+      "levels": [
+        {
+          "required_level": 26,
+          "mpcost": 17,
+          "explanationid": 27,
+          "spcost": 3
+        },
+        {
+          "required_level": 29,
+          "mpcost": 20,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 32,
+          "mpcost": 22,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 35,
+          "mpcost": 24,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 38,
+          "mpcost": 27,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 41,
+          "mpcost": 30,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 44,
+          "mpcost": 32,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 47,
+          "mpcost": 35,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 37,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 53,
+          "mpcost": 40,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 43,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 45,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 48,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 50,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 52,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 56,
+          "explanationid": 27,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 58,
+          "explanationid": 27,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 62,
+      "needweapon": [
+        2,
+        3
+      ],
+      "requires": [
+        {
+          "id": 409,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        30,
+        0
+      ]
+    },
+    "408": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 14,
+      "levels": [
+        {
+          "required_level": 15,
+          "mpcost": 14,
+          "explanationid": 28,
+          "spcost": 3
+        },
+        {
+          "required_level": 20,
+          "mpcost": 17,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 25,
+          "mpcost": 20,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 30,
+          "mpcost": 22,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 35,
+          "mpcost": 25,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 40,
+          "mpcost": 27,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 45,
+          "mpcost": 30,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 33,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 55,
+          "mpcost": 35,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 60,
+          "mpcost": 38,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 40,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 70,
+          "mpcost": 43,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 45,
+          "explanationid": 28,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 48,
+          "explanationid": 28,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 63,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        20,
+        0
+      ]
+    },
+    "410": {
+      "type": 0,
+      "nameid": 9,
+      "maxlevel": 17,
+      "levels": [
+        {
+          "required_level": 26,
+          "mpcost": 17,
+          "explanationid": 30,
+          "spcost": 3
+        },
+        {
+          "required_level": 29,
+          "mpcost": 20,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 32,
+          "mpcost": 22,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 35,
+          "mpcost": 24,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 38,
+          "mpcost": 27,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 41,
+          "mpcost": 30,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 44,
+          "mpcost": 32,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 47,
+          "mpcost": 35,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 37,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 53,
+          "mpcost": 40,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 43,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 45,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 48,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 50,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 52,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 56,
+          "explanationid": 30,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 58,
+          "explanationid": 30,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 65,
+      "needweapon": [
+        2,
+        3
+      ],
+      "requires": [
+        {
+          "id": 406,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        30,
+        0
+      ]
+    },
+    "411": {
+      "type": 0,
+      "nameid": 10,
+      "maxlevel": 15,
+      "levels": [
+        {
+          "required_level": 32,
+          "mpcost": 18,
+          "explanationid": 31,
+          "spcost": 3
+        },
+        {
+          "required_level": 35,
+          "mpcost": 20,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 38,
+          "mpcost": 22,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 41,
+          "mpcost": 25,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 44,
+          "mpcost": 27,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 47,
+          "mpcost": 31,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 33,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 53,
+          "mpcost": 35,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 38,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 40,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 43,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 46,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 48,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 51,
+          "explanationid": 31,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 53,
+          "explanationid": 31,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 66,
+      "needweapon": [
+        2,
+        3
+      ],
+      "requires": [
+        {
+          "id": 410,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        35,
+        0
+      ]
+    },
+    "412": {
+      "type": 0,
+      "nameid": 11,
+      "maxlevel": 7,
+      "levels": [
+        {
+          "required_level": 24,
+          "mpcost": 15,
+          "explanationid": 32,
+          "spcost": 1
+        },
+        {
+          "required_level": 34,
+          "mpcost": 18,
+          "explanationid": 32,
+          "spcost": 1
+        },
+        {
+          "required_level": 44,
+          "mpcost": 21,
+          "explanationid": 32,
+          "spcost": 1
+        },
+        {
+          "required_level": 54,
+          "mpcost": 24,
+          "explanationid": 32,
+          "spcost": 1
+        },
+        {
+          "required_level": 64,
+          "mpcost": 28,
+          "explanationid": 32,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 31,
+          "explanationid": 32,
+          "spcost": 1
+        },
+        {
+          "required_level": 84,
+          "mpcost": 34,
+          "explanationid": 32,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 67,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        25,
+        0
+      ]
+    },
+    "413": {
+      "type": 0,
+      "nameid": 12,
+      "maxlevel": 4,
+      "levels": [
+        {
+          "required_level": 34,
+          "mpcost": 16,
+          "explanationid": 33,
+          "spcost": 3
+        },
+        {
+          "required_level": 44,
+          "mpcost": 19,
+          "explanationid": 33,
+          "spcost": 1
+        },
+        {
+          "required_level": 54,
+          "mpcost": 22,
+          "explanationid": 33,
+          "spcost": 1
+        },
+        {
+          "required_level": 64,
+          "mpcost": 25,
+          "explanationid": 33,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 68,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        40,
+        0
+      ]
+    },
+    "414": {
+      "type": 0,
+      "nameid": 13,
+      "maxlevel": 5,
+      "levels": [
+        {
+          "required_level": 30,
+          "mpcost": 16,
+          "explanationid": 34,
+          "spcost": 1
+        },
+        {
+          "required_level": 40,
+          "mpcost": 19,
+          "explanationid": 34,
+          "spcost": 1
+        },
+        {
+          "required_level": 50,
+          "mpcost": 22,
+          "explanationid": 34,
+          "spcost": 1
+        },
+        {
+          "required_level": 60,
+          "mpcost": 25,
+          "explanationid": 34,
+          "spcost": 1
+        },
+        {
+          "required_level": 70,
+          "mpcost": 28,
+          "explanationid": 34,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 69,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        35,
+        0
+      ]
+    },
+    "415": {
+      "type": 0,
+      "nameid": 14,
+      "maxlevel": 2,
+      "levels": [
+        {
+          "required_level": 40,
+          "mpcost": 27,
+          "explanationid": 35,
+          "spcost": 3
+        },
+        {
+          "required_level": 60,
+          "mpcost": 33,
+          "explanationid": 35,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 70,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 401,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        45,
+        0
+      ]
+    },
+    "416": {
+      "type": 0,
+      "nameid": 15,
+      "maxlevel": 2,
+      "levels": [
+        {
+          "required_level": 40,
+          "mpcost": 27,
+          "explanationid": 36,
+          "spcost": 3
+        },
+        {
+          "required_level": 60,
+          "mpcost": 33,
+          "explanationid": 36,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 71,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 411,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        45,
+        0
+      ]
+    },
+    "417": {
+      "type": 0,
+      "nameid": 16,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 36,
+          "mpcost": 17,
+          "explanationid": 37,
+          "spcost": 3
+        },
+        {
+          "required_level": 46,
+          "mpcost": 20,
+          "explanationid": 37,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 23,
+          "explanationid": 37,
+          "spcost": 1
+        },
+        {
+          "required_level": 66,
+          "mpcost": 26,
+          "explanationid": 37,
+          "spcost": 1
+        },
+        {
+          "required_level": 76,
+          "mpcost": 29,
+          "explanationid": 37,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 32,
+          "explanationid": 37,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 72,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        40,
+        0
+      ]
+    },
+    "418": {
+      "type": 1,
+      "nameid": 17,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 16,
+          "mpcost": 14,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 21,
+          "mpcost": 17,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 26,
+          "mpcost": 20,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 31,
+          "mpcost": 22,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 36,
+          "mpcost": 25,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 41,
+          "mpcost": 27,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 46,
+          "mpcost": 30,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 51,
+          "mpcost": 32,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 35,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 61,
+          "mpcost": 37,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 66,
+          "mpcost": 40,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 43,
+          "explanationid": 38,
+          "spcost": 1
+        },
+        {
+          "required_level": 76,
+          "mpcost": 45,
+          "explanationid": 38,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 36,
+      "needweapon": [
+        2,
+        3
+      ],
+      "requires": [
+        {
+          "id": 18,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        20,
+        0
+      ]
+    },
+    "419": {
+      "type": 1,
+      "nameid": 18,
+      "maxlevel": 12,
+      "levels": [
+        {
+          "required_level": 22,
+          "mpcost": 15,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 27,
+          "mpcost": 18,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 32,
+          "mpcost": 21,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 37,
+          "mpcost": 23,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 42,
+          "mpcost": 26,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 47,
+          "mpcost": 29,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 52,
+          "mpcost": 31,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 57,
+          "mpcost": 34,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 36,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 67,
+          "mpcost": 39,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 72,
+          "mpcost": 42,
+          "explanationid": 39,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 44,
+          "explanationid": 39,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 37,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 9,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        30,
+        0
+      ]
+    },
+    "420": {
+      "type": 1,
+      "nameid": 19,
+      "maxlevel": 5,
+      "levels": [
+        {
+          "required_level": 22,
+          "mpcost": 0,
+          "explanationid": 40,
+          "spcost": 1
+        },
+        {
+          "required_level": 32,
+          "mpcost": 0,
+          "explanationid": 40,
+          "spcost": 1
+        },
+        {
+          "required_level": 42,
+          "mpcost": 0,
+          "explanationid": 40,
+          "spcost": 1
+        },
+        {
+          "required_level": 52,
+          "mpcost": 0,
+          "explanationid": 40,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 0,
+          "explanationid": 40,
+          "spcost": 1
+        }
+      ],
+      "image": "01",
+      "icon": 38,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        25,
+        0
+      ]
+    },
+    "421": {
+      "type": 0,
+      "nameid": 20,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 1,
+          "mpcost": 0,
+          "explanationid": 41,
+          "spcost": 0
+        }
+      ],
+      "image": "01",
+      "icon": 38,
+      "needweapon": [
+
+      ]
+    }
+  },
+  "message": [
+    "Demolition Fist",
+    "Whirlwind",
+    "Battle Howl",
+    "Crisis Howl",
+    "Iron Skin",
+    "Flying Swing",
+    "Punishing Swing",
+    "Circle Swing",
+    "Stomp",
+    "Bombs Away",
+    "Roll Attack",
+    "Taunting Howl",
+    "Enervating Howl",
+    "Empowering Howl",
+    "Cleaving Gale",
+    "Calamity Crush",
+    "Devastating Howl",
+    "Dash Uppercut",
+    "Soccer Kick Combo",
+    "Toughness",
+    "터프니스_액티브",
+    "Uses centrifugal force to spin and inflict multiple attacks on nearby enemies.\\n#yAttack Power: {0}% + {1}",
+    "Energizes party members with a battle cry. Increases Physical Damage, Magic Damage, Critical Chance, and Stun Chance. \\n#yDuration: {0} sec\\nPhysical Damage: +{1}\\nMagic Damage: +{2}\\nCritical Chance: +{3}\\nStun Chance: +{4}%",
+    "Press the special attack button when attacked to instantly release powerful energy that sends nearby enemies flying. \\n#yAttack Power: {0}% + {1}",
+    "Enter a powerful #ySuper Armor#w state for {0} seconds, decreasing the damage you take and preventing you from being stunned. \\n#yDamage Taken: -{1}",
+    "Swings your weapon up to launch an enemy into the air. Damage taken decreases while you're charging this skill. \\n#yAttack Power: {0}% + {1}\\nDamage Taken (while charging): -{2}%",
+    "Brandishes your weapon forward to launch and detonate a small bomb toward an enemy in front of you. \\n#yPhysical Damage: {0}% + {1}",
+    "Jump forward two steps to swing your weapon, dealing damage to nearby enemies. \\n#yAttack Power: {0}% + {1}",
+    "Stomps on the ground with great force to pull enemies and deal damage. Enemies will slow down for #y{0} seconds#w.  \\n#yPhysical Attack Rate {1}%+{2}\\nMovement Speed decreased by {3}%.",
+    "Gathers strength to inflict a powerful punch while dashing forward. \\nAttack Power: {0}% + {1}",
+    "Slam your weapon into the ground to send out an explosive shockwave. Deals an extra 20% damage to any nearby enemies who suffer a direct hit.\\n#yPhysical Damage: {0}%+{1}",
+    "Roll through the air and then slam into the ground with great force, sending out a shock wave that deals damage to nearby enemies. \\n#yAttack Power: {0}% + {1}",
+    "Your provoking howl unleashes a burst of energy that deals damage and increases threat. The howl decreases the Damage and Critical Chance of enemies in range.\\n#yPhysical Damage: 100%\\n#yThreat Gained: +{0}\\nEnemy Physical Damage: -{1}%\\nEnemy Magic Damage: -{2}%\\nEnemy Critical Chance: -{3}%\\nDuration: {4} sec",
+    "Your angry cry removes enemy buffs and disables enemies from using skills. \\n#yAttack Power: {0}% + {1}\\nBuffs Removed: {2} \\nEnemy skills disabled for {3} sec",
+    "Steel your party members with an empowering shout while increasing your own maximum HP. Increases Super Armor, Defense, and Magic Defense. \\n#yDuration: {0} sec\\nParty Stats\\nPhysical Damage Taken: -{1}%\\nMagic Damage Taken: -{2}%\\nSuper Armor: +{3}%\\nFor {4} sec, Caster's Max HP: +{5}%",
+    "Uses centrifugal force to spin and create a powerful tornado, inflicting multiple attacks on nearby enemies.\\n#yPhysical Damage: {0}%+{1}",
+    "Jumps high into the air and then slams the ground with great force, setting off a powerful explosive.\\n#yAttack Power: {0}% + {1}",
+    "Release a furious roar that stuns enemies, greatly decreasing their damage. \\n#yPhysical Damage: {0}%\\nEnemy Physical Damage: -{1}%\\nEnemy Magic Damage: -{2}%\\nRoar Duration: {3} sec",
+    "During #y[Dash]#w, press the attack button to uppercut the enemy with your weapon. \\n#yAttack Power: {0}% + {1}",
+    "Use a special attack after using #y[Soccer Kick/Dash Upper/Rising Slash 3-hit attack]#w to strike an enemy down with a kick. This last attack will create a shockwave to damage nearby enemies. \\n#yAttack Power: {0}% + {1}",
+    "Decreases physical damage taken by #y{0}%#w. If you take damage when your HP is at or below #y{1}%#w, you will deal more physical damage. \\n#yBelow {2}% HP: Physical Damage +{3}%\\nDamage Buff Duration: {4} sec\\nDamage Buff Cooldown: {5} sec",
+    null
+  ]
+}

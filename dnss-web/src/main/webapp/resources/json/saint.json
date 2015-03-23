@@ -1,1 +1,455 @@
-{"jobicon":34,"skills":{"95120":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"3501":{"type":0,"nameid":1,"maxlevel":6,"levels":[{"required_level":45,"sp_consumed":3,"decreasesp":17,"skillexplanationid":9},{"required_level":55,"sp_consumed":1,"decreasesp":20,"skillexplanationid":9},{"required_level":65,"sp_consumed":1,"decreasesp":23,"skillexplanationid":9},{"required_level":75,"sp_consumed":1,"decreasesp":26,"skillexplanationid":9},{"required_level":85,"sp_consumed":1,"decreasesp":29,"skillexplanationid":9},{"required_level":95,"sp_consumed":1,"decreasesp":32,"skillexplanationid":9}],"image":"04","icon":76,"needweapon":[],"requires":[{"id":3412,"level":1}],"sp_requires":[0,65]},"3502":{"type":3,"nameid":2,"maxlevel":1,"levels":[{"required_level":48,"sp_consumed":3,"decreasesp":0,"skillexplanationid":10}],"image":"04","icon":77,"needweapon":[],"requires":[{"id":3409,"level":6}],"sp_requires":[0,65]},"3503":{"type":0,"nameid":3,"maxlevel":13,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":20,"skillexplanationid":11},{"required_level":53,"sp_consumed":1,"decreasesp":23,"skillexplanationid":11},{"required_level":56,"sp_consumed":1,"decreasesp":25,"skillexplanationid":11},{"required_level":59,"sp_consumed":1,"decreasesp":27,"skillexplanationid":11},{"required_level":62,"sp_consumed":1,"decreasesp":30,"skillexplanationid":11},{"required_level":65,"sp_consumed":1,"decreasesp":33,"skillexplanationid":11},{"required_level":68,"sp_consumed":1,"decreasesp":35,"skillexplanationid":11},{"required_level":71,"sp_consumed":1,"decreasesp":37,"skillexplanationid":11},{"required_level":74,"sp_consumed":1,"decreasesp":40,"skillexplanationid":11},{"required_level":77,"sp_consumed":1,"decreasesp":42,"skillexplanationid":11},{"required_level":80,"sp_consumed":1,"decreasesp":45,"skillexplanationid":11},{"required_level":83,"sp_consumed":1,"decreasesp":47,"skillexplanationid":11},{"required_level":86,"sp_consumed":1,"decreasesp":50,"skillexplanationid":11}],"image":"04","icon":78,"needweapon":[],"requires":[{"id":3501,"level":1}],"sp_requires":[0,65]},"3504":{"type":3,"nameid":4,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":12}],"image":"04","icon":88,"needweapon":[],"requires":[{"id":3403,"level":1},{"id":3502,"level":1}],"sp_requires":[0,65]},"3505":{"type":3,"nameid":5,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":13}],"image":"04","icon":89,"needweapon":[],"requires":[{"id":3422,"level":1}],"sp_requires":[0,65]},"3506":{"type":3,"nameid":6,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":14}],"image":"04","icon":94,"needweapon":[],"requires":[{"id":3423,"level":1}],"sp_requires":[0,65]},"3507":{"type":1,"nameid":7,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":15}],"image":"04","icon":100,"needweapon":[],"requires":[],"sp_requires":[0,65]},"3508":{"type":3,"nameid":8,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":16}],"image":"04","icon":103,"needweapon":[],"requires":[{"id":3503,"level":1}],"sp_requires":[0,0]},"95113":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95114":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95115":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95116":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95117":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95118":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95119":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]}},"message":["Saint","Holy Shield","Lightning Relic +","Relic Reaction","Healing Relic +","Cure Relic +","Bind Relic +","Divine Dash","Relic Reaction +","Fills you and your allies with holy power, restoring HP whenever the enemies hit you.\\n#yHP Recovery: {0}% of Magic Damage\\nDuration: {1} sec","Constantly generates an electrical field near the Lightning Relic.\\n#yElectrical Field Damage: {0}% of Magic Damage","Summons lightning bolts to strike enemies within {0}m of your relics.\\n#yMagic Damage per Relic: {1}% + {2}","Increases the healing range of Healing Relic and decreases all incoming damage for {0} sec.\\n#yDamage Taken: -{1}%\\nHealing Range: {2}m","Enhances Cure Relic's range. Cures you of status effects when casted and knocks back enemies.","Increases Bind Relic's range and the amount of damage dealt to nearby enemies.\\n#yArea Damage: +{0}%","Increases Movement Speed after using a relic skill.\\n#yDuration: {0} sec\\nMovement Speed +{1}%","Enhances Relic Reaction. Lightning bolts deal damage 3 times. No change in Damage per bolt."]}
+{
+  "jobicon": 34,
+  "skills": {
+    "95120": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "3501": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 17,
+          "explanationid": 9,
+          "spcost": 3
+        },
+        {
+          "required_level": 55,
+          "mpcost": 20,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 23,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 26,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 85,
+          "mpcost": 29,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 95,
+          "mpcost": 32,
+          "explanationid": 9,
+          "spcost": 1
+        }
+      ],
+      "image": "04",
+      "icon": 76,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3412,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3502": {
+      "type": 3,
+      "nameid": 2,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": 0,
+          "explanationid": 10,
+          "spcost": 3
+        }
+      ],
+      "image": "04",
+      "icon": 77,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3409,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3503": {
+      "type": 0,
+      "nameid": 3,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 20,
+          "explanationid": 11,
+          "spcost": 3
+        },
+        {
+          "required_level": 53,
+          "mpcost": 23,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 25,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 27,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 30,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 33,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 35,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 37,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 40,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 42,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 45,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 83,
+          "mpcost": 47,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 50,
+          "explanationid": 11,
+          "spcost": 1
+        }
+      ],
+      "image": "04",
+      "icon": 78,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3501,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3504": {
+      "type": 3,
+      "nameid": 4,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 12,
+          "spcost": 0
+        }
+      ],
+      "image": "04",
+      "icon": 88,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3403,
+          "level": 1
+        },
+        {
+          "id": 3502,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3505": {
+      "type": 3,
+      "nameid": 5,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 0
+        }
+      ],
+      "image": "04",
+      "icon": 89,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3422,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3506": {
+      "type": 3,
+      "nameid": 6,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 14,
+          "spcost": 2
+        }
+      ],
+      "image": "04",
+      "icon": 94,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3423,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3507": {
+      "type": 1,
+      "nameid": 7,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 1
+        }
+      ],
+      "image": "04",
+      "icon": 100,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3508": {
+      "type": 3,
+      "nameid": 8,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 16,
+          "spcost": 2
+        }
+      ],
+      "image": "04",
+      "icon": 103,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3503,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    },
+    "95113": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95114": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95115": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95116": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95117": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95118": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95119": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    }
+  },
+  "message": [
+    "Saint",
+    "Holy Shield",
+    "Lightning Relic +",
+    "Relic Reaction",
+    "Healing Relic +",
+    "Cure Relic +",
+    "Bind Relic +",
+    "Divine Dash",
+    "Relic Reaction +",
+    "Fills you and your allies with holy power, restoring HP whenever the enemies hit you.\\n#yHP Recovery: {0}% of Magic Damage\\nDuration: {1} sec",
+    "Constantly generates an electrical field near the Lightning Relic.\\n#yElectrical Field Damage: {0}% of Magic Damage",
+    "Summons lightning bolts to strike enemies within {0}m of your relics.\\n#yMagic Damage per Relic: {1}% + {2}",
+    "Increases the healing range of Healing Relic and decreases all incoming damage for {0} sec.\\n#yDamage Taken: -{1}%\\nHealing Range: {2}m",
+    "Enhances Cure Relic's range. Cures you of status effects when casted and knocks back enemies.",
+    "Increases Bind Relic's range and the amount of damage dealt to nearby enemies.\\n#yArea Damage: +{0}%",
+    "Increases Movement Speed after using a relic skill.\\n#yDuration: {0} sec\\nMovement Speed +{1}%",
+    "Enhances Relic Reaction. Lightning bolts deal damage 3 times. No change in Damage per bolt."
+  ]
+}

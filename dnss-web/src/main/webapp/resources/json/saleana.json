@@ -1,1 +1,455 @@
-{"jobicon":25,"skills":{"2308":{"type":3,"nameid":0,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":16}],"image":"03","icon":98,"needweapon":[],"requires":[{"id":2303,"level":1}],"sp_requires":[0,0]},"95065":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95066":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95067":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95068":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95069":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95070":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95071":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95072":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"2301":{"type":1,"nameid":2,"maxlevel":6,"levels":[{"required_level":45,"sp_consumed":1,"decreasesp":0,"skillexplanationid":9},{"required_level":55,"sp_consumed":1,"decreasesp":0,"skillexplanationid":9},{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":9},{"required_level":75,"sp_consumed":1,"decreasesp":0,"skillexplanationid":9},{"required_level":85,"sp_consumed":1,"decreasesp":0,"skillexplanationid":9},{"required_level":95,"sp_consumed":1,"decreasesp":0,"skillexplanationid":9}],"image":"03","icon":69,"needweapon":[],"requires":[{"id":2215,"level":1}],"sp_requires":[0,65]},"2302":{"type":3,"nameid":3,"maxlevel":1,"levels":[{"required_level":48,"sp_consumed":3,"decreasesp":0,"skillexplanationid":10}],"image":"03","icon":70,"needweapon":[],"requires":[{"id":2220,"level":6}],"sp_requires":[0,65]},"2303":{"type":0,"nameid":4,"maxlevel":13,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":20,"skillexplanationid":11},{"required_level":53,"sp_consumed":1,"decreasesp":23,"skillexplanationid":11},{"required_level":56,"sp_consumed":1,"decreasesp":25,"skillexplanationid":11},{"required_level":59,"sp_consumed":1,"decreasesp":27,"skillexplanationid":11},{"required_level":62,"sp_consumed":1,"decreasesp":30,"skillexplanationid":11},{"required_level":65,"sp_consumed":1,"decreasesp":33,"skillexplanationid":11},{"required_level":68,"sp_consumed":1,"decreasesp":35,"skillexplanationid":11},{"required_level":71,"sp_consumed":1,"decreasesp":37,"skillexplanationid":11},{"required_level":74,"sp_consumed":1,"decreasesp":40,"skillexplanationid":11},{"required_level":77,"sp_consumed":1,"decreasesp":42,"skillexplanationid":11},{"required_level":80,"sp_consumed":1,"decreasesp":45,"skillexplanationid":11},{"required_level":83,"sp_consumed":1,"decreasesp":48,"skillexplanationid":11},{"required_level":86,"sp_consumed":1,"decreasesp":50,"skillexplanationid":11}],"image":"03","icon":71,"needweapon":[],"requires":[{"id":2301,"level":1}],"sp_requires":[0,65]},"2304":{"type":3,"nameid":5,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":12}],"image":"03","icon":82,"needweapon":[],"requires":[{"id":2206,"level":1},{"id":2302,"level":1}],"sp_requires":[0,65]},"2305":{"type":3,"nameid":6,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":13}],"image":"03","icon":83,"needweapon":[],"requires":[{"id":2202,"level":1}],"sp_requires":[0,65]},"2306":{"type":3,"nameid":7,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":14}],"image":"03","icon":90,"needweapon":[],"requires":[{"id":2205,"level":1}],"sp_requires":[0,65]},"2307":{"type":1,"nameid":8,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":15}],"image":"03","icon":94,"needweapon":[],"requires":[],"sp_requires":[0,65]}},"message":["Magma Ball +","Pyromancer","Burning Hand","Fireball +","Magma Ball","Inferno +","Fire Wall +","Hot Rod +","Burning Soul","#yFire#w attacks gain a chance to deal extra damage to #yBurned#w enemies.\\n#yDamage: +{0}%\\nTrigger Chance: {1}%","Enhances Fireball's max charge damage. Press the special attack button to split the flame into three separate blasts. Causes Burn.\\n#yFireball Max Charge Damage: +{0}%\\nDamage per Projectile (2nd part): {1}%\\nDamage per Projectile (3rd part): {2}%\\nBurn Damage: {3}% of Magic Damage + {4} for {5} ticks","Pumps molten lava from the ground, creates a magma ball, and sends it rolling forward. The magma will explode after a certain distance, inflicting significant damage.\\n#yMagic Damage: {0}% + {1}\\nBurn Attacks: {2}\\nMagic Damage per Burn: {3}% + {4}","Enhances Inferno's attack range. Finish casting the skill or press the regular attack button to trigger an explosion that damages enemies and decreases their Fire Resist. Also causes Burn.\\n#yExplosion Damage: ({0}% of Inferno damage\\nEnemy Fire Resist: -{1}% for {2} sec\\nBurn Damage: {3}% of Magic Damage + {4} for {5} ticks","While using Fire Wall, press the regular attack button to throw a flame in front. Also enhances Fire Wall to cause Burn. \\n#yAdditional Hit Damage: {0} - {1}% of Fire Wall damage\\nBurn Damage: {2}% of Magic Damage + {3} for {4} ticks","Creates an explosion where Hot Rod was cast. Also enhances Hot Rod to cause Burn. \\n#yDamage per Explosion: {0}% of Hot Rod damage\\nBurn Damage: {1}% of Magic Damage + {2} for {3} ticks","Increases Fire Damage by #y{0}%#w.","Allows you to briefly control the summoned ball of magma. #yLeft-click#w to shoot it. The ball will be shot automatically if you do not fire it after a certain amount of time.\\n#yBonus Explosion Damage: {0}%"]}
+{
+  "jobicon": 25,
+  "skills": {
+    "2308": {
+      "type": 3,
+      "nameid": 0,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 16,
+          "spcost": 2
+        }
+      ],
+      "image": "03",
+      "icon": 98,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2303,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    },
+    "95065": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95066": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95067": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95068": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95069": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95070": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95071": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95072": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "2301": {
+      "type": 1,
+      "nameid": 2,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 0,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 0,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 85,
+          "mpcost": 0,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 95,
+          "mpcost": 0,
+          "explanationid": 9,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 69,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2215,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2302": {
+      "type": 3,
+      "nameid": 3,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": 0,
+          "explanationid": 10,
+          "spcost": 3
+        }
+      ],
+      "image": "03",
+      "icon": 70,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2220,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2303": {
+      "type": 0,
+      "nameid": 4,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 20,
+          "explanationid": 11,
+          "spcost": 3
+        },
+        {
+          "required_level": 53,
+          "mpcost": 23,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 25,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 27,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 30,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 33,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 35,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 37,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 40,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 42,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 45,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 83,
+          "mpcost": 48,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 50,
+          "explanationid": 11,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 71,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2301,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2304": {
+      "type": 3,
+      "nameid": 5,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 12,
+          "spcost": 0
+        }
+      ],
+      "image": "03",
+      "icon": 82,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2206,
+          "level": 1
+        },
+        {
+          "id": 2302,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2305": {
+      "type": 3,
+      "nameid": 6,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 0
+        }
+      ],
+      "image": "03",
+      "icon": 83,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2202,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2306": {
+      "type": 3,
+      "nameid": 7,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 14,
+          "spcost": 2
+        }
+      ],
+      "image": "03",
+      "icon": 90,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2205,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2307": {
+      "type": 1,
+      "nameid": 8,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 94,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    }
+  },
+  "message": [
+    "Magma Ball +",
+    "Pyromancer",
+    "Burning Hand",
+    "Fireball +",
+    "Magma Ball",
+    "Inferno +",
+    "Fire Wall +",
+    "Hot Rod +",
+    "Burning Soul",
+    "#yFire#w attacks gain a chance to deal extra damage to #yBurned#w enemies.\\n#yDamage: +{0}%\\nTrigger Chance: {1}%",
+    "Enhances Fireball's max charge damage. Press the special attack button to split the flame into three separate blasts. Causes Burn.\\n#yFireball Max Charge Damage: +{0}%\\nDamage per Projectile (2nd part): {1}%\\nDamage per Projectile (3rd part): {2}%\\nBurn Damage: {3}% of Magic Damage + {4} for {5} ticks",
+    "Pumps molten lava from the ground, creates a magma ball, and sends it rolling forward. The magma will explode after a certain distance, inflicting significant damage.\\n#yMagic Damage: {0}% + {1}\\nBurn Attacks: {2}\\nMagic Damage per Burn: {3}% + {4}",
+    "Enhances Inferno's attack range. Finish casting the skill or press the regular attack button to trigger an explosion that damages enemies and decreases their Fire Resist. Also causes Burn.\\n#yExplosion Damage: ({0}% of Inferno damage\\nEnemy Fire Resist: -{1}% for {2} sec\\nBurn Damage: {3}% of Magic Damage + {4} for {5} ticks",
+    "While using Fire Wall, press the regular attack button to throw a flame in front. Also enhances Fire Wall to cause Burn. \\n#yAdditional Hit Damage: {0} - {1}% of Fire Wall damage\\nBurn Damage: {2}% of Magic Damage + {3} for {4} ticks",
+    "Creates an explosion where Hot Rod was cast. Also enhances Hot Rod to cause Burn. \\n#yDamage per Explosion: {0}% of Hot Rod damage\\nBurn Damage: {1}% of Magic Damage + {2} for {3} ticks",
+    "Increases Fire Damage by #y{0}%#w.",
+    "Allows you to briefly control the summoned ball of magma. #yLeft-click#w to shoot it. The ball will be shot automatically if you do not fire it after a certain amount of time.\\n#yBonus Explosion Damage: {0}%"
+  ]
+}

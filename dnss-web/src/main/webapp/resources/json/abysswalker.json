@@ -1,1 +1,356 @@
-{"jobicon":53,"skills":{"6707":{"type":3,"nameid":0,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":14}],"image":"10","icon":85,"needweapon":[23],"requires":[{"id":6311,"level":1}],"sp_requires":[0,65]},"6701":{"type":0,"nameid":1,"maxlevel":14,"levels":[{"required_level":45,"sp_consumed":3,"decreasesp":19,"skillexplanationid":8},{"required_level":48,"sp_consumed":1,"decreasesp":22,"skillexplanationid":8},{"required_level":51,"sp_consumed":1,"decreasesp":24,"skillexplanationid":8},{"required_level":54,"sp_consumed":1,"decreasesp":26,"skillexplanationid":8},{"required_level":57,"sp_consumed":1,"decreasesp":29,"skillexplanationid":8},{"required_level":60,"sp_consumed":1,"decreasesp":32,"skillexplanationid":8},{"required_level":63,"sp_consumed":1,"decreasesp":34,"skillexplanationid":8},{"required_level":66,"sp_consumed":1,"decreasesp":37,"skillexplanationid":8},{"required_level":69,"sp_consumed":1,"decreasesp":39,"skillexplanationid":8},{"required_level":72,"sp_consumed":1,"decreasesp":41,"skillexplanationid":8},{"required_level":75,"sp_consumed":1,"decreasesp":45,"skillexplanationid":8},{"required_level":78,"sp_consumed":1,"decreasesp":47,"skillexplanationid":8},{"required_level":81,"sp_consumed":1,"decreasesp":49,"skillexplanationid":8},{"required_level":84,"sp_consumed":1,"decreasesp":52,"skillexplanationid":8}],"image":"10","icon":81,"needweapon":[23],"requires":[{"id":6312,"level":1}],"sp_requires":[0,65]},"6702":{"type":1,"nameid":2,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":9}],"image":"10","icon":90,"needweapon":[23],"requires":[],"sp_requires":[0,65]},"6703":{"type":0,"nameid":3,"maxlevel":6,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":18,"skillexplanationid":10},{"required_level":60,"sp_consumed":1,"decreasesp":21,"skillexplanationid":10},{"required_level":70,"sp_consumed":1,"decreasesp":24,"skillexplanationid":10},{"required_level":80,"sp_consumed":1,"decreasesp":27,"skillexplanationid":10},{"required_level":90,"sp_consumed":1,"decreasesp":30,"skillexplanationid":10},{"required_level":100,"sp_consumed":1,"decreasesp":34,"skillexplanationid":10}],"image":"10","icon":80,"needweapon":[23],"requires":[{"id":6701,"level":1}],"sp_requires":[0,65]},"6704":{"type":3,"nameid":4,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":11}],"image":"10","icon":82,"needweapon":[23],"requires":[{"id":6307,"level":1},{"id":6705,"level":1}],"sp_requires":[0,65]},"6705":{"type":3,"nameid":5,"maxlevel":1,"levels":[{"required_level":47,"sp_consumed":3,"decreasesp":0,"skillexplanationid":12}],"image":"10","icon":84,"needweapon":[23],"requires":[{"id":6308,"level":6}],"sp_requires":[0,65]},"6706":{"type":3,"nameid":6,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":13}],"image":"10","icon":77,"needweapon":[23],"requires":[{"id":6309,"level":1}],"sp_requires":[0,65]},"6708":{"type":3,"nameid":7,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":15}],"image":"10","icon":104,"needweapon":[23],"requires":[{"id":6701,"level":1}],"sp_requires":[0,0]}},"message":["Dark Line +","Nightfall","Abyssal Chakra","Darkness Incarnate","Night Burst+","Illusion Strike +","Nether Burst +","Nightfall+","#wCreate a dark sigil around you that continuously damages any enemies within. Use the Special Attack button during this skill to perform an evasive move. \\n#yDark Magic\\n#yPhysical Damage {0}%+{1} per hit taken\\n#yDamage taken: +{2}%\\n#y{3}% damage when summoned\\n#yNumber of Hits: {4} time(s)","#wEnhances dark chakra skills and Dark Attack. Illusion Strike and Dark Focus deal more Physical Damage.\\n#yDark Attack: +{0}%\\n#yPhysical Damage: +{1}%\\n#yDuration: {2} sec","#wUses dark chakra energy to temporarily increase Dark Attack and Physical Damage.\\n#yDark Attack: +{0}%\\n#yDuration: {1} sec","Increases Night Burst's damage and creates a Chakra at the explosion site. The Chakra will draw enemies in and deal damage to them.\\n#yNight Burst Damage: +{0}%\\nDamage per Chakra Attack: {1}% of Night Burst damage","Allows you to stop Illusion Strike with the regular/special attack buttons to fire blades at enemies. Use the special attack button to shoot blades in all directions.\\n#yDamage per Blade: {0}% of Illusion Strike damage","Enhances Nether Burst so when it hits the ground, it creates a dark flame to damage enemies in the area. After the attack, use the special attack button to evade.\\n#yDark Flame Damage: {0}% of Nether Burst damage","Enhances Dark Line to make up to {0} chain attacks.","Enhances Nightfall. Creates a larger mantle and increases the mantle's duration. The fire in the middle of the mantle deals an additional {0}% damage.\\nMantle Duration +{1}%"]}
+{
+  "jobicon": 53,
+  "skills": {
+    "6707": {
+      "type": 3,
+      "nameid": 0,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 14,
+          "spcost": 2
+        }
+      ],
+      "image": "10",
+      "icon": 85,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+        {
+          "id": 6311,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "6701": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 14,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 19,
+          "explanationid": 8,
+          "spcost": 3
+        },
+        {
+          "required_level": 48,
+          "mpcost": 22,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 51,
+          "mpcost": 24,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 54,
+          "mpcost": 26,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 57,
+          "mpcost": 29,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 60,
+          "mpcost": 32,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 63,
+          "mpcost": 34,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 66,
+          "mpcost": 37,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 69,
+          "mpcost": 39,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 72,
+          "mpcost": 41,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 45,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 78,
+          "mpcost": 47,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 81,
+          "mpcost": 49,
+          "explanationid": 8,
+          "spcost": 1
+        },
+        {
+          "required_level": 84,
+          "mpcost": 52,
+          "explanationid": 8,
+          "spcost": 1
+        }
+      ],
+      "image": "10",
+      "icon": 81,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+        {
+          "id": 6312,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "6702": {
+      "type": 1,
+      "nameid": 2,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 9,
+          "spcost": 1
+        }
+      ],
+      "image": "10",
+      "icon": 90,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "6703": {
+      "type": 0,
+      "nameid": 3,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 18,
+          "explanationid": 10,
+          "spcost": 3
+        },
+        {
+          "required_level": 60,
+          "mpcost": 21,
+          "explanationid": 10,
+          "spcost": 1
+        },
+        {
+          "required_level": 70,
+          "mpcost": 24,
+          "explanationid": 10,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 27,
+          "explanationid": 10,
+          "spcost": 1
+        },
+        {
+          "required_level": 90,
+          "mpcost": 30,
+          "explanationid": 10,
+          "spcost": 1
+        },
+        {
+          "required_level": 100,
+          "mpcost": 34,
+          "explanationid": 10,
+          "spcost": 1
+        }
+      ],
+      "image": "10",
+      "icon": 80,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+        {
+          "id": 6701,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "6704": {
+      "type": 3,
+      "nameid": 4,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 11,
+          "spcost": 0
+        }
+      ],
+      "image": "10",
+      "icon": 82,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+        {
+          "id": 6307,
+          "level": 1
+        },
+        {
+          "id": 6705,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "6705": {
+      "type": 3,
+      "nameid": 5,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 47,
+          "mpcost": 0,
+          "explanationid": 12,
+          "spcost": 3
+        }
+      ],
+      "image": "10",
+      "icon": 84,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+        {
+          "id": 6308,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "6706": {
+      "type": 3,
+      "nameid": 6,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 0
+        }
+      ],
+      "image": "10",
+      "icon": 77,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+        {
+          "id": 6309,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "6708": {
+      "type": 3,
+      "nameid": 7,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 2
+        }
+      ],
+      "image": "10",
+      "icon": 104,
+      "needweapon": [
+        23
+      ],
+      "requires": [
+        {
+          "id": 6701,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    }
+  },
+  "message": [
+    "Dark Line +",
+    "Nightfall",
+    "Abyssal Chakra",
+    "Darkness Incarnate",
+    "Night Burst+",
+    "Illusion Strike +",
+    "Nether Burst +",
+    "Nightfall+",
+    "#wCreate a dark sigil around you that continuously damages any enemies within. Use the Special Attack button during this skill to perform an evasive move. \\n#yDark Magic\\n#yPhysical Damage {0}%+{1} per hit taken\\n#yDamage taken: +{2}%\\n#y{3}% damage when summoned\\n#yNumber of Hits: {4} time(s)",
+    "#wEnhances dark chakra skills and Dark Attack. Illusion Strike and Dark Focus deal more Physical Damage.\\n#yDark Attack: +{0}%\\n#yPhysical Damage: +{1}%\\n#yDuration: {2} sec",
+    "#wUses dark chakra energy to temporarily increase Dark Attack and Physical Damage.\\n#yDark Attack: +{0}%\\n#yDuration: {1} sec",
+    "Increases Night Burst's damage and creates a Chakra at the explosion site. The Chakra will draw enemies in and deal damage to them.\\n#yNight Burst Damage: +{0}%\\nDamage per Chakra Attack: {1}% of Night Burst damage",
+    "Allows you to stop Illusion Strike with the regular/special attack buttons to fire blades at enemies. Use the special attack button to shoot blades in all directions.\\n#yDamage per Blade: {0}% of Illusion Strike damage",
+    "Enhances Nether Burst so when it hits the ground, it creates a dark flame to damage enemies in the area. After the attack, use the special attack button to evade.\\n#yDark Flame Damage: {0}% of Nether Burst damage",
+    "Enhances Dark Line to make up to {0} chain attacks.",
+    "Enhances Nightfall. Creates a larger mantle and increases the mantle's duration. The fire in the middle of the mantle deals an additional {0}% damage.\\nMantle Duration +{1}%"
+  ]
+}

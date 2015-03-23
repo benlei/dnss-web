@@ -10,7 +10,8 @@ require_relative 'dn-skills'
 ##############################################################################
 JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json'
 # JSON_DIRECTORY = 'E:\\json'
-PRETTY = false
+
+PRETTY = true
 
 ##############################################################################
 # get all messages
@@ -25,11 +26,15 @@ messages = Hash.new
 ##############################################################################
 jobs = Hash.new
 query = <<sql_query
-  SELECT _id,
+  SELECT j._id,
+          m._data as jobname,
          LOWER(_englishname) as englishname,
+         _parentjob,
          _jobnumber,
          _jobicon
   FROM jobs j
+  INNER JOIN messages m
+    ON _jobname = m._id
   WHERE _service is TRUE
 sql_query
 @conn.exec(query).each_dnt do |job|
@@ -131,9 +136,9 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
     SELECT  _needjob,
            _skillindex as id,
            _levellimit as required_level,
-           _decreasesp,
-           _skillexplanationid, _skillexplanationidparam,
-           _needskillpoint as sp_consumed
+           _decreasesp as mpcost,
+           _skillexplanationid as explanationid, _skillexplanationidparam,
+           _needskillpoint as spcost
     FROM skills_%s_pve s
     INNER JOIN skills
       ON _skillindex = skills._id
@@ -147,7 +152,7 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
 
     skillparams = skill['skillexplanationidparam'].to_s
     skillparams = skillparams.split(',').map {|str| str.strip.message_format(messages)}
-    skill['skillexplanationid'] = get_local_message_id(jobs[skill['needjob']]['message'], skill['skillexplanationid'], messages)
+    skill['explanationid'] = get_local_message_id(jobs[skill['needjob']]['message'], skill['explanationid'], messages)
 
     ['id', 'needjob', 'skillexplanationidparam'].each {|a| skill.delete(a)}
   end
@@ -157,34 +162,33 @@ end
 # get all the jobs, subjobs, etc. 
 ##############################################################################
 job_tree = Hash.new
-jobs.select {|k,v| v['advancement'] == 0}.each do |k,v|
+jobs.select {|k,v| v['jobnumber'] == 0}.each do |k,v|
   job_tree[k] = {
     'jobname' => v['jobname'],
-    'identifier' => v['identifier'],
+    'identifier' => v['englishname'],
     'advancements' => Hash.new
   }
 end
 
-jobs.select {|k,v| v['advancement'] == 1}.each do |k,v|
+jobs.select {|k,v| v['jobnumber'] == 1}.each do |k,v|
   primary = v['parentjob']
   jtree = job_tree[primary]['advancements']
   jtree[k] = {
     'jobname' => v['jobname'],
-    'identifier' => v['identifier'],
+    'identifier' => v['englishname'],
     'advancements' => Hash.new
   }
 end
 
-jobs.select {|k,v| v['advancement'] == 2}.each do |k,v|
+jobs.select {|k,v| v['jobnumber'] == 2}.each do |k,v|
   secondary = v['parentjob']
   primary = jobs[secondary]['parentjob']
   jtree = job_tree[primary]['advancements'][secondary]['advancements']
   jtree[k] = {
     'jobname' => v['jobname'],
-    'identifier' => v['identifier']
+    'identifier' => v['englishname']
   }
 end
-
 
 JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
 mkdir_p(JSON_DIRECTORY)
@@ -216,7 +220,7 @@ jobs.each_value do |job|
   path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, job['englishname']]
 
   # deletes unneeded fields
-  ['englishname', 'jobnumber'].each {|a| job.delete(a)}
+  ['englishname', 'jobnumber', 'parentjob', 'jobname'].each {|a| job.delete(a)}
 
   stream = open(path, 'w')
   stream.write(JSON.pretty_generate(job)) unless ! PRETTY

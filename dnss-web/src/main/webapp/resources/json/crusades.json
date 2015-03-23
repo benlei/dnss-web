@@ -1,1 +1,456 @@
-{"jobicon":32,"skills":{"3355":{"type":3,"nameid":0,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":13}],"image":"04","icon":83,"needweapon":[],"requires":[{"id":3202,"level":1}],"sp_requires":[0,65]},"95111":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95110":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95109":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95108":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95107":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95106":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"3354":{"type":3,"nameid":2,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":12}],"image":"04","icon":82,"needweapon":[11,12],"requires":[{"id":3224,"level":1},{"id":3352,"level":1}],"sp_requires":[0,65]},"95112":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"3356":{"type":3,"nameid":3,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":14}],"image":"04","icon":91,"needweapon":[],"requires":[{"id":3203,"level":1}],"sp_requires":[0,65]},"3357":{"type":1,"nameid":4,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":15}],"image":"04","icon":97,"needweapon":[],"requires":[],"sp_requires":[0,65]},"95105":{"type":0,"nameid":1,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"3358":{"type":3,"nameid":5,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":16}],"image":"04","icon":102,"needweapon":[],"requires":[{"id":3353,"level":1}],"sp_requires":[0,0]},"3353":{"type":0,"nameid":6,"maxlevel":13,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":20,"skillexplanationid":11},{"required_level":53,"sp_consumed":1,"decreasesp":23,"skillexplanationid":11},{"required_level":56,"sp_consumed":1,"decreasesp":25,"skillexplanationid":11},{"required_level":59,"sp_consumed":1,"decreasesp":27,"skillexplanationid":11},{"required_level":62,"sp_consumed":1,"decreasesp":30,"skillexplanationid":11},{"required_level":65,"sp_consumed":1,"decreasesp":33,"skillexplanationid":11},{"required_level":68,"sp_consumed":1,"decreasesp":35,"skillexplanationid":11},{"required_level":71,"sp_consumed":1,"decreasesp":37,"skillexplanationid":11},{"required_level":74,"sp_consumed":1,"decreasesp":40,"skillexplanationid":11},{"required_level":77,"sp_consumed":1,"decreasesp":42,"skillexplanationid":11},{"required_level":80,"sp_consumed":1,"decreasesp":45,"skillexplanationid":11},{"required_level":83,"sp_consumed":1,"decreasesp":47,"skillexplanationid":11},{"required_level":86,"sp_consumed":1,"decreasesp":50,"skillexplanationid":11}],"image":"04","icon":75,"needweapon":[],"requires":[{"id":3351,"level":1}],"sp_requires":[0,65]},"3352":{"type":3,"nameid":7,"maxlevel":1,"levels":[{"required_level":48,"sp_consumed":3,"decreasesp":0,"skillexplanationid":10}],"image":"04","icon":74,"needweapon":[],"requires":[{"id":3222,"level":6}],"sp_requires":[0,65]},"3351":{"type":0,"nameid":8,"maxlevel":6,"levels":[{"required_level":45,"sp_consumed":3,"decreasesp":17,"skillexplanationid":9},{"required_level":55,"sp_consumed":1,"decreasesp":20,"skillexplanationid":9},{"required_level":65,"sp_consumed":1,"decreasesp":23,"skillexplanationid":9},{"required_level":75,"sp_consumed":1,"decreasesp":26,"skillexplanationid":9},{"required_level":85,"sp_consumed":1,"decreasesp":29,"skillexplanationid":9},{"required_level":95,"sp_consumed":1,"decreasesp":32,"skillexplanationid":9}],"image":"04","icon":73,"needweapon":[],"requires":[{"id":3209,"level":1}],"sp_requires":[0,65]}},"message":["Charitable Zap +","Crusader","Sacred Hammering +","Electric Smite +","Divine Might","Judgmental Hammer +","Judgmental Hammer","Goddess Relic +","Crusader's Zeal","Uses STR to boost your Magic Damage and INT to boost your Physical Damage.\\n#yMagic Damage: +{0}% STR\\nPhysical Damage: +{1}% INT\\nDuration: {2} sec","Enhances the attack range and damage of Goddess Relic.\\n#yGoddess Relic Damage: +{0}%","Tosses a hammer that feeds on its enemies to grow larger. The hammer's damage and super armor piercing increase as it grows. Damage increases from #y{0}%#w up to #y{2}%#w in increments of #y{1}%#w.\\n#yLight Magic\\n#yPhysical Damage: {3}% + {4}\\nMagic Damage: {5}% + {6}\\nDeals +{7}% damage to close enemies","Decreases the number of hammers in Sacred Hammering but increases the damage per hammer. Shoots the hammers forward.\\n#yDamage per Hammer: +{0}%","Increases Charitable Zap's range and allows it to hit up to {0} enemies. Increases the number of lightening bolts.\\n#yCharitable Zap Damage: +{1}%","Enhances Electric Smite's attack range and unleashes a lightning bolt.\\n#yDamage per Bolt: {0}% of Electric Smite damage","Hitting an enemy with a light attack increases your weapon's damage by #y{1}%#w for #y{0} sec#w.\\n#yHit an enemy with a light attack to decrease the cooldown of Electric Smite and Electric Smite + by {2} sec.\\n#yCooldown: {3} sec","Enhances Judgmental Hammer. The hammer flies back to you after damaging the enemy. No change in damage.\\n#yReturning Hammer Max Hits: {0}"]}
+{
+  "jobicon": 32,
+  "skills": {
+    "3355": {
+      "type": 3,
+      "nameid": 0,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 0
+        }
+      ],
+      "image": "04",
+      "icon": 83,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3202,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "95111": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95110": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95109": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95108": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95107": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95106": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "3354": {
+      "type": 3,
+      "nameid": 2,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 12,
+          "spcost": 0
+        }
+      ],
+      "image": "04",
+      "icon": 82,
+      "needweapon": [
+        11,
+        12
+      ],
+      "requires": [
+        {
+          "id": 3224,
+          "level": 1
+        },
+        {
+          "id": 3352,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "95112": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "3356": {
+      "type": 3,
+      "nameid": 3,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 14,
+          "spcost": 2
+        }
+      ],
+      "image": "04",
+      "icon": 91,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3203,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3357": {
+      "type": 1,
+      "nameid": 4,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 1
+        }
+      ],
+      "image": "04",
+      "icon": 97,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "95105": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "3358": {
+      "type": 3,
+      "nameid": 5,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 16,
+          "spcost": 2
+        }
+      ],
+      "image": "04",
+      "icon": 102,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3353,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    },
+    "3353": {
+      "type": 0,
+      "nameid": 6,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 20,
+          "explanationid": 11,
+          "spcost": 3
+        },
+        {
+          "required_level": 53,
+          "mpcost": 23,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 25,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 27,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 30,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 33,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 35,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 37,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 40,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 42,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 45,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 83,
+          "mpcost": 47,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 50,
+          "explanationid": 11,
+          "spcost": 1
+        }
+      ],
+      "image": "04",
+      "icon": 75,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3351,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3352": {
+      "type": 3,
+      "nameid": 7,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": 0,
+          "explanationid": 10,
+          "spcost": 3
+        }
+      ],
+      "image": "04",
+      "icon": 74,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3222,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "3351": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 17,
+          "explanationid": 9,
+          "spcost": 3
+        },
+        {
+          "required_level": 55,
+          "mpcost": 20,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 23,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 26,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 85,
+          "mpcost": 29,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 95,
+          "mpcost": 32,
+          "explanationid": 9,
+          "spcost": 1
+        }
+      ],
+      "image": "04",
+      "icon": 73,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 3209,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    }
+  },
+  "message": [
+    "Charitable Zap +",
+    "Crusader",
+    "Sacred Hammering +",
+    "Electric Smite +",
+    "Divine Might",
+    "Judgmental Hammer +",
+    "Judgmental Hammer",
+    "Goddess Relic +",
+    "Crusader's Zeal",
+    "Uses STR to boost your Magic Damage and INT to boost your Physical Damage.\\n#yMagic Damage: +{0}% STR\\nPhysical Damage: +{1}% INT\\nDuration: {2} sec",
+    "Enhances the attack range and damage of Goddess Relic.\\n#yGoddess Relic Damage: +{0}%",
+    "Tosses a hammer that feeds on its enemies to grow larger. The hammer's damage and super armor piercing increase as it grows. Damage increases from #y{0}%#w up to #y{2}%#w in increments of #y{1}%#w.\\n#yLight Magic\\n#yPhysical Damage: {3}% + {4}\\nMagic Damage: {5}% + {6}\\nDeals +{7}% damage to close enemies",
+    "Decreases the number of hammers in Sacred Hammering but increases the damage per hammer. Shoots the hammers forward.\\n#yDamage per Hammer: +{0}%",
+    "Increases Charitable Zap's range and allows it to hit up to {0} enemies. Increases the number of lightening bolts.\\n#yCharitable Zap Damage: +{1}%",
+    "Enhances Electric Smite's attack range and unleashes a lightning bolt.\\n#yDamage per Bolt: {0}% of Electric Smite damage",
+    "Hitting an enemy with a light attack increases your weapon's damage by #y{1}%#w for #y{0} sec#w.\\n#yHit an enemy with a light attack to decrease the cooldown of Electric Smite and Electric Smite + by {2} sec.\\n#yCooldown: {3} sec",
+    "Enhances Judgmental Hammer. The hammer flies back to you after damaging the enemy. No change in damage.\\n#yReturning Hammer Max Hits: {0}"
+  ]
+}

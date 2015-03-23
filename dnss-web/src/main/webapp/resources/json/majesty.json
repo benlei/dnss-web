@@ -1,1 +1,455 @@
-{"jobicon":28,"skills":{"2556":{"type":3,"nameid":0,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":14}],"image":"03","icon":92,"needweapon":[],"requires":[{"id":2401,"level":1}],"sp_requires":[0,65]},"2558":{"type":3,"nameid":1,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":16}],"image":"03","icon":100,"needweapon":[],"requires":[{"id":2553,"level":1}],"sp_requires":[0,0]},"2557":{"type":1,"nameid":2,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":15}],"image":"03","icon":97,"needweapon":[],"requires":[],"sp_requires":[0,65]},"2555":{"type":3,"nameid":3,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":13}],"image":"03","icon":89,"needweapon":[],"requires":[{"id":2405,"level":1}],"sp_requires":[0,65]},"2554":{"type":3,"nameid":4,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":12}],"image":"03","icon":88,"needweapon":[],"requires":[{"id":2404,"level":1},{"id":2552,"level":1}],"sp_requires":[0,65]},"2553":{"type":0,"nameid":5,"maxlevel":13,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":21,"skillexplanationid":11},{"required_level":53,"sp_consumed":1,"decreasesp":23,"skillexplanationid":11},{"required_level":56,"sp_consumed":1,"decreasesp":26,"skillexplanationid":11},{"required_level":59,"sp_consumed":1,"decreasesp":28,"skillexplanationid":11},{"required_level":62,"sp_consumed":1,"decreasesp":30,"skillexplanationid":11},{"required_level":65,"sp_consumed":1,"decreasesp":33,"skillexplanationid":11},{"required_level":68,"sp_consumed":1,"decreasesp":36,"skillexplanationid":11},{"required_level":71,"sp_consumed":1,"decreasesp":38,"skillexplanationid":11},{"required_level":74,"sp_consumed":1,"decreasesp":40,"skillexplanationid":11},{"required_level":77,"sp_consumed":1,"decreasesp":43,"skillexplanationid":11},{"required_level":80,"sp_consumed":1,"decreasesp":46,"skillexplanationid":11},{"required_level":83,"sp_consumed":1,"decreasesp":48,"skillexplanationid":11},{"required_level":86,"sp_consumed":1,"decreasesp":51,"skillexplanationid":11}],"image":"03","icon":80,"needweapon":[],"requires":[{"id":2551,"level":1}],"sp_requires":[0,65]},"2552":{"type":3,"nameid":6,"maxlevel":1,"levels":[{"required_level":48,"sp_consumed":3,"decreasesp":0,"skillexplanationid":10}],"image":"03","icon":79,"needweapon":[],"requires":[{"id":2403,"level":6}],"sp_requires":[0,65]},"2551":{"type":0,"nameid":7,"maxlevel":6,"levels":[{"required_level":45,"sp_consumed":3,"decreasesp":17,"skillexplanationid":9},{"required_level":55,"sp_consumed":1,"decreasesp":20,"skillexplanationid":9},{"required_level":65,"sp_consumed":1,"decreasesp":23,"skillexplanationid":9},{"required_level":75,"sp_consumed":1,"decreasesp":26,"skillexplanationid":9},{"required_level":85,"sp_consumed":1,"decreasesp":29,"skillexplanationid":9},{"required_level":95,"sp_consumed":1,"decreasesp":32,"skillexplanationid":9}],"image":"03","icon":78,"needweapon":[],"requires":[{"id":2402,"level":1}],"sp_requires":[0,65]},"95093":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95094":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95095":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95096":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95089":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95090":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95091":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95092":{"type":0,"nameid":8,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]}},"message":["Gravity Crush +","Gravity Well +","Gravity Controller","Black Hole +","Triple Orbs +","Gravity Well","Gravity Blast +","Mystic Mischief","Chaos Mage","Increases your #yDark Attack#w and steals an enemy's buffs, applying them to you. Cannot steal buffs that affect weapons.\\n#yDark Attack +{0}% \\nDuration: {1} sec\\nBuffs Stolen: {2}\\nDuration: {3} sec","Enhances Gravity Ball so that it explodes three times in a row, increasing its range each time.\\n#yGravity Ball Damage: +{0}%","Launches nearby enemies into the air and smashes them back down to the ground. Deals additional damage to the enemy with the lowest HP.\\n#yDark Magic/n#yMagic Damage: {0}% + {1}\\nDamage to Lowest HP Target: +{2}%","Enhances Triple Orbs's attack range and knocks enemies down. Causes a huge explosion at the end.\\n#yTriple Orbs Damage: +{0}%","Enhances Black Hole's attack range and suction speed. Causes a huge explosion at the end.\\n#yBlack Hole Damage: +{0}%","Enhances Gravity Crush's attack range. Also allows you to move around more freely while using the skill. Causes a huge explosion at the end, decreasing enemy Dark Resist.\\n#yGravity Crush Damage: +{0}%\\nEnemy Dark Resist: -{1}% for {2} sec","Enhances #yBlack Hole, Gravity Crush, and Gravity Well#w and deals extra damage to enemies who resist being held by gravity attacks.\\n#yDamage +{0}% per hit","Enhances Gravity Well to launch enemies higher into the air or strike enemies to the ground.\\n#yLeft-click: Strike to the ground\\n#yBonus Damage: {0}%\\n#yRight-click: Launch higher into the air\\n#wWhen striking or launching enemies into the air: #yBonus Damage {1}%"]}
+{
+  "jobicon": 28,
+  "skills": {
+    "2556": {
+      "type": 3,
+      "nameid": 0,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 14,
+          "spcost": 2
+        }
+      ],
+      "image": "03",
+      "icon": 92,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2401,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2558": {
+      "type": 3,
+      "nameid": 1,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 16,
+          "spcost": 2
+        }
+      ],
+      "image": "03",
+      "icon": 100,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2553,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    },
+    "2557": {
+      "type": 1,
+      "nameid": 2,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 97,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2555": {
+      "type": 3,
+      "nameid": 3,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 0
+        }
+      ],
+      "image": "03",
+      "icon": 89,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2405,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2554": {
+      "type": 3,
+      "nameid": 4,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 12,
+          "spcost": 0
+        }
+      ],
+      "image": "03",
+      "icon": 88,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2404,
+          "level": 1
+        },
+        {
+          "id": 2552,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2553": {
+      "type": 0,
+      "nameid": 5,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 21,
+          "explanationid": 11,
+          "spcost": 3
+        },
+        {
+          "required_level": 53,
+          "mpcost": 23,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 26,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 28,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 30,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 33,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 36,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 38,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 40,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 43,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 46,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 83,
+          "mpcost": 48,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 51,
+          "explanationid": 11,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 80,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2551,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2552": {
+      "type": 3,
+      "nameid": 6,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": 0,
+          "explanationid": 10,
+          "spcost": 3
+        }
+      ],
+      "image": "03",
+      "icon": 79,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2403,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2551": {
+      "type": 0,
+      "nameid": 7,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 17,
+          "explanationid": 9,
+          "spcost": 3
+        },
+        {
+          "required_level": 55,
+          "mpcost": 20,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 23,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 26,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 85,
+          "mpcost": 29,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 95,
+          "mpcost": 32,
+          "explanationid": 9,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 78,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2402,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "95093": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95094": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95095": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95096": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95089": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95090": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95091": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95092": {
+      "type": 0,
+      "nameid": 8,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    }
+  },
+  "message": [
+    "Gravity Crush +",
+    "Gravity Well +",
+    "Gravity Controller",
+    "Black Hole +",
+    "Triple Orbs +",
+    "Gravity Well",
+    "Gravity Blast +",
+    "Mystic Mischief",
+    "Chaos Mage",
+    "Increases your #yDark Attack#w and steals an enemy's buffs, applying them to you. Cannot steal buffs that affect weapons.\\n#yDark Attack +{0}% \\nDuration: {1} sec\\nBuffs Stolen: {2}\\nDuration: {3} sec",
+    "Enhances Gravity Ball so that it explodes three times in a row, increasing its range each time.\\n#yGravity Ball Damage: +{0}%",
+    "Launches nearby enemies into the air and smashes them back down to the ground. Deals additional damage to the enemy with the lowest HP.\\n#yDark Magic/n#yMagic Damage: {0}% + {1}\\nDamage to Lowest HP Target: +{2}%",
+    "Enhances Triple Orbs's attack range and knocks enemies down. Causes a huge explosion at the end.\\n#yTriple Orbs Damage: +{0}%",
+    "Enhances Black Hole's attack range and suction speed. Causes a huge explosion at the end.\\n#yBlack Hole Damage: +{0}%",
+    "Enhances Gravity Crush's attack range. Also allows you to move around more freely while using the skill. Causes a huge explosion at the end, decreasing enemy Dark Resist.\\n#yGravity Crush Damage: +{0}%\\nEnemy Dark Resist: -{1}% for {2} sec",
+    "Enhances #yBlack Hole, Gravity Crush, and Gravity Well#w and deals extra damage to enemies who resist being held by gravity attacks.\\n#yDamage +{0}% per hit",
+    "Enhances Gravity Well to launch enemies higher into the air or strike enemies to the ground.\\n#yLeft-click: Strike to the ground\\n#yBonus Damage: {0}%\\n#yRight-click: Launch higher into the air\\n#wWhen striking or launching enemies into the air: #yBonus Damage {1}%"
+  ]
+}

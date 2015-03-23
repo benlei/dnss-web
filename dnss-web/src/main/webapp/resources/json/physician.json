@@ -1,1 +1,463 @@
-{"jobicon":41,"skills":{"4555":{"type":3,"nameid":0,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":13}],"image":"08","icon":72,"needweapon":[17],"requires":[{"id":4414,"level":1}],"sp_requires":[0,65]},"4556":{"type":3,"nameid":1,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":14}],"image":"08","icon":76,"needweapon":[17],"requires":[{"id":4416,"level":1}],"sp_requires":[0,65]},"95159":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95160":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95161":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95162":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95168":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95167":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95166":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95165":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95164":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"4551":{"type":0,"nameid":3,"maxlevel":10,"levels":[{"required_level":45,"sp_consumed":3,"decreasesp":18,"skillexplanationid":9},{"required_level":50,"sp_consumed":1,"decreasesp":21,"skillexplanationid":9},{"required_level":55,"sp_consumed":1,"decreasesp":24,"skillexplanationid":9},{"required_level":60,"sp_consumed":1,"decreasesp":26,"skillexplanationid":9},{"required_level":65,"sp_consumed":1,"decreasesp":29,"skillexplanationid":9},{"required_level":70,"sp_consumed":1,"decreasesp":32,"skillexplanationid":9},{"required_level":75,"sp_consumed":1,"decreasesp":34,"skillexplanationid":9},{"required_level":80,"sp_consumed":1,"decreasesp":37,"skillexplanationid":9},{"required_level":85,"sp_consumed":1,"decreasesp":39,"skillexplanationid":9},{"required_level":90,"sp_consumed":1,"decreasesp":42,"skillexplanationid":9}],"image":"08","icon":62,"needweapon":[17],"requires":[{"id":4420,"level":1}],"sp_requires":[0,65]},"4552":{"type":3,"nameid":4,"maxlevel":1,"levels":[{"required_level":48,"sp_consumed":3,"decreasesp":0,"skillexplanationid":10}],"image":"08","icon":63,"needweapon":[17],"requires":[{"id":4415,"level":6}],"sp_requires":[0,65]},"4553":{"type":0,"nameid":5,"maxlevel":6,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":18,"skillexplanationid":11},{"required_level":60,"sp_consumed":1,"decreasesp":21,"skillexplanationid":11},{"required_level":70,"sp_consumed":1,"decreasesp":24,"skillexplanationid":11},{"required_level":80,"sp_consumed":1,"decreasesp":26,"skillexplanationid":11},{"required_level":90,"sp_consumed":1,"decreasesp":30,"skillexplanationid":11},{"required_level":100,"sp_consumed":1,"decreasesp":33,"skillexplanationid":11}],"image":"08","icon":64,"needweapon":[17],"requires":[{"id":4551,"level":1}],"sp_requires":[0,65]},"4557":{"type":1,"nameid":6,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":15}],"image":"08","icon":79,"needweapon":[17],"requires":[],"sp_requires":[0,65]},"4558":{"type":3,"nameid":7,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":16}],"image":"08","icon":84,"needweapon":[17],"requires":[{"id":4553,"level":1}],"sp_requires":[0,0]},"95163":{"type":0,"nameid":2,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"4554":{"type":3,"nameid":8,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":12}],"image":"08","icon":71,"needweapon":[17],"requires":[{"id":4417,"level":1},{"id":4552,"level":1}],"sp_requires":[0,65]}},"message":["Toxic Twirl +","Toxic Spill +","Physician","Lovesick","Injection +","Good Vibrations ","Chemical Reaction","Good Vibrations +","Contagion +","Infects enemies with a disease to confuse them and deal more Physical and Magic Damage to them. Confused enemies will attack their allies.\\n#yDark Magic\\nMagic Damage: {0}% + {1}\\nPhysical and Magic Damage +{2}%\\nDuration: {3} sec\\n+1 Alchemy Bubble upon using the skill","Increases Injection's range and damage. Adds a final damage effect to the first ally to hit.\\n#yInjection Damage +{0}%\\nFinal Damage +{1}%","Heals nearby allies and temporarily boosts all damage they deal.\\n#yHealing: {0}% + {1} of Magic Damage\\nAll Damage +{3}% for {2} sec\\nRemoves up to 3 status effects\\nObtain 1 Alchemy Bubble upon using the skill","Throws up to 4 flasks and deals more damage to the target. Spread a stronger poison to infect enemies with a disease.\\n#yContagion Damage +{0}%\\nDamage Dealt to Enemies +{1}%\\nDuration: {2} sec\\nAdditional Poison Pop, Toxic Spill, and Toxic Surge Damage to Infected Enemies: {3}%\\nPlague Damage +{4}","Enhances Toxic Swirl to deal additional damage. Press the regular attack button to activate. Roto-whirl can be used even after the extra attack.\\n#yAdditional Hit Damage: {0}% of Toxic Twirl damage","Enhances Toxic Spill. Perform an additional hit by pressing the regular attack button or recover in a wide range by pressing the special attack button. The additional hit deals damage without poison and is not affected by the bubble.\\n#yAdditional Hit Damage: {0}% of Toxic Spill damage\\nAmount Recovered in Wide Range: {1}% of Toxic Spill damage","After gaining an Alchemy Bubble from poison or healing skills, increases Magic Damage for #y{0} sec#w.\\n#yMagic Damage +{1}%\\nDark Attack +{2}%\\nWhen hitting the target with Injection, Injection Cooldown: -{3} sec\\nCreates {4} more Bubbles when more Injection is used.","Enhances Good Vibrations. Creates a healing aura that cures all harmful effects every {0} seconds and recovers HP by #y{1}%#w."]}
+{
+  "jobicon": 41,
+  "skills": {
+    "4555": {
+      "type": 3,
+      "nameid": 0,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 0
+        }
+      ],
+      "image": "08",
+      "icon": 72,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+        {
+          "id": 4414,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "4556": {
+      "type": 3,
+      "nameid": 1,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 14,
+          "spcost": 2
+        }
+      ],
+      "image": "08",
+      "icon": 76,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+        {
+          "id": 4416,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "95159": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95160": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95161": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95162": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95168": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95167": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95166": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95165": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95164": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "4551": {
+      "type": 0,
+      "nameid": 3,
+      "maxlevel": 10,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 18,
+          "explanationid": 9,
+          "spcost": 3
+        },
+        {
+          "required_level": 50,
+          "mpcost": 21,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 55,
+          "mpcost": 24,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 60,
+          "mpcost": 26,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 29,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 70,
+          "mpcost": 32,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 34,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 37,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 85,
+          "mpcost": 39,
+          "explanationid": 9,
+          "spcost": 1
+        },
+        {
+          "required_level": 90,
+          "mpcost": 42,
+          "explanationid": 9,
+          "spcost": 1
+        }
+      ],
+      "image": "08",
+      "icon": 62,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+        {
+          "id": 4420,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "4552": {
+      "type": 3,
+      "nameid": 4,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": 0,
+          "explanationid": 10,
+          "spcost": 3
+        }
+      ],
+      "image": "08",
+      "icon": 63,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+        {
+          "id": 4415,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "4553": {
+      "type": 0,
+      "nameid": 5,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 18,
+          "explanationid": 11,
+          "spcost": 3
+        },
+        {
+          "required_level": 60,
+          "mpcost": 21,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 70,
+          "mpcost": 24,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 26,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 90,
+          "mpcost": 30,
+          "explanationid": 11,
+          "spcost": 1
+        },
+        {
+          "required_level": 100,
+          "mpcost": 33,
+          "explanationid": 11,
+          "spcost": 1
+        }
+      ],
+      "image": "08",
+      "icon": 64,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+        {
+          "id": 4551,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "4557": {
+      "type": 1,
+      "nameid": 6,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 1
+        }
+      ],
+      "image": "08",
+      "icon": 79,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "4558": {
+      "type": 3,
+      "nameid": 7,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 16,
+          "spcost": 2
+        }
+      ],
+      "image": "08",
+      "icon": 84,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+        {
+          "id": 4553,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    },
+    "95163": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "4554": {
+      "type": 3,
+      "nameid": 8,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 12,
+          "spcost": 0
+        }
+      ],
+      "image": "08",
+      "icon": 71,
+      "needweapon": [
+        17
+      ],
+      "requires": [
+        {
+          "id": 4417,
+          "level": 1
+        },
+        {
+          "id": 4552,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    }
+  },
+  "message": [
+    "Toxic Twirl +",
+    "Toxic Spill +",
+    "Physician",
+    "Lovesick",
+    "Injection +",
+    "Good Vibrations ",
+    "Chemical Reaction",
+    "Good Vibrations +",
+    "Contagion +",
+    "Infects enemies with a disease to confuse them and deal more Physical and Magic Damage to them. Confused enemies will attack their allies.\\n#yDark Magic\\nMagic Damage: {0}% + {1}\\nPhysical and Magic Damage +{2}%\\nDuration: {3} sec\\n+1 Alchemy Bubble upon using the skill",
+    "Increases Injection's range and damage. Adds a final damage effect to the first ally to hit.\\n#yInjection Damage +{0}%\\nFinal Damage +{1}%",
+    "Heals nearby allies and temporarily boosts all damage they deal.\\n#yHealing: {0}% + {1} of Magic Damage\\nAll Damage +{3}% for {2} sec\\nRemoves up to 3 status effects\\nObtain 1 Alchemy Bubble upon using the skill",
+    "Throws up to 4 flasks and deals more damage to the target. Spread a stronger poison to infect enemies with a disease.\\n#yContagion Damage +{0}%\\nDamage Dealt to Enemies +{1}%\\nDuration: {2} sec\\nAdditional Poison Pop, Toxic Spill, and Toxic Surge Damage to Infected Enemies: {3}%\\nPlague Damage +{4}",
+    "Enhances Toxic Swirl to deal additional damage. Press the regular attack button to activate. Roto-whirl can be used even after the extra attack.\\n#yAdditional Hit Damage: {0}% of Toxic Twirl damage",
+    "Enhances Toxic Spill. Perform an additional hit by pressing the regular attack button or recover in a wide range by pressing the special attack button. The additional hit deals damage without poison and is not affected by the bubble.\\n#yAdditional Hit Damage: {0}% of Toxic Spill damage\\nAmount Recovered in Wide Range: {1}% of Toxic Spill damage",
+    "After gaining an Alchemy Bubble from poison or healing skills, increases Magic Damage for #y{0} sec#w.\\n#yMagic Damage +{1}%\\nDark Attack +{2}%\\nWhen hitting the target with Injection, Injection Cooldown: -{3} sec\\nCreates {4} more Bubbles when more Injection is used.",
+    "Enhances Good Vibrations. Creates a healing aura that cures all harmful effects every {0} seconds and recovers HP by #y{1}%#w."
+  ]
+}

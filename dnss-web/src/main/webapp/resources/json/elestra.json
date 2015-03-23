@@ -1,1 +1,580 @@
-{"jobicon":26,"skills":{"95080":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95079":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95078":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95077":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95076":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95075":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95074":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"95073":{"type":0,"nameid":0,"maxlevel":30,"levels":[],"image":"07","icon":15,"needweapon":[]},"2365":{"type":0,"nameid":1,"maxlevel":13,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":19,"skillexplanationid":20},{"required_level":53,"sp_consumed":1,"decreasesp":21,"skillexplanationid":20},{"required_level":56,"sp_consumed":1,"decreasesp":24,"skillexplanationid":20},{"required_level":59,"sp_consumed":1,"decreasesp":26,"skillexplanationid":20},{"required_level":62,"sp_consumed":1,"decreasesp":28,"skillexplanationid":20},{"required_level":65,"sp_consumed":1,"decreasesp":31,"skillexplanationid":20},{"required_level":68,"sp_consumed":1,"decreasesp":34,"skillexplanationid":20},{"required_level":71,"sp_consumed":1,"decreasesp":36,"skillexplanationid":20},{"required_level":74,"sp_consumed":1,"decreasesp":38,"skillexplanationid":20},{"required_level":77,"sp_consumed":1,"decreasesp":41,"skillexplanationid":20},{"required_level":80,"sp_consumed":1,"decreasesp":44,"skillexplanationid":20},{"required_level":83,"sp_consumed":1,"decreasesp":46,"skillexplanationid":20},{"required_level":86,"sp_consumed":1,"decreasesp":48,"skillexplanationid":20}],"image":"03","icon":74,"needweapon":[]},"2360":{"type":0,"nameid":2,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":0,"decreasesp":0,"skillexplanationid":3}],"image":"03","icon":99,"needweapon":[]},"2359":{"type":0,"nameid":3,"maxlevel":30,"levels":[],"image":"03","icon":99,"needweapon":[]},"2358":{"type":3,"nameid":4,"maxlevel":1,"levels":[{"required_level":80,"sp_consumed":2,"decreasesp":0,"skillexplanationid":19}],"image":"03","icon":99,"needweapon":[],"requires":[{"id":2351,"level":1}],"sp_requires":[0,0]},"2357":{"type":1,"nameid":5,"maxlevel":1,"levels":[{"required_level":65,"sp_consumed":1,"decreasesp":0,"skillexplanationid":18}],"image":"03","icon":95,"needweapon":[],"requires":[],"sp_requires":[0,65]},"2356":{"type":3,"nameid":6,"maxlevel":1,"levels":[{"required_level":70,"sp_consumed":2,"decreasesp":0,"skillexplanationid":17}],"image":"03","icon":91,"needweapon":[],"requires":[{"id":2210,"level":1}],"sp_requires":[0,65]},"2355":{"type":3,"nameid":7,"maxlevel":1,"levels":[{"required_level":60,"sp_consumed":0,"decreasesp":0,"skillexplanationid":16}],"image":"03","icon":85,"needweapon":[],"requires":[{"id":2211,"level":1}],"sp_requires":[0,65]},"2354":{"type":3,"nameid":8,"maxlevel":1,"levels":[{"required_level":55,"sp_consumed":0,"decreasesp":0,"skillexplanationid":15}],"image":"03","icon":84,"needweapon":[],"requires":[{"id":2203,"level":1},{"id":2352,"level":1}],"sp_requires":[0,65]},"2353":{"type":0,"nameid":9,"maxlevel":13,"levels":[{"required_level":50,"sp_consumed":3,"decreasesp":19,"skillexplanationid":14},{"required_level":53,"sp_consumed":1,"decreasesp":21,"skillexplanationid":14},{"required_level":56,"sp_consumed":1,"decreasesp":24,"skillexplanationid":14},{"required_level":59,"sp_consumed":1,"decreasesp":26,"skillexplanationid":14},{"required_level":62,"sp_consumed":1,"decreasesp":28,"skillexplanationid":14},{"required_level":65,"sp_consumed":1,"decreasesp":31,"skillexplanationid":14},{"required_level":68,"sp_consumed":1,"decreasesp":34,"skillexplanationid":14},{"required_level":71,"sp_consumed":1,"decreasesp":36,"skillexplanationid":14},{"required_level":74,"sp_consumed":1,"decreasesp":38,"skillexplanationid":14},{"required_level":77,"sp_consumed":1,"decreasesp":41,"skillexplanationid":14},{"required_level":80,"sp_consumed":1,"decreasesp":44,"skillexplanationid":14},{"required_level":83,"sp_consumed":1,"decreasesp":46,"skillexplanationid":14},{"required_level":86,"sp_consumed":1,"decreasesp":48,"skillexplanationid":14}],"image":"03","icon":74,"needweapon":[],"requires":[{"id":2351,"level":1}],"sp_requires":[0,65]},"2352":{"type":3,"nameid":10,"maxlevel":1,"levels":[{"required_level":48,"sp_consumed":3,"decreasesp":0,"skillexplanationid":13}],"image":"03","icon":73,"needweapon":[],"requires":[{"id":2204,"level":6}],"sp_requires":[0,65]},"2351":{"type":0,"nameid":11,"maxlevel":6,"levels":[{"required_level":45,"sp_consumed":3,"decreasesp":17,"skillexplanationid":12},{"required_level":55,"sp_consumed":1,"decreasesp":21,"skillexplanationid":12},{"required_level":65,"sp_consumed":1,"decreasesp":24,"skillexplanationid":12},{"required_level":75,"sp_consumed":1,"decreasesp":27,"skillexplanationid":12},{"required_level":85,"sp_consumed":1,"decreasesp":30,"skillexplanationid":12},{"required_level":95,"sp_consumed":1,"decreasesp":33,"skillexplanationid":12}],"image":"03","icon":72,"needweapon":[],"requires":[{"id":2216,"level":1}],"sp_requires":[0,65]}},"message":["Ice Witch","아이스 스피어 (버스트)","Destroy Ice Barrier",null,"Ice Barrier +","Frozen Soul","Chilling Mist +","Frozen Spikes +","Ice Cold Field +","Frost Chaos","Icy Shards +","Ice Barrier","Creates an ice barrier to protect you. When the barrier is destroyed or expires, it explodes to freeze nearby enemies.\\n#yBarrier Health: {0}% of Magic Damage\\n#yTime Limit: {1} sec\\nFreeze Range: {2}m\\nFreeze Duration: {3} sec","Summons a gigantic ice blade. Enhances the attack range and damage of Icy Shards.\\n#yIcy Shards Damage: +{0}%","Summons a ball of ice that shoots icy spears in all directions. It has a chance to freeze enemies.\\n#yMagic Damage per Ice Spike: {0}% + {1}\\nChance to Freeze: {2}%\\nDuration: {3} sec","Enhances Ice Cold Field's attack range and damage. Freezes enemies in the center of the attack range.\\n#yIce Cold Field Damage: +{0}%\\nFreeze Duration: {1} sec","Enhances Frozen Spikes's attack range.","Enhances Chilling Mist's attack range. Press the regular attack button in the middle of the skill to deal additional hits.\\n#yAdditional Hit Damage: {0}% of Chilling Mist damage","Increases Ice Damage by #y{0}%#w.","Enhances Ice Barrier. Increases Ice Attack by #y{0}#w% when the shield expires. Use the skill again within #y{1} seconds#w to increase Ice Attack by an additional #y{2}#w%, but at the expense of your shield. \\n#yIce Attack Boost Duration: {3} seconds","얼음 가시를 사방으로 내뿜는 얼음구를 소환한다. 적중당한 적은 동상에 걸린다.\\n#y얼음 가시하나당 마법 공격력{0}%+{1}\\n\\n[동상]\\n냉기저항력 {2}% 감소\\n행동속도 {3}초동안 {4}% 감소"]}
+{
+  "jobicon": 26,
+  "skills": {
+    "95080": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95079": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95078": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95077": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95076": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95075": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95074": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "95073": {
+      "type": 0,
+      "nameid": 0,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "07",
+      "icon": 15,
+      "needweapon": [
+
+      ]
+    },
+    "2365": {
+      "type": 0,
+      "nameid": 1,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 19,
+          "explanationid": 20,
+          "spcost": 3
+        },
+        {
+          "required_level": 53,
+          "mpcost": 21,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 24,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 26,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 28,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 31,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 34,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 36,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 38,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 41,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 44,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 83,
+          "mpcost": 46,
+          "explanationid": 20,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 48,
+          "explanationid": 20,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 74,
+      "needweapon": [
+
+      ]
+    },
+    "2360": {
+      "type": 0,
+      "nameid": 2,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 3,
+          "spcost": 0
+        }
+      ],
+      "image": "03",
+      "icon": 99,
+      "needweapon": [
+
+      ]
+    },
+    "2359": {
+      "type": 0,
+      "nameid": 3,
+      "maxlevel": 30,
+      "levels": [
+
+      ],
+      "image": "03",
+      "icon": 99,
+      "needweapon": [
+
+      ]
+    },
+    "2358": {
+      "type": 3,
+      "nameid": 4,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": 0,
+          "explanationid": 19,
+          "spcost": 2
+        }
+      ],
+      "image": "03",
+      "icon": 99,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2351,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        0
+      ]
+    },
+    "2357": {
+      "type": 1,
+      "nameid": 5,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": 0,
+          "explanationid": 18,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 95,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2356": {
+      "type": 3,
+      "nameid": 6,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": 0,
+          "explanationid": 17,
+          "spcost": 2
+        }
+      ],
+      "image": "03",
+      "icon": 91,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2210,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2355": {
+      "type": 3,
+      "nameid": 7,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": 0,
+          "explanationid": 16,
+          "spcost": 0
+        }
+      ],
+      "image": "03",
+      "icon": 85,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2211,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2354": {
+      "type": 3,
+      "nameid": 8,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": 0,
+          "explanationid": 15,
+          "spcost": 0
+        }
+      ],
+      "image": "03",
+      "icon": 84,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2203,
+          "level": 1
+        },
+        {
+          "id": 2352,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2353": {
+      "type": 0,
+      "nameid": 9,
+      "maxlevel": 13,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": 19,
+          "explanationid": 14,
+          "spcost": 3
+        },
+        {
+          "required_level": 53,
+          "mpcost": 21,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 56,
+          "mpcost": 24,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 59,
+          "mpcost": 26,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 62,
+          "mpcost": 28,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 31,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 68,
+          "mpcost": 34,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 71,
+          "mpcost": 36,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 74,
+          "mpcost": 38,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 77,
+          "mpcost": 41,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 80,
+          "mpcost": 44,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 83,
+          "mpcost": 46,
+          "explanationid": 14,
+          "spcost": 1
+        },
+        {
+          "required_level": 86,
+          "mpcost": 48,
+          "explanationid": 14,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 74,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2351,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2352": {
+      "type": 3,
+      "nameid": 10,
+      "maxlevel": 1,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": 0,
+          "explanationid": 13,
+          "spcost": 3
+        }
+      ],
+      "image": "03",
+      "icon": 73,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2204,
+          "level": 6
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    },
+    "2351": {
+      "type": 0,
+      "nameid": 11,
+      "maxlevel": 6,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": 17,
+          "explanationid": 12,
+          "spcost": 3
+        },
+        {
+          "required_level": 55,
+          "mpcost": 21,
+          "explanationid": 12,
+          "spcost": 1
+        },
+        {
+          "required_level": 65,
+          "mpcost": 24,
+          "explanationid": 12,
+          "spcost": 1
+        },
+        {
+          "required_level": 75,
+          "mpcost": 27,
+          "explanationid": 12,
+          "spcost": 1
+        },
+        {
+          "required_level": 85,
+          "mpcost": 30,
+          "explanationid": 12,
+          "spcost": 1
+        },
+        {
+          "required_level": 95,
+          "mpcost": 33,
+          "explanationid": 12,
+          "spcost": 1
+        }
+      ],
+      "image": "03",
+      "icon": 72,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 2216,
+          "level": 1
+        }
+      ],
+      "sp_requires": [
+        0,
+        65
+      ]
+    }
+  },
+  "message": [
+    "Ice Witch",
+    "아이스 스피어 (버스트)",
+    "Destroy Ice Barrier",
+    null,
+    "Ice Barrier +",
+    "Frozen Soul",
+    "Chilling Mist +",
+    "Frozen Spikes +",
+    "Ice Cold Field +",
+    "Frost Chaos",
+    "Icy Shards +",
+    "Ice Barrier",
+    "Creates an ice barrier to protect you. When the barrier is destroyed or expires, it explodes to freeze nearby enemies.\\n#yBarrier Health: {0}% of Magic Damage\\n#yTime Limit: {1} sec\\nFreeze Range: {2}m\\nFreeze Duration: {3} sec",
+    "Summons a gigantic ice blade. Enhances the attack range and damage of Icy Shards.\\n#yIcy Shards Damage: +{0}%",
+    "Summons a ball of ice that shoots icy spears in all directions. It has a chance to freeze enemies.\\n#yMagic Damage per Ice Spike: {0}% + {1}\\nChance to Freeze: {2}%\\nDuration: {3} sec",
+    "Enhances Ice Cold Field's attack range and damage. Freezes enemies in the center of the attack range.\\n#yIce Cold Field Damage: +{0}%\\nFreeze Duration: {1} sec",
+    "Enhances Frozen Spikes's attack range.",
+    "Enhances Chilling Mist's attack range. Press the regular attack button in the middle of the skill to deal additional hits.\\n#yAdditional Hit Damage: {0}% of Chilling Mist damage",
+    "Increases Ice Damage by #y{0}%#w.",
+    "Enhances Ice Barrier. Increases Ice Attack by #y{0}#w% when the shield expires. Use the skill again within #y{1} seconds#w to increase Ice Attack by an additional #y{2}#w%, but at the expense of your shield. \\n#yIce Attack Boost Duration: {3} seconds",
+    "얼음 가시를 사방으로 내뿜는 얼음구를 소환한다. 적중당한 적은 동상에 걸린다.\\n#y얼음 가시하나당 마법 공격력{0}%+{1}\\n\\n[동상]\\n냉기저항력 {2}% 감소\\n행동속도 {3}초동안 {4}% 감소"
+  ]
+}

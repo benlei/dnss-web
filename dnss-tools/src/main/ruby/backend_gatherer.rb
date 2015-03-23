@@ -33,14 +33,14 @@ sql_query
 jobs = Hash.new
 query = <<sql_query
   SELECT j._id,
-         m1._data as jobname,
+         m._data as jobname,
          LOWER(_englishname) as identifier,
          _jobnumber as advancement,
          _parentjob,
          _maxspjob0, _maxspjob1, _maxspjob2
   FROM jobs j
-  INNER JOIN messages m1
-    ON _jobname = m1._id
+  INNER JOIN messages m
+    ON _jobname = m._id
   WHERE _service is TRUE
   ORDER BY _id ASC
 sql_query
