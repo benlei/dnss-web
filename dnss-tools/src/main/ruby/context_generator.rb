@@ -96,7 +96,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
       end
     end
 
-    xml['util'].list('id' => 'levels') {sp_by_level.each {|sp| xml.value_ sp}}
+    xml['util'].list('id' => 'levels', 'value-type' => 'int') {sp_by_level.each {|sp| xml.value_ sp}}
   end
 end
 

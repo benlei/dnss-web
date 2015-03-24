@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
-<title>DNSS &ndash; ${tertiary.name}</title>
+<title>${tertiary.name} - DNSS</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link href="/css/main.css" rel="stylesheet" type="text/css" />
