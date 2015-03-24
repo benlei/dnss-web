@@ -1,183 +1,67 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
-<title>HTML5 Skeleton</title>
+<title>DNSS &ndash; ${tertiary.name}</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
 <style>
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: Verdana, sans-serif;
-  font-size:0.9em;
-  background: #fff;
-}
-
-header,main,footer {
-  width: 1075px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-.meta, #skill-description {
-  width: 250px;
-}
-
-#skill-set {
-  width: 575px;
-  background: rgb(16, 14, 15);
-  border-left: 1px solid rgb(80, 80, 68);
-  border-right: 1px solid rgb(80, 80, 68);
-}
-
-#skill-set .skill {
-  width: 105px;
-  height: 60px;
-  margin: 20px 15px;
-  border: 1px solid rgb(80, 80, 68);
-}
-
-#skill-set td:first-child .skill {
-  margin-left: 30px;
-}
-
-#skill-set td:last-child .skill {
-  margin-right: 30px;
-}
-
-#class {
-  vertical-align: top;
-}
-
-.meta li {
-  display: block;
-  background: rgb(16, 14, 15);
-  color: rgb(140, 140, 140);
-  padding: 10px 15px;
-  border-bottom: 1px solid rgb(80, 80, 68);
-}
-
-.right {
-  float: right;
-}
-
-#class li:last-child {
-  color: rgb(190, 156, 67);
-}
-
-#class li.active {
-  background: rgb(38, 41, 24);
-  color: rgb(144, 203, 233);
-}
-
-#configurable input {
-  text-align: right;
-}
-
-#configurable,#video {
-  vertical-align: bottom;
-}
-
-#configurable select, #configurable input {
-  width: 60px;
-  text-align: center;
-}
-
-#skill-description {
-  background: #fff;
-  color: rgb(140, 140, 140);
-}
-
-footer {
-  clear: both;
-}
+#primary {background-image: url(/images/${primary.identifier}.png)}
 </style>
 
 <body>
-
 <header>
   <h1>Dragon Nest &ndash; Skill Simulator</h1>
 </header>
-
-
 <main>
   <table>
     <tr>
       <td id="class" class="meta">
         <ul>
-          <li>
-            Dark Summoner
-            <div class="right">XXX/YYY</div>
-          </li>
           <li class="active">
-            Sting Breezer
-            <div class="right">XXX/YYY</div>
+            ${primary.name}
+            <div class="right">0/${max_sp_1}</div>
           </li>
           <li>
-            Dark Avenger
-            <div class="right">XX/YYY</div>
+            ${secondary.name}
+            <div class="right">0/${max_sp_2}</div>
+          </li>
+          <li>
+            ${tertiary.name}
+            <div class="right">0/${max_sp_3}</div>
           </li>
           <li>
             Total SP
-            <div class="right">XXX/YYY</div>
+            <div class="right">0/${max_sp_total}</div>
           </li>
         </ul>
       <td id="skill-set" rowspan="2">
-        <table>
-          <tr>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-          <tr>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-          <tr>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-          <tr>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-          <tr>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-          <tr>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
-            <td><div class="skill"></div>
+        <table id="primary">
+        	<c:forEach items="${primary.skillTree}" var="row">
+        	<tr>
+        	  <c:forEach items="${row}" var="skill">
+              <c:choose>
+                <c:when test="${skill != 0}">
+                <td>
+                  <div class="skill" data-id="${skill}">
+                    <div class="skillmod">
+                      <div class="level">1/1</div>
+                      <div class="mod">
+                        <div class="plus">+</div>
+                        <div class="minus">-</div>
+                      </div>
+                    </div>
+                    <div class="skillicon"/>
+                  </div>
+                </c:when>
+                <c:otherwise>
+                <td>
+                </c:otherwise>
+              </c:choose>
+        	  </c:forEach>
+        	</c:forEach>
         </table>
-      <td id="skill-description" rowspan="2">
-<!--    <tr>
-      <td id="video" class="meta">
-        <ul>
-          <li>
-            <div style="width: 220px; height: 165px; background: #fff; margin-top: 5px;"></div>
-            <div style="text-align: center; margin-top: 10px;">Skill Name</div>
-          </li>
-        </ul>-->
+      <td id="skill-description" rowspan="2">Hello
     <tr>
       <td id="configurable" class="meta">
         <ul>
@@ -221,6 +105,19 @@ footer {
 <footer>
   Help
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$.getJSON("/json/${primary.identifier}.json", function(json) {
+  $('#primary .skill').each(function() {
+    var skillid = $(this).data('id');
+    var icon = $(this).find('.skillicon').first();
+    var frame = 'url(/images/uit_skillslotbutton.png) 0 0 no-repeat';
+    var image = 'url(/images/skillicon' + json['skills'][skillid]['image'] + '_b.png) ' + ((json['skills'][skillid]['icon'] % 10) * -50) + 'px ' + (Math.floor(json['skills'][skillid]['icon'] / 10) * -50) + 'px';
+    icon.css('background', frame+','+image );
+    icon.addClass('grayscale');
 
+  });
+});
+</script>
 </body>
 </html>

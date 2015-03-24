@@ -84,14 +84,14 @@ builder = Nokogiri::XML::Builder.new do |xml|
   xml.beans(beans) do
     jobs.each_value do |job|
       job['skilltree'] = job['skilltree'].partition(4)
-      xml.bean('id' => job['identifier'], 'class' => 'dnss.model.Job') do
+      xml.bean('id' => 'job_%s' % job['identifier'], 'class' => 'dnss.model.Job') do
         xml.property('name' => 'name', 'value' => job['jobname'])
         xml.property('name' => 'identifier', 'value' => job['identifier'])
         xml.property('name' => 'advancement', 'value' => job['advancement'])
         xml.property('name' => 'spRatio1', 'value' => job['maxspjob0'])
         xml.property('name' => 'spRatio2', 'value' => job['maxspjob1'])
         xml.property('name' => 'spRatio3', 'value' => job['maxspjob2'])
-        xml.property('name' => 'parent', 'ref' => jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
+        xml.property('name' => 'parent', 'ref' => 'job_%s' % jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
         xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill.to_i}}}}}
       end
     end

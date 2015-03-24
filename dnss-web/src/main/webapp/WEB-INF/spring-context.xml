@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-  <bean id="warrior" class="dnss.model.Job">
+  <bean id="job_warrior" class="dnss.model.Job">
     <property name="name" value="Warrior"/>
     <property name="identifier" value="warrior"/>
     <property name="advancement" value="0"/>
@@ -48,7 +48,7 @@
       </list>
     </property>
   </bean>
-  <bean id="archer" class="dnss.model.Job">
+  <bean id="job_archer" class="dnss.model.Job">
     <property name="name" value="Archer"/>
     <property name="identifier" value="archer"/>
     <property name="advancement" value="0"/>
@@ -96,7 +96,7 @@
       </list>
     </property>
   </bean>
-  <bean id="soceress" class="dnss.model.Job">
+  <bean id="job_soceress" class="dnss.model.Job">
     <property name="name" value="Sorceress"/>
     <property name="identifier" value="soceress"/>
     <property name="advancement" value="0"/>
@@ -144,7 +144,7 @@
       </list>
     </property>
   </bean>
-  <bean id="cleric" class="dnss.model.Job">
+  <bean id="job_cleric" class="dnss.model.Job">
     <property name="name" value="Cleric"/>
     <property name="identifier" value="cleric"/>
     <property name="advancement" value="0"/>
@@ -192,7 +192,7 @@
       </list>
     </property>
   </bean>
-  <bean id="academic" class="dnss.model.Job">
+  <bean id="job_academic" class="dnss.model.Job">
     <property name="name" value="Tinkerer"/>
     <property name="identifier" value="academic"/>
     <property name="advancement" value="0"/>
@@ -240,7 +240,7 @@
       </list>
     </property>
   </bean>
-  <bean id="kali" class="dnss.model.Job">
+  <bean id="job_kali" class="dnss.model.Job">
     <property name="name" value="Kali"/>
     <property name="identifier" value="kali"/>
     <property name="advancement" value="0"/>
@@ -282,7 +282,7 @@
       </list>
     </property>
   </bean>
-  <bean id="assassin" class="dnss.model.Job">
+  <bean id="job_assassin" class="dnss.model.Job">
     <property name="name" value="Assassin"/>
     <property name="identifier" value="assassin"/>
     <property name="advancement" value="0"/>
@@ -324,7 +324,7 @@
       </list>
     </property>
   </bean>
-  <bean id="lencea" class="dnss.model.Job">
+  <bean id="job_lencea" class="dnss.model.Job">
     <property name="name" value="Lencea"/>
     <property name="identifier" value="lencea"/>
     <property name="advancement" value="0"/>
@@ -372,14 +372,14 @@
       </list>
     </property>
   </bean>
-  <bean id="swordmaster" class="dnss.model.Job">
+  <bean id="job_swordmaster" class="dnss.model.Job">
     <property name="name" value="Swordsman"/>
     <property name="identifier" value="swordmaster"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="warrior"/>
+    <property name="parent" ref="job_warrior"/>
     <property name="skillTree">
       <list>
         <list>
@@ -421,14 +421,14 @@
       </list>
     </property>
   </bean>
-  <bean id="mercenary" class="dnss.model.Job">
+  <bean id="job_mercenary" class="dnss.model.Job">
     <property name="name" value="Mercenary"/>
     <property name="identifier" value="mercenary"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="warrior"/>
+    <property name="parent" ref="job_warrior"/>
     <property name="skillTree">
       <list>
         <list>
@@ -470,14 +470,14 @@
       </list>
     </property>
   </bean>
-  <bean id="bowmaster" class="dnss.model.Job">
+  <bean id="job_bowmaster" class="dnss.model.Job">
     <property name="name" value="Sharpshooter"/>
     <property name="identifier" value="bowmaster"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="archer"/>
+    <property name="parent" ref="job_archer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -519,14 +519,14 @@
       </list>
     </property>
   </bean>
-  <bean id="acrobat" class="dnss.model.Job">
+  <bean id="job_acrobat" class="dnss.model.Job">
     <property name="name" value="Acrobat"/>
     <property name="identifier" value="acrobat"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="archer"/>
+    <property name="parent" ref="job_archer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -568,14 +568,14 @@
       </list>
     </property>
   </bean>
-  <bean id="elementallord" class="dnss.model.Job">
+  <bean id="job_elementallord" class="dnss.model.Job">
     <property name="name" value="Elementalist"/>
     <property name="identifier" value="elementallord"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="soceress"/>
+    <property name="parent" ref="job_soceress"/>
     <property name="skillTree">
       <list>
         <list>
@@ -617,14 +617,14 @@
       </list>
     </property>
   </bean>
-  <bean id="forceuser" class="dnss.model.Job">
+  <bean id="job_forceuser" class="dnss.model.Job">
     <property name="name" value="Mystic"/>
     <property name="identifier" value="forceuser"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="soceress"/>
+    <property name="parent" ref="job_soceress"/>
     <property name="skillTree">
       <list>
         <list>
@@ -666,14 +666,14 @@
       </list>
     </property>
   </bean>
-  <bean id="paladin" class="dnss.model.Job">
+  <bean id="job_paladin" class="dnss.model.Job">
     <property name="name" value="Paladin"/>
     <property name="identifier" value="paladin"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="cleric"/>
+    <property name="parent" ref="job_cleric"/>
     <property name="skillTree">
       <list>
         <list>
@@ -715,14 +715,14 @@
       </list>
     </property>
   </bean>
-  <bean id="priest" class="dnss.model.Job">
+  <bean id="job_priest" class="dnss.model.Job">
     <property name="name" value="Priest"/>
     <property name="identifier" value="priest"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="cleric"/>
+    <property name="parent" ref="job_cleric"/>
     <property name="skillTree">
       <list>
         <list>
@@ -764,14 +764,14 @@
       </list>
     </property>
   </bean>
-  <bean id="gladiator" class="dnss.model.Job">
+  <bean id="job_gladiator" class="dnss.model.Job">
     <property name="name" value="Gladiator"/>
     <property name="identifier" value="gladiator"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="swordmaster"/>
+    <property name="parent" ref="job_swordmaster"/>
     <property name="skillTree">
       <list>
         <list>
@@ -813,14 +813,14 @@
       </list>
     </property>
   </bean>
-  <bean id="moonlord" class="dnss.model.Job">
+  <bean id="job_moonlord" class="dnss.model.Job">
     <property name="name" value="Lunar Knight"/>
     <property name="identifier" value="moonlord"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="swordmaster"/>
+    <property name="parent" ref="job_swordmaster"/>
     <property name="skillTree">
       <list>
         <list>
@@ -862,14 +862,14 @@
       </list>
     </property>
   </bean>
-  <bean id="barbarian" class="dnss.model.Job">
+  <bean id="job_barbarian" class="dnss.model.Job">
     <property name="name" value="Barbarian"/>
     <property name="identifier" value="barbarian"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="mercenary"/>
+    <property name="parent" ref="job_mercenary"/>
     <property name="skillTree">
       <list>
         <list>
@@ -911,14 +911,14 @@
       </list>
     </property>
   </bean>
-  <bean id="destroyer" class="dnss.model.Job">
+  <bean id="job_destroyer" class="dnss.model.Job">
     <property name="name" value="Destroyer"/>
     <property name="identifier" value="destroyer"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="mercenary"/>
+    <property name="parent" ref="job_mercenary"/>
     <property name="skillTree">
       <list>
         <list>
@@ -960,14 +960,14 @@
       </list>
     </property>
   </bean>
-  <bean id="sniper" class="dnss.model.Job">
+  <bean id="job_sniper" class="dnss.model.Job">
     <property name="name" value="Sniper"/>
     <property name="identifier" value="sniper"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="bowmaster"/>
+    <property name="parent" ref="job_bowmaster"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1009,14 +1009,14 @@
       </list>
     </property>
   </bean>
-  <bean id="artillery" class="dnss.model.Job">
+  <bean id="job_artillery" class="dnss.model.Job">
     <property name="name" value="Warden"/>
     <property name="identifier" value="artillery"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="bowmaster"/>
+    <property name="parent" ref="job_bowmaster"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1058,14 +1058,14 @@
       </list>
     </property>
   </bean>
-  <bean id="tempest" class="dnss.model.Job">
+  <bean id="job_tempest" class="dnss.model.Job">
     <property name="name" value="Tempest"/>
     <property name="identifier" value="tempest"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="acrobat"/>
+    <property name="parent" ref="job_acrobat"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1107,14 +1107,14 @@
       </list>
     </property>
   </bean>
-  <bean id="windwalker" class="dnss.model.Job">
+  <bean id="job_windwalker" class="dnss.model.Job">
     <property name="name" value="Windwalker"/>
     <property name="identifier" value="windwalker"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="acrobat"/>
+    <property name="parent" ref="job_acrobat"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1156,14 +1156,14 @@
       </list>
     </property>
   </bean>
-  <bean id="saleana" class="dnss.model.Job">
+  <bean id="job_saleana" class="dnss.model.Job">
     <property name="name" value="Pyromancer"/>
     <property name="identifier" value="saleana"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="elementallord"/>
+    <property name="parent" ref="job_elementallord"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1205,14 +1205,14 @@
       </list>
     </property>
   </bean>
-  <bean id="elestra" class="dnss.model.Job">
+  <bean id="job_elestra" class="dnss.model.Job">
     <property name="name" value="Ice Witch"/>
     <property name="identifier" value="elestra"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="elementallord"/>
+    <property name="parent" ref="job_elementallord"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1254,14 +1254,14 @@
       </list>
     </property>
   </bean>
-  <bean id="smasher" class="dnss.model.Job">
+  <bean id="job_smasher" class="dnss.model.Job">
     <property name="name" value="War Mage"/>
     <property name="identifier" value="smasher"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="forceuser"/>
+    <property name="parent" ref="job_forceuser"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1303,14 +1303,14 @@
       </list>
     </property>
   </bean>
-  <bean id="majesty" class="dnss.model.Job">
+  <bean id="job_majesty" class="dnss.model.Job">
     <property name="name" value="Chaos Mage"/>
     <property name="identifier" value="majesty"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="forceuser"/>
+    <property name="parent" ref="job_forceuser"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1352,14 +1352,14 @@
       </list>
     </property>
   </bean>
-  <bean id="guardian" class="dnss.model.Job">
+  <bean id="job_guardian" class="dnss.model.Job">
     <property name="name" value="Guardian"/>
     <property name="identifier" value="guardian"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="paladin"/>
+    <property name="parent" ref="job_paladin"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1401,14 +1401,14 @@
       </list>
     </property>
   </bean>
-  <bean id="crusades" class="dnss.model.Job">
+  <bean id="job_crusades" class="dnss.model.Job">
     <property name="name" value="Crusader"/>
     <property name="identifier" value="crusades"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="paladin"/>
+    <property name="parent" ref="job_paladin"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1450,14 +1450,14 @@
       </list>
     </property>
   </bean>
-  <bean id="saint" class="dnss.model.Job">
+  <bean id="job_saint" class="dnss.model.Job">
     <property name="name" value="Saint"/>
     <property name="identifier" value="saint"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="priest"/>
+    <property name="parent" ref="job_priest"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1499,14 +1499,14 @@
       </list>
     </property>
   </bean>
-  <bean id="inquisitor" class="dnss.model.Job">
+  <bean id="job_inquisitor" class="dnss.model.Job">
     <property name="name" value="Inquisitor"/>
     <property name="identifier" value="inquisitor"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="priest"/>
+    <property name="parent" ref="job_priest"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1548,14 +1548,14 @@
       </list>
     </property>
   </bean>
-  <bean id="engineer" class="dnss.model.Job">
+  <bean id="job_engineer" class="dnss.model.Job">
     <property name="name" value="Engineer"/>
     <property name="identifier" value="engineer"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="academic"/>
+    <property name="parent" ref="job_academic"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1597,14 +1597,14 @@
       </list>
     </property>
   </bean>
-  <bean id="shootingstar" class="dnss.model.Job">
+  <bean id="job_shootingstar" class="dnss.model.Job">
     <property name="name" value="Shooting Star"/>
     <property name="identifier" value="shootingstar"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="engineer"/>
+    <property name="parent" ref="job_engineer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1646,14 +1646,14 @@
       </list>
     </property>
   </bean>
-  <bean id="gearmaster" class="dnss.model.Job">
+  <bean id="job_gearmaster" class="dnss.model.Job">
     <property name="name" value="Gear Master"/>
     <property name="identifier" value="gearmaster"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="engineer"/>
+    <property name="parent" ref="job_engineer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1695,14 +1695,14 @@
       </list>
     </property>
   </bean>
-  <bean id="alchemist" class="dnss.model.Job">
+  <bean id="job_alchemist" class="dnss.model.Job">
     <property name="name" value="Alchemist"/>
     <property name="identifier" value="alchemist"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="academic"/>
+    <property name="parent" ref="job_academic"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1744,14 +1744,14 @@
       </list>
     </property>
   </bean>
-  <bean id="adept" class="dnss.model.Job">
+  <bean id="job_adept" class="dnss.model.Job">
     <property name="name" value="Adept"/>
     <property name="identifier" value="adept"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="alchemist"/>
+    <property name="parent" ref="job_alchemist"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1793,14 +1793,14 @@
       </list>
     </property>
   </bean>
-  <bean id="physician" class="dnss.model.Job">
+  <bean id="job_physician" class="dnss.model.Job">
     <property name="name" value="Physician"/>
     <property name="identifier" value="physician"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="alchemist"/>
+    <property name="parent" ref="job_alchemist"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1842,14 +1842,14 @@
       </list>
     </property>
   </bean>
-  <bean id="screamer" class="dnss.model.Job">
+  <bean id="job_screamer" class="dnss.model.Job">
     <property name="name" value="Screamer"/>
     <property name="identifier" value="screamer"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="kali"/>
+    <property name="parent" ref="job_kali"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1885,14 +1885,14 @@
       </list>
     </property>
   </bean>
-  <bean id="darksummoner" class="dnss.model.Job">
+  <bean id="job_darksummoner" class="dnss.model.Job">
     <property name="name" value="Dark Summoner"/>
     <property name="identifier" value="darksummoner"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="screamer"/>
+    <property name="parent" ref="job_screamer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1934,14 +1934,14 @@
       </list>
     </property>
   </bean>
-  <bean id="souleater" class="dnss.model.Job">
+  <bean id="job_souleater" class="dnss.model.Job">
     <property name="name" value="Soul Eater"/>
     <property name="identifier" value="souleater"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="screamer"/>
+    <property name="parent" ref="job_screamer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -1983,14 +1983,14 @@
       </list>
     </property>
   </bean>
-  <bean id="dancer" class="dnss.model.Job">
+  <bean id="job_dancer" class="dnss.model.Job">
     <property name="name" value="Dancer"/>
     <property name="identifier" value="dancer"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="kali"/>
+    <property name="parent" ref="job_kali"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2032,14 +2032,14 @@
       </list>
     </property>
   </bean>
-  <bean id="bladedancer" class="dnss.model.Job">
+  <bean id="job_bladedancer" class="dnss.model.Job">
     <property name="name" value="Blade Dancer"/>
     <property name="identifier" value="bladedancer"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="dancer"/>
+    <property name="parent" ref="job_dancer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2081,14 +2081,14 @@
       </list>
     </property>
   </bean>
-  <bean id="spiritdancer" class="dnss.model.Job">
+  <bean id="job_spiritdancer" class="dnss.model.Job">
     <property name="name" value="Spirit Dancer"/>
     <property name="identifier" value="spiritdancer"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="dancer"/>
+    <property name="parent" ref="job_dancer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2130,14 +2130,14 @@
       </list>
     </property>
   </bean>
-  <bean id="chaser" class="dnss.model.Job">
+  <bean id="job_chaser" class="dnss.model.Job">
     <property name="name" value="Shinobi"/>
     <property name="identifier" value="chaser"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="assassin"/>
+    <property name="parent" ref="job_assassin"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2179,14 +2179,14 @@
       </list>
     </property>
   </bean>
-  <bean id="ripper" class="dnss.model.Job">
+  <bean id="job_ripper" class="dnss.model.Job">
     <property name="name" value="Reaper"/>
     <property name="identifier" value="ripper"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="chaser"/>
+    <property name="parent" ref="job_chaser"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2228,14 +2228,14 @@
       </list>
     </property>
   </bean>
-  <bean id="raven" class="dnss.model.Job">
+  <bean id="job_raven" class="dnss.model.Job">
     <property name="name" value="Raven"/>
     <property name="identifier" value="raven"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="chaser"/>
+    <property name="parent" ref="job_chaser"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2277,14 +2277,14 @@
       </list>
     </property>
   </bean>
-  <bean id="bringer" class="dnss.model.Job">
+  <bean id="job_bringer" class="dnss.model.Job">
     <property name="name" value="Taoist"/>
     <property name="identifier" value="bringer"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="assassin"/>
+    <property name="parent" ref="job_assassin"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2326,14 +2326,14 @@
       </list>
     </property>
   </bean>
-  <bean id="lightfury" class="dnss.model.Job">
+  <bean id="job_lightfury" class="dnss.model.Job">
     <property name="name" value="Light Bringer"/>
     <property name="identifier" value="lightfury"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="bringer"/>
+    <property name="parent" ref="job_bringer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2375,14 +2375,14 @@
       </list>
     </property>
   </bean>
-  <bean id="abysswalker" class="dnss.model.Job">
+  <bean id="job_abysswalker" class="dnss.model.Job">
     <property name="name" value="Abyss Walker"/>
     <property name="identifier" value="abysswalker"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="bringer"/>
+    <property name="parent" ref="job_bringer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2424,14 +2424,14 @@
       </list>
     </property>
   </bean>
-  <bean id="piercer" class="dnss.model.Job">
+  <bean id="job_piercer" class="dnss.model.Job">
     <property name="name" value="Lancer"/>
     <property name="identifier" value="piercer"/>
     <property name="advancement" value="1"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.0"/>
-    <property name="parent" ref="lencea"/>
+    <property name="parent" ref="job_lencea"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2473,14 +2473,14 @@
       </list>
     </property>
   </bean>
-  <bean id="flurry" class="dnss.model.Job">
+  <bean id="job_flurry" class="dnss.model.Job">
     <property name="name" value="Dragoon"/>
     <property name="identifier" value="flurry"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="piercer"/>
+    <property name="parent" ref="job_piercer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2522,14 +2522,14 @@
       </list>
     </property>
   </bean>
-  <bean id="stingbreezer" class="dnss.model.Job">
+  <bean id="job_stingbreezer" class="dnss.model.Job">
     <property name="name" value="Valkyrie"/>
     <property name="identifier" value="stingbreezer"/>
     <property name="advancement" value="2"/>
     <property name="spRatio1" value="0.625"/>
     <property name="spRatio2" value="0.645"/>
     <property name="spRatio3" value="0.625"/>
-    <property name="parent" ref="piercer"/>
+    <property name="parent" ref="job_piercer"/>
     <property name="skillTree">
       <list>
         <list>
@@ -2571,7 +2571,7 @@
       </list>
     </property>
   </bean>
-  <util:list id="levels">
+  <util:list id="levels" value-type="int">
     <value>0</value>
     <value>0</value>
     <value>3</value>
