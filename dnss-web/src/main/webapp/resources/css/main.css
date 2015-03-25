@@ -4,16 +4,30 @@
 }
 
 body {
-  font-family: Verdana, sans-serif;
-  font-size:0.9em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:1.2em;
   background: #fff;
+  color: #333;
 }
 
-header,main,footer {
+a, a:visited, a:link, a:active, a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
   width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  margin: 10px auto;
+}
+
+aside {
+  float: left;
+  width: 250px;
+}
+
+section {
+  float: left;
+  margin-left: 50px;
 }
 
 table {
@@ -22,120 +36,63 @@ table {
 
 ul {
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
 }
 
-.meta, #skill-description {
-  width: 250px;
-}
-
-#skill-set {
-  width: 485px;
-  background: rgb(60,60,60);
-  border-left: 1px solid rgb(80, 80, 68);
-  border-right: 1px solid rgb(80, 80, 68);
-  margin-top: 15px;
-}
-
-#skill-description {
-  width: 265px;
-  background: #fff;
-  color: rgb(140, 140, 140);
-  vertical-align: top;
-}
-
-#skill-set .skill {
-  width: 95px;
-  height: 50px;
-  margin: 17.5px 10px;
-  border: 1px solid rgb(10, 10, 10);
-  border-radius: 5px;
-  background-color: rgb(20,20,20);
-}
-
-.skillicon {
-  height: 50px;
-  width: 50px;
-}
-
-.grayscale {
-  -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-  -webkit-filter: grayscale(100%);
-  filter: gray;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-}
-
-#primary {
-  margin-left: 10px;
-  background-repeat: no-repeat;
-  background-position: 10px 10px;
-}
-
-#class {
-  vertical-align: top;
-}
-
-.skillmod {
-  float: right;
-  width: 45px;
-  height: 50px;
-  color: #eee;
-  margin: 5px;
-  text-align: center;
-}
-
-.level {
-  margin-left: 10px;
-}
-
-.minus, .plus {
-  font-family: "Courier New", Courier, monospace;
-  float: right;
-  font-size: 0.7em;
-  color: rgb(255, 185, 90);
-  border: 2px solid rgb(95, 95, 95);
-  background: #000;
-  text-align: center;
-  margin: 6px 0 0 5px;
-  padding: 0 2px 0 2px;
-}
-
-.meta li {
-  display: block;
-  background: rgb(16, 14, 15);
-  color: rgb(140, 140, 140);
-  padding: 10px 15px;
-  border-bottom: 1px solid rgb(80, 80, 68);
+.left {
+  float: left;
 }
 
 .right {
   float: right;
 }
 
-#class li:last-child {
-  color: rgb(190, 156, 67);
+#job-list-sp {
+  
 }
 
-#class li.active {
-  background: rgb(38, 41, 24);
-  color: rgb(144, 203, 233);
+#job-list-sp li {
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
 }
 
-#configurable input {
-  text-align: right;
+#job-list-sp li:last-of-type {
+  background-color: #444;
+  border: 0;
+  color: #fff;
 }
 
-#configurable,#video {
-  vertical-align: bottom;
+/* some stuff are temp */
+.skill-tree {
+  margin-bottom: 30px;
 }
 
-#configurable select, #configurable input {
-  width: 60px;
-  text-align: center;
+.skill-container {
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 
-footer {
-  clear: both;
+.skill {
+  height: 50px;
+  width: 50px;
+}
+
+.max, .lvl {
+  font-size: .6em;
+  border: 1px solid #787878;
+  background: #787878;
+  border-radius: 20px;
+  color: #fff;
+  padding: 2px;
+  margin-top: 40px;
+}
+
+.max {
+  float: right;
+}
+
+.lvl {
+  float: left;
 }

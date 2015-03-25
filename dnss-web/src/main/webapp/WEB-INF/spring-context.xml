@@ -4,9 +4,13 @@
     <property name="name" value="Warrior"/>
     <property name="identifier" value="warrior"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -52,9 +56,13 @@
     <property name="name" value="Archer"/>
     <property name="identifier" value="archer"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -100,9 +108,13 @@
     <property name="name" value="Sorceress"/>
     <property name="identifier" value="soceress"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -148,9 +160,13 @@
     <property name="name" value="Cleric"/>
     <property name="identifier" value="cleric"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -196,9 +212,13 @@
     <property name="name" value="Tinkerer"/>
     <property name="identifier" value="academic"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -244,9 +264,13 @@
     <property name="name" value="Kali"/>
     <property name="identifier" value="kali"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -286,9 +310,13 @@
     <property name="name" value="Assassin"/>
     <property name="identifier" value="assassin"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -328,9 +356,13 @@
     <property name="name" value="Lencea"/>
     <property name="identifier" value="lencea"/>
     <property name="advancement" value="0"/>
-    <property name="spRatio1" value="1.0"/>
-    <property name="spRatio2" value="0.0"/>
-    <property name="spRatio3" value="0.0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -376,10 +408,14 @@
     <property name="name" value="Swordsman"/>
     <property name="identifier" value="swordmaster"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_warrior"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -425,10 +461,14 @@
     <property name="name" value="Mercenary"/>
     <property name="identifier" value="mercenary"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_warrior"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -474,10 +514,14 @@
     <property name="name" value="Sharpshooter"/>
     <property name="identifier" value="bowmaster"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_archer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -523,10 +567,14 @@
     <property name="name" value="Acrobat"/>
     <property name="identifier" value="acrobat"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_archer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -572,10 +620,14 @@
     <property name="name" value="Elementalist"/>
     <property name="identifier" value="elementallord"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_soceress"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -621,10 +673,14 @@
     <property name="name" value="Mystic"/>
     <property name="identifier" value="forceuser"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_soceress"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -670,10 +726,14 @@
     <property name="name" value="Paladin"/>
     <property name="identifier" value="paladin"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_cleric"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -719,10 +779,14 @@
     <property name="name" value="Priest"/>
     <property name="identifier" value="priest"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_cleric"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -768,10 +832,14 @@
     <property name="name" value="Gladiator"/>
     <property name="identifier" value="gladiator"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_swordmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -817,10 +885,14 @@
     <property name="name" value="Lunar Knight"/>
     <property name="identifier" value="moonlord"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_swordmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -866,10 +938,14 @@
     <property name="name" value="Barbarian"/>
     <property name="identifier" value="barbarian"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_mercenary"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -915,10 +991,14 @@
     <property name="name" value="Destroyer"/>
     <property name="identifier" value="destroyer"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_mercenary"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -964,10 +1044,14 @@
     <property name="name" value="Sniper"/>
     <property name="identifier" value="sniper"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_bowmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1013,10 +1097,14 @@
     <property name="name" value="Warden"/>
     <property name="identifier" value="artillery"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_bowmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1062,10 +1150,14 @@
     <property name="name" value="Tempest"/>
     <property name="identifier" value="tempest"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_acrobat"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1111,10 +1203,14 @@
     <property name="name" value="Windwalker"/>
     <property name="identifier" value="windwalker"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_acrobat"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1160,10 +1256,14 @@
     <property name="name" value="Pyromancer"/>
     <property name="identifier" value="saleana"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_elementallord"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1209,10 +1309,14 @@
     <property name="name" value="Ice Witch"/>
     <property name="identifier" value="elestra"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_elementallord"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1258,10 +1362,14 @@
     <property name="name" value="War Mage"/>
     <property name="identifier" value="smasher"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_forceuser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1307,10 +1415,14 @@
     <property name="name" value="Chaos Mage"/>
     <property name="identifier" value="majesty"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_forceuser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1356,10 +1468,14 @@
     <property name="name" value="Guardian"/>
     <property name="identifier" value="guardian"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_paladin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1405,10 +1521,14 @@
     <property name="name" value="Crusader"/>
     <property name="identifier" value="crusades"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_paladin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1454,10 +1574,14 @@
     <property name="name" value="Saint"/>
     <property name="identifier" value="saint"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_priest"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1503,10 +1627,14 @@
     <property name="name" value="Inquisitor"/>
     <property name="identifier" value="inquisitor"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_priest"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1552,10 +1680,14 @@
     <property name="name" value="Engineer"/>
     <property name="identifier" value="engineer"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_academic"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1601,10 +1733,14 @@
     <property name="name" value="Shooting Star"/>
     <property name="identifier" value="shootingstar"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_engineer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1650,10 +1786,14 @@
     <property name="name" value="Gear Master"/>
     <property name="identifier" value="gearmaster"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_engineer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1699,10 +1839,14 @@
     <property name="name" value="Alchemist"/>
     <property name="identifier" value="alchemist"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_academic"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1748,10 +1892,14 @@
     <property name="name" value="Adept"/>
     <property name="identifier" value="adept"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_alchemist"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1797,10 +1945,14 @@
     <property name="name" value="Physician"/>
     <property name="identifier" value="physician"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_alchemist"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1846,10 +1998,14 @@
     <property name="name" value="Screamer"/>
     <property name="identifier" value="screamer"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_kali"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1889,10 +2045,14 @@
     <property name="name" value="Dark Summoner"/>
     <property name="identifier" value="darksummoner"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_screamer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1938,10 +2098,14 @@
     <property name="name" value="Soul Eater"/>
     <property name="identifier" value="souleater"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_screamer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -1987,10 +2151,14 @@
     <property name="name" value="Dancer"/>
     <property name="identifier" value="dancer"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_kali"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2036,10 +2204,14 @@
     <property name="name" value="Blade Dancer"/>
     <property name="identifier" value="bladedancer"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_dancer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2085,10 +2257,14 @@
     <property name="name" value="Spirit Dancer"/>
     <property name="identifier" value="spiritdancer"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_dancer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2134,10 +2310,14 @@
     <property name="name" value="Shinobi"/>
     <property name="identifier" value="chaser"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_assassin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2183,10 +2363,14 @@
     <property name="name" value="Reaper"/>
     <property name="identifier" value="ripper"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_chaser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2232,10 +2416,14 @@
     <property name="name" value="Raven"/>
     <property name="identifier" value="raven"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_chaser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2281,10 +2469,14 @@
     <property name="name" value="Taoist"/>
     <property name="identifier" value="bringer"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_assassin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2330,10 +2522,14 @@
     <property name="name" value="Light Bringer"/>
     <property name="identifier" value="lightfury"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_bringer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2379,10 +2575,14 @@
     <property name="name" value="Abyss Walker"/>
     <property name="identifier" value="abysswalker"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_bringer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2428,10 +2628,14 @@
     <property name="name" value="Lancer"/>
     <property name="identifier" value="piercer"/>
     <property name="advancement" value="1"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.0"/>
     <property name="parent" ref="job_lencea"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2477,10 +2681,14 @@
     <property name="name" value="Dragoon"/>
     <property name="identifier" value="flurry"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_piercer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>
@@ -2526,10 +2734,14 @@
     <property name="name" value="Valkyrie"/>
     <property name="identifier" value="stingbreezer"/>
     <property name="advancement" value="2"/>
-    <property name="spRatio1" value="0.625"/>
-    <property name="spRatio2" value="0.645"/>
-    <property name="spRatio3" value="0.625"/>
     <property name="parent" ref="job_piercer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
     <property name="skillTree">
       <list>
         <list>

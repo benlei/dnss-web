@@ -47,6 +47,8 @@ sql_query
 @conn.exec(query).each_dnt do |job|
   job['skilltree'] = Array.new
   jobs[job['id']] = job
+  job['spRatio'] = [job['maxspjob0'], job['maxspjob1'], job['maxspjob2']]
+  ['maxspjob0', 'maxspjob1', 'maxspjob2'].each {|a| job.delete(a)}
   jobs[job['id']].delete('id')
 end
 
@@ -88,10 +90,8 @@ builder = Nokogiri::XML::Builder.new do |xml|
         xml.property('name' => 'name', 'value' => job['jobname'])
         xml.property('name' => 'identifier', 'value' => job['identifier'])
         xml.property('name' => 'advancement', 'value' => job['advancement'])
-        xml.property('name' => 'spRatio1', 'value' => job['maxspjob0'])
-        xml.property('name' => 'spRatio2', 'value' => job['maxspjob1'])
-        xml.property('name' => 'spRatio3', 'value' => job['maxspjob2'])
         xml.property('name' => 'parent', 'ref' => 'job_%s' % jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
+        xml.property('name' => 'spRatio') {xml.list {job['spRatio'].each {|spRatio| xml.value_ spRatio}}}
         xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill.to_i}}}}}
       end
     end

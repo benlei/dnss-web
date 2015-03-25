@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.WebApplicationContext;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 @Controller
 @RequestMapping("/job")
@@ -27,25 +28,28 @@ public class JobController {
             response.sendError(HttpServletResponse.SC_NOT_FOUND, "No job '" + jobIdentifier + "'");
         }
 
-        Job tertiary = (Job)context.getBean(bean);
-        if (! tertiary.getAdvancement().equals(Advancement.TERTIARY)) {
-            response.sendError(HttpServletResponse.SC_FORBIDDEN, tertiary.getName() + " is not a Tertiary Job");
+        ArrayList<Integer> levels = (ArrayList<Integer>)context.getBean("levels");
+        int maxSP = levels.get(levels.size() - 1);
+
+        LinkedList<Job> jobList = new LinkedList<Job>();
+        try {
+            Job job = (Job)context.getBean(bean);
+            float[] spRatios = job.getSpRatio();
+            for (int i = spRatios.length - 1; job != null; i--) {
+                job.setMaxSP((int)(maxSP * spRatios[i]));
+                jobList.addFirst(job);
+                job = job.getParent();
+            }
+        } catch (Exception e) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, e.getMessage());
         }
 
-        Job secondary = tertiary.getParent();
-        Job primary = secondary.getParent();
+        if (jobList.size() != 3) {
+            response.sendError(HttpServletResponse.SC_FORBIDDEN, jobList.getLast().getName() + " is not allowed to be simulatled.");
+        }
 
-        model.addAttribute("primary", primary);
-        model.addAttribute("secondary", secondary);
-        model.addAttribute("tertiary", tertiary);
-
-        // level & SP stuff
-        List<Integer> levels = (List<Integer>)context.getBean("levels");
-        int maxSP = levels.get(levels.size() - 1);
-        model.addAttribute("max_sp_1", (int)(maxSP * tertiary.getSpRatio1()));
-        model.addAttribute("max_sp_2", (int)(maxSP * tertiary.getSpRatio2()));
-        model.addAttribute("max_sp_3", (int)(maxSP * tertiary.getSpRatio3()));
-        model.addAttribute("max_sp_total", maxSP);
+        model.addAttribute("jobs", jobList);
+        model.addAttribute("max_sp", maxSP);
 
 
         return "home";
