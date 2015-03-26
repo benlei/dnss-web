@@ -38,30 +38,31 @@ ul {
   list-style-type: none;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
 #job-list-sp {
   
 }
 
 #job-list-sp li {
-  border: 1px solid #ccc;
-  background-color: #ccc;
+  border: 1px solid #000;
+  background-color: #000;
   border-radius: 10px;
   padding: 5px 10px;
   margin-bottom: 5px;
+  color: rgb(250, 210, 140);
+
+}
+
+#job-list-sp .sp {
+  float: right;
 }
 
 #job-list-sp li:last-of-type {
-  background-color: #444;
-  border: 0;
   color: #fff;
+}
+
+#job-list-sp .active {
+  color: rgb(200, 255, 255);
+
 }
 
 /* some stuff are temp */
@@ -71,7 +72,7 @@ ul {
 
 .skill-container {
   padding-right: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
 .skill {
@@ -79,20 +80,20 @@ ul {
   width: 50px;
 }
 
-.max, .lvl {
+.lvl {
   font-size: .6em;
   border: 1px solid #787878;
+  padding: 2px 4px;
   background: #787878;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
-  padding: 2px;
-  margin-top: 40px;
-}
-
-.max {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 38px;
   float: right;
-}
-
-.lvl {
-  float: left;
+  user-select: none; /* CSS3 (little to no support) */
+  -ms-user-select: none; /* IE 10+ */
+  -moz-user-select: none; /* Gecko (Firefox) */
+  -webkit-user-select: none; /* Webkit (Safari, Chrome) */
+  unselectable: on;
 }
