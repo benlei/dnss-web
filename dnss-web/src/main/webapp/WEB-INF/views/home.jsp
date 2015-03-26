@@ -54,21 +54,21 @@ function setActive(skill, perm) {
     return;
   }
 
-  var bg = skill.css('background');
+  var bg = skill.css('background-image');
   if (bg.indexOf('_b.png') != -1) { // remove it
-    skill.css('background', bg.replace('_b.png', '.png'));
+    skill.css('background-image', bg.replace('_b.png', '.png'));
   }
 }
 
 function setInactive(skill) {
   if (skill.data('perm')) return; // it's permanent
-  var bg = skill.css('background');
+  var bg = skill.css('background-image');
   if (bg.indexOf('_b.png') == -1) { // remove it
-    skill.css('background', bg.replace('.png', '_b.png'));
+    skill.css('background-image', bg.replace('.png', '_b.png'));
   }
 }
 
-function incSkill(skill, shftKey) {
+function incSkill(skill, max) {
   setActive(skill);
   var lvl = skill.children();
   var l = lvl.text().split('/');
@@ -78,7 +78,7 @@ function incSkill(skill, shftKey) {
   }
 
   var start = l.current;
-  if (shftKey) { // max
+  if (max) { // max
     l.current = l.max - 1;
   }
 
@@ -92,7 +92,7 @@ function incSkill(skill, shftKey) {
   alterJobSP(skill.data('job'), change);
 }
 
-function decSkill(skill, shftKey) {
+function decSkill(skill, max) {
   var lvl = skill.children();
   var l = lvl.text().split('/');
   l = {'current': parseInt(l[0]), 'max': parseInt(l[1])};
@@ -101,7 +101,7 @@ function decSkill(skill, shftKey) {
   }
 
   var start = l.current;
-  if (shftKey) { // max
+  if (max) { // max
     l.current = 1;
   }
 
@@ -162,8 +162,9 @@ $.each(jobIds, function(i, jobId){
         $(this).data('job', i);
         $(this).css('background', 'url(/images/skillicon' + image + '_b.png) ' + xpos + 'px ' + ypos + 'px');
         $(this).children().text('0/' + skill.maxlevel);
-        $(this).click(function(e){ incSkill($(this), e.shiftKey); });
-        $(this).bind('contextmenu', function(e) { decSkill($(this), e.shiftKey); return false;});
+        $(this).click(function(e){ incSkill($(this), e.ctrlKey); });
+        this.oncontextmenu = function() {return false;};
+        $(this).mousedown(function(e) { if (e.button == 2) {decSkill($(this), e.ctrlKey);  return false;}});
       }
     });
 

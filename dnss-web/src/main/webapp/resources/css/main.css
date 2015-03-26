@@ -78,6 +78,11 @@ ul {
 .skill-container {
   padding-right: 15px;
   padding-bottom: 25px;
+  user-select: none; /* CSS3 (little to no support) */
+  -ms-user-select: none; /* IE 10+ */
+  -moz-user-select: none; /* Gecko (Firefox) */
+  -webkit-user-select: none; /* Webkit (Safari, Chrome) */
+  unselectable: on;
 }
 
 .skill {
@@ -96,11 +101,6 @@ ul {
   letter-spacing: 1px;
   margin-top: 38px;
   float: right;
-  user-select: none; /* CSS3 (little to no support) */
-  -ms-user-select: none; /* IE 10+ */
-  -moz-user-select: none; /* Gecko (Firefox) */
-  -webkit-user-select: none; /* Webkit (Safari, Chrome) */
-  unselectable: on;
 }
 
 #sidebar-2 {
