@@ -11,6 +11,10 @@
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
+
+    <div id="warnings">
+      Hello
+    </div>
   </aside>
   <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
     <table class="skill-tree" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
@@ -47,6 +51,10 @@
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
+function setDescription($skill) { // also sets warnings!
+  var job = jobs[$skill.data('job')], skills=job.skills, skill = skills[$skill.data('id')];
+}
+
 function setActive(skill, perm) {
   if (perm) {
     skill.data('permanent', 1);
@@ -84,7 +92,7 @@ function incSkill(skill, max) {
 
   lvl.text((l.current+1) + "/" + l.max);
 
-  var change = 0, levels = skills[skill.data('id')].levels;
+  var change = 0, levels = jobs[skill.data('job')].skills[skill.data('id')].levels;
   for (var i = start; i < l.current + 1; i++) {
     change += levels[i].spcost;
   }
@@ -115,7 +123,7 @@ function decSkill(skill, max) {
 
   lvl.text((l.current-1) + "/" + l.max);
 
-  var change = 0, levels = skills[skill.data('id')].levels;
+  var change = 0, levels = jobs[skill.data('job')].skills[skill.data('id')].levels;
   for (var i = l.current - 1; i < start; i++) {
     change -= levels[i].spcost;
   }
@@ -148,11 +156,9 @@ function alterJobSP(idx, change) {
 
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
 var jobs = {};
-var skills = {};
 $.each(jobIds, function(i, jobId){
   $.getJSON('/json/' + jobId + '.min.json', function(job) {
     jobs[i] = job;
-    skills = $.extend({}, skills, job.skills);
     $('.skill[data-id]').each(function() {
       var skill = job.skills[$(this).data('id')];
       if (skill) {
@@ -162,9 +168,9 @@ $.each(jobIds, function(i, jobId){
         $(this).data('job', i);
         $(this).css('background', 'url(/images/skillicon' + image + '_b.png) ' + xpos + 'px ' + ypos + 'px');
         $(this).children().text('0/' + skill.maxlevel);
-        $(this).click(function(e){ incSkill($(this), e.ctrlKey); });
+        $(this).click(function(e){ incSkill($(this), e.ctrlKey|e.shiftKey); });
         this.oncontextmenu = function() {return false;};
-        $(this).mousedown(function(e) { if (e.button == 2) {decSkill($(this), e.ctrlKey);  return false;}});
+        $(this).mousedown(function(e) { if (e.button == 2) {decSkill($(this), e.ctrlKey||e.shiftKey);  return false;}});
       }
     });
 
