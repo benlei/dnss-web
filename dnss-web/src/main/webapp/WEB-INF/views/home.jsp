@@ -150,7 +150,7 @@ var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.ident
 var jobs = {};
 var skills = {};
 $.each(jobIds, function(i, jobId){
-  $.getJSON('/json/' + jobId + '.json', function(job) {
+  $.getJSON('/json/' + jobId + '.min.json', function(job) {
     jobs[i] = job;
     skills = $.extend({}, skills, job.skills);
     $('.skill[data-id]').each(function() {
@@ -171,14 +171,6 @@ $.each(jobIds, function(i, jobId){
     if (job.default_skills) {
       $.each(job.default_skills, function(k, skill) { setActive($('.skill[data-id=' + skill + ']'), 1); });
     }
-
-    if (!job.skills[4001]) return;
-    // $('#skill-description').html('
-    //   <h2>' + jobs[$('.skill[data-id=4001]').data('job')].message[skills[4001].nameid] + '</h2>
-    //     <ul>
-    //       <li></li>
-    //     </ul>
-    // ');
   });  
 });
 
