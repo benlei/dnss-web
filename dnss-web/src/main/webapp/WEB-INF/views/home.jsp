@@ -6,7 +6,7 @@
 <link href="/css/main.css" rel="stylesheet" type="text/css" />
 <body>
 <main>
-  <aside>
+  <aside id="sidebar-1">
     <ul id="job-list-sp"><c:forEach items="${jobs}" var="job" varStatus="loop">
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
@@ -21,6 +21,29 @@
         <td  class="skill-container"></c:otherwise></c:choose></c:forEach></c:forEach>
     </table></c:forEach>
   </section>
+  <aside id="sidebar-2">
+    <h2>Magma Monument</h2>
+    <div class="skill-description">
+      <ul class="meta">
+        <li id="skill-level"><span>Skill Lv.: </span>15 &rarr; 16</li>
+        <li id="skill-mpcost"><span>Fee MP: </span>4.9% &rarr; 5.1% of base MP</li>
+        <li id="skill-cd"><span>Cooldown: </span>25 &rarr; 20 sec</li>
+        <li id="skill-required-level"><span>Level Limit: </span>43 &rarr; 49</li>
+        <li id="skill-required-weapon"><span>Required Weapon: </span>Bubble Blaster</li>
+        <li id="skill-type"><span>Skill Type: </span>Reactive Passive</li>
+        <li id="skill-current-description"><span>Skill Description:</span>
+          <div class="description">
+            Happy happy
+          </div>
+        </li>
+        <li  id="skill-next-description"><span>Next Description:</span>
+          <div class="description">
+            joy joy
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
@@ -147,6 +170,14 @@ $.each(jobIds, function(i, jobId){
     if (job.default_skills) {
       $.each(job.default_skills, function(k, skill) { setActive($('.skill[data-id=' + skill + ']'), 1); });
     }
+
+    if (!job.skills[4001]) return;
+    // $('#skill-description').html('
+    //   <h2>' + jobs[$('.skill[data-id=4001]').data('job')].message[skills[4001].nameid] + '</h2>
+    //     <ul>
+    //       <li></li>
+    //     </ul>
+    // ');
   });  
 });
 
@@ -162,6 +193,9 @@ $('#job-list-sp li[data-job]').each(function() {
     $('#skill-tree-' + idx).show();
   })
 });
+
+
+
 </script>
 </body>
 </html>

@@ -10,6 +10,10 @@ body {
   color: #333;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
 a, a:visited, a:link, a:active, a:hover {
   text-decoration: none;
   color: #333;
@@ -20,15 +24,11 @@ main {
   margin: 10px auto;
 }
 
-aside {
-  float: left;
-  width: 250px;
-}
-
 section {
   float: left;
   margin-left: 50px;
 }
+
 
 table {
   border-collapse: collapse;
@@ -36,6 +36,11 @@ table {
 
 ul {
   list-style-type: none;
+}
+
+#sidebar-1 {
+  float: left;
+  width: 250px;
 }
 
 #job-list-sp {
@@ -48,8 +53,7 @@ ul {
   border-radius: 10px;
   padding: 5px 10px;
   margin-bottom: 5px;
-  color: rgb(250, 210, 140);
-
+  color: #fff;
 }
 
 #job-list-sp .sp {
@@ -57,11 +61,12 @@ ul {
 }
 
 #job-list-sp li:last-of-type {
-  color: #fff;
+  color: rgb(200, 255, 255);
+  margin-top: 10px;
 }
 
 #job-list-sp .active {
-  color: rgb(200, 255, 255);
+  color: rgb(250, 210, 140);
 
 }
 
@@ -96,4 +101,19 @@ ul {
   -moz-user-select: none; /* Gecko (Firefox) */
   -webkit-user-select: none; /* Webkit (Safari, Chrome) */
   unselectable: on;
+}
+
+#sidebar-2 {
+  width: 300px; 
+  float: left;
+  margin-left: 40px;
+  font-size: 0.8em;
+}
+
+#sidebar-2 {
+  line-height: 1.4em;
+}
+
+#sidebar-2 li span {
+  color: rgb(210, 180, 140);
 }

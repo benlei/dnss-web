@@ -136,7 +136,8 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
            _levellimit as required_level,
            _decreasesp as mpcost,
            _skillexplanationid as explanationid, _skillexplanationidparam,
-           _needskillpoint as spcost
+           _needskillpoint as spcost,
+           _delaytime as cd
     FROM skills_%s_pve s
     INNER JOIN skills
       ON _skillindex = skills._id
