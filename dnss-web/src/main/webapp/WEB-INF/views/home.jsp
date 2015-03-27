@@ -22,10 +22,6 @@
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
-
-    <ul id="option-list">
-      <li></li>
-    </ul>
   </aside>
   <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
     <table class="skill-tree" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
@@ -37,7 +33,7 @@
     </table></c:forEach>
   </section>
   <aside id="sidebar-2">
-    <h2 id="skill-name">Magma Monument</h2>
+    <input type="button" id="mode" value="pve" /><h2 id="skill-name">Magma Monument</h2>
     <div class="skill-description">
       <ul class="meta">
         <li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span><span id="skill-sp"></span></li>
@@ -122,23 +118,29 @@ function formatDescription(str, params) {
   }
 }
 
+var lastSkillDesc;
 function setDescription($skill) { // also sets warnings!
+  lastSkillDesc = $skill;
   var job = jobs[$skill.data('job')], skills = job.skills, skill = skills[$skill.data('id')];
   var lvl = getLevel($skill);
   var skillLevel, skillSP, skillMP, skillCD, skillRequiredLevel, skillRequiredWeapon, skillDescription, nextDescription;
 
+  var prefix = '';
+  if ($('#mode').val() == 'pvp') {
+    prefix = 'pvp_';
+  }
   if (! lvl.current) {
     skillLevel = 1;
     skillCD = skill.levels[0].cd / 1000;
     skillSP = skill.levels[0].spcost;
     skillRequiredLevel = skill.levels[0].required_level;
-    skillDescription = formatDescription(job.message[skill.levels[0].explanationid], skill.levels[0].explanationparams);
+    skillDescription = formatDescription(job.message[skill.levels[0][prefix+'explanationid']], skill.levels[0][prefix+'explanationparams']);
     skillMP = (skill.levels[0].mpcost / 10.0) + '%';
   } else if (lvl.current == skill.levels.length) {
     skillLevel = lvl.current;
     skillCD = skill.levels[lvl.current - 1].cd / 1000;
     skillRequiredLevel = skill.levels[lvl.current - 1].required_level;
-    skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1].explanationid], skill.levels[lvl.current - 1].explanationparams);
+    skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1][prefix+'explanationid']], skill.levels[lvl.current - 1][prefix+'explanationparams']);
     skillMP = (skill.levels[lvl.current - 1].mpcost / 10.0) + '%';
   } else {
     skillLevel = lvl.current + ' &rarr; ' + (lvl.current+1);
@@ -149,8 +151,8 @@ function setDescription($skill) { // also sets warnings!
     }
 
     skillRequiredLevel = skill.levels[lvl.current - 1].required_level + ' &rarr; ' + skill.levels[lvl.current].required_level;
-    skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1].explanationid], skill.levels[lvl.current - 1].explanationparams);
-    nextDescription = formatDescription(job.message[skill.levels[lvl.current].explanationid], skill.levels[lvl.current].explanationparams);
+    skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1][prefix+'explanationid']], skill.levels[lvl.current - 1][prefix+'explanationparams']);
+    nextDescription = formatDescription(job.message[skill.levels[lvl.current][prefix+'explanationid']], skill.levels[lvl.current][prefix+'explanationparams']);
     skillSP = skill.levels[lvl.current].spcost;
     skillMP = (skill.levels[lvl.current - 1].mpcost/10.0) + '% &rarr; ' + (skill.levels[lvl.current].mpcost/10.0) + '%';
   }
@@ -169,7 +171,7 @@ function setDescription($skill) { // also sets warnings!
   $('#skill-mpcost .w').html(skillMP);
   $('#skill-description .description').html(skillDescription);
   $('#next-description .description').html(nextDescription);
-  $('#skill-sp').html(skillSP + ' SP');
+  $('#skill-sp').html('(' + skillSP + ' SP)');
 
   // post-change adjustments
   if (skillCD) {
@@ -364,6 +366,11 @@ $('#job-list-sp li[data-job]').each(function() {
     $('.skill-tree').hide();
     $('#skill-tree-' + idx).show();
   })
+});
+
+$('#mode').click(function() {
+  $(this).val($(this).val() == 'pve' ? 'pvp' : 'pve');
+  setDescription(lastSkillDesc);
 });
 
 if (window.location.search && window.location.search.substr(1)) {

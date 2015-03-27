@@ -126,7 +126,7 @@ ul {
 }
 
 #skill-sp {
-  float: right;
+  padding-left: 15px;
 }
 
 #next-description {
@@ -188,4 +188,10 @@ nav ul ul {
 
 .tertiary a {
   color: rgb(250, 210, 140);
+}
+
+#mode {
+  float: right;
+  text-transform: uppercase;
+  padding: 2px 5px;
 }
