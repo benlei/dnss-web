@@ -2866,4 +2866,63 @@
     <value>205</value>
     <value>207</value>
   </util:list>
+  <util:list id="all_jobs_0" value-type="dnss.model.Job">
+    <ref bean="job_warrior"/>
+    <ref bean="job_archer"/>
+    <ref bean="job_soceress"/>
+    <ref bean="job_cleric"/>
+    <ref bean="job_academic"/>
+    <ref bean="job_kali"/>
+    <ref bean="job_assassin"/>
+    <ref bean="job_lencea"/>
+  </util:list>
+  <util:list id="all_jobs_1" value-type="dnss.model.Job">
+    <ref bean="job_swordmaster"/>
+    <ref bean="job_mercenary"/>
+    <ref bean="job_bowmaster"/>
+    <ref bean="job_acrobat"/>
+    <ref bean="job_elementallord"/>
+    <ref bean="job_forceuser"/>
+    <ref bean="job_paladin"/>
+    <ref bean="job_priest"/>
+    <ref bean="job_engineer"/>
+    <ref bean="job_alchemist"/>
+    <ref bean="job_screamer"/>
+    <ref bean="job_dancer"/>
+    <ref bean="job_chaser"/>
+    <ref bean="job_bringer"/>
+    <ref bean="job_piercer"/>
+  </util:list>
+  <util:list id="all_jobs_2" value-type="dnss.model.Job">
+    <ref bean="job_gladiator"/>
+    <ref bean="job_moonlord"/>
+    <ref bean="job_barbarian"/>
+    <ref bean="job_destroyer"/>
+    <ref bean="job_sniper"/>
+    <ref bean="job_artillery"/>
+    <ref bean="job_tempest"/>
+    <ref bean="job_windwalker"/>
+    <ref bean="job_saleana"/>
+    <ref bean="job_elestra"/>
+    <ref bean="job_smasher"/>
+    <ref bean="job_majesty"/>
+    <ref bean="job_guardian"/>
+    <ref bean="job_crusades"/>
+    <ref bean="job_saint"/>
+    <ref bean="job_inquisitor"/>
+    <ref bean="job_shootingstar"/>
+    <ref bean="job_gearmaster"/>
+    <ref bean="job_adept"/>
+    <ref bean="job_physician"/>
+    <ref bean="job_darksummoner"/>
+    <ref bean="job_souleater"/>
+    <ref bean="job_bladedancer"/>
+    <ref bean="job_spiritdancer"/>
+    <ref bean="job_ripper"/>
+    <ref bean="job_raven"/>
+    <ref bean="job_lightfury"/>
+    <ref bean="job_abysswalker"/>
+    <ref bean="job_flurry"/>
+    <ref bean="job_stingbreezer"/>
+  </util:list>
 </beans>

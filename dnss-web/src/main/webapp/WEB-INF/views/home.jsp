@@ -6,6 +6,16 @@
 <link href="/css/main.css" rel="stylesheet" type="text/css" />
 <body>
 <main>
+  <nav id="jobs">
+    <ul><c:forEach items="${job0}" var="primary" varStatus="pLoop">
+      <li class="primary">${primary.name}
+        <ul class="sub-jobs"><c:forEach items="${job1}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent == primary}">
+          <li class="secondary">${secondary.name}</li><c:forEach items="${job2}" var="tertiary" varStatus="tLoop"><c:if test="${tertiary.parent == secondary}">
+          <li class="tertiary"><a href="/job/${tertiary.identifier}">${tertiary.name}</a></li></c:if></c:forEach>
+        </c:if></c:forEach></ul>
+      </li></c:forEach>
+    </ul>
+  </nav>
   <aside id="builder" data-base="http://dnss.herokuapp.com/job/${jobs[fn:length(jobs) - 1].identifier}"></aside>
   <aside id="sidebar-1">
     <ul id="job-list-sp"><c:forEach items="${jobs}" var="job" varStatus="loop">

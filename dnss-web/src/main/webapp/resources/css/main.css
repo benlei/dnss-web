@@ -50,10 +50,10 @@ ul {
 #job-list-sp li {
   border: 1px solid #000;
   background-color: #000;
+  color: #fff;
   border-radius: 10px;
   padding: 5px 10px;
   margin-bottom: 5px;
-  color: #fff;
 }
 
 #job-list-sp .sp {
@@ -139,4 +139,53 @@ ul {
   margin: 10px 0 20px 0;
   clear: both;
   border: 1px solid black;
+}
+
+nav {
+  height: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul {
+  position: relative;
+
+}
+nav ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+nav ul ul {
+  position: absolute;
+}
+
+.primary {
+  display: inline-table;
+  padding: 5px 15px;
+  background-color: #000;
+  color: #fff;
+}
+
+.primary li {
+  padding: 5px 15px;
+  margin-left: -15px;
+  text-align: left;
+  background-color: #000;
+}
+
+.secondary {
+  color: rgb(200, 255, 255);
+  width: 150px;
+}
+
+.tertiary a {
+  color: rgb(250, 210, 140);
 }

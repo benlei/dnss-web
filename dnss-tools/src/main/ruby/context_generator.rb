@@ -97,6 +97,13 @@ builder = Nokogiri::XML::Builder.new do |xml|
     end
 
     xml['util'].list('id' => 'levels', 'value-type' => 'int') {sp_by_level.each {|sp| xml.value_ sp}}
+    (0..2).each do |a|
+      xml['util'].list('id' => 'all_jobs_%d' % a, 'value-type' => 'dnss.model.Job') do
+        jobs.select {|id, job| job['advancement'] == a}.each_value do |job|
+          xml.ref('bean' => 'job_%s' % job['identifier'])
+        end
+      end
+    end
   end
 end
 

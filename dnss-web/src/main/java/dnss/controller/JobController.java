@@ -51,7 +51,9 @@ public class JobController {
         model.addAttribute("jobs", jobList);
         model.addAttribute("max_sp", maxSP);
 
-
+        model.addAttribute("job0", context.getBean("all_jobs_0"));
+        model.addAttribute("job1", context.getBean("all_jobs_1"));
+        model.addAttribute("job2", context.getBean("all_jobs_2"));
         return "home";
     }
 }
