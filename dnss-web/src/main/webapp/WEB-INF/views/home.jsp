@@ -103,7 +103,9 @@ function rebuildSimulation(str) {
 function formatDescription(str, params) {
   if (str) {
     for (i in params) {
-      str = str.replace('{' + i + '}', params[i]);
+      while (str.indexOf('{' + i + '}') != -1) {
+        str = str.replace('{' + i + '}', params[i]);
+      }
     }
 
     str = str.replace(/#y(.+?)#w/g, '<span class="y">$1</span>');
