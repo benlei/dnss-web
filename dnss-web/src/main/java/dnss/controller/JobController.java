@@ -14,13 +14,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 @Controller
-@RequestMapping("/job")
 public class JobController {
     @Autowired
     private WebApplicationContext context;
 
-    @RequestMapping("/{job_identifier}")
-    public String hello(HttpServletResponse response,
+    @RequestMapping("/job/{job_identifier}")
+    public String job(HttpServletResponse response,
                         @PathVariable("job_identifier") String jobIdentifier,
                         ModelMap model) throws IOException {
         String bean = "job_"  +jobIdentifier;
@@ -55,5 +54,11 @@ public class JobController {
         model.addAttribute("job1", context.getBean("all_jobs_1"));
         model.addAttribute("job2", context.getBean("all_jobs_2"));
         return "home";
+    }
+
+    @RequestMapping("/")
+    public String job(HttpServletResponse response,
+                      ModelMap model) throws IOException {
+        return job(response, "moonlord", model);
     }
 }
