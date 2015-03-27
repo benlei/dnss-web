@@ -162,7 +162,7 @@ function setDescription($skill) { // also sets warnings!
   $('#skill-type .w').html(skill_types[skill.type]);
   $('#skill-mpcost .w').html(skillMP);
   $('#skill-description .description').html(skillDescription);
-  $('#next-description .description').html(skillDescription);
+  $('#next-description .description').html(nextDescription);
   $('#skill-sp').html(skillSP + ' SP');
 
   // post-change adjustments
