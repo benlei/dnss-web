@@ -136,7 +136,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "116",
+            "1494",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 48,
@@ -151,7 +160,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "117",
+            "1841",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 51,
@@ -166,7 +184,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "118",
+            "2058",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 54,
@@ -181,7 +208,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "119",
+            "2277",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 57,
@@ -196,7 +232,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "120",
+            "2499",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 60,
@@ -211,7 +256,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "125",
+            "3204",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 63,
@@ -226,7 +280,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "126",
+            "3865",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 66,
@@ -241,7 +304,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "127",
+            "4205",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 69,
@@ -256,7 +328,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "128",
+            "4575",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 72,
@@ -271,7 +352,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "129",
+            "4977",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 75,
@@ -286,7 +376,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "133",
+            "6230",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 78,
@@ -301,7 +400,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "134",
+            "6777",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 81,
@@ -316,7 +424,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "135",
+            "7372",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 84,
@@ -331,7 +448,16 @@
             "100",
             "15",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "136",
+            "8019",
+            "100",
+            "15",
+            "10"
+          ],
+          "pvp_explanationid": 9
         }
       ],
       "image": "09",
@@ -363,7 +489,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 10
         }
       ],
       "image": "09",
@@ -399,7 +529,15 @@
             "10",
             "50",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "453",
+            "2636",
+            "10",
+            "50",
+            "7.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 55,
@@ -413,7 +551,15 @@
             "12.5",
             "52.5",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "468",
+            "3110",
+            "12.5",
+            "52.5",
+            "7.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 60,
@@ -427,7 +573,15 @@
             "15",
             "55",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "484",
+            "3591",
+            "15",
+            "55",
+            "7.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 65,
@@ -441,7 +595,15 @@
             "17.5",
             "57.5",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "499",
+            "4112",
+            "17.5",
+            "57.5",
+            "7.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 70,
@@ -455,7 +617,15 @@
             "20",
             "60",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "515",
+            "4715",
+            "20",
+            "60",
+            "7.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 75,
@@ -469,7 +639,15 @@
             "22.5",
             "62.5",
             "17"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "578",
+            "6547",
+            "22.5",
+            "62.5",
+            "8.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 80,
@@ -483,7 +661,15 @@
             "25",
             "65",
             "17"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "593",
+            "7508",
+            "25",
+            "65",
+            "8.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 85,
@@ -497,7 +683,15 @@
             "27.5",
             "67.5",
             "17"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "609",
+            "8609",
+            "27.5",
+            "67.5",
+            "8.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 90,
@@ -511,7 +705,15 @@
             "30",
             "70",
             "17"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "625",
+            "9872",
+            "30",
+            "70",
+            "8.5"
+          ],
+          "pvp_explanationid": 11
         }
       ],
       "image": "09",
@@ -544,7 +746,12 @@
           "explanationparams": [
             "15",
             "3"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "15",
+            "1.5"
+          ],
+          "pvp_explanationid": 12
         }
       ],
       "image": "09",
@@ -580,7 +787,11 @@
           "cd": 35000,
           "explanationparams": [
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "10"
+          ],
+          "pvp_explanationid": 13
         }
       ],
       "image": "09",
@@ -612,7 +823,11 @@
           "cd": 0,
           "explanationparams": [
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "20"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "09",
@@ -644,7 +859,11 @@
           "cd": 0,
           "explanationparams": [
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "5"
+          ],
+          "pvp_explanationid": 15
         }
       ],
       "image": "09",
@@ -674,7 +893,11 @@
           "explanationparams": [
             "50",
             "300"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "25"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "09",
@@ -724,6 +947,7 @@
     "Increases Ghost Gate's damage. A huge ghost will explode upon hitting an enemy, dealing area damage.\\n#yGhost Gate Damage: {0}%",
     "Adds two small wolves to Spirit Wolf.\\n#yDamage per Small Wolf: {0}% of Spirit Wolf damage",
     "Deal an extra #y{0}%#w non-elemental damage against cursed enemies.",
-    "Enhances Specter of Torment. #yLeft-click# to unleash Ghosts of Pain 1 more time and increase the curse explosion damage. \\n#yAdditional Ghosts of Pain Damage: {0}%\\nCurse Explosion Damage: {1}%"
+    "Enhances Specter of Torment. #yLeft-click# to unleash Ghosts of Pain 1 more time and increase the curse explosion damage. \\n#yAdditional Ghosts of Pain Damage: {0}%\\nCurse Explosion Damage: {1}%",
+    "Enhances Specter of Torment. #yLeft-click# to unleash Ghosts of Pain 1 more time.\\n#yAdditional Ghosts of Pain Damage: {0}%"
   ]
 }

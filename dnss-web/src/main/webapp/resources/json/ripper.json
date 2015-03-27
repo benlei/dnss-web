@@ -170,7 +170,12 @@
           "explanationparams": [
             "35",
             "25"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "35",
+            "25"
+          ],
+          "pvp_explanationid": 21
         }
       ],
       "image": "10",
@@ -205,7 +210,11 @@
             "10",
             "70",
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "10"
+          ],
+          "pvp_explanationid": 24
         }
       ],
       "image": "10",
@@ -234,7 +243,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 19
         }
       ],
       "image": "10",
@@ -268,7 +281,11 @@
             "30",
             "11",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 23
         }
       ],
       "image": "10",
@@ -300,7 +317,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "10",
@@ -336,7 +357,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "10",
@@ -358,7 +383,11 @@
           "cd": 0,
           "explanationparams": [
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50"
+          ],
+          "pvp_explanationid": 15
         }
       ],
       "image": "10",
@@ -391,7 +420,12 @@
           "explanationparams": [
             "2127",
             "32185"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "607",
+            "644"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 53,
@@ -402,7 +436,12 @@
           "explanationparams": [
             "2178",
             "35769"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "619",
+            "715"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 56,
@@ -413,7 +452,12 @@
           "explanationparams": [
             "2229",
             "39513"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "632",
+            "790"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 59,
@@ -424,7 +468,12 @@
           "explanationparams": [
             "2280",
             "43409"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "645",
+            "868"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 62,
@@ -435,7 +484,12 @@
           "explanationparams": [
             "2331",
             "47490"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "658",
+            "950"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 65,
@@ -446,7 +500,12 @@
           "explanationparams": [
             "2604",
             "62634"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "726",
+            "1253"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 68,
@@ -457,7 +516,12 @@
           "explanationparams": [
             "2655",
             "68632"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "739",
+            "1373"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 71,
@@ -468,7 +532,12 @@
           "explanationparams": [
             "2706",
             "75184"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "752",
+            "1504"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 74,
@@ -479,7 +548,12 @@
           "explanationparams": [
             "2757",
             "82353"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "764",
+            "1647"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 77,
@@ -490,7 +564,12 @@
           "explanationparams": [
             "2808",
             "90168"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "777",
+            "1803"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 80,
@@ -501,7 +580,12 @@
           "explanationparams": [
             "3081",
             "114772"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "845",
+            "2295"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 83,
@@ -512,7 +596,12 @@
           "explanationparams": [
             "3132",
             "125459"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "858",
+            "2509"
+          ],
+          "pvp_explanationid": 14
         },
         {
           "required_level": 86,
@@ -523,7 +612,12 @@
           "explanationparams": [
             "3183",
             "137060"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "871",
+            "2741"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "10",
@@ -557,7 +651,13 @@
             "16",
             "16",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "2.5",
+            "5.0",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 50,
@@ -569,7 +669,13 @@
             "18",
             "18",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "4.0",
+            "7.5",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 55,
@@ -581,7 +687,13 @@
             "20",
             "20",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "5.5",
+            "10.0",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 60,
@@ -593,7 +705,13 @@
             "22",
             "22",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "7.0",
+            "12.5",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 65,
@@ -605,7 +723,13 @@
             "24",
             "24",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "8.5",
+            "15.0",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 70,
@@ -617,7 +741,13 @@
             "26",
             "26",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "10.0",
+            "17.5",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 75,
@@ -629,7 +759,13 @@
             "28",
             "28",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "11.5",
+            "20.0",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 80,
@@ -641,7 +777,13 @@
             "30",
             "30",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "13.0",
+            "22.5",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 85,
@@ -653,7 +795,13 @@
             "32",
             "32",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "14.5",
+            "25.0",
+            "24"
+          ],
+          "pvp_explanationid": 22
         },
         {
           "required_level": 90,
@@ -665,7 +813,13 @@
             "34",
             "34",
             "24"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "16.0",
+            "27.5",
+            "24"
+          ],
+          "pvp_explanationid": 22
         }
       ],
       "image": "10",
@@ -1172,6 +1326,9 @@
     "Wreaths Blade Runner's downward strike in flames that cause a knockback shockwave and weakens the target's Fire Defense.\\n#yFire Magic\\nAdditional Hit Damage: {0}% of Blade Runner\\nFire Defense -{2}% for {1} sec",
     "Enhances Shinobi Drop's damage and attack range and adds flames to make the skill more destructive.\\n#yFire Magic\\nAdditional Hit Damage: {0}% of Shinobi Drop",
     "Increases fire attack by #y{0}%#w. Use #yShadow Rage#w to sacrifice ashes to deal #yBarrage, Shinobi Drop, or Pursuer#w for {1} sec. Receives {2}% less physical damage and restores {3}% HP when #yDedicate Shadow#w is used as well.",
-    "Enhances Pursuer. #yLeft-click#w to unleash a raging combo at the end of the attack. Unleashes an explosion of madness after the combo. \\n#yAdditional Attack Damage: {0}%\\n#yMadness Explosion Damage: {1}%"
+    "Enhances Pursuer. #yLeft-click#w to unleash a raging combo at the end of the attack. Unleashes an explosion of madness after the combo. \\n#yAdditional Attack Damage: {0}%\\n#yMadness Explosion Damage: {1}%",
+    "Fills you with the flames of madness, increasing both fire damage and fire resistance.\\n#yFire Damage: +{0}%\\nFire Resistance: +{1}%\\nDuration: {2} sec",
+    "Wreaths Blade Runner's downward strike in flames that cause a knockback shockwave.\\n#yFire Magic\\nAdditional Hit Damage: {0}% of Blade Runner damage",
+    "Increases Fire Damage by #y{0}% #w."
   ]
 }

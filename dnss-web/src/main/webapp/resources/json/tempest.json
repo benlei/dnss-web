@@ -14,7 +14,11 @@
           "cd": 0,
           "explanationparams": [
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "02",
@@ -48,7 +52,12 @@
             "10",
             "10",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "10",
+            "5"
+          ],
+          "pvp_explanationid": 19
         }
       ],
       "image": "02",
@@ -78,7 +87,12 @@
           "explanationparams": [
             "100",
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "5",
+            "50"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "02",
@@ -110,7 +124,11 @@
           "cd": 0,
           "explanationparams": [
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 55,
@@ -120,7 +138,11 @@
           "cd": 0,
           "explanationparams": [
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "2"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 65,
@@ -130,7 +152,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 75,
@@ -140,7 +166,11 @@
           "cd": 0,
           "explanationparams": [
             "40"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "4"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 85,
@@ -150,7 +180,11 @@
           "cd": 0,
           "explanationparams": [
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 95,
@@ -160,7 +194,11 @@
           "cd": 0,
           "explanationparams": [
             "60"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "6"
+          ],
+          "pvp_explanationid": 9
         }
       ],
       "image": "02",
@@ -193,7 +231,11 @@
           "cd": 0,
           "explanationparams": [
             "70"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 10
         }
       ],
       "image": "02",
@@ -226,7 +268,12 @@
           "explanationparams": [
             "1472",
             "20702"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "292",
+            "3130"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 53,
@@ -237,7 +284,12 @@
           "explanationparams": [
             "1512",
             "23011"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "298",
+            "3479"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 56,
@@ -248,7 +300,12 @@
           "explanationparams": [
             "1551",
             "25444"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "305",
+            "3847"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 59,
@@ -259,7 +316,12 @@
           "explanationparams": [
             "1591",
             "27995"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "311",
+            "4233"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 62,
@@ -270,7 +332,12 @@
           "explanationparams": [
             "1630",
             "29250"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "317",
+            "4423"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 65,
@@ -281,7 +348,12 @@
           "explanationparams": [
             "1841",
             "37400"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "350",
+            "5655"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 68,
@@ -292,7 +364,12 @@
           "explanationparams": [
             "1881",
             "38227"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "357",
+            "5780"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 71,
@@ -303,7 +380,12 @@
           "explanationparams": [
             "1920",
             "39157"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "363",
+            "5921"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 74,
@@ -314,7 +396,12 @@
           "explanationparams": [
             "1960",
             "40190"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "369",
+            "6077"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 77,
@@ -325,7 +412,12 @@
           "explanationparams": [
             "1999",
             "41326"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "375",
+            "6761"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 80,
@@ -336,7 +428,12 @@
           "explanationparams": [
             "2210",
             "49993"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "390",
+            "7167"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 83,
@@ -347,7 +444,12 @@
           "explanationparams": [
             "2250",
             "51335"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "401",
+            "7574"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 86,
@@ -358,7 +460,12 @@
           "explanationparams": [
             "2289",
             "52782"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "411",
+            "7981"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "02",
@@ -496,7 +603,13 @@
             "30",
             "30",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "15",
+            "3"
+          ],
+          "pvp_explanationid": 18
         }
       ],
       "image": "02",
@@ -532,7 +645,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 13
         }
       ],
       "image": "02",
@@ -569,6 +686,9 @@
     "Enhances Somersault Dance's damage and creates a whirlwind.\\n#ySomersault Dance Damage: +{0}%",
     "Enhances Furious Winds to leave additional whirlwinds. Pressing the regular attack button creates stationary whirlwinds. Pressing the special attack button leaves moving whirlwinds. \\n#yAdditional Hit Damage: {0}% of Furious Winds damage",
     "Increases Physical Damage after using Kick Shot or Somersault Dance. Also decreases Cooldown of #yNature's Rage#w when hitting the enemy with #y[Physical Attack] #w. Cooldown decreases once during the first attack for each skill.\\n#yDuration: {0} sec\\nPhysical Damage +{1}%\\n#yDecreases [Physical Skill] cooldown by {2} sec per attack",
-    "Enhances Hurricane Dance. Deals an extra #y{0}% of Max Physical Damage#w every time you hit, and the final attack deals more damage. \\n#yFinal Attack Damage: {1}%"
+    "Enhances Hurricane Dance. Deals an extra #y{0}% of Max Physical Damage#w every time you hit, and the final attack deals more damage. \\n#yFinal Attack Damage: {1}%",
+    "Kick the enemy in front of you so hard that all of their skills are nullified, then launch into a powerful combo attack.\\n#yPhysical Damage {0}% + {1}\\nIgnores block\\nCannot use skills for 2 seconds",
+    "Increases attack range and damage of Marionette. Enemies affected take additional Physical Damage. \\n#yMarionette Damage: +{0}%\\nEnemy Phyiscal Damage Taken: +{1}% for {2} sec ",
+    "Increases Physical Damage after using Kick Shot or Somersault Dance.\\n#yDuration: {0} sec\\nPhysical Damage +{1}%"
   ]
 }

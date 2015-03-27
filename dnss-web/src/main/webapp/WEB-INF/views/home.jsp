@@ -22,6 +22,10 @@
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
+
+    <ul id="option-list">
+      <li></li>
+    </ul>
   </aside>
   <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
     <table class="skill-tree" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">

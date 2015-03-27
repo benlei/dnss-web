@@ -17,7 +17,14 @@
             "14353",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "324",
+            "367",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 53,
@@ -30,7 +37,14 @@
             "15951",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "330",
+            "408",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 56,
@@ -43,7 +57,14 @@
             "17621",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "336",
+            "451",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 59,
@@ -56,7 +77,14 @@
             "19358",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "342",
+            "496",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 62,
@@ -69,7 +97,14 @@
             "21178",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "348",
+            "542",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 65,
@@ -82,7 +117,14 @@
             "27932",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "380",
+            "715",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 68,
@@ -95,7 +137,14 @@
             "30606",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "386",
+            "784",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 71,
@@ -108,7 +157,14 @@
             "33528",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "392",
+            "858",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 74,
@@ -121,7 +177,14 @@
             "36725",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "398",
+            "940",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 77,
@@ -134,7 +197,14 @@
             "40210",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "404",
+            "1029",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 80,
@@ -147,7 +217,14 @@
             "44001",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "410",
+            "1126",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 83,
@@ -160,7 +237,14 @@
             "48131",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "416",
+            "1232",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 86,
@@ -173,7 +257,14 @@
             "52613",
             "50",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "422",
+            "1347",
+            "50",
+            "1"
+          ],
+          "pvp_explanationid": 9
         }
       ],
       "image": "11",
@@ -205,7 +296,11 @@
           "cd": 0,
           "explanationparams": [
 
-          ]
+          ],
+          "pvp_explanationparams": [
+
+          ],
+          "pvp_explanationid": 10
         }
       ],
       "image": "11",
@@ -239,7 +334,13 @@
             "30",
             "20",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "20",
+            "15"
+          ],
+          "pvp_explanationid": 11
         }
       ],
       "image": "11",
@@ -276,7 +377,12 @@
           "explanationparams": [
             "150",
             "300"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "150",
+            "300"
+          ],
+          "pvp_explanationid": 12
         }
       ],
       "image": "11",
@@ -308,7 +414,11 @@
           "cd": 0,
           "explanationparams": [
 
-          ]
+          ],
+          "pvp_explanationparams": [
+
+          ],
+          "pvp_explanationid": 13
         }
       ],
       "image": "11",
@@ -341,7 +451,12 @@
           "explanationparams": [
             "5",
             "2"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "1",
+            "2"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "11",
@@ -374,7 +489,12 @@
             "10",
             "30",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "15"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "11",
@@ -409,7 +529,14 @@
             "6416",
             "0.3",
             "1000"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "171",
+            "41",
+            "0.3",
+            "300"
+          ],
+          "pvp_explanationid": 8
         },
         {
           "required_level": 55,
@@ -422,7 +549,14 @@
             "9854",
             "0.3",
             "1000"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "175",
+            "63",
+            "0.3",
+            "300"
+          ],
+          "pvp_explanationid": 8
         },
         {
           "required_level": 65,
@@ -435,7 +569,14 @@
             "13028",
             "0.3",
             "1000"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "179",
+            "83",
+            "0.3",
+            "300"
+          ],
+          "pvp_explanationid": 8
         },
         {
           "required_level": 75,
@@ -448,7 +589,14 @@
             "17135",
             "0.3",
             "1000"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "183",
+            "110",
+            "0.3",
+            "300"
+          ],
+          "pvp_explanationid": 8
         },
         {
           "required_level": 85,
@@ -461,7 +609,14 @@
             "22506",
             "0.3",
             "1000"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "187",
+            "144",
+            "0.3",
+            "300"
+          ],
+          "pvp_explanationid": 8
         },
         {
           "required_level": 95,
@@ -474,7 +629,14 @@
             "34911",
             "0.3",
             "1000"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "200",
+            "223",
+            "0.3",
+            "300"
+          ],
+          "pvp_explanationid": 8
         }
       ],
       "image": "11",
@@ -510,6 +672,7 @@
     "Enhances #ySpinning Takedown#w to further increase its damage based on how long you charge energy for. Press the #yspecial attack button#w while charging to launch enemies.\\n\\n(1st Charge)\\n#y{0}% of Spinning Takedown Damage\\n\\n#w(2nd Charge)\\n#y{1}% of Spinning Takedown Damage",
     "Enhances #yTwirling Thrust#w to deal 2 additional thrusts. Reduces the skill's cooldown by 5 seconds during the last thrust and increases the attack range of the final thrust.",
     "Grants a #y{0}%#w chance to expose the weaknesses of an attacked enemy for #y{1} sec#w.",
-    "Enhances #yCharging Sweep#w to increase its charging distance and activate an additional shockwave.\\n\\nWhen canceled within {0}m:\\n#yShockwave Damage: {1}%\\n\\n#wWhen canceled within {2}m:\\n#yShockwave Damage: {3}%\\n\\n#wWhen canceled at the max distance:\\n#yShockwave Damage: {4}%"
+    "Enhances #yCharging Sweep#w to increase its charging distance and activate an additional shockwave.\\n\\nWhen canceled within {0}m:\\n#yShockwave Damage: {1}%\\n\\n#wWhen canceled within {2}m:\\n#yShockwave Damage: {3}%\\n\\n#wWhen canceled at the max distance:\\n#yShockwave Damage: {4}%",
+    "Unleashes an additional shockwave when dealing an upward strike.\\n#yShockwave Damage: {0}%\\nIf you cancel while charging, Damage: {1}%"
   ]
 }

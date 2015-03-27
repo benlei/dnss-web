@@ -30,7 +30,13 @@
             "30",
             "90",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "90",
+            "15",
+            "60"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 55,
@@ -43,7 +49,13 @@
             "30",
             "85",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "90",
+            "15",
+            "56"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 65,
@@ -56,7 +68,13 @@
             "30",
             "80",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "90",
+            "15",
+            "52"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 75,
@@ -69,7 +87,13 @@
             "30",
             "75",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "90",
+            "15",
+            "48"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 85,
@@ -82,7 +106,13 @@
             "30",
             "70",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "90",
+            "15",
+            "44"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 95,
@@ -95,7 +125,13 @@
             "30",
             "65",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "90",
+            "15",
+            "40"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "02",
@@ -127,7 +163,11 @@
           "cd": 0,
           "explanationparams": [
             "70"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "70"
+          ],
+          "pvp_explanationid": 10
         }
       ],
       "image": "02",
@@ -160,7 +200,12 @@
           "explanationparams": [
             "1189",
             "19716"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "354",
+            "5005"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 53,
@@ -171,7 +216,12 @@
           "explanationparams": [
             "1221",
             "21915"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "363",
+            "5563"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 56,
@@ -182,7 +232,12 @@
           "explanationparams": [
             "1253",
             "24232"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "371",
+            "6151"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 59,
@@ -193,7 +248,12 @@
           "explanationparams": [
             "1285",
             "26662"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "379",
+            "6768"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 62,
@@ -204,7 +264,12 @@
           "explanationparams": [
             "1317",
             "27857"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "387",
+            "7072"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 65,
@@ -215,7 +280,12 @@
           "explanationparams": [
             "1487",
             "35619"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "431",
+            "9042"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 68,
@@ -226,7 +296,12 @@
           "explanationparams": [
             "1519",
             "36407"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "439",
+            "9242"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 71,
@@ -237,7 +312,12 @@
           "explanationparams": [
             "1551",
             "37292"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "447",
+            "9466"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 74,
@@ -248,7 +328,12 @@
           "explanationparams": [
             "1583",
             "38276"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "455",
+            "9716"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 77,
@@ -259,7 +344,12 @@
           "explanationparams": [
             "1615",
             "39358"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "463",
+            "9991"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 80,
@@ -270,7 +360,12 @@
           "explanationparams": [
             "1785",
             "47612"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "483",
+            "11132"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 83,
@@ -281,7 +376,12 @@
           "explanationparams": [
             "1817",
             "48891"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "497",
+            "11738"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 86,
@@ -292,7 +392,12 @@
           "explanationparams": [
             "1849",
             "50268"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "510",
+            "12343"
+          ],
+          "pvp_explanationid": 11
         }
       ],
       "image": "02",
@@ -325,7 +430,12 @@
           "explanationparams": [
             "30",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "20"
+          ],
+          "pvp_explanationid": 12
         }
       ],
       "image": "02",
@@ -361,7 +471,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 13
         }
       ],
       "image": "02",
@@ -394,7 +508,12 @@
           "explanationparams": [
             "30",
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "30"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "02",
@@ -428,7 +547,12 @@
             "3",
             "10",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "10",
+            "5"
+          ],
+          "pvp_explanationid": 18
         }
       ],
       "image": "02",
@@ -457,7 +581,11 @@
           "cd": 0,
           "explanationparams": [
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "02",
@@ -585,6 +713,8 @@
     "Enhances Blooming Kick. After casting it, press the regular attack button to leap into the air after kicking an enemy into the air. You can use Air Pounce or Eagle Dive while airborne.\\n#yBlooming Kick Damage: +{0}%",
     "Enhances Cyclone Kick's damage, attack speed, and range. Also allows the skill to hit knocked-down enemies.\\n#yCyclone Kick Damage: +{0}%\\nCyclone Kick Attack Speed: +{1}%",
     "Increases Physical Damage after using Air Pounce or Eagle Dive. Also resets the cooldown of #yFalling Star#w if you stay in the air for {0} secs.\\n#yDuration: {1} sec\\nPhysical Damage +{2}%",
-    "Enhances Rising Storm. You spin faster to deal more damage. \\n#yDamage +{0}%"
+    "Enhances Rising Storm. You spin faster to deal more damage. \\n#yDamage +{0}%",
+    "Temporarily reduces the cooldown of all #ypassive #wskills by {0}%.\\n#yDuration: {1} sec\\nCooldown: {2} sec",
+    "Increases Physical Damage after using Air Pounce or Eagle Dive.\\n#yDuration: {0} sec\\nPhysical Damage +{1}%"
   ]
 }

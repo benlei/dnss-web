@@ -14,7 +14,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 13
         }
       ],
       "image": "08",
@@ -47,7 +51,12 @@
           "explanationparams": [
             "50",
             "100"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50",
+            "50"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "08",
@@ -199,7 +208,14 @@
             "6842",
             "12",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "184",
+            "1916",
+            "6",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 50,
@@ -212,7 +228,14 @@
             "9063",
             "15",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "188",
+            "2538",
+            "7.5",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 55,
@@ -225,7 +248,14 @@
             "10718",
             "18",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "191",
+            "3001",
+            "9",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 60,
@@ -238,7 +268,14 @@
             "12400",
             "21",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "195",
+            "3472",
+            "10.5",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 65,
@@ -251,7 +288,14 @@
             "14229",
             "24",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "199",
+            "3479",
+            "12",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 70,
@@ -264,7 +308,14 @@
             "20866",
             "27",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "223",
+            "4444",
+            "13.5",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 75,
@@ -277,7 +328,14 @@
             "23995",
             "30",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "227",
+            "4458",
+            "15",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 80,
@@ -290,7 +348,14 @@
             "27589",
             "33",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "230",
+            "4472",
+            "16.5",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 85,
@@ -303,7 +368,14 @@
             "31722",
             "36",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "234",
+            "4486",
+            "18",
+            "6"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 90,
@@ -316,7 +388,14 @@
             "36474",
             "39",
             "15"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "238",
+            "4500",
+            "19.5",
+            "6"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "08",
@@ -349,7 +428,11 @@
           "explanationparams": [
             "30",
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 18
         }
       ],
       "image": "08",
@@ -384,7 +467,14 @@
             "6748",
             "10",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "100",
+            "271",
+            "10",
+            "20"
+          ],
+          "pvp_explanationid": 19
         },
         {
           "required_level": 60,
@@ -397,7 +487,14 @@
             "9265",
             "10",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "125",
+            "406",
+            "10",
+            "20"
+          ],
+          "pvp_explanationid": 19
         },
         {
           "required_level": 70,
@@ -410,7 +507,14 @@
             "12265",
             "10",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "150",
+            "609",
+            "10",
+            "20"
+          ],
+          "pvp_explanationid": 19
         },
         {
           "required_level": 80,
@@ -423,7 +527,14 @@
             "16270",
             "10",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "175",
+            "914",
+            "10",
+            "20"
+          ],
+          "pvp_explanationid": 19
         },
         {
           "required_level": 90,
@@ -436,7 +547,14 @@
             "21581",
             "10",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "200",
+            "1371",
+            "10",
+            "20"
+          ],
+          "pvp_explanationid": 19
         },
         {
           "required_level": 100,
@@ -449,7 +567,14 @@
             "28631",
             "10",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "225",
+            "1526",
+            "10",
+            "20"
+          ],
+          "pvp_explanationid": 19
         }
       ],
       "image": "08",
@@ -485,7 +610,13 @@
             "20",
             "8",
             "1"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "5",
+            "5",
+            "1"
+          ],
+          "pvp_explanationid": 21
         }
       ],
       "image": "08",
@@ -515,7 +646,12 @@
           "explanationparams": [
             "3",
             "3"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "3",
+            "1"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "08",
@@ -564,7 +700,14 @@
             "10",
             "100",
             "1000"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50",
+            "10",
+            "5",
+            "300"
+          ],
+          "pvp_explanationid": 20
         }
       ],
       "image": "08",
@@ -605,6 +748,11 @@
     "Enhances Toxic Swirl to deal additional damage. Press the regular attack button to activate. Roto-whirl can be used even after the extra attack.\\n#yAdditional Hit Damage: {0}% of Toxic Twirl damage",
     "Enhances Toxic Spill. Perform an additional hit by pressing the regular attack button or recover in a wide range by pressing the special attack button. The additional hit deals damage without poison and is not affected by the bubble.\\n#yAdditional Hit Damage: {0}% of Toxic Spill damage\\nAmount Recovered in Wide Range: {1}% of Toxic Spill damage",
     "After gaining an Alchemy Bubble from poison or healing skills, increases Magic Damage for #y{0} sec#w.\\n#yMagic Damage +{1}%\\nDark Attack +{2}%\\nWhen hitting the target with Injection, Injection Cooldown: -{3} sec\\nCreates {4} more Bubbles when more Injection is used.",
-    "Enhances Good Vibrations. Creates a healing aura that cures all harmful effects every {0} seconds and recovers HP by #y{1}%#w."
+    "Enhances Good Vibrations. Creates a healing aura that cures all harmful effects every {0} seconds and recovers HP by #y{1}%#w.",
+    "Infects enemies with a disease that confuses them. Confused enemies deal reduced damage, take extra magic damage, and can take damage from other enemies.\\n#yDark Magic\\nMagic Damage: {0}% + {1}\\nMagic Damage +{2}%\\nDuration: {3} sec\\n+1 Alchemy Bubble",
+    "Increases Injection's range and damage.\\n#yInjection Damage +{0}%",
+    "Heals nearby allies and temporarily boosts all damage they deal.\\n#yHealing: {0}% + {1} of Magic Damage\\nAlly Damage +{3}% for {2} sec\\nRemoves up to 10 status effects\\nObtain 1 Alchemy Bubble upon using the skill",
+    "Throws up to 3 flasks and deals more damage to the target. Spread a stronger poison to infect enemies with a disease.\\n#yContagion Damage +{0}%\\nDamage Dealt to Enemies +{1}%\\nDuration: {2} sec\\nPlague Damage +{3}",
+    "After gaining an Alchemy Bubble from poison or healing skills, gain #y{1}%#w magic damage for #y{0} sec#w.\\nCreates {2} more Bubbles when more Injection is used."
   ]
 }

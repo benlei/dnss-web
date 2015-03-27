@@ -17,7 +17,14 @@
             "12440",
             "40",
             "4.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "272",
+            "2687",
+            "40",
+            "3.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 53,
@@ -30,7 +37,14 @@
             "13793",
             "40",
             "5.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "279",
+            "2979",
+            "40",
+            "3.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 56,
@@ -43,7 +57,14 @@
             "15158",
             "40",
             "6.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "285",
+            "3274",
+            "40",
+            "4.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 59,
@@ -56,7 +77,14 @@
             "16533",
             "40",
             "7.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "292",
+            "3571",
+            "40",
+            "4.5"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 62,
@@ -69,7 +97,14 @@
             "17929",
             "40",
             "8.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "299",
+            "3686",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 65,
@@ -82,7 +117,14 @@
             "24601",
             "40",
             "9.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "334",
+            "4681",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 68,
@@ -95,7 +137,14 @@
             "26724",
             "40",
             "10.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "341",
+            "4715",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 71,
@@ -108,7 +157,14 @@
             "29016",
             "40",
             "10.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "347",
+            "4748",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 74,
@@ -121,7 +177,14 @@
             "31501",
             "40",
             "10.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "354",
+            "4782",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 77,
@@ -134,7 +197,14 @@
             "34191",
             "40",
             "10.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "360",
+            "4815",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 80,
@@ -147,7 +217,14 @@
             "44937",
             "40",
             "10.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "396",
+            "5810",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 83,
@@ -160,7 +237,14 @@
             "48792",
             "40",
             "10.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "402",
+            "5844",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 86,
@@ -173,7 +257,14 @@
             "52969",
             "40",
             "10.0"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "409",
+            "5877",
+            "40",
+            "5.0"
+          ],
+          "pvp_explanationid": 11
         }
       ],
       "image": "08",
@@ -336,7 +427,12 @@
           "explanationparams": [
             "50",
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50",
+            "50"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "08",
@@ -371,7 +467,12 @@
             "10",
             "20",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "5",
+            "5"
+          ],
+          "pvp_explanationid": 18
         }
       ],
       "image": "08",
@@ -400,7 +501,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "08",
@@ -432,7 +537,11 @@
           "cd": 0,
           "explanationparams": [
 
-          ]
+          ],
+          "pvp_explanationparams": [
+
+          ],
+          "pvp_explanationid": 13
         }
       ],
       "image": "08",
@@ -464,7 +573,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 12
         }
       ],
       "image": "08",
@@ -502,7 +615,11 @@
             "30",
             "10",
             "11"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "08",
@@ -539,7 +656,16 @@
             "6",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "95",
+            "636",
+            "9",
+            "3",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 50,
@@ -554,7 +680,16 @@
             "8",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "99",
+            "827",
+            "12",
+            "4",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 55,
@@ -569,7 +704,16 @@
             "10",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "102",
+            "972",
+            "15",
+            "5",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 60,
@@ -584,7 +728,16 @@
             "12",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "105",
+            "1120",
+            "18",
+            "6",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 65,
@@ -599,7 +752,16 @@
             "14",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "109",
+            "1135",
+            "21",
+            "7",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 70,
@@ -614,7 +776,16 @@
             "16",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "124",
+            "1390",
+            "24",
+            "8",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 75,
@@ -629,7 +800,16 @@
             "18",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "128",
+            "1408",
+            "27",
+            "9",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 80,
@@ -644,7 +824,16 @@
             "20",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "131",
+            "1425",
+            "30",
+            "10",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 85,
@@ -659,7 +848,16 @@
             "22",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "135",
+            "1442",
+            "33",
+            "11",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 90,
@@ -674,7 +872,16 @@
             "24",
             "15",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "138",
+            "1460",
+            "36",
+            "12",
+            "15",
+            "5"
+          ],
+          "pvp_explanationid": 9
         }
       ],
       "image": "08",
@@ -711,6 +918,8 @@
     "Enhances Magma Monument to launch more pillars and deal more damage when they explode.",
     "The heat from Ground Zero continues to damage nearby enemies.\\n#yHeat Damage: {0}% of Ground Zero damage",
     "After gaining an Alchemy Bubble from fire or ice skills, increases Magic Damage for #y{0} sec#w.\\n#yMagic Damage +{0}%\\nFire Attack +{2}%\\nIce Attack +{3}%",
-    "Enhances Ice Beam. Duration of Ice Beam increases. #yLeft-click#w to shoot Ice Bombs while firing the Ice Beam. \\n#yAdditional Damage: {0}%\\n#yIce Bomb Damage: {1}%"
+    "Enhances Ice Beam. Duration of Ice Beam increases. #yLeft-click#w to shoot Ice Bombs while firing the Ice Beam. \\n#yAdditional Damage: {0}%\\n#yIce Bomb Damage: {1}%",
+    "Increases damage and range of Volcano Punch. \\n#yVolcano Punch Damage: +{0}%",
+    "After gaining an Alchemy Bubble from fire or ice skills, gain #y{1}%#w magic damage for #y{0} sec#w."
   ]
 }

@@ -14,7 +14,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 10
         }
       ],
       "image": "01",
@@ -46,7 +50,11 @@
           "cd": 0,
           "explanationparams": [
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50"
+          ],
+          "pvp_explanationid": 12
         }
       ],
       "image": "01",
@@ -82,7 +90,11 @@
           "cd": 0,
           "explanationparams": [
             "30"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "15"
+          ],
+          "pvp_explanationid": 13
         }
       ],
       "image": "01",
@@ -115,7 +127,12 @@
           "explanationparams": [
             "30",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "5"
+          ],
+          "pvp_explanationid": 14
         }
       ],
       "image": "01",
@@ -150,7 +167,14 @@
             "10",
             "5",
             "0.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "2",
+            "10",
+            "5",
+            "0.5"
+          ],
+          "pvp_explanationid": 15
         }
       ],
       "image": "01",
@@ -179,7 +203,11 @@
           "cd": 0,
           "explanationparams": [
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "01",
@@ -317,7 +345,13 @@
             "237",
             "2162",
             "10"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "134",
+            "242",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 50,
@@ -329,7 +363,13 @@
             "271",
             "4567",
             "9.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "148",
+            "512",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 55,
@@ -341,7 +381,13 @@
             "305",
             "7451",
             "9"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "163",
+            "835",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 60,
@@ -353,7 +399,13 @@
             "338",
             "11006",
             "8.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "178",
+            "1233",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 65,
@@ -365,7 +417,13 @@
             "372",
             "15377",
             "8"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "193",
+            "1502",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 70,
@@ -377,7 +435,13 @@
             "406",
             "20851",
             "7.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "208",
+            "1775",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 75,
@@ -389,7 +453,13 @@
             "411",
             "24025",
             "7"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "210",
+            "1785",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 80,
@@ -401,7 +471,13 @@
             "415",
             "27676",
             "6.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "212",
+            "1796",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 85,
@@ -413,7 +489,13 @@
             "420",
             "31877",
             "6"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "214",
+            "1808",
+            "20"
+          ],
+          "pvp_explanationid": 17
         },
         {
           "required_level": 90,
@@ -425,7 +507,13 @@
             "425",
             "36708",
             "5.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "216",
+            "1821",
+            "20"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "01",
@@ -463,7 +551,17 @@
             "17912",
             "1",
             "3"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "287",
+            "2756",
+            "1",
+            "3"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 53,
@@ -479,7 +577,17 @@
             "19907",
             "1",
             "3.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "294",
+            "3063",
+            "1",
+            "3"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 56,
@@ -495,7 +603,17 @@
             "21990",
             "1",
             "4"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "301",
+            "3383",
+            "1",
+            "3"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 59,
@@ -511,7 +629,17 @@
             "24159",
             "1",
             "4.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "308",
+            "3717",
+            "1",
+            "3"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 62,
@@ -527,7 +655,17 @@
             "26430",
             "1",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "314",
+            "3869",
+            "1",
+            "3"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 65,
@@ -543,7 +681,17 @@
             "34859",
             "1",
             "5.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "351",
+            "4729",
+            "1",
+            "3"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 68,
@@ -559,7 +707,17 @@
             "38196",
             "1",
             "6"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "358",
+            "4816",
+            "1",
+            "4"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 71,
@@ -575,7 +733,17 @@
             "41843",
             "1",
             "6.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "365",
+            "4914",
+            "1",
+            "4"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 74,
@@ -591,7 +759,17 @@
             "45833",
             "1",
             "7"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "372",
+            "5023",
+            "1",
+            "4"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 77,
@@ -607,7 +785,17 @@
             "50182",
             "1",
             "7.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "379",
+            "5143",
+            "1",
+            "4"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 80,
@@ -623,7 +811,17 @@
             "63875",
             "1",
             "8"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "396",
+            "5709",
+            "1",
+            "4"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 83,
@@ -639,7 +837,17 @@
             "69823",
             "1",
             "8.5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "407",
+            "5994",
+            "1",
+            "4"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 86,
@@ -655,7 +863,17 @@
             "76279",
             "1",
             "9"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "40",
+            "1",
+            "419",
+            "6279",
+            "1",
+            "4"
+          ],
+          "pvp_explanationid": 11
         }
       ],
       "image": "01",
@@ -692,6 +910,7 @@
     "While Hacking Stance is active, press the special attack button to lift enemies into the air. Cancels Hacking Stance. Also increases Hacking Stance's attack range.\\n#yHacking Stance Damage: +{0}%",
     "Increases Frenzied Charge's damage. Also creates a blade of wind to slash enemies after you pass them.\\n#yFrenzied Charge Damage: +{0}%\\nDamage per Blade of Wind: {1}% of Frenzied Charge damage",
     "Creates a buff that increases your #yPhysical Damage#w whenever you launch a physical attack successfully.\\n#yPhysical Damage per Buff: +{0}%\\nCan be stacked up to {1} times\\nDuration: {2} sec\\n(Internal Cooldown: {3} sec)",
-    "Enhances Coup de Grace. Plant your blade in the ground to deal damage to the enemy 2 times. The second explosion deals an additional {0}% damage."
+    "Enhances Coup de Grace. Plant your blade in the ground to deal damage to the enemy 2 times. The second explosion deals an additional {0}% damage.",
+    "Backstep, evading enemy attacks, then lash out at the enemy in front of you. This can be triggered with the #yJump Key#w during any attack motion.\\n#yPhysical Attack Power {0}%+{1}\\nCooldown {2} sec "
   ]
 }

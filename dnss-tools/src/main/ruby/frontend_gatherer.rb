@@ -133,12 +133,13 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
   query = <<-sql_query
     SELECT  _needjob,
            _skillindex as id,
+           _skilllevel,
            _levellimit as required_level,
            _decreasesp as mpcost,
            _skillexplanationid as explanationid, _skillexplanationidparam,
            _needskillpoint as spcost,
            _delaytime as cd
-    FROM skills_%s_pve s
+    FROM skills_%s_%s s
     INNER JOIN skills
       ON _skillindex = skills._id
     WHERE _needjob > 0
@@ -146,14 +147,23 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
     ORDER BY _skillindex, _skilllevel ASC
   sql_query
 
-  @conn.exec(query % job['englishname']).each_dnt do |skill|
+  @conn.exec(query % [job['englishname'], 'pve']).each_dnt do |skill|
     jobs[skill['needjob']]['skills'][skill['id']]['levels'] << skill
 
     skillparams = skill['skillexplanationidparam'].to_s
     skill['explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
     skill['explanationid'] = get_local_message_id(jobs[skill['needjob']]['message'], skill['explanationid'], messages)
 
-    ['id', 'needjob', 'skillexplanationidparam'].each {|a| skill.delete(a)}
+    ['id', 'skilllevel', 'needjob', 'skillexplanationidparam'].each {|a| skill.delete(a)}
+  end
+
+  @conn.exec(query % [job['englishname'], 'pvp']).each_dnt do |pvp_skill|
+    level = jobs[pvp_skill['needjob']]['skills'][pvp_skill['id']]['levels'][pvp_skill['skilllevel'].to_i - 1]
+    next if level.nil?
+
+    skillparams = pvp_skill['skillexplanationidparam'].to_s
+    level['pvp_explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
+    level['pvp_explanationid'] = get_local_message_id(jobs[pvp_skill['needjob']]['message'], pvp_skill['explanationid'], messages)
   end
 end
 

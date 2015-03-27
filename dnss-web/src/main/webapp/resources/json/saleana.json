@@ -14,7 +14,11 @@
           "cd": 0,
           "explanationparams": [
             "50"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50"
+          ],
+          "pvp_explanationid": 16
         }
       ],
       "image": "03",
@@ -151,7 +155,12 @@
           "explanationparams": [
             "40",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "20",
+            "20"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 55,
@@ -162,7 +171,12 @@
           "explanationparams": [
             "60",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "20"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 65,
@@ -173,7 +187,12 @@
           "explanationparams": [
             "80",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "20"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 75,
@@ -184,7 +203,12 @@
           "explanationparams": [
             "100",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "50",
+            "20"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 85,
@@ -195,7 +219,12 @@
           "explanationparams": [
             "120",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "60",
+            "20"
+          ],
+          "pvp_explanationid": 9
         },
         {
           "required_level": 95,
@@ -206,7 +235,12 @@
           "explanationparams": [
             "140",
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "70",
+            "20"
+          ],
+          "pvp_explanationid": 9
         }
       ],
       "image": "03",
@@ -243,7 +277,13 @@
             "5",
             "8416",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "20",
+            "25",
+            "50"
+          ],
+          "pvp_explanationid": 17
         }
       ],
       "image": "03",
@@ -279,7 +319,15 @@
             "5",
             "30",
             "4839"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "276",
+            "8066",
+            "5",
+            "30",
+            "360"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 53,
@@ -293,7 +341,15 @@
             "5",
             "30",
             "5379"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "282",
+            "8965",
+            "5",
+            "30",
+            "400"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 56,
@@ -307,7 +363,15 @@
             "5",
             "30",
             "5948"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "288",
+            "9913",
+            "5",
+            "30",
+            "443"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 59,
@@ -321,7 +385,15 @@
             "5",
             "30",
             "6544"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "294",
+            "10907",
+            "5",
+            "30",
+            "487"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 62,
@@ -335,7 +407,15 @@
             "5",
             "30",
             "7173"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "300",
+            "11396",
+            "5",
+            "30",
+            "509"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 65,
@@ -349,7 +429,15 @@
             "5",
             "30",
             "9884"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "332",
+            "14572",
+            "5",
+            "30",
+            "651"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 68,
@@ -363,7 +451,15 @@
             "5",
             "30",
             "10845"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "339",
+            "14894",
+            "5",
+            "30",
+            "666"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 71,
@@ -377,7 +473,15 @@
             "5",
             "30",
             "11896"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "345",
+            "15256",
+            "5",
+            "30",
+            "682"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 74,
@@ -391,7 +495,15 @@
             "5",
             "30",
             "13046"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "351",
+            "15658",
+            "5",
+            "30",
+            "700"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 77,
@@ -405,7 +517,15 @@
             "5",
             "30",
             "14301"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "357",
+            "16101",
+            "5",
+            "30",
+            "778"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 80,
@@ -419,7 +539,15 @@
             "5",
             "30",
             "18721"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "372",
+            "17940",
+            "5",
+            "30",
+            "825"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 83,
@@ -433,7 +561,15 @@
             "5",
             "30",
             "20478"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "382",
+            "18916",
+            "5",
+            "30",
+            "872"
+          ],
+          "pvp_explanationid": 11
         },
         {
           "required_level": 86,
@@ -447,7 +583,15 @@
             "5",
             "30",
             "22384"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "392",
+            "19892",
+            "5",
+            "30",
+            "919"
+          ],
+          "pvp_explanationid": 11
         }
       ],
       "image": "03",
@@ -484,7 +628,13 @@
             "5",
             "8416",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "40",
+            "20",
+            "3"
+          ],
+          "pvp_explanationid": 18
         }
       ],
       "image": "03",
@@ -524,7 +674,12 @@
             "5",
             "8416",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30",
+            "60"
+          ],
+          "pvp_explanationid": 19
         }
       ],
       "image": "03",
@@ -559,7 +714,11 @@
             "5",
             "8416",
             "5"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "30"
+          ],
+          "pvp_explanationid": 20
         }
       ],
       "image": "03",
@@ -591,7 +750,11 @@
           "cd": 0,
           "explanationparams": [
             "20"
-          ]
+          ],
+          "pvp_explanationparams": [
+            "5"
+          ],
+          "pvp_explanationid": 15
         }
       ],
       "image": "03",
@@ -625,6 +788,10 @@
     "While using Fire Wall, press the regular attack button to throw a flame in front. Also enhances Fire Wall to cause Burn. \\n#yAdditional Hit Damage: {0} - {1}% of Fire Wall damage\\nBurn Damage: {2}% of Magic Damage + {3} for {4} ticks",
     "Creates an explosion where Hot Rod was cast. Also enhances Hot Rod to cause Burn. \\n#yDamage per Explosion: {0}% of Hot Rod damage\\nBurn Damage: {1}% of Magic Damage + {2} for {3} ticks",
     "Increases Fire Damage by #y{0}%#w.",
-    "Allows you to briefly control the summoned ball of magma. #yLeft-click#w to shoot it. The ball will be shot automatically if you do not fire it after a certain amount of time.\\n#yBonus Explosion Damage: {0}%"
+    "Allows you to briefly control the summoned ball of magma. #yLeft-click#w to shoot it. The ball will be shot automatically if you do not fire it after a certain amount of time.\\n#yBonus Explosion Damage: {0}%",
+    "Enhances Fireball's max charge damage. Press the special attack button to split the flame into three separate blasts. \\n#yFireball Max Charge Damage: +{0}%\\nDamage per Projectile (2nd part): {1}%\\nDamage per Projectile (3rd part): {2}%",
+    "Enhances Inferno's attack range. Finish casting the skill or press the regular attack button to trigger an explosion that damages enemies and decreases their Fire Resist.\\n#yExplosion Damage: {0}% of Inferno damage\\nEnemy Fire Resist: -{1}% for {2} sec",
+    "While using Fire Wall, press the regular attack button to throw a flame in front. \\n#yAdditional Hit Damage: {0} - {1}% of Fire Wall damage",
+    "Creates an explosion where Hot Rod was cast.\\n#yDamage per Explosion: {0}% of Hot Rod damage"
   ]
 }
