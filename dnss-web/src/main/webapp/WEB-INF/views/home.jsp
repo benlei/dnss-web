@@ -69,7 +69,11 @@ function generateBuild() {
     build[i] = $(this).find('.skill').length ? map[($(this).find('.skill').data('permanent') ? -1 : 0) + getLevel($(this).find('.skill')).current] : map[0];
   });
 
-  var link = $('#builder').data('base') + '?' + build.join('');
+  var link = $('#builder').data('base') + '?' + build.join('')
+  if ($('#mode').val() == 'pvp') {
+    link = link + map[0];
+  }
+
   $('#builder').html('<strong>Build URL:</strong> <a href="' + link + '">' + link + '</a>');
 }
 
@@ -90,6 +94,16 @@ function rebuildSimulation(str) {
 
   for (var i = 97; i < 123; i++) {
     map[String.fromCharCode(i)] = k++;
+  }
+
+  var other;
+  if (str.length > 24*3) {
+    other = str.substr(24*3);
+    str = str.substr(0,24*3);
+  }
+
+  if (other && map[other.charAt(0)] == 0) {
+    $('#mode').val('pvp');
   }
 
   $('.skill-container').each(function(i) {
@@ -370,6 +384,7 @@ $('#job-list-sp li[data-job]').each(function() {
 
 $('#mode').click(function() {
   $(this).val($(this).val() == 'pve' ? 'pvp' : 'pve');
+  generateBuild();
   setDescription(lastSkillDesc);
 });
 
