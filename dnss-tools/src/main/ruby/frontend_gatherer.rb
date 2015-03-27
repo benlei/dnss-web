@@ -150,7 +150,7 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
     jobs[skill['needjob']]['skills'][skill['id']]['levels'] << skill
 
     skillparams = skill['skillexplanationidparam'].to_s
-    skillparams = skillparams.split(',').map {|str| str.strip.message_format(messages)}
+    skill['explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
     skill['explanationid'] = get_local_message_id(jobs[skill['needjob']]['message'], skill['explanationid'], messages)
 
     ['id', 'needjob', 'skillexplanationidparam'].each {|a| skill.delete(a)}

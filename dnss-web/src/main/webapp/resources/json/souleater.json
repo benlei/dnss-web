@@ -128,98 +128,210 @@
           "mpcost": 19,
           "explanationid": 9,
           "spcost": 3,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "223",
+            "6226",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 48,
           "mpcost": 22,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "227",
+            "7672",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 51,
           "mpcost": 24,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "231",
+            "8576",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 54,
           "mpcost": 26,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "235",
+            "9489",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 57,
           "mpcost": 28,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "239",
+            "10411",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 60,
           "mpcost": 31,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "258",
+            "13349",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 63,
           "mpcost": 34,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "262",
+            "16106",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 66,
           "mpcost": 36,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "266",
+            "17520",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 69,
           "mpcost": 38,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "270",
+            "19062",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 72,
           "mpcost": 40,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "274",
+            "20736",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 75,
           "mpcost": 43,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "293",
+            "25956",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 78,
           "mpcost": 45,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "297",
+            "28237",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 81,
           "mpcost": 48,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "301",
+            "30715",
+            "100",
+            "15",
+            "10"
+          ]
         },
         {
           "required_level": 84,
           "mpcost": 50,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 7000
+          "cd": 7000,
+          "explanationparams": [
+            "3",
+            "305",
+            "33414",
+            "100",
+            "15",
+            "10"
+          ]
         }
       ],
       "image": "09",
@@ -248,7 +360,10 @@
           "mpcost": 0,
           "explanationid": 10,
           "spcost": 3,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "30"
+          ]
         }
       ],
       "image": "09",
@@ -277,63 +392,126 @@
           "mpcost": 21,
           "explanationid": 11,
           "spcost": 3,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "724",
+            "10982",
+            "10",
+            "50",
+            "15"
+          ]
         },
         {
           "required_level": 55,
           "mpcost": 24,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "749",
+            "12957",
+            "12.5",
+            "52.5",
+            "15"
+          ]
         },
         {
           "required_level": 60,
           "mpcost": 26,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "774",
+            "14962",
+            "15",
+            "55",
+            "15"
+          ]
         },
         {
           "required_level": 65,
           "mpcost": 29,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "799",
+            "17134",
+            "17.5",
+            "57.5",
+            "15"
+          ]
         },
         {
           "required_level": 70,
           "mpcost": 31,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "824",
+            "19647",
+            "20",
+            "60",
+            "15"
+          ]
         },
         {
           "required_level": 75,
           "mpcost": 34,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "925",
+            "27278",
+            "22.5",
+            "62.5",
+            "17"
+          ]
         },
         {
           "required_level": 80,
           "mpcost": 37,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "950",
+            "31282",
+            "25",
+            "65",
+            "17"
+          ]
         },
         {
           "required_level": 85,
           "mpcost": 39,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "974",
+            "35872",
+            "27.5",
+            "67.5",
+            "17"
+          ]
         },
         {
           "required_level": 90,
           "mpcost": 42,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 40000
+          "cd": 40000,
+          "explanationparams": [
+            "999",
+            "41135",
+            "30",
+            "70",
+            "17"
+          ]
         }
       ],
       "image": "09",
@@ -362,7 +540,11 @@
           "mpcost": 0,
           "explanationid": 12,
           "spcost": 0,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "15",
+            "3"
+          ]
         }
       ],
       "image": "09",
@@ -395,7 +577,10 @@
           "mpcost": 19,
           "explanationid": 13,
           "spcost": 0,
-          "cd": 35000
+          "cd": 35000,
+          "explanationparams": [
+            "10"
+          ]
         }
       ],
       "image": "09",
@@ -424,7 +609,10 @@
           "mpcost": 0,
           "explanationid": 14,
           "spcost": 2,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "20"
+          ]
         }
       ],
       "image": "09",
@@ -453,7 +641,10 @@
           "mpcost": 0,
           "explanationid": 15,
           "spcost": 1,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "10"
+          ]
         }
       ],
       "image": "09",
@@ -479,7 +670,11 @@
           "mpcost": 0,
           "explanationid": 16,
           "spcost": 2,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "50",
+            "300"
+          ]
         }
       ],
       "image": "09",

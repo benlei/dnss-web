@@ -1,20 +1,17 @@
-<!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html lang="en">
-<title>${jobs[2].name} - DNSS</title>
+<title>${jobs[fn:length(jobs) - 1].name} - DNSS</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link href="/css/main.css" rel="stylesheet" type="text/css" />
 <body>
 <main>
+  <aside id="builder" data-base="http://dnss.herokuapp.com/job/${jobs[fn:length(jobs) - 1].identifier}"></aside>
   <aside id="sidebar-1">
     <ul id="job-list-sp"><c:forEach items="${jobs}" var="job" varStatus="loop">
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
-
-    <div id="warnings">
-      Hello
-    </div>
   </aside>
   <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
     <table class="skill-tree" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
@@ -22,63 +19,204 @@
         <td class="skill-container">
           <div class="skill" data-id="${skill}" />
           <div class="lvl">0/0</div></c:when><c:otherwise>
-        <td  class="skill-container"></c:otherwise></c:choose></c:forEach></c:forEach>
+        <td class="skill-container"></c:otherwise></c:choose></c:forEach></c:forEach>
     </table></c:forEach>
   </section>
   <aside id="sidebar-2">
-    <h2>Magma Monument</h2>
+    <h2 id="skill-name">Magma Monument</h2>
     <div class="skill-description">
       <ul class="meta">
-        <li id="skill-level"><span>Skill Lv.: </span>15 &rarr; 16</li>
-        <li id="skill-mpcost"><span>Fee MP: </span>4.9% &rarr; 5.1% of base MP</li>
-        <li id="skill-cd"><span>Cooldown: </span>25 &rarr; 20 sec</li>
-        <li id="skill-required-level"><span>Level Limit: </span>43 &rarr; 49</li>
-        <li id="skill-required-weapon"><span>Required Weapon: </span>Bubble Blaster</li>
-        <li id="skill-type"><span>Skill Type: </span>Reactive Passive</li>
-        <li id="skill-current-description"><span>Skill Description:</span>
-          <div class="description">
-            Happy happy
-          </div>
-        </li>
-        <li  id="skill-next-description"><span>Next Description:</span>
-          <div class="description">
-            joy joy
-          </div>
-        </li>
+        <li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span><span id="skill-sp"></span></li>
+        <li id="skill-mpcost"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
+        <li id="skill-cd"><span class="y">Cooldown: </span><span class="w"></span> sec</li>
+        <li id="skill-required-level"><span class="y">Level Limit: </span><span class="w"></span></li>
+        <li id="skill-required-weapon"><span class="y">Required Weapon: </span><span class="w"></span></li>
+        <li id="skill-type"><span class="y">Skill Type: </span><span class="w"></span></li>
+        <li id="skill-description"><span class="y">Skill Description:</span><div class="description"></div></li>
+        <li id="next-description"><span class="y">Next Description:</span><div class="description"></div></li>
       </ul>
     </div>
   </aside>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
-function setDescription($skill) { // also sets warnings!
-  var job = jobs[$skill.data('job')], skills=job.skills, skill = skills[$skill.data('id')];
+function generateBuild() {
+  var build = [];
+  var map = ['-'];
+  for (var i = 0; i < 10; i++) {
+    map.push(i);
+  }
+
+  for (var i = 65; i < 91; i++) {
+    map.push(String.fromCharCode(i));
+  }
+
+  for (var i = 97; i < 123; i++) {
+    map.push(String.fromCharCode(i));
+  }
+
+  $('.skill-container').each(function(i) {
+    build[i] = $(this).find('.skill').length ? map[($(this).find('.skill').data('permanent') ? -1 : 0) + getLevel($(this).find('.skill')).current] : map[0];
+  });
+
+  var link = $('#builder').data('base') + '?' + build.join('');
+  $('#builder').html('<strong>Build URL:</strong> <a href="' + link + '">' + link + '</a>');
 }
 
-function setActive(skill, perm) {
-  if (perm) {
-    skill.data('permanent', 1);
-    incSkill(skill, 0);
+// lazy rebuild
+function rebuildSimulation(str) {
+  if (str.length < 24*3) { // not good
     return;
   }
 
-  var bg = skill.css('background-image');
+  var map = {'-': 0}, k = 1;
+  for (var i = 0; i < 10; i++) {
+    map[i] = k++;
+  }
+
+  for (var i = 65; i < 91; i++) {
+    map[String.fromCharCode(i)] = k++;
+  }
+
+  for (var i = 97; i < 123; i++) {
+    map[String.fromCharCode(i)] = k++;
+  }
+
+  $('.skill-container').each(function(i) {
+    var curr = map[str.charAt(i)];
+    for (var j = 0; j < curr; j++) {
+      incSkill($(this).find('.skill'));
+    }
+  });
+}
+
+function formatDescription(str, params) {
+  if (str) {
+    for (i in params) {
+      str = str.replace('{' + i + '}', params[i]);
+    }
+
+    str = str.replace(/#y(.+?)#w/g, '<span class="y">$1</span>');
+    str = str.replace(/#y(.+)/g, '<span class="y">$1</span>');
+    str = str.replace(/\\n/g, '<br />');
+    str = str.replace(/\<br \/\>/g, '&nbsp;<br />');
+    return str;
+  } else {
+    return '';
+  }
+}
+
+function setDescription($skill) { // also sets warnings!
+  var job = jobs[$skill.data('job')], skills = job.skills, skill = skills[$skill.data('id')];
+  var lvl = getLevel($skill);
+  var skillLevel, skillSP, skillMP, skillCD, skillRequiredLevel, skillRequiredWeapon, skillDescription, nextDescription;
+
+  if (! lvl.current) {
+    skillLevel = 1;
+    skillCD = skill.levels[0].cd / 1000;
+    skillSP = skill.levels[0].spcost;
+    skillRequiredLevel = skill.levels[0].required_level;
+    skillDescription = formatDescription(job.message[skill.levels[0].explanationid], skill.levels[0].explanationparams);
+    skillMP = (skill.levels[0].mpcost / 10.0) + '%';
+  } else if (lvl.current == skill.levels.length) {
+    skillLevel = lvl.current;
+    skillCD = skill.levels[lvl.current - 1].cd / 1000;
+    skillRequiredLevel = skill.levels[lvl.current - 1].required_level;
+    skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1].explanationid], skill.levels[lvl.current - 1].explanationparams);
+    skillMP = (skill.levels[lvl.current - 1].mpcost / 10.0) + '%';
+  } else {
+    skillLevel = lvl.current + ' &rarr; ' + (lvl.current+1);
+    if (skill.levels[lvl.current - 1].cd == skill.levels[lvl.current].cd) {
+      skillCD = skill.levels[lvl.current - 1].cd / 1000;
+    } else {
+      skillCD = (skill.levels[lvl.current - 1].cd / 1000) + ' &rarr; ' + (skill.levels[lvl.current].cd / 1000);
+    }
+
+    skillRequiredLevel = skill.levels[lvl.current - 1].required_level + ' &rarr; ' + skill.levels[lvl.current].required_level;
+    skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1].explanationid], skill.levels[lvl.current - 1].explanationparams);
+    nextDescription = formatDescription(job.message[skill.levels[lvl.current].explanationid], skill.levels[lvl.current].explanationparams);
+    skillSP = skill.levels[lvl.current].spcost;
+    skillMP = (skill.levels[lvl.current - 1].mpcost/10.0) + '% &rarr; ' + (skill.levels[lvl.current].mpcost/10.0) + '%';
+  }
+
+  skillRequiredWeapon = [];
+  for (i in skill.needweapon) {
+    skillRequiredWeapon[i] = weapon_types[skill.needweapon[i]];
+  }
+
+  $('#skill-name').html(job.message[skill.nameid]);
+  $('#skill-level .w').html(skillLevel);
+  $('#skill-cd .w').html(skillCD);
+  $('#skill-required-level .w').html(skillRequiredLevel);
+  $('#skill-required-weapon .w').html(skillRequiredWeapon.join(', '));
+  $('#skill-type .w').html(skill_types[skill.type]);
+  $('#skill-mpcost .w').html(skillMP);
+  $('#skill-description .description').html(skillDescription);
+  $('#next-description .description').html(skillDescription);
+  $('#skill-sp').html(skillSP + ' SP');
+
+  // post-change adjustments
+  if (skillCD) {
+    $('#skill-cd').show();
+  } else {
+    $('#skill-cd').hide();
+  }
+
+  if (skillRequiredWeapon.length) {
+    $('#skill-required-weapon').show();
+  } else {
+    $('#skill-required-weapon').hide();
+  }
+
+  if (skillDescription) {
+    $('#skill-description').show();
+  } else {
+    $('#skill-description').hide();
+  }
+
+  if (nextDescription) {
+    $('#next-description').show();
+  } else {
+    $('#next-description').hide();
+  }
+
+  if (skillSP) {
+    $('#skill-sp').show();
+  } else {
+    $('#skill-sp').hide();
+  }
+}
+
+function getLevel($skill) {
+  var lvl = $skill.children().text().split('/');
+  lvl = {'current': parseInt(lvl[0]), 'max': parseInt(lvl[1])};
+  return lvl;
+}
+
+function setActive($skill, perm) {
+  if (perm) {
+    $skill.data('permanent', 1);
+    incSkill($skill, 0);
+    return;
+  }
+
+  var bg = $skill.css('background-image');
   if (bg.indexOf('_b.png') != -1) { // remove it
-    skill.css('background-image', bg.replace('_b.png', '.png'));
+    $skill.css('background-image', bg.replace('_b.png', '.png'));
   }
 }
 
-function setInactive(skill) {
-  if (skill.data('perm')) return; // it's permanent
-  var bg = skill.css('background-image');
+function setInactive($skill) {
+  if ($skill.data('perm')) return; // it's permanent
+  var bg = $skill.css('background-image');
   if (bg.indexOf('_b.png') == -1) { // remove it
-    skill.css('background-image', bg.replace('.png', '_b.png'));
+    $skill.css('background-image', bg.replace('.png', '_b.png'));
   }
 }
 
-function incSkill(skill, max) {
-  setActive(skill);
-  var lvl = skill.children();
+function incSkill($skill, max) {
+  setActive($skill);
+  var lvl = $skill.children();
   var l = lvl.text().split('/');
   l = {'current': parseInt(l[0]), 'max': parseInt(l[1])};
   if (l.current == l.max) {
@@ -92,19 +230,20 @@ function incSkill(skill, max) {
 
   lvl.text((l.current+1) + "/" + l.max);
 
-  var change = 0, levels = jobs[skill.data('job')].skills[skill.data('id')].levels;
+  var change = 0, levels = jobs[$skill.data('job')].skills[$skill.data('id')].levels;
   for (var i = start; i < l.current + 1; i++) {
     change += levels[i].spcost;
   }
 
-  alterJobSP(skill.data('job'), change);
+  alterJobSP($skill.data('job'), change);
+  setDescription($skill);
 }
 
-function decSkill(skill, max) {
-  var lvl = skill.children();
+function decSkill($skill, max) {
+  var lvl = $skill.children();
   var l = lvl.text().split('/');
   l = {'current': parseInt(l[0]), 'max': parseInt(l[1])};
-  if (l.current == 0 || (skill.data('permanent') && l.current == 1)) {
+  if (l.current == 0 || ($skill.data('permanent') && l.current == 1)) {
     return;
   }
 
@@ -113,22 +252,23 @@ function decSkill(skill, max) {
     l.current = 1;
   }
 
-  if (skill.data('permanent') && l.current == 1) {
+  if ($skill.data('permanent') && l.current == 1) {
     l.current = 2;
   }
 
   if (l.current == 1) {
-    setInactive(skill);
+    setInactive($skill);
   }
 
   lvl.text((l.current-1) + "/" + l.max);
 
-  var change = 0, levels = jobs[skill.data('job')].skills[skill.data('id')].levels;
+  var change = 0, levels = jobs[$skill.data('job')].skills[$skill.data('id')].levels;
   for (var i = l.current - 1; i < start; i++) {
     change -= levels[i].spcost;
   }
 
-  alterJobSP(skill.data('job'), change);
+  alterJobSP($skill.data('job'), change);
+  setDescription($skill);
 }
 
 function alterJobSP(idx, change) {
@@ -152,14 +292,30 @@ function alterJobSP(idx, change) {
   } else {
     totalSP.css('color', '');
   }
+
+  generateBuild();
 }
 
+$.ajaxSetup({async: false}); // change out of this later
+
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
-var jobs = {};
+var jobs = {}, build = {};
+var weapon_types, skill_types;
+
+$.getJSON('/json/weapon_types.min.json', function(json) {weapon_types=json;});
+$.getJSON('/json/skill_types.min.json', function(json) {skill_types=json;});
 $.each(jobIds, function(i, jobId){
   $.getJSON('/json/' + jobId + '.min.json', function(job) {
+    var max = i == 1 ? 70 : 80;
+    for (s in job.skills) {
+        for (l in job.skills[s].levels) {
+          if (job.skills[s].levels[l].required_level <= max) {
+            job.skills[s].maxlevel = parseInt(l) + 1;
+          }
+        }
+    }
     jobs[i] = job;
-    $('.skill[data-id]').each(function() {
+    $('.skill').each(function() {
       var skill = job.skills[$(this).data('id')];
       if (skill) {
         var image = skill.image;
@@ -171,6 +327,7 @@ $.each(jobIds, function(i, jobId){
         $(this).click(function(e){ incSkill($(this), e.ctrlKey|e.shiftKey); });
         this.oncontextmenu = function() {return false;};
         $(this).mousedown(function(e) { if (e.button == 2) {decSkill($(this), e.ctrlKey||e.shiftKey);  return false;}});
+        $(this).hover(function() {setDescription($(this));});
       }
     });
 
@@ -193,8 +350,12 @@ $('#job-list-sp li[data-job]').each(function() {
   })
 });
 
-
-
+if (window.location.search && window.location.search.substr(1)) {
+  var skills = window.location.search.substr(1);
+  if (skills) {
+    rebuildSimulation(skills);
+  }
+}
 </script>
 </body>
 </html>

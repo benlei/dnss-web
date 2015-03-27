@@ -11,7 +11,10 @@
           "mpcost": 0,
           "explanationid": 14,
           "spcost": 2,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "30"
+          ]
         }
       ],
       "image": "03",
@@ -40,7 +43,11 @@
           "mpcost": 0,
           "explanationid": 13,
           "spcost": 0,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "130",
+            "7"
+          ]
         }
       ],
       "image": "03",
@@ -69,7 +76,10 @@
           "mpcost": 0,
           "explanationid": 12,
           "spcost": 0,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "50"
+          ]
         }
       ],
       "image": "03",
@@ -102,91 +112,143 @@
           "mpcost": 21,
           "explanationid": 11,
           "spcost": 3,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1252",
+            "21376"
+          ]
         },
         {
           "required_level": 53,
           "mpcost": 23,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1291",
+            "23757"
+          ]
         },
         {
           "required_level": 56,
           "mpcost": 25,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1330",
+            "26251"
+          ]
         },
         {
           "required_level": 59,
           "mpcost": 28,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1369",
+            "28852"
+          ]
         },
         {
           "required_level": 62,
           "mpcost": 30,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1408",
+            "31582"
+          ]
         },
         {
           "required_level": 65,
           "mpcost": 33,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1593",
+            "44691"
+          ]
         },
         {
           "required_level": 68,
           "mpcost": 36,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1632",
+            "48970"
+          ]
         },
         {
           "required_level": 71,
           "mpcost": 38,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1671",
+            "53645"
+          ]
         },
         {
           "required_level": 74,
           "mpcost": 40,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1710",
+            "58760"
+          ]
         },
         {
           "required_level": 77,
           "mpcost": 43,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1750",
+            "64336"
+          ]
         },
         {
           "required_level": 80,
           "mpcost": 46,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1934",
+            "85721"
+          ]
         },
         {
           "required_level": 83,
           "mpcost": 48,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "1973",
+            "93686"
+          ]
         },
         {
           "required_level": 86,
           "mpcost": 51,
           "explanationid": 11,
           "spcost": 1,
-          "cd": 20000
+          "cd": 20000,
+          "explanationparams": [
+            "2012",
+            "102331"
+          ]
         }
       ],
       "image": "03",
@@ -215,7 +277,13 @@
           "mpcost": 0,
           "explanationid": 10,
           "spcost": 3,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "1",
+            "2",
+            "25",
+            "50"
+          ]
         }
       ],
       "image": "03",
@@ -244,42 +312,72 @@
           "mpcost": 17,
           "explanationid": 9,
           "spcost": 3,
-          "cd": 10000
+          "cd": 10000,
+          "explanationparams": [
+            "12",
+            "1.24",
+            "180"
+          ]
         },
         {
           "required_level": 55,
           "mpcost": 21,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 10000
+          "cd": 10000,
+          "explanationparams": [
+            "16",
+            "1.32",
+            "180"
+          ]
         },
         {
           "required_level": 65,
           "mpcost": 24,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 10000
+          "cd": 10000,
+          "explanationparams": [
+            "20",
+            "1.4",
+            "180"
+          ]
         },
         {
           "required_level": 75,
           "mpcost": 27,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 10000
+          "cd": 10000,
+          "explanationparams": [
+            "24",
+            "1.48",
+            "180"
+          ]
         },
         {
           "required_level": 85,
           "mpcost": 30,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 10000
+          "cd": 10000,
+          "explanationparams": [
+            "28",
+            "1.56",
+            "180"
+          ]
         },
         {
           "required_level": 95,
           "mpcost": 33,
           "explanationid": 9,
           "spcost": 1,
-          "cd": 10000
+          "cd": 10000,
+          "explanationparams": [
+            "32",
+            "1.64",
+            "180"
+          ]
         }
       ],
       "image": "03",
@@ -412,7 +510,10 @@
           "mpcost": 0,
           "explanationid": 16,
           "spcost": 2,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "50"
+          ]
         }
       ],
       "image": "03",
@@ -441,7 +542,10 @@
           "mpcost": 0,
           "explanationid": 15,
           "spcost": 1,
-          "cd": 0
+          "cd": 0,
+          "explanationparams": [
+            "10"
+          ]
         }
       ],
       "image": "03",
