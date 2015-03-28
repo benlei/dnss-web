@@ -95,8 +95,8 @@ query = <<sql_query
   INSERT INTO skills_assassin_%1$s
     SELECT *
     FROM skills_assassin_bringer_%1$s
-    WHERE NOT EXISTS (
-      SELECT *
+    WHERE _id NOT IN (
+      SELECT _id
       FROM skills_assassin_%1$s
     )
 sql_query
