@@ -6,7 +6,7 @@
 <link href="/css/main.css" rel="stylesheet" type="text/css" />
 <body>
 <main>
-  <nav id="jobs">
+  <nav id="jobs" class="no-select">
     <ul><c:forEach items="${job0}" var="primary" varStatus="pLoop">
       <li class="primary">${primary.name}
         <ul class="sub-jobs"><c:forEach items="${job1}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent == primary}">
@@ -17,14 +17,14 @@
     </ul>
   </nav>
   <aside id="builder" data-base="http://dnss.herokuapp.com/job/${jobs[fn:length(jobs) - 1].identifier}"></aside>
-  <aside id="sidebar-1">
+  <aside id="sidebar-1" class="no-select">
     <ul id="job-list-sp"><c:forEach items="${jobs}" var="job" varStatus="loop">
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
   </aside>
   <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
-    <table class="skill-tree" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
+    <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
       <tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${skill != 0}">
         <td class="skill-container">
           <div class="skill" data-id="${skill}" />
@@ -75,7 +75,7 @@ function generateBuild() {
     link = link + map[0];
   }
 
-  $('#builder').html('<strong>Build URL:</strong> <a href="' + link + '">' + link + '</a>');
+  $('#builder').html('<a href="' + link + '">' + link + '</a>');
 }
 
 // lazy rebuild

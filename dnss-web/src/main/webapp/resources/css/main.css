@@ -78,13 +78,16 @@ ul {
 .skill-container {
   padding-right: 15px;
   padding-bottom: 25px;
+  height: 50px;
+  width: 50px;
+}
+
+.no-select {
   user-select: none; /* CSS3 (little to no support) */
   -ms-user-select: none; /* IE 10+ */
   -moz-user-select: none; /* Gecko (Firefox) */
   -webkit-user-select: none; /* Webkit (Safari, Chrome) */
   unselectable: on;
-  height: 50px;
-  width: 50px;
 }
 
 .skill {
@@ -134,10 +137,12 @@ ul {
 
 #builder {
   width: 100%;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 10px 0 20px 0;
   clear: both;
   border: 1px solid black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .7em;
 }
 
 nav {
