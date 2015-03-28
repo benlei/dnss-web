@@ -122,11 +122,47 @@ function formatDescription(str, params) {
       }
     }
 
-    str = str.replace(/#y(.+?)#w/g, '<span class="y">$1</span>');
-    str = str.replace(/#y(.+)/g, '<span class="y">$1</span>');
-    str = str.replace(/\\n/g, '<br />');
-    str = str.replace(/\<br \/\>/g, '&nbsp;<br />');
-    return str;
+    var y = 0, w = 0, newStr = '', startPos = 0;
+    for (var i = 0; i < str.length - 1; i++) {
+      switch (str.substr(i, 2)) {
+        case '#y':
+          if (y - w == 1) { // needed a closing </span>
+            newStr += str.substring(startPos, i) + '</span><span class="y">';
+          } else {
+            newStr += str.substring(startPos, i) + '<span class="y">';
+            y++;
+          }
+          
+          startPos = i + 2;
+          ++i;
+          break;
+        case '#w':
+          if (w == y) { // early #w
+            newStr +=  str.substring(startPos, i);
+          } else {
+            newStr += str.substring(startPos, i) + '</span>';
+            w++;
+          }
+
+
+          startPos = i + 2;
+          ++i;
+          break;
+        default:
+          break;
+      }
+    }
+
+    newStr = newStr + str.substring(startPos);
+
+    if (y != w) {
+      newStr = newStr + '</span>';
+    }
+
+
+    newStr = newStr.replace(/\\n/g, '<br />');
+
+    return newStr;
   } else {
     return '';
   }
