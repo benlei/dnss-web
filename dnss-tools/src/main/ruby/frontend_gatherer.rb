@@ -56,8 +56,7 @@ query = <<sql_query
          _iconimageindex,
          _needjob,
          _skilltype as type,
-         _needweapontype1, _needweapontype2,
-         _maxlevel
+         _needweapontype1, _needweapontype2
   FROM skills
   WHERE _needjob > 0
   ORDER BY _needjob ASC
@@ -214,30 +213,16 @@ mkdir_p(JSON_DIRECTORY)
 ##############################################################################
 # WRITE: weapon types
 ##############################################################################
-path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'weapon_types']
+path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
 stream = open(path, 'w')
-stream.write(JSON.pretty_generate(DN_WEAPON_TYPES))
+stream.write(JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
 stream.close()
 
-path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'weapon_types']
+path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
 stream = open(path, 'w')
-stream.write(DN_WEAPON_TYPES.to_json)
+stream.write({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}.to_json)
 stream.close()
 
-##############################################################################
-# WRITE: skill types
-##############################################################################
-path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'skill_types']
-stream = open(path, 'w')
-stream.write(JSON.pretty_generate(DN_SKILL_TYPES))
-stream.close()
-puts '%s created' % path
-
-path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'skill_types']
-stream = open(path, 'w')
-stream.write(DN_SKILL_TYPES.to_json)
-stream.close()
-puts '%s created' % path
 
 ##############################################################################
 # WRITE: all jobs

@@ -72,6 +72,8 @@ function generateBuild() {
 
   var link = $('#builder').data('base') + '?' + build.join('')
   if ($('#mode').val() == 'pvp') {
+    link = link + map[1];
+  } else {
     link = link + map[0];
   }
 
@@ -103,7 +105,7 @@ function rebuildSimulation(str) {
     str = str.substr(0,24*3);
   }
 
-  if (other && map[other.charAt(0)] == 0) {
+  if (other && map[other.charAt(0)] == 1) {
     $('#mode').val('pvp');
   }
 
