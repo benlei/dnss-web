@@ -121,12 +121,11 @@ ul {
 }
 
 #sidebar-2 li .description .y {
- color: rgb(200, 200, 100); 
-  font-weight: bold;
+  color: rgb(200, 200, 100); 
 }
 
-#skill-sp {
-  padding-left: 15px;
+#sidebar-2 li .description .p {
+  color: rgb(125, 125, 50); 
 }
 
 #next-description {

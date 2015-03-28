@@ -20,7 +20,9 @@
             "44",
             "15"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 21,
@@ -36,7 +38,9 @@
             "46",
             "20"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 24,
@@ -52,7 +56,9 @@
             "48",
             "22"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 27,
@@ -68,7 +74,9 @@
             "50",
             "56"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 30,
@@ -84,7 +92,9 @@
             "52",
             "63"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 33,
@@ -100,7 +110,9 @@
             "74",
             "195"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 36,
@@ -116,7 +128,9 @@
             "76",
             "233"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 39,
@@ -132,7 +146,9 @@
             "77",
             "278"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 42,
@@ -148,7 +164,9 @@
             "79",
             "577"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 45,
@@ -164,7 +182,9 @@
             "81",
             "661"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 48,
@@ -180,7 +200,9 @@
             "103",
             "1034"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 51,
@@ -196,7 +218,9 @@
             "105",
             "1158"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 54,
@@ -212,7 +236,9 @@
             "107",
             "1285"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 57,
@@ -228,7 +254,9 @@
             "109",
             "1415"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 60,
@@ -244,7 +272,9 @@
             "111",
             "1547"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 63,
@@ -260,7 +290,9 @@
             "133",
             "1957"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 26
         },
         {
           "required_level": 66,
@@ -276,7 +308,9 @@
             "135",
             "2005"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 27
         },
         {
           "required_level": 69,
@@ -292,7 +326,9 @@
             "137",
             "2056"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 28
         },
         {
           "required_level": 72,
@@ -308,7 +344,9 @@
             "138",
             "2109"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 29
         },
         {
           "required_level": 75,
@@ -324,7 +362,9 @@
             "140",
             "2165"
           ],
-          "pvp_explanationid": 35
+          "pvp_explanationid": 35,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 30
         }
       ],
       "image": "03",
@@ -359,7 +399,9 @@
             "9.0",
             "80"
           ],
-          "pvp_explanationid": 34
+          "pvp_explanationid": 34,
+          "pvp_cd": 225000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 44,
@@ -375,7 +417,9 @@
             "12.0",
             "80"
           ],
-          "pvp_explanationid": 34
+          "pvp_explanationid": 34,
+          "pvp_cd": 225000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 54,
@@ -391,7 +435,9 @@
             "15.0",
             "80"
           ],
-          "pvp_explanationid": 34
+          "pvp_explanationid": 34,
+          "pvp_cd": 225000,
+          "pvp_mpcost": 12
         }
       ],
       "image": "03",
@@ -429,7 +475,9 @@
             "75",
             "75"
           ],
-          "pvp_explanationid": 41
+          "pvp_explanationid": 41,
+          "pvp_cd": 90000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 60,
@@ -448,7 +496,9 @@
             "75",
             "75"
           ],
-          "pvp_explanationid": 41
+          "pvp_explanationid": 41,
+          "pvp_cd": 90000,
+          "pvp_mpcost": 17
         }
       ],
       "image": "03",
@@ -490,7 +540,9 @@
             "12",
             "2.5"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 28,
@@ -510,7 +562,9 @@
             "16",
             "5"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 38,
@@ -530,7 +584,9 @@
             "20",
             "7.5"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 48,
@@ -550,7 +606,9 @@
             "24",
             "10"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 58,
@@ -570,7 +628,9 @@
             "28",
             "12.5"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 68,
@@ -590,7 +650,9 @@
             "32",
             "15"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 78,
@@ -610,7 +672,9 @@
             "36",
             "17.5"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 88,
@@ -630,7 +694,9 @@
             "40",
             "20"
           ],
-          "pvp_explanationid": 32
+          "pvp_explanationid": 32,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 19
         }
       ],
       "image": "03",
@@ -666,7 +732,9 @@
           "pvp_explanationparams": [
             "4"
           ],
-          "pvp_explanationid": 31
+          "pvp_explanationid": 31,
+          "pvp_cd": 40000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 36,
@@ -680,7 +748,9 @@
           "pvp_explanationparams": [
             "5"
           ],
-          "pvp_explanationid": 31
+          "pvp_explanationid": 31,
+          "pvp_cd": 40000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 46,
@@ -694,7 +764,9 @@
           "pvp_explanationparams": [
             "6"
           ],
-          "pvp_explanationid": 31
+          "pvp_explanationid": 31,
+          "pvp_cd": 40000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 56,
@@ -708,7 +780,9 @@
           "pvp_explanationparams": [
             "7"
           ],
-          "pvp_explanationid": 31
+          "pvp_explanationid": 31,
+          "pvp_cd": 40000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 66,
@@ -722,7 +796,9 @@
           "pvp_explanationparams": [
             "8"
           ],
-          "pvp_explanationid": 31
+          "pvp_explanationid": 31,
+          "pvp_cd": 40000,
+          "pvp_mpcost": 14
         }
       ],
       "image": "03",
@@ -759,7 +835,9 @@
             "82",
             "19"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 25,
@@ -777,7 +855,9 @@
             "86",
             "62"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 30,
@@ -795,7 +875,9 @@
             "91",
             "78"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 35,
@@ -813,7 +895,9 @@
             "96",
             "196"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 40,
@@ -831,7 +915,9 @@
             "101",
             "259"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 45,
@@ -849,7 +935,9 @@
             "122",
             "738"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 50,
@@ -867,7 +955,9 @@
             "127",
             "956"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 55,
@@ -885,7 +975,9 @@
             "132",
             "1138"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 60,
@@ -903,7 +995,9 @@
             "136",
             "1329"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 65,
@@ -921,7 +1015,9 @@
             "141",
             "1401"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 70,
@@ -939,7 +1035,9 @@
             "163",
             "1778"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 75,
@@ -957,7 +1055,9 @@
             "167",
             "1865"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 80,
@@ -975,7 +1075,9 @@
             "172",
             "1958"
           ],
-          "pvp_explanationid": 30
+          "pvp_explanationid": 30,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 23
         }
       ],
       "image": "03",
@@ -1013,7 +1115,9 @@
             "122",
             "27"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 18,
@@ -1029,7 +1133,9 @@
             "125",
             "42"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 21,
@@ -1045,7 +1151,9 @@
             "127",
             "60"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 24,
@@ -1061,7 +1169,9 @@
             "129",
             "74"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 27,
@@ -1077,7 +1187,9 @@
             "131",
             "199"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 30,
@@ -1093,7 +1205,9 @@
             "149",
             "324"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 33,
@@ -1109,7 +1223,9 @@
             "152",
             "785"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 36,
@@ -1125,7 +1241,9 @@
             "154",
             "956"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 39,
@@ -1141,7 +1259,9 @@
             "156",
             "1157"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 42,
@@ -1157,7 +1277,9 @@
             "158",
             "2419"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 45,
@@ -1173,7 +1295,9 @@
             "176",
             "3719"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 48,
@@ -1189,7 +1313,9 @@
             "179",
             "4521"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 51,
@@ -1205,7 +1331,9 @@
             "181",
             "5086"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 54,
@@ -1221,7 +1349,9 @@
             "183",
             "5668"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 57,
@@ -1237,7 +1367,9 @@
             "185",
             "6266"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 60,
@@ -1253,7 +1385,9 @@
             "203",
             "8559"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 26
         },
         {
           "required_level": 63,
@@ -1269,7 +1403,9 @@
             "206",
             "8755"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 28
         },
         {
           "required_level": 66,
@@ -1285,7 +1421,9 @@
             "208",
             "8976"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 29
         },
         {
           "required_level": 69,
@@ -1301,7 +1439,9 @@
             "210",
             "9209"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 30
         },
         {
           "required_level": 72,
@@ -1317,7 +1457,9 @@
             "212",
             "9454"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 31
         },
         {
           "required_level": 75,
@@ -1333,7 +1475,9 @@
             "230",
             "11386"
           ],
-          "pvp_explanationid": 25
+          "pvp_explanationid": 25,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 33
         }
       ],
       "image": "03",
@@ -1368,7 +1512,9 @@
             "194",
             "275"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 35,
@@ -1384,7 +1530,9 @@
             "200",
             "723"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 38,
@@ -1400,7 +1548,9 @@
             "206",
             "877"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 41,
@@ -1416,7 +1566,9 @@
             "212",
             "1876"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 44,
@@ -1432,7 +1584,9 @@
             "218",
             "2199"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 47,
@@ -1448,7 +1602,9 @@
             "247",
             "3727"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 50,
@@ -1464,7 +1620,9 @@
             "253",
             "4232"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 53,
@@ -1480,7 +1638,9 @@
             "259",
             "4758"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 56,
@@ -1496,7 +1656,9 @@
             "265",
             "5304"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 59,
@@ -1512,7 +1674,9 @@
             "271",
             "5869"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 62,
@@ -1528,7 +1692,9 @@
             "299",
             "7749"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 65,
@@ -1544,7 +1710,9 @@
             "305",
             "7962"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 68,
@@ -1560,7 +1728,9 @@
             "311",
             "8190"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 71,
@@ -1576,7 +1746,9 @@
             "317",
             "8435"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 26
         },
         {
           "required_level": 74,
@@ -1592,7 +1764,9 @@
             "323",
             "8696"
           ],
-          "pvp_explanationid": 26
+          "pvp_explanationid": 26,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 27
         }
       ],
       "image": "03",
@@ -1630,7 +1804,9 @@
             "220",
             "145"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 29,
@@ -1646,7 +1822,9 @@
             "230",
             "168"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 32,
@@ -1662,7 +1840,9 @@
             "241",
             "198"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 35,
@@ -1678,7 +1858,9 @@
             "252",
             "470"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 38,
@@ -1694,7 +1876,9 @@
             "263",
             "576"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 41,
@@ -1710,7 +1894,9 @@
             "315",
             "1857"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 44,
@@ -1726,7 +1912,9 @@
             "326",
             "2181"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 47,
@@ -1742,7 +1930,9 @@
             "337",
             "2676"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 50,
@@ -1758,7 +1948,9 @@
             "347",
             "3053"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 53,
@@ -1774,7 +1966,9 @@
             "358",
             "3446"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 56,
@@ -1790,7 +1984,9 @@
             "410",
             "5128"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 59,
@@ -1806,7 +2002,9 @@
             "421",
             "5672"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 62,
@@ -1822,7 +2020,9 @@
             "432",
             "5990"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 65,
@@ -1838,7 +2038,9 @@
             "443",
             "6213"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 68,
@@ -1854,7 +2056,9 @@
             "454",
             "6451"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 26
         },
         {
           "required_level": 71,
@@ -1870,7 +2074,9 @@
             "505",
             "8128"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 28
         },
         {
           "required_level": 74,
@@ -1886,7 +2092,9 @@
             "516",
             "8395"
           ],
-          "pvp_explanationid": 27
+          "pvp_explanationid": 27,
+          "pvp_cd": 28000,
+          "pvp_mpcost": 29
         }
       ],
       "image": "03",
@@ -1922,7 +2130,9 @@
           "pvp_explanationparams": [
             "15"
           ],
-          "pvp_explanationid": 28
+          "pvp_explanationid": 28,
+          "pvp_cd": 15000,
+          "pvp_mpcost": 7
         },
         {
           "required_level": 26,
@@ -1936,7 +2146,9 @@
           "pvp_explanationparams": [
             "14"
           ],
-          "pvp_explanationid": 28
+          "pvp_explanationid": 28,
+          "pvp_cd": 14000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 36,
@@ -1950,7 +2162,9 @@
           "pvp_explanationparams": [
             "13"
           ],
-          "pvp_explanationid": 28
+          "pvp_explanationid": 28,
+          "pvp_cd": 13000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 46,
@@ -1964,7 +2178,9 @@
           "pvp_explanationparams": [
             "12"
           ],
-          "pvp_explanationid": 28
+          "pvp_explanationid": 28,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 56,
@@ -1978,7 +2194,9 @@
           "pvp_explanationparams": [
             "11"
           ],
-          "pvp_explanationid": 28
+          "pvp_explanationid": 28,
+          "pvp_cd": 11000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 66,
@@ -1992,7 +2210,9 @@
           "pvp_explanationparams": [
             "10"
           ],
-          "pvp_explanationid": 28
+          "pvp_explanationid": 28,
+          "pvp_cd": 10000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 76,
@@ -2006,7 +2226,9 @@
           "pvp_explanationparams": [
             "9"
           ],
-          "pvp_explanationid": 28
+          "pvp_explanationid": 28,
+          "pvp_cd": 9000,
+          "pvp_mpcost": 16
         }
       ],
       "image": "03",
@@ -2044,7 +2266,9 @@
             "192",
             "290"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 35,
@@ -2060,7 +2284,9 @@
             "199",
             "694"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 38,
@@ -2076,7 +2302,9 @@
             "207",
             "841"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 41,
@@ -2092,7 +2320,9 @@
             "215",
             "1777"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 44,
@@ -2108,7 +2338,9 @@
             "223",
             "2096"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 47,
@@ -2124,7 +2356,9 @@
             "264",
             "3728"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 50,
@@ -2140,7 +2374,9 @@
             "272",
             "4258"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 53,
@@ -2156,7 +2392,9 @@
             "280",
             "4817"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 56,
@@ -2172,7 +2410,9 @@
             "288",
             "5403"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 59,
@@ -2188,7 +2428,9 @@
             "295",
             "6017"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 62,
@@ -2204,7 +2446,9 @@
             "337",
             "8202"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 65,
@@ -2220,7 +2464,9 @@
             "345",
             "8524"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 68,
@@ -2236,7 +2482,9 @@
             "352",
             "8871"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 71,
@@ -2252,7 +2500,9 @@
             "360",
             "9242"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 74,
@@ -2268,7 +2518,9 @@
             "368",
             "9638"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 20,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 26
         }
       ],
       "image": "03",
@@ -2305,7 +2557,9 @@
           "pvp_explanationparams": [
             "924"
           ],
-          "pvp_explanationid": 40
+          "pvp_explanationid": 40,
+          "pvp_cd": 90000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 60,
@@ -2320,7 +2574,9 @@
           "pvp_explanationparams": [
             "1089"
           ],
-          "pvp_explanationid": 40
+          "pvp_explanationid": 40,
+          "pvp_cd": 90000,
+          "pvp_mpcost": 17
         }
       ],
       "image": "03",
@@ -2358,7 +2614,9 @@
             "108",
             "21"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 18,
@@ -2374,7 +2632,9 @@
             "110",
             "35"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 21,
@@ -2390,7 +2650,9 @@
             "112",
             "52"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 24,
@@ -2406,7 +2668,9 @@
             "115",
             "62"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 27,
@@ -2422,7 +2686,9 @@
             "117",
             "168"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 30,
@@ -2438,7 +2704,9 @@
             "136",
             "270"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 33,
@@ -2454,7 +2722,9 @@
             "139",
             "704"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 36,
@@ -2470,7 +2740,9 @@
             "141",
             "857"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 39,
@@ -2486,7 +2758,9 @@
             "143",
             "1039"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 42,
@@ -2502,7 +2776,9 @@
             "146",
             "2201"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 45,
@@ -2518,7 +2794,9 @@
             "165",
             "3356"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 48,
@@ -2534,7 +2812,9 @@
             "167",
             "4109"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 51,
@@ -2550,7 +2830,9 @@
             "170",
             "4611"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 54,
@@ -2566,7 +2848,9 @@
             "172",
             "5125"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 57,
@@ -2582,7 +2866,9 @@
             "174",
             "5648"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 60,
@@ -2598,7 +2884,9 @@
             "194",
             "7670"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 26
         },
         {
           "required_level": 63,
@@ -2614,7 +2902,9 @@
             "196",
             "7767"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 27
         },
         {
           "required_level": 66,
@@ -2630,7 +2920,9 @@
             "198",
             "7885"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 28
         },
         {
           "required_level": 69,
@@ -2646,7 +2938,9 @@
             "201",
             "8009"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 29
         },
         {
           "required_level": 72,
@@ -2662,7 +2956,9 @@
             "203",
             "8139"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 31
         },
         {
           "required_level": 75,
@@ -2678,7 +2974,9 @@
             "222",
             "9759"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 22,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 32
         }
       ],
       "image": "03",
@@ -2713,7 +3011,9 @@
             "141",
             "17"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 19,
@@ -2729,7 +3029,9 @@
             "143",
             "21"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 22,
@@ -2745,7 +3047,9 @@
             "146",
             "30"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 25,
@@ -2761,7 +3065,9 @@
             "148",
             "81"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 28,
@@ -2777,7 +3083,9 @@
             "151",
             "98"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 31,
@@ -2793,7 +3101,9 @@
             "170",
             "158"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 34,
@@ -2809,7 +3119,9 @@
             "172",
             "394"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 37,
@@ -2825,7 +3137,9 @@
             "174",
             "480"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 40,
@@ -2841,7 +3155,9 @@
             "177",
             "576"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 43,
@@ -2857,7 +3173,9 @@
             "179",
             "1198"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 46,
@@ -2873,7 +3191,9 @@
             "198",
             "1964"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 49,
@@ -2889,7 +3209,9 @@
             "201",
             "2228"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 52,
@@ -2905,7 +3227,9 @@
             "203",
             "2500"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 55,
@@ -2921,7 +3245,9 @@
             "206",
             "2778"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 58,
@@ -2937,7 +3263,9 @@
             "208",
             "3065"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 61,
@@ -2953,7 +3281,9 @@
             "227",
             "4089"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 27
         },
         {
           "required_level": 64,
@@ -2969,7 +3299,9 @@
             "230",
             "4189"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 28
         },
         {
           "required_level": 67,
@@ -2985,7 +3317,9 @@
             "232",
             "4295"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 29
         },
         {
           "required_level": 70,
@@ -3001,7 +3335,9 @@
             "234",
             "4406"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 30
         },
         {
           "required_level": 73,
@@ -3017,7 +3353,9 @@
             "237",
             "4523"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 31
         },
         {
           "required_level": 76,
@@ -3033,7 +3371,9 @@
             "256",
             "5447"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 23,
+          "pvp_cd": 17000,
+          "pvp_mpcost": 33
         }
       ],
       "image": "03",
@@ -3071,7 +3411,9 @@
             "84",
             "25"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 27,
@@ -3087,7 +3429,9 @@
             "88",
             "66"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 30,
@@ -3103,7 +3447,9 @@
             "91",
             "78"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 33,
@@ -3119,7 +3465,9 @@
             "95",
             "179"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 36,
@@ -3135,7 +3483,9 @@
             "98",
             "221"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 39,
@@ -3151,7 +3501,9 @@
             "118",
             "335"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 42,
@@ -3167,7 +3519,9 @@
             "122",
             "705"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 45,
@@ -3183,7 +3537,9 @@
             "125",
             "825"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 48,
@@ -3199,7 +3555,9 @@
             "128",
             "1002"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 51,
@@ -3215,7 +3573,9 @@
             "132",
             "1141"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 54,
@@ -3231,7 +3591,9 @@
             "152",
             "1536"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 57,
@@ -3247,7 +3609,9 @@
             "155",
             "1714"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 60,
@@ -3263,7 +3627,9 @@
             "159",
             "1899"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 63,
@@ -3279,7 +3645,9 @@
             "162",
             "1989"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 66,
@@ -3295,7 +3663,9 @@
             "165",
             "2088"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 69,
@@ -3311,7 +3681,9 @@
             "186",
             "2490"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 26
         },
         {
           "required_level": 72,
@@ -3327,7 +3699,9 @@
             "189",
             "2602"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 27
         },
         {
           "required_level": 75,
@@ -3343,7 +3717,9 @@
             "192",
             "2719"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 24,
+          "pvp_cd": 45000,
+          "pvp_mpcost": 28
         }
       ],
       "image": "03",
@@ -3383,7 +3759,9 @@
             "174",
             "110"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 27,
@@ -3401,7 +3779,9 @@
             "176",
             "297"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 30,
@@ -3419,7 +3799,9 @@
             "179",
             "339"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 33,
@@ -3437,7 +3819,9 @@
             "181",
             "871"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 36,
@@ -3455,7 +3839,9 @@
             "183",
             "1066"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 39,
@@ -3473,7 +3859,9 @@
             "201",
             "1778"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 42,
@@ -3491,7 +3879,9 @@
             "203",
             "3793"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 45,
@@ -3509,7 +3899,9 @@
             "206",
             "4402"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 48,
@@ -3527,7 +3919,9 @@
             "208",
             "5399"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 51,
@@ -3545,7 +3939,9 @@
             "210",
             "6090"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 54,
@@ -3563,7 +3959,9 @@
             "228",
             "8626"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 57,
@@ -3581,7 +3979,9 @@
             "230",
             "9535"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 60,
@@ -3599,7 +3999,9 @@
             "233",
             "10467"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 63,
@@ -3617,7 +4019,9 @@
             "235",
             "10676"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 66,
@@ -3635,7 +4039,9 @@
             "237",
             "10919"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 26
         },
         {
           "required_level": 69,
@@ -3653,7 +4059,9 @@
             "255",
             "13355"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 27
         },
         {
           "required_level": 72,
@@ -3671,7 +4079,9 @@
             "257",
             "13628"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 28
         },
         {
           "required_level": 75,
@@ -3689,7 +4099,9 @@
             "260",
             "13916"
           ],
-          "pvp_explanationid": 39
+          "pvp_explanationid": 39,
+          "pvp_cd": 18000,
+          "pvp_mpcost": 29
         }
       ],
       "image": "03",
@@ -3727,7 +4139,9 @@
             "30",
             "15"
           ],
-          "pvp_explanationid": 38
+          "pvp_explanationid": 38,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 46,
@@ -3743,7 +4157,9 @@
             "30",
             "30"
           ],
-          "pvp_explanationid": 38
+          "pvp_explanationid": 38,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 56,
@@ -3759,7 +4175,9 @@
             "30",
             "45"
           ],
-          "pvp_explanationid": 38
+          "pvp_explanationid": 38,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 66,
@@ -3775,7 +4193,9 @@
             "30",
             "60"
           ],
-          "pvp_explanationid": 38
+          "pvp_explanationid": 38,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 76,
@@ -3791,7 +4211,9 @@
             "30",
             "75"
           ],
-          "pvp_explanationid": 38
+          "pvp_explanationid": 38,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 86,
@@ -3807,7 +4229,9 @@
             "30",
             "90"
           ],
-          "pvp_explanationid": 38
+          "pvp_explanationid": 38,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "03",
@@ -3843,7 +4267,9 @@
           "pvp_explanationparams": [
             "1.05"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 33,
@@ -3857,7 +4283,9 @@
           "pvp_explanationparams": [
             "1.4"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 38,
@@ -3871,7 +4299,9 @@
           "pvp_explanationparams": [
             "1.75"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 43,
@@ -3885,7 +4315,9 @@
           "pvp_explanationparams": [
             "2.1"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 48,
@@ -3899,7 +4331,9 @@
           "pvp_explanationparams": [
             "2.45"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 53,
@@ -3913,7 +4347,9 @@
           "pvp_explanationparams": [
             "2.8"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 58,
@@ -3927,7 +4363,9 @@
           "pvp_explanationparams": [
             "3.15"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 63,
@@ -3941,7 +4379,9 @@
           "pvp_explanationparams": [
             "3.5"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 68,
@@ -3955,7 +4395,9 @@
           "pvp_explanationparams": [
             "3.85"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 73,
@@ -3969,7 +4411,9 @@
           "pvp_explanationparams": [
             "4.2"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 78,
@@ -3983,7 +4427,9 @@
           "pvp_explanationparams": [
             "6.5"
           ],
-          "pvp_explanationid": 37
+          "pvp_explanationid": 37,
+          "pvp_cd": 38000,
+          "pvp_mpcost": 21
         }
       ],
       "image": "03",
@@ -4018,7 +4464,9 @@
             "61",
             "17"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 23,
@@ -4034,7 +4482,9 @@
             "64",
             "26"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 28,
@@ -4050,7 +4500,9 @@
             "67",
             "74"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 33,
@@ -4066,7 +4518,9 @@
             "70",
             "179"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 38,
@@ -4082,7 +4536,9 @@
             "73",
             "240"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 43,
@@ -4098,7 +4554,9 @@
             "86",
             "689"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 48,
@@ -4114,7 +4572,9 @@
             "89",
             "903"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 53,
@@ -4130,7 +4590,9 @@
             "92",
             "1084"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 58,
@@ -4146,7 +4608,9 @@
             "95",
             "1273"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 63,
@@ -4162,7 +4626,9 @@
             "98",
             "1395"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 68,
@@ -4178,7 +4644,9 @@
             "111",
             "1772"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 73,
@@ -4194,7 +4662,9 @@
             "114",
             "1859"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 78,
@@ -4210,7 +4680,9 @@
             "117",
             "1952"
           ],
-          "pvp_explanationid": 36
+          "pvp_explanationid": 36,
+          "pvp_cd": 8000,
+          "pvp_mpcost": 23
         }
       ],
       "image": "03",
@@ -4247,7 +4719,9 @@
             "12",
             "15"
           ],
-          "pvp_explanationid": 29
+          "pvp_explanationid": 29,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 8
         },
         {
           "required_level": 36,
@@ -4265,7 +4739,9 @@
             "12",
             "20"
           ],
-          "pvp_explanationid": 29
+          "pvp_explanationid": 29,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 46,
@@ -4283,7 +4759,9 @@
             "12",
             "25"
           ],
-          "pvp_explanationid": 29
+          "pvp_explanationid": 29,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 56,
@@ -4301,7 +4779,9 @@
             "12",
             "30"
           ],
-          "pvp_explanationid": 29
+          "pvp_explanationid": 29,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 66,
@@ -4319,7 +4799,9 @@
             "12",
             "35"
           ],
-          "pvp_explanationid": 29
+          "pvp_explanationid": 29,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 76,
@@ -4337,7 +4819,9 @@
             "12",
             "40"
           ],
-          "pvp_explanationid": 29
+          "pvp_explanationid": 29,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 86,
@@ -4355,7 +4839,9 @@
             "12",
             "45"
           ],
-          "pvp_explanationid": 29
+          "pvp_explanationid": 29,
+          "pvp_cd": 25000,
+          "pvp_mpcost": 14
         }
       ],
       "image": "03",

@@ -6,149 +6,7 @@
       "nameid": 0,
       "maxlevel": 13,
       "levels": [
-        {
-          "required_level": 50,
-          "mpcost": 21,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 53,
-          "mpcost": 23,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 56,
-          "mpcost": 26,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 59,
-          "mpcost": 28,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 62,
-          "mpcost": 30,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 65,
-          "mpcost": 33,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 68,
-          "mpcost": 36,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 71,
-          "mpcost": 38,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 74,
-          "mpcost": 40,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 77,
-          "mpcost": 43,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 80,
-          "mpcost": 46,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 83,
-          "mpcost": 48,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 86,
-          "mpcost": 51,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        }
+
       ],
       "image": "10",
       "icon": 49,
@@ -164,7 +22,7 @@
         {
           "required_level": 80,
           "mpcost": 0,
-          "explanationid": 21,
+          "explanationid": 20,
           "spcost": 2,
           "cd": 0,
           "explanationparams": [
@@ -175,7 +33,9 @@
             "35",
             "25"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "10",
@@ -202,7 +62,7 @@
         {
           "required_level": 65,
           "mpcost": 0,
-          "explanationid": 20,
+          "explanationid": 19,
           "spcost": 1,
           "cd": 0,
           "explanationparams": [
@@ -214,7 +74,9 @@
           "pvp_explanationparams": [
             "10"
           ],
-          "pvp_explanationid": 24
+          "pvp_explanationid": 23,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "10",
@@ -238,7 +100,7 @@
         {
           "required_level": 70,
           "mpcost": 0,
-          "explanationid": 19,
+          "explanationid": 18,
           "spcost": 2,
           "cd": 0,
           "explanationparams": [
@@ -247,7 +109,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "10",
@@ -274,7 +138,7 @@
         {
           "required_level": 60,
           "mpcost": 0,
-          "explanationid": 18,
+          "explanationid": 17,
           "spcost": 0,
           "cd": 0,
           "explanationparams": [
@@ -285,7 +149,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 22,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "10",
@@ -312,7 +178,7 @@
         {
           "required_level": 55,
           "mpcost": 0,
-          "explanationid": 17,
+          "explanationid": 16,
           "spcost": 0,
           "cd": 0,
           "explanationparams": [
@@ -321,7 +187,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 17
+          "pvp_explanationid": 16,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "10",
@@ -349,20 +217,7 @@
       "nameid": 6,
       "maxlevel": 1,
       "levels": [
-        {
-          "required_level": 1,
-          "mpcost": 0,
-          "explanationid": 16,
-          "spcost": 0,
-          "cd": 0,
-          "explanationparams": [
-            "30"
-          ],
-          "pvp_explanationparams": [
-            "30"
-          ],
-          "pvp_explanationid": 16
-        }
+
       ],
       "image": "10",
       "icon": 50,
@@ -387,7 +242,9 @@
           "pvp_explanationparams": [
             "50"
           ],
-          "pvp_explanationid": 15
+          "pvp_explanationid": 15,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "10",
@@ -425,7 +282,9 @@
             "607",
             "644"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 53,
@@ -441,7 +300,9 @@
             "619",
             "715"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 56,
@@ -457,7 +318,9 @@
             "632",
             "790"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 59,
@@ -473,7 +336,9 @@
             "645",
             "868"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 62,
@@ -489,7 +354,9 @@
             "658",
             "950"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 65,
@@ -505,7 +372,9 @@
             "726",
             "1253"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 68,
@@ -521,7 +390,9 @@
             "739",
             "1373"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 71,
@@ -537,7 +408,9 @@
             "752",
             "1504"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 74,
@@ -553,7 +426,9 @@
             "764",
             "1647"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 77,
@@ -569,7 +444,9 @@
             "777",
             "1803"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 80,
@@ -585,7 +462,9 @@
             "845",
             "2295"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 83,
@@ -601,7 +480,9 @@
             "858",
             "2509"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 86,
@@ -617,7 +498,9 @@
             "871",
             "2741"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 20000,
+          "pvp_mpcost": 26
         }
       ],
       "image": "10",
@@ -657,7 +540,9 @@
             "5.0",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 50,
@@ -675,7 +560,9 @@
             "7.5",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 55,
@@ -693,7 +580,9 @@
             "10.0",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 60,
@@ -711,7 +600,9 @@
             "12.5",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 65,
@@ -729,7 +620,9 @@
             "15.0",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 70,
@@ -747,7 +640,9 @@
             "17.5",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 75,
@@ -765,7 +660,9 @@
             "20.0",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 80,
@@ -783,7 +680,9 @@
             "22.5",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 85,
@@ -801,7 +700,9 @@
             "25.0",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 90,
@@ -819,7 +720,9 @@
             "27.5",
             "24"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 30000,
+          "pvp_mpcost": 20
         }
       ],
       "image": "10",
@@ -843,149 +746,7 @@
       "nameid": 10,
       "maxlevel": 13,
       "levels": [
-        {
-          "required_level": 50,
-          "mpcost": 21,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2127",
-            "32185"
-          ]
-        },
-        {
-          "required_level": 53,
-          "mpcost": 23,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2178",
-            "35769"
-          ]
-        },
-        {
-          "required_level": 56,
-          "mpcost": 26,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2229",
-            "39513"
-          ]
-        },
-        {
-          "required_level": 59,
-          "mpcost": 28,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2280",
-            "43409"
-          ]
-        },
-        {
-          "required_level": 62,
-          "mpcost": 30,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2331",
-            "47490"
-          ]
-        },
-        {
-          "required_level": 65,
-          "mpcost": 33,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2604",
-            "62634"
-          ]
-        },
-        {
-          "required_level": 68,
-          "mpcost": 36,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2655",
-            "68632"
-          ]
-        },
-        {
-          "required_level": 71,
-          "mpcost": 38,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2706",
-            "75184"
-          ]
-        },
-        {
-          "required_level": 74,
-          "mpcost": 40,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2757",
-            "82353"
-          ]
-        },
-        {
-          "required_level": 77,
-          "mpcost": 43,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2808",
-            "90168"
-          ]
-        },
-        {
-          "required_level": 80,
-          "mpcost": 46,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "3081",
-            "114772"
-          ]
-        },
-        {
-          "required_level": 83,
-          "mpcost": 48,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "3132",
-            "125459"
-          ]
-        },
-        {
-          "required_level": 86,
-          "mpcost": 51,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "3183",
-            "137060"
-          ]
-        }
+
       ],
       "image": "10",
       "icon": 49,
@@ -998,149 +759,7 @@
       "nameid": 11,
       "maxlevel": 13,
       "levels": [
-        {
-          "required_level": 50,
-          "mpcost": 21,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 53,
-          "mpcost": 23,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 56,
-          "mpcost": 26,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 59,
-          "mpcost": 28,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 62,
-          "mpcost": 30,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 65,
-          "mpcost": 33,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 68,
-          "mpcost": 36,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 71,
-          "mpcost": 38,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 74,
-          "mpcost": 40,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 77,
-          "mpcost": 43,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 80,
-          "mpcost": 46,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 83,
-          "mpcost": 48,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        },
-        {
-          "required_level": 86,
-          "mpcost": 51,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 20000,
-          "explanationparams": [
-            "100",
-            "0"
-          ]
-        }
+
       ],
       "image": "10",
       "icon": 49,
@@ -1153,149 +772,7 @@
       "nameid": 12,
       "maxlevel": 13,
       "levels": [
-        {
-          "required_level": 50,
-          "mpcost": 21,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2127",
-            "32185"
-          ]
-        },
-        {
-          "required_level": 53,
-          "mpcost": 23,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2178",
-            "35769"
-          ]
-        },
-        {
-          "required_level": 56,
-          "mpcost": 26,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2229",
-            "39513"
-          ]
-        },
-        {
-          "required_level": 59,
-          "mpcost": 28,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2280",
-            "43409"
-          ]
-        },
-        {
-          "required_level": 62,
-          "mpcost": 30,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2331",
-            "47490"
-          ]
-        },
-        {
-          "required_level": 65,
-          "mpcost": 33,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2604",
-            "62634"
-          ]
-        },
-        {
-          "required_level": 68,
-          "mpcost": 36,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2655",
-            "68632"
-          ]
-        },
-        {
-          "required_level": 71,
-          "mpcost": 38,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2706",
-            "75184"
-          ]
-        },
-        {
-          "required_level": 74,
-          "mpcost": 40,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2757",
-            "82353"
-          ]
-        },
-        {
-          "required_level": 77,
-          "mpcost": 43,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "2808",
-            "90168"
-          ]
-        },
-        {
-          "required_level": 80,
-          "mpcost": 46,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "3081",
-            "114772"
-          ]
-        },
-        {
-          "required_level": 83,
-          "mpcost": 48,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "3132",
-            "125459"
-          ]
-        },
-        {
-          "required_level": 86,
-          "mpcost": 51,
-          "explanationid": 14,
-          "spcost": 0,
-          "cd": 5000,
-          "explanationparams": [
-            "3183",
-            "137060"
-          ]
-        }
+
       ],
       "image": "10",
       "icon": 49,
@@ -1305,7 +782,7 @@
     }
   },
   "message": [
-    "아트풀 체이서EX (애쉬)",
+    "??? ???EX (??)",
     "Pursuer+",
     "Werewolf Ability",
     "Shinobi Drop +",
@@ -1315,13 +792,12 @@
     "Barrage +",
     "Pursuer",
     "Arsonist",
-    "아트풀 체이서EX (애쉬 소환)",
-    "아트풀 체이서 (애쉬)",
-    "아트풀 체이서 (애쉬 소환)",
+    "??? ???EX (?? ??)",
+    "??? ??? (??)",
+    "??? ??? (?? ??)",
     "Fills you and your party members with the flames of madness, increasing both fire damage and fire resistance.\\n#yAdditional Fire Damage: {0}%\\nAdditional Fire Resistance: {1}%\\nDuration: {2} sec",
     "Unleashes a raging combo attack on anything in front of you.\\n#yFire Magic\\nPhysical Damage: {0}% + {1}",
     "Enhances Barrage to strike down on enemies after multiple Barrage attacks. Use the special attack button to activate.\\n#yFire Magic\\nAdditional Hit Damage: {0}% of Barrage",
-    "Enhances #yMortal Blow#w.\\nIncreases the range and damage of the slam attack.\\n#yFire Magic\\nAdditional Damage: {0}%",
     "Enhances Flaming Locust to deal an additional hit. Press the regular attack button to activate.\\n#yFire Magic\\nAdditional Hit Damage: {0}% of Flaming Locust damage",
     "Wreaths Blade Runner's downward strike in flames that cause a knockback shockwave and weakens the target's Fire Defense.\\n#yFire Magic\\nAdditional Hit Damage: {0}% of Blade Runner\\nFire Defense -{2}% for {1} sec",
     "Enhances Shinobi Drop's damage and attack range and adds flames to make the skill more destructive.\\n#yFire Magic\\nAdditional Hit Damage: {0}% of Shinobi Drop",

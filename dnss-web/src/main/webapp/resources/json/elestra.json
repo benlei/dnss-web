@@ -110,240 +110,7 @@
       "nameid": 1,
       "maxlevel": 13,
       "levels": [
-        {
-          "required_level": 50,
-          "mpcost": 19,
-          "explanationid": 20,
-          "spcost": 3,
-          "cd": 34000,
-          "explanationparams": [
-            "85",
-            "709",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
 
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 53,
-          "mpcost": 21,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "88",
-            "789",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 56,
-          "mpcost": 24,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "91",
-            "877",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 59,
-          "mpcost": 26,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "94",
-            "973",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 62,
-          "mpcost": 28,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "97",
-            "1077",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 65,
-          "mpcost": 31,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "113",
-            "1811",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 68,
-          "mpcost": 34,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "116",
-            "1997",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 71,
-          "mpcost": 36,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "119",
-            "2202",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 74,
-          "mpcost": 38,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "122",
-            "2427",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 77,
-          "mpcost": 41,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "125",
-            "2673",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 80,
-          "mpcost": 44,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "141",
-            "3880",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 83,
-          "mpcost": 46,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "144",
-            "4254",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        },
-        {
-          "required_level": 86,
-          "mpcost": 48,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 34000,
-          "explanationparams": [
-            "147",
-            "4660",
-            "10",
-            "4",
-            "30"
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        }
       ],
       "image": "03",
       "icon": 74,
@@ -356,20 +123,7 @@
       "nameid": 2,
       "maxlevel": 1,
       "levels": [
-        {
-          "required_level": 80,
-          "mpcost": 0,
-          "explanationid": 3,
-          "spcost": 0,
-          "cd": 0,
-          "explanationparams": [
 
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 3
-        }
       ],
       "image": "03",
       "icon": 99,
@@ -413,7 +167,9 @@
             "20",
             "10"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 19,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "03",
@@ -449,7 +205,9 @@
           "pvp_explanationparams": [
             "5"
           ],
-          "pvp_explanationid": 18
+          "pvp_explanationid": 18,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "03",
@@ -482,7 +240,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 17
+          "pvp_explanationid": 17,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "03",
@@ -520,7 +280,9 @@
             "2",
             "50"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "03",
@@ -558,7 +320,9 @@
             "30",
             "5"
           ],
-          "pvp_explanationid": 15
+          "pvp_explanationid": 15,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "03",
@@ -604,7 +368,9 @@
             "40",
             "1.5"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 53,
@@ -624,7 +390,9 @@
             "40",
             "1.75"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 56,
@@ -644,7 +412,9 @@
             "40",
             "2"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 59,
@@ -664,7 +434,9 @@
             "40",
             "2.25"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 62,
@@ -684,7 +456,9 @@
             "40",
             "2.5"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 65,
@@ -704,7 +478,9 @@
             "40",
             "2.75"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 68,
@@ -724,7 +500,9 @@
             "40",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 71,
@@ -744,7 +522,9 @@
             "40",
             "3.25"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 74,
@@ -764,7 +544,9 @@
             "40",
             "3.5"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 77,
@@ -784,7 +566,9 @@
             "40",
             "3.75"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 80,
@@ -804,7 +588,9 @@
             "40",
             "4"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 83,
@@ -824,7 +610,9 @@
             "40",
             "4.25"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 86,
@@ -844,7 +632,9 @@
             "40",
             "4.5"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 49000,
+          "pvp_mpcost": 25
         }
       ],
       "image": "03",
@@ -880,7 +670,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 13
+          "pvp_explanationid": 13,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "03",
@@ -922,7 +714,9 @@
             "2",
             "2.5"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 55,
@@ -942,7 +736,9 @@
             "2",
             "2.5"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 65,
@@ -962,7 +758,9 @@
             "2",
             "2.5"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 75,
@@ -982,7 +780,9 @@
             "2",
             "2.5"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 85,
@@ -1002,7 +802,9 @@
             "2",
             "2.5"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 95,
@@ -1022,7 +824,9 @@
             "2",
             "2.5"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 60000,
+          "pvp_mpcost": 17
         }
       ],
       "image": "03",
@@ -1044,7 +848,7 @@
   },
   "message": [
     "Ice Witch",
-    "아이스 스피어 (버스트)",
+    "??? ??? (???)",
     "Destroy Ice Barrier",
     null,
     "Ice Barrier +",
@@ -1063,7 +867,6 @@
     "Enhances Chilling Mist's attack range. Press the regular attack button in the middle of the skill to deal additional hits.\\n#yAdditional Hit Damage: {0}% of Chilling Mist damage",
     "Increases Ice Damage by #y{0}%#w.",
     "Enhances Ice Barrier. Increases Ice Attack by #y{0}#w% when the shield expires. Use the skill again within #y{1} seconds#w to increase Ice Attack by an additional #y{2}#w%, but at the expense of your shield. \\n#yIce Attack Boost Duration: {3} seconds",
-    "얼음 가시를 사방으로 내뿜는 얼음구를 소환한다. 적중당한 적은 동상에 걸린다.\\n#y얼음 가시하나당 마법 공격력{0}%+{1}\\n\\n[동상]\\n냉기저항력 {2}% 감소\\n행동속도 {3}초동안 {4}% 감소",
     "Enhances Frozen Spikes' attack range by creating {0} more ice barrier(s). Ice barriers explode shortly after to deal damage.\\nEnemies hit more than {1} time(s) will take {2}% less damage."
   ]
 }

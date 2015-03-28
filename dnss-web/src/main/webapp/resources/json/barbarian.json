@@ -123,7 +123,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 21,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "01",
@@ -173,7 +175,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 53,
@@ -197,7 +201,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 56,
@@ -221,7 +227,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 59,
@@ -245,7 +253,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 62,
@@ -269,7 +279,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 65,
@@ -293,7 +305,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 68,
@@ -317,7 +331,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 71,
@@ -341,7 +357,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 74,
@@ -365,7 +383,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 77,
@@ -389,7 +409,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 80,
@@ -413,7 +435,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 83,
@@ -437,7 +461,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 86,
@@ -461,7 +487,9 @@
             "10",
             "3"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 14,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 25
         }
       ],
       "image": "01",
@@ -497,7 +525,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 13
+          "pvp_explanationid": 13,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "01",
@@ -521,20 +551,7 @@
       "nameid": 4,
       "maxlevel": 1,
       "levels": [
-        {
-          "required_level": 1,
-          "mpcost": 0,
-          "explanationid": 19,
-          "spcost": 0,
-          "cd": 0,
-          "explanationparams": [
 
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 19
-        }
       ],
       "image": "01",
       "icon": 38,
@@ -547,20 +564,7 @@
       "nameid": 5,
       "maxlevel": 1,
       "levels": [
-        {
-          "required_level": 1,
-          "mpcost": 0,
-          "explanationid": 19,
-          "spcost": 0,
-          "cd": 0,
-          "explanationparams": [
 
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 19
-        }
       ],
       "image": "01",
       "icon": 38,
@@ -573,20 +577,7 @@
       "nameid": 6,
       "maxlevel": 1,
       "levels": [
-        {
-          "required_level": 1,
-          "mpcost": 0,
-          "explanationid": 19,
-          "spcost": 0,
-          "cd": 0,
-          "explanationparams": [
 
-          ],
-          "pvp_explanationparams": [
-
-          ],
-          "pvp_explanationid": 19
-        }
       ],
       "image": "01",
       "icon": 38,
@@ -620,7 +611,9 @@
             "10",
             "7"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 7000,
+          "pvp_mpcost": 9
         },
         {
           "required_level": 55,
@@ -643,7 +636,9 @@
             "20",
             "7"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 7000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 65,
@@ -666,7 +661,9 @@
             "30",
             "7"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 7000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 75,
@@ -689,7 +686,9 @@
             "40",
             "7"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 7000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 85,
@@ -712,7 +711,9 @@
             "50",
             "7"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 7000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 95,
@@ -735,7 +736,9 @@
             "60",
             "7"
           ],
-          "pvp_explanationid": 21
+          "pvp_explanationid": 20,
+          "pvp_cd": 7000,
+          "pvp_mpcost": 17
         }
       ],
       "image": "01",
@@ -771,7 +774,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 17
+          "pvp_explanationid": 17,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "01",
@@ -807,7 +812,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 16
+          "pvp_explanationid": 16,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "01",
@@ -847,7 +854,9 @@
             "10",
             "10"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 22,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "01",
@@ -871,7 +880,7 @@
         {
           "required_level": 80,
           "mpcost": 0,
-          "explanationid": 20,
+          "explanationid": 19,
           "spcost": 2,
           "cd": 0,
           "explanationparams": [
@@ -880,7 +889,9 @@
           "pvp_explanationparams": [
             "50"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 19,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "01",
@@ -905,9 +916,9 @@
     "Demolition Fist +",
     "Bone Cleaver",
     "Stomp +",
-    "어펜드 히트_액티브3",
-    "어펜드 히트_액티브2",
-    "어펜드 히트_액티브",
+    "??? ??_???3",
+    "??? ??_???2",
+    "??? ??_???",
     "Overpower",
     "Whirlwind +",
     "Circle Swing +",
@@ -920,7 +931,6 @@
     "Enhances Circle Swing to lift enemies into the air with a regular attack. \\n#yAdditional Attack: {0}% of Circle Swing damage",
     "Increases Whirlwind's attack range and number of hits.\\n#yWhirlwind Damage: +{0}%",
     "Increases critical chance after using #yBattle Howl, Taunting Howl,#w and #yDevastating Howl#w. Increases damage in exchange for health after using #yTaunting Howl#w.\\n#yDuration: {0} sec\\nCritical Chance +{1}%\\nDamage +{3}% for {2}% health",
-    null,
     "Enhances Bone Cleaver. #yLeft-click#w to launch enemies into the air after smashing down. Additional Strike Damage: {0}%",
     "Your attacks have a chance to deal extra damage equal to your max Physical Damage.\\n#yPhysical Damage\\nTrigger Chance: {0}%\\nCooldown: {1} sec",
     "Enhances Demolition Fist to perform a powerful downward strike. \\n#yAdditional Strike: {0}% of Demolition Fist damage",

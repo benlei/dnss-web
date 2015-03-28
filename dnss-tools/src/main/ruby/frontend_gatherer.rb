@@ -17,6 +17,9 @@ JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\mai
 messages = Hash.new
 @conn.exec('SELECT * FROM messages').each_dnt {|message| messages[message['id']] = message['data']}
 
+# academic tumble
+messages[1000085115] = messages[1000007433]
+
 ##############################################################################
 # gets all the jobs [write]
 # notes:
@@ -144,6 +147,10 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
       ON _skillindex = skills._id
     WHERE _needjob > 0
       AND _nameid > 0
+      AND _skillindex IN (
+        SELECT _skilltableid
+        FROM skill_tree
+      )
     ORDER BY _skillindex, _skilllevel ASC
   sql_query
 
@@ -164,6 +171,8 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
     skillparams = pvp_skill['skillexplanationidparam'].to_s
     level['pvp_explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
     level['pvp_explanationid'] = get_local_message_id(jobs[pvp_skill['needjob']]['message'], pvp_skill['explanationid'], messages)
+    level['pvp_cd'] = pvp_skill['cd']
+    level['pvp_mpcost'] = pvp_skill['mpcost']
   end
 end
 

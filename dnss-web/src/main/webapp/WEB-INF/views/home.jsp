@@ -36,7 +36,8 @@
     <input type="button" id="mode" value="pve" /><h2 id="skill-name">Magma Monument</h2>
     <div class="skill-description">
       <ul class="meta">
-        <li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span><span id="skill-sp"></span></li>
+        <li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span></li>
+        <li id="skill-sp"><span class="y">SP Consumed: </span><span class="w"></span></li>
         <li id="skill-mpcost"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
         <li id="skill-cd"><span class="y">Cooldown: </span><span class="w"></span> sec</li>
         <li id="skill-required-level"><span class="y">Level Limit: </span><span class="w"></span></li>
@@ -122,14 +123,15 @@ function formatDescription(str, params) {
       }
     }
 
-    var y = 0, w = 0, newStr = '', startPos = 0;
+    var y = 0, w = 0, p = 0, newStr = '', startPos = 0;
     for (var i = 0; i < str.length - 1; i++) {
       switch (str.substr(i, 2)) {
         case '#y':
+        case '#p':
           if (y - w == 1) { // needed a closing </span>
-            newStr += str.substring(startPos, i) + '</span><span class="y">';
+            newStr += str.substring(startPos, i) + '</span><span class="' + str.substr(i+1,1) + '">';
           } else {
-            newStr += str.substring(startPos, i) + '<span class="y">';
+            newStr += str.substring(startPos, i) + '<span class="' + str.substr(i+1,1) + '">';
             y++;
           }
           
@@ -143,7 +145,6 @@ function formatDescription(str, params) {
             newStr += str.substring(startPos, i) + '</span>';
             w++;
           }
-
 
           startPos = i + 2;
           ++i;
@@ -185,13 +186,14 @@ function setDescription($skill) { // also sets warnings!
     skillSP = skill.levels[0].spcost;
     skillRequiredLevel = skill.levels[0].required_level;
     skillDescription = formatDescription(job.message[skill.levels[0][prefix+'explanationid']], skill.levels[0][prefix+'explanationparams']);
-    skillMP = (skill.levels[0].mpcost / 10.0) + '%';
+    skillMP = (skill.levels[0][prefix+'mpcost'] / 10.0) + '%';
   } else if (lvl.current == skill.levels.length) {
     skillLevel = lvl.current;
     skillCD = skill.levels[lvl.current - 1].cd / 1000;
     skillRequiredLevel = skill.levels[lvl.current - 1].required_level;
     skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1][prefix+'explanationid']], skill.levels[lvl.current - 1][prefix+'explanationparams']);
-    skillMP = (skill.levels[lvl.current - 1].mpcost / 10.0) + '%';
+    skillMP = (skill.levels[lvl.current - 1][prefix+'mpcost'] / 10.0) + '%';
+    skillSP = skill.levels[lvl.current - 1].spcost;
   } else {
     skillLevel = lvl.current + ' &rarr; ' + (lvl.current+1);
     if (skill.levels[lvl.current - 1].cd == skill.levels[lvl.current].cd) {
@@ -204,7 +206,7 @@ function setDescription($skill) { // also sets warnings!
     skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1][prefix+'explanationid']], skill.levels[lvl.current - 1][prefix+'explanationparams']);
     nextDescription = formatDescription(job.message[skill.levels[lvl.current][prefix+'explanationid']], skill.levels[lvl.current][prefix+'explanationparams']);
     skillSP = skill.levels[lvl.current].spcost;
-    skillMP = (skill.levels[lvl.current - 1].mpcost/10.0) + '% &rarr; ' + (skill.levels[lvl.current].mpcost/10.0) + '%';
+    skillMP = (skill.levels[lvl.current - 1][prefix+'mpcost']/10.0) + '% &rarr; ' + (skill.levels[lvl.current][prefix+'mpcost']/10.0) + '%';
   }
 
   skillRequiredWeapon = [];
@@ -221,7 +223,7 @@ function setDescription($skill) { // also sets warnings!
   $('#skill-mpcost .w').html(skillMP);
   $('#skill-description .description').html(skillDescription);
   $('#next-description .description').html(nextDescription);
-  $('#skill-sp').html('(' + skillSP + ' SP)');
+  $('#skill-sp .w').html(skillSP);
 
   // post-change adjustments
   if (skillCD) {
@@ -246,12 +248,6 @@ function setDescription($skill) { // also sets warnings!
     $('#next-description').show();
   } else {
     $('#next-description').hide();
-  }
-
-  if (skillSP) {
-    $('#skill-sp').show();
-  } else {
-    $('#skill-sp').hide();
   }
 }
 
@@ -284,30 +280,33 @@ function setInactive($skill) {
 
 function incSkill($skill, max) {
   setActive($skill);
-  var lvl = $skill.children();
+  var lvl = $skill.children(), levels = jobs[$skill.data('job')].skills[$skill.data('id')].levels;
   var l = lvl.text().split('/');
   l = {'current': parseInt(l[0]), 'max': parseInt(l[1])};
-  if (l.current == l.max) {
+  if (l.current == levels.length) {
     return;
   }
 
   var start = l.current;
-  if (max) { // max
+  if (max && l.current <= l.max) { // max
     l.current = l.max - 1;
   }
 
   lvl.text((l.current+1) + "/" + l.max);
 
-  var change = 0, levels = jobs[$skill.data('job')].skills[$skill.data('id')].levels;
-  for (var i = start; i < l.current + 1; i++) {
-    change += levels[i].spcost;
+  if (l.current < l.max)  {
+    var change = 0;
+    for (var i = start; i < l.current + 1; i++) {
+      change += levels[i].spcost;
+    }
+
+    alterJobSP($skill.data('job'), change);
   }
 
-  alterJobSP($skill.data('job'), change);
   setDescription($skill);
 }
 
-function decSkill($skill, max) {
+function decSkill($skill, min) {
   var lvl = $skill.children();
   var l = lvl.text().split('/');
   l = {'current': parseInt(l[0]), 'max': parseInt(l[1])};
@@ -316,7 +315,7 @@ function decSkill($skill, max) {
   }
 
   var start = l.current;
-  if (max) { // max
+  if (min) { // min
     l.current = 1;
   }
 
@@ -331,7 +330,7 @@ function decSkill($skill, max) {
   lvl.text((l.current-1) + "/" + l.max);
 
   var change = 0, levels = jobs[$skill.data('job')].skills[$skill.data('id')].levels;
-  for (var i = l.current - 1; i < start; i++) {
+  for (var i = l.current - 1; i < Math.min(start, l.max); i++) {
     change -= levels[i].spcost;
   }
 

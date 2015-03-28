@@ -35,7 +35,7 @@
         {
           "required_level": 55,
           "mpcost": 0,
-          "explanationid": 18,
+          "explanationid": 17,
           "spcost": 0,
           "cd": 0,
           "explanationparams": [
@@ -46,7 +46,9 @@
             "2",
             "5"
           ],
-          "pvp_explanationid": 20
+          "pvp_explanationid": 19,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "08",
@@ -90,7 +92,9 @@
             "1",
             "2"
           ],
-          "pvp_explanationid": 11
+          "pvp_explanationid": 11,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "08",
@@ -132,7 +136,9 @@
             "96",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 10
         },
         {
           "required_level": 48,
@@ -152,7 +158,9 @@
             "117",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 51,
@@ -172,7 +180,9 @@
             "130",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 54,
@@ -192,7 +202,9 @@
             "144",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 57,
@@ -212,7 +224,9 @@
             "158",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 60,
@@ -232,7 +246,9 @@
             "223",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 63,
@@ -252,7 +268,9 @@
             "241",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 66,
@@ -272,7 +290,9 @@
             "262",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 69,
@@ -292,7 +312,9 @@
             "285",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 72,
@@ -312,7 +334,9 @@
             "310",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 75,
@@ -332,7 +356,9 @@
             "414",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 78,
@@ -352,7 +378,9 @@
             "449",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 81,
@@ -372,7 +400,9 @@
             "488",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 84,
@@ -392,7 +422,9 @@
             "530",
             "1"
           ],
-          "pvp_explanationid": 19
+          "pvp_explanationid": 18,
+          "pvp_cd": 12000,
+          "pvp_mpcost": 27
         }
       ],
       "image": "08",
@@ -419,7 +451,7 @@
         {
           "required_level": 80,
           "mpcost": 0,
-          "explanationid": 17,
+          "explanationid": 16,
           "spcost": 2,
           "cd": 0,
           "explanationparams": [
@@ -430,7 +462,9 @@
             "5",
             "7"
           ],
-          "pvp_explanationid": 17
+          "pvp_explanationid": 16,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "08",
@@ -457,7 +491,7 @@
         {
           "required_level": 65,
           "mpcost": 0,
-          "explanationid": 16,
+          "explanationid": 15,
           "spcost": 1,
           "cd": 0,
           "explanationparams": [
@@ -468,7 +502,9 @@
             "5",
             "10"
           ],
-          "pvp_explanationid": 16
+          "pvp_explanationid": 15,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "08",
@@ -492,7 +528,7 @@
         {
           "required_level": 70,
           "mpcost": 0,
-          "explanationid": 15,
+          "explanationid": 14,
           "spcost": 2,
           "cd": 0,
           "explanationparams": [
@@ -507,7 +543,9 @@
             "-20",
             "10"
           ],
-          "pvp_explanationid": 15
+          "pvp_explanationid": 14,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "08",
@@ -534,7 +572,7 @@
         {
           "required_level": 60,
           "mpcost": 0,
-          "explanationid": 14,
+          "explanationid": 13,
           "spcost": 0,
           "cd": 0,
           "explanationparams": [
@@ -543,7 +581,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 14
+          "pvp_explanationid": 13,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "08",
@@ -567,20 +607,7 @@
       "nameid": 8,
       "maxlevel": 1,
       "levels": [
-        {
-          "required_level": 55,
-          "mpcost": 0,
-          "explanationid": 13,
-          "spcost": 0,
-          "cd": 0,
-          "explanationparams": [
-            "30"
-          ],
-          "pvp_explanationparams": [
-            "30"
-          ],
-          "pvp_explanationid": 13
-        }
+
       ],
       "image": "08",
       "icon": 65,
@@ -607,7 +634,9 @@
             "678",
             "812"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 53,
@@ -623,7 +652,9 @@
             "700",
             "901"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 56,
@@ -639,7 +670,9 @@
             "722",
             "990"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 59,
@@ -655,7 +688,9 @@
             "743",
             "1080"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 62,
@@ -671,7 +706,9 @@
             "765",
             "1114"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 16
         },
         {
           "required_level": 65,
@@ -687,7 +724,9 @@
             "866",
             "1453"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 68,
@@ -703,7 +742,9 @@
             "888",
             "1462"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 71,
@@ -719,7 +760,9 @@
             "909",
             "1470"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 74,
@@ -735,7 +778,9 @@
             "931",
             "1479"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 77,
@@ -751,7 +796,9 @@
             "952",
             "1487"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 22
         },
         {
           "required_level": 80,
@@ -767,7 +814,9 @@
             "1054",
             "1826"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 83,
@@ -783,7 +832,9 @@
             "1075",
             "1835"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 25
         },
         {
           "required_level": 86,
@@ -799,7 +850,9 @@
             "1097",
             "1843"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 33000,
+          "pvp_mpcost": 26
         }
       ],
       "image": "08",
@@ -937,7 +990,6 @@
     "#y(Shooting Skill)#w\\nFires {0} cannonballs in a fan formation.\\n#yPhysical Damage per Shot: {1}% + {2}\\nUse {3} bullets\\nFanning possible\\nNo cooldown",
     "Increases Super Ball's damage and bounce count. Bounces deal more damage. \\n#ySuper Ball Damage: +{0}%\\nBounces: +{1} \\nBonus Bounce Damage: +{2}%",
     "Pushes Alfredo into overdrive, firing beams of energy in all directions.\\n#yPhysical Damage: {0}% + {1}",
-    "Increase Alfredo Smash's attack and taunt ranges. Causes a shock wave.\\n#yShock Wave Damage: {0}% of Alfredo Smash damage",
     "Enhances Make It Rain to fire more bombs, increasing the explosion range and damage.\\n#yMake It Rain Damage: +{0}%",
     "Enhances Chemical Warfare to explode again after the initial explosion, weakening enemy defense.\\n#yBonus Explosion Damage: {0}% of Chemical Warfare damage\\nEnemy Physical Defense: -{1}%\\nEnemy Magical Defense: -{2}%\\nDuration: {3} sec",
     "Physical Damage increases #y{0}%#w and Alfredo's HP increases by #y{1}%#w.",

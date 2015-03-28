@@ -6,482 +6,7 @@
       "nameid": 0,
       "maxlevel": 30,
       "levels": [
-        {
-          "required_level": 24,
-          "mpcost": 16,
-          "explanationid": 19,
-          "spcost": 3,
-          "cd": 15000,
-          "explanationparams": [
-            "334",
-            "296"
-          ],
-          "pvp_explanationparams": [
-            "179",
-            "47"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 27,
-          "mpcost": 19,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "339",
-            "790"
-          ],
-          "pvp_explanationparams": [
-            "182",
-            "126"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 30,
-          "mpcost": 21,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "344",
-            "876"
-          ],
-          "pvp_explanationparams": [
-            "185",
-            "140"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 33,
-          "mpcost": 23,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "349",
-            "2216"
-          ],
-          "pvp_explanationparams": [
-            "188",
-            "355"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 36,
-          "mpcost": 25,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "354",
-            "2651"
-          ],
-          "pvp_explanationparams": [
-            "191",
-            "424"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 39,
-          "mpcost": 28,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "394",
-            "4434"
-          ],
-          "pvp_explanationparams": [
-            "216",
-            "710"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 42,
-          "mpcost": 31,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "399",
-            "9371"
-          ],
-          "pvp_explanationparams": [
-            "219",
-            "1499"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 45,
-          "mpcost": 33,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "404",
-            "10729"
-          ],
-          "pvp_explanationparams": [
-            "222",
-            "1717"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 48,
-          "mpcost": 36,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "409",
-            "13075"
-          ],
-          "pvp_explanationparams": [
-            "225",
-            "2092"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 51,
-          "mpcost": 38,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "413",
-            "14567"
-          ],
-          "pvp_explanationparams": [
-            "228",
-            "2331"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 54,
-          "mpcost": 41,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "453",
-            "20921"
-          ],
-          "pvp_explanationparams": [
-            "253",
-            "3347"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 57,
-          "mpcost": 43,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "458",
-            "22915"
-          ],
-          "pvp_explanationparams": [
-            "257",
-            "3666"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 60,
-          "mpcost": 45,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "463",
-            "24928"
-          ],
-          "pvp_explanationparams": [
-            "260",
-            "3988"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 63,
-          "mpcost": 48,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "468",
-            "27028"
-          ],
-          "pvp_explanationparams": [
-            "263",
-            "3997"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 66,
-          "mpcost": 50,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "473",
-            "29355"
-          ],
-          "pvp_explanationparams": [
-            "266",
-            "4013"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 69,
-          "mpcost": 53,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "513",
-            "39348"
-          ],
-          "pvp_explanationparams": [
-            "291",
-            "4955"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 72,
-          "mpcost": 55,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "518",
-            "42751"
-          ],
-          "pvp_explanationparams": [
-            "294",
-            "4971"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 75,
-          "mpcost": 58,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "523",
-            "46444"
-          ],
-          "pvp_explanationparams": [
-            "297",
-            "4987"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 78,
-          "mpcost": 60,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "528",
-            "50457"
-          ],
-          "pvp_explanationparams": [
-            "300",
-            "5003"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 81,
-          "mpcost": 62,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "533",
-            "54814"
-          ],
-          "pvp_explanationparams": [
-            "303",
-            "5019"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 84,
-          "mpcost": 65,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "573",
-            "70954"
-          ],
-          "pvp_explanationparams": [
-            "328",
-            "5961"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 87,
-          "mpcost": 67,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "578",
-            "77104"
-          ],
-          "pvp_explanationparams": [
-            "331",
-            "5978"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 90,
-          "mpcost": 70,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "583",
-            "83790"
-          ],
-          "pvp_explanationparams": [
-            "334",
-            "5994"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 93,
-          "mpcost": 72,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "588",
-            "91063"
-          ],
-          "pvp_explanationparams": [
-            "337",
-            "6010"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 96,
-          "mpcost": 74,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "592",
-            "98973"
-          ],
-          "pvp_explanationparams": [
-            "340",
-            "6026"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 99,
-          "mpcost": 77,
-          "explanationid": 19,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-            "597",
-            "107572"
-          ],
-          "pvp_explanationparams": [
-            "343",
-            "6042"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 102,
-          "mpcost": 0,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
 
-          ],
-          "pvp_explanationparams": [
-            "100",
-            "0"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 105,
-          "mpcost": 0,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-
-          ],
-          "pvp_explanationparams": [
-            "100",
-            "0"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 108,
-          "mpcost": 0,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-
-          ],
-          "pvp_explanationparams": [
-            "100",
-            "0"
-          ],
-          "pvp_explanationid": 19
-        },
-        {
-          "required_level": 111,
-          "mpcost": 0,
-          "explanationid": 20,
-          "spcost": 1,
-          "cd": 15000,
-          "explanationparams": [
-
-          ],
-          "pvp_explanationparams": [
-            "100",
-            "0"
-          ],
-          "pvp_explanationid": 19
-        }
       ],
       "image": "04",
       "icon": 9,
@@ -598,486 +123,7 @@
       "nameid": 2,
       "maxlevel": 30,
       "levels": [
-        {
-          "required_level": 32,
-          "mpcost": 17,
-          "explanationid": 21,
-          "spcost": 3,
-          "cd": 25000,
-          "explanationparams": [
-            "290",
-            "738"
-          ],
-          "pvp_explanationparams": [
-            "236",
-            "177"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 35,
-          "mpcost": 19,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "304",
-            "1735"
-          ],
-          "pvp_explanationparams": [
-            "247",
-            "416"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 38,
-          "mpcost": 22,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "318",
-            "2046"
-          ],
-          "pvp_explanationparams": [
-            "258",
-            "491"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 41,
-          "mpcost": 24,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "331",
-            "4194"
-          ],
-          "pvp_explanationparams": [
-            "269",
-            "1007"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 44,
-          "mpcost": 26,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "345",
-            "4777"
-          ],
-          "pvp_explanationparams": [
-            "280",
-            "1146"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 47,
-          "mpcost": 30,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "410",
-            "9542"
-          ],
-          "pvp_explanationparams": [
-            "333",
-            "2290"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 50,
-          "mpcost": 32,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "423",
-            "10645"
-          ],
-          "pvp_explanationparams": [
-            "344",
-            "2555"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 53,
-          "mpcost": 34,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "437",
-            "11759"
-          ],
-          "pvp_explanationparams": [
-            "355",
-            "2822"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 56,
-          "mpcost": 37,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "451",
-            "12882"
-          ],
-          "pvp_explanationparams": [
-            "366",
-            "3092"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 59,
-          "mpcost": 39,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "464",
-            "14012"
-          ],
-          "pvp_explanationparams": [
-            "377",
-            "3363"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 62,
-          "mpcost": 42,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "529",
-            "21440"
-          ],
-          "pvp_explanationparams": [
-            "430",
-            "4898"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 65,
-          "mpcost": 44,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "543",
-            "23263"
-          ],
-          "pvp_explanationparams": [
-            "441",
-            "4935"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 68,
-          "mpcost": 47,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "556",
-            "25235"
-          ],
-          "pvp_explanationparams": [
-            "452",
-            "4972"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 71,
-          "mpcost": 49,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "570",
-            "27362"
-          ],
-          "pvp_explanationparams": [
-            "463",
-            "5009"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 74,
-          "mpcost": 51,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "584",
-            "29668"
-          ],
-          "pvp_explanationparams": [
-            "474",
-            "5046"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 77,
-          "mpcost": 55,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "648",
-            "41760"
-          ],
-          "pvp_explanationparams": [
-            "527",
-            "6508"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 80,
-          "mpcost": 57,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "662",
-            "45308"
-          ],
-          "pvp_explanationparams": [
-            "538",
-            "6545"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 83,
-          "mpcost": 59,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "676",
-            "49163"
-          ],
-          "pvp_explanationparams": [
-            "549",
-            "6582"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 86,
-          "mpcost": 62,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "689",
-            "53340"
-          ],
-          "pvp_explanationparams": [
-            "560",
-            "6620"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 89,
-          "mpcost": 64,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "703",
-            "57874"
-          ],
-          "pvp_explanationparams": [
-            "571",
-            "6657"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 92,
-          "mpcost": 67,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "767",
-            "77456"
-          ],
-          "pvp_explanationparams": [
-            "624",
-            "8118"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 95,
-          "mpcost": 69,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "781",
-            "84100"
-          ],
-          "pvp_explanationparams": [
-            "635",
-            "8156"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 98,
-          "mpcost": 72,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "795",
-            "91313"
-          ],
-          "pvp_explanationparams": [
-            "646",
-            "8193"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 101,
-          "mpcost": 0,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 104,
-          "mpcost": 0,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 107,
-          "mpcost": 0,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 110,
-          "mpcost": 0,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 113,
-          "mpcost": 0,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 116,
-          "mpcost": 0,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationid": 21
-        },
-        {
-          "required_level": 119,
-          "mpcost": 0,
-          "explanationid": 21,
-          "spcost": 1,
-          "cd": 25000,
-          "explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationparams": [
-            "0",
-            "0"
-          ],
-          "pvp_explanationid": 21
-        }
+
       ],
       "image": "04",
       "icon": 53,
@@ -1108,7 +154,9 @@
             "5",
             "80"
           ],
-          "pvp_explanationid": 11
+          "pvp_explanationid": 11,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 55,
@@ -1128,7 +176,9 @@
             "6",
             "80"
           ],
-          "pvp_explanationid": 11
+          "pvp_explanationid": 11,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 65,
@@ -1148,7 +198,9 @@
             "7",
             "80"
           ],
-          "pvp_explanationid": 11
+          "pvp_explanationid": 11,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 75,
@@ -1168,7 +220,9 @@
             "8",
             "80"
           ],
-          "pvp_explanationid": 11
+          "pvp_explanationid": 11,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 85,
@@ -1188,7 +242,9 @@
             "9",
             "80"
           ],
-          "pvp_explanationid": 11
+          "pvp_explanationid": 11,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         },
         {
           "required_level": 95,
@@ -1208,7 +264,9 @@
             "9",
             "90"
           ],
-          "pvp_explanationid": 11
+          "pvp_explanationid": 11,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "04",
@@ -1248,7 +306,9 @@
             "50",
             "15"
           ],
-          "pvp_explanationid": 23
+          "pvp_explanationid": 20,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "04",
@@ -1288,7 +348,9 @@
           "pvp_explanationparams": [
             "30"
           ],
-          "pvp_explanationid": 15
+          "pvp_explanationid": 15,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "04",
@@ -1324,7 +386,9 @@
           "pvp_explanationparams": [
             "10"
           ],
-          "pvp_explanationid": 16
+          "pvp_explanationid": 16,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "04",
@@ -1360,7 +424,9 @@
           "pvp_explanationparams": [
             "3"
           ],
-          "pvp_explanationid": 17
+          "pvp_explanationid": 17,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "04",
@@ -1393,7 +459,9 @@
           "pvp_explanationparams": [
             "50"
           ],
-          "pvp_explanationid": 18
+          "pvp_explanationid": 18,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "04",
@@ -1435,7 +503,9 @@
             "3105",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 11
         },
         {
           "required_level": 53,
@@ -1455,7 +525,9 @@
             "3443",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 12
         },
         {
           "required_level": 56,
@@ -1475,7 +547,9 @@
             "3783",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 13
         },
         {
           "required_level": 59,
@@ -1495,7 +569,9 @@
             "4127",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 14
         },
         {
           "required_level": 62,
@@ -1515,7 +591,9 @@
             "4260",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 15
         },
         {
           "required_level": 65,
@@ -1535,7 +613,9 @@
             "5410",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 17
         },
         {
           "required_level": 68,
@@ -1555,7 +635,9 @@
             "5449",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 18
         },
         {
           "required_level": 71,
@@ -1575,7 +657,9 @@
             "5487",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 19
         },
         {
           "required_level": 74,
@@ -1595,7 +679,9 @@
             "5526",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 20
         },
         {
           "required_level": 77,
@@ -1615,7 +701,9 @@
             "5565",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 21
         },
         {
           "required_level": 80,
@@ -1635,7 +723,9 @@
             "6294",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 23
         },
         {
           "required_level": 83,
@@ -1655,7 +745,9 @@
             "6599",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 24
         },
         {
           "required_level": 86,
@@ -1675,7 +767,9 @@
             "6904",
             "10"
           ],
-          "pvp_explanationid": 22
+          "pvp_explanationid": 19,
+          "pvp_cd": 35000,
+          "pvp_mpcost": 25
         }
       ],
       "image": "04",
@@ -1711,7 +805,9 @@
           "pvp_explanationparams": [
             "50"
           ],
-          "pvp_explanationid": 12
+          "pvp_explanationid": 12,
+          "pvp_cd": 0,
+          "pvp_mpcost": 0
         }
       ],
       "image": "04",
@@ -1751,9 +847,6 @@
     "After casting Detonate, lightning bolts will be launched in different directions.\\n#yDamage per Lightning Bolt: {0}% of Detonate damage",
     "Deal an extra #y{0}%#w non-elemental damage against electrocuted enemies.",
     "Enhances Consecration. A powerful ray of light rises from the ground to deal great damage to enemies before consecration ends.\\n#yAdditional Damage: {0}%",
-    "Summons forth a powerful spirit sword of light that can be shot in any direction. Effective on knocked down enemies. \\n#yLight Magic\\nMagic Attack Power: {0}% + {1}",
-    "-2146826273",
-    "Rain holyfire and brimstone upon all nearby enemies. \\n#yLight Magic\\nMagic Attack Power: {0}% + {1}",
     "Consecrates the ground within a {0}m radius. Enemies who tread on this holy ground take damage and have lowered light resistance.\\n#yLight Magic\\nMagic Damage: {1}% + {2}\\nEnemy Light Resist: -{3}%",
     "Enhances the range of Mind Snapper. Also causes an explosion at the end to push back enemies.\\n#yMind Snapper Damage: +{0}%\\nLight Resist (when Electrocuted): -{1}%"
   ]

@@ -43,3 +43,8 @@ Unix:
 `cat *.sql > dnss.sql`
 
 Then import dnss.sql
+
+### If you can't import messages.sql (from DNT2SQL), run this command on it:
+`iconv -f utf-8 -t utf-8 -c messages.sql > clean_messages.sql`
+
+And import that instead.
