@@ -151,7 +151,7 @@ public class PakFile {
         inflater.end();
 
         synchronized (getDestination()) {
-            if (outputDestination.exists()) {
+            if (outputDestination.exists() && ! pak.isOverwriteExisting()) {
                 int i = 1;
                 int extPos = outputPakPath.lastIndexOf('.');
                 File outputFile;

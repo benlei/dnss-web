@@ -12,6 +12,7 @@ public class Pak {
     private boolean extractDeleted;
     private ArrayList<Pattern> allow;
     private ArrayList<Pattern> ignore;
+    private boolean overwriteExisting;
 
     // fields for other things
     private String id;
@@ -80,6 +81,14 @@ public class Pak {
         this.ignore = ignore;
     }
 
+    public boolean isOverwriteExisting() {
+        return overwriteExisting;
+    }
+
+    public void setOverwriteExisting(boolean overwriteExisting) {
+        this.overwriteExisting = overwriteExisting;
+    }
+
     // Non-Properties methods
     public int getTotalFiles() {
         return totalFiles;
@@ -113,10 +122,6 @@ public class Pak {
         this.totalExtractedFiles = totalExtractedFiles;
     }
 
-    public void debug() {
-
-    }
-
     @Override
     protected Object clone() {
         Pak pak = new Pak();
@@ -126,6 +131,7 @@ public class Pak {
         pak.setFlatten(flatten);
         pak.setDestination(destination);
         pak.setLocation(location);
+        pak.setOverwriteExisting(overwriteExisting);
         return pak;
     }
 }

@@ -68,6 +68,7 @@ public class PakExtractor {
         String destination = properties.getProperty("global.destination", null);
         boolean flatten = Boolean.valueOf(properties.getProperty("global.flatten", "false"));
         boolean extractDeleted = Boolean.valueOf(properties.getProperty("global.extract.deleted", "false"));
+        boolean overwriteExisting = Boolean.valueOf(properties.getProperty("global.overwrite.existing", "true"));
 
         ArrayList<Pattern> allowPatterns = loadPatternList(properties, "global.allow");
         ArrayList<Pattern> ignorePatterns = loadPatternList(properties, "global.ignore");
@@ -78,6 +79,7 @@ public class PakExtractor {
         base.setExtractDeleted(extractDeleted);
         base.setAllow(allowPatterns);
         base.setIgnore(ignorePatterns);
+        base.setOverwriteExisting(overwriteExisting);
 
         HashMap<String, Pak> pakMap = new HashMap<String, Pak>();
         for (String name : properties.stringPropertyNames()) {
@@ -113,8 +115,12 @@ public class PakExtractor {
                     pak.setFlatten(Boolean.valueOf(properties.getProperty(prefix + "flatten", "false")));
                 }
 
-                if (properties.containsKey(prefix + "extractDeleted")) {
-                    pak.setExtractDeleted(Boolean.valueOf(properties.getProperty(prefix + "extractDeleted", "false")));
+                if (properties.containsKey(prefix + "extract.deleted")) {
+                    pak.setExtractDeleted(Boolean.valueOf(properties.getProperty(prefix + "extract.deleted", "false")));
+                }
+
+                if (properties.containsKey(prefix + "overwrite.existing")) {
+                    pak.setExtractDeleted(Boolean.valueOf(properties.getProperty(prefix + "overwrite.existing", "true")));
                 }
 
                 pakMap.put(pakId, pak);
