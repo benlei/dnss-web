@@ -182,24 +182,24 @@ function setDescription($skill) { // also sets warnings!
   }
   if (! lvl.current) {
     skillLevel = 1;
-    skillCD = skill.levels[0].cd / 1000;
+    skillCD = skill.levels[0][prefix+'cd'] / 1000;
     skillSP = skill.levels[0].spcost;
     skillRequiredLevel = skill.levels[0].required_level;
     skillDescription = formatDescription(job.message[skill.levels[0][prefix+'explanationid']], skill.levels[0][prefix+'explanationparams']);
     skillMP = (skill.levels[0][prefix+'mpcost'] / 10.0) + '%';
   } else if (lvl.current == skill.levels.length) {
     skillLevel = lvl.current;
-    skillCD = skill.levels[lvl.current - 1].cd / 1000;
+    skillCD = skill.levels[lvl.current - 1][prefix+'cd'] / 1000;
     skillRequiredLevel = skill.levels[lvl.current - 1].required_level;
     skillDescription = formatDescription(job.message[skill.levels[lvl.current - 1][prefix+'explanationid']], skill.levels[lvl.current - 1][prefix+'explanationparams']);
     skillMP = (skill.levels[lvl.current - 1][prefix+'mpcost'] / 10.0) + '%';
     skillSP = skill.levels[lvl.current - 1].spcost;
   } else {
     skillLevel = lvl.current + ' &rarr; ' + (lvl.current+1);
-    if (skill.levels[lvl.current - 1].cd == skill.levels[lvl.current].cd) {
-      skillCD = skill.levels[lvl.current - 1].cd / 1000;
+    if (skill.levels[lvl.current - 1][prefix+'cd'] == skill.levels[lvl.current][prefix+'cd']) {
+      skillCD = skill.levels[lvl.current - 1][prefix+'cd'] / 1000;
     } else {
-      skillCD = (skill.levels[lvl.current - 1].cd / 1000) + ' &rarr; ' + (skill.levels[lvl.current].cd / 1000);
+      skillCD = (skill.levels[lvl.current - 1][prefix+'cd'] / 1000) + ' &rarr; ' + (skill.levels[lvl.current][prefix+'cd'] / 1000);
     }
 
     skillRequiredLevel = skill.levels[lvl.current - 1].required_level + ' &rarr; ' + skill.levels[lvl.current].required_level;
