@@ -107,6 +107,7 @@ function rebuildSimulation(str) {
 
   if (other && map[other.charAt(0)] == 1) {
     $('#mode').val('pvp');
+    generateBuild();
   }
 
   $('.skill-container').each(function(i) {
