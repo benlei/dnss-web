@@ -11,11 +11,7 @@ String.prototype.message_format = function (args) {
   while (m=str.match(/{[0-9]+}/g)) {
     for (var i in m) {
       var k = m[i].substring(1, m[i].length - 1);
-      if (typeof arguments[k] === 'undefined') {
-        arguments[k] = '';
-      }
-
-      str = str.replace(m[i], arguments[k]);
+      str = str.replace(m[i], arguments[k] === undefined ? '' : arguments[k]);
     }
   }
   return str.toString();
