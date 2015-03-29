@@ -31,7 +31,7 @@ query = <<sql_query
           m._data as jobname,
          LOWER(_englishname) as englishname,
          _parentjob,
-         _jobnumber
+         _jobnumber as advancement
   FROM jobs j
   INNER JOIN messages m
     ON _jobname = m._id
@@ -125,7 +125,9 @@ query = queries.join("UNION\n")
   end
 
   job['default_skills'] << skill['id']
+  puts JSON.pretty_generate(job['default_skills'])
 end
+
 
 
 ##############################################################################
@@ -133,7 +135,7 @@ end
 # Notes:
 #   _decreasehp, at this point of time, is always 0
 ##############################################################################
-jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
+jobs.select {|id, job| job['advancement'] == 0}.each_value do |job|
   query = <<-sql_query
     SELECT  _needjob,
            _skillindex as id,
@@ -189,7 +191,7 @@ end
 # get all the jobs, subjobs, etc. 
 ##############################################################################
 job_tree = Hash.new
-jobs.select {|k,v| v['jobnumber'] == 0}.each do |k,v|
+jobs.select {|k,v| v['advancement'] == 0}.each do |k,v|
   job_tree[k] = {
     'jobname' => v['jobname'],
     'identifier' => v['englishname'],
@@ -197,7 +199,7 @@ jobs.select {|k,v| v['jobnumber'] == 0}.each do |k,v|
   }
 end
 
-jobs.select {|k,v| v['jobnumber'] == 1}.each do |k,v|
+jobs.select {|k,v| v['advancement'] == 1}.each do |k,v|
   primary = v['parentjob']
   jtree = job_tree[primary]['advancements']
   jtree[k] = {
@@ -207,7 +209,7 @@ jobs.select {|k,v| v['jobnumber'] == 1}.each do |k,v|
   }
 end
 
-jobs.select {|k,v| v['jobnumber'] == 2}.each do |k,v|
+jobs.select {|k,v| v['advancement'] == 2}.each do |k,v|
   secondary = v['parentjob']
   primary = jobs[secondary]['parentjob']
   jtree = job_tree[primary]['advancements'][secondary]['advancements']
@@ -241,7 +243,7 @@ jobs.each_value do |job|
   englishname = job['englishname']
 
   # deletes unneeded fields
-  ['englishname', 'jobnumber', 'parentjob', 'jobname'].each {|a| job.delete(a)}
+  ['englishname', 'parentjob', 'jobname'].each {|a| job.delete(a)}
 
   # path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
   # stream = open(path, 'w')
