@@ -73,21 +73,6 @@ def mkdir_p(directory)
   end
 end
 
-
-##############################################################################
-# func: add item to message
-##############################################################################
-def get_local_message_id(local_messages, id, messages)
-  idx = local_messages.index(messages[id])
-  if idx.nil?
-    idx = local_messages.length
-    local_messages << messages[id]
-  end
-
-  idx
-end
-
-
 ##############################################################################
 # Combine assassin tables
 ##############################################################################
