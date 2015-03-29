@@ -48,3 +48,10 @@ Then import dnss.sql
 `iconv -f utf-8 -t utf-8 -c messages.sql > clean_messages.sql`
 
 And import that instead.
+
+### Installing nokogiri gem
+`apt-cyg install ruby-nokogiri`
+
+### Installing pg gem (do not use cygwin's ruby-pg) 
+`apt-cyg install postgresql postgresql-devel libpq-devel make gcc-core`
+`gem install pg`
