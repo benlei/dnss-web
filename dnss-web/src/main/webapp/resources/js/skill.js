@@ -1,24 +1,15 @@
 function Skill(skill) {
+  this.id = skill.id;
   this.next_level = null;
   this.prev_level = null;
-
-  this.get_image_link = function() {
-    return '/images/skillicon' + skill.image + '.png';
-  };
-
-  this.get_icon_coordinates = function() {
-    var x = (skill.icon % 10) * -50;
-    var y = Math.floor(skill.icon / 10) * -50;
-    return {x: x, y:y};
-  };
-
+  this.level = skill.level;
+  this.advancement = skill.advancement;
+  this.required_level = skill.required_level;
+  this.max_level = null;
 
   // same for both pve and pvp
   this.get_name = function() { return dnss.messages[skill.nameid]; };
-  this.get_level = function() { return skill.level; };
   this.get_spcost = function() { return skill.level <= dnss.max_skill_levels[skill.advancement] ? dnss.skill.spcost : 0; };
-  this.get_required_level = function() { return skill.required_level; };
-  this.get_advancement = function() { return skill.advancement; };
   this.get_type = function() { return dnss.types.skills[skill.type]; };
 
   // mode specific stuff
@@ -45,4 +36,50 @@ function Skill(skill) {
   };
 
   this.get_sp_reqs = function() { return skill.need_sp; };
+
+  this.get_image_link = function() {
+    return '/images/skillicon' + skill.image + '.png';
+  };
+
+  this.get_icon_coordinates = function() {
+    var x = (skill.icon % 10) * -50;
+    var y = Math.floor(skill.icon / 10) * -50;
+    return {x: x, y:y};
+  };
+
+
+  // max level, not last level
+  this.get_max_level = function() {
+    if (this.max_level !== null) {
+      return this.max_level;
+    }
+
+    var max_level = dnss.max_levels[this.advancement];
+    var curr = this;
+    while (curr.prev_level) {
+      curr = curr.prev_level;
+      if (curr.max_level) { // optimization to reduce path search
+        this.max_level = curr.max_level;
+        return this.max_level;
+      }
+    }
+
+    while (curr.next_level && curr.next_level.required_level <= max_level) {
+      curr = curr.next_level;
+      if (curr.max_level) { // optimization to reduce path search
+        this.max_level = curr.max_level;
+        return this.max_level;
+      }
+    }
+
+    this.max_level = curr;
+    return curr;
+  };
+
+  this.use = function() {
+    var $skill = dnss.$(this.id);
+    $skill.css('background-image', fmt('url($0)',this.get_image_link()));
+    $skill.css('background-position', fmt('${x}px ${y}px', this.get_icon_coordinates()));
+    $skill.find('.lvl').text(fmt('$0/$1', this.level, this.get_max_level().level));
+  };
 }

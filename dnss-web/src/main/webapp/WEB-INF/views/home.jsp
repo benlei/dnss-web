@@ -28,12 +28,12 @@
       <tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${skill != 0}">
         <td class="container">
           <div class="skill" data-id="${skill}" />
-          <div class="lvl">0/0</div></c:when><c:otherwise>
+          <div class="lvl"></div></c:when><c:otherwise>
         <td class="container"></c:otherwise></c:choose></c:forEach></c:forEach>
     </table></c:forEach>
   </section>
   <aside id="sidebar-2">
-    <input type="button" id="mode" value="pve" /><h2 id="skill-name">Magma Monument</h2>
+    <input type="button" id="mode" value="pve" /><h2 id="skill-name"></h2>
     <div class="skill-description">
       <ul class="meta">
         <li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span></li>
@@ -56,8 +56,7 @@
 <script type="text/javascript">
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
 var max_sp = [<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]
-var max_level = 80;
-var max_skill_levels = [80, 70, 80];
+var max_levels = [80, 70, 80];
 
 $('.skill-tree').hide();
 $('#skill-tree-0').show();
@@ -72,15 +71,12 @@ $('#job-list-sp li[data-job]').each(function() {
   })
 });
 
-// if (window.location.search && window.location.search.substr(1)) {
-//   var skills = window.location.search.substr(1);
-//   if (skills) {
-//     rebuildSimulation(skills);
-//   }
-// }
-
 $(document).ready(function() {
-  dnss.init(jobIds, max_level, max_skill_levels, max_sp);
+  if (window.location.search && window.location.search.substr(1)) {
+    dnss.init(jobIds, max_levels, max_sp, window.location.search.substr(1));
+  } else {
+    dnss.init(jobIds, max_levels, max_sp);
+  }
 }); 
 </script>
 </body>
