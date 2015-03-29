@@ -16,8 +16,8 @@
     </properties>
 
     <scm>
-        <connection>scm:git:https://github.com/ben-lei/dn-skill-sim.git</connection>
-        <developerConnection>scm:git:https://github.com/ben-lei/dn-skill-sim.git</developerConnection>
+        <connection>scm:git:git@github.com:ben-lei/dn-skill-sim.git</connection>
+        <developerConnection>scm:git:git@github.com:ben-lei/dn-skill-sim.git</developerConnection>
     </scm>
 
     <build>
