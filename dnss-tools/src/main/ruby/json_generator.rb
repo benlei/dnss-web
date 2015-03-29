@@ -17,8 +17,8 @@ JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\mai
 messages = Hash.new
 @conn.exec('SELECT * FROM messages').each_dnt {|message| messages[message['id']] = message['data']}
 
-# academic tumble
-messages[1000085115] = messages[1000007433]
+# untranslated messages
+messages[1000085115] = messages[1000007433] # academic tumble
 
 ##############################################################################
 # gets all the jobs [write]
@@ -31,8 +31,7 @@ query = <<sql_query
           m._data as jobname,
          LOWER(_englishname) as englishname,
          _parentjob,
-         _jobnumber,
-         _jobicon
+         _jobnumber
   FROM jobs j
   INNER JOIN messages m
     ON _jobname = m._id
@@ -40,7 +39,7 @@ query = <<sql_query
 sql_query
 @conn.exec(query).each_dnt do |job|
   job['skills'] = Hash.new
-  job['messages'] = Array.new    # prepare to store messages needed for skill descriptions
+  job['messages'] = Hash.new    # prepare to store messages needed for skill descriptions
   jobs[job['id']] = job
   jobs[job['id']].delete('id')
 end
@@ -58,12 +57,15 @@ query = <<sql_query
          _skilltype as type,
          _needweapontype1, _needweapontype2
   FROM skills
-  WHERE _needjob > 0
+  WHERE _id IN (
+      SELECT _skilltableid
+      FROM skill_tree
+  )
   ORDER BY _needjob ASC
 sql_query
 @conn.exec(query).each_dnt do |skill|
   jobs[skill['needjob']]['skills'][skill['id']] = skill
-  skill['nameid'] = get_local_message_id(jobs[skill['needjob']]['messages'], skill['nameid'], messages)
+  jobs[skill['needjob']]['messages'][skill['nameid']] = messages[skill['nameid']]
 
   skill['levels'] = Array.new
   skill['image'] = '%02d' % ((skill['iconimageindex'] / 200) + 1)
@@ -98,7 +100,7 @@ sql_query
   skill['requires'] = Array.new
   skill['requires'] << {'id' => tree['parentskillid1'], :level => tree['needparentskilllevel1']} unless tree['parentskillid1'] == 0
   skill['requires'] << {'id' => tree['parentskillid2'], :level => tree['needparentskilllevel2']} unless tree['parentskillid2'] == 0
-  skill['sp_requires'] = [tree['needbasicsp1'], tree['needfirstsp1']]
+  skill['need_sp'] = [tree['needbasicsp1'], tree['needfirstsp1']]
 end
 
 ##############################################################################
@@ -156,22 +158,30 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
   @conn.exec(query % [job['englishname'], 'pve']).each_dnt do |skill|
     jobs[skill['needjob']]['skills'][skill['id']]['levels'] << skill
 
-    skillparams = skill['skillexplanationidparam'].to_s
-    skill['explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
-    skill['explanationid'] = get_local_message_id(jobs[skill['needjob']]['messages'], skill['explanationid'], messages)
+    cd = skill['cd'] / 1000.0
+    cd = cd.to_i if cd == cd.to_i
+
+    jobs[skill['needjob']]['messages'][skill['explanationid']] = messages[skill['explanationid']]
+    skill['cd'] = {'pve' => cd}
+    skill['mpcost'] = {'pve' => skill['mpcost'] / 10.0}
+    skill['explanationparams'] = {'pve'=> skill['skillexplanationidparam'].to_s.split(',').map {|str| str.strip.message_format(messages)}}
+    skill['explanationid'] = {'pve' => skill['explanationid']}
 
     ['id', 'skilllevel', 'needjob', 'skillexplanationidparam'].each {|a| skill.delete(a)}
   end
 
-  @conn.exec(query % [job['englishname'], 'pvp']).each_dnt do |pvp_skill|
-    level = jobs[pvp_skill['needjob']]['skills'][pvp_skill['id']]['levels'][pvp_skill['skilllevel'].to_i - 1]
+  @conn.exec(query % [job['englishname'], 'pvp']).each_dnt do |skill|
+    level = jobs[skill['needjob']]['skills'][skill['id']]['levels'][skill['skilllevel'].to_i - 1]
     next if level.nil?
 
-    skillparams = pvp_skill['skillexplanationidparam'].to_s
-    level['pvp_explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
-    level['pvp_explanationid'] = get_local_message_id(jobs[pvp_skill['needjob']]['messages'], pvp_skill['explanationid'], messages)
-    level['pvp_cd'] = pvp_skill['cd']
-    level['pvp_mpcost'] = pvp_skill['mpcost']
+    cd = skill['cd'] / 1000.0
+    cd = cd.to_i if cd == cd.to_i
+
+    jobs[skill['needjob']]['messages'][skill['explanationid']] = messages[skill['explanationid']]
+    level['cd']['pvp'] = cd
+    level['mpcost']['pvp'] = skill['mpcost'] / 10.0
+    level['explanationparams']['pvp'] = skill['skillexplanationidparam'].to_s.split(',').map {|str| str.strip.message_format(messages)}
+    level['explanationid']['pvp'] = skill['explanationid']
   end
 end
 
