@@ -40,7 +40,7 @@ query = <<sql_query
 sql_query
 @conn.exec(query).each_dnt do |job|
   job['skills'] = Hash.new
-  job['message'] = Array.new    # prepare to store messages needed for skill descriptions
+  job['messages'] = Array.new    # prepare to store messages needed for skill descriptions
   jobs[job['id']] = job
   jobs[job['id']].delete('id')
 end
@@ -63,7 +63,7 @@ query = <<sql_query
 sql_query
 @conn.exec(query).each_dnt do |skill|
   jobs[skill['needjob']]['skills'][skill['id']] = skill
-  skill['nameid'] = get_local_message_id(jobs[skill['needjob']]['message'], skill['nameid'], messages)
+  skill['nameid'] = get_local_message_id(jobs[skill['needjob']]['messages'], skill['nameid'], messages)
 
   skill['levels'] = Array.new
   skill['image'] = '%02d' % ((skill['iconimageindex'] / 200) + 1)
@@ -158,7 +158,7 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
 
     skillparams = skill['skillexplanationidparam'].to_s
     skill['explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
-    skill['explanationid'] = get_local_message_id(jobs[skill['needjob']]['message'], skill['explanationid'], messages)
+    skill['explanationid'] = get_local_message_id(jobs[skill['needjob']]['messages'], skill['explanationid'], messages)
 
     ['id', 'skilllevel', 'needjob', 'skillexplanationidparam'].each {|a| skill.delete(a)}
   end
@@ -169,7 +169,7 @@ jobs.select {|id, job| job['jobnumber'] == 0}.each_value do |job|
 
     skillparams = pvp_skill['skillexplanationidparam'].to_s
     level['pvp_explanationparams'] = skillparams.split(',').map {|str| str.strip.message_format(messages)}
-    level['pvp_explanationid'] = get_local_message_id(jobs[pvp_skill['needjob']]['message'], pvp_skill['explanationid'], messages)
+    level['pvp_explanationid'] = get_local_message_id(jobs[pvp_skill['needjob']]['messages'], pvp_skill['explanationid'], messages)
     level['pvp_cd'] = pvp_skill['cd']
     level['pvp_mpcost'] = pvp_skill['mpcost']
   end
