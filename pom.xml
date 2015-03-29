@@ -10,7 +10,9 @@
     <artifactId>dnss</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
+    <scm>
+        <connection>scm:git:https://github.com/ben-lei/dn-skill-sim.git</connection>
+    </scm>
     <properties>
         <slf4j.version>1.7.10</slf4j.version>
         <logback.version>1.1.2</logback.version>
