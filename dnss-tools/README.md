@@ -54,4 +54,5 @@ And import that instead.
 
 ### Installing pg gem (do not use cygwin's ruby-pg) 
 `apt-cyg install postgresql postgresql-devel libpq-devel make gcc-core`
+
 `gem install pg`

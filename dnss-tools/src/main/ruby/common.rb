@@ -1,7 +1,7 @@
 ##############################################################################
 # connect to postgresql server
 ##############################################################################
-@conn = PG.connect(:host => 'localhost', :port => 5432, 
+@conn = PG.connect(:host => 'localhost', :port => 5432,
                   :user => 'dnss', :password => 'dnss',
                   :dbname => 'dnss')
 @conn.type_map_for_results = PG::BasicTypeMapForResults.new @conn

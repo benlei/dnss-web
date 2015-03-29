@@ -213,10 +213,10 @@ mkdir_p(JSON_DIRECTORY)
 ##############################################################################
 # WRITE: weapon types
 ##############################################################################
-path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
-stream = open(path, 'w')
-stream.write(JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
-stream.close()
+# path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
+# stream = open(path, 'w')
+# stream.write(JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
+# stream.close()
 
 path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
 stream = open(path, 'w')
@@ -233,11 +233,11 @@ jobs.each_value do |job|
   # deletes unneeded fields
   ['englishname', 'jobnumber', 'parentjob', 'jobname'].each {|a| job.delete(a)}
 
-  path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
-  stream = open(path, 'w')
-  stream.write(JSON.pretty_generate(job))
-  stream.close()
-  puts '%s created' % path
+  # path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
+  # stream = open(path, 'w')
+  # stream.write(JSON.pretty_generate(job))
+  # stream.close()
+  # puts '%s created' % path
 
   path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
   stream = open(path, 'w')
@@ -249,11 +249,11 @@ end
 ##############################################################################
 # WRITE: job tree
 ##############################################################################
-path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
-stream = open(path, 'w')
-stream.write(JSON.pretty_generate(job_tree))
-stream.close()
-puts '%s created' % path
+# path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
+# stream = open(path, 'w')
+# stream.write(JSON.pretty_generate(job_tree))
+# stream.close()
+# puts '%s created' % path
 
 path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
 stream = open(path, 'w')
