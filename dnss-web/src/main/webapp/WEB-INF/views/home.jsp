@@ -37,11 +37,12 @@
     <div class="skill-description">
       <ul class="meta">
         <li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span></li>
-        <li id="skill-sp"><span class="y">SP Consumed: </span><span class="w"></span></li>
-        <li id="skill-mpcost"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
+        <li id="skill-sp"><span class="y">Consumes SP: </span><span class="w"></span></li>
+        <li id="skill-total-sp"><span class="y">Total SP Consumed: </span><span class="w"></span></li>
+        <li id="skill-mp"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
         <li id="skill-cd"><span class="y">Cooldown: </span><span class="w"></span> sec</li>
         <li id="skill-required-level"><span class="y">Level Limit: </span><span class="w"></span></li>
-        <li id="skill-required-weapon"><span class="y">Required Weapon: </span><span class="w"></span></li>
+        <li id="skill-required-weapon"><span class="y">Required Weapon(s): </span><span class="w"></span></li>
         <li id="skill-type"><span class="y">Skill Type: </span><span class="w"></span></li>
         <li id="skill-description"><span class="y">Skill Description:</span><div class="description"></div></li>
         <li id="next-description"><span class="y">Next Description:</span><div class="description"></div></li>
@@ -53,6 +54,7 @@
 <script src="/js/lib.js"></script>
 <script src="/js/dnss.js"></script>
 <script src="/js/skill.js"></script>
+<script src="/js/description.js"></script>
 <script type="text/javascript">
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
 var max_sp = [<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]
@@ -77,7 +79,7 @@ $(document).ready(function() {
   } else {
     dnss.init(jobIds, max_levels, max_sp);
   }
-}); 
+});
 </script>
 </body>
 </html>
