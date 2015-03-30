@@ -113,6 +113,7 @@ ul {
   float: left;
   margin-left: 40px;
   font-size: 0.8em;
+  display: none;
 }
 
 #sidebar-2 {

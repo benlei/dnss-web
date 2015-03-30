@@ -6,7 +6,6 @@ var dnss = {
   max_levels: null,
   max_sp: null,
   sp: [0, 0, 0],
-  mode: 'pve',
   build: Array(72 + 1 + 1).join('-').split(''),
 
   init: function(jobIdentifiers, max_levels, max_sp, start_build) {
@@ -51,6 +50,14 @@ var dnss = {
         }
       });
     }
+
+    $('#mode').click(function() {
+      switch($(this).val()) {
+        case 'pve': $(this).val('pvp'); break;
+        case 'pvp': $(this).val('pve'); break;
+      }
+     description.flip();
+    });
   },
 
   assign_icon_positions: function() {
@@ -60,14 +67,6 @@ var dnss = {
         element.data('position', i);
       }
     });
-  },
-
-  flip: function() {
-    switch (this.mode) {
-      default:
-      case 'pve': this.mode = 'pvp'; this.build[this.build.length - 1] = build_map[1]; break;
-      case 'pvp': this.mode = 'pve'; this.build[this.build.length - 1] = build_map[0]; break;
-    }
   },
 
   add_skills: function(job) {
@@ -95,13 +94,32 @@ var dnss = {
         this.skills[i] = new Skill($.extend({}, skill, {image: skill.image+'_b', required_level: 0, level: 0, advancement: adv, id: i}));
       }
 
-      var curr_skill = this.skills[i];
+      var curr = this.skills[i], max = curr, end, sp_sum = 0;
+      max = curr;
+
       for (; l < levels.length; l++) {
-        curr_skill.next_level = new Skill($.extend({}, skill, levels[l], {level: l+1, advancement: adv}));
-        curr_skill.next_level.prev_level = curr_skill;
-        curr_skill = curr_skill.next_level;
+        curr.next = new Skill($.extend({}, skill, levels[l], {level: l+1, advancement: adv}));
+        curr.next.prev = curr;
+        curr = curr.next;
+
+        sp_sum += curr.get_spcost();
+        curr.total_sp_cost = sp_sum;
+
+
+        if (curr.required_level <= this.max_levels[adv] ) {
+          max = curr;
+        }
       }
-      
+      end = curr;
+
+      curr = this.skills[i];
+      while (curr) {
+        curr.start = this.skills[i];
+        curr.max = max;
+        curr.end = end;
+        curr = curr.next;
+      }
+
       this.set_starting_skill(i);
     }
   },
@@ -113,19 +131,60 @@ var dnss = {
     }
 
     while (skill.level != lvl) {
-      skill = skill.next_level;
+      skill = skill.next;
     }
 
     return skill;
   },
 
   $: function(id) {
-    return $(fmt('.skill[data-id=$0]', id));
+    return $('.skill[data-id=' + id + ']');
   },
 
   set_starting_skill: function(id) {
-    var position = this.$(id).data('position');
+    var $skill = this.$(id), position = $skill.data('position');
     var skill = this.get_skill(id, inv_build_map[this.build[position]]);
-    skill.use();
+    skill.bind($skill);
+
+    $skill.bind({
+      mousedown: function(e) {
+        var skill = $(this).data('skill');
+        var extreme = e.shiftKey || e.ctrlKey;
+        if (e.button == 0) { // left click
+          if (extreme) {
+            if (skill.level < skill.max.level) {
+              skill = skill.max;
+              description.use(skill);
+              skill.bind($(this));
+            }
+          } else {
+            if (skill.next) {
+              skill = skill.next;
+              description.use(skill);
+              skill.bind($(this));
+            }
+          }
+        } else if(e.button == 2) { // right click
+          if (extreme) {
+            if (skill.level != skill.start.level) {
+              skill = skill.start;
+              description.use(skill);
+              skill.bind($(this));
+            }
+          } else {
+            if (skill.prev) {
+              skill = skill.prev;
+              description.use(skill);
+              skill.bind($(this));
+            }
+          }
+        }
+      },
+      mouseenter: function() {
+        description.use($(this).data('skill'));
+      }
+    });
+
+    $skill.on('contextmenu', function(){ return false; }); // disable menu
   }
 };

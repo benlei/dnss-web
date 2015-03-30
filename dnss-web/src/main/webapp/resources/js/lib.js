@@ -17,8 +17,8 @@ String.prototype.message_format = function (args) {
   return str.toString();
 };
 
-String.prototype.description_format = function(params) {
-  str = this.message_format(params);
+String.prototype.dn_format = function() {
+  str = this.toString();
   var c = 0, w = 0, p = 0, newStr = '', startPos = 0;
   for (var i = 0; i < str.length - 1; i++) {
     switch (str.substr(i, 2)) {
