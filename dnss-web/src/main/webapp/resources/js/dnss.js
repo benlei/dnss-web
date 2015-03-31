@@ -205,7 +205,7 @@ var dnss = {
     if (this.parsed_total == this.total_skills) {
       this.update();
       if (inv_build_map[this.build[this.build.length - 1]] & 1) {
-        description.flip();
+        $('#mode').trigger('click');
       }
 
       requirements.check();
