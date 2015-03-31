@@ -122,5 +122,5 @@ var description = {
         $('#next-description').hide();
       }
     }
-  },
+  }
 };
