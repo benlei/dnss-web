@@ -5,13 +5,15 @@ var dnss = {
   messages: {},
   max_levels: null,
   max_sp: null,
-  sp: [0, 0, 0],
   build: Array(72 + 1 + 1).join('-').split(''),
+  total_skills: $('.skill[data-id]').length,
+  parsed_total: 0,
 
   init: function(jobIdentifiers, max_levels, max_sp, start_build) {
     this.max_levels = max_levels;
     this.max_sp = max_sp;
 
+    // sets the starting build
     if (start_build) {
       var m = this.start_build.match(/^[0-9a-zA-Z-]+/g);
       var build = m.shift();
@@ -28,8 +30,15 @@ var dnss = {
       }
     }
 
-    this.assign_icon_positions();
+    // gives position to every container
+    $('.container').each(function(i) {
+      var element = $(this).find('.skill');
+      if (element.length) {
+        element.data('position', i);
+      }
+    });
 
+    // types
     $.getJSON('/json/types.min.json', function(json) {
       dnss.types = json;
       while (dnss.queue.length) {
@@ -37,6 +46,7 @@ var dnss = {
       }
     });
 
+    // get json
     for (var i in jobIdentifiers) {
       $.getJSON(fmt('/json/$0.min.json', jobIdentifiers[i]), function(json) {
         for (var j in json.messages) { // I don't trust async $.extends()
@@ -51,21 +61,24 @@ var dnss = {
       });
     }
 
-    $('#mode').click(function() {
+    // mode bind
+    $('#mode').bind('click', function() {
       switch($(this).val()) {
         case 'pve': $(this).val('pvp'); break;
         case 'pvp': $(this).val('pve'); break;
       }
      description.flip();
     });
-  },
 
-  assign_icon_positions: function() {
-    $('.container').each(function(i) {
-      var element = $(this).find('.skill');
-      if (element.length) {
-        element.data('position', i);
-      }
+    // job list bind
+    $('#job-list-sp li[data-job]').each(function() {
+      var idx = $(this).data('job');
+      $(this).click(function() {
+        $('#job-list-sp li[data-job][class="active"]').removeClass('active');
+        $(this).addClass('active');
+        $('.skill-tree').hide();
+        $('#skill-tree-' + idx).show();
+      })
     });
   },
 
@@ -120,6 +133,7 @@ var dnss = {
         curr = curr.next;
       }
 
+      this.parsed_total++;
       this.set_starting_skill(i);
     }
   },
@@ -145,6 +159,9 @@ var dnss = {
     var $skill = this.$(id), position = $skill.data('position');
     var skill = this.get_skill(id, inv_build_map[this.build[position]]);
     skill.bind($skill);
+    if (this.parsed_total == this.total_skills) {
+      this.update();
+    }
 
     $skill.bind({
       mousedown: function(e) {
@@ -156,12 +173,14 @@ var dnss = {
               skill = skill.max;
               description.use(skill);
               skill.bind($(this));
+              dnss.update();
             }
           } else {
             if (skill.next) {
               skill = skill.next;
               description.use(skill);
               skill.bind($(this));
+              dnss.update();
             }
           }
         } else if(e.button == 2) { // right click
@@ -170,12 +189,14 @@ var dnss = {
               skill = skill.start;
               description.use(skill);
               skill.bind($(this));
+              dnss.update();
             }
           } else {
             if (skill.prev) {
               skill = skill.prev;
               description.use(skill);
               skill.bind($(this));
+              dnss.update();
             }
           }
         }
@@ -186,5 +207,21 @@ var dnss = {
     });
 
     $skill.on('contextmenu', function(){ return false; }); // disable menu
+  },
+
+  update: function() {
+    var sp = [0,0,0];
+    $('.skill[data-id]').each(function() {
+      sp[Math.floor($(this).data('position')/24)] += $(this).data('skill').total_sp_cost;
+    });
+
+    for (i in sp) {
+      $('#job-list-sp li[data-job=' + i + '] .sp').html(sp[i] + '/' + this.max_sp[i]);
+    }
+
+    $('#job-list-sp li:last .sp').html(sp[0]+sp[1]+sp[2] + '/' + this.max_sp[3]);
+
+    var $build = $('#build');
+    $build.val(fmt($build.data('base'), window.location) + '/' + this.build.join(''));
   }
 };
