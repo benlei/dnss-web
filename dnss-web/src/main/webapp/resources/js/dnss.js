@@ -29,7 +29,7 @@ var dnss = {
         this.build[this.build.length - 1] = build[build.length - 1];
 
         if (inv_build_map[build[build.length - 1]] & 1) {
-          this.flip();
+          description.flip();
         }
       }
     }
