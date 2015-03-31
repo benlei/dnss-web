@@ -228,7 +228,10 @@ var dnss = {
     }
 
     $('#job-list-sp li:last .sp').html(sp[0]+sp[1]+sp[2] + '/' + this.max_sp[3]);
+    this.update_build();
+  },
 
+  update_build: function() {
     var $build = $('#build');
     $build.val(fmt($build.data('base'), window.location) + '/?' + this.build.join(''));
   }
