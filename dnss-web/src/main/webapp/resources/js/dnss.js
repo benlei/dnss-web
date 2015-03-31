@@ -19,7 +19,7 @@ var dnss = {
 
     // sets the starting build
     if (start_build) {
-      var m = this.start_build.match(/^[0-9a-zA-Z-]+/g);
+      var m = start_build.match(/^[0-9a-zA-Z-]+/g);
       var build = m.shift();
       if (build && build.length > 72) {
         build = build.split('');
