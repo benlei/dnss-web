@@ -27,10 +27,6 @@ var dnss = {
           this.build[i] = build[i];
         }
         this.build[this.build.length - 1] = build[build.length - 1];
-
-        if (inv_build_map[build[build.length - 1]] & 1) {
-          description.flip();
-        }
       }
     }
 
@@ -208,6 +204,9 @@ var dnss = {
 
     if (this.parsed_total == this.total_skills) {
       this.update();
+      if (inv_build_map[this.build[this.build.length - 1]] & 1) {
+        description.flip();
+      }
     }
   },
 
@@ -231,6 +230,6 @@ var dnss = {
     $('#job-list-sp li:last .sp').html(sp[0]+sp[1]+sp[2] + '/' + this.max_sp[3]);
 
     var $build = $('#build');
-    $build.val(fmt($build.data('base'), window.location) + '/' + this.build.join(''));
+    $build.val(fmt($build.data('base'), window.location) + '/?' + this.build.join(''));
   }
 };
