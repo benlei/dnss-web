@@ -10,6 +10,7 @@ import org.springframework.web.context.WebApplicationContext;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 @Controller
@@ -30,12 +31,18 @@ public class JobController {
         int maxSP = levels.get(levels.size() - 1);
 
         LinkedList<Job> jobList = new LinkedList<Job>();
+        HashSet<String> images = new HashSet<String>();
         try {
             Job job = (Job)context.getBean(bean);
             float[] spRatios = job.getSpRatio();
             for (int i = spRatios.length - 1; job != null; i--) {
                 job.setMaxSP((int)(maxSP * spRatios[i]));
                 jobList.addFirst(job);
+
+                for (int j = 0; j < job.getImages().length; j++) {
+                    images.add(job.getImages()[j]);
+                    images.add(job.getImages()[j] + "_b");
+                }
                 job = job.getParent();
             }
         } catch (Exception e) {
@@ -52,6 +59,8 @@ public class JobController {
         model.addAttribute("job0", context.getBean("all_jobs_0"));
         model.addAttribute("job1", context.getBean("all_jobs_1"));
         model.addAttribute("job2", context.getBean("all_jobs_2"));
+
+        model.addAttribute("images", new ArrayList<String>(images));
         return "home";
     }
 

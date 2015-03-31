@@ -1,5 +1,5 @@
 <!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<html lang="en">
+<html lang="en"><c:set var="images_i" value="0"/>
 <title>${jobs[fn:length(jobs) - 1].name} - DNSS</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -17,8 +17,8 @@
     </ul>
   </nav>
   <aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build" data-base="\${protocol}//\${host}/job/${jobs[fn:length(jobs) - 1].identifier}" /></aside>
-  <aside id="sidebar-1" class="no-select">
-    <ul id="job-list-sp"><c:forEach items="${jobs}" var="job" varStatus="loop">
+  <aside id="sidebar-1">
+    <ul id="job-list-sp" class="no-select"><c:forEach items="${jobs}" var="job" varStatus="loop">
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
@@ -30,13 +30,13 @@
     <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
       <tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${skill != 0}">
         <td class="container">
-          <div class="skill" data-id="${skill}" />
-          <div class="lvl"></div></c:when><c:otherwise>
+          <div class="skill" data-id="${skill}"<c:if test="${images_i < fn:length(images)}"> style="background-image:url(/images/skillicon${images[images_i]}.png)"</c:if>/>
+          <div class="lvl"></div><c:set var="images_i" value="${images_i + 1}"/></c:when><c:otherwise>
         <td class="container"></c:otherwise></c:choose></c:forEach></c:forEach>
     </table></c:forEach>
   </section>
   <aside id="sidebar-2">
-    <input type="button" id="mode" value="pve" /><h2 id="skill-name"></h2>
+    <input type="button" id="mode" value="pve"/><h2 id="skill-name"></h2>
     <div class="skill-description">
       <ul class="meta">
         <li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span></li>
