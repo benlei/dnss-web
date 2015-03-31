@@ -33,7 +33,6 @@ function Skill(skill) {
     return dnss.types.skills[skill.type];
   };
 
-  // mode specific stuff
   this.get_required_weapons = function() {
     var weaps = [];
     for (var i = 0; i < skill.needweapon.length; i++) {
@@ -52,9 +51,6 @@ function Skill(skill) {
 
     return skills;
   };
-
-  this.get_description = function() {
-  }
 
   this.get_image_link = function() {
     return '/images/skillicon' + skill.image + '.png';

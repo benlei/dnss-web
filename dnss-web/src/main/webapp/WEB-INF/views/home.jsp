@@ -16,10 +16,10 @@
       </li></c:forEach>
     </ul>
   </nav>
-  <aside id="builder" data-base="http://dnss.herokuapp.com/job/${jobs[fn:length(jobs) - 1].identifier}"></aside>
+  <aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build" data-base="\${protocol}//\${host}/job/${jobs[fn:length(jobs) - 1].identifier}" /></aside>
   <aside id="sidebar-1" class="no-select">
     <ul id="job-list-sp"><c:forEach items="${jobs}" var="job" varStatus="loop">
-      <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
+      <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
   </aside>
@@ -60,26 +60,11 @@ var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.ident
 var max_sp = [<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]
 var max_levels = [80, 70, 80];
 
-$('.skill-tree').hide();
-$('#skill-tree-0').show();
-
-$('#job-list-sp li[data-job]').each(function() {
-  var idx = $(this).data('job');
-  $(this).click(function() {
-    $('#job-list-sp li[data-job][class="active"]').removeClass('active');
-    $(this).addClass('active');
-    $('.skill-tree').hide();
-    $('#skill-tree-' + idx).show();
-  })
-});
-
-$(document).ready(function() {
-  if (window.location.search && window.location.search.substr(1)) {
-    dnss.init(jobIds, max_levels, max_sp, window.location.search.substr(1));
-  } else {
-    dnss.init(jobIds, max_levels, max_sp);
-  }
-});
+if (window.location.search && window.location.search.substr(1)) {
+  dnss.init(jobIds, max_levels, max_sp, window.location.search.substr(1));
+} else {
+  dnss.init(jobIds, max_levels, max_sp);
+}
 </script>
 </body>
 </html>
