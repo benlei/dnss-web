@@ -29,6 +29,8 @@ var description = {
       case 'pvp': this.mode = 'pve'; dnss.build[dnss.build.length - 1] = build_map[0]; break;
     }
 
+    dnss.update_build();
+
     this.update_mp();
     this.update_cd();
     this.update_descriptions();
