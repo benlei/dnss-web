@@ -207,6 +207,8 @@ var dnss = {
       if (inv_build_map[this.build[this.build.length - 1]] & 1) {
         description.flip();
       }
+
+      requirements.check();
     }
   },
 
