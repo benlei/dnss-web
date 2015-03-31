@@ -46,6 +46,7 @@ query = <<sql_query
 sql_query
 @conn.exec(query).each_dnt do |job|
   job['skilltree'] = Array.new
+  job['images'] = Array.new
   jobs[job['id']] = job
   job['spRatio'] = [job['maxspjob0'], job['maxspjob1'], job['maxspjob2']]
   ['maxspjob0', 'maxspjob1', 'maxspjob2'].each {|a| job.delete(a)}
@@ -58,7 +59,8 @@ end
 query = <<sql_query
   SELECT _needjob,
          _skilltableid as skillid,
-         _treeslotindex
+         _treeslotindex,
+         _iconimageindex
   FROM skill_tree
   INNER JOIN skills
     ON _skilltableid = skills._id
@@ -66,7 +68,13 @@ sql_query
 
 @conn.exec(query).each_dnt do |tree|
   job = jobs[tree['needjob']]
-  jobs[tree['needjob']]['skilltree'][tree['treeslotindex']] = tree['skillid']
+  job['skilltree'][tree['treeslotindex']] = tree['skillid']
+
+  image = '%02d' % ((tree['iconimageindex'] / 200) + 1)
+
+  job['images'] << image unless job['images'].include? image
+
+  ['iconimageindex'].each {|a| tree.delete(a)}
 end
 
 
@@ -93,6 +101,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
         xml.property('name' => 'parent', 'ref' => 'job_%s' % jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
         xml.property('name' => 'spRatio') {xml.list {job['spRatio'].each {|spRatio| xml.value_ spRatio}}}
         xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill.to_i}}}}}
+        xml.property('name' => 'images') {xml.list {job['images'].each {|image| xml.value_ image}}}
       end
     end
 

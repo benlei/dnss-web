@@ -46,7 +46,7 @@ ul {
 }
 
 #job-list-sp {
-  
+
 }
 
 #job-list-sp li {
@@ -106,14 +106,13 @@ ul {
 }
 
 #sidebar-2 {
-  width: 350px; 
+  width: 350px;
   float: left;
   margin-left: 40px;
   font-size: 0.9em;
   display: none;
   padding: 5px 15px 10px 15px;
   color: rgb(0,0,15);
-
 }
 
 #sidebar-2 {
@@ -131,7 +130,7 @@ ul {
 }
 
 #sidebar-2 li .description .p {
-  color: rgb(70, 55, 255); 
+  color: rgb(70, 55, 255);
   font-weight: normal;
 }
 
