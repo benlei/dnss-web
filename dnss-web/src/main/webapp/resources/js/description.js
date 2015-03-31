@@ -31,9 +31,11 @@ var description = {
 
     dnss.update_build();
 
-    this.update_mp();
-    this.update_cd();
-    this.update_descriptions();
+    if (this.skill) {
+      this.update_mp();
+      this.update_cd();
+      this.update_descriptions();
+    }
   },
 
   update_name: function() {
