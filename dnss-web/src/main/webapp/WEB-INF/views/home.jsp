@@ -22,6 +22,9 @@
       <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
       <li>Total SP<div class="sp">0/${max_sp}</div></li>
     </ul>
+    <ul id="warnings">
+      <li>Warnings</li>
+    </ul>
   </aside>
   <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
     <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
@@ -55,6 +58,7 @@
 <script src="/js/dnss.js"></script>
 <script src="/js/skill.js"></script>
 <script src="/js/description.js"></script>
+<script src="/js/requirements.js"></script>
 <script type="text/javascript">
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
 var max_sp = [<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]

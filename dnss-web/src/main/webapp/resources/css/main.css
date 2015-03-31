@@ -7,11 +7,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size:1.2em;
   background: #fff;
-  color: #333;
+  color: #000;
 }
 
 h2 {
   font-size: 1.2em;
+  color: #000;
+  margin-bottom: 5px;
 }
 
 a, a:visited, a:link, a:active, a:hover {
@@ -58,11 +60,6 @@ ul {
 
 #job-list-sp .sp {
   float: right;
-}
-
-#job-list-sp li:last-of-type {
-  color: rgb(200, 255, 255);
-  margin-top: 10px;
 }
 
 #job-list-sp .active {
@@ -112,8 +109,11 @@ ul {
   width: 350px; 
   float: left;
   margin-left: 40px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   display: none;
+  padding: 5px 15px 10px 15px;
+  color: rgb(0,0,15);
+
 }
 
 #sidebar-2 {
@@ -121,15 +121,18 @@ ul {
 }
 
 #sidebar-2 li span.y {
-  color: rgb(210, 180, 140);
+  color: rgb(45, 75, 115);
+  font-weight: bold;
 }
 
 #sidebar-2 li .description .y {
-  color: rgb(200, 200, 100); 
+  color: rgb(0, 15, 180);
+  font-weight: normal;
 }
 
 #sidebar-2 li .description .p {
-  color: rgb(125, 125, 50); 
+  color: rgb(70, 55, 255); 
+  font-weight: normal;
 }
 
 #next-description {
@@ -224,4 +227,22 @@ nav ul ul {
   border: 0;
   border-left: 1px solid #000;
   font-size: 1em;
+}
+
+#warnings {
+  font-size: .8em;
+  display: none;
+  margin-top: 25px;
+  overflow-y: scroll;
+  height: 275px;
+}
+
+#warnings li:first-of-type {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#warnings li:not(:first-of-type) {
+  margin-bottom: 5px;
+  padding: 5px;
 }

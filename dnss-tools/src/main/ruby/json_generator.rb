@@ -100,7 +100,7 @@ sql_query
   skill['requires'] = Array.new
   skill['requires'] << {'id' => tree['parentskillid1'], :level => tree['needparentskilllevel1']} unless tree['parentskillid1'] == 0
   skill['requires'] << {'id' => tree['parentskillid2'], :level => tree['needparentskilllevel2']} unless tree['parentskillid2'] == 0
-  skill['sp_requirements'] = [tree['needbasicsp1'], tree['needfirstsp1']]
+  skill['need_sp'] = [tree['needbasicsp1'], tree['needfirstsp1']]
 end
 
 ##############################################################################

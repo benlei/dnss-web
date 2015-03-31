@@ -9,8 +9,9 @@ function Skill(skill) {
   this.cd = skill.cd;
   this.explanationid = skill.explanationid;
   this.explanationparams = skill.explanationparams;
-  this.sp_requirements = skill.sp_requirements;
   this.spcost = skill.spcost;
+  this.requires = skill.requires;
+  this.need_sp = skill.need_sp;
 
 
   /* other attributes */
@@ -42,16 +43,6 @@ function Skill(skill) {
     return weaps;
   };
 
-  this.get_skill_reqs = function() {
-    var skills = [];
-    for (var i = 0; i < skill.requires; i++) {
-      var req = skill.requires[i];
-      skills.push(dnss.get_skill(req.id, req.level));
-    }
-
-    return skills;
-  };
-
   this.get_image_link = function() {
     return '/images/skillicon' + skill.image + '.png';
   };
@@ -67,6 +58,8 @@ function Skill(skill) {
     $skill.css('background-position', fmt('${x}px ${y}px', this.get_icon_coordinates()));
     $skill.find('.lvl').text(fmt('$0/$1', this.level, this.max.level));
     $skill.data('skill', this);
+    dnss.positions[$skill.data('position')] = this;
+    dnss.current[this.id] = this;
     dnss.build[$skill.data('position')] = build_map[this.level - (this.start.level == 1)];
   };
 }

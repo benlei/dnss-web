@@ -6,10 +6,14 @@ var dnss = {
   max_levels: null,
   max_sp: null,
   build: Array(72 + 1 + 1).join('-').split(''),
+  positions: [],
+  current: {},
   total_skills: $('.skill[data-id]').length,
   parsed_total: 0,
+  jobs: [],
 
   init: function(jobIdentifiers, max_levels, max_sp, start_build) {
+    this.jobs = jobIdentifiers;
     this.max_levels = max_levels;
     this.max_sp = max_sp;
 
@@ -111,7 +115,7 @@ var dnss = {
       max = curr;
 
       for (; l < levels.length; l++) {
-        curr.next = new Skill($.extend({}, skill, levels[l], {level: l+1, advancement: adv}));
+        curr.next = new Skill($.extend({}, skill, levels[l], {level: l+1, advancement: adv, id: i}));
         curr.next.prev = curr;
         curr = curr.next;
 
@@ -159,46 +163,38 @@ var dnss = {
     var $skill = this.$(id), position = $skill.data('position');
     var skill = this.get_skill(id, inv_build_map[this.build[position]]);
     skill.bind($skill);
-    if (this.parsed_total == this.total_skills) {
-      this.update();
-    }
 
     $skill.bind({
       mousedown: function(e) {
-        var skill = $(this).data('skill');
+        var skill = $(this).data('skill'), change;
         var extreme = e.shiftKey || e.ctrlKey;
         if (e.button == 0) { // left click
           if (extreme) {
             if (skill.level < skill.max.level) {
-              skill = skill.max;
-              description.use(skill);
-              skill.bind($(this));
-              dnss.update();
+              change = skill.max;
             }
           } else {
             if (skill.next) {
-              skill = skill.next;
-              description.use(skill);
-              skill.bind($(this));
-              dnss.update();
+              change = skill.next;
             }
           }
         } else if(e.button == 2) { // right click
           if (extreme) {
             if (skill.level != skill.start.level) {
-              skill = skill.start;
-              description.use(skill);
-              skill.bind($(this));
-              dnss.update();
+              change = skill.start;
             }
           } else {
             if (skill.prev) {
-              skill = skill.prev;
-              description.use(skill);
-              skill.bind($(this));
-              dnss.update();
+              change = skill.prev;
             }
           }
+        }
+
+        if (change) {
+            description.use(change);
+            change.bind($(this));
+            dnss.update();
+            requirements.check();
         }
       },
       mouseenter: function() {
@@ -206,15 +202,28 @@ var dnss = {
       }
     });
 
-    $skill.on('contextmenu', function(){ return false; }); // disable menu
+    $skill.on('contextmenu', function(){ // disable menu
+      return false;
+    });
+
+    if (this.parsed_total == this.total_skills) {
+      this.update();
+    }
+  },
+
+  get_all_sp: function() {
+    var sp = [0,0,0];
+    for (var i = 0; i < 72; i++) {
+      if (this.positions[i]) {
+        sp[Math.floor(i/24)] += this.positions[i].total_sp_cost;
+      }
+    }
+
+    return sp;
   },
 
   update: function() {
-    var sp = [0,0,0];
-    $('.skill[data-id]').each(function() {
-      sp[Math.floor($(this).data('position')/24)] += $(this).data('skill').total_sp_cost;
-    });
-
+    var sp = this.get_all_sp();
     for (i in sp) {
       $('#job-list-sp li[data-job=' + i + '] .sp').html(sp[i] + '/' + this.max_sp[i]);
     }
