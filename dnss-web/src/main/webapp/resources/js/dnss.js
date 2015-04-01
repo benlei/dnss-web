@@ -111,7 +111,12 @@ var dnss = {
         onrendered: function(canvas) {
           hidden.remove();
           dnss.building = false;
-          window.open(canvas.toDataURL('image/png'), '_blank');
+          var dl = document.createElement("a");
+          dl.href = canvas.toDataURL('image/png');
+          dl.download = dnss.jobs[dnss.jobs.length - 1] + '.png';
+          document.body.appendChild(dl);
+          dl.click();
+          document.body.removeChild(dl);
         }
       });
 
