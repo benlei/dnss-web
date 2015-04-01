@@ -15,7 +15,7 @@
 </li></c:forEach>
 </ul>
 </nav>
-<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build" data-base="\${protocol}//\${host}/job/${jobs[fn:length(jobs) - 1].identifier}" /><a href="javascript:void(0)" id="bimage" download>DL</a></aside>
+<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build" data-base="\${protocol}//\${host}${path}" /><a href="javascript:void(0)" id="bimage" download>DL</a></aside>
 <aside id="sidebar-1">
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs}" var="job" varStatus="loop">
 <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
@@ -62,7 +62,7 @@
 <script type="text/javascript">
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
 var max_sp = [<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]
-var max_levels = [80, 70, 80];
+var max_levels = [<c:forEach items="${levels}" var="level" varStatus="loop">${level}<c:if test="${!loop.last}">,</c:if></c:forEach>];
 
 if (window.location.search && window.location.search.substr(1)) {
   dnss.init(jobIds, max_levels, max_sp, window.location.search.substr(1));
