@@ -1,7 +1,7 @@
 var requirements = {
   $: $('#warnings'),
   $$: $('#warnings li').first(),
-  advancements: [$('#job-list-sp li[data-job=0]').ownText(),$('#job-list-sp li[data-job=1]').ownText(),$('#job-list-sp li[data-job=2]').ownText()],
+  advancements: [$('#job-sp li[data-job=0]').ownText(),$('#job-sp li[data-job=1]').ownText(),$('#job-sp li[data-job=2]').ownText()],
 
   check: function() {
     var sp = dnss.get_all_sp(), show = false;
