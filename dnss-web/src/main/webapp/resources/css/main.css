@@ -22,13 +22,13 @@ a, a:visited, a:link, a:active, a:hover {
 }
 
 main {
-  width: 1000px;
+  width: 980px;
   margin: 10px auto;
 }
 
 section {
   float: left;
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 
@@ -43,13 +43,10 @@ ul {
 #sidebar-1 {
   float: left;
   width: 250px;
+  margin-top: 2.5px;
 }
 
-#job-list-sp {
-
-}
-
-#job-list-sp li {
+#job-sp li {
   border: 1px solid #000;
   background-color: #000;
   color: #fff;
@@ -58,13 +55,16 @@ ul {
   margin-bottom: 5px;
 }
 
-#job-list-sp .sp {
+#job-sp .sp {
   float: right;
 }
 
-#job-list-sp .active {
+#job-sp .active {
   color: rgb(250, 210, 140);
+}
 
+#job-sp li:last-of-type {
+  color: rgb(215,255,255);
 }
 
 /* some stuff are temp */
@@ -108,14 +108,11 @@ ul {
 #sidebar-2 {
   width: 350px;
   float: left;
-  margin-left: 40px;
-  font-size: 0.9em;
+  margin-left: 25px;
+  font-size: 0.8em;
   display: none;
   padding: 5px 15px 10px 15px;
   color: rgb(0,0,15);
-}
-
-#sidebar-2 {
   line-height: 1.4em;
 }
 
@@ -140,7 +137,7 @@ ul {
 
 nav {
   height: 40px;
-  width: 100%;
+  width: 970px;
   text-align: center;
 }
 
@@ -202,11 +199,11 @@ nav ul ul {
 }
 
 #build-box {
-  width: 100%;
+  width: 970px;
   border: 1px solid #000;
   border-radius: 5px;
   clear: both;
-  margin: 15px 0;
+  margin: 10px 0;
   font-size: .8em;
 }
 
@@ -218,14 +215,31 @@ nav ul ul {
   font-weight: bold;
   background-color: #000;
   color: #fff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#build, #bimage {
+  padding: 5px 10px;
+  border: 0;
+  font-size: 1em;
+  border-left: 1px solid #000;
 }
 
 #build {
-  width: 868px; /* -1px left, -1px right*/
+  width: 789px; /* -1px left, -1px right*/
+}
+
+#bimage {
+  width: 20px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #000;
   padding: 5px 10px;
-  border: 0;
-  border-left: 1px solid #000;
-  font-size: 1em;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  float: right;
 }
 
 #warnings {

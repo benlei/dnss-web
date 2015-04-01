@@ -11,6 +11,7 @@ var dnss = {
   total_skills: $('.skill[data-id]').length,
   parsed_total: 0,
   jobs: [],
+  building: false,
 
   init: function(jobIdentifiers, max_levels, max_sp, start_build) {
     this.jobs = jobIdentifiers;
@@ -71,14 +72,50 @@ var dnss = {
     });
 
     // job list bind
-    $('#job-list-sp li[data-job]').each(function() {
+    $('#job-sp li[data-job]').each(function() {
       var idx = $(this).data('job');
       $(this).click(function() {
-        $('#job-list-sp li[data-job][class="active"]').removeClass('active');
+        $('#job-sp li[data-job][class="active"]').removeClass('active');
         $(this).addClass('active');
         $('.skill-tree').hide();
         $('#skill-tree-' + idx).show();
       })
+    });
+
+
+    // image bind
+    $('#bimage').bind('click', function() {
+      if (dnss.building) {
+        return false;
+      }
+      dnss.working = true;
+      var hidden = $(document.createElement('div'));
+      hidden.css({position: 'absolute', top: window.innerHeight+'px', left: 0});
+      for (var i = 0; i < 3; i++) {
+        var wrapper = $(document.createElement('div'));
+        var sidebar = $('#sidebar-1').clone();
+        var section = $('section').clone();
+        wrapper.css('clear', 'left');
+        sidebar.css('margin-left', '10px').find('#warnings').hide();
+        sidebar.find('.active').removeClass('active');
+        sidebar.find('li[data-job='+i+']').addClass('active');
+        section.find('.skill-tree').hide();
+        section.find('#skill-tree-'+i).show();
+
+        wrapper.append(sidebar).append(section);
+        hidden.append(wrapper);
+      }
+
+      $('body').append(hidden);
+      html2canvas(hidden, {
+        onrendered: function(canvas) {
+          hidden.remove();
+          dnss.building = false;
+          window.open(canvas.toDataURL('image/png'), '_blank');
+        }
+      });
+
+      return false;
     });
   },
 
@@ -226,10 +263,10 @@ var dnss = {
   update: function() {
     var sp = this.get_all_sp();
     for (i in sp) {
-      $('#job-list-sp li[data-job=' + i + '] .sp').html(sp[i] + '/' + this.max_sp[i]);
+      $('#job-sp li[data-job=' + i + '] .sp').html(sp[i] + '/' + this.max_sp[i]);
     }
 
-    $('#job-list-sp li:last .sp').html(sp[0]+sp[1]+sp[2] + '/' + this.max_sp[3]);
+    $('#job-sp li:last .sp').html(sp[0]+sp[1]+sp[2] + '/' + this.max_sp[3]);
     this.update_build();
   },
 
