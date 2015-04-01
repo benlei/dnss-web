@@ -29,7 +29,7 @@ public class JobController {
         }
 
         ArrayList<Integer> levels = (ArrayList<Integer>)context.getBean("levels");
-        if (level < 1 || level > levels.size()) {
+        if (level < 1 || level > levels.size() - 1) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND, "No level '" + level + "' entry found");
         }
 
