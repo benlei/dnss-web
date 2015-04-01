@@ -18,17 +18,22 @@ public class JobController {
     @Autowired
     private WebApplicationContext context;
 
-    @RequestMapping("/job/{job_identifier}")
+    @RequestMapping("/job/{job_identifier:[a-z]+}-{level:[1-9][0-9]*}")
     public String job(HttpServletResponse response,
-                        @PathVariable("job_identifier") String jobIdentifier,
-                        ModelMap model) throws IOException {
+                      @PathVariable("job_identifier") String jobIdentifier,
+                      @PathVariable("level") int level,
+                      ModelMap model) throws IOException {
         String bean = "job_"  +jobIdentifier;
         if (! context.containsBean(bean)) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND, "No job '" + jobIdentifier + "'");
         }
 
         ArrayList<Integer> levels = (ArrayList<Integer>)context.getBean("levels");
-        int maxSP = levels.get(levels.size() - 1);
+        if (level < 1 || level > levels.size()) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "No level '" + level + "' entry found");
+        }
+
+        int maxSP = levels.get(level);
 
         LinkedList<Job> jobList = new LinkedList<Job>();
         HashSet<String> images = new HashSet<String>();
@@ -61,12 +66,28 @@ public class JobController {
         model.addAttribute("job2", context.getBean("all_jobs_2"));
 
         model.addAttribute("images", new ArrayList<String>(images));
+
+        if (level == levels.size() - 1) {
+            model.addAttribute("path", "/job/" + jobList.getLast().getIdentifier());
+        } else {
+            model.addAttribute("path", "/job/" + jobList.getLast().getIdentifier() + "-" + level);
+        }
+
+        int[] levelList = new int[] {Math.min(levels.size() - 1, level), Math.min(levels.size() - 11, level), Math.min(levels.size() - 1, level)};
+        model.addAttribute("levels", levelList);
         return "home";
+    }
+
+    @RequestMapping("/job/{job_identifier:[a-z]+}")
+    public String job(HttpServletResponse response,
+                        @PathVariable("job_identifier") String jobIdentifier,
+                        ModelMap model) throws IOException {
+        return job(response, jobIdentifier, 80, model);
     }
 
     @RequestMapping("/")
     public String job(HttpServletResponse response,
                       ModelMap model) throws IOException {
-        return job(response, "moonlord", model);
+        return job(response, "moonlord", 80, model);
     }
 }
