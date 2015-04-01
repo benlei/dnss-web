@@ -199,7 +199,7 @@ var dnss = {
 
   set_starting_skill: function(id) {
     var $skill = this.$(id), position = $skill.data('position');
-    var skill = this.get_skill(id, inv_build_map[this.build[position]]);
+    var skill = this.get_skill(id, this.skills[id].level + inv_build_map[this.build[position]]);
     skill.bind($skill);
 
     $skill.bind({
