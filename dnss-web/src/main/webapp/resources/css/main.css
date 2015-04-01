@@ -246,7 +246,7 @@ nav ul ul {
   font-size: .8em;
   display: none;
   margin-top: 25px;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 275px;
 }
 
