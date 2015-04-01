@@ -277,6 +277,6 @@ var dnss = {
 
   update_build: function() {
     var $build = $('#build');
-    $build.val(fmt($build.data('base'), window.location) + '/?' + this.build.join(''));
+    $build.val(fmt($build.data('base'), window.location) + '?' + this.build.join(''));
   }
 };
