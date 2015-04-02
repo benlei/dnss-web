@@ -1,0 +1,951 @@
+{
+  "advancement": 2,
+  "skills": {
+    "558": {
+      "type": 3,
+      "nameid": 1000073394,
+      "levels": [
+        {
+          "required_level": 80,
+          "mpcost": {
+            "pve": 0.0,
+            "pvp": 0.0
+          },
+          "explanationid": {
+            "pve": 1000076731,
+            "pvp": 1000076731
+          },
+          "spcost": 2,
+          "cd": {
+            "pve": 0,
+            "pvp": 0
+          },
+          "explanationparams": {
+            "pve": [
+              "100"
+            ],
+            "pvp": [
+              "50"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 106,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 553,
+          "level": 1
+        }
+      ],
+      "need_sp": [
+        0,
+        0
+      ]
+    },
+    "551": {
+      "type": 1,
+      "nameid": 1000022263,
+      "levels": [
+        {
+          "required_level": 45,
+          "mpcost": {
+            "pve": 1.7,
+            "pvp": 0.9
+          },
+          "explanationid": {
+            "pve": 1000072732,
+            "pvp": 1000065592
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 2,
+            "pvp": 7
+          },
+          "explanationparams": {
+            "pve": [
+              "10",
+              "2",
+              "1"
+            ],
+            "pvp": [
+              "1.5",
+              "7"
+            ]
+          }
+        },
+        {
+          "required_level": 55,
+          "mpcost": {
+            "pve": 2.0,
+            "pvp": 1.0
+          },
+          "explanationid": {
+            "pve": 1000072732,
+            "pvp": 1000065592
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 2,
+            "pvp": 7
+          },
+          "explanationparams": {
+            "pve": [
+              "20",
+              "2",
+              "1"
+            ],
+            "pvp": [
+              "3",
+              "7"
+            ]
+          }
+        },
+        {
+          "required_level": 65,
+          "mpcost": {
+            "pve": 2.3,
+            "pvp": 1.2
+          },
+          "explanationid": {
+            "pve": 1000072732,
+            "pvp": 1000065592
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 2,
+            "pvp": 7
+          },
+          "explanationparams": {
+            "pve": [
+              "30",
+              "2",
+              "1"
+            ],
+            "pvp": [
+              "4.5",
+              "7"
+            ]
+          }
+        },
+        {
+          "required_level": 75,
+          "mpcost": {
+            "pve": 2.6,
+            "pvp": 1.3
+          },
+          "explanationid": {
+            "pve": 1000072732,
+            "pvp": 1000065592
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 2,
+            "pvp": 7
+          },
+          "explanationparams": {
+            "pve": [
+              "40",
+              "2",
+              "1"
+            ],
+            "pvp": [
+              "6",
+              "7"
+            ]
+          }
+        },
+        {
+          "required_level": 85,
+          "mpcost": {
+            "pve": 2.9,
+            "pvp": 1.5
+          },
+          "explanationid": {
+            "pve": 1000072732,
+            "pvp": 1000065592
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 2,
+            "pvp": 7
+          },
+          "explanationparams": {
+            "pve": [
+              "50",
+              "2",
+              "1"
+            ],
+            "pvp": [
+              "7.5",
+              "7"
+            ]
+          }
+        },
+        {
+          "required_level": 95,
+          "mpcost": {
+            "pve": 3.2,
+            "pvp": 1.6
+          },
+          "explanationid": {
+            "pve": 1000072732,
+            "pvp": 1000065592
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 2,
+            "pvp": 7
+          },
+          "explanationparams": {
+            "pve": [
+              "60",
+              "2",
+              "1"
+            ],
+            "pvp": [
+              "9",
+              "7"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 83,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 416,
+          "level": 1
+        }
+      ],
+      "need_sp": [
+        0,
+        65
+      ]
+    },
+    "552": {
+      "type": 3,
+      "nameid": 1000024078,
+      "levels": [
+        {
+          "required_level": 48,
+          "mpcost": {
+            "pve": 0.0,
+            "pvp": 0.0
+          },
+          "explanationid": {
+            "pve": 1000072313,
+            "pvp": 1000072313
+          },
+          "spcost": 3,
+          "cd": {
+            "pve": 0,
+            "pvp": 0
+          },
+          "explanationparams": {
+            "pve": [
+              "20"
+            ],
+            "pvp": [
+              "20"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 84,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 405,
+          "level": 6
+        }
+      ],
+      "need_sp": [
+        0,
+        65
+      ]
+    },
+    "553": {
+      "type": 0,
+      "nameid": 1000022265,
+      "levels": [
+        {
+          "required_level": 50,
+          "mpcost": {
+            "pve": 2.0,
+            "pvp": 1.1
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 3,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "781",
+              "11906",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "372",
+              "2667",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 53,
+          "mpcost": {
+            "pve": 2.3,
+            "pvp": 1.2
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "802",
+              "13233",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "381",
+              "2964",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 56,
+          "mpcost": {
+            "pve": 2.5,
+            "pvp": 1.3
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "823",
+              "14632",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "390",
+              "3278",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 59,
+          "mpcost": {
+            "pve": 2.7,
+            "pvp": 1.4
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "844",
+              "16100",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "399",
+              "3606",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 62,
+          "mpcost": {
+            "pve": 3.0,
+            "pvp": 1.5
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "865",
+              "17647",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "409",
+              "3768",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 65,
+          "mpcost": {
+            "pve": 3.3,
+            "pvp": 1.7
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "977",
+              "24316",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "458",
+              "4818",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 68,
+          "mpcost": {
+            "pve": 3.5,
+            "pvp": 1.8
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "998",
+              "26680",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "467",
+              "4924",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 71,
+          "mpcost": {
+            "pve": 3.7,
+            "pvp": 1.9
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "1019",
+              "29265",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "476",
+              "5044",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 74,
+          "mpcost": {
+            "pve": 4.0,
+            "pvp": 2.0
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "1040",
+              "32095",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "485",
+              "5177",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 77,
+          "mpcost": {
+            "pve": 4.2,
+            "pvp": 2.2
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "1061",
+              "35181",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "494",
+              "5324",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 80,
+          "mpcost": {
+            "pve": 4.5,
+            "pvp": 2.3
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "1173",
+              "46055",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "517",
+              "5932",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 83,
+          "mpcost": {
+            "pve": 4.8,
+            "pvp": 2.4
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "1194",
+              "50377",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "532",
+              "6254",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "required_level": 86,
+          "mpcost": {
+            "pve": 5.0,
+            "pvp": 2.5
+          },
+          "explanationid": {
+            "pve": 1000074540,
+            "pvp": 1000074540
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 32,
+            "pvp": 45
+          },
+          "explanationparams": {
+            "pve": [
+              "1215",
+              "55068",
+              "70",
+              "70",
+              "200",
+              "30"
+            ],
+            "pvp": [
+              "547",
+              "6577",
+              "70",
+              "70",
+              "1",
+              "3"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 85,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 551,
+          "level": 1
+        }
+      ],
+      "need_sp": [
+        0,
+        65
+      ]
+    },
+    "554": {
+      "type": 3,
+      "nameid": 1000049437,
+      "levels": [
+        {
+          "required_level": 55,
+          "mpcost": {
+            "pve": 0.0,
+            "pvp": 0.0
+          },
+          "explanationid": {
+            "pve": 1000072317,
+            "pvp": 1000072327
+          },
+          "spcost": 0,
+          "cd": {
+            "pve": 0,
+            "pvp": 0
+          },
+          "explanationparams": {
+            "pve": [
+              "12",
+              "30",
+              "20"
+            ],
+            "pvp": [
+              "30",
+              "20"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 92,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 406,
+          "level": 1
+        },
+        {
+          "id": 552,
+          "level": 1
+        }
+      ],
+      "need_sp": [
+        0,
+        65
+      ]
+    },
+    "555": {
+      "type": 3,
+      "nameid": 1000050331,
+      "levels": [
+        {
+          "required_level": 60,
+          "mpcost": {
+            "pve": 0.0,
+            "pvp": 0.0
+          },
+          "explanationid": {
+            "pve": 1000072321,
+            "pvp": 1000072321
+          },
+          "spcost": 0,
+          "cd": {
+            "pve": 0,
+            "pvp": 0
+          },
+          "explanationparams": {
+            "pve": [
+              "20"
+            ],
+            "pvp": [
+              "20"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 93,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 410,
+          "level": 1
+        }
+      ],
+      "need_sp": [
+        0,
+        65
+      ]
+    },
+    "556": {
+      "type": 3,
+      "nameid": 1000055881,
+      "levels": [
+        {
+          "required_level": 70,
+          "mpcost": {
+            "pve": 0.0,
+            "pvp": 0.0
+          },
+          "explanationid": {
+            "pve": 1000072325,
+            "pvp": 1000072330
+          },
+          "spcost": 2,
+          "cd": {
+            "pve": 0,
+            "pvp": 0
+          },
+          "explanationparams": {
+            "pve": [
+              "30"
+            ],
+            "pvp": [
+              "30"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 97,
+      "needweapon": [
+
+      ],
+      "requires": [
+        {
+          "id": 411,
+          "level": 1
+        }
+      ],
+      "need_sp": [
+        0,
+        65
+      ]
+    },
+    "557": {
+      "type": 1,
+      "nameid": 1000002542,
+      "levels": [
+        {
+          "required_level": 65,
+          "mpcost": {
+            "pve": 0.0,
+            "pvp": 0.0
+          },
+          "explanationid": {
+            "pve": 1000065578,
+            "pvp": 1000059817
+          },
+          "spcost": 1,
+          "cd": {
+            "pve": 0,
+            "pvp": 0
+          },
+          "explanationparams": {
+            "pve": [
+              "10",
+              "10",
+              "2",
+              "3"
+            ],
+            "pvp": [
+              "10",
+              "5"
+            ]
+          }
+        }
+      ],
+      "image": "01",
+      "icon": 102,
+      "needweapon": [
+
+      ],
+      "requires": [
+
+      ],
+      "need_sp": [
+        0,
+        65
+      ]
+    }
+  },
+  "messages": {
+    "1000073394": "Maelstrom Howl +",
+    "1000022263": "Breaking Point",
+    "1000024078": "Flying Swing +",
+    "1000022265": "Maelstrom Howl",
+    "1000049437": "Punishing Swing +",
+    "1000050331": "Bombs Away +",
+    "1000055881": "Roll Attack +",
+    "1000002542": "Destroyer's Voice",
+    "1000072732": "Grants attacks a chance to shatter Super Armor and deal critical damage, even to enemies with unbreakable Super Armor. \\n#yTrigger Chance: {0}%\\nCooldown: {1} sec\\nHP Recovery: {2}% when triggered",
+    "1000072313": "Enhances Flying Swing to cause multiple shockwaves in a row.\\n#yDamage per Shockwave: {0}% of Flying Swing damage",
+    "1000074540": "Pulls enemies in close to you and unleashes a devastating howl.\\n#yPhysical Damage: {0}% + {1}\\nPhysical Damage Taken: -{2}%\\nEnemy Magic Damage Taken: -{3}%\\nPhysical Damage: +{4}% of Vitality\\nBonus Damage Duration: {5} sec",
+    "1000072317": "Enhances Punishing Swing to deploy a wide-ranged bomb to burn enemies. Taunts the attacked enemy for {0} sec.\\n#yFire Magic\\nPunishing Swing Damage: +{1}%\\nBurn Damage: {2}% of Magic Damage per tick for 5 ticks",
+    "1000072321": "Enhances Bombs Away to launch consecutive small explosions.\\n#ySmall Explosion Damage: {0}% of Bombs Away damage",
+    "1000072325": "Enhances Roll Attack's damage, downward attack range, and attack range while spinning airborne. \\n#yRoll Attack Damage: +{0}%",
+    "1000065578": "All attacks deal additional damage after using #yBattle Howl, Taunting Howl,#w or #yDevastating Howl#w. Restores health after using #yEmpowering Howl#w.\\n#yDuration: {0} sec\\nDamage per Hit +{1}%\\nRestores {3}% health every {2} sec",
+    "1000076731": "Enhances Maelstrom Howl. Unleashes a damaging explosion.\\n#yAdditional Damage: {0}%",
+    "1000065592": "Attacks have a chance to shatter Super Armor and deal critical damage. Has a chance to deal critical damage to enemies with unbreakable Super Armor.\\n#yTrigger Chance: {0}%\\nCooldown: {1} sec",
+    "1000072327": "Enhances Punishing Swing to deploy a wide-ranged bomb to burn enemies. \\n#yFire Magic\\nPunishing Swing Damage: +{0}%\\nBurn Damage: {1}% of Magic Damage per tick for 5 ticks",
+    "1000072330": "Enhances Roll Attack's damage and downward attack range. \\n#yRoll Attack Damage: +{0}%",
+    "1000059817": "Increases Physical Damage after using #yBattle Howl, Taunting Howl,#w or #yDevastating Howl#w.\\n#yDuration: {0} sec\\nDamage +{1}%"
+  }
+}

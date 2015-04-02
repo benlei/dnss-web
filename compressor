@@ -1,0 +1,29 @@
+#!/bin/sh
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+cd $DIR
+
+for file in $(find dnss-web -type f -name *.js -o -name *.css); do
+  base=$(dirname $(dirname ${file}))
+  basedir=$(basename $(dirname ${file}))
+  filename=$(basename ${file})
+
+  java -jar yuicompressor-2.4.8.jar "${file}" -o "${base}/min/${basedir}/${filename}"
+done
+
+# mogrify should be done in cwd
+cd dnss-web/src/main/webapp/resources/images
+mogrify -crop 512x550+0+0 +repage +repage -path ../min/images skillicon*.png
+
+# crush pngs
+cd ../min/images
+for file in *; do
+  pngcrush -ow ${file}
+done

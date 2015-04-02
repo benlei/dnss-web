@@ -9,6 +9,7 @@ require_relative 'dn-skills'
 # Hopefully only thing you have to edit
 ##############################################################################
 JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json'
+MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\min\\json'
 # JSON_DIRECTORY = 'E:\\json'
 
 ##############################################################################
@@ -125,9 +126,7 @@ query = queries.join("UNION\n")
   end
 
   job['default_skills'] << skill['id']
-  puts JSON.pretty_generate(job['default_skills'])
 end
-
 
 
 ##############################################################################
@@ -220,21 +219,24 @@ jobs.select {|k,v| v['advancement'] == 2}.each do |k,v|
 end
 
 JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
+MIN_JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
 mkdir_p(JSON_DIRECTORY)
+mkdir_p(MIN_JSON_DIRECTORY)
 
 ##############################################################################
 # WRITE: weapon types
 ##############################################################################
-# path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
-# stream = open(path, 'w')
-# stream.write(JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
-# stream.close()
+path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
+stream = open(path, 'w')
+stream.write(JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
+stream.close()
+puts '%s created' % path
 
-path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
+path = '%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, 'types']
 stream = open(path, 'w')
 stream.write({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}.to_json)
 stream.close()
-
+puts '%s created' % path
 
 ##############################################################################
 # WRITE: all jobs
@@ -245,13 +247,13 @@ jobs.each_value do |job|
   # deletes unneeded fields
   ['englishname', 'parentjob', 'jobname'].each {|a| job.delete(a)}
 
-  # path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
-  # stream = open(path, 'w')
-  # stream.write(JSON.pretty_generate(job))
-  # stream.close()
-  # puts '%s created' % path
+  path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
+  stream = open(path, 'w')
+  stream.write(JSON.pretty_generate(job))
+  stream.close()
+  puts '%s created' % path
 
-  path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
+  path = '%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, englishname]
   stream = open(path, 'w')
   stream.write(job.to_json)
   stream.close()
@@ -261,13 +263,13 @@ end
 ##############################################################################
 # WRITE: job tree
 ##############################################################################
-# path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
-# stream = open(path, 'w')
-# stream.write(JSON.pretty_generate(job_tree))
-# stream.close()
-# puts '%s created' % path
+path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
+stream = open(path, 'w')
+stream.write(JSON.pretty_generate(job_tree))
+stream.close()
+puts '%s created' % path
 
-path = '%s%s%s.min.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
+path = '%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
 stream = open(path, 'w')
 stream.write(job_tree.to_json)
 stream.close()
