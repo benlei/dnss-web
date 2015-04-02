@@ -5,8 +5,38 @@ var requirements = {
 
   check: function() {
     var sp = dnss.get_all_sp(), show = false;
+    var ultimate1 = dnss.current[dnss.ultimates[0]], ultimate2 = dnss.current[dnss.ultimates[1]];
     for (id in dnss.current) {
       var skill = dnss.current[id];
+      if (skill == ultimate1 || skill == ultimate2) {
+        if (ultimate1.level > 0 && ultimate2.level > 0) {
+          var violations1 = 0, violations2 = 0;
+          for (var i = 0; i < ultimate1.requires.length; i++) { // check requirements
+            if (dnss.current[ultimate1.requires[i].id].level < ultimate1.requires[i].level) {
+              violations1++;
+            }
+          }
+          for (var i = 0; i < ultimate1.need_sp.length; i++) {
+            if (ultimate1.level && sp[i] < ultimate1.need_sp[i]) {
+              violations1++;
+            }
+          }
+          for (var i = 0; i < ultimate2.requires.length; i++) { // check requirements
+            if (dnss.current[ultimate2.requires[i].id].level < ultimate2.requires[i].level) {
+              violations2++;
+            }
+          }
+          for (var i = 0; i < ultimate2.need_sp.length; i++) {
+            if (ultimate2.level && sp[i] < ultimate2.need_sp[i]) {
+              violations2++;
+            }
+          }
+
+          if ((violations1 && ! violations2) || (! violations1 && violations2)) {
+            continue;
+          }
+        }
+      }
 
       for (var i = 0; i < skill.requires.length; i++) {
         if (skill.level && dnss.current[skill.requires[i].id].level < skill.requires[i].level) {

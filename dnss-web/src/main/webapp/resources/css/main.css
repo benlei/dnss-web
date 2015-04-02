@@ -63,8 +63,16 @@ ul {
   color: rgb(250, 210, 140);
 }
 
+#job-sp li:nth-last-child(2) {
+  background-color: #fff;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  margin: 7px 0 5px 0;
+}
+
 #job-sp li:last-of-type {
-  color: rgb(215,255,255);
+  margin-top: 0;
 }
 
 /* some stuff are temp */
@@ -176,7 +184,7 @@ nav ul ul {
 }
 
 .secondary {
-  color: rgb(200, 255, 255);
+  color: #fff;
   width: 150px;
 }
 
