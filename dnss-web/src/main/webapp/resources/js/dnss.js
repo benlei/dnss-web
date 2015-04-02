@@ -20,8 +20,8 @@ var dnss = {
     this.max_sp = max_sp;
 
     // sets the starting build
-    if (start_build) {
-      var m = start_build.match(/^[0-9a-zA-Z-]+/g);
+    var m;
+    if (start_build && start_build != 'nxid=62' && (m = start_build.match(/^[0-9a-zA-Z-]+/g))) {
       var build = m.shift();
       if (build) {
         build = build.split('');
