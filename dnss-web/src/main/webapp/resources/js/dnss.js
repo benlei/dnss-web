@@ -41,7 +41,7 @@ var dnss = {
     });
 
     // types
-    $.getJSON('/json/types.min.json', function(json) {
+    $.getJSON('/json/types.json', function(json) {
       dnss.types = json;
       while (dnss.queue.length) {
         dnss.add_skills(dnss.queue.shift());
@@ -50,7 +50,7 @@ var dnss = {
 
     // get json
     for (var i in jobIdentifiers) {
-      $.getJSON(fmt('/json/$0.min.json', jobIdentifiers[i]), function(json) {
+      $.getJSON(fmt('/json/$0.json', jobIdentifiers[i]), function(json) {
         for (var j in json.messages) { // I don't trust async $.extends()
           dnss.messages[j] = json.messages[j];
         }

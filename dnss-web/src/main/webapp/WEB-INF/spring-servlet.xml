@@ -18,10 +18,10 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <mvc:resources mapping="/css/*.css" location="/resources/css/" />
-    <mvc:resources mapping="/js/*.js" location="/resources/js/" />
-    <mvc:resources mapping="/json/*.json" location="/resources/json/" />
-    <mvc:resources mapping="/images/*" location="/resources/images/" />
+    <mvc:resources mapping="/css/*.css" location="/resources/min/css/" />
+    <mvc:resources mapping="/js/*.js" location="/resources/min/js/" />
+    <mvc:resources mapping="/json/*.json" location="/resources/min/json/" />
+    <mvc:resources mapping="/images/*" location="/resources/min/images/" />
     <mvc:resources mapping="/favicon.ico" location="/" />
 
     <mvc:annotation-driven/>
