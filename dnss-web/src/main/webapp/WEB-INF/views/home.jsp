@@ -19,6 +19,7 @@
 <aside id="sidebar-1">
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs}" var="job" varStatus="loop">
 <li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
+<li/>
 <li>Total SP<div class="sp">0/${max_sp}</div></li>
 </ul>
 <ul id="warnings">

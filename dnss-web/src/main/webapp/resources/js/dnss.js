@@ -11,6 +11,7 @@ var dnss = {
   total_skills: $('.skill[data-id]').length,
   parsed_total: 0,
   jobs: [],
+  ultimates: [],
   building: false,
 
   init: function(jobIdentifiers, max_levels, max_sp, start_build) {
@@ -22,7 +23,7 @@ var dnss = {
     if (start_build) {
       var m = start_build.match(/^[0-9a-zA-Z-]+/g);
       var build = m.shift();
-      if (build && build.length > 72) {
+      if (build) {
         build = build.split('');
         for (var i = 0; i < build.length - 1; i++) {
           this.build[i] = build[i];
@@ -173,6 +174,10 @@ var dnss = {
         curr.max = max;
         curr.end = end;
         curr = curr.next;
+      }
+
+      if (adv == 1 && this.skills[i].next && this.skills[i].next.required_level == 40 && this.skills[i].end.required_level == 60) {
+        this.ultimates.push(i);
       }
 
       this.parsed_total++;
