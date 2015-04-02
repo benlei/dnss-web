@@ -191,11 +191,12 @@ var dnss = {
       return skill;
     }
 
-    while (skill.level != lvl) {
+    while (skill && skill.level != lvl) {
       skill = skill.next;
     }
 
-    return skill;
+    // can't find it.
+    return skill ? skill : this.skills[id];
   },
 
   $: function(id) {
