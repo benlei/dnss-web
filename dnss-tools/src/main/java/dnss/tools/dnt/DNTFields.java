@@ -26,8 +26,9 @@ public class DNTFields implements Accumulator<Pair<String, Types>, StringBuilder
 
     @Override
     public StringBuilder dissipate() {
-        StringBuilder newBuf = new StringBuilder(buf);
-        newBuf.append(");\n");
-        return newBuf;
+        StringBuilder builder = buf;
+        builder.append(");\n");
+        buf = null; // if you are dissipating, can't use this object anymore
+        return builder;
     }
 }

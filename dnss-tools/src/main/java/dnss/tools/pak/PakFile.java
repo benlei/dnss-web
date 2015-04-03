@@ -170,7 +170,7 @@ public class PakFile {
             }
 
             FileOutputStream fileOutputStream = new FileOutputStream(outputDestination);
-            fileOutputStream.write(byteArrayOutputStream.toByteArray());
+            byteArrayOutputStream.writeTo(fileOutputStream);
             fileOutputStream.close();
         }
 

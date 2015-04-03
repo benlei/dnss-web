@@ -43,9 +43,10 @@ public class DNTEntries implements Accumulator<ArrayList<Object>, StringBuilder>
 
     @Override
     public StringBuilder dissipate() {
-        StringBuilder newBuf = new StringBuilder(buf);
-        newBuf.delete(newBuf.length() - 2, newBuf.length());
-        newBuf.append(';');
-        return newBuf;
+        StringBuilder builder = buf;
+        builder.delete(builder.length() - 2, builder.length());
+        builder.append(';');
+        buf = null; // if you dissipate, can't use this object anymore
+        return builder;
     }
 }
