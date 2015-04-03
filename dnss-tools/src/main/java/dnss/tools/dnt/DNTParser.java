@@ -6,6 +6,7 @@ import dnss.tools.commons.ReadStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -61,7 +62,7 @@ public class DNTParser implements Parser, Runnable {
             }
         }
 
-        FileWriter writer = new FileWriter(destination);
+        BufferedWriter writer = new BufferedWriter(new FileWriter(destination));
         writer.write(""); // empty the file
         writer.append(fields.dissipate());
         writer.append(entries.dissipate());

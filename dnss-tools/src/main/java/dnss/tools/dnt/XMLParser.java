@@ -10,6 +10,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.CharacterData;
 
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -63,7 +64,7 @@ public class XMLParser implements Parser, Runnable {
             }
         }
 
-        FileWriter writer = new FileWriter(destination);
+        BufferedWriter writer = new BufferedWriter(new FileWriter(destination));
         writer.write(""); // empty the file
         writer.append(fields.dissipate());
         writer.append(entries.dissipate());
