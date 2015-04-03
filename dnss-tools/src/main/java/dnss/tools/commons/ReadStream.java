@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.File;
+import java.nio.channels.FileChannel;
 
 /**
  * ReadStream that contains only the essential methods needed by any tool.
@@ -152,5 +153,13 @@ public class ReadStream {
      */
     public void close() throws IOException {
         randomAccessFile.close();
+    }
+
+    /**
+     * Gets file channel from random access file
+     * @return the file channel
+     */
+    public FileChannel getChannel() {
+        return randomAccessFile.getChannel();
     }
 }

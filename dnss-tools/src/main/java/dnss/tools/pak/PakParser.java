@@ -8,6 +8,9 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.channels.FileChannel;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class PakParser implements Parser, Producer<PakFile>, Runnable {
@@ -46,26 +49,35 @@ public class PakParser implements Parser, Producer<PakFile>, Runnable {
         int numOfFiles = readStream.seek(START_POS).readInt();
         readStream.seek(readStream.readInt());
 
-        // the skip amount is for after the first iteration
-        // It is possible this is better because we can avoid
-        // doing an extra skip of 44 bytes for the last iteration
-        int i, skipAmount;
-        for (i = 0, skipAmount = 0; i < numOfFiles; i++, skipAmount = 44) {
-            PakFile pakFile = new PakFile(pak);
+        FileChannel channel = readStream.getChannel();
+        ByteBuffer buf = ByteBuffer.allocateDirect((256 + 4 + 4 + 4 + 4 + 44) * 32); // 10112 bytes/9.875 kb
+        int total = 0;
+        byte[] path = new byte[256];
 
-            // Split up the path after into a HashMap
-            pakFile.setPakPath(readStream.skip(skipAmount).readString(256));
-            pakFile.setFileSize(readStream.skip(4).readInt()); // potentially useless
-            pakFile.setCompressedSize(readStream.readInt());
-            pakFile.setStreamOffset(readStream.readInt());
+        // set order
+        buf.order(ByteOrder.LITTLE_ENDIAN);
+        while (total < numOfFiles) {
+            channel.read(buf);
+            buf.flip(); // make it readable up to it slimit
+            while (buf.hasRemaining()) {
+                PakFile pakFile = new PakFile(pak);
+                buf.get(path);
+                pakFile.setPakPath(new String(path));
+                buf.position(buf.position() + 4); // skip 4 bytes
+                pakFile.setFileSize(buf.getInt());
+                pakFile.setCompressedSize(buf.getInt());
+                pakFile.setStreamOffset(buf.getInt());
+                buf.position(buf.position() + 44); // 44 padding bytes
 
-            // setup the file tree for synchronization when extracting/making directories
-            pakFile.setDestination(resolve(pakFile));
-
-            produce(pakFile);
+                total++;
+                pakFile.setDestination(resolve(pakFile));
+                produce(pakFile);
+            }
+            buf.clear(); // need to clear buffer for reading in more data
         }
 
-        pak.setTotalFiles(i);
+        pak.setTotalFiles(total);
+        channel.close();
         readStream.close();
     }
 
