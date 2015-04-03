@@ -2,8 +2,8 @@
 <html lang="en"><c:set var="images_i" value="0"/>
 <title>${jobs[fn:length(jobs) - 1].name} - DNSS</title>
 <meta charset="utf-8">
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<link href="/css/app.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"><c:forEach items="${cssList}" var="css">
+<link href="<c:if test="${not min}">/app</c:if>/css/${css}.css" rel="stylesheet" type="text/css" /></c:forEach>
 <body>
 <main>
 <nav id="jobs" class="no-select">
@@ -53,8 +53,8 @@
 </div>
 </aside>
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/js/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><c:forEach items="${jsList}" var="js">
+<script src="<c:if test="${not min}">/app</c:if>/js/${js}.js"></script></c:forEach>
 <script type="text/javascript">
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
 var max_sp = [<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]
