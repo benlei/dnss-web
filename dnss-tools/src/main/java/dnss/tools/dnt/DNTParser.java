@@ -52,8 +52,7 @@ public class DNTParser implements Parser, Runnable {
         for (int i = 0; i < numRows; i++) {
             ArrayList<Object> values = new ArrayList<Object>();
             for (Pair<String, Types> field: fieldList) {
-                Object foo= field.getRight().getBufferToObject(buf);
-                values.add(foo);
+                values.add(field.getRight().getBufferToObject(buf));
             }
 
             entries.accumulate(values);
