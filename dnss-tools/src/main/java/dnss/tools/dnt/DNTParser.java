@@ -2,15 +2,16 @@ package dnss.tools.dnt;
 
 import dnss.tools.commons.Pair;
 import dnss.tools.commons.Parser;
-import dnss.tools.commons.ReadStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
+
+import static java.nio.ByteOrder.LITTLE_ENDIAN;
+import static java.nio.channels.FileChannel.MapMode.READ_ONLY;
 
 public class DNTParser implements Parser, Runnable {
     private final static Logger log = LoggerFactory.getLogger(DNTParser.class);
@@ -22,20 +23,26 @@ public class DNTParser implements Parser, Runnable {
     }
 
     public void parse() throws IOException {
-        ReadStream readStream = new ReadStream(dnt.getLocation());
+        // open the file + get channel
+        RandomAccessFile inStream = new RandomAccessFile(dnt.getLocation(), "r");
+        FileChannel channel = inStream.getChannel();
+        ByteBuffer buf = channel.map(READ_ONLY, 0, dnt.getLocation().length()); // it's already flipped
+        buf.order(LITTLE_ENDIAN);
+        buf.position(4);
+
         DNTFields fields = new DNTFields(dnt);
 
         // # of cols EXCLUDING the Id column.
-        int numCols = readStream.seek(4).readShort();
-        int numRows = readStream.readInt();
+        int numCols = buf.getShort();
+        int numRows = buf.getInt();
 
-        // could also use a linkedhashmap
         ArrayList<Pair<String, Types>> fieldList = new ArrayList<Pair<String, Types>>();
         fieldList.add(new Pair<String, Types>(DNTFields.id, Types.INT));
         for (int i = 0; i < numCols; i++) {
-            String fieldName = readStream.readString(readStream.readShort());
-            Types type = Types.resolve(readStream.read());
-            Pair<String, Types> pair = new Pair<String, Types>(fieldName, type);
+            byte[] fieldNameBytes = new byte[buf.getShort()];
+            buf.get(fieldNameBytes);
+            Types type = Types.resolve(buf.get());
+            Pair<String, Types> pair = new Pair<String, Types>(new String(fieldNameBytes), type);
             fields.accumulate(pair);
             fieldList.add(pair);
         }
@@ -45,13 +52,15 @@ public class DNTParser implements Parser, Runnable {
         for (int i = 0; i < numRows; i++) {
             ArrayList<Object> values = new ArrayList<Object>();
             for (Pair<String, Types> field: fieldList) {
-                values.add(field.getRight().read(readStream));
+                Object foo= field.getRight().getBufferToObject(buf);
+                values.add(foo);
             }
 
             entries.accumulate(values);
         }
 
-        readStream.close();
+        channel.close();
+        inStream.close();
 
         File destination = dnt.getDestination();
         File destinationDir = destination.getParentFile();

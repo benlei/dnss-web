@@ -14,11 +14,13 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 
 public class XMLParser implements Parser, Runnable {
     private final static Logger log = LoggerFactory.getLogger(DNTParser.class);
+    final protected static char[] hex = "0123456789ABCDEF".toCharArray();
 
     private DNT dnt;
 
@@ -49,8 +51,8 @@ public class XMLParser implements Parser, Runnable {
             ArrayList<Object> values = new ArrayList<Object>();
             Element element = (Element) nodeList.item(i);
             CharacterData characterData = (CharacterData)element.getFirstChild();
-            values.add(Integer.valueOf(element.getAttribute("mid")));
-            values.add(characterData.getData());
+            values.add(Integer.valueOf(element.getAttribute("mid"))); // first col: message id
+            values.add(new String(characterData.getData().getBytes(), Charset.forName("UTF-8"))); // second col: the data (to utf8)
             entries.accumulate(values);
         }
 
@@ -69,6 +71,17 @@ public class XMLParser implements Parser, Runnable {
         writer.append(fields.dissipate());
         writer.append(entries.dissipate());
         writer.close();
+    }
+
+    public static Object bytesToHex(byte[] bytes) {
+        StringBuilder builder = new StringBuilder(bytes.length << 1);
+        for (int i = 0; i < bytes.length; ++i) {
+            int v = bytes[i] & 0xFF;
+            builder.append(hex[v >> 4]);
+            builder.append(hex[v & 0x0F]);
+        }
+        //return builder;
+        return new String(bytes, Charset.forName("UTF-8"));
     }
 
     @Override

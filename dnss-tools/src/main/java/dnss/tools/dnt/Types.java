@@ -1,8 +1,7 @@
 package dnss.tools.dnt;
 
-import dnss.tools.commons.ReadStream;
-
 import java.io.IOException;
+import java.nio.ByteBuffer;
 
 public enum Types {
     STRING (String.class, "text"),
@@ -30,12 +29,16 @@ public enum Types {
         }
     }
 
-    public Object read(ReadStream readStream) throws IOException {
+    public Object getBufferToObject(ByteBuffer buf) throws IOException {
         switch (this) {
-            case STRING: return readStream.readString(readStream.readShort());
-            case BOOL: return readStream.readInt() != 0;
-            case INT: return readStream.readInt();
-            case FLOAT: case DOUBLE: return readStream.readFloat();
+            case STRING:
+                short len = buf.getShort();
+                byte[] bytes = new byte[len];
+                buf.get(bytes);
+                return new String(bytes);
+            case BOOL: return buf.getInt() != 0;
+            case INT: return buf.getInt();
+            case FLOAT: case DOUBLE: return buf.getFloat();
             default: throw new RuntimeException("Unknown DNT enum type!");
         }
 

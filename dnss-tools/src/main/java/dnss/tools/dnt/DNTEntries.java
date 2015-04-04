@@ -4,10 +4,12 @@ import dnss.tools.commons.Accumulator;
 import dnss.tools.commons.Pair;
 
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class DNTEntries implements Accumulator<ArrayList<Object>, StringBuilder> {
     private StringBuilder buf = new StringBuilder();
     private ArrayList<Pair<String, Types>> fields;
+    private final static Pattern pattern = Pattern.compile("^[0-9A-F]+$");
 
     public DNTEntries(DNT dnt, ArrayList<Pair<String, Types>> fields) {
         this.fields = fields;
@@ -29,8 +31,15 @@ public class DNTEntries implements Accumulator<ArrayList<Object>, StringBuilder>
             buf.append(',');
             switch (fields.get(i).getRight()) {
                 case STRING:
-                    String insert = ((String)element.get(i)).replaceAll("'", "''");
-                    insert = insert.isEmpty() ? "null" : "'" + insert + "'";
+                    String insert = element.get(i).toString();
+//                    if (pattern.matcher(insert).matches()) {
+//                        insert = insert.isEmpty() ? "null" : "decode('" + insert + "','hex')";
+//                    } else {
+                        insert = insert.replaceAll("'", "''");
+                        insert = insert.isEmpty() ? "null" : "'" + insert + "'";
+//                    }
+
+
                     buf.append(insert);
                     break;
                 default:

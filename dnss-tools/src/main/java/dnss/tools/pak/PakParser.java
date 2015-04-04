@@ -2,7 +2,6 @@ package dnss.tools.pak;
 
 import dnss.tools.commons.Parser;
 import dnss.tools.commons.Producer;
-import dnss.tools.commons.ReadStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +10,6 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -22,7 +20,6 @@ public class PakParser implements Parser, Producer<PakFile>, Runnable {
     public static final String HEADER = "EyedentityGames Packing File 0.1";
     public static final long START_POS = 260;
     private static ConcurrentHashMap<String, File> map = new ConcurrentHashMap<String, File>();
-    private static final Charset UTF8 = Charset.forName("UTF-8");
 
     private Pak pak;
     private PakItems items;
@@ -51,7 +48,7 @@ public class PakParser implements Parser, Producer<PakFile>, Runnable {
         // Check if the header is okay
         try {
             channel.read(header);
-            if (!Arrays.equals(headerBytes, HEADER.getBytes(UTF8))) {
+            if (!Arrays.equals(headerBytes, HEADER.getBytes())) {
                 log.error("Invalid pak file header, aborting parsing " + pak.getLocation().getPath());
                 return;
             }
@@ -76,7 +73,7 @@ public class PakParser implements Parser, Producer<PakFile>, Runnable {
             while (buf.hasRemaining()) {
                 PakFile pakFile = new PakFile(pak);
                 buf.get(path);
-                pakFile.setPakPath(new String(path, UTF8));
+                pakFile.setPakPath(new String(path));
                 buf.position(buf.position() + 4); // skip 4 bytes
                 pakFile.setFileSize(buf.getInt());
                 pakFile.setCompressedSize(buf.getInt());

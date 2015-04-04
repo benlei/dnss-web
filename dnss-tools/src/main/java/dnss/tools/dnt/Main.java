@@ -80,7 +80,7 @@ public class Main {
         try {
             service.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
         } catch (InterruptedException e) {
-            // something went wrong
+            log.error("Parser has been interrupted!", e);
         }
     }
 }
