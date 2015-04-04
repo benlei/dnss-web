@@ -73,17 +73,6 @@ public class XMLParser implements Parser, Runnable {
         writer.close();
     }
 
-    public static Object bytesToHex(byte[] bytes) {
-        StringBuilder builder = new StringBuilder(bytes.length << 1);
-        for (int i = 0; i < bytes.length; ++i) {
-            int v = bytes[i] & 0xFF;
-            builder.append(hex[v >> 4]);
-            builder.append(hex[v & 0x0F]);
-        }
-        //return builder;
-        return new String(bytes, Charset.forName("UTF-8"));
-    }
-
     @Override
     public void run() {
         try {

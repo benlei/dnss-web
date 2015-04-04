@@ -32,8 +32,7 @@ public enum Types {
     public Object getBufferToObject(ByteBuffer buf) throws IOException {
         switch (this) {
             case STRING:
-                short len = buf.getShort();
-                byte[] bytes = new byte[len];
+                byte[] bytes = new byte[buf.getShort()];
                 buf.get(bytes);
                 return new String(bytes);
             case BOOL: return buf.getInt() != 0;

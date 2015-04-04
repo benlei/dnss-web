@@ -26,9 +26,8 @@ public class DNTParser implements Parser, Runnable {
         // open the file + get channel
         RandomAccessFile inStream = new RandomAccessFile(dnt.getLocation(), "r");
         FileChannel channel = inStream.getChannel();
-        ByteBuffer buf = channel.map(READ_ONLY, 0, dnt.getLocation().length()); // it's already flipped
+        ByteBuffer buf = channel.map(READ_ONLY, 4, dnt.getLocation().length() - 4); // it's already flipped
         buf.order(LITTLE_ENDIAN);
-        buf.position(4);
 
         DNTFields fields = new DNTFields(dnt);
 
@@ -41,8 +40,7 @@ public class DNTParser implements Parser, Runnable {
         for (int i = 0; i < numCols; i++) {
             byte[] fieldNameBytes = new byte[buf.getShort()];
             buf.get(fieldNameBytes);
-            Types type = Types.resolve(buf.get());
-            Pair<String, Types> pair = new Pair<String, Types>(new String(fieldNameBytes), type);
+            Pair<String, Types> pair = new Pair<String, Types>(new String(fieldNameBytes), Types.resolve(buf.get()));
             fields.accumulate(pair);
             fieldList.add(pair);
         }
