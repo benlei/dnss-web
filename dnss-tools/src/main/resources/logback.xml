@@ -4,13 +4,13 @@
         <file>./dnss.log</file>
         <append>true</append>
         <encoder>
-            <pattern>%d{MM-dd-yyyy HH:mm:ss} [%level] [%thread] %logger{0} - %msg%n</pattern>
+            <pattern>%level %d{MM-dd-yyyy HH:mm:ss} [%thread] %logger{0} - %msg%n</pattern>
         </encoder>
     </appender>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{MM-dd-yyyy HH:mm:ss} [%level] [%thread] %logger{0} - %msg%n</pattern>
+            <pattern>%level %d{MM-dd-yyyy HH:mm:ss} [%thread] %logger{0} - %msg%n</pattern>
         </encoder>
     </appender>
          

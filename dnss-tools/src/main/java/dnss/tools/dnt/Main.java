@@ -1,6 +1,5 @@
 package dnss.tools.dnt;
 
-import dnss.tools.commons.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,8 +13,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class DNTtoSQL {
-    private static final Logger log = LoggerFactory.getLogger(DNTtoSQL.class);
+public class Main {
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     private final static String props = "dnt.properties";
 
@@ -24,7 +23,7 @@ public class DNTtoSQL {
         if (0 < args.length) {
             is = new FileInputStream(args[0]);
         } else {
-            is = DNTtoSQL.class.getClassLoader().getResourceAsStream(props);
+            is = Main.class.getClassLoader().getResourceAsStream(props);
         }
 
         Properties properties = new Properties();

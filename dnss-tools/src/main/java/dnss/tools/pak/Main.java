@@ -16,8 +16,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
-public class PakExtractor {
-    private static final Logger log = LoggerFactory.getLogger(PakExtractor.class);
+public class Main {
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     private final static String props = "pak.properties";
 
@@ -49,7 +49,7 @@ public class PakExtractor {
         if (0 < args.length) {
             is = new FileInputStream(args[0]);
         } else {
-            is = PakExtractor.class.getClassLoader().getResourceAsStream(props);
+            is = Main.class.getClassLoader().getResourceAsStream(props);
         }
 
         Properties properties = new Properties();

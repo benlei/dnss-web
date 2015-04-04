@@ -4,10 +4,7 @@ import dnss.tools.commons.ReadStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
@@ -134,20 +131,20 @@ public class PakFile {
             }
         }
 
-        ReadStream readStream = new ReadStream(pak.getLocation());
-        byte[] pakContents = new byte[compressedSize];
-        readStream.seek(streamOffset).readFully(pakContents);
-        readStream.close();
+        RandomAccessFile inStream = new RandomAccessFile(pak.getLocation(), "r");
+        byte[] pakContents = new byte[getCompressedSize()];
+        inStream.seek(getStreamOffset());
+        inStream.readFully(pakContents);
+        inStream.close();
 
-        byte[] inflatedPakContents = new byte[8192];
+        byte[] zData = new byte[8192];
+        int read;
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         Inflater inflater = new Inflater();
         inflater.setInput(pakContents);
-        while (! inflater.finished()) {
-            int inflatedSize = inflater.inflate(inflatedPakContents);
-            byteArrayOutputStream.write(inflatedPakContents, 0, inflatedSize);
+        while ((read=inflater.inflate(zData)) != 0) {
+            byteArrayOutputStream.write(zData, 0, read);
         }
-
         inflater.end();
 
         synchronized (getDestination()) {
@@ -169,9 +166,9 @@ public class PakFile {
                 Files.move(outputDestination.toPath(), outputFile.toPath());
             }
 
-            FileOutputStream fileOutputStream = new FileOutputStream(outputDestination);
-            byteArrayOutputStream.writeTo(fileOutputStream);
-            fileOutputStream.close();
+            FileOutputStream outStream = new FileOutputStream(outputDestination);
+            byteArrayOutputStream.writeTo(outStream);
+            outStream.close();
         }
 
         if (System.getProperty("log.extracted").equals("true")) {
