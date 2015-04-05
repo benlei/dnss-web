@@ -3,7 +3,7 @@
 <title>${jobs[fn:length(jobs) - 1].name} - DNSS</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-<link href="/%DNSS_BUILD_TIME%-dnss.css" rel="stylesheet" type="text/css" />
+<link href="/dnss.css" rel="stylesheet" type="text/css" />
 <body>
 <main>
 <nav id="jobs" class="no-select">
