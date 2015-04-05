@@ -18,8 +18,8 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <mvc:resources mapping="/%DNSS_BUILD_TIME%-dnss.css" location="/resources/" cache-period="31556926"/>
-    <mvc:resources mapping="/%DNSS_BUILD_TIME%-dnss.js" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/dnss.css" location="/resources/"/>
+    <mvc:resources mapping="/dnss.js" location="/resources/"/>
     <mvc:resources mapping="/json/*.json" location="/resources/json/" />
     <mvc:resources mapping="/images/*" location="/resources/images/" />
 

@@ -89,42 +89,18 @@
                     <jswarn>false</jswarn>
                     <aggregations>
                         <aggregation>
-                            <output>${project.build.directory}/${project.build.finalName}/resources/${maven.build.timestamp}-dnss.js</output>
+                            <output>${project.build.directory}/${project.build.finalName}/resources/dnss.js</output>
                             <includes>
                                 <include>**/*.js</include>
                             </includes>
                         </aggregation>
                          <aggregation>
-                             <output>${project.build.directory}/${project.build.finalName}/resources/${maven.build.timestamp}-dnss.css</output>
+                             <output>${project.build.directory}/${project.build.finalName}/resources/dnss.css</output>
                              <includes>
                                  <include>**/*.css</include>
                              </includes>
                          </aggregation>
                     </aggregations>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.google.code.maven-replacer-plugin</groupId>
-                <artifactId>replacer</artifactId>
-                <version>1.5.3</version>
-                <executions>
-                    <execution>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>replace</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <filesToInclude>${project.basedir}/src/main/webapp/WEB-INF/**/_*</filesToInclude>
-                    <inputFilePattern>_(.*)</inputFilePattern>
-                    <outputFilePattern>$1</outputFilePattern>
-                    <replacements>
-                        <replacement>
-                            <token>%DNSS_BUILD_TIME%</token>
-                            <value>${maven.build.timestamp}</value>
-                        </replacement>
-                    </replacements>
                 </configuration>
             </plugin>
         </plugins>

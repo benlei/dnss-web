@@ -54,7 +54,7 @@
 </aside>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/%DNSS_BUILD_TIME%-dnss.js"></script>
+<script src="/dnss.js"></script>
 <script type="text/javascript">
 var jobIds = [<c:forEach items="${jobs}" var="job" varStatus="loop">'${job.identifier}'<c:if test="${!loop.last}">,</c:if></c:forEach>];
 var max_sp = [<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]
