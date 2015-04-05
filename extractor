@@ -2,7 +2,7 @@
 
 PATH=$PATH:$(pwd)/dnss-tools/target/appassembler/bin:
 
-mvn clean install
+mvn clean install -DskipTests --projects dnss-tools --also-make
 
 # extract pertinent pak files
 pak
