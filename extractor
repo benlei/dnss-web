@@ -1,3 +1,35 @@
 #!/bin/bash
 
-mvn clean package
+PATH=$PATH:$(pwd)/dnss-tools/target/appassembler/bin:
+
+mvn clean install
+
+# extract pertinent pak files
+pak
+
+# convert pertinent dnt files to SQL files
+dnt
+
+# import all sql files into database
+cd /cygdrive/e/resource/sql
+export PGPASSWORD=dnss
+for sql in *; do
+  psql -h localhost -U dnss -d dnss < ${sql}
+done
+
+# create json + spring-context files
+cd -
+cd dnss-tools/src/main/ruby
+ruby context_generator.rb
+ruby json_gatherer.rb
+
+# get the skill icon files + compress it down
+cd -
+cd /cygdrive/e/resource/ui/mainbar
+mogrify -format png skillicon*.dds
+mogrify -crop 512x550+0+0 +repage +repage skillicon*.png # 550 = 50px * 11 rows
+for png in skillicon*.png; do
+  pngcrush -ow ${png}
+done
+cd -
+mv -f /cygdrive/e/resource/ui/mainbar/skillicon*.png dnss-web/src/main/webapp/resources/images
