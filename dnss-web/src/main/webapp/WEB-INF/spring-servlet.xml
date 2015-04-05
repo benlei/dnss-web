@@ -18,9 +18,9 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <mvc:resources mapping="/dnss.css" location="/resources/"/>
-    <mvc:resources mapping="/dnss.js" location="/resources/"/>
-    <mvc:resources mapping="/json/*.json" location="/resources/json/" />
+    <mvc:resources mapping="/dnss.css" location="/resources/min"/>
+    <mvc:resources mapping="/dnss.js" location="/resources/min"/>
+    <mvc:resources mapping="/json/*.json" location="/resources/min" />
     <mvc:resources mapping="/images/*" location="/resources/images/" />
 
 

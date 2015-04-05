@@ -73,6 +73,14 @@ def mkdir_p(directory)
   end
 end
 
+def create_json_file(path, json)
+  stream = open(path, 'w')
+  stream.write(json)
+  stream.close()
+  puts '%s created' % path
+end
+
+
 ##############################################################################
 # Combine assassin tables
 ##############################################################################

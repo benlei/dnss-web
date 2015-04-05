@@ -9,7 +9,7 @@ require_relative 'dn-skills'
 # Hopefully only thing you have to edit
 ##############################################################################
 JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json'
-MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\min\\json'
+MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\min'
 # JSON_DIRECTORY = 'E:\\json'
 
 ##############################################################################
@@ -186,37 +186,6 @@ jobs.select {|id, job| job['advancement'] == 0}.each_value do |job|
   end
 end
 
-##############################################################################
-# get all the jobs, subjobs, etc. 
-##############################################################################
-job_tree = Hash.new
-jobs.select {|k,v| v['advancement'] == 0}.each do |k,v|
-  job_tree[k] = {
-    'jobname' => v['jobname'],
-    'identifier' => v['englishname'],
-    'advancements' => Hash.new
-  }
-end
-
-jobs.select {|k,v| v['advancement'] == 1}.each do |k,v|
-  primary = v['parentjob']
-  jtree = job_tree[primary]['advancements']
-  jtree[k] = {
-    'jobname' => v['jobname'],
-    'identifier' => v['englishname'],
-    'advancements' => Hash.new
-  }
-end
-
-jobs.select {|k,v| v['advancement'] == 2}.each do |k,v|
-  secondary = v['parentjob']
-  primary = jobs[secondary]['parentjob']
-  jtree = job_tree[primary]['advancements'][secondary]['advancements']
-  jtree[k] = {
-    'jobname' => v['jobname'],
-    'identifier' => v['englishname']
-  }
-end
 
 JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
 MIN_JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
@@ -224,55 +193,20 @@ mkdir_p(JSON_DIRECTORY)
 mkdir_p(MIN_JSON_DIRECTORY)
 
 ##############################################################################
-# WRITE: weapon types
+# WRITE: all jobs tertiary jobs
 ##############################################################################
-path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'types']
-stream = open(path, 'w')
-stream.write(JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
-stream.close()
-puts '%s created' % path
+jobs.select {|id, job| job['advancement'] == 2}.each_value do |tertiary|
+  englishname = tertiary['englishname']
 
-path = '%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, 'types']
-stream = open(path, 'w')
-stream.write({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}.to_json)
-stream.close()
-puts '%s created' % path
+  secondary = jobs[tertiary['parentjob']]
+  primary = jobs[secondary['parentjob']]
 
-##############################################################################
-# WRITE: all jobs
-##############################################################################
-jobs.each_value do |job|
-  englishname = job['englishname']
+  messages = primary['messages'].merge(secondary['messages']).merge(tertiary['messages'])
+  skills = [primary['skills'], secondary['skills'], tertiary['skills']]
+  json = {'messages' => messages, 'skills' => skills, 'types' => {'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}}
 
-  # deletes unneeded fields
-  ['englishname', 'parentjob', 'jobname'].each {|a| job.delete(a)}
-
-  path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname]
-  stream = open(path, 'w')
-  stream.write(JSON.pretty_generate(job))
-  stream.close()
-  puts '%s created' % path
-
-  path = '%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, englishname]
-  stream = open(path, 'w')
-  stream.write(job.to_json)
-  stream.close()
-  puts '%s created' % path
+  create_json_file('%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname], JSON.pretty_generate(json))
+  create_json_file('%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, englishname], json.to_json)
 end
-
-##############################################################################
-# WRITE: job tree
-##############################################################################
-path = '%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
-stream = open(path, 'w')
-stream.write(JSON.pretty_generate(job_tree))
-stream.close()
-puts '%s created' % path
-
-path = '%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, 'job_tree']
-stream = open(path, 'w')
-stream.write(job_tree.to_json)
-stream.close()
-puts '%s created' % path
 
 @conn.close()

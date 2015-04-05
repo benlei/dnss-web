@@ -89,13 +89,13 @@
                     <jswarn>false</jswarn>
                     <aggregations>
                         <aggregation>
-                            <output>${project.build.directory}/${project.build.finalName}/resources/dnss.js</output>
+                            <output>${project.build.directory}/${project.build.finalName}/resources/min/dnss.js</output>
                             <includes>
                                 <include>**/*.js</include>
                             </includes>
                         </aggregation>
                          <aggregation>
-                             <output>${project.build.directory}/${project.build.finalName}/resources/dnss.css</output>
+                             <output>${project.build.directory}/${project.build.finalName}/resources/min/dnss.css</output>
                              <includes>
                                  <include>**/*.css</include>
                              </includes>

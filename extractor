@@ -17,12 +17,6 @@ for sql in *; do
   psql -h localhost -U dnss -d dnss < ${sql}
 done
 
-# create json + spring-context files
-cd -
-cd dnss-tools/src/main/ruby
-ruby context_generator.rb
-ruby json_gatherer.rb
-
 # get the skill icon files + compress it down
 cd -
 cd /cygdrive/e/resource/ui/mainbar
@@ -33,3 +27,9 @@ for png in skillicon*.png; do
 done
 cd -
 mv -f /cygdrive/e/resource/ui/mainbar/skillicon*.png dnss-web/src/main/webapp/resources/images
+
+# create json + spring-context files
+cd -
+cd dnss-tools/src/main/ruby
+ruby context_generator.rb
+ruby json_gatherer.rb
