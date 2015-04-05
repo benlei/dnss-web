@@ -31,9 +31,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="dnss" target="1.8" />
-      <module name="dnss-tools" target="1.8" />
-      <module name="dnss-web" target="1.8" />
+      <module name="dnss" target="1.5" />
+      <module name="dnss-tools" target="1.5" />
+      <module name="dnss-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

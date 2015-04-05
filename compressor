@@ -10,30 +10,12 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd $DIR
 
-#js
-JS=
-for file in dnss-web/src/main/webapp/resources/js/*; do
-  output=$(java -jar yuicompressor-2.4.8.jar ${file})
-  JS=${JS}${output}
-  echo ${output}
-done
-echo ${JS} >  dnss-web/src/main/webapp/resources/min/js/app.js
-
-#css
-CSS=
-for file in dnss-web/src/main/webapp/resources/css/*; do
-  output=$(java -jar yuicompressor-2.4.8.jar ${file})
-  CSS=${CSS}${output}
-  echo ${output}
-done
-echo ${CSS} >  dnss-web/src/main/webapp/resources/min/css/app.css
-
 ## mogrify should be done in cwd
-cd dnss-web/src/main/webapp/resources/images
-mogrify -crop 512x550+0+0 +repage +repage -path ../min/images skillicon*.png
+#cd dnss-web/src/main/webapp/resources/images
+#mogrify -crop 512x550+0+0 +repage +repage -path ../min/images skillicon*.png
 
 # crush pngs
-cd ../min/images
-for file in *; do
-  pngcrush -ow ${file}
-done
+#cd ../min/images
+#for file in *; do
+#  pngcrush -ow ${file}
+#done

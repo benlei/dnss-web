@@ -13,6 +13,7 @@
         <spring.version>4.1.5.RELEASE</spring.version>
         <jstl.version>1.2</jstl.version>
         <servlet.api.version>3.1.0</servlet.api.version>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     </properties>
 
     <dependencies>
@@ -71,6 +72,69 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>yuicompressor-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>compress</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <nosuffix>true</nosuffix>
+                    <jswarn>false</jswarn>
+                    <aggregations>
+                        <aggregation>
+                            <output>${project.build.directory}/${project.build.finalName}/resources/${maven.build.timestamp}-dnss.js</output>
+                            <includes>
+                                <include>**/*.js</include>
+                            </includes>
+                        </aggregation>
+                         <aggregation>
+                             <output>${project.build.directory}/${project.build.finalName}/resources/${maven.build.timestamp}-dnss.css</output>
+                             <includes>
+                                 <include>**/*.css</include>
+                             </includes>
+                         </aggregation>
+                    </aggregations>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>1.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <filesToInclude>${project.basedir}/src/main/webapp/WEB-INF/**/_*</filesToInclude>
+                    <inputFilePattern>_(.*)</inputFilePattern>
+                    <outputFilePattern>$1</outputFilePattern>
+                    <replacements>
+                        <replacement>
+                            <token>%DNSS_BUILD_TIME%</token>
+                            <value>${maven.build.timestamp}</value>
+                        </replacement>
+                    </replacements>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <name>oss.sonatype.org</name>
+            <id>oss.sonatype.org</id>
+            <url>http://oss.sonatype.org/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>

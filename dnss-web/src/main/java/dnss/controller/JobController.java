@@ -15,27 +15,8 @@ import java.util.LinkedList;
 
 @Controller
 public class JobController {
-    private final static boolean MIN_MODE = false;
-    private final static ArrayList<String> cssList = new ArrayList<String>();
-    private final static ArrayList<String> jsList = new ArrayList<String>();
-
     @Autowired
     private WebApplicationContext context;
-
-    static {
-        if (MIN_MODE) {
-            cssList.add("app");
-            jsList.add("app");
-        } else {
-            cssList.add("main");
-            jsList.add("lib");
-            jsList.add("dnss");
-            jsList.add("description");
-            jsList.add("html2canvas");
-            jsList.add("skill");
-            jsList.add("requirements");
-        }
-    }
 
     @RequestMapping("/job/{job_identifier:[a-z]+}-{level:[1-9][0-9]*}")
     public String job(HttpServletResponse response,
@@ -94,10 +75,6 @@ public class JobController {
 
         int[] levelList = new int[] {Math.min(levels.size() - 1, level), Math.min(levels.size() - 11, level), Math.min(levels.size() - 1, level)};
         model.addAttribute("levels", levelList);
-
-        model.addAttribute("min", MIN_MODE);
-        model.addAttribute("cssList", cssList);
-        model.addAttribute("jsList", jsList);
 
         return "home";
     }
