@@ -9,7 +9,7 @@ require_relative 'dn-skills'
 # Hopefully only thing you have to edit
 ##############################################################################
 JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json'
-MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\min'
+MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\min'
 # JSON_DIRECTORY = 'E:\\json'
 
 ##############################################################################

@@ -1,0 +1,88 @@
+#!/bin/bash
+PATH=$PATH:$(pwd)/dnss-tools/target/appassembler/bin:
+
+CWD=$(pwd)
+MVN_BUILT=0
+EXTRACTED_PAK=0
+EXTRACTED_DNT=0
+
+function mvn_build() {
+    if [[ ${MVN_BUILT} -eq 0 ]]; then
+        mvn clean install -DskipTests --projects dnss-tools --also-make
+        MVN_BUILT=1
+    fi
+}
+
+function extract_pak() {
+    if [[ ${EXTRACTED_PAK} -eq 0 ]]; then
+        pak
+        EXTRACTED_PAK=1
+    fi
+}
+
+function extract_dnt() {
+    if [[ ${EXTRACTED_DNT} -eq 0 ]]; then
+        dnt
+        cd /cygdrive/e/resource/sql
+        export PGPASSWORD=dnss
+        for sql in *; do
+          psql -h localhost -U dnss -d dnss < ${sql}
+        done
+        EXTRACTED_DNT=1
+    fi
+}
+
+function update_properties() {
+    ruby -e <<EOF
+
+    EOF
+
+}
+
+while test $# -gt 0
+do
+    case "$1" in
+        --json) # convert pertinent dnt files to SQL files and extract it
+            mvn_build
+            extract_pak
+            extract_dnt
+            cd ${CWD}/dnss-web/src/main/webapp/resources/json/min
+            rm -f *
+            cd ${CWD}/dnss-tools/src/main/ruby/
+            ruby json_gatherer.rb
+            version=$(ruby update_properties.rb json)
+            cd -
+            for file in *; do
+                mv ${file} ${version}-${file}
+            done
+            ;;
+        --context)
+            mvn_build
+            extract_pak
+            extract_dnt
+            cd ${CWD}/dnss-tools/src/main/ruby/
+            ruby context_generator.rb
+            ;;
+        --skillicons)
+            mvn_build
+            extract_pak
+            cd ${CWD}/dnss-web/src/main/webapp/resources/images/skillicons
+            rm -f *
+            cd /cygdrive/e/resource/ui/mainbar
+            mogrify -format png skillicon*.dds
+            mogrify -crop 500x550+0+0 +repage +repage skillicon*.png # 550 = 50px * 11 rows
+            for png in skillicon*.png; do
+              pngcrush -ow ${png}
+            done
+            cd -
+            mv -f /cygdrive/e/resource/ui/mainbar/skillicon*.png .
+            version=$(ruby ${CWD}/dnss-tools/src/main/ruby/update_properties.rb skillicon)
+            for file in *; do
+                mv ${file} ${version}_${file}
+            done
+            ;;
+        *) echo "Invalid argument $1"
+            ;;
+    esac
+    shift
+done

@@ -10,21 +10,20 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="dnss.controller" />
+    <context:component-scan base-package="dnss.controller"/>
+    <context:property-placeholder location="classpath:dnss.properties"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-        <property name="prefix" value="/WEB-INF/views/" />
-        <property name="suffix" value=".jsp" />
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".jsp"/>
     </bean>
 
-    <mvc:resources mapping="/dnss.css" location="/resources/min"/>
-    <mvc:resources mapping="/dnss.js" location="/resources/min"/>
-    <mvc:resources mapping="/json/*.json" location="/resources/min" />
-    <mvc:resources mapping="/images/*" location="/resources/images/" />
-
-
-    <mvc:resources mapping="/favicon.ico" location="/" />
+    <mvc:resources mapping="/${timestamp}-dnss.css" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/${timestamp}-dnss.js" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/json/${json}-*.json" location="/resources/json/min/" cache-period="31556926"/>
+    <mvc:resources mapping="/images/${skillicon}-*.png" location="/resources/images/" cache-period="31556926"/>
+    <mvc:resources mapping="/favicon.ico" location="/" cache-period="31556926"/>
 
     <mvc:annotation-driven/>
 </beans>
