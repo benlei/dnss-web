@@ -21,8 +21,8 @@
 
     <mvc:resources mapping="/${timestamp}-dnss.css" location="/resources/" cache-period="31556926"/>
     <mvc:resources mapping="/${timestamp}-dnss.js" location="/resources/" cache-period="31556926"/>
-    <mvc:resources mapping="/json/${json}-*.json" location="/resources/json/min/" cache-period="31556926"/>
-    <mvc:resources mapping="/images/${skillicon}-*.png" location="/resources/images/" cache-period="31556926"/>
+    <mvc:resources mapping="/json/${json.version}-*.json" location="/resources/json/min/" cache-period="31556926"/>
+    <mvc:resources mapping="/skillicons/${skillicon.version}_*.png" location="/resources/images/skillicons/" cache-period="31556926"/>
     <mvc:resources mapping="/favicon.ico" location="/" cache-period="31556926"/>
 
     <mvc:annotation-driven/>

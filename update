@@ -12,42 +12,57 @@ CWD="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 JSON=0
 SKILLICONS=0
 CONTEXT=0
-SKIP_EXTRACT_PAK=0
-SKIP_EXTRACT_DNT=0
-SKIP_MVN=0
+EXTRACT_PAK=0
+EXTRACT_DNT=0
+MVN_BUILD=0
 
-while test $# -gt 0
-do
-    case "$1" in
-        --json) JSON=1
+function show_help {
+    echo This script is used to update SQL, skill icons, etc.
+    echo
+    echo Usage:
+    echo "  ./update [OPTION]..."
+    echo
+    echo Options:
+    echo -e "  -b, --build\t\tDoes a maven build before running any of the other options."
+    echo -e "  -p, --extract-pak\tRuns the pak extracting program before any of the below options."
+    echo -e "  -d, --extract-dnt\tRuns the dnt extracting program before any of the below options."
+    echo -e "  -j, --json\t\tGenerate the JSON files, and increment the version for the JSON files."
+    echo -e "  -s, --skilicons, \tExtract the skill icons from the DN Pak files."
+    echo -e "  -c, --context\t\tGenerate the Spring Bean context file"
+}
+
+OPTIND=1
+while getopts "jscpdbh,json,skillicons,context,extract-pak,extract-dnt,build,help" opt; do
+    case "${opt}" in
+        j|json) JSON=1
             ;;
-        --skillicons) SKILLICONS=1
+        s|skillicons) SKILLICONS=1
             ;;
-        --context) CONTEXT=1
+        c|context) CONTEXT=1
             ;;
-        --skip-extract-pak) SKIP_EXTRACT_PAK=1
+        p|extract-pak) EXTRACT_PAK=1
             ;;
-        --skip-extract-dnt) SKIP_EXTRACT_DNT=1
+        d|extract-dnt) EXTRACT_DNT=1
             ;;
-        --skip-mvn) SKIP_MVN=1
+        b|build) MVN_BUILD=1
             ;;
-        *)
-            echo UNKNOWN OPTION $1
-            exit 1
+        h|help)
+            show_help
+            exit 0
             ;;
     esac
-    shift
 done
+shift $((OPTIND-1))
 
-if [[ ${SKIP_MVN} -eq 0 ]]; then
+if [[ ${MVN_BUILD} -eq 1 ]]; then
     mvn clean install -DskipTests --projects dnss-tools --also-make
 fi
 
-if [[ ${SKIP_EXTRACT_PAK} -eq 0 ]]; then
+if [[ ${EXTRACT_PAK} -eq 1 ]]; then
     pak
 fi
 
-if [[ ${SKIP_EXTRACT_DNT} -eq 0 ]]; then
+if [[ ${EXTRACT_DNT} -eq 1 ]]; then
     dnt
     cd /cygdrive/e/resource/sql
     export PGPASSWORD=dnss

@@ -1,0 +1,35 @@
+#sidebar-2 {
+  width: 350px;
+  float: left;
+  margin-left: 25px;
+  font-size: 0.8em;
+  display: none;
+  padding: 5px 15px 10px 15px;
+  color: rgb(0,0,15);
+  line-height: 1.4em;
+}
+
+#sidebar-2 li span.y {
+  color: rgb(45, 75, 115);
+  font-weight: bold;
+}
+
+#sidebar-2 li .description .y {
+  color: rgb(0, 15, 180);
+  font-weight: normal;
+}
+
+#sidebar-2 li .description .p {
+  color: rgb(70, 55, 255);
+  font-weight: normal;
+}
+
+#next-description {
+  margin-top: 15px;
+}
+
+#mode {
+  float: right;
+  text-transform: uppercase;
+  padding: 2px 5px;
+}
