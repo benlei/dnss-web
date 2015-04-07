@@ -8,9 +8,8 @@ require_relative 'dn-skills'
 ##############################################################################
 # Hopefully only thing you have to edit
 ##############################################################################
-JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\%s-%s.json'
-MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\min\\%s-%s.json'
-TYPES_PATH = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\js\\types.js'
+JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\%s.json'
+MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\min\\%s.json'
 
 ##############################################################################
 # get all messages
@@ -107,25 +106,18 @@ end
 ##############################################################################
 # get default skills
 ##############################################################################
+default_skills = Array.new
 queries = Array.new
 base_query = <<sql_query
-  SELECT _defaultskill%1$d as id, _needjob
+  SELECT _defaultskill%1$d as id
   FROM default_create
   INNER JOIN skills s
     ON s._id = _defaultskill%1$d
-  INNER JOIN jobs j
-    ON j._id = _needjob
-  WHERE _jobnumber = 0
 sql_query
 (1..10).each {|i| queries << base_query % i}
 query = queries.join("UNION\n")
-@conn.exec(query).each_dnt do |skill|
-  job = jobs[skill['needjob']]
-  if job['default_skills'].nil?
-    job['default_skills'] = Array.new
-  end
-
-  job['default_skills'] << skill['id']
+@conn.exec(query).each_dnt do |id|
+  default_skills << id
 end
 
 
@@ -193,21 +185,27 @@ mkdir_p(File.dirname(JSON_DIRECTORY))
 mkdir_p(File.dirname(MIN_JSON_DIRECTORY))
 
 ##############################################################################
-# WRITE: Types JS file (not json)
+# WRITE: common data
 ##############################################################################
-create_json_file(TYPES_PATH, 'var TYPES = %s;' % JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
+common = {
+  'weapons' => DN_WEAPON_TYPES,
+  'skills' => DN_SKILL_TYPES,
+  'default_skills' => default_skills
+}
+create_json_file(JSON_DIRECTORY % 'common', JSON.pretty_generate(common))
+create_json_file(MIN_JSON_DIRECTORY % 'common', common.to_json)
 
 ##############################################################################
 # WRITE: all jobs tertiary jobs
 ##############################################################################
 jobs.each do |id, job|
   # create the messages
-  create_json_file(JSON_DIRECTORY % [job['englishname'], 'messages'], JSON.pretty_generate(job['messages']))
-  create_json_file(MIN_JSON_DIRECTORY % [job['englishname'], 'messages'], job['messages'].to_json)
+  create_json_file(JSON_DIRECTORY % (job['englishname']+'-messages'), JSON.pretty_generate(job['messages']))
+  create_json_file(MIN_JSON_DIRECTORY % (job['englishname']+'-messages'), job['messages'].to_json)
 
   # create the skills
-  create_json_file(JSON_DIRECTORY % [job['englishname'], 'skills'], JSON.pretty_generate(job['skills']))
-  create_json_file(MIN_JSON_DIRECTORY % [job['englishname'], 'skills'], job['skills'].to_json)
+  create_json_file(JSON_DIRECTORY % (job['englishname']+'-skills'), JSON.pretty_generate(job['skills']))
+  create_json_file(MIN_JSON_DIRECTORY % (job['englishname']+'-skills'), job['skills'].to_json)
 end
 
 @conn.close()
