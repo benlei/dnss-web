@@ -8,9 +8,9 @@ require_relative 'dn-skills'
 ##############################################################################
 # Hopefully only thing you have to edit
 ##############################################################################
-JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json'
-MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\min'
-# JSON_DIRECTORY = 'E:\\json'
+JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\%s-%s.json'
+MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\min\\%s-%s.json'
+TYPES_PATH = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\js\\types.js'
 
 ##############################################################################
 # get all messages
@@ -189,24 +189,25 @@ end
 
 JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
 MIN_JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
-mkdir_p(JSON_DIRECTORY)
-mkdir_p(MIN_JSON_DIRECTORY)
+mkdir_p(File.dirname(JSON_DIRECTORY))
+mkdir_p(File.dirname(MIN_JSON_DIRECTORY))
+
+##############################################################################
+# WRITE: Types JS file (not json)
+##############################################################################
+create_json_file(TYPES_PATH, 'var TYPES = %s;' % JSON.pretty_generate({'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}))
 
 ##############################################################################
 # WRITE: all jobs tertiary jobs
 ##############################################################################
-jobs.select {|id, job| job['advancement'] == 2}.each_value do |tertiary|
-  englishname = tertiary['englishname']
+jobs.each do |id, job|
+  # create the messages
+  create_json_file(JSON_DIRECTORY % [job['englishname'], 'messages'], JSON.pretty_generate(job['messages']))
+  create_json_file(MIN_JSON_DIRECTORY % [job['englishname'], 'messages'], job['messages'].to_json)
 
-  secondary = jobs[tertiary['parentjob']]
-  primary = jobs[secondary['parentjob']]
-
-  messages = primary['messages'].merge(secondary['messages']).merge(tertiary['messages'])
-  skills = [primary['skills'], secondary['skills'], tertiary['skills']]
-  json = {'messages' => messages, 'skills' => skills, 'types' => {'weapons' => DN_WEAPON_TYPES, 'skills' => DN_SKILL_TYPES}}
-
-  create_json_file('%s%s%s.json' % [JSON_DIRECTORY, File::SEPARATOR, englishname], JSON.pretty_generate(json))
-  create_json_file('%s%s%s.json' % [MIN_JSON_DIRECTORY, File::SEPARATOR, englishname], json.to_json)
+  # create the skills
+  create_json_file(JSON_DIRECTORY % [job['englishname'], 'skills'], JSON.pretty_generate(job['skills']))
+  create_json_file(MIN_JSON_DIRECTORY % [job['englishname'], 'skills'], job['skills'].to_json)
 end
 
 @conn.close()

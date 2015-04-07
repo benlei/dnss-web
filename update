@@ -76,7 +76,11 @@ if [[ ${CONTEXT} -eq 1 ]]; then
 fi
 
 if [[ ${JSON} -eq 1 ]]; then
-    cd ${CWD}/dnss-web/src/main/webapp/resources/json/min
+    mkdir -p ${CWD}/dnss-web/src/main/webapp/resources/json/min
+    cd ${CWD}/dnss-web/src/main/webapp/resources/json
+    echo Removing $(ls)
+    rm -f *
+    cd min
     echo Removing $(ls)
     rm -f *
     ruby ${CWD}/dnss-tools/src/main/ruby/json_generator.rb
