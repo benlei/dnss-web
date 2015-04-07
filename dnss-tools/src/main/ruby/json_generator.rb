@@ -116,8 +116,8 @@ base_query = <<sql_query
 sql_query
 (1..10).each {|i| queries << base_query % i}
 query = queries.join("UNION\n")
-@conn.exec(query).each_dnt do |id|
-  default_skills << id
+@conn.exec(query).each_dnt do |skill|
+  default_skills << skill['id']
 end
 
 
@@ -188,8 +188,10 @@ mkdir_p(File.dirname(MIN_JSON_DIRECTORY))
 # WRITE: common data
 ##############################################################################
 common = {
-  'weapons' => DN_WEAPON_TYPES,
-  'skills' => DN_SKILL_TYPES,
+  'types' => {
+    'weapons' => DN_WEAPON_TYPES,
+    'skills' => DN_SKILL_TYPES
+  },
   'default_skills' => default_skills
 }
 create_json_file(JSON_DIRECTORY % 'common', JSON.pretty_generate(common))

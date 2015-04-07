@@ -27,10 +27,10 @@
 </ul>
 </aside>
 <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
-<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
+<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}" data-job="${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
 <tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${skill != 0}">
 <td class="container">
-<div class="skill" data-id="${skill}"<c:if test="${i < fn:length(images)}"> style="background-image:url(/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${images[i]}.png)"</c:if>/>
+<div class="skill" data-id="${skill}" data-pos="${skillLoop.index}"<c:if test="${i < fn:length(images)}"> style="background-image:url(/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${images[i]}.png)"</c:if>/>
 <div class="lvl"></div><c:set var="i" value="${i + 1}"/></c:when><c:otherwise>
 <td class="container"></c:otherwise></c:choose></c:forEach></c:forEach>
 </table></c:forEach>
