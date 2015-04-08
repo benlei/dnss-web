@@ -1,72 +1,70 @@
-var dnss = {
-  jobs: [],
-  skillicon: {},
-  max: {},
-  common: {},
-  skills = {},
-  messages: {},
-  build: Array(72 + 1 + 1).join('-').split(''), // the current build
-  readyCount: 0,
+function DNSS(o) {
+  /* Private */
+  var jobs = o.jobs;
+  var json = o.json;
+  var skillicon = o.skillicon;
+  var max = o.max;
+  var build = Array(72 + 1 + 1).join('-').split('');
+  var readyCount = jobs.length+1;
+  var skills = {};
+  var common = {};
 
-  init: function(options) {
-    this.jobs = options.jobs;
-    this.skillicon = options.skillicon;
-    this.max = options.max;
-
-   // sets the starting build
-    if (options.build.length > 24) {
-      var build = options.build.match(/^[0-9a-zA-Z-]+/g);
-      if (build) {
-        build = build.shift().split('');
-        for (var i = 0; i < build.length - 1; i++) {
-          this.build[i] = build[i];
+  /* Constructor */
+  (function() {
+    if (o.build.length > 24) {
+      var b = o.build.match(/^[0-9a-zA-Z-]+/g);
+      if (b) {
+        b = b.shift().split('');
+        build[build.length - 1] = b[b.length - 1];
+        for (var i = 0; i < b.length - 1; i++) {
+          build[i] = b[i];
         }
-        this.build[this.build.length - 1] = build[build.length - 1];
       }
     }
+  })();
 
-    this.readyCount = options.jobs.length+1;
-    for (var i = 0; i < options.jobs.length; i++) {
-      $.getJSON('/json/' + options.json.version + '-' + options.jobs[i].id + '-skills.json', this.addSkill).always(this.ready);
+  /* starts the JSON stuff */
+  this.start = function() {
+    for (var i = 0; i < jobs.length; i++) {
+      $.getJSON('/json/' + json.version + '-' + jobs[i].id + '-skills.json', addSkills).always(ready);
     }
 
-    $.getJSON('/json/' + options.json.version + '-common.json', this.setCommon).always(this.ready);
+    $.getJSON('/json/' + json.version + '-common.json', function(json) { common = json; }).always(ready);
 
-    for (var i = 0; i < options.jobs.length; i++) {
-      $.getJSON('/json/' + options.json.version + '-' + options.jobs[i].id + '-messages.json', function(json) {
-        $.each(json, function(j, message) {
-          messages[j] = message;
-        });
+    for (var i = 0; i < jobs.length; i++) {
+      $.getJSON('/json/' + json.version + '-' + jobs[i].id + '-messages.json', function(json) {
+        $.each(json, function(j, message) { messages.put(j, message); });
       });
     }
-  },
+  };
 
-  addSkill: function(json) {
-    $.each(json, function(id, skill) {
-      this.skills[id] = new Skill(skill);
+  this.getSkillType = function(id) { return common.types.skills[id]; };
+  this.getWeaponType = function(id) { return common.types.weapons[id]; };
+
+  function addSkills(json) {
+    $.each(json, function(id, data) {
       var $skill = $('.skill[data-id=' + id + ']');
+      var skill = new Skill(data);
       var pos = $skill.data('pos');
-      this.skills[id].bindTo($skill); // set all bind events too
-      this.skills[id].setLevel(invertedBuildMap[pos]);
-      this.skills[id].trigger();
+      skills[id] = skill;
+
+      skill.bindTo($skill); // set all bind events too
+      skill.setLevel(iBuildMap[pos]);
+      skill.trigger();
     });
-  },
+  };
 
-  setCommon: function(json) {
-    this.common = json;
-  },
-
-  ready: function() {
-    if (--this.readyCount != 0) {
+  function ready() {
+    if (--readyCount != 0) {
       return;
     }
 
-    var default_skills = this.common.default_skills;
-    for (var i = 0; i < default_skills.length; i++) {
-      if (this.skills[default_skills[i]]) {
-        this.skills[default_skills[i]].setDefault(true);
-        this.skills[default_skills[i]].trigger();
+    var defaults = common.default_skills;
+    for (var i = 0; i < defaults.length; i++) {
+      if (skills[defaults[i]]) {
+        skills[defaults[i]].setDefault(true);
+        skills[defaults[i]].trigger(); // bump it up a level
       }
     }
-  }
-};
+  };
+}

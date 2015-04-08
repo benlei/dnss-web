@@ -99,17 +99,27 @@
                     <jswarn>false</jswarn>
                     <aggregations>
                         <aggregation>
+                            <!--Use below to NOT compress the aggregated file-->
+                            <inputDir>${project.basedir}/src/main/webapp</inputDir>
+
+                            <!--Use below to compress the aggregated file-->
+                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/js</inputDir>-->
                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-dnss.js</output>
                             <includes>
                                 <include>**/*.js</include>
                             </includes>
                         </aggregation>
-                         <aggregation>
-                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-dnss.css</output>
-                             <includes>
-                                 <include>**/*.css</include>
-                             </includes>
-                         </aggregation>
+                        <aggregation>
+                            <!--Use below to NOT compress the aggregated file-->
+                            <inputDir>${project.basedir}/src/main/webapp</inputDir>
+
+                            <!--Use below to compress the aggregated file-->
+                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/css</inputDir>-->
+                            <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-dnss.css</output>
+                            <includes>
+                                <include>**/*.css</include>
+                            </includes>
+                        </aggregation>
                     </aggregations>
                 </configuration>
             </plugin>
