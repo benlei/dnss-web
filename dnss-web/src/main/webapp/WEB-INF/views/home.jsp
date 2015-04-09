@@ -56,10 +56,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.js"></script>
 <script type="text/javascript">
+var version = {json:<fmt:message key="json.version" bundle="${dnss}"/>,skillicon:<fmt:message key="skillicon.version" bundle="${dnss}"/>};
 var dnss = new DNSS({jobs:[<c:forEach items="${jobs}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
-  json:{version:<fmt:message key="json.version" bundle="${dnss}"/>},
-  skillicon:{version:<fmt:message key="skillicon.version" bundle="${dnss}"/>},
-  max:{levels:[<c:forEach items="${levels}" var="level" varStatus="loop">${level}<c:if test="${!loop.last}">,</c:if></c:forEach>],sp:[<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]},
+  max:{required_level:[<c:forEach items="${levels}" var="level" varStatus="loop">${level}<c:if test="${!loop.last}">,</c:if></c:forEach>],sp:[<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]},
   build:window.location.search.substr(1)});
 dnss.start();
 </script>

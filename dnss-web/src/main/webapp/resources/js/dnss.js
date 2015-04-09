@@ -1,13 +1,13 @@
 function DNSS(o) {
-  /* Private */
+  /* Private Fields */
   var jobs = o.jobs;
-  var json = o.json;
-  var skillicon = o.skillicon;
-  var max = o.max;
   var build = Array(72 + 1 + 1).join('-').split('');
-  var readyCount = jobs.length+1;
+  var counter = jobs.length+1;
   var skills = {};
   var common = {};
+
+  /* Public Fields */
+  this.max = o.max;
 
   /* Constructor */
   (function() {
@@ -26,16 +26,10 @@ function DNSS(o) {
   /* starts the JSON stuff */
   this.start = function() {
     for (var i = 0; i < jobs.length; i++) {
-      $.getJSON('/json/' + json.version + '-' + jobs[i].id + '-skills.json', addSkills).always(ready);
+      $.getJSON('/json/' + version.json + '-' + jobs[i].id + '-skills.json', addSkills).always(postHook);
     }
 
-    $.getJSON('/json/' + json.version + '-common.json', function(json) { common = json; }).always(ready);
-
-    for (var i = 0; i < jobs.length; i++) {
-      $.getJSON('/json/' + json.version + '-' + jobs[i].id + '-messages.json', function(json) {
-        $.each(json, function(j, message) { messages.put(j, message); });
-      });
-    }
+    $.getJSON('/json/' + version.json + '-common.json', function(json) { common = json; }).always(postHook);
   };
 
   this.getSkillType = function(id) { return common.types.skills[id]; };
@@ -43,19 +37,15 @@ function DNSS(o) {
 
   function addSkills(json) {
     $.each(json, function(id, data) {
-      var $skill = $('.skill[data-id=' + id + ']');
-      var skill = new Skill(data);
-      var pos = $skill.data('pos');
+      var skill = new Skill(id, data, $('.skill[data-id=' + id + ']'));
       skills[id] = skill;
-
-      skill.bindTo($skill); // set all bind events too
-      skill.setLevel(iBuildMap[pos]);
+      skill.setLevel(iBuildMap[skill.getPosition()]);
       skill.trigger();
     });
-  };
+  }
 
-  function ready() {
-    if (--readyCount != 0) {
+  function postHook() {
+    if (--counter != 0) {
       return;
     }
 
@@ -66,5 +56,11 @@ function DNSS(o) {
         skills[defaults[i]].trigger(); // bump it up a level
       }
     }
-  };
+
+    for (var i = 0; i < jobs.length; i++) {
+      $.getJSON('/json/' + version.json + '-' + jobs[i].id + '-messages.json', function(json) {
+        $.each(json, function(j, message) { messages.put(j, message); });
+      });
+    }
+  }
 }
