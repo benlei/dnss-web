@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dnss.iml" filepath="$PROJECT_DIR$/dnss.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dnss.iml" filepath="$PROJECT_DIR$/dnss.iml" />
       <module fileurl="file://$PROJECT_DIR$/dnss-tools/dnss-tools.iml" filepath="$PROJECT_DIR$/dnss-tools/dnss-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/dnss-web/dnss-web.iml" filepath="$PROJECT_DIR$/dnss-web/dnss-web.iml" />
     </modules>

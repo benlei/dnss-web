@@ -106,19 +106,19 @@ end
 ##############################################################################
 # get default skills
 ##############################################################################
-default_skills = Array.new
-queries = Array.new
-base_query = <<sql_query
-  SELECT _defaultskill%1$d as id
-  FROM default_create
-  INNER JOIN skills s
-    ON s._id = _defaultskill%1$d
-sql_query
-(1..10).each {|i| queries << base_query % i}
-query = queries.join("UNION\n")
-@conn.exec(query).each_dnt do |skill|
-  default_skills << skill['id']
-end
+# default_skills = Array.new
+# queries = Array.new
+# base_query = <<sql_query
+#   SELECT _defaultskill%1$d as id
+#   FROM default_create
+#   INNER JOIN skills s
+#     ON s._id = _defaultskill%1$d
+# sql_query
+# (1..10).each {|i| queries << base_query % i}
+# query = queries.join("UNION\n")
+# @conn.exec(query).each_dnt do |skill|
+#   default_skills << skill['id']
+# end
 
 
 ##############################################################################
@@ -191,8 +191,8 @@ common = {
   'types' => {
     'weapons' => DN_WEAPON_TYPES,
     'skills' => DN_SKILL_TYPES
-  },
-  'default_skills' => default_skills
+  }
+  # 'default_skills' => default_skills
 }
 create_json_file(JSON_DIRECTORY % 'common', JSON.pretty_generate(common))
 create_json_file(MIN_JSON_DIRECTORY % 'common', common.to_json)
