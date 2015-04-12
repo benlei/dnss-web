@@ -15,7 +15,7 @@
 </li></c:forEach>
 </ul>
 </nav>
-<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build" data-base="${path}" /><a href="#" id="bimage" download>DL</a></aside>
+<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build"/><a href="#" id="bimage" download>DL</a></aside>
 <aside id="sidebar-1">
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs}" var="job" varStatus="loop">
 <li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
@@ -30,7 +30,7 @@
 <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
 <tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${skill != 0}">
 <td class="container">
-<div class="skill" data-id="${skill}"<c:if test="${i < fn:length(images)}"> style="background-image:url(/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${images[i]}.png)"</c:if>/>
+<div class="skill" id="skill-${skill}"<c:if test="${i < fn:length(images)}"> style="background-image:url(/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${images[i]}.png)"</c:if>/>
 <div class="lvl"></div><c:set var="i" value="${i + 1}"/></c:when><c:otherwise>
 <td class="container"></c:otherwise></c:choose></c:forEach></c:forEach>
 </table></c:forEach>
@@ -58,6 +58,7 @@
 <script type="text/javascript">
 var version = {json:<fmt:message key="json.version" bundle="${dnss}"/>,skillicon:<fmt:message key="skillicon.version" bundle="${dnss}"/>};
 var dnss = new DNSS({jobs:[<c:forEach items="${jobs}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
+  base:"${path}",
   max:{required_level:[<c:forEach items="${levels}" var="level" varStatus="loop">${level}<c:if test="${!loop.last}">,</c:if></c:forEach>],sp:[<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]},
   build:window.location.search.substr(1)});
 dnss.start();

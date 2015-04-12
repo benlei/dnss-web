@@ -33,7 +33,7 @@ function DNSS(o) {
 
   this.updateBuild = function(position, level) { build[position] = buildMap[level] };
   function commitBuildURL() {
-    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + $("#build").data("base") + "?" + build.join(""));
+    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + o.base + "?" + build.join(""));
   }
 
   this.commitJobSP = function(advancement) {
@@ -56,7 +56,7 @@ function DNSS(o) {
   function addSkills(json) {
     var someSkill;
     $.each(json, function(id, data) {
-      var skill = new Skill(id, data, $(".skill[data-id=" + id + "]"));
+      var skill = new Skill(id, data, $("#skill-" + id));
       var pos = skill.getPosition();
       skills[id] = skill;
       positions[pos] = skill;
