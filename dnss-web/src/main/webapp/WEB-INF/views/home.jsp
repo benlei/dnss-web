@@ -1,5 +1,5 @@
 <!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %><fmt:setBundle basename="dnss" var="dnss"/>
-<html lang="en"><c:set var="i" value="0"/><c:set var="pos" value="0"/><c:set var="final" value="${jobs[fn:length(jobs) - 1]}"/>
+<html lang="en"><c:set var="i" value="0"/><c:set var="final" value="${jobs[fn:length(jobs) - 1]}"/>
 <title>${final.name} - DNSS</title>
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
@@ -15,10 +15,10 @@
 </li></c:forEach>
 </ul>
 </nav>
-<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build" data-base="\${protocol}//\${host}${path}" /><a href="#" id="bimage" download>DL</a></aside>
+<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build" data-base="${path}" /><a href="#" id="bimage" download>DL</a></aside>
 <aside id="sidebar-1">
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs}" var="job" varStatus="loop">
-<li data-job="${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
+<li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
 <li/>
 <li>Total SP<div class="sp"></div></li>
 </ul>
@@ -27,12 +27,12 @@
 </ul>
 </aside>
 <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
-<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}" data-job="${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
+<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
 <tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${skill != 0}">
 <td class="container">
-<div class="skill" data-id="${skill}" data-adv="${jobLoop.index}" data-pos="${pos}"<c:if test="${i < fn:length(images)}"> style="background-image:url(/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${images[i]}.png)"</c:if>/>
+<div class="skill" data-id="${skill}"<c:if test="${i < fn:length(images)}"> style="background-image:url(/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${images[i]}.png)"</c:if>/>
 <div class="lvl"></div><c:set var="i" value="${i + 1}"/></c:when><c:otherwise>
-<td class="container"></c:otherwise></c:choose><c:set var="pos" value="${pos+1}"/></c:forEach></c:forEach>
+<td class="container"></c:otherwise></c:choose></c:forEach></c:forEach>
 </table></c:forEach>
 </section>
 <aside id="sidebar-2">

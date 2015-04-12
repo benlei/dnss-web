@@ -69,9 +69,9 @@ public class JobController {
         model.addAttribute("images", new ArrayList<String>(images));
 
         if (level == levels.size() - 1) {
-            model.addAttribute("path", "/job/" + jobList.getLast().getIdentifier());
+            model.addAttribute("path", jobList.getLast().getIdentifier());
         } else {
-            model.addAttribute("path", "/job/" + jobList.getLast().getIdentifier() + "-" + level);
+            model.addAttribute("path", jobList.getLast().getIdentifier() + "-" + level);
         }
 
         int[] levelList = new int[] {Math.min(levels.size() - 1, level), Math.min(levels.size() - 11, level), Math.min(levels.size() - 1, level)};

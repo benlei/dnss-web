@@ -1,7 +1,9 @@
 function DNSS(o) {
   /* Private Fields */
+  var t = this;
   var build = Array(72 + 1 + 1).join("-").split("");
   var skills = {};
+  var positions = [];
   var common = {};
 
   this.changeLevelCap = function(lvl) {
@@ -29,29 +31,44 @@ function DNSS(o) {
   this.getMaxRequiredLevel = function(adv) { return o.max.required_level[adv] };
   this.getMaxSP = function(adv) { return o.max.sp[adv] };
 
-  this.updateBuild = function(p, l) { build[p] = buildMap[l] };
-  this.setBuild = function(a) {
-    var e = $("#job-sp li[data-job="+a+"] .sp");
-    var curr_sp = parseInt(e.html().split("/")[0]);
-    for (var i = 0; i < )
+  this.updateBuild = function(position, level) { build[position] = buildMap[level] };
+  function commitBuildURL() {
+    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + $("#build").data("base") + "?" + build.join(""));
+  }
 
+  this.commitJobSP = function(advancement) {
+    var curr_sp = $("#job-sp-"+advancement+" .sp").html().split("/")[0] || 0;
+    var total_sp = $("#job-sp li:last .sp").html().split("/")[0] || 0;
+    var sum = 0, new_total;
+    for (var i = 24*advancement; i < 24*(advancement+1); i++) {
+      if (positions[i]) {
+        sum += positions[i].getTotalSPUsage();
+      }
+    }
+
+    new_total = total_sp - curr_sp + sum;
+    $("#job-sp-"+advancement+" .sp").html(sum + "/" + o.max.sp[advancement]);
+    $("#job-sp li:last .sp").html(new_total + "/" + o.max.sp[o.max.sp.length - 1]);
+
+    commitBuildURL();
   };
 
   function addSkills(json) {
     var someSkill;
     $.each(json, function(id, data) {
       var skill = new Skill(id, data, $(".skill[data-id=" + id + "]"));
+      var pos = skill.getPosition();
       skills[id] = skill;
-      skill.setLevel(iBuildMap[build[skill.getPosition()]]);
-      skill.set();
+      positions[pos] = skill;
+      skill.setLevel(iBuildMap[build[pos]]);
+      skill.commit();
       someSkill = skill;
     });
-
-
+    t.commitJobSP(someSkill.getAdvancement());
   }
 
 
-
+  // constructor stuff
   if (o.build.length > 32) {
     var b = o.build.match(/^[0-9a-zA-Z-]+/g);
     if (b) {

@@ -1,6 +1,8 @@
 function Skill(id, s, e) {
   var t = this;
   var level = 0;
+  var pos = -1;
+  var advancement = -1;
 
   this.setLevel = function(lvl) {
     level = lvl;
@@ -14,7 +16,7 @@ function Skill(id, s, e) {
     if (s.levels[0].totalspcost === undefined) {
       s.levels[0].totalspcost = s.levels[0].spcost;
       for (var i = 1; i < s.levels.length; i++) {
-        s.levels[i].totalspcost = s.levels[i - 1].totalspcost;
+        s.levels[i].totalspcost = s.levels[i - 1].totalspcost + s.levels[i].spcost;
       }
     }
 
@@ -27,7 +29,10 @@ function Skill(id, s, e) {
 
 
   this.getPosition = function() {
-    return e.data("pos");
+    if (pos == -1) {
+      pos = $(".container").index(e.parent());
+    }
+    return pos;
   };
 
   this.getMaxLevel = function() {
@@ -43,10 +48,13 @@ function Skill(id, s, e) {
   };
 
   this.getAdvancement = function() {
-    return e.data("adv")
+    if (advancement == -1) {
+      advancement = parseInt(e.parentsUntil("table").parent().attr("id").substr(-1));
+    }
+    return advancement;
   };
 
-  this.set = function() {
+  this.commit = function() {
     if (e.css("background-image").indexOf(getSpriteURL()) == -1) {
       e.css("background-image", "url("+getSpriteURL()+")");
     }
@@ -73,5 +81,5 @@ function Skill(id, s, e) {
   /* List of getters for navigating levels */
 
   // things to do at end
-  e.css("background-position", getSpriteXY());6
+  e.css("background-position", getSpriteXY());
 }
