@@ -101,7 +101,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
         xml.property('name' => 'advancement', 'value' => job['advancement'])
         xml.property('name' => 'parent', 'ref' => 'job_%s' % jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
         xml.property('name' => 'spRatio') {xml.list {job['spRatio'].each {|spRatio| xml.value_ spRatio}}}
-        xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill}}}}}
+        xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill.to_i}}}}}
         xml.property('name' => 'images') {xml.list {job['images'].each {|image| xml.value_ image}}}
       end
     end

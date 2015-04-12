@@ -332,6 +332,12 @@
           <value>5017</value>
           <value>5018</value>
         </list>
+        <list>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+        </list>
       </list>
     </property>
     <property name="images">
@@ -383,6 +389,12 @@
           <value>6017</value>
           <value>6018</value>
           <value>6020</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
         </list>
       </list>
     </property>
@@ -2234,6 +2246,12 @@
           <value>5209</value>
           <value>0</value>
           <value>5220</value>
+        </list>
+        <list>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
+          <value>0</value>
         </list>
       </list>
     </property>
