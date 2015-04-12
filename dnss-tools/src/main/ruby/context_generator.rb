@@ -93,14 +93,15 @@ beans = {'xmlns' => 'http://www.springframework.org/schema/beans',
 builder = Nokogiri::XML::Builder.new do |xml|
   xml.beans(beans) do
     jobs.each_value do |job|
-      job['skilltree'] = job['skilltree'].partition(4)
+      job['skilltree'] = job['skilltree'].skilltree_partition()
+
       xml.bean('id' => 'job_%s' % job['identifier'], 'class' => 'dnss.model.Job') do
         xml.property('name' => 'name', 'value' => job['jobname'])
         xml.property('name' => 'identifier', 'value' => job['identifier'])
         xml.property('name' => 'advancement', 'value' => job['advancement'])
         xml.property('name' => 'parent', 'ref' => 'job_%s' % jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
         xml.property('name' => 'spRatio') {xml.list {job['spRatio'].each {|spRatio| xml.value_ spRatio}}}
-        xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill.to_i}}}}}
+        xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill}}}}}
         xml.property('name' => 'images') {xml.list {job['images'].each {|image| xml.value_ image}}}
       end
     end

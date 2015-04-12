@@ -40,9 +40,10 @@ class PG::Result
 end
 
 class Array
-  def partition(groups)
-    slices = self.each_slice(groups).to_a
-    (1..(groups - slices.last.length)).each {|s| slices.last << nil}
+  def skilltree_partition()
+    slices = self.each_slice(4).to_a
+    (1..(4 - slices.last.length)).each {slices.last << 0}
+    (slices.length..6-1).each { slices << [0,0,0,0] }
     slices
   end
 end
