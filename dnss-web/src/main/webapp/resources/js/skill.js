@@ -3,14 +3,17 @@ function Skill(id, s, e) {
   var level = 0;
   var pos = -1;
   var advancement = -1;
+  var def = s.levels[0].required_level == 1 ? 1 : 0;
+  var init = false;
 
   this.setLevel = function(lvl) {
     level = lvl;
   };
 
   this.getLevel = function() {
-    return level+isDefault()
+    return def && !level ? 1 : level;
   };
+
 
   this.getTotalSPUsage = function() {
     if (s.levels[0].totalspcost === undefined) {
@@ -20,11 +23,7 @@ function Skill(id, s, e) {
       }
     }
 
-    if (this.getLevel()) {
-      return s.levels[this.getLevel() - 1].totalspcost;
-    } else {
-      return 0;
-    }
+    return level ? s.levels[level-1].totalspcost : 0;
   };
 
 
@@ -35,17 +34,25 @@ function Skill(id, s, e) {
     return pos;
   };
 
-  this.getMaxLevel = function() {
+  function getMaxLevel() {
     for (var i = s.levels.length - 1; -1 < i; i--) {
-      if (s.levels[i].required_level <= dnss.getMaxRequiredLevel(this.getAdvancement())) {
+      if (s.levels[i].required_level <= dnss.getMaxRequiredLevel(t.getAdvancement())) {
         return i+1;
       }
     }
-  };
+  }
 
-  this.getMinLevel = function() {
-    return isDefault();
-  };
+  function getNextLevel() {
+    return level < s.levels.length ? level + 1 : -1;
+  }
+
+  function getMinLevel () {
+    return def;
+  }
+
+  function getPrevLevel() {
+    return getMinLevel() < t.getLevel() ? level - 1 : -1;
+  }
 
   this.getAdvancement = function() {
     if (advancement == -1) {
@@ -59,7 +66,14 @@ function Skill(id, s, e) {
       e.css("background-image", "url("+getSpriteURL()+")");
     }
 
-    e.find(".lvl").html(this.getLevel() + "/" + this.getMaxLevel());
+    e.find(".lvl").html(this.getLevel() + "/" + getMaxLevel());
+
+    if (init) {
+      // update requirements
+      // update descriptions
+    }
+
+    init = true;
   };
 
   function getSpriteURL() {
@@ -72,14 +86,38 @@ function Skill(id, s, e) {
     return x+"px "+y+"px";
   }
 
-  function isDefault() {
-    return s.levels[0].required_level == 1;
-  }
-
   /* List of getters for current + next description */
 
   /* List of getters for navigating levels */
 
-  // things to do at end
+  // Set the background position
   e.css("background-position", getSpriteXY());
+
+  // bind click events
+  e.bind({
+    mousedown: function(b) {
+      var extreme = b.shiftKey || b.ctrlKey;
+      var curr = t.getLevel();
+      if (b.button == 0) { // left click
+        if (extreme && curr < getMaxLevel()) {
+          t.setLevel(getMaxLevel());
+        } else if (getNextLevel() != -1) {
+          t.setLevel(getNextLevel());
+        }
+      } else if(b.button == 2) { // right click
+        if (extreme && curr != getMinLevel()) {
+            t.setLevel(getMinLevel());
+        } else if (getPrevLevel() != -1) {
+            t.setLevel(getPrevLevel());
+        }
+      }
+
+      curr != t.getLevel() && t.commit();
+    },
+
+    mouseenter: function() {
+      //description.use($(this).data('skill'));
+    }
+  });
+
 }

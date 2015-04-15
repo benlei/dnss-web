@@ -23,6 +23,17 @@ function DNSS(o) {
         $.each(json, function(j, message) { messages.put(j, message); });
       });
     }
+
+    // attach events to #job-sp
+    $("#job-sp li[id]").each(function() {
+      var advancement = $(this).attr("id").substr(-1);
+      $(this).click(function() {
+        $("#job-sp .active").removeClass("active");
+        $(this).addClass("active");
+        $(".skill-tree:visible").hide();
+        $("#skill-tree-"+advancement).show();
+      });
+    });
   };
 
   this.getSkillType = function(id) { return common.types.skills[id]; };
@@ -79,4 +90,7 @@ function DNSS(o) {
       }
     }
   }
+
+  // disable context menu
+  $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
 }
