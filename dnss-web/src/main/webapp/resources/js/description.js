@@ -41,5 +41,3 @@ function Description() {
 
   // bind to relevent elements
 }
-
-var description = new Description();

@@ -17,5 +17,3 @@ function Messages() {
     return message;
   };
 }
-
-var messages = new Messages();

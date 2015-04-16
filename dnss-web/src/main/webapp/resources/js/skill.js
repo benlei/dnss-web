@@ -18,8 +18,13 @@ function Skill(id, s, e) {
   this.getTotalSPUsage = function() {
     if (s.levels[0].totalspcost === undefined) {
       s.levels[0].totalspcost = s.levels[0].spcost;
+      var total = s.levels[0].spcost;
       for (var i = 1; i < s.levels.length; i++) {
-        s.levels[i].totalspcost = s.levels[i - 1].totalspcost + s.levels[i].spcost;
+        if (i < getMaxLevel()) {
+          total = total + s.levels[i].spcost;
+        }
+
+        s.levels[i].totalspcost = total;
       }
     }
 
@@ -36,14 +41,14 @@ function Skill(id, s, e) {
 
   function getMaxLevel() {
     for (var i = s.levels.length - 1; -1 < i; i--) {
-      if (s.levels[i].required_level <= dnss.getMaxRequiredLevel(t.getAdvancement())) {
+      if (s.levels[i].required_level <= properties.max.required_level[t.getAdvancement()]) {
         return i+1;
       }
     }
   }
 
   function getNextLevel() {
-    return level < s.levels.length ? level + 1 : -1;
+    return t.getLevel() < s.levels.length ? t.getLevel() + 1 : -1;
   }
 
   function getMinLevel () {
@@ -68,16 +73,18 @@ function Skill(id, s, e) {
 
     e.find(".lvl").html(this.getLevel() + "/" + getMaxLevel());
 
+    build.put(this.getPosition(), this.getLevel() == 1 && def ? 0 : this.getLevel());
     if (init) {
       // update requirements
       // update descriptions
+      dnss.commit(t.getAdvancement());
     }
 
     init = true;
   };
 
   function getSpriteURL() {
-    return "/skillicons/" + version.skillicon + "_skillicon" + s.image + (t.getLevel() ? "" : "_b") + ".png"
+    return "/skillicons/" + properties.version.skillicon + "_skillicon" + s.image + (t.getLevel() ? "" : "_b") + ".png"
   }
 
   function getSpriteXY() {

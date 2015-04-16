@@ -1,7 +1,6 @@
-function DNSS(o) {
+function DNSS() {
   /* Private Fields */
   var t = this;
-  var build = Array(72 + 1 + 1).join("-").split("");
   var skills = {};
   var positions = [];
   var common = {};
@@ -11,20 +10,9 @@ function DNSS(o) {
   };
 
   /* starts the idempotent JSON stuff */
-  this.start = function() {
-    for (var i = 0; i < o.jobs.length; i++) {
-      $.getJSON("/json/" + version.json + "-" + o.jobs[i].id + "-skills.json", addSkills);
-    }
-
-    $.getJSON("/json/" + version.json + "-common.json", function(json) { common = json; });
-
-    for (var i = 0; i < o.jobs.length; i++) {
-      $.getJSON("/json/" + version.json + "-" + o.jobs[i].id + "-messages.json", function(json) {
-        $.each(json, function(j, message) { messages.put(j, message); });
-      });
-    }
-
-    // attach events to #job-sp
+  function start() {
+    // event binding
+    $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
     $("#job-sp li[id]").each(function() {
       var advancement = $(this).attr("id").substr(-1);
       $(this).click(function() {
@@ -34,20 +22,22 @@ function DNSS(o) {
         $("#skill-tree-"+advancement).show();
       });
     });
+
+    for (var i = 0; i < properties.jobs.length; i++) {
+      $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-skills.json", addSkills);
+    }
+
+    for (var i = 0; i < properties.jobs.length; i++) {
+      $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-messages.json", function(json) {
+        $.each(json, function(j, message) { messages.put(j, message); });
+      });
+    }
   };
 
   this.getSkillType = function(id) { return common.types.skills[id]; };
   this.getWeaponType = function(id) { return common.types.weapons[id]; };
 
-  this.getMaxRequiredLevel = function(adv) { return o.max.required_level[adv] };
-  this.getMaxSP = function(adv) { return o.max.sp[adv] };
-
-  this.updateBuild = function(position, level) { build[position] = buildMap[level] };
-  function commitBuildURL() {
-    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + o.base + "?" + build.join(""));
-  }
-
-  this.commitJobSP = function(advancement) {
+  this.commit = function(advancement) {
     var curr_sp = $("#job-sp-"+advancement+" .sp").html().split("/")[0] || 0;
     var total_sp = $("#job-sp li:last .sp").html().split("/")[0] || 0;
     var sum = 0, new_total;
@@ -58,10 +48,10 @@ function DNSS(o) {
     }
 
     new_total = total_sp - curr_sp + sum;
-    $("#job-sp-"+advancement+" .sp").html(sum + "/" + o.max.sp[advancement]);
-    $("#job-sp li:last .sp").html(new_total + "/" + o.max.sp[o.max.sp.length - 1]);
+    $("#job-sp-"+advancement+" .sp").html(sum + "/" + properties.max.sp[advancement]);
+    $("#job-sp li:last .sp").html(new_total + "/" + properties.max.sp[properties.max.sp.length - 1]);
 
-    commitBuildURL();
+    build.notify();
   };
 
   function addSkills(json) {
@@ -71,26 +61,12 @@ function DNSS(o) {
       var pos = skill.getPosition();
       skills[id] = skill;
       positions[pos] = skill;
-      skill.setLevel(iBuildMap[build[pos]]);
+      skill.setLevel(iBuildMap[build.get(pos)]);
       skill.commit();
       someSkill = skill;
     });
-    t.commitJobSP(someSkill.getAdvancement());
+    t.commit(someSkill.getAdvancement());
   }
 
-
-  // constructor stuff
-  if (o.build.length > 32) {
-    var b = o.build.match(/^[0-9a-zA-Z-]+/g);
-    if (b) {
-      b = b.shift().split("");
-      build[build.length - 1] = b[b.length - 1];
-      for (var i = 0; i < b.length - 1; i++) {
-        build[i] = b[i];
-      }
-    }
-  }
-
-  // disable context menu
-  $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
+  start();
 }
