@@ -4,7 +4,7 @@ function Skill(id, s, e) {
   var pos = -1;
   var advancement = -1;
   var def = s.levels[0].required_level == 1 ? 1 : 0;
-  var init = false;
+  var started = false;
 
   this.setLevel = function(lvl) {
     level = lvl;
@@ -14,13 +14,12 @@ function Skill(id, s, e) {
     return def && !level ? 1 : level;
   };
 
-
   this.getTotalSPUsage = function() {
     if (s.levels[0].totalspcost === undefined) {
       s.levels[0].totalspcost = s.levels[0].spcost;
       var total = s.levels[0].spcost;
       for (var i = 1; i < s.levels.length; i++) {
-        if (i < getMaxLevel()) {
+        if (i < this.getMaxLevel()) {
           total = total + s.levels[i].spcost;
         }
 
@@ -28,7 +27,7 @@ function Skill(id, s, e) {
       }
     }
 
-    return level ? s.levels[level-1].totalspcost : 0;
+    return this.getLevel() ? s.levels[this.getLevel()-1].totalspcost : 0;
   };
 
 
@@ -39,25 +38,30 @@ function Skill(id, s, e) {
     return pos;
   };
 
-  function getMaxLevel() {
-    for (var i = s.levels.length - 1; -1 < i; i--) {
-      if (s.levels[i].required_level <= properties.max.required_level[t.getAdvancement()]) {
-        return i+1;
+  this.getMaxLevel = function() {
+    if (s.max_level === undefined) {
+      for (var i = s.levels.length - 1; -1 < i; i--) {
+        if (s.levels[i].required_level <= properties.max.required_level[this.getAdvancement()]) {
+          s.max_level = i+1;
+          break;
+        }
       }
     }
-  }
 
-  function getNextLevel() {
-    return t.getLevel() < s.levels.length ? t.getLevel() + 1 : -1;
-  }
+    return s.max_level;
+  };
 
-  function getMinLevel () {
+  this.getNextLevel = function() {
+    return this.getLevel() < s.levels.length ? this.getLevel() + 1 : -1;
+  };
+
+  this.getMinLevel = function() {
     return def;
-  }
+  };
 
-  function getPrevLevel() {
-    return getMinLevel() < t.getLevel() ? level - 1 : -1;
-  }
+  this.getPrevLevel = function() {
+    return this.getMinLevel() < this.getLevel() ? level - 1 : -1;
+  };
 
   this.getAdvancement = function() {
     if (advancement == -1) {
@@ -71,16 +75,17 @@ function Skill(id, s, e) {
       e.css("background-image", "url("+getSpriteURL()+")");
     }
 
-    e.find(".lvl").html(this.getLevel() + "/" + getMaxLevel());
+    e.find(".lvl").html(this.getLevel() + "/" + this.getMaxLevel());
 
     build.put(this.getPosition(), this.getLevel() == 1 && def ? 0 : this.getLevel());
-    if (init) {
+    if (started) {
       // update requirements
       // update descriptions
       dnss.commit(t.getAdvancement());
+      description.update();
     }
 
-    init = true;
+    started = true;
   };
 
   function getSpriteURL() {
@@ -93,9 +98,67 @@ function Skill(id, s, e) {
     return x+"px "+y+"px";
   }
 
-  /* List of getters for current + next description */
 
-  /* List of getters for navigating levels */
+  // things for skill descriptions
+  this.getName = function() {
+    return messages.get(s.nameid);
+  };
+
+  this.getNextSPUsage = function() {
+    return this.getLevel() < this.getMaxLevel() ? s.levels[this.getLevel()].spcost : 0;
+  };
+
+  this.getMPUsage = function(mode) {
+    return this.getLevel() ? s.levels[this.getLevel()-1].mpcost[mode] : -1;
+  };
+
+  this.getNextMPUsage = function(mode) {
+    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].mpcost[mode] : -1;
+  };
+
+  this.getCD = function(mode) {
+    return this.getLevel() ? s.levels[this.getLevel()-1].cd[mode] : -1;
+  };
+
+  this.getNextCD = function(mode) {
+    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].cd[mode] : -1;
+  };
+
+  this.getRequiredLevel = function() {
+    return this.getLevel() ? s.levels[this.getLevel()-1].required_level : -1;
+  };
+
+  this.getNextRequiredLevel =  function() {
+    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].required_level : -1;
+  };
+
+  this.getRequiredWeapons = function() {
+    if (!s.needweapon.length) {
+      return "Any";
+    }
+
+    weapons = [];
+    for (var i = 0; i < s.needweapon.length; i++) {
+      weapons[i] = dnss.getWeaponType(s.needweapon[i]);
+    }
+
+    return weapons.join(", ");
+  };
+
+  this.getType = function() {
+    return dnss.getSkillType(s.type);
+  };
+
+  this.getDescription = function(mode) {
+    return this.getLevel() ? messages.get(s.levels[this.getLevel()-1].explanationid[mode],
+      s.levels[this.getLevel()-1].explanationparams[mode]) : -1;
+  };
+
+  this.getNextDescription = function(mode) {
+    return this.getLevel() < s.levels.length ? messages.get(s.levels[this.getLevel()].explanationid[mode],
+      s.levels[this.getLevel()].explanationparams[mode]) : -1;
+  };
+
 
   // Set the background position
   e.css("background-position", getSpriteXY());
@@ -106,16 +169,16 @@ function Skill(id, s, e) {
       var extreme = b.shiftKey || b.ctrlKey;
       var curr = t.getLevel();
       if (b.button == 0) { // left click
-        if (extreme && curr < getMaxLevel()) {
-          t.setLevel(getMaxLevel());
-        } else if (getNextLevel() != -1) {
-          t.setLevel(getNextLevel());
+        if (extreme && curr < t.getMaxLevel()) {
+          t.setLevel(t.getMaxLevel());
+        } else if (t.getNextLevel() != -1) {
+          t.setLevel(t.getNextLevel());
         }
       } else if(b.button == 2) { // right click
-        if (extreme && curr != getMinLevel()) {
-            t.setLevel(getMinLevel());
-        } else if (getPrevLevel() != -1) {
-            t.setLevel(getPrevLevel());
+        if (extreme && curr != t.getMinLevel()) {
+            t.setLevel(t.getMinLevel());
+        } else if (t.getPrevLevel() != -1) {
+            t.setLevel(t.getPrevLevel());
         }
       }
 
@@ -123,8 +186,7 @@ function Skill(id, s, e) {
     },
 
     mouseenter: function() {
-      //description.use($(this).data('skill'));
+      description.use(t);
     }
   });
-
 }

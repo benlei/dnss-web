@@ -47,8 +47,8 @@
 <li id="skill-required-level"><span class="y">Level Limit: </span><span class="w"></span></li>
 <li id="skill-required-weapon"><span class="y">Required Weapon(s): </span><span class="w"></span></li>
 <li id="skill-type"><span class="y">Skill Type: </span><span class="w"></span></li>
-<li id="skill-description"><span class="y">Skill Description:</span><div class="description"></div></li>
-<li id="next-description"><span class="y">Next Description:</span><div class="description"></div></li>
+<li id="skill-description"><span class="y">Skill Description:</span><div class="d"></div></li>
+<li id="next-description"><span class="y">Next Description:</span><div class="d"></div></li>
 </ul>
 </div>
 </aside>
@@ -60,7 +60,7 @@ var properties = {jobs:[<c:forEach items="${jobs}" var="job" varStatus="loop">{i
   max:{required_level:[<c:forEach items="${levels}" var="level" varStatus="loop">${level}<c:if test="${!loop.last}">,</c:if></c:forEach>],sp:[<c:forEach items="${jobs}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]},
   version:{json:<fmt:message key="json.version" bundle="${dnss}"/>,skillicon:<fmt:message key="skillicon.version" bundle="${dnss}"/>},
   base: "${path}"};
-var build = new Build(), messages = new Messages(), warnings = new Warnings(), description = new Description(), dnss = new DNSS();
+dnss.start();
 </script>
 </body>
 </html>

@@ -1,3 +1,3 @@
-function Warnings() {
+var warnings = new (function Warnings() {
 
-}
+})();

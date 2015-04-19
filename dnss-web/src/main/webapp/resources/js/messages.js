@@ -1,4 +1,4 @@
-function Messages() {
+var messages = new (function Messages() {
   var dict = {};
 
   this.put = function(id, message) { dict[id] = message; };
@@ -16,4 +16,4 @@ function Messages() {
 
     return message;
   };
-}
+})();

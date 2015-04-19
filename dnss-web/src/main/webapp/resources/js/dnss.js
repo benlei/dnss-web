@@ -1,35 +1,48 @@
-function DNSS() {
+var dnss = new (function DNSS() {
   /* Private Fields */
   var t = this;
   var skills = {};
   var positions = [];
   var common = {};
+  var started = false;
+  var loaded = 0;
 
   this.changeLevelCap = function(lvl) {
     // can be but will not be updated
   };
 
-  /* starts the idempotent JSON stuff */
-  function start() {
+  this.start = function() {
+    if (started) { return; }
+    started = true;
+
+    window.location.search.substr(1).length > 48 && build.use(window.location.search.substr(1));
+
     // event binding
     $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
     $("#job-sp li[id]").each(function() {
       var advancement = $(this).attr("id").substr(-1);
       $(this).click(function() {
-        $("#job-sp .active").removeClass("active");
+        $("#job-sp li").removeClass("active");
         $(this).addClass("active");
-        $(".skill-tree:visible").hide();
+        $(".skill-tree").hide();
         $("#skill-tree-"+advancement).show();
       });
     });
 
+    // obtain json
     for (var i = 0; i < properties.jobs.length; i++) {
       $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-skills.json", addSkills);
     }
 
+    $.getJSON("/json/" + properties.version.json + "-common.json", function(json) {
+      common = json;
+    });
+
     for (var i = 0; i < properties.jobs.length; i++) {
       $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-messages.json", function(json) {
-        $.each(json, function(j, message) { messages.put(j, message); });
+        for (var j in json) {
+          messages.put(j, json[j]);
+        }
       });
     }
   };
@@ -49,7 +62,18 @@ function DNSS() {
 
     new_total = total_sp - curr_sp + sum;
     $("#job-sp-"+advancement+" .sp").html(sum + "/" + properties.max.sp[advancement]);
+    if (sum > properties.max.sp[advancement]) {
+      $("#job-sp-"+advancement+" .sp").addClass("r");
+    } else {
+      $("#job-sp-"+advancement+" .sp").removeClass("r");
+    }
+
     $("#job-sp li:last .sp").html(new_total + "/" + properties.max.sp[properties.max.sp.length - 1]);
+    if (new_total > properties.max.sp[properties.max.sp.length - 1]) {
+      $("#job-sp li:last .sp").addClass("r");
+    } else {
+      $("#job-sp li:last .sp").removeClass("r");
+    }
 
     build.notify();
   };
@@ -61,12 +85,10 @@ function DNSS() {
       var pos = skill.getPosition();
       skills[id] = skill;
       positions[pos] = skill;
-      skill.setLevel(iBuildMap[build.get(pos)]);
+      skill.setLevel(build.get(pos));
       skill.commit();
       someSkill = skill;
     });
     t.commit(someSkill.getAdvancement());
   }
-
-  start();
-}
+})();
