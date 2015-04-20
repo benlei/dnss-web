@@ -47,6 +47,11 @@ li.secondary {
   width: 150px;
 }
 
+li.tertiary:hover {
+  background: #444;
+}
+
 .tertiary a {
   color: #fff;
+  display: block;
 }
