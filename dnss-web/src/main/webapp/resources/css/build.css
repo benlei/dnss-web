@@ -1,9 +1,9 @@
 #build-box {
-  width: 970px;
+  width: 950px;
   border: 1px solid #000;
   border-radius: 5px;
   clear: both;
-  margin: 10px 0;
+  margin: 10px 0 10px 10px;
   font-size: .8em;
 }
 
@@ -27,7 +27,7 @@
 }
 
 #build {
-  width: 797px;
+  width: 777px;
 }
 
 #bimage {
