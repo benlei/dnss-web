@@ -78,7 +78,7 @@ function Skill(id, s, e) {
 
     e.find(".lvl").html(this.getLevel() + "/" + this.getMaxLevel());
 
-    build.put(this.getPosition(), this.getLevel() == 1 && def ? 0 : this.getLevel());
+    build.put(this.getPosition(), this.getLevel() - def);
     if (started) {
       dnss.commit(t.getAdvancement());
       description.update();
