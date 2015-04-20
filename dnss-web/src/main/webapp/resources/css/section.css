@@ -27,6 +27,10 @@
   float: right;
 }
 
+.lvl.warn {
+  background-color: #ff0000;
+}
+
 .skill-tree {
   display: none;
 }

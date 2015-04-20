@@ -22,9 +22,6 @@
 <li/>
 <li>Total SP<div class="sp"></div></li>
 </ul>
-<ul id="warnings">
-<li>Warnings</li>
-</ul>
 </aside>
 <section><c:forEach items="${jobs}" var="job" varStatus="jobLoop">
 <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
