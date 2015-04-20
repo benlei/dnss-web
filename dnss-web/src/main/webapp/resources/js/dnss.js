@@ -115,7 +115,7 @@ var dnss = new (function DNSS() {
       var pos = skill.getPosition();
       skills[id] = skill;
       positions[pos] = skill;
-      skill.setLevel(build.get(pos));
+      skill.setLevel(build.get(pos)+skill.getMinLevel());
       skill.commit();
 
       // add lingering hooks
