@@ -16,14 +16,15 @@
 
 .lvl {
   font-size: .6em;
-  border: 1px solid #787878;
-  padding: 2px 4px;
-  background: #787878;
+  border: 1px solid rgb(70,70,70);
+  background: rgb(70,70,70);
+  font-weight: bold;
+  padding: 2px 4px 2px 5px;
   border-radius: 10px;
   color: #fff;
   text-align: center;
   letter-spacing: 1px;
-  margin-top: 38px;
+  margin-top: 40px;
   float: right;
 }
 
