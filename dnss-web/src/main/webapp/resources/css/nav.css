@@ -41,6 +41,10 @@ nav ul ul {
   background-color: #222;
 }
 
+.primary li:first-of-type {
+  margin-top: 5px;
+}
+
 li.secondary {
   color: #fff;
   background-color: rgb(55, 105, 160);
