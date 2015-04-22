@@ -5,7 +5,6 @@ function Skill(id, s, e) {
   var advancement = -1;
   var def = s.levels[0].required_level == 1 ? 1 : 0;
   var started = false;
-  var hooks = [];
 
   this.setLevel = function(lvl) {
     level = lvl;
@@ -84,39 +83,9 @@ function Skill(id, s, e) {
       description.update();
     }
 
-
-    for (var i = 0; i < hooks.length; i++) {
-      hooks[i].notifySkill(t);
-    }
-
     started = true;
   };
 
-  // this skill is being notified
-  this.notifySP = function(adv, sp) {
-  };
-
-  this.isSPRequired = function() {
-
-  };
-
-  this.getRequiredSPs = function() {
-  };
-
-  // this skill is being notified from input skill
-  this.notifySkill = function(skill) {
-
-  };
-
-  this.isSkillRequired = function() {
-  };
-
-  this.getRequiredSkills = function() {
-  };
-
-  this.addHook = function(skill) {
-    hooks.push(skill);
-  };
 
   function getSpriteURL() {
     return "/skillicons/" + properties.version.skillicon + "_skillicon" + s.image + (t.getLevel() ? "" : "_b") + ".png"
@@ -220,16 +189,14 @@ function Skill(id, s, e) {
     }
   });
 
-  for (var i = 0; i < s.need_sp.length; i++) {
-    if (s.need_sp[i] > 0) {
-      dnss.addSPHook(i, id);
-    }
-
-    // reformatting the array
-    s.need_sp[i] = {req:s.need_sp[i]};
-  }
-
-  for (var i = 0; i < s.requires.length; i++) {
-    dnss.addSkillHook();
-  }
+//  for (var i = 0; i < s.need_sp.length; i++) {
+//    if (s.need_sp[i] > 0) {
+//      dnss.addSPHook(i, id);
+//    }
+//
+//  }
+//
+//  for (var i = 0; i < s.requires.length; i++) {
+//    dnss.addSkillHook(id, s.requires[i].id);
+//  }
 }

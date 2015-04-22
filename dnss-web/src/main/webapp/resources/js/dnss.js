@@ -6,8 +6,6 @@ var dnss = new (function DNSS() {
   var common = {};
   var started = false;
   var loaded = 0;
-  var spHooks = [];
-  var skillHooks = {};
 
   this.changeLevelCap = function(lvl) {
     // can be but will not be updated
@@ -33,7 +31,6 @@ var dnss = new (function DNSS() {
 
     // obtain json
     for (var i = 0; i < properties.jobs.length; i++) {
-      spHooks[i] = [];
       $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-skills.json", addSkills);
     }
 
@@ -83,29 +80,11 @@ var dnss = new (function DNSS() {
       $("#job-sp li:last .sp").removeClass("r");
     }
 
-    build.notify();
-
-    for (var i = 0; i < spHooks[advancement].length; i++) {
-      skills[spHooks[advancement][i]].notifySP(advancement, sum);
-    }
+    build.commit();
   };
 
-
-  this.addSPHook = function(adv, skillId) {
-    spHooks[adv].push(skillId);
-  };
-
-  this.addSkillHook = function(id, req) {
-    if (skills[req]) {
-      skills[req].addHook(skills[id]);
-      return;
-    }
-
-    if (!skillHooks[req]) {
-      skillHooks[req] = [];
-    }
-
-    skillHooks[req].push(id);
+  this.getSkill = function(id) {
+    return skills[id];
   };
 
   function addSkills(json) {
@@ -117,14 +96,6 @@ var dnss = new (function DNSS() {
       positions[pos] = skill;
       skill.setLevel(build.get(pos)+skill.getMinLevel());
       skill.commit();
-
-      // add lingering hooks
-      if (skillHooks[id]) {
-        while (skillHooks[id].length) {
-          skill.addHook(skills[skillHooks[id].shift()]);
-        }
-      }
-
       someSkill = skill;
     });
     t.commit(someSkill.getAdvancement());

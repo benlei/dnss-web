@@ -24,7 +24,7 @@ var build = new (function Build() {
     t.put(position, imap[i]);
   }
 
-  this.notify = function() {
+  this.commit = function() {
     $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + properties.base + "?" + r.join(""));
   };
 

@@ -6,14 +6,14 @@
 }
 
 #job-sp li {
-  background-color: #000;
-  color: #fff;
+  background-color: rgb(240,240,240);
+  color: #333;
   padding: 8px 14px;
   border-bottom: 1px solid #fff;
 }
 
 #job-sp .active {
-  background-color: rgb(55, 105, 160);
+  background-color: rgb(225,225,225);
 }
 
 #job-sp .sp {

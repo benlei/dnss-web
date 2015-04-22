@@ -1,3 +1,9 @@
+h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
 #sidebar-2 {
   width: 350px;
   float: left;

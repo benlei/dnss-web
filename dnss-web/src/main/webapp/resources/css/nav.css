@@ -1,20 +1,14 @@
 nav {
   height: 40px;
-  width: 970px;
-  text-align: center;
-}
-
-nav ul ul {
-  display: none;
-}
-
-nav ul li:hover > ul {
-  display: block;
+  font-size: .8em;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-right: 20px;
 }
 
 nav ul {
   position: relative;
-
+  float: left;
 }
 
 nav ul:after {
@@ -24,38 +18,43 @@ nav ul:after {
 }
 
 nav ul ul {
+  display: none;
   position: absolute;
 }
 
+nav ul li:hover > ul {
+  display: block;
+}
+
 .primary {
-  display: inline-table;
-  padding: 5px 15px;
-  background-color: #000;
-  color: #fff;
+  float: left;
+  padding: 8px 20px;
+  background-color: rgb(240,240,240);
+  color: #333;
+  margin-right: 1px;
 }
 
 .primary li {
   padding: 5px 15px;
-  margin-left: -15px;
-  text-align: left;
-  background-color: #222;
+  margin-left: -20px;
+  background-color: rgb(235,235,235);
 }
 
 .primary li:first-of-type {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 li.secondary {
-  color: #fff;
-  background-color: rgb(55, 105, 160);
+  color: #666;
+  background-color:rgb(225,225,225);
   width: 150px;
 }
 
 li.tertiary:hover {
-  background: #444;
+  background: rgb(245,245,245);
 }
 
 .tertiary a {
-  color: #fff;
+  color: #333;
   display: block;
 }

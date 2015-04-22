@@ -15,7 +15,7 @@
 </li></c:forEach>
 </ul>
 </nav>
-<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build"/><a href="#" id="bimage" download>DL</a></aside>
+<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build"/></aside>
 <aside id="sidebar-1">
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs}" var="job" varStatus="loop">
 <li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
