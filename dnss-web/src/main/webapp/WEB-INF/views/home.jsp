@@ -41,9 +41,11 @@
 <li id="skill-total-sp"><span class="y">Total SP Consumed: </span><span class="w"></span></li>
 <li id="skill-mp"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
 <li id="skill-cd"><span class="y">Cooldown: </span><span class="w"></span> sec</li>
-<li id="skill-required-level"><span class="y">Level Limit: </span><span class="w"></span></li>
-<li id="skill-required-weapon"><span class="y">Required Weapon(s): </span><span class="w"></span></li>
 <li id="skill-type"><span class="y">Skill Type: </span><span class="w"></span></li>
+<li id="skill-required-weapon"><span class="y">Required Weapon(s): </span><span class="w"></span></li>
+<li id="skill-required-level"><span class="y">Level Limit: </span><span class="w"></span></li>
+<li id="sp-required"><span class="y">SP Required: </span><span class="w"></span></li>
+<li id="skills-required"><span class="y">Required Skills: </span><span class="w"></span></li>
 <li id="skill-description"><span class="y">Skill Description:</span><div class="d"></div></li>
 <li id="next-description"><span class="y">Next Description:</span><div class="d"></div></li>
 </ul>

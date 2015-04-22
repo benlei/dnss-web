@@ -16,7 +16,13 @@ var description = new (function Description() {
     required_weaps = $("#skill-required-weapon .w"),
     type = $("#skill-type .w"),
     desc = $("#skill-description .d"),
-    ndesc = $("#next-description .d");
+    ndesc = $("#next-description .d"),
+    sp_required = $("#sp-required .w"),
+    skills_required = $("#skills-required .w");
+
+  this.getSeparator = function() {
+    return separator;
+  };
 
   this.use = function(s) {
     $("#sidebar-2").show();
@@ -36,6 +42,8 @@ var description = new (function Description() {
     setRequiredWeapons();
     setType();
     setDescriptions();
+    setRequiredSP();
+    setRequiredSkills();
   };
 
   this.hook = function() {
@@ -82,6 +90,14 @@ var description = new (function Description() {
     d == -1  || n == -1 ? $ndesc.hide() : $ndesc.show();
   }
 
+  function setRequiredSP() {
+    sp_required.html(format(skill.getSPRequirements()));
+  }
+
+  function setRequiredSkills() {
+    skills_required.html(format(skill.getSkillRequirements()));
+  }
+
   function html(e, curr, next) {
     if (curr == -1) {
       e.html(next);
@@ -118,8 +134,7 @@ var description = new (function Description() {
     var c = 0, w = 0, p = 0, newStr = "", startPos = 0;
     for (var i = 0; i < str.length - 1; i++) {
       switch (str.substr(i, 2)) {
-        case "#y":
-        case "#p":
+        case "#y": case "#p": case "#r":
           if (c - w == 1) { // needed a closing </span>
             newStr += str.substring(startPos, i) + "</span><span class=\"" + str.substr(i+1,1) + "\">";
           } else {

@@ -6,6 +6,7 @@ var dnss = new (function DNSS() {
   var common = {};
   var started = false;
   var loaded = 0;
+  var ultimates = [];
 
   this.changeLevelCap = function(lvl) {
     // can be but will not be updated
@@ -55,8 +56,12 @@ var dnss = new (function DNSS() {
     return common.types.weapons[id];
   };
 
+  this.getSP = function(advancement) {
+    return $("#job-sp-"+advancement+" .sp").html().split("/")[0] || 0;
+  };
+
   this.commit = function(advancement) {
-    var curr_sp = $("#job-sp-"+advancement+" .sp").html().split("/")[0] || 0;
+    var curr_sp = this.getSP(advancement);
     var total_sp = $("#job-sp li:last .sp").html().split("/")[0] || 0;
     var sum = 0, new_total;
     for (var i = 24*advancement; i < 24*(advancement+1); i++) {
@@ -81,10 +86,15 @@ var dnss = new (function DNSS() {
     }
 
     build.commit();
+    notifier.notify(notifier.SP, advancement, sum);
   };
 
   this.getSkill = function(id) {
     return skills[id];
+  };
+
+  this.getUltimateSkills = function() {
+    return ultimates;
   };
 
   function addSkills(json) {
@@ -95,6 +105,7 @@ var dnss = new (function DNSS() {
       skills[id] = skill;
       positions[pos] = skill;
       skill.setLevel(build.get(pos)+skill.getMinLevel());
+      skill.ultimate && ultimates.push(skill);
       skill.commit();
       someSkill = skill;
     });

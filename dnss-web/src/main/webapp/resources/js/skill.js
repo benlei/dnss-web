@@ -1,10 +1,15 @@
 function Skill(id, s, e) {
+  var el = e.find(".lvl");
   var t = this;
   var level = 0;
   var pos = -1;
   var advancement = -1;
   var def = s.levels[0].required_level == 1 ? 1 : 0;
   var started = false;
+  var nSP = {}; // notifiable sp
+  var nSkills = {}; // notifiable skills
+
+  this.ultimate = s.levels.length == 2 && s.levels[0].required_level == 40 && s.levels[1].required_level == 60;
 
   this.setLevel = function(lvl) {
     level = lvl;
@@ -75,7 +80,7 @@ function Skill(id, s, e) {
       e.css("background-image", "url("+getSpriteURL()+")");
     }
 
-    e.find(".lvl").html(this.getLevel() + "/" + this.getMaxLevel());
+    el.html(this.getLevel() + "/" + this.getMaxLevel());
 
     build.put(this.getPosition(), this.getLevel() - def);
     if (started) {
@@ -84,8 +89,98 @@ function Skill(id, s, e) {
     }
 
     started = true;
+
+    notifier.notify(notifier.SKILL, id, this.getLevel());
+    this.checkAndSetBalance(); // check if this skill is now balanced
+    this.checkAndSetUltimates(); // check if ults are both set
   };
 
+  this.notifySP = function(a, b) {
+    nSP[a] = b;
+    this.checkAndSetBalance();
+  };
+
+  this.notifySkill = function(id, b) {
+    nSkills[id] = b;
+    this.checkAndSetBalance();
+  };
+
+  this.setBalanced = function(b) {
+    b ? el.removeClass("r") : el.addClass("r");
+  };
+
+  this.checkAndSetUltimates = function() {
+    var ults = dnss.getUltimateSkills();
+
+    if (ults[0] && ults[1]) {
+      if (ults[0].getLevel() > 0 && ults[1].getLevel() > 0) {
+        ults[0].setBalanced(true);
+        ults[1].setBalanced(true);
+      } else if (ults[0].getLevel() > 0 && ! ults[1].getLevel()) {
+        ults[0].checkAndSetBalance();
+      } else if (ults[1].getLevel() > 0 && ! ults[0].getLevel()) {
+        ults[1].checkAndSetBalance();
+      }
+    }
+  };
+
+  this.checkAndSetBalance = function() {
+    this.setBalanced(this.isBalanced() || !this.getLevel());
+  };
+
+  this.isBalancedSP = function() {
+    for (var i in nSP) {
+      if (! nSP[i]) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  this.isBalancedRequirements = function() {
+    for (var i in nSkills) {
+      if (! nSkills[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  this.isBalanced = function() {
+    return this.isBalancedSP() && this.isBalancedRequirements();
+  };
+
+  this.getSPRequirements = function() {
+    var list = [];
+
+    for (var i = 0; i < s.need_sp.length; i++) {
+      if (s.need_sp[i] > 0) {
+        var str = properties.jobs[i].name + description.getSeparator() + s.need_sp[i] + " SP";
+        if (nSP[i]) {
+          list.push(str);
+        } else {
+          list.push("#r" + str + "#w");
+        }
+      }
+    }
+    return list.length ? list.join(", ") : "None";
+  };
+
+  this.getSkillRequirements = function() {
+    var list = [];
+
+    for (var i = 0; i < s.requires.length; i++) {
+      var other = dnss.getSkill(s.requires[i].id);
+      var str = properties.jobs[other.getAdvancement()].name + description.getSeparator() + other.getName() + " Lv. " + s.requires[i].level;
+      if (nSkills[s.requires[i].id]) {
+        list.push(str);
+      } else {
+        list.push("#r" + str + "#w");
+      }
+    }
+
+    return list.length ? list.join(", ") : "None";
+  };
 
   function getSpriteURL() {
     return "/skillicons/" + properties.version.skillicon + "_skillicon" + s.image + (t.getLevel() ? "" : "_b") + ".png"
@@ -96,7 +191,6 @@ function Skill(id, s, e) {
     var y = Math.floor(s.icon / 10) * -50;
     return x+"px "+y+"px";
   }
-
 
   // things for skill descriptions
   this.getName = function() {
@@ -189,14 +283,19 @@ function Skill(id, s, e) {
     }
   });
 
-//  for (var i = 0; i < s.need_sp.length; i++) {
-//    if (s.need_sp[i] > 0) {
-//      dnss.addSPHook(i, id);
-//    }
-//
-//  }
-//
-//  for (var i = 0; i < s.requires.length; i++) {
-//    dnss.addSkillHook(id, s.requires[i].id);
-//  }
+  for (var i = 0; i < s.need_sp.length; i++) {
+    if (s.need_sp[i] > 0) {
+      this.notifySP(i, dnss.getSP(i) >= s.need_sp[i]);
+      notifier.addNotifier(notifier.SP, id, i, s.need_sp[i]);
+    }
+  }
+
+  for (var i = 0; i < s.requires.length; i++) {
+    var other = dnss.getSkill(s.requires[i].id);
+    nSkills[s.requires[i].id] = false;
+    if (other) {
+      this.notifySkill(s.requires[i].id, other.getLevel() >= s.requires[i].level);
+    }
+    notifier.addNotifier(notifier.SKILL, id, s.requires[i].id, s.requires[i].level);
+  }
 }
