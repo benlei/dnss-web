@@ -1,6 +1,6 @@
 #!/bin/ruby
 require 'java-properties'
-properties_file = "C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\resources\\dnss.properties"
+properties_file = "C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\resources\\dnss.properties"
 properties = JavaProperties.load(properties_file)
 property = ARGV[0] + '.version'
 property = property.to_sym

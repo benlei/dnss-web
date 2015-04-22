@@ -8,8 +8,8 @@ require_relative 'dn-skills'
 ##############################################################################
 # Hopefully only thing you have to edit
 ##############################################################################
-JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\%s.json'
-MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\resources\\json\\min\\%s.json'
+JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\webapp\\resources\\json\\%s.json'
+MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\webapp\\resources\\json\\min\\%s.json'
 
 ##############################################################################
 # get all messages

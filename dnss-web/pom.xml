@@ -100,7 +100,7 @@
                     <aggregations>
                         <aggregation>
                             <!--Use below to NOT compress the aggregated file-->
-                            <inputDir>${project.basedir}/src/main/webapp</inputDir>
+                            <inputDir>${project.basedir}/src/main/webapp/resources/js</inputDir>
 
                             <!--Use below to compress the aggregated file-->
                             <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/js</inputDir>-->
@@ -111,7 +111,7 @@
                         </aggregation>
                         <aggregation>
                             <!--Use below to NOT compress the aggregated file-->
-                            <inputDir>${project.basedir}/src/main/webapp</inputDir>
+                            <inputDir>${project.basedir}/src/main/webapp/resources/css</inputDir>
 
                             <!--Use below to compress the aggregated file-->
                             <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/css</inputDir>-->

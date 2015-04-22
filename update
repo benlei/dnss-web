@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 PATH=$PATH:$(pwd)/dnss-tools/target/appassembler/bin:
 
 SOURCE="${BASH_SOURCE[0]}"
@@ -27,7 +27,7 @@ function show_help {
     echo -e "  -p, --extract-pak\tRuns the pak extracting program before any of the below options."
     echo -e "  -d, --extract-dnt\tRuns the dnt extracting program before any of the below options."
     echo -e "  -j, --json\t\tGenerate the JSON files, and increment the version for the JSON files."
-    echo -e "  -s, --skilicons, \tExtract the skill icons from the DN Pak files."
+    echo -e "  -s, --skilicons\tExtract the skill icons from the DN Pak files."
     echo -e "  -c, --context\t\tGenerate the Spring Bean context file"
 }
 

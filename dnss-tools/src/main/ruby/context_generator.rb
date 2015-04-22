@@ -8,7 +8,7 @@ require_relative 'common'
 ##############################################################################
 # Hopefully only thing you have to edit
 ##############################################################################
-BEAN_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dn-skill-sim\\dnss-web\\src\\main\\webapp\\WEB-INF'
+BEAN_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\webapp\\WEB-INF'
 LEVEL_CAP = 80
 
 ##############################################################################
