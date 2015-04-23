@@ -3073,6 +3073,156 @@
       </list>
     </property>
   </bean>
+  <bean id="jobs_gladiator" class="dnss.model.Jobs">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_swordmaster"/>
+    <property name="tertiary" ref="job_gladiator"/>
+  </bean>
+  <bean id="jobs_moonlord" class="dnss.model.Jobs">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_swordmaster"/>
+    <property name="tertiary" ref="job_moonlord"/>
+  </bean>
+  <bean id="jobs_barbarian" class="dnss.model.Jobs">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_mercenary"/>
+    <property name="tertiary" ref="job_barbarian"/>
+  </bean>
+  <bean id="jobs_destroyer" class="dnss.model.Jobs">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_mercenary"/>
+    <property name="tertiary" ref="job_destroyer"/>
+  </bean>
+  <bean id="jobs_sniper" class="dnss.model.Jobs">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_bowmaster"/>
+    <property name="tertiary" ref="job_sniper"/>
+  </bean>
+  <bean id="jobs_artillery" class="dnss.model.Jobs">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_bowmaster"/>
+    <property name="tertiary" ref="job_artillery"/>
+  </bean>
+  <bean id="jobs_tempest" class="dnss.model.Jobs">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_acrobat"/>
+    <property name="tertiary" ref="job_tempest"/>
+  </bean>
+  <bean id="jobs_windwalker" class="dnss.model.Jobs">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_acrobat"/>
+    <property name="tertiary" ref="job_windwalker"/>
+  </bean>
+  <bean id="jobs_saleana" class="dnss.model.Jobs">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_elementallord"/>
+    <property name="tertiary" ref="job_saleana"/>
+  </bean>
+  <bean id="jobs_elestra" class="dnss.model.Jobs">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_elementallord"/>
+    <property name="tertiary" ref="job_elestra"/>
+  </bean>
+  <bean id="jobs_smasher" class="dnss.model.Jobs">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_forceuser"/>
+    <property name="tertiary" ref="job_smasher"/>
+  </bean>
+  <bean id="jobs_majesty" class="dnss.model.Jobs">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_forceuser"/>
+    <property name="tertiary" ref="job_majesty"/>
+  </bean>
+  <bean id="jobs_guardian" class="dnss.model.Jobs">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_paladin"/>
+    <property name="tertiary" ref="job_guardian"/>
+  </bean>
+  <bean id="jobs_crusades" class="dnss.model.Jobs">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_paladin"/>
+    <property name="tertiary" ref="job_crusades"/>
+  </bean>
+  <bean id="jobs_saint" class="dnss.model.Jobs">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_priest"/>
+    <property name="tertiary" ref="job_saint"/>
+  </bean>
+  <bean id="jobs_inquisitor" class="dnss.model.Jobs">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_priest"/>
+    <property name="tertiary" ref="job_inquisitor"/>
+  </bean>
+  <bean id="jobs_shootingstar" class="dnss.model.Jobs">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_engineer"/>
+    <property name="tertiary" ref="job_shootingstar"/>
+  </bean>
+  <bean id="jobs_gearmaster" class="dnss.model.Jobs">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_engineer"/>
+    <property name="tertiary" ref="job_gearmaster"/>
+  </bean>
+  <bean id="jobs_adept" class="dnss.model.Jobs">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_alchemist"/>
+    <property name="tertiary" ref="job_adept"/>
+  </bean>
+  <bean id="jobs_physician" class="dnss.model.Jobs">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_alchemist"/>
+    <property name="tertiary" ref="job_physician"/>
+  </bean>
+  <bean id="jobs_darksummoner" class="dnss.model.Jobs">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_screamer"/>
+    <property name="tertiary" ref="job_darksummoner"/>
+  </bean>
+  <bean id="jobs_souleater" class="dnss.model.Jobs">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_screamer"/>
+    <property name="tertiary" ref="job_souleater"/>
+  </bean>
+  <bean id="jobs_bladedancer" class="dnss.model.Jobs">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_dancer"/>
+    <property name="tertiary" ref="job_bladedancer"/>
+  </bean>
+  <bean id="jobs_spiritdancer" class="dnss.model.Jobs">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_dancer"/>
+    <property name="tertiary" ref="job_spiritdancer"/>
+  </bean>
+  <bean id="jobs_ripper" class="dnss.model.Jobs">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_chaser"/>
+    <property name="tertiary" ref="job_ripper"/>
+  </bean>
+  <bean id="jobs_raven" class="dnss.model.Jobs">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_chaser"/>
+    <property name="tertiary" ref="job_raven"/>
+  </bean>
+  <bean id="jobs_lightfury" class="dnss.model.Jobs">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_bringer"/>
+    <property name="tertiary" ref="job_lightfury"/>
+  </bean>
+  <bean id="jobs_abysswalker" class="dnss.model.Jobs">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_bringer"/>
+    <property name="tertiary" ref="job_abysswalker"/>
+  </bean>
+  <bean id="jobs_flurry" class="dnss.model.Jobs">
+    <property name="primary" ref="job_lencea"/>
+    <property name="secondary" ref="job_piercer"/>
+    <property name="tertiary" ref="job_flurry"/>
+  </bean>
+  <bean id="jobs_stingbreezer" class="dnss.model.Jobs">
+    <property name="primary" ref="job_lencea"/>
+    <property name="secondary" ref="job_piercer"/>
+    <property name="tertiary" ref="job_stingbreezer"/>
+  </bean>
   <util:list id="levels" value-type="int">
     <value>0</value>
     <value>0</value>
@@ -3156,7 +3306,7 @@
     <value>205</value>
     <value>207</value>
   </util:list>
-  <util:list id="all_jobs_0" value-type="dnss.model.Job">
+  <util:list id="all_jobs_primary" value-type="dnss.model.Job">
     <ref bean="job_warrior"/>
     <ref bean="job_archer"/>
     <ref bean="job_soceress"/>
@@ -3166,7 +3316,7 @@
     <ref bean="job_assassin"/>
     <ref bean="job_lencea"/>
   </util:list>
-  <util:list id="all_jobs_1" value-type="dnss.model.Job">
+  <util:list id="all_jobs_secondary" value-type="dnss.model.Job">
     <ref bean="job_swordmaster"/>
     <ref bean="job_mercenary"/>
     <ref bean="job_bowmaster"/>
@@ -3183,7 +3333,7 @@
     <ref bean="job_bringer"/>
     <ref bean="job_piercer"/>
   </util:list>
-  <util:list id="all_jobs_2" value-type="dnss.model.Job">
+  <util:list id="all_jobs_tertiary" value-type="dnss.model.Job">
     <ref bean="job_gladiator"/>
     <ref bean="job_moonlord"/>
     <ref bean="job_barbarian"/>
@@ -3215,4 +3365,84 @@
     <ref bean="job_flurry"/>
     <ref bean="job_stingbreezer"/>
   </util:list>
+  <util:list id="skill_types" value-type="java.lang.String">
+    <value>Instant</value>
+    <value>Passive</value>
+    <value>Reactive Passive</value>
+    <value>Passive Enhanced</value>
+  </util:list>
+  <bean id="warrior_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="0" value="Greatsword"/>
+        <entry key="1" value="Gauntlet"/>
+        <entry key="2" value="Axe"/>
+        <entry key="3" value="Hammer"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="archer_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="4" value="Shortbow"/>
+        <entry key="5" value="Longbow"/>
+        <entry key="6" value="Crossbow"/>
+        <entry key="7" value="Quiver"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="soceress_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="8" value="Book"/>
+        <entry key="9" value="Orb"/>
+        <entry key="10" value="Puppet"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="cleric_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="11" value="Mace"/>
+        <entry key="12" value="Flail"/>
+        <entry key="13" value="Wand"/>
+        <entry key="14" value="Shield"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="academic_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="16" value="Cannon"/>
+        <entry key="17" value="Bubble Blaster"/>
+        <entry key="18" value="Powerglove"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="kali_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="19" value="Fan"/>
+        <entry key="20" value="Chakram"/>
+        <entry key="21" value="Focus"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="assassin_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="22" value="Scimtar"/>
+        <entry key="23" value="Dagger"/>
+        <entry key="24" value="Hook"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="lencea_weapons" class="java.util.HashMap">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="25" value="Spear"/>
+        <entry key="27" value="Bracelet"/>
+      </map>
+    </constructor-arg>
+  </bean>
 </beans>

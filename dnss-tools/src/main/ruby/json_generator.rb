@@ -2,23 +2,26 @@
 require 'json'
 require 'pg'
 require_relative 'common'
-require_relative 'dn-weapons'
-require_relative 'dn-skills'
+
+if ARGV[0] == "-fix"
+  fixTables()
+end
+
+conn = getPGConn()
 
 ##############################################################################
 # Hopefully only thing you have to edit
 ##############################################################################
-JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\webapp\\resources\\json\\%s.json'
-MIN_JSON_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\webapp\\resources\\json\\min\\%s.json'
+JSON_DIRECTORY = ROOT+DNSS['web.json_path']+"/%s.json"
 
 ##############################################################################
 # get all messages
 ##############################################################################
 messages = Hash.new
-@conn.exec('SELECT * FROM messages').each_dnt {|message| messages[message['id']] = message['data']}
+conn.exec('SELECT * FROM messages').each_dnt {|message| messages[message['id']] = message['data']}
 
 # untranslated messages
-messages[1000085115] = messages[1000007433] # academic tumble
+# messages[1000085115] = messages[1000007433] # academic tumble
 
 ##############################################################################
 # gets all the jobs [write]
@@ -37,7 +40,8 @@ query = <<sql_query
     ON _jobname = m._id
   WHERE _service is TRUE
 sql_query
-@conn.exec(query).each_dnt do |job|
+
+conn.exec(query).each_dnt do |job|
   job['skills'] = Hash.new
   job['messages'] = Hash.new    # prepare to store messages needed for skill descriptions
   jobs[job['id']] = job
@@ -63,7 +67,8 @@ query = <<sql_query
   )
   ORDER BY _needjob ASC
 sql_query
-@conn.exec(query).each_dnt do |skill|
+
+conn.exec(query).each_dnt do |skill|
   jobs[skill['needjob']]['skills'][skill['id']] = skill
   jobs[skill['needjob']]['messages'][skill['nameid']] = messages[skill['nameid']]
 
@@ -93,14 +98,18 @@ query = <<sql_query
     ON _skilltableid = skills._id
 sql_query
 
-@conn.exec(query).each_dnt do |tree|
+conn.exec(query).each_dnt do |tree|
   job = jobs[tree['needjob']]
   skills = job['skills']
   skill = skills[tree['skillid']]
-  skill['requires'] = Array.new
-  skill['requires'] << {'id' => tree['parentskillid1'], :level => tree['needparentskilllevel1']} unless tree['parentskillid1'] == 0
-  skill['requires'] << {'id' => tree['parentskillid2'], :level => tree['needparentskilllevel2']} unless tree['parentskillid2'] == 0
-  skill['need_sp'] = [tree['needbasicsp1'], tree['needfirstsp1']]
+
+  skill['requires'] = Hash.new
+  skill['requires'][tree['parentskillid1']] = tree['needparentskilllevel1'] unless tree['parentskillid1'] == 0
+  skill['requires'][tree['parentskillid2']] = tree['needparentskilllevel2'] unless tree['parentskillid2'] == 0
+
+  skill['need_sp'] = Hash.new
+  skill['need_sp'][0] = tree['needbasicsp1'] unless tree['needbasicsp1'] == 0
+  skill['need_sp'][1] = tree['needfirstsp1'] unless tree['needfirstsp1'] == 0
 end
 
 ##############################################################################
@@ -116,7 +125,7 @@ end
 # sql_query
 # (1..10).each {|i| queries << base_query % i}
 # query = queries.join("UNION\n")
-# @conn.exec(query).each_dnt do |skill|
+# conn.exec(query).each_dnt do |skill|
 #   default_skills << skill['id']
 # end
 
@@ -148,7 +157,7 @@ jobs.select {|id, job| job['advancement'] == 0}.each_value do |job|
     ORDER BY _skillindex, _skilllevel ASC
   sql_query
 
-  @conn.exec(query % [job['englishname'], 'pve']).each_dnt do |skill|
+  conn.exec(query % [job['englishname'], 'pve']).each_dnt do |skill|
     jobs[skill['needjob']]['skills'][skill['id']]['levels'] << skill
 
     cd = skill['cd'] / 1000.0
@@ -163,7 +172,7 @@ jobs.select {|id, job| job['advancement'] == 0}.each_value do |job|
     ['id', 'skilllevel', 'needjob', 'skillexplanationidparam'].each {|a| skill.delete(a)}
   end
 
-  @conn.exec(query % [job['englishname'], 'pvp']).each_dnt do |skill|
+  conn.exec(query % [job['englishname'], 'pvp']).each_dnt do |skill|
     level = jobs[skill['needjob']]['skills'][skill['id']]['levels'][skill['skilllevel'].to_i - 1]
     next if level.nil?
 
@@ -180,34 +189,17 @@ end
 
 
 JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
-MIN_JSON_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
 mkdir_p(File.dirname(JSON_DIRECTORY))
-mkdir_p(File.dirname(MIN_JSON_DIRECTORY))
-
-##############################################################################
-# WRITE: common data
-##############################################################################
-common = {
-  'types' => {
-    'weapons' => DN_WEAPON_TYPES,
-    'skills' => DN_SKILL_TYPES
-  }
-  # 'default_skills' => default_skills
-}
-create_json_file(JSON_DIRECTORY % 'common', JSON.pretty_generate(common))
-create_json_file(MIN_JSON_DIRECTORY % 'common', common.to_json)
 
 ##############################################################################
 # WRITE: all jobs tertiary jobs
 ##############################################################################
 jobs.each do |id, job|
   # create the messages
-  create_json_file(JSON_DIRECTORY % (job['englishname']+'-messages'), JSON.pretty_generate(job['messages']))
-  create_json_file(MIN_JSON_DIRECTORY % (job['englishname']+'-messages'), job['messages'].to_json)
+  create_json_file(JSON_DIRECTORY % (job['englishname']+'-messages'), job['messages'].to_json)
 
   # create the skills
-  create_json_file(JSON_DIRECTORY % (job['englishname']+'-skills'), JSON.pretty_generate(job['skills']))
-  create_json_file(MIN_JSON_DIRECTORY % (job['englishname']+'-skills'), job['skills'].to_json)
+  create_json_file(JSON_DIRECTORY % (job['englishname']+'-skills'), job['skills'].to_json)
 end
 
-@conn.close()
+conn.close()

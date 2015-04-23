@@ -3,7 +3,6 @@ var dnss = new (function DNSS() {
   var t = this;
   var skills = {};
   var positions = [];
-  var common = {};
   var started = false;
   var loaded = 0;
   var ultimates = [];
@@ -35,10 +34,6 @@ var dnss = new (function DNSS() {
       $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-skills.json", addSkills);
     }
 
-    $.getJSON("/json/" + properties.version.json + "-common.json", function(json) {
-      common = json;
-    });
-
     for (var i = 0; i < properties.jobs.length; i++) {
       $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-messages.json", function(json) {
         for (var j in json) {
@@ -46,14 +41,6 @@ var dnss = new (function DNSS() {
         }
       });
     }
-  };
-
-  this.getSkillType = function(id) {
-    return common.types.skills[id];
-  };
-
-  this.getWeaponType = function(id) {
-    return common.types.weapons[id];
   };
 
   this.getSP = function(advancement) {

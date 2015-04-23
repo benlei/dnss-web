@@ -1,10 +1,4 @@
-##############################################################################
-# connect to postgresql server
-##############################################################################
-@conn = PG.connect(:host => 'localhost', :port => 5432,
-                  :user => 'dnss', :password => 'dnss',
-                  :dbname => 'dnss')
-@conn.type_map_for_results = PG::BasicTypeMapForResults.new @conn
+require 'java-properties'
 
 ##############################################################################
 # Extending base classes for own needs
@@ -81,18 +75,54 @@ def create_json_file(path, json)
   puts '%s created' % path
 end
 
+def getPGConn()
+  conn = PG.connect(:host => DNSS["db.host"], :port => DNSS["db.port"],
+                    :user => DNSS["db.user"], :password => DNSS["db.password"],
+                    :dbname => DNSS["db.name"])
+  conn.type_map_for_results = PG::BasicTypeMapForResults.new conn
+  conn
+end
+
+def loadProperties(path)
+  properties = JavaProperties.load(path)
+  properties.inject({}) do |a,(k,v)|
+    v.gsub!("\\", "\\\\")
+    v.gsub!("\a", "\\a")
+    v.gsub!("\b", "\\b")
+    v.gsub!("\cx", "\\cx")
+    v.gsub!("\C-x", "\\C-x")
+    v.gsub!("\e", "\\e")
+    v.gsub!("\f", "\\f")
+    v.gsub!("\n", "\\n")
+    v.gsub!("\r", "\\r")
+    v.gsub!("\s", "\\s")
+    v.gsub!("\t", "\\t")
+    v.gsub!("\v", "\\v")
+    v.gsub!("\'", "\\'")
+    v.gsub!("\"", "\\\"")
+    a[k.to_s] = v
+    a
+  end
+end
 
 ##############################################################################
 # Combine assassin tables
 ##############################################################################
-query = <<sql_query
-  INSERT INTO skills_assassin_%1$s
-    SELECT *
-    FROM skills_assassin_bringer_%1$s
-    WHERE _id NOT IN (
-      SELECT _id
-      FROM skills_assassin_%1$s
-    )
-sql_query
-@conn.exec(query % 'pve')
-@conn.exec(query % 'pvp')
+def fixTables()
+  conn = getPGConn()
+  query = <<-sql_query
+    INSERT INTO skills_assassin_%1$s
+      SELECT *
+      FROM skills_assassin_bringer_%1$s
+      WHERE _id NOT IN (
+        SELECT _id
+        FROM skills_assassin_%1$s
+      )
+  sql_query
+  conn.exec(query % 'pve')
+  conn.exec(query % 'pvp')
+  conn.close()
+end
+
+ROOT = File.dirname(File.dirname(File.dirname(File.dirname(File.dirname(File.expand_path(__FILE__))))))
+DNSS = loadProperties(File.dirname(File.expand_path(__FILE__))+"/../resources/ruby.properties")

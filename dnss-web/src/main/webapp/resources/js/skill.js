@@ -232,14 +232,14 @@ function Skill(id, s, e) {
 
     weapons = [];
     for (var i = 0; i < s.needweapon.length; i++) {
-      weapons[i] = dnss.getWeaponType(s.needweapon[i]);
+      weapons[i] = properties.weapontypes[s.needweapon[i]];
     }
 
     return weapons.join(", ");
   };
 
   this.getType = function() {
-    return dnss.getSkillType(s.type);
+    return properties.skilltypes[s.type];
   };
 
   this.getDescription = function(mode) {

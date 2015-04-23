@@ -3,13 +3,20 @@ require 'json'
 require 'pg'
 require 'nokogiri'
 require_relative 'common'
+require_relative 'dn-weapons'
+require_relative 'dn-skills'
 
+if ARGV[0] == "-fix"
+  fixTables()
+end
+
+conn = getPGConn()
 
 ##############################################################################
 # Hopefully only thing you have to edit
 ##############################################################################
-BEAN_DIRECTORY = 'C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\webapp\\WEB-INF'
-LEVEL_CAP = 80
+BEAN_DIRECTORY = ROOT+'/'+DNSS['web.webinf_path']
+LEVEL_CAP = DNSS['dn.level_cap']
 
 ##############################################################################
 # get sp required of all classes [write]
@@ -22,7 +29,10 @@ query = <<sql_query
   WHERE _id <= %d
   ORDER BY _id ASC
 sql_query
-@conn.exec(query % LEVEL_CAP).each_dnt {|level| sp_by_level << sp_by_level[level['id'] - 1] + level['skillpoint']}
+
+conn.exec(query % LEVEL_CAP).each_dnt do |level|
+  sp_by_level << sp_by_level[level['id'] - 1] + level['skillpoint']
+end
 
 ##############################################################################
 # gets all the jobs [write]
@@ -44,7 +54,8 @@ query = <<sql_query
   WHERE _service is TRUE
   ORDER BY _id ASC
 sql_query
-@conn.exec(query).each_dnt do |job|
+
+conn.exec(query).each_dnt do |job|
   job['skilltree'] = Array.new
   job['images'] = Array.new
   jobs[job['id']] = job
@@ -65,8 +76,7 @@ query = <<sql_query
   INNER JOIN skills
     ON _skilltableid = skills._id
 sql_query
-
-@conn.exec(query).each_dnt do |tree|
+conn.exec(query).each_dnt do |tree|
   job = jobs[tree['needjob']]
   job['skilltree'][tree['treeslotindex']] = tree['skillid']
 
@@ -95,39 +105,61 @@ builder = Nokogiri::XML::Builder.new do |xml|
     jobs.each_value do |job|
       job['skilltree'] = job['skilltree'].skilltree_partition()
 
-      xml.bean('id' => 'job_%s' % job['identifier'], 'class' => 'dnss.model.Job') do
+      xml.bean('id' => 'job_' + job['identifier'], 'class' => 'dnss.model.Job') do
         xml.property('name' => 'name', 'value' => job['jobname'])
         xml.property('name' => 'identifier', 'value' => job['identifier'])
         xml.property('name' => 'advancement', 'value' => job['advancement'])
-        xml.property('name' => 'parent', 'ref' => 'job_%s' % jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
+        xml.property('name' => 'parent', 'ref' => 'job_' + jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
         xml.property('name' => 'spRatio') {xml.list {job['spRatio'].each {|spRatio| xml.value_ spRatio}}}
         xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill.to_i}}}}}
         xml.property('name' => 'images') {xml.list {job['images'].each {|image| xml.value_ image}}}
       end
     end
 
+    jobs.select {|id, job| job['advancement'] == 2}.each_value do |job|
+      xml.bean('id' => 'jobs_' + job['identifier'], 'class' => 'dnss.model.Jobs') do
+        xml.property('name' => 'primary', 'ref' => 'job_' + jobs[jobs[job['parentjob']]['parentjob']]['identifier'])
+        xml.property('name' => 'secondary', 'ref' => 'job_' + jobs[job['parentjob']]['identifier'])
+        xml.property('name' => 'tertiary', 'ref' => 'job_' + job['identifier'])
+      end
+    end
+
     xml['util'].list('id' => 'levels', 'value-type' => 'int') {sp_by_level.each {|sp| xml.value_ sp}}
+    adv = ['primary', 'secondary', 'tertiary']
     (0..2).each do |a|
-      xml['util'].list('id' => 'all_jobs_%d' % a, 'value-type' => 'dnss.model.Job') do
+      xml['util'].list('id' => 'all_jobs_%s' % adv[a], 'value-type' => 'dnss.model.Job') do
         jobs.select {|id, job| job['advancement'] == a}.each_value do |job|
-          xml.ref('bean' => 'job_%s' % job['identifier'])
+          xml.ref('bean' => 'job_' + job['identifier'])
+        end
+      end
+    end
+
+    xml['util'].list('id' => 'skill_types', 'value-type' => 'java.lang.String') {DN_SKILL_TYPES.each {|t| xml.value_ t}}
+
+    DN_WEAPON_TYPES.each do |base, weaps|
+      xml.bean('id' => base+"_weapons", 'class' => 'java.util.HashMap') do
+        xml.send('constructor-arg') do
+          xml.map('key-type' => "java.lang.String", 'value-type' => 'java.lang.String') do
+            weaps.each {|k,v| xml.entry('key' => k, 'value' => v)}
+          end
         end
       end
     end
   end
 end
 
-BEAN_DIRECTORY.gsub!(/[\/\\]/, File::SEPARATOR)
+BEAN_DIRECTORY.gsub!(/[\/\\]/, "/")
 mkdir_p(BEAN_DIRECTORY)
+
 ##############################################################################
 # WRITE: Bean
 ##############################################################################
-path = '%s%s%s.xml' % [BEAN_DIRECTORY, File::SEPARATOR, 'spring-context']
+path = '%s/%s.xml' % [BEAN_DIRECTORY, 'spring-context']
 stream = open(path, 'w')
 stream.write(builder.to_xml)
 stream.close()
 
 puts "%s has been created." % path
 
-@conn.close()
+conn.close()
 

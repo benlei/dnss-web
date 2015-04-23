@@ -1,6 +1,7 @@
 package dnss.controller;
 
 import dnss.model.Job;
+import dnss.model.Jobs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import org.springframework.web.context.WebApplicationContext;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 
@@ -24,7 +26,7 @@ public class JobController {
                       @PathVariable("job_identifier") String jobIdentifier,
                       @PathVariable("level") int level,
                       ModelMap model) throws IOException {
-        String bean = "job_"  +jobIdentifier;
+        String bean = "jobs_"  +jobIdentifier;
         if (! context.containsBean(bean)) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND, "No job '" + jobIdentifier + "'");
         }
@@ -36,46 +38,40 @@ public class JobController {
 
         int maxSP = levels.get(level);
 
-        LinkedList<Job> jobList = new LinkedList<Job>();
-        HashSet<String> images = new HashSet<String>();
-        try {
-            Job job = (Job)context.getBean(bean);
-            float[] spRatios = job.getSpRatio();
-            for (int i = spRatios.length - 1; job != null; i--) {
-                job.setMaxSP((int)(maxSP * spRatios[i]));
-                jobList.addFirst(job);
-
-                for (int j = 0; j < job.getImages().length; j++) {
-                    images.add(job.getImages()[j]);
-                    images.add(job.getImages()[j] + "_b");
-                }
-                job = job.getParent();
-            }
-        } catch (Exception e) {
-            response.sendError(HttpServletResponse.SC_NOT_FOUND, e.getMessage());
+        Jobs jobs = (Jobs)context.getBean(bean);
+        float[] spRatios = jobs.getTertiary().getSpRatio();
+        for (Job j : jobs) {
+            j.setMaxSP((int)(maxSP * spRatios[j.getAdvancement().toInt()]));
         }
 
-        if (jobList.size() != 3) {
-            response.sendError(HttpServletResponse.SC_FORBIDDEN, jobList.getLast().getName() + " is not allowed to be simulatled.");
-        }
+        // the jobs
+        model.addAttribute("jobs", jobs);
 
-        model.addAttribute("jobs", jobList);
+        // the total usable SP
         model.addAttribute("max_sp", maxSP);
 
-        model.addAttribute("job0", context.getBean("all_jobs_0"));
-        model.addAttribute("job1", context.getBean("all_jobs_1"));
-        model.addAttribute("job2", context.getBean("all_jobs_2"));
+        // the list of all the primary/secondary/tertiary jobs
+        model.addAttribute("primaries", context.getBean("all_jobs_primary"));
+        model.addAttribute("secondaries", context.getBean("all_jobs_secondary"));
+        model.addAttribute("tertiaries", context.getBean("all_jobs_tertiary"));
 
-        model.addAttribute("images", new ArrayList<String>(images));
-
+        // the path to this job simulator
         if (level == levels.size() - 1) {
-            model.addAttribute("path", jobList.getLast().getIdentifier());
+            model.addAttribute("path", jobs.getTertiary().getIdentifier());
         } else {
-            model.addAttribute("path", jobList.getLast().getIdentifier() + "-" + level);
+            model.addAttribute("path", jobs.getTertiary().getIdentifier() + "-" + level);
         }
 
+
+        // the job max level list
         int[] levelList = new int[] {Math.min(levels.size() - 1, level), Math.min(levels.size() - 11, level), Math.min(levels.size() - 1, level)};
         model.addAttribute("levels", levelList);
+
+        // the skill + weapon types
+        ArrayList<Integer> skillTypes = (ArrayList<Integer>)context.getBean("skill_types");
+        HashMap<String, String> weapTypes = (HashMap<String,String>)context.getBean(jobs.getPrimary().getIdentifier() + "_weapons");
+        model.addAttribute("skill_types", skillTypes);
+        model.addAttribute("weapon_types", weapTypes);
 
         return "home";
     }
