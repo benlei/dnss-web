@@ -6,7 +6,7 @@ if ARGV[0] == "-fix"
   fixTables()
 end
 
-conn = getPGConn()
+conn = createPGConn()
 
 ##############################################################################
 # Hopefully only thing you have to edit

@@ -76,7 +76,7 @@ def create_json_file(path, json)
   puts '%s created' % path
 end
 
-def getPGConn()
+def createPGConn()
   conn = PG.connect(:host => DNSS["db.host"], :port => DNSS["db.port"],
                     :user => DNSS["db.user"], :password => DNSS["db.password"],
                     :dbname => DNSS["db.name"])
@@ -110,7 +110,7 @@ end
 # Combine assassin tables
 ##############################################################################
 def fixTables()
-  conn = getPGConn()
+  conn = createPGConn()
   query = <<-sql_query
     INSERT INTO skills_assassin_%1$s
       SELECT *
