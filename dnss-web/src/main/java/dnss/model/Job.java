@@ -10,7 +10,6 @@ public class Job {
     private Job parent;
     private int[][] skillTree;
     private int maxSP;
-    private String[] images;
 
     public String getName() {
         return name;
