@@ -20,15 +20,6 @@ public enum Advancement {
         throw new RuntimeException("Invalid Advancement: " + job);
     }
 
-    public Advancement nextAdvancement() {
-        switch (this) {
-            case PRIMARY: return SECONDARY;
-            case SECONDARY:return TERTIARY;
-            case TERTIARY: return null;
-            default: throw new RuntimeException("Unknown advancement: " + this);
-        }
-    }
-
     public int toInt() {
         return advancement;
     }
