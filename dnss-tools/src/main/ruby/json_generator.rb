@@ -194,11 +194,9 @@ mkdir_p(File.dirname(JSON_DIRECTORY))
 # WRITE: all jobs tertiary jobs
 ##############################################################################
 jobs.each do |id, job|
-  # create the messages
-  create_json_file(JSON_DIRECTORY % (job['englishname']+'-messages'), job['messages'].to_json)
-
-  # create the skills
-  create_json_file(JSON_DIRECTORY % (job['englishname']+'-skills'), job['skills'].to_json)
+  # create the json files
+  create_json_file(JSON_DIRECTORY % (job['englishname']), {'skills' => job['skills'],
+                                                           'messages' => job['messages']}.to_json)
 end
 
 conn.close()

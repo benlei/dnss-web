@@ -31,15 +31,7 @@ var dnss = new (function DNSS() {
 
     // obtain json
     for (var i = 0; i < properties.jobs.length; i++) {
-      $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-skills.json", addSkills);
-    }
-
-    for (var i = 0; i < properties.jobs.length; i++) {
-      $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + "-messages.json", function(json) {
-        for (var j in json) {
-          messages.put(j, json[j]);
-        }
-      });
+      $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + ".json", addSkills);
     }
   };
 
@@ -85,8 +77,12 @@ var dnss = new (function DNSS() {
   };
 
   function addSkills(json) {
+    for (var mid in json.messages) { // should be pretty fast to do
+      messages.put(mid, json.messages[mid]);
+    }
+
     var someSkill;
-    $.each(json, function(id, data) {
+    $.each(json.skills, function(id, data) {
       var skill = new Skill(id, data, $("#skill-" + id));
       var pos = skill.getPosition();
       skills[id] = skill;

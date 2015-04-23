@@ -169,7 +169,10 @@ function Skill(id, s, e) {
 
     for (var i in s.requires) {
       var other = dnss.getSkill(i);
-      var str = properties.jobs[other.getAdvancement()].name + description.getSeparator() + other.getName() + " Lv. " + s.requires[i];
+      var str = other.getName() + " Lv. " + s.requires[i];
+      if (other.getAdvancement() != this.getAdvancement()) {
+        str = properties.jobs[other.getAdvancement()].name + description.getSeparator() + str;
+      }
       if (nSkills[i]) {
         list.push(str);
       } else {
