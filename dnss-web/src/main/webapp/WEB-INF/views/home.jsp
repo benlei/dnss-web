@@ -2,6 +2,7 @@
 <html lang="en">
 <title>${jobs.tertiary.name} - Dragon Nest Skill Simulator</title>
 <meta charset="utf-8">
+<meta name="description" content="Simulate and share your Dragon Nest skill builds using the Dragon Nest Skill Simulator (North America)!">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 <link href="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.css" rel="stylesheet" type="text/css"/>
 <body>
