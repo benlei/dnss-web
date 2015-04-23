@@ -1,6 +1,9 @@
 #!/bin/ruby
 require 'java-properties'
-properties_file = "C:\\Users\\Ben\\IdeaProjects\\dnss\\dnss-web\\src\\main\\resources\\dnss.properties"
+require_relative 'common'
+
+properties_file = ROOT+"/"+DNSS['web.resource_path']+"/dnss.properties"
+properties_file.gsub!(/[\/\\]/, "/")
 properties = JavaProperties.load(properties_file)
 property = ARGV[0] + '.version'
 property = property.to_sym

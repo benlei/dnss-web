@@ -1,6 +1,5 @@
 #!/bin/ruby
 require 'json'
-require 'pg'
 require_relative 'common'
 
 if ARGV[0] == "-fix"
@@ -12,7 +11,7 @@ conn = getPGConn()
 ##############################################################################
 # Hopefully only thing you have to edit
 ##############################################################################
-JSON_DIRECTORY = ROOT+DNSS['web.json_path']+"/%s.json"
+JSON_DIRECTORY = ROOT+'/'+DNSS['web.json_path']+"/%s.json"
 
 ##############################################################################
 # get all messages
@@ -21,7 +20,7 @@ messages = Hash.new
 conn.exec('SELECT * FROM messages').each_dnt {|message| messages[message['id']] = message['data']}
 
 # untranslated messages
-# messages[1000085115] = messages[1000007433] # academic tumble
+messages[1000085115] = messages[1000007433] # academic tumble
 
 ##############################################################################
 # gets all the jobs [write]

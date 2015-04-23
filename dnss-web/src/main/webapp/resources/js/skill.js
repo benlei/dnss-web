@@ -153,14 +153,12 @@ function Skill(id, s, e) {
   this.getSPRequirements = function() {
     var list = [];
 
-    for (var i = 0; i < s.need_sp.length; i++) {
-      if (s.need_sp[i] > 0) {
-        var str = properties.jobs[i].name + description.getSeparator() + s.need_sp[i] + " SP";
-        if (nSP[i]) {
-          list.push(str);
-        } else {
-          list.push("#r" + str + "#w");
-        }
+    for (var i in s.need_sp) {
+      var str = properties.jobs[i].name + description.getSeparator() + s.need_sp[i] + " SP";
+      if (nSP[i]) {
+        list.push(str);
+      } else {
+        list.push("#r" + str + "#w");
       }
     }
     return list.length ? list.join(", ") : "None";
@@ -169,10 +167,10 @@ function Skill(id, s, e) {
   this.getSkillRequirements = function() {
     var list = [];
 
-    for (var i = 0; i < s.requires.length; i++) {
-      var other = dnss.getSkill(s.requires[i].id);
-      var str = properties.jobs[other.getAdvancement()].name + description.getSeparator() + other.getName() + " Lv. " + s.requires[i].level;
-      if (nSkills[s.requires[i].id]) {
+    for (var i in s.requires) {
+      var other = dnss.getSkill(i);
+      var str = properties.jobs[other.getAdvancement()].name + description.getSeparator() + other.getName() + " Lv. " + s.requires[i];
+      if (nSkills[i]) {
         list.push(str);
       } else {
         list.push("#r" + str + "#w");
@@ -283,19 +281,14 @@ function Skill(id, s, e) {
     }
   });
 
-  for (var i = 0; i < s.need_sp.length; i++) {
-    if (s.need_sp[i] > 0) {
-      this.notifySP(i, dnss.getSP(i) >= s.need_sp[i]);
-      notifier.addNotifier(notifier.SP, id, i, s.need_sp[i]);
-    }
+  for (var i in s.need_sp) {
+    this.notifySP(i, dnss.getSP(i) >= s.need_sp[i]);
+    notifier.addNotifier(notifier.SP, id, i, s.need_sp[i]);
   }
 
-  for (var i = 0; i < s.requires.length; i++) {
-    var other = dnss.getSkill(s.requires[i].id);
-    nSkills[s.requires[i].id] = false;
-    if (other) {
-      this.notifySkill(s.requires[i].id, other.getLevel() >= s.requires[i].level);
-    }
-    notifier.addNotifier(notifier.SKILL, id, s.requires[i].id, s.requires[i].level);
+  for (var i in s.requires) {
+    nSkills[i] = false;
+    dnss.getSkill(i) && this.notifySkill(i, dnss.getSkill(i).getLevel() >= s.requires[i]);
+    notifier.addNotifier(notifier.SKILL, id, i, s.requires[i]);
   }
 }

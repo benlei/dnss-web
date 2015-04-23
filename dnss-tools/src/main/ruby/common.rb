@@ -1,4 +1,5 @@
 require 'java-properties'
+require 'pg'
 
 ##############################################################################
 # Extending base classes for own needs

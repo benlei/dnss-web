@@ -1,5 +1,5 @@
 #!/bin/bash -e
-PATH=$PATH:$(pwd)/dnss-tools/target/appassembler/bin:
+PATH=$PATH:$(pwd)/dnss-tools/target/appassembler/bin
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -77,14 +77,12 @@ fi
 
 if [[ ${JSON} -eq 1 ]]; then
     mkdir -p ${CWD}/dnss-web/src/main/webapp/resources/json/min
-    cd ${CWD}/dnss-web/src/main/webapp/resources/json
-    echo Removing $(ls)
-    rm -f *
-    cd min
-    echo Removing $(ls)
-    rm -f *
+    echo Removing ${CWD}/dnss-web/src/main/webapp/resources/json/min
+    rm -f ${CWD}/dnss-web/src/main/webapp/resources/json/min/*
+
     ruby ${CWD}/dnss-tools/src/main/ruby/json_generator.rb
     version=$(ruby ${CWD}/dnss-tools/src/main/ruby/update_properties.rb json)
+    cd ${CWD}/dnss-web/src/main/webapp/resources/json/min
     for file in *; do
         echo Renaming $file to ${version}-${file}
         mv ${file} ${version}-${file}
