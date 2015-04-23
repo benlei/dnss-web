@@ -11,13 +11,12 @@ public enum Advancement {
     }
 
     public static Advancement getAdvancement(int job) {
-        for (Advancement e : Advancement.values()) {
-            if (e.advancement == job) {
-                return e;
-            }
+        switch (job) {
+            case 0: return PRIMARY;
+            case 1: return SECONDARY;
+            case 2: return TERTIARY;
+            default: throw new RuntimeException("Invalid Advancement: " + job);
         }
-
-        throw new RuntimeException("Invalid Advancement: " + job);
     }
 
     public int toInt() {

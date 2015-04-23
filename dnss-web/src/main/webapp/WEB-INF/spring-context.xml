@@ -51,11 +51,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>01</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_archer" class="dnss.model.Job">
     <property name="name" value="Archer"/>
@@ -106,12 +101,6 @@
           <value>0</value>
           <value>1031</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>02</value>
-        <value>01</value>
       </list>
     </property>
   </bean>
@@ -166,12 +155,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>03</value>
-        <value>01</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_cleric" class="dnss.model.Job">
     <property name="name" value="Cleric"/>
@@ -222,12 +205,6 @@
           <value>0</value>
           <value>3035</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>04</value>
-        <value>01</value>
       </list>
     </property>
   </bean>
@@ -282,12 +259,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>08</value>
-        <value>01</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_kali" class="dnss.model.Job">
     <property name="name" value="Kali"/>
@@ -338,12 +309,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>09</value>
-        <value>01</value>
       </list>
     </property>
   </bean>
@@ -398,11 +363,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>10</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_lencea" class="dnss.model.Job">
     <property name="name" value="Lencea"/>
@@ -453,13 +413,6 @@
           <value>0</value>
           <value>7018</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>11</value>
-        <value>01</value>
-        <value>02</value>
       </list>
     </property>
   </bean>
@@ -515,11 +468,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>01</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_mercenary" class="dnss.model.Job">
     <property name="name" value="Mercenary"/>
@@ -571,11 +519,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>01</value>
       </list>
     </property>
   </bean>
@@ -631,11 +574,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>02</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_acrobat" class="dnss.model.Job">
     <property name="name" value="Acrobat"/>
@@ -687,11 +625,6 @@
           <value>0</value>
           <value>1414</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>02</value>
       </list>
     </property>
   </bean>
@@ -747,11 +680,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>03</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_forceuser" class="dnss.model.Job">
     <property name="name" value="Mystic"/>
@@ -803,11 +731,6 @@
           <value>0</value>
           <value>2414</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>03</value>
       </list>
     </property>
   </bean>
@@ -863,11 +786,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>04</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_priest" class="dnss.model.Job">
     <property name="name" value="Priest"/>
@@ -919,11 +837,6 @@
           <value>0</value>
           <value>3412</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>04</value>
       </list>
     </property>
   </bean>
@@ -979,11 +892,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>01</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_moonlord" class="dnss.model.Job">
     <property name="name" value="Lunar Knight"/>
@@ -1035,11 +943,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>01</value>
       </list>
     </property>
   </bean>
@@ -1095,11 +998,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>01</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_destroyer" class="dnss.model.Job">
     <property name="name" value="Destroyer"/>
@@ -1151,11 +1049,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>01</value>
       </list>
     </property>
   </bean>
@@ -1211,11 +1104,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>02</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_artillery" class="dnss.model.Job">
     <property name="name" value="Warden"/>
@@ -1267,11 +1155,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>02</value>
       </list>
     </property>
   </bean>
@@ -1327,11 +1210,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>02</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_windwalker" class="dnss.model.Job">
     <property name="name" value="Windwalker"/>
@@ -1383,11 +1261,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>02</value>
       </list>
     </property>
   </bean>
@@ -1443,11 +1316,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>03</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_elestra" class="dnss.model.Job">
     <property name="name" value="Ice Witch"/>
@@ -1499,11 +1367,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>03</value>
       </list>
     </property>
   </bean>
@@ -1559,11 +1422,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>03</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_majesty" class="dnss.model.Job">
     <property name="name" value="Chaos Mage"/>
@@ -1615,11 +1473,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>03</value>
       </list>
     </property>
   </bean>
@@ -1675,11 +1528,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>04</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_crusades" class="dnss.model.Job">
     <property name="name" value="Crusader"/>
@@ -1731,11 +1579,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>04</value>
       </list>
     </property>
   </bean>
@@ -1791,11 +1634,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>04</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_inquisitor" class="dnss.model.Job">
     <property name="name" value="Inquisitor"/>
@@ -1847,11 +1685,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>04</value>
       </list>
     </property>
   </bean>
@@ -1907,11 +1740,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>08</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_shootingstar" class="dnss.model.Job">
     <property name="name" value="Shooting Star"/>
@@ -1963,11 +1791,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>08</value>
       </list>
     </property>
   </bean>
@@ -2023,11 +1846,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>08</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_alchemist" class="dnss.model.Job">
     <property name="name" value="Alchemist"/>
@@ -2079,11 +1897,6 @@
           <value>0</value>
           <value>4420</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>08</value>
       </list>
     </property>
   </bean>
@@ -2139,11 +1952,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>08</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_physician" class="dnss.model.Job">
     <property name="name" value="Physician"/>
@@ -2195,11 +2003,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>08</value>
       </list>
     </property>
   </bean>
@@ -2255,11 +2058,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>09</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_darksummoner" class="dnss.model.Job">
     <property name="name" value="Dark Summoner"/>
@@ -2311,11 +2109,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>09</value>
       </list>
     </property>
   </bean>
@@ -2371,11 +2164,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>09</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_dancer" class="dnss.model.Job">
     <property name="name" value="Dancer"/>
@@ -2427,11 +2215,6 @@
           <value>0</value>
           <value>5116</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>09</value>
       </list>
     </property>
   </bean>
@@ -2487,11 +2270,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>09</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_spiritdancer" class="dnss.model.Job">
     <property name="name" value="Spirit Dancer"/>
@@ -2543,11 +2321,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>09</value>
       </list>
     </property>
   </bean>
@@ -2603,11 +2376,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>10</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_ripper" class="dnss.model.Job">
     <property name="name" value="Reaper"/>
@@ -2659,11 +2427,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>10</value>
       </list>
     </property>
   </bean>
@@ -2719,11 +2482,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>10</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_bringer" class="dnss.model.Job">
     <property name="name" value="Taoist"/>
@@ -2775,11 +2533,6 @@
           <value>0</value>
           <value>6312</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>10</value>
       </list>
     </property>
   </bean>
@@ -2835,11 +2588,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>10</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_abysswalker" class="dnss.model.Job">
     <property name="name" value="Abyss Walker"/>
@@ -2891,11 +2639,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>10</value>
       </list>
     </property>
   </bean>
@@ -2951,11 +2694,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>11</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_flurry" class="dnss.model.Job">
     <property name="name" value="Dragoon"/>
@@ -3009,11 +2747,6 @@
         </list>
       </list>
     </property>
-    <property name="images">
-      <list>
-        <value>11</value>
-      </list>
-    </property>
   </bean>
   <bean id="job_stingbreezer" class="dnss.model.Job">
     <property name="name" value="Valkyrie"/>
@@ -3065,11 +2798,6 @@
           <value>0</value>
           <value>0</value>
         </list>
-      </list>
-    </property>
-    <property name="images">
-      <list>
-        <value>11</value>
       </list>
     </property>
   </bean>

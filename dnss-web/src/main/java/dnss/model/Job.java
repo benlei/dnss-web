@@ -67,12 +67,4 @@ public class Job {
     public void setMaxSP(int maxSP) {
         this.maxSP = maxSP;
     }
-
-    public String[] getImages() {
-        return images;
-    }
-
-    public void setImages(String[] images) {
-        this.images = images;
-    }
 }
