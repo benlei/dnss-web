@@ -12,8 +12,8 @@ public class SP {
     }
 
     public int forCap(int cap) {
-        if (cap < 1 || cap > sp.length) {
-            return -1;
+        if (cap < 1 || sp.length < cap) {
+            throw new RuntimeException("Invalid level cap passed in as argument.");
         }
 
         return sp[cap-1];
