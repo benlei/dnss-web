@@ -16,7 +16,7 @@ messages = Hash.new
 conn.exec('SELECT * FROM messages').each_dnt {|message| messages[message['id']] = message['data']}
 
 # untranslated messages
-messages[1000085115] = messages[1000007433] # academic tumble
+
 
 ##############################################################################
 # gets all the jobs [write]
