@@ -38,7 +38,7 @@ public class Skill {
         this.levels = levels;
     }
 
-    public Level getMaxLevel(int cap) {
+    public Level getMaxLevelForCap(int cap) {
         Level max = null;
         for (int i = 0; i < levels.length; i++) {
             if (levels[i].getRequiredJobLevel() <= cap) {

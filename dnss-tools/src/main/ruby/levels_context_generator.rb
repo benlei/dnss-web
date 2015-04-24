@@ -29,12 +29,22 @@ conn.exec(query % LEVEL_CAP).each_dnt do |level|
   sp_by_level << sp_by_level[level['id'] - 1] + level['skillpoint']
 end
 
+sp_by_level.shift
+
 ##############################################################################
 # generate the bean file
 ##############################################################################
 builder = Nokogiri::XML::Builder.new do |xml|
   xml.beans(SPRING_BEAN_HEADER) do
-    xml['util'].list('id' => 'levels', 'value-type' => 'int') {sp_by_level.each {|sp| xml.value_ sp}}
+    xml.bean('id' => 'sp', 'class' => 'dnss.model.SP') do
+      xml.property('name' => 'sp') do
+        xml.list('value-type' => 'int') do
+          sp_by_level.each do |sp|
+            xml.value_ sp
+          end
+        end
+      end
+    end
   end
 end
 
