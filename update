@@ -15,6 +15,10 @@ CONTEXT=0
 EXTRACT_PAK=0
 EXTRACT_DNT=0
 MVN_BUILD=0
+FIX_TABLES=0
+SKILL_CONTEXT=0
+LEVEL_CONTEXT=0
+TYPE_CONTEXT=0
 
 function show_help {
     echo This script is used to update SQL, skill icons, etc.
@@ -23,30 +27,38 @@ function show_help {
     echo "  ./update [OPTION]..."
     echo
     echo Options:
-    echo -e "  -b, --build\t\tDoes a maven build before running any of the other options."
-    echo -e "  -p, --extract-pak\tRuns the pak extracting program before any of the below options."
-    echo -e "  -d, --extract-dnt\tRuns the dnt extracting program before any of the below options."
-    echo -e "  -j, --json\t\tGenerate the JSON files, and increment the version for the JSON files."
-    echo -e "  -s, --skilicons\tExtract the skill icons from the DN Pak files."
-    echo -e "  -c, --context\t\tGenerate the Spring Bean context file"
+    echo -e "  --build\t\tDoes a maven build before running any of the other options."
+    echo -e "  --extract-pak\t\tRuns the pak extracting program before any of the below options."
+    echo -e "  --extract-dnt\t\tRuns the dnt extracting program before any of the below options."
+    echo -e "  --json\t\tGenerate the JSON files, and increment the version for the JSON files."
+    echo -e "  --skilicons\t\tExtract the skill icons from the DN Pak files."
+    echo -e "  --types-context\tGenerate the Spring Bean context file for skill/weapon types."
+    echo -e "  --levels-context\tGenerate the Spring Bean context file for the levels and the total sp of each level."
+    echo -e "  --skills-context\tGenerate the Spring Bean context file for skills."
+    echo -e "  --context\t\tGenerate the primary Spring Bean context file that is loaded when the webapp starts."
+    echo -e "  --fix-tables\t\tGenerate the Spring Bean context file."
+    echo -e "  -h, --help\t\tDisplays this help message."
 }
 
 OPTIND=1
-while getopts "jscpdbh,json,skillicons,context,extract-pak,extract-dnt,build,help" opt; do
+while getopts ":h-:" opt; do
     case "${opt}" in
-        j|json) JSON=1
+        -)
+            case "${OPTARG}" in
+                json) JSON=1 ;;
+                skillicons) SKILLICONS=1 ;;
+                context) CONTEXT=1 ;;
+                extract-pak) EXTRACT_PAK=1 ;;
+                extract-dnt) EXTRACT_DNT=1 ;;
+                build) MVN_BUILD=1 ;;
+                fix-tables) FIX_TABLES=1 ;;
+                skills-context) SKILL_CONTEXT=1 ;;
+                levels-context) LEVEL_CONTEXT=1 ;;
+                types-context) TYPE_CONTEXT=1 ;;
+                help) show_help; exit 0 ;;
+            esac
             ;;
-        s|skillicons) SKILLICONS=1
-            ;;
-        c|context) CONTEXT=1
-            ;;
-        p|extract-pak) EXTRACT_PAK=1
-            ;;
-        d|extract-dnt) EXTRACT_DNT=1
-            ;;
-        b|build) MVN_BUILD=1
-            ;;
-        h|help)
+        h)
             show_help
             exit 0
             ;;
@@ -64,15 +76,30 @@ fi
 
 if [[ ${EXTRACT_DNT} -eq 1 ]]; then
     dnt
-    cd /cygdrive/e/resource/sql
+    cd /cygdrive/f/resource/sql
     export PGPASSWORD=dnss
     for sql in *; do
       psql -h localhost -U dnss -d dnss < ${sql}
     done
 fi
 
+if [[ ${FIX_TABLES} -eq 1 ]]; then
+    ruby ${CWD}/dnss-tools/src/main/ruby/fix_tables.rb
+fi
+
 if [[ ${CONTEXT} -eq 1 ]]; then
     ruby ${CWD}/dnss-tools/src/main/ruby/context_generator.rb
+fi
+
+if [[ ${SKILL_CONTEXT} -eq 1 ]]; then
+    ruby ${CWD}/dnss-tools/src/main/ruby/skills_context_generator.rb
+fi
+
+if [[ ${LEVEL_CONTEXT} -eq 1 ]]; then
+    ruby ${CWD}/dnss-tools/src/main/ruby/levels_context_generator.rb
+fi
+if [[ ${TYPE_CONTEXT} -eq 1 ]]; then
+    ruby ${CWD}/dnss-tools/src/main/ruby/types_context_generator.rb
 fi
 
 if [[ ${JSON} -eq 1 ]]; then
@@ -94,7 +121,7 @@ if [[ ${SKILLICONS} -eq 1 ]]; then
     cd ${CWD}/dnss-web/src/main/webapp/resources/images/skillicons
     echo Removing $(ls)
     rm -f *
-    cd /cygdrive/e/resource/ui/mainbar
+    cd /cygdrive/f/resource/ui/mainbar
     echo Formatting $(ls skillicon*.dds) to PNG
     mogrify -format png skillicon*.dds
     echo Cropping $(ls skillicon*.png)
@@ -104,8 +131,8 @@ if [[ ${SKILLICONS} -eq 1 ]]; then
         pngcrush -ow ${png} >/dev/null
     done
     cd -
-    echo Copying over $(ls /cygdrive/e/resource/ui/mainbar/skillicon*.png) to $(pwd)
-    cp -f /cygdrive/e/resource/ui/mainbar/skillicon*.png .
+    echo Copying over $(ls /cygdrive/f/resource/ui/mainbar/skillicon*.png) to $(pwd)
+    cp -f /cygdrive/f/resource/ui/mainbar/skillicon*.png .
     version=$(ruby ${CWD}/dnss-tools/src/main/ruby/update_properties.rb skillicon)
     for file in *; do
         echo Renaming ${file} to ${version}_${file}

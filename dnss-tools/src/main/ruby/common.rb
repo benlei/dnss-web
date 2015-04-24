@@ -106,24 +106,16 @@ def loadProperties(path)
   end
 end
 
-##############################################################################
-# Combine assassin tables
-##############################################################################
-def fixTables()
-  conn = createPGConn()
-  query = <<-sql_query
-    INSERT INTO skills_assassin_%1$s
-      SELECT *
-      FROM skills_assassin_bringer_%1$s
-      WHERE _id NOT IN (
-        SELECT _id
-        FROM skills_assassin_%1$s
-      )
-  sql_query
-  conn.exec(query % 'pve')
-  conn.exec(query % 'pvp')
-  conn.close()
-end
-
 ROOT = File.dirname(File.dirname(File.dirname(File.dirname(File.dirname(File.expand_path(__FILE__))))))
 DNSS = loadProperties(File.dirname(File.expand_path(__FILE__))+"/../resources/ruby.properties")
+
+SPRING_BEAN_HEADER = {
+  'xmlns' => 'http://www.springframework.org/schema/beans',
+  'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
+  'xmlns:util' => 'http://www.springframework.org/schema/util',
+  'xsi:schemaLocation' => 
+    ['http://www.springframework.org/schema/beans',
+     'http://www.springframework.org/schema/beans/spring-beans.xsd',
+     'http://www.springframework.org/schema/util',
+     'http://www.springframework.org/schema/util/spring-util.xsd'].join(' ')
+}

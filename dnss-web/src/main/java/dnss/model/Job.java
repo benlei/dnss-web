@@ -8,7 +8,7 @@ public class Job {
     private Advancement advancement;
     private float[] spRatio;
     private Job parent;
-    private int[][] skillTree;
+    private Skill[][] skillTree;
     private int maxSP;
 
     public String getName() {
@@ -51,11 +51,11 @@ public class Job {
         this.parent = parent;
     }
 
-    public int[][] getSkillTree() {
+    public Skill[][] getSkillTree() {
         return skillTree;
     }
 
-    public void setSkillTree(int[][] skillTree) {
+    public void setSkillTree(Skill[][] skillTree) {
         this.skillTree = skillTree;
     }
 

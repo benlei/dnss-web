@@ -2,12 +2,6 @@
 require 'json'
 require 'nokogiri'
 require_relative 'common'
-require_relative 'dn-weapons'
-require_relative 'dn-skills'
-
-if ARGV[0] == "-fix"
-  fixTables()
-end
 
 conn = createPGConn()
 
@@ -15,23 +9,6 @@ conn = createPGConn()
 # Hopefully only thing you have to edit
 ##############################################################################
 BEAN_DIRECTORY = ROOT+'/'+DNSS['web.webinf_path']
-LEVEL_CAP = DNSS['dn.level_cap']
-
-##############################################################################
-# get sp required of all classes [write]
-##############################################################################
-sp_by_level = Array.new
-sp_by_level << 0
-query = <<sql_query
-  SELECT _id, _skillpoint
-  FROM player_level
-  WHERE _id <= %d
-  ORDER BY _id ASC
-sql_query
-
-conn.exec(query % LEVEL_CAP).each_dnt do |level|
-  sp_by_level << sp_by_level[level['id'] - 1] + level['skillpoint']
-end
 
 ##############################################################################
 # gets all the jobs [write]
@@ -56,7 +33,6 @@ sql_query
 
 conn.exec(query).each_dnt do |job|
   job['skilltree'] = Array.new
-  job['images'] = Array.new
   jobs[job['id']] = job
   job['spRatio'] = [job['maxspjob0'], job['maxspjob1'], job['maxspjob2']]
   ['maxspjob0', 'maxspjob1', 'maxspjob2'].each {|a| job.delete(a)}
@@ -83,17 +59,12 @@ end
 ##############################################################################
 # generate the bean file
 ##############################################################################
-beans = {'xmlns' => 'http://www.springframework.org/schema/beans',
-         'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-         'xmlns:util' => 'http://www.springframework.org/schema/util',
-         'xsi:schemaLocation' => ['http://www.springframework.org/schema/beans',
-                                  'http://www.springframework.org/schema/beans/spring-beans.xsd',
-                                  'http://www.springframework.org/schema/util',
-                                  'http://www.springframework.org/schema/util/spring-util.xsd'
-                                 ].join(' ')}
-
 builder = Nokogiri::XML::Builder.new do |xml|
-  xml.beans(beans) do
+  xml.beans(SPRING_BEAN_HEADER) do
+    xml.import('resource' => 'levels-context.xml')
+    xml.import('resource' => 'types-context.xml')
+    xml.import('resource' => 'skills-context.xml')
+
     jobs.each_value do |job|
       job['skilltree'] = job['skilltree'].skilltree_partition()
 
@@ -103,7 +74,21 @@ builder = Nokogiri::XML::Builder.new do |xml|
         xml.property('name' => 'advancement', 'value' => job['advancement'])
         xml.property('name' => 'parent', 'ref' => 'job_' + jobs[job['parentjob']]['identifier']) unless job['parentjob'] == 0
         xml.property('name' => 'spRatio') {xml.list {job['spRatio'].each {|spRatio| xml.value_ spRatio}}}
-        xml.property('name' => 'skillTree') {xml.list {job['skilltree'].each {|skillblock| xml.list {skillblock.each {|skill| xml.value_ skill.to_i}}}}}
+        xml.property('name' => 'skillTree') do
+          xml.list do
+            job['skilltree'].each do |skillblock|
+              xml.list('value-type' => 'dnss.model.Skill') do 
+                skillblock.each do |skill|
+                  if skill.to_i == 0
+                    xml.null_
+                  else
+                    xml.ref('bean' => "skill_#{skill}")
+                  end
+                end
+              end
+            end
+          end
+        end
       end
     end
 
@@ -115,24 +100,11 @@ builder = Nokogiri::XML::Builder.new do |xml|
       end
     end
 
-    xml['util'].list('id' => 'levels', 'value-type' => 'int') {sp_by_level.each {|sp| xml.value_ sp}}
     adv = ['primary', 'secondary', 'tertiary']
     (0..2).each do |a|
       xml['util'].list('id' => 'all_jobs_%s' % adv[a], 'value-type' => 'dnss.model.Job') do
         jobs.select {|id, job| job['advancement'] == a}.each_value do |job|
           xml.ref('bean' => 'job_' + job['identifier'])
-        end
-      end
-    end
-
-    xml['util'].list('id' => 'skill_types', 'value-type' => 'java.lang.String') {DN_SKILL_TYPES.each {|t| xml.value_ t}}
-
-    DN_WEAPON_TYPES.each do |base, weaps|
-      xml.bean('id' => base+"_weapons", 'class' => 'java.util.HashMap') do
-        xml.send('constructor-arg') do
-          xml.map('key-type' => "java.lang.String", 'value-type' => 'java.lang.String') do
-            weaps.each {|k,v| xml.entry('key' => k, 'value' => v)}
-          end
         end
       end
     end

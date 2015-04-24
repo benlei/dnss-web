@@ -2,10 +2,6 @@
 require 'json'
 require_relative 'common'
 
-if ARGV[0] == "-fix"
-  fixTables()
-end
-
 conn = createPGConn()
 
 ##############################################################################
@@ -112,7 +108,7 @@ conn.exec(query).each_dnt do |tree|
 end
 
 ##############################################################################
-# get default skills
+# get default skills -> NOTE: Skills with a required_level = 1 are default
 ##############################################################################
 # default_skills = Array.new
 # queries = Array.new

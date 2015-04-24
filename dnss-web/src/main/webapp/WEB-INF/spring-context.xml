@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+  <import resource="levels-context.xml"/>
+  <import resource="types-context.xml"/>
+  <import resource="skills-context.xml"/>
   <bean id="job_warrior" class="dnss.model.Job">
     <property name="name" value="Warrior"/>
     <property name="identifier" value="warrior"/>
@@ -13,41 +16,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>28</value>
-          <value>2</value>
-          <value>11</value>
-          <value>10</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_28"/>
+          <ref bean="skill_2"/>
+          <ref bean="skill_11"/>
+          <ref bean="skill_10"/>
         </list>
-        <list>
-          <value>6</value>
-          <value>12</value>
-          <value>8</value>
-          <value>15</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6"/>
+          <ref bean="skill_12"/>
+          <ref bean="skill_8"/>
+          <ref bean="skill_15"/>
         </list>
-        <list>
-          <value>5</value>
-          <value>18</value>
-          <value>29</value>
-          <value>9</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5"/>
+          <ref bean="skill_18"/>
+          <ref bean="skill_29"/>
+          <ref bean="skill_9"/>
         </list>
-        <list>
-          <value>7</value>
-          <value>20</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7"/>
+          <ref bean="skill_20"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>24</value>
-          <value>30</value>
-          <value>31</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_24"/>
+          <ref bean="skill_30"/>
+          <ref bean="skill_31"/>
         </list>
-        <list>
-          <value>33</value>
-          <value>17</value>
-          <value>0</value>
-          <value>32</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_33"/>
+          <ref bean="skill_17"/>
+          <null/>
+          <ref bean="skill_32"/>
         </list>
       </list>
     </property>
@@ -65,41 +68,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>1001</value>
-          <value>1026</value>
-          <value>1017</value>
-          <value>1013</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1001"/>
+          <ref bean="skill_1026"/>
+          <ref bean="skill_1017"/>
+          <ref bean="skill_1013"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1008</value>
-          <value>1019</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1008"/>
+          <ref bean="skill_1019"/>
+          <null/>
         </list>
-        <list>
-          <value>1003</value>
-          <value>1027</value>
-          <value>1028</value>
-          <value>1023</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1003"/>
+          <ref bean="skill_1027"/>
+          <ref bean="skill_1028"/>
+          <ref bean="skill_1023"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1021</value>
-          <value>1018</value>
-          <value>1016</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1021"/>
+          <ref bean="skill_1018"/>
+          <ref bean="skill_1016"/>
         </list>
-        <list>
-          <value>1009</value>
-          <value>1024</value>
-          <value>1029</value>
-          <value>1030</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1009"/>
+          <ref bean="skill_1024"/>
+          <ref bean="skill_1029"/>
+          <ref bean="skill_1030"/>
         </list>
-        <list>
-          <value>1032</value>
-          <value>0</value>
-          <value>0</value>
-          <value>1031</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1032"/>
+          <null/>
+          <null/>
+          <ref bean="skill_1031"/>
         </list>
       </list>
     </property>
@@ -117,41 +120,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>2002</value>
-          <value>2031</value>
-          <value>2015</value>
-          <value>2013</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2002"/>
+          <ref bean="skill_2031"/>
+          <ref bean="skill_2015"/>
+          <ref bean="skill_2013"/>
         </list>
-        <list>
-          <value>2034</value>
-          <value>2026</value>
-          <value>2012</value>
-          <value>2016</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2034"/>
+          <ref bean="skill_2026"/>
+          <ref bean="skill_2012"/>
+          <ref bean="skill_2016"/>
         </list>
-        <list>
-          <value>2035</value>
-          <value>2022</value>
-          <value>0</value>
-          <value>2014</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2035"/>
+          <ref bean="skill_2022"/>
+          <null/>
+          <ref bean="skill_2014"/>
         </list>
-        <list>
-          <value>2033</value>
-          <value>2029</value>
-          <value>2023</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2033"/>
+          <ref bean="skill_2029"/>
+          <ref bean="skill_2023"/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2024</value>
-          <value>2036</value>
-          <value>2037</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2024"/>
+          <ref bean="skill_2036"/>
+          <ref bean="skill_2037"/>
         </list>
-        <list>
-          <value>2039</value>
-          <value>0</value>
-          <value>0</value>
-          <value>2038</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2039"/>
+          <null/>
+          <null/>
+          <ref bean="skill_2038"/>
         </list>
       </list>
     </property>
@@ -169,41 +172,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>3028</value>
-          <value>3002</value>
-          <value>3015</value>
-          <value>3017</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3028"/>
+          <ref bean="skill_3002"/>
+          <ref bean="skill_3015"/>
+          <ref bean="skill_3017"/>
         </list>
-        <list>
-          <value>3030</value>
-          <value>3022</value>
-          <value>3031</value>
-          <value>3020</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3030"/>
+          <ref bean="skill_3022"/>
+          <ref bean="skill_3031"/>
+          <ref bean="skill_3020"/>
         </list>
-        <list>
-          <value>3019</value>
-          <value>3016</value>
-          <value>3018</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3019"/>
+          <ref bean="skill_3016"/>
+          <ref bean="skill_3018"/>
+          <null/>
         </list>
-        <list>
-          <value>3029</value>
-          <value>3021</value>
-          <value>3003</value>
-          <value>3023</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3029"/>
+          <ref bean="skill_3021"/>
+          <ref bean="skill_3003"/>
+          <ref bean="skill_3023"/>
         </list>
-        <list>
-          <value>3032</value>
-          <value>3024</value>
-          <value>3033</value>
-          <value>3034</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3032"/>
+          <ref bean="skill_3024"/>
+          <ref bean="skill_3033"/>
+          <ref bean="skill_3034"/>
         </list>
-        <list>
-          <value>3036</value>
-          <value>0</value>
-          <value>0</value>
-          <value>3035</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3036"/>
+          <null/>
+          <null/>
+          <ref bean="skill_3035"/>
         </list>
       </list>
     </property>
@@ -221,41 +224,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>4001</value>
-          <value>4002</value>
-          <value>4004</value>
-          <value>4006</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4001"/>
+          <ref bean="skill_4002"/>
+          <ref bean="skill_4004"/>
+          <ref bean="skill_4006"/>
         </list>
-        <list>
-          <value>4222</value>
-          <value>4005</value>
-          <value>4009</value>
-          <value>4003</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4222"/>
+          <ref bean="skill_4005"/>
+          <ref bean="skill_4009"/>
+          <ref bean="skill_4003"/>
         </list>
-        <list>
-          <value>4014</value>
-          <value>4011</value>
-          <value>4010</value>
-          <value>4007</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4014"/>
+          <ref bean="skill_4011"/>
+          <ref bean="skill_4010"/>
+          <ref bean="skill_4007"/>
         </list>
-        <list>
-          <value>4015</value>
-          <value>4008</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4015"/>
+          <ref bean="skill_4008"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4223</value>
-          <value>4016</value>
-          <value>4018</value>
-          <value>4017</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4223"/>
+          <ref bean="skill_4016"/>
+          <ref bean="skill_4018"/>
+          <ref bean="skill_4017"/>
         </list>
-        <list>
-          <value>4020</value>
-          <value>0</value>
-          <value>0</value>
-          <value>4019</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4020"/>
+          <null/>
+          <null/>
+          <ref bean="skill_4019"/>
         </list>
       </list>
     </property>
@@ -273,41 +276,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>5000</value>
-          <value>5001</value>
-          <value>5008</value>
-          <value>5009</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5000"/>
+          <ref bean="skill_5001"/>
+          <ref bean="skill_5008"/>
+          <ref bean="skill_5009"/>
         </list>
-        <list>
-          <value>5003</value>
-          <value>5002</value>
-          <value>5011</value>
-          <value>5010</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5003"/>
+          <ref bean="skill_5002"/>
+          <ref bean="skill_5011"/>
+          <ref bean="skill_5010"/>
         </list>
-        <list>
-          <value>5004</value>
-          <value>5005</value>
-          <value>5012</value>
-          <value>5014</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5004"/>
+          <ref bean="skill_5005"/>
+          <ref bean="skill_5012"/>
+          <ref bean="skill_5014"/>
         </list>
-        <list>
-          <value>5006</value>
-          <value>5015</value>
-          <value>5013</value>
-          <value>5016</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5006"/>
+          <ref bean="skill_5015"/>
+          <ref bean="skill_5013"/>
+          <ref bean="skill_5016"/>
         </list>
-        <list>
-          <value>5007</value>
-          <value>0</value>
-          <value>5017</value>
-          <value>5018</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5007"/>
+          <null/>
+          <ref bean="skill_5017"/>
+          <ref bean="skill_5018"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -325,41 +328,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>6001</value>
-          <value>6003</value>
-          <value>6010</value>
-          <value>6007</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6001"/>
+          <ref bean="skill_6003"/>
+          <ref bean="skill_6010"/>
+          <ref bean="skill_6007"/>
         </list>
-        <list>
-          <value>6002</value>
-          <value>6013</value>
-          <value>6011</value>
-          <value>6012</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6002"/>
+          <ref bean="skill_6013"/>
+          <ref bean="skill_6011"/>
+          <ref bean="skill_6012"/>
         </list>
-        <list>
-          <value>6004</value>
-          <value>6005</value>
-          <value>6015</value>
-          <value>6016</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6004"/>
+          <ref bean="skill_6005"/>
+          <ref bean="skill_6015"/>
+          <ref bean="skill_6016"/>
         </list>
-        <list>
-          <value>6006</value>
-          <value>6008</value>
-          <value>6014</value>
-          <value>6019</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6006"/>
+          <ref bean="skill_6008"/>
+          <ref bean="skill_6014"/>
+          <ref bean="skill_6019"/>
         </list>
-        <list>
-          <value>6009</value>
-          <value>6017</value>
-          <value>6018</value>
-          <value>6020</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6009"/>
+          <ref bean="skill_6017"/>
+          <ref bean="skill_6018"/>
+          <ref bean="skill_6020"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -377,41 +380,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>7001</value>
-          <value>7002</value>
-          <value>7003</value>
-          <value>7004</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7001"/>
+          <ref bean="skill_7002"/>
+          <ref bean="skill_7003"/>
+          <ref bean="skill_7004"/>
         </list>
-        <list>
-          <value>7005</value>
-          <value>0</value>
-          <value>7006</value>
-          <value>7007</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7005"/>
+          <null/>
+          <ref bean="skill_7006"/>
+          <ref bean="skill_7007"/>
         </list>
-        <list>
-          <value>7008</value>
-          <value>7009</value>
-          <value>0</value>
-          <value>7010</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7008"/>
+          <ref bean="skill_7009"/>
+          <null/>
+          <ref bean="skill_7010"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>7011</value>
-          <value>7012</value>
-          <value>7013</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7011"/>
+          <ref bean="skill_7012"/>
+          <ref bean="skill_7013"/>
         </list>
-        <list>
-          <value>7014</value>
-          <value>7015</value>
-          <value>7016</value>
-          <value>7017</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7014"/>
+          <ref bean="skill_7015"/>
+          <ref bean="skill_7016"/>
+          <ref bean="skill_7017"/>
         </list>
-        <list>
-          <value>7019</value>
-          <value>0</value>
-          <value>0</value>
-          <value>7018</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7019"/>
+          <null/>
+          <null/>
+          <ref bean="skill_7018"/>
         </list>
       </list>
     </property>
@@ -430,41 +433,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>206</value>
-          <value>201</value>
-          <value>220</value>
-          <value>208</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_206"/>
+          <ref bean="skill_201"/>
+          <ref bean="skill_220"/>
+          <ref bean="skill_208"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>215</value>
-          <value>202</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_215"/>
+          <ref bean="skill_202"/>
+          <null/>
         </list>
-        <list>
-          <value>204</value>
-          <value>210</value>
-          <value>219</value>
-          <value>203</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_204"/>
+          <ref bean="skill_210"/>
+          <ref bean="skill_219"/>
+          <ref bean="skill_203"/>
         </list>
-        <list>
-          <value>207</value>
-          <value>221</value>
-          <value>216</value>
-          <value>209</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_207"/>
+          <ref bean="skill_221"/>
+          <ref bean="skill_216"/>
+          <ref bean="skill_209"/>
         </list>
-        <list>
-          <value>205</value>
-          <value>212</value>
-          <value>218</value>
-          <value>211</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_205"/>
+          <ref bean="skill_212"/>
+          <ref bean="skill_218"/>
+          <ref bean="skill_211"/>
         </list>
-        <list>
-          <value>213</value>
-          <value>0</value>
-          <value>0</value>
-          <value>214</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_213"/>
+          <null/>
+          <null/>
+          <ref bean="skill_214"/>
         </list>
       </list>
     </property>
@@ -483,41 +486,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>408</value>
-          <value>405</value>
-          <value>403</value>
-          <value>418</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_408"/>
+          <ref bean="skill_405"/>
+          <ref bean="skill_403"/>
+          <ref bean="skill_418"/>
         </list>
-        <list>
-          <value>409</value>
-          <value>406</value>
-          <value>412</value>
-          <value>420</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_409"/>
+          <ref bean="skill_406"/>
+          <ref bean="skill_412"/>
+          <ref bean="skill_420"/>
         </list>
-        <list>
-          <value>407</value>
-          <value>410</value>
-          <value>404</value>
-          <value>419</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_407"/>
+          <ref bean="skill_410"/>
+          <ref bean="skill_404"/>
+          <ref bean="skill_419"/>
         </list>
-        <list>
-          <value>401</value>
-          <value>411</value>
-          <value>414</value>
-          <value>402</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_401"/>
+          <ref bean="skill_411"/>
+          <ref bean="skill_414"/>
+          <ref bean="skill_402"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>0</value>
-          <value>413</value>
-          <value>417</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <ref bean="skill_413"/>
+          <ref bean="skill_417"/>
         </list>
-        <list>
-          <value>415</value>
-          <value>416</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_415"/>
+          <ref bean="skill_416"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -536,41 +539,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>1201</value>
-          <value>1208</value>
-          <value>0</value>
-          <value>1205</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1201"/>
+          <ref bean="skill_1208"/>
+          <null/>
+          <ref bean="skill_1205"/>
         </list>
-        <list>
-          <value>1202</value>
-          <value>1209</value>
-          <value>1215</value>
-          <value>1217</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1202"/>
+          <ref bean="skill_1209"/>
+          <ref bean="skill_1215"/>
+          <ref bean="skill_1217"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>0</value>
-          <value>1212</value>
-          <value>1206</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <ref bean="skill_1212"/>
+          <ref bean="skill_1206"/>
         </list>
-        <list>
-          <value>1220</value>
-          <value>1210</value>
-          <value>1213</value>
-          <value>1221</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1220"/>
+          <ref bean="skill_1210"/>
+          <ref bean="skill_1213"/>
+          <ref bean="skill_1221"/>
         </list>
-        <list>
-          <value>1207</value>
-          <value>1203</value>
-          <value>1218</value>
-          <value>1219</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1207"/>
+          <ref bean="skill_1203"/>
+          <ref bean="skill_1218"/>
+          <ref bean="skill_1219"/>
         </list>
-        <list>
-          <value>1204</value>
-          <value>1211</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1204"/>
+          <ref bean="skill_1211"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -589,41 +592,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>1405</value>
-          <value>1416</value>
-          <value>1408</value>
-          <value>1404</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1405"/>
+          <ref bean="skill_1416"/>
+          <ref bean="skill_1408"/>
+          <ref bean="skill_1404"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1417</value>
-          <value>1409</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1417"/>
+          <ref bean="skill_1409"/>
+          <null/>
         </list>
-        <list>
-          <value>1402</value>
-          <value>1401</value>
-          <value>1418</value>
-          <value>1403</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1402"/>
+          <ref bean="skill_1401"/>
+          <ref bean="skill_1418"/>
+          <ref bean="skill_1403"/>
         </list>
-        <list>
-          <value>1411</value>
-          <value>1415</value>
-          <value>1412</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1411"/>
+          <ref bean="skill_1415"/>
+          <ref bean="skill_1412"/>
+          <null/>
         </list>
-        <list>
-          <value>1406</value>
-          <value>1410</value>
-          <value>1419</value>
-          <value>1407</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1406"/>
+          <ref bean="skill_1410"/>
+          <ref bean="skill_1419"/>
+          <ref bean="skill_1407"/>
         </list>
-        <list>
-          <value>1413</value>
-          <value>0</value>
-          <value>0</value>
-          <value>1414</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1413"/>
+          <null/>
+          <null/>
+          <ref bean="skill_1414"/>
         </list>
       </list>
     </property>
@@ -642,41 +645,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>2220</value>
-          <value>2217</value>
-          <value>2218</value>
-          <value>2204</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2220"/>
+          <ref bean="skill_2217"/>
+          <ref bean="skill_2218"/>
+          <ref bean="skill_2204"/>
         </list>
-        <list>
-          <value>2206</value>
-          <value>0</value>
-          <value>2363</value>
-          <value>2203</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2206"/>
+          <null/>
+          <ref bean="skill_2363"/>
+          <ref bean="skill_2203"/>
         </list>
-        <list>
-          <value>2202</value>
-          <value>2207</value>
-          <value>2209</value>
-          <value>2211</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2202"/>
+          <ref bean="skill_2207"/>
+          <ref bean="skill_2209"/>
+          <ref bean="skill_2211"/>
         </list>
-        <list>
-          <value>2213</value>
-          <value>2208</value>
-          <value>2212</value>
-          <value>2214</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2213"/>
+          <ref bean="skill_2208"/>
+          <ref bean="skill_2212"/>
+          <ref bean="skill_2214"/>
         </list>
-        <list>
-          <value>2205</value>
-          <value>2219</value>
-          <value>2221</value>
-          <value>2210</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2205"/>
+          <ref bean="skill_2219"/>
+          <ref bean="skill_2221"/>
+          <ref bean="skill_2210"/>
         </list>
-        <list>
-          <value>2215</value>
-          <value>0</value>
-          <value>0</value>
-          <value>2216</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2215"/>
+          <null/>
+          <null/>
+          <ref bean="skill_2216"/>
         </list>
       </list>
     </property>
@@ -695,41 +698,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>2403</value>
-          <value>2409</value>
-          <value>0</value>
-          <value>2406</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2403"/>
+          <ref bean="skill_2409"/>
+          <null/>
+          <ref bean="skill_2406"/>
         </list>
-        <list>
-          <value>2404</value>
-          <value>2416</value>
-          <value>2417</value>
-          <value>2413</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2404"/>
+          <ref bean="skill_2416"/>
+          <ref bean="skill_2417"/>
+          <ref bean="skill_2413"/>
         </list>
-        <list>
-          <value>2405</value>
-          <value>2412</value>
-          <value>2411</value>
-          <value>2420</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2405"/>
+          <ref bean="skill_2412"/>
+          <ref bean="skill_2411"/>
+          <ref bean="skill_2420"/>
         </list>
-        <list>
-          <value>2408</value>
-          <value>2418</value>
-          <value>0</value>
-          <value>2410</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2408"/>
+          <ref bean="skill_2418"/>
+          <null/>
+          <ref bean="skill_2410"/>
         </list>
-        <list>
-          <value>2401</value>
-          <value>2415</value>
-          <value>2419</value>
-          <value>2407</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2401"/>
+          <ref bean="skill_2415"/>
+          <ref bean="skill_2419"/>
+          <ref bean="skill_2407"/>
         </list>
-        <list>
-          <value>2402</value>
-          <value>0</value>
-          <value>0</value>
-          <value>2414</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2402"/>
+          <null/>
+          <null/>
+          <ref bean="skill_2414"/>
         </list>
       </list>
     </property>
@@ -748,41 +751,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>3222</value>
-          <value>3208</value>
-          <value>3217</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3222"/>
+          <ref bean="skill_3208"/>
+          <ref bean="skill_3217"/>
+          <null/>
         </list>
-        <list>
-          <value>3224</value>
-          <value>3223</value>
-          <value>3221</value>
-          <value>3218</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3224"/>
+          <ref bean="skill_3223"/>
+          <ref bean="skill_3221"/>
+          <ref bean="skill_3218"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3207</value>
-          <value>3220</value>
-          <value>3219</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3207"/>
+          <ref bean="skill_3220"/>
+          <ref bean="skill_3219"/>
         </list>
-        <list>
-          <value>3202</value>
-          <value>0</value>
-          <value>3205</value>
-          <value>3211</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3202"/>
+          <null/>
+          <ref bean="skill_3205"/>
+          <ref bean="skill_3211"/>
         </list>
-        <list>
-          <value>3203</value>
-          <value>3201</value>
-          <value>3214</value>
-          <value>3213</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3203"/>
+          <ref bean="skill_3201"/>
+          <ref bean="skill_3214"/>
+          <ref bean="skill_3213"/>
         </list>
-        <list>
-          <value>3209</value>
-          <value>0</value>
-          <value>3210</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3209"/>
+          <null/>
+          <ref bean="skill_3210"/>
+          <null/>
         </list>
       </list>
     </property>
@@ -801,41 +804,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>3402</value>
-          <value>0</value>
-          <value>3426</value>
-          <value>3409</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3402"/>
+          <null/>
+          <ref bean="skill_3426"/>
+          <ref bean="skill_3409"/>
         </list>
-        <list>
-          <value>3425</value>
-          <value>3418</value>
-          <value>3414</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3425"/>
+          <ref bean="skill_3418"/>
+          <ref bean="skill_3414"/>
+          <null/>
         </list>
-        <list>
-          <value>3407</value>
-          <value>3401</value>
-          <value>3416</value>
-          <value>3403</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3407"/>
+          <ref bean="skill_3401"/>
+          <ref bean="skill_3416"/>
+          <ref bean="skill_3403"/>
         </list>
-        <list>
-          <value>3408</value>
-          <value>0</value>
-          <value>3421</value>
-          <value>3422</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3408"/>
+          <null/>
+          <ref bean="skill_3421"/>
+          <ref bean="skill_3422"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3406</value>
-          <value>3420</value>
-          <value>3423</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3406"/>
+          <ref bean="skill_3420"/>
+          <ref bean="skill_3423"/>
         </list>
-        <list>
-          <value>3411</value>
-          <value>0</value>
-          <value>0</value>
-          <value>3412</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3411"/>
+          <null/>
+          <null/>
+          <ref bean="skill_3412"/>
         </list>
       </list>
     </property>
@@ -854,41 +857,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>301</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_301"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>303</value>
-          <value>302</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_303"/>
+          <ref bean="skill_302"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>304</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_304"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>305</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_305"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>307</value>
-          <value>306</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_307"/>
+          <ref bean="skill_306"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>308</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_308"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -907,41 +910,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>351</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_351"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>353</value>
-          <value>352</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_353"/>
+          <ref bean="skill_352"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>354</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_354"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>355</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_355"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>357</value>
-          <value>356</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_357"/>
+          <ref bean="skill_356"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>358</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_358"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -960,41 +963,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>501</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_501"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>503</value>
-          <value>502</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_503"/>
+          <ref bean="skill_502"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>504</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_504"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>505</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_505"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>507</value>
-          <value>506</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_507"/>
+          <ref bean="skill_506"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>511</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_511"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1013,41 +1016,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>551</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_551"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>553</value>
-          <value>552</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_553"/>
+          <ref bean="skill_552"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>554</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_554"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>555</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_555"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>557</value>
-          <value>556</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_557"/>
+          <ref bean="skill_556"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>558</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_558"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1066,41 +1069,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>1301</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1301"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1303</value>
-          <value>1302</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1303"/>
+          <ref bean="skill_1302"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1304</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1304"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1305</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1305"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1307</value>
-          <value>1306</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1307"/>
+          <ref bean="skill_1306"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1308</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1308"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1119,41 +1122,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>1351</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1351"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1353</value>
-          <value>1352</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1353"/>
+          <ref bean="skill_1352"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1354</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1354"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1355</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1355"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1357</value>
-          <value>1356</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1357"/>
+          <ref bean="skill_1356"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1358</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1358"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1172,41 +1175,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>1501</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1501"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1503</value>
-          <value>1502</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1503"/>
+          <ref bean="skill_1502"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1504</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1504"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1505</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1505"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1507</value>
-          <value>1506</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1507"/>
+          <ref bean="skill_1506"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1508</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1508"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1225,41 +1228,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>1551</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1551"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1553</value>
-          <value>1552</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1553"/>
+          <ref bean="skill_1552"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1554</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1554"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1555</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1555"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>1557</value>
-          <value>1556</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1557"/>
+          <ref bean="skill_1556"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>1558</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1558"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1278,41 +1281,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>2301</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2301"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2303</value>
-          <value>2302</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2303"/>
+          <ref bean="skill_2302"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2304</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2304"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2305</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2305"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2307</value>
-          <value>2306</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2307"/>
+          <ref bean="skill_2306"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2308</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2308"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1331,41 +1334,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>2351</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2351"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2353</value>
-          <value>2352</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2353"/>
+          <ref bean="skill_2352"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2354</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2354"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2355</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2355"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2357</value>
-          <value>2356</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2357"/>
+          <ref bean="skill_2356"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2358</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2358"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1384,41 +1387,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>2501</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2501"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2503</value>
-          <value>2502</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2503"/>
+          <ref bean="skill_2502"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2504</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2504"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2505</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2505"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2507</value>
-          <value>2506</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2507"/>
+          <ref bean="skill_2506"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2508</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2508"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1437,41 +1440,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>2551</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2551"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2553</value>
-          <value>2552</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2553"/>
+          <ref bean="skill_2552"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2554</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2554"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2555</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2555"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>2557</value>
-          <value>2556</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2557"/>
+          <ref bean="skill_2556"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>2558</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2558"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1490,41 +1493,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>3302</value>
-          <value>3301</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3302"/>
+          <ref bean="skill_3301"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3303</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3303"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3304</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3304"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3305</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3305"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3307</value>
-          <value>3306</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3307"/>
+          <ref bean="skill_3306"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3308</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3308"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1543,41 +1546,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>3351</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3351"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3353</value>
-          <value>3352</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3353"/>
+          <ref bean="skill_3352"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3354</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3354"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3355</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3355"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3357</value>
-          <value>3356</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3357"/>
+          <ref bean="skill_3356"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3358</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3358"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1596,41 +1599,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>3501</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3501"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3503</value>
-          <value>3502</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3503"/>
+          <ref bean="skill_3502"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3504</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3504"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3505</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3505"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3507</value>
-          <value>3506</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3507"/>
+          <ref bean="skill_3506"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3508</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3508"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1649,41 +1652,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>3551</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3551"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3553</value>
-          <value>3552</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3553"/>
+          <ref bean="skill_3552"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3554</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3554"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3555</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3555"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>3557</value>
-          <value>3556</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3557"/>
+          <ref bean="skill_3556"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>3558</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3558"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1702,41 +1705,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>4201</value>
-          <value>7303</value>
-          <value>4206</value>
-          <value>4216</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4201"/>
+          <ref bean="skill_7303"/>
+          <ref bean="skill_4206"/>
+          <ref bean="skill_4216"/>
         </list>
-        <list>
-          <value>7301</value>
-          <value>4212</value>
-          <value>4203</value>
-          <value>4217</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7301"/>
+          <ref bean="skill_4212"/>
+          <ref bean="skill_4203"/>
+          <ref bean="skill_4217"/>
         </list>
-        <list>
-          <value>7302</value>
-          <value>4213</value>
-          <value>4207</value>
-          <value>4219</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7302"/>
+          <ref bean="skill_4213"/>
+          <ref bean="skill_4207"/>
+          <ref bean="skill_4219"/>
         </list>
-        <list>
-          <value>4202</value>
-          <value>4215</value>
-          <value>4209</value>
-          <value>4218</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4202"/>
+          <ref bean="skill_4215"/>
+          <ref bean="skill_4209"/>
+          <ref bean="skill_4218"/>
         </list>
-        <list>
-          <value>4204</value>
-          <value>4214</value>
-          <value>4208</value>
-          <value>7304</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4204"/>
+          <ref bean="skill_4214"/>
+          <ref bean="skill_4208"/>
+          <ref bean="skill_7304"/>
         </list>
-        <list>
-          <value>4205</value>
-          <value>0</value>
-          <value>4221</value>
-          <value>4220</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4205"/>
+          <null/>
+          <ref bean="skill_4221"/>
+          <ref bean="skill_4220"/>
         </list>
       </list>
     </property>
@@ -1755,41 +1758,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>4301</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4301"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4303</value>
-          <value>4302</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4303"/>
+          <ref bean="skill_4302"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4559</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4559"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4305</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4305"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4307</value>
-          <value>4306</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4307"/>
+          <ref bean="skill_4306"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4308</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4308"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1808,41 +1811,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>4351</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4351"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4353</value>
-          <value>4352</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4353"/>
+          <ref bean="skill_4352"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4354</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4354"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4355</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4355"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4357</value>
-          <value>4356</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4357"/>
+          <ref bean="skill_4356"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4358</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4358"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1861,41 +1864,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>4409</value>
-          <value>4401</value>
-          <value>4405</value>
-          <value>4415</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4409"/>
+          <ref bean="skill_4401"/>
+          <ref bean="skill_4405"/>
+          <ref bean="skill_4415"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4407</value>
-          <value>4404</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4407"/>
+          <ref bean="skill_4404"/>
+          <null/>
         </list>
-        <list>
-          <value>4410</value>
-          <value>4406</value>
-          <value>4414</value>
-          <value>4417</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4410"/>
+          <ref bean="skill_4406"/>
+          <ref bean="skill_4414"/>
+          <ref bean="skill_4417"/>
         </list>
-        <list>
-          <value>4411</value>
-          <value>4408</value>
-          <value>4418</value>
-          <value>4416</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4411"/>
+          <ref bean="skill_4408"/>
+          <ref bean="skill_4418"/>
+          <ref bean="skill_4416"/>
         </list>
-        <list>
-          <value>4412</value>
-          <value>4403</value>
-          <value>4402</value>
-          <value>4419</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4412"/>
+          <ref bean="skill_4403"/>
+          <ref bean="skill_4402"/>
+          <ref bean="skill_4419"/>
         </list>
-        <list>
-          <value>4413</value>
-          <value>0</value>
-          <value>0</value>
-          <value>4420</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4413"/>
+          <null/>
+          <null/>
+          <ref bean="skill_4420"/>
         </list>
       </list>
     </property>
@@ -1914,41 +1917,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>4501</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4501"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4503</value>
-          <value>4502</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4503"/>
+          <ref bean="skill_4502"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4504</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4504"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4505</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4505"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4507</value>
-          <value>4506</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4507"/>
+          <ref bean="skill_4506"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4508</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4508"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -1967,41 +1970,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>4551</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4551"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4553</value>
-          <value>4552</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4553"/>
+          <ref bean="skill_4552"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4554</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4554"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4555</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4555"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>4557</value>
-          <value>4556</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4557"/>
+          <ref bean="skill_4556"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>4558</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4558"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2020,41 +2023,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>5201</value>
-          <value>5202</value>
-          <value>5211</value>
-          <value>5214</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5201"/>
+          <ref bean="skill_5202"/>
+          <ref bean="skill_5211"/>
+          <ref bean="skill_5214"/>
         </list>
-        <list>
-          <value>5205</value>
-          <value>5204</value>
-          <value>5213</value>
-          <value>5215</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5205"/>
+          <ref bean="skill_5204"/>
+          <ref bean="skill_5213"/>
+          <ref bean="skill_5215"/>
         </list>
-        <list>
-          <value>5208</value>
-          <value>5206</value>
-          <value>5212</value>
-          <value>5216</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5208"/>
+          <ref bean="skill_5206"/>
+          <ref bean="skill_5212"/>
+          <ref bean="skill_5216"/>
         </list>
-        <list>
-          <value>5203</value>
-          <value>5207</value>
-          <value>5218</value>
-          <value>5217</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5203"/>
+          <ref bean="skill_5207"/>
+          <ref bean="skill_5218"/>
+          <ref bean="skill_5217"/>
         </list>
-        <list>
-          <value>5210</value>
-          <value>5209</value>
-          <value>0</value>
-          <value>5220</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5210"/>
+          <ref bean="skill_5209"/>
+          <null/>
+          <ref bean="skill_5220"/>
         </list>
-        <list>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2073,41 +2076,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>5301</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5301"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5303</value>
-          <value>5302</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5303"/>
+          <ref bean="skill_5302"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5304</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5304"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5305</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5305"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5307</value>
-          <value>5306</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5307"/>
+          <ref bean="skill_5306"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5308</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5308"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2126,41 +2129,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>5401</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5401"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5403</value>
-          <value>5402</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5403"/>
+          <ref bean="skill_5402"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5404</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5404"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5405</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5405"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5407</value>
-          <value>5406</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5407"/>
+          <ref bean="skill_5406"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5408</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5408"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2179,41 +2182,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>5103</value>
-          <value>5101</value>
-          <value>5109</value>
-          <value>5111</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5103"/>
+          <ref bean="skill_5101"/>
+          <ref bean="skill_5109"/>
+          <ref bean="skill_5111"/>
         </list>
-        <list>
-          <value>5104</value>
-          <value>5102</value>
-          <value>5110</value>
-          <value>5112</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5104"/>
+          <ref bean="skill_5102"/>
+          <ref bean="skill_5110"/>
+          <ref bean="skill_5112"/>
         </list>
-        <list>
-          <value>5105</value>
-          <value>5121</value>
-          <value>5117</value>
-          <value>5113</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5105"/>
+          <ref bean="skill_5121"/>
+          <ref bean="skill_5117"/>
+          <ref bean="skill_5113"/>
         </list>
-        <list>
-          <value>5106</value>
-          <value>5122</value>
-          <value>5118</value>
-          <value>5114</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5106"/>
+          <ref bean="skill_5122"/>
+          <ref bean="skill_5118"/>
+          <ref bean="skill_5114"/>
         </list>
-        <list>
-          <value>5107</value>
-          <value>0</value>
-          <value>5119</value>
-          <value>5115</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5107"/>
+          <null/>
+          <ref bean="skill_5119"/>
+          <ref bean="skill_5115"/>
         </list>
-        <list>
-          <value>5108</value>
-          <value>0</value>
-          <value>0</value>
-          <value>5116</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5108"/>
+          <null/>
+          <null/>
+          <ref bean="skill_5116"/>
         </list>
       </list>
     </property>
@@ -2232,41 +2235,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>5501</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5501"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5505</value>
-          <value>5502</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5505"/>
+          <ref bean="skill_5502"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5503</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5503"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5504</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5504"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5507</value>
-          <value>5506</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5507"/>
+          <ref bean="skill_5506"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5508</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5508"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2285,41 +2288,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>5601</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5601"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5605</value>
-          <value>5602</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5605"/>
+          <ref bean="skill_5602"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5603</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5603"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5604</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5604"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>5607</value>
-          <value>5606</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5607"/>
+          <ref bean="skill_5606"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>5608</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5608"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2338,41 +2341,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>6201</value>
-          <value>6207</value>
-          <value>6214</value>
-          <value>6213</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6201"/>
+          <ref bean="skill_6207"/>
+          <ref bean="skill_6214"/>
+          <ref bean="skill_6213"/>
         </list>
-        <list>
-          <value>6202</value>
-          <value>6209</value>
-          <value>6215</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6202"/>
+          <ref bean="skill_6209"/>
+          <ref bean="skill_6215"/>
+          <null/>
         </list>
-        <list>
-          <value>6203</value>
-          <value>6210</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6203"/>
+          <ref bean="skill_6210"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6204</value>
-          <value>6208</value>
-          <value>6217</value>
-          <value>6216</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6204"/>
+          <ref bean="skill_6208"/>
+          <ref bean="skill_6217"/>
+          <ref bean="skill_6216"/>
         </list>
-        <list>
-          <value>6205</value>
-          <value>6211</value>
-          <value>6218</value>
-          <value>6219</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6205"/>
+          <ref bean="skill_6211"/>
+          <ref bean="skill_6218"/>
+          <ref bean="skill_6219"/>
         </list>
-        <list>
-          <value>6206</value>
-          <value>6212</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6206"/>
+          <ref bean="skill_6212"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2391,41 +2394,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>6501</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6501"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6502</value>
-          <value>6503</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6502"/>
+          <ref bean="skill_6503"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6505</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6505"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6506</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6506"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6550</value>
-          <value>6507</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6550"/>
+          <ref bean="skill_6507"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6554</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6554"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2444,41 +2447,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>6401</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6401"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6402</value>
-          <value>6403</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6402"/>
+          <ref bean="skill_6403"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6404</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6404"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6405</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6405"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6551</value>
-          <value>6407</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6551"/>
+          <ref bean="skill_6407"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6553</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6553"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2497,41 +2500,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>6301</value>
-          <value>6313</value>
-          <value>6316</value>
-          <value>6308</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6301"/>
+          <ref bean="skill_6313"/>
+          <ref bean="skill_6316"/>
+          <ref bean="skill_6308"/>
         </list>
-        <list>
-          <value>6303</value>
-          <value>6314</value>
-          <value>6317</value>
-          <value>6307</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6303"/>
+          <ref bean="skill_6314"/>
+          <ref bean="skill_6317"/>
+          <ref bean="skill_6307"/>
         </list>
-        <list>
-          <value>6304</value>
-          <value>6320</value>
-          <value>6319</value>
-          <value>6309</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6304"/>
+          <ref bean="skill_6320"/>
+          <ref bean="skill_6319"/>
+          <ref bean="skill_6309"/>
         </list>
-        <list>
-          <value>6305</value>
-          <value>0</value>
-          <value>0</value>
-          <value>6310</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6305"/>
+          <null/>
+          <null/>
+          <ref bean="skill_6310"/>
         </list>
-        <list>
-          <value>6302</value>
-          <value>6315</value>
-          <value>6318</value>
-          <value>6311</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6302"/>
+          <ref bean="skill_6315"/>
+          <ref bean="skill_6318"/>
+          <ref bean="skill_6311"/>
         </list>
-        <list>
-          <value>6306</value>
-          <value>0</value>
-          <value>0</value>
-          <value>6312</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6306"/>
+          <null/>
+          <null/>
+          <ref bean="skill_6312"/>
         </list>
       </list>
     </property>
@@ -2550,41 +2553,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>6601</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6601"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6603</value>
-          <value>6604</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6603"/>
+          <ref bean="skill_6604"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6606</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6606"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6607</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6607"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6602</value>
-          <value>6605</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6602"/>
+          <ref bean="skill_6605"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6608</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6608"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2603,41 +2606,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>6701</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6701"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6703</value>
-          <value>6705</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6703"/>
+          <ref bean="skill_6705"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6704</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6704"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6706</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6706"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>6702</value>
-          <value>6707</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6702"/>
+          <ref bean="skill_6707"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>6708</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6708"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2656,41 +2659,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>7020</value>
-          <value>7021</value>
-          <value>7022</value>
-          <value>7023</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7020"/>
+          <ref bean="skill_7021"/>
+          <ref bean="skill_7022"/>
+          <ref bean="skill_7023"/>
         </list>
-        <list>
-          <value>7024</value>
-          <value>0</value>
-          <value>7025</value>
-          <value>7026</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7024"/>
+          <null/>
+          <ref bean="skill_7025"/>
+          <ref bean="skill_7026"/>
         </list>
-        <list>
-          <value>7027</value>
-          <value>7028</value>
-          <value>7029</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7027"/>
+          <ref bean="skill_7028"/>
+          <ref bean="skill_7029"/>
+          <null/>
         </list>
-        <list>
-          <value>7030</value>
-          <value>7031</value>
-          <value>7032</value>
-          <value>7033</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7030"/>
+          <ref bean="skill_7031"/>
+          <ref bean="skill_7032"/>
+          <ref bean="skill_7033"/>
         </list>
-        <list>
-          <value>7034</value>
-          <value>7035</value>
-          <value>7036</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7034"/>
+          <ref bean="skill_7035"/>
+          <ref bean="skill_7036"/>
+          <null/>
         </list>
-        <list>
-          <value>7037</value>
-          <value>0</value>
-          <value>7038</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7037"/>
+          <null/>
+          <ref bean="skill_7038"/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2709,41 +2712,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>7101</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7101"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>7102</value>
-          <value>7103</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7102"/>
+          <ref bean="skill_7103"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>7104</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7104"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>7105</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7105"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>7107</value>
-          <value>7106</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7107"/>
+          <ref bean="skill_7106"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>7108</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7108"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2762,41 +2765,41 @@
     </property>
     <property name="skillTree">
       <list>
-        <list>
-          <value>7201</value>
-          <value>0</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7201"/>
+          <null/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>7202</value>
-          <value>7203</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7202"/>
+          <ref bean="skill_7203"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>7204</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7204"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>7205</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7205"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>7207</value>
-          <value>7206</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7207"/>
+          <ref bean="skill_7206"/>
+          <null/>
+          <null/>
         </list>
-        <list>
-          <value>0</value>
-          <value>7208</value>
-          <value>0</value>
-          <value>0</value>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7208"/>
+          <null/>
+          <null/>
         </list>
       </list>
     </property>
@@ -2951,89 +2954,6 @@
     <property name="secondary" ref="job_piercer"/>
     <property name="tertiary" ref="job_stingbreezer"/>
   </bean>
-  <util:list id="levels" value-type="int">
-    <value>0</value>
-    <value>0</value>
-    <value>3</value>
-    <value>6</value>
-    <value>9</value>
-    <value>12</value>
-    <value>15</value>
-    <value>18</value>
-    <value>21</value>
-    <value>24</value>
-    <value>27</value>
-    <value>30</value>
-    <value>33</value>
-    <value>36</value>
-    <value>39</value>
-    <value>42</value>
-    <value>45</value>
-    <value>48</value>
-    <value>51</value>
-    <value>54</value>
-    <value>57</value>
-    <value>60</value>
-    <value>63</value>
-    <value>66</value>
-    <value>69</value>
-    <value>72</value>
-    <value>75</value>
-    <value>78</value>
-    <value>81</value>
-    <value>84</value>
-    <value>87</value>
-    <value>90</value>
-    <value>93</value>
-    <value>96</value>
-    <value>99</value>
-    <value>102</value>
-    <value>105</value>
-    <value>108</value>
-    <value>111</value>
-    <value>114</value>
-    <value>117</value>
-    <value>120</value>
-    <value>123</value>
-    <value>126</value>
-    <value>129</value>
-    <value>132</value>
-    <value>135</value>
-    <value>138</value>
-    <value>141</value>
-    <value>144</value>
-    <value>147</value>
-    <value>149</value>
-    <value>151</value>
-    <value>153</value>
-    <value>155</value>
-    <value>157</value>
-    <value>159</value>
-    <value>161</value>
-    <value>163</value>
-    <value>165</value>
-    <value>167</value>
-    <value>169</value>
-    <value>171</value>
-    <value>173</value>
-    <value>175</value>
-    <value>177</value>
-    <value>179</value>
-    <value>181</value>
-    <value>183</value>
-    <value>185</value>
-    <value>187</value>
-    <value>189</value>
-    <value>191</value>
-    <value>193</value>
-    <value>195</value>
-    <value>197</value>
-    <value>199</value>
-    <value>201</value>
-    <value>203</value>
-    <value>205</value>
-    <value>207</value>
-  </util:list>
   <util:list id="all_jobs_primary" value-type="dnss.model.Job">
     <ref bean="job_warrior"/>
     <ref bean="job_archer"/>
@@ -3093,84 +3013,4 @@
     <ref bean="job_flurry"/>
     <ref bean="job_stingbreezer"/>
   </util:list>
-  <util:list id="skill_types" value-type="java.lang.String">
-    <value>Instant</value>
-    <value>Passive</value>
-    <value>Reactive Passive</value>
-    <value>Passive Enhanced</value>
-  </util:list>
-  <bean id="warrior_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="0" value="Greatsword"/>
-        <entry key="1" value="Gauntlet"/>
-        <entry key="2" value="Axe"/>
-        <entry key="3" value="Hammer"/>
-      </map>
-    </constructor-arg>
-  </bean>
-  <bean id="archer_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="4" value="Shortbow"/>
-        <entry key="5" value="Longbow"/>
-        <entry key="6" value="Crossbow"/>
-        <entry key="7" value="Quiver"/>
-      </map>
-    </constructor-arg>
-  </bean>
-  <bean id="soceress_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="8" value="Book"/>
-        <entry key="9" value="Orb"/>
-        <entry key="10" value="Puppet"/>
-      </map>
-    </constructor-arg>
-  </bean>
-  <bean id="cleric_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="11" value="Mace"/>
-        <entry key="12" value="Flail"/>
-        <entry key="13" value="Wand"/>
-        <entry key="14" value="Shield"/>
-      </map>
-    </constructor-arg>
-  </bean>
-  <bean id="academic_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="16" value="Cannon"/>
-        <entry key="17" value="Bubble Blaster"/>
-        <entry key="18" value="Powerglove"/>
-      </map>
-    </constructor-arg>
-  </bean>
-  <bean id="kali_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="19" value="Fan"/>
-        <entry key="20" value="Chakram"/>
-        <entry key="21" value="Focus"/>
-      </map>
-    </constructor-arg>
-  </bean>
-  <bean id="assassin_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="22" value="Scimtar"/>
-        <entry key="23" value="Dagger"/>
-        <entry key="24" value="Hook"/>
-      </map>
-    </constructor-arg>
-  </bean>
-  <bean id="lencea_weapons" class="java.util.HashMap">
-    <constructor-arg>
-      <map key-type="java.lang.String" value-type="java.lang.String">
-        <entry key="25" value="Spear"/>
-        <entry key="27" value="Bracelet"/>
-      </map>
-    </constructor-arg>
-  </bean>
 </beans>
