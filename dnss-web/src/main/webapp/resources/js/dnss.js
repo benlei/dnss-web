@@ -30,7 +30,7 @@ var dnss = new (function DNSS() {
     });
 
     // obtain json
-    for (var i = 0; i < properties.jobs.length; i++) {
+    for (var i = 0; i < 3; i++) {
       $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + ".json", addSkills);
     }
   };
@@ -57,8 +57,8 @@ var dnss = new (function DNSS() {
       $("#job-sp-"+advancement+" .sp").removeClass("r");
     }
 
-    $("#job-sp li:last .sp").html(new_total + "/" + properties.max.sp[properties.max.sp.length - 1]);
-    if (new_total > properties.max.sp[properties.max.sp.length - 1]) {
+    $("#job-sp li:last .sp").html(new_total + "/" + properties.max.sp[3]);
+    if (new_total > properties.max.sp[3]) {
       $("#job-sp li:last .sp").addClass("r");
     } else {
       $("#job-sp li:last .sp").removeClass("r");
