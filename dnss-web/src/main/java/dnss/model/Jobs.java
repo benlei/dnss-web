@@ -116,4 +116,35 @@ public class Jobs implements Iterable<Job> {
 
         return null;
     }
+
+    public boolean isValid() {
+        if (primary == null && secondary == null && tertiary == null) {
+            return false;
+        }
+
+        if ((primary == null && secondary == null) ||
+                (primary == null && tertiary == null) ||
+                (secondary == null && tertiary == null)) {
+            return true;
+        }
+
+        if (primary == null || secondary == null || tertiary == null) {
+            return (primary == null && tertiary.getParent().equals(secondary)) ||
+                    (secondary == null && tertiary.getParent().getParent().equals(primary)) ||
+                    (tertiary == null && secondary.getParent().equals(primary));
+        }
+
+        return tertiary.getParent().equals(secondary) && secondary.getParent().equals(primary);
+    }
+
+    public int getTotalValid() {
+        int sum = 0;
+        for (Job j : this) {
+            if (j != null) {
+                sum++;
+            }
+        }
+
+        return sum;
+    }
 }

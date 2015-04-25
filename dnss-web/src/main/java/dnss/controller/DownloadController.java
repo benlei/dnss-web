@@ -28,21 +28,21 @@ public class DownloadController {
     @Autowired
     private SP sp;
 
-    @RequestMapping("/{alignment:[h|v]}/{identifier:[a-z,]+}/{level:[1-9][0-9]*}/{build:[0-9a-zA-Z-\\.\\+]{48,}}")
+    @RequestMapping("/{alignment:[h|v]}/{identifiers:[a-z,]+}/{level:[1-9][0-9]*}/{build:[0-9a-zA-Z-\\.\\+]{48,}}")
     public String download(HttpServletRequest request, HttpServletResponse response,
-                           @PathVariable("identifier") String identifier,
+                           @PathVariable("identifiers") String identifiers,
                            @PathVariable("level") int level,
                            @PathVariable("build") String build,
                            @PathVariable("alignment") String alignment,
                            ModelMap model) throws Exception {
-        String[] identifiers = identifier.split(",");
-        if (identifier.length() != 3) { // will do next release
+        String[] r = identifiers.split(",");
+        if (r.length < 1 || r.length > 3) { // will do next release
             response.sendError(SC_NOT_FOUND, "Not supported");
         }
 
         ArrayList<Job> list = new ArrayList<Job>();
         // first make sure they are all valid jobs
-        for (String s : identifiers) {
+        for (String s : r) {
             if (!context.containsBean("job_" + s)) {
                 response.sendError(SC_NOT_FOUND, "No job '"+s+"'");
             }
@@ -52,8 +52,7 @@ public class DownloadController {
 
         Jobs jobs = sortJobList(list);
 
-
-        if (jobs == null) {
+        if (jobs == null || ! jobs.isValid()) {
             response.sendError(SC_NOT_FOUND, "Invalid job list");
         }
 
@@ -62,9 +61,12 @@ public class DownloadController {
 
         // set the level+sp cap
         jobs.setLevel(level);
-        jobs.setMaxSP(sp.forCap(level));
+        jobs.setMaxSP(sp.forCap(level), tertiary.getSpRatio());
 
         model.addAttribute("alignment", alignment);
+        model.addAttribute("jobs", jobs);
+
+        //
         return "download";
     }
 

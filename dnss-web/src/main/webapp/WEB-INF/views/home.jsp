@@ -10,8 +10,8 @@
 <nav id="jobs" class="no-select">
 <ul><c:forEach items="${primaries}" var="primary" varStatus="pLoop">
 <li class="primary">${primary.name}
-<ul class="sub-jobs"><c:forEach items="${secondaries}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent.identifier == primary.identifier}">
-<li class="secondary">${secondary.name}</li><c:forEach items="${tertiaries}" var="tertiary" varStatus="tLoop"><c:if test="${tertiary.parent.identifier == secondary.identifier}">
+<ul class="sub-jobs"><c:forEach items="${secondaries}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent == primary}">
+<li class="secondary">${secondary.name}</li><c:forEach items="${tertiaries}" var="tertiary" varStatus="tLoop"><c:if test="${tertiary.parent == secondary}">
 <li class="tertiary"><a href="/job/${tertiary.identifier}">${tertiary.name}</a></li></c:if></c:forEach></c:if></c:forEach></ul>
 </li></c:forEach>
 </ul>

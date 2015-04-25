@@ -75,4 +75,19 @@ public class Job {
     public void setMaxSkillRequiredLevel(int maxSkillRequiredLevel) {
         this.maxSkillRequiredLevel = Math.min(advancement.maxRequiredSkillLevel, maxSkillRequiredLevel);
     }
+
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (! (obj instanceof Job)) {
+            return false;
+        }
+
+        return getIdentifier().equals(((Job)obj).getIdentifier());
+    }
 }
