@@ -76,7 +76,7 @@ fi
 
 if [[ ${EXTRACT_DNT} -eq 1 ]]; then
     dnt
-    cd /cygdrive/f/resource/sql
+    cd  "$(cygpath $(dirname $(grep destination dnss-tools/src/main/resources/dnt.properties | head -1 | cut -d= -f2 | sed 's/ *//')))"
     export PGPASSWORD=dnss
     for sql in *; do
       psql -h localhost -U dnss -d dnss < ${sql}
@@ -121,7 +121,8 @@ if [[ ${SKILLICONS} -eq 1 ]]; then
     cd ${CWD}/dnss-web/src/main/webapp/resources/images/skillicons
     echo Removing $(ls)
     rm -f *
-    cd /cygdrive/f/resource/ui/mainbar
+    DNPATH=$(cygpath $(grep global.destination dnss-tools/src/main/resources/pak.properties  | head -1 | cut -d= -f2 | sed 's/ *//'))
+    cd "${DNPATH}/resource/ui/mainbar"
     echo Formatting $(ls skillicon*.dds) to PNG
     mogrify -format png skillicon*.dds
     echo Cropping $(ls skillicon*.png)
@@ -131,8 +132,8 @@ if [[ ${SKILLICONS} -eq 1 ]]; then
         pngcrush -ow ${png} >/dev/null
     done
     cd -
-    echo Copying over $(ls /cygdrive/f/resource/ui/mainbar/skillicon*.png) to $(pwd)
-    cp -f /cygdrive/f/resource/ui/mainbar/skillicon*.png .
+    echo Copying over $(ls "${DNPATH}/resource/ui/mainbar/"skillicon*.png) to $(pwd)
+    cp -f ${DNPATH}/resource/ui/mainbar/skillicon*.png .
     version=$(ruby ${CWD}/dnss-tools/src/main/ruby/update_properties.rb skillicon)
     for file in *; do
         echo Renaming ${file} to ${version}_${file}
