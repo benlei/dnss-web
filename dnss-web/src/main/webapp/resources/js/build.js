@@ -25,7 +25,7 @@ var build = new (function Build() {
   }
 
   this.commit = function() {
-    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + properties.base + "?" + r.join(""));
+    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + properties.jobs[2].id + "-" + properties.cap + "?" + r.join(""));
   };
 
   this.use = function(s) {

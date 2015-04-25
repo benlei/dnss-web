@@ -18,4 +18,12 @@ public class SP {
 
         return sp[cap-1];
     }
+
+    public int getLatestCap() {
+        return sp.length;
+    }
+
+    public boolean isLastestCap(int cap) {
+        return cap == getLatestCap();
+    }
 }

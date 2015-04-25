@@ -120,28 +120,28 @@
                                 <include>**/*.css</include>
                             </includes>
                         </aggregation>
-                        <!--<aggregation>-->
-                            <!--&lt;!&ndash;Use below to NOT compress the aggregated file&ndash;&gt;-->
-                            <!--<inputDir>${project.basedir}/src/main/webapp/resources/download/js</inputDir>-->
+                        <aggregation>
+                            <!--Use below to NOT compress the aggregated file-->
+                            <inputDir>${project.basedir}/src/main/webapp/resources/download/js</inputDir>
 
-                            <!--&lt;!&ndash;Use below to compress the aggregated file&ndash;&gt;-->
-                            <!--&lt;!&ndash;<inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>&ndash;&gt;-->
-                            <!--<output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-download.js</output>-->
-                            <!--<includes>-->
-                                <!--<include>**/*.js</include>-->
-                            <!--</includes>-->
-                        <!--</aggregation>-->
-                        <!--<aggregation>-->
-                            <!--&lt;!&ndash;Use below to NOT compress the aggregated file&ndash;&gt;-->
-                            <!--<inputDir>${project.basedir}/src/main/webapp/resources/download/css</inputDir>-->
+                            <!--Use below to compress the aggregated file-->
+                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>-->
+                            <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-download.js</output>
+                            <includes>
+                                <include>**/*.js</include>
+                            </includes>
+                        </aggregation>
+                        <aggregation>
+                            <!--Use below to NOT compress the aggregated file-->
+                            <inputDir>${project.basedir}/src/main/webapp/resources/download/css</inputDir>
 
-                            <!--&lt;!&ndash;Use below to compress the aggregated file&ndash;&gt;-->
-                            <!--&lt;!&ndash;<inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>&ndash;&gt;-->
-                            <!--<output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-download.css</output>-->
-                            <!--<includes>-->
-                                <!--<include>**/*.css</include>-->
-                            <!--</includes>-->
-                        <!--</aggregation>-->
+                            <!--Use below to compress the aggregated file-->
+                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>-->
+                            <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-download.css</output>
+                            <includes>
+                                <include>**/*.css</include>
+                            </includes>
+                        </aggregation>
                     </aggregations>
                 </configuration>
             </plugin>

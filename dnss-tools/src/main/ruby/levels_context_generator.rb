@@ -36,7 +36,7 @@ sp_by_level.shift
 ##############################################################################
 builder = Nokogiri::XML::Builder.new do |xml|
   xml.beans(SPRING_BEAN_HEADER) do
-    xml.bean('id' => 'sp', 'class' => 'dnss.model.SP') do
+    xml.bean('id' => 'sp', 'class' => 'dnss.model.SP', 'scope' => 'singleton') do
       xml.property('name' => 'sp') do
         xml.list('value-type' => 'int') do
           sp_by_level.each do |sp|

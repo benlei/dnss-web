@@ -68,7 +68,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
     jobs.each_value do |job|
       job['skilltree'] = job['skilltree'].skilltree_partition()
 
-      xml.bean('id' => 'job_' + job['identifier'], 'class' => 'dnss.model.Job') do
+      xml.bean('id' => 'job_' + job['identifier'], 'class' => 'dnss.model.Job', 'scope' => 'prototype') do # create job only if needed
         xml.property('name' => 'name', 'value' => job['jobname'])
         xml.property('name' => 'identifier', 'value' => job['identifier'])
         xml.property('name' => 'advancement', 'value' => job['advancement'])
@@ -93,7 +93,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
     end
 
     jobs.select {|id, job| job['advancement'] == 2}.each_value do |job|
-      xml.bean('id' => 'jobs_' + job['identifier'], 'class' => 'dnss.model.Jobs') do
+      xml.bean('id' => 'jobs_' + job['identifier'], 'class' => 'dnss.model.Jobs', 'scope' => 'prototype') do # make it on an as needed basis
         xml.property('name' => 'primary', 'ref' => 'job_' + jobs[jobs[job['parentjob']]['parentjob']]['identifier'])
         xml.property('name' => 'secondary', 'ref' => 'job_' + jobs[job['parentjob']]['identifier'])
         xml.property('name' => 'tertiary', 'ref' => 'job_' + job['identifier'])
@@ -102,7 +102,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
 
     adv = ['primary', 'secondary', 'tertiary']
     (0..2).each do |a|
-      xml['util'].list('id' => 'all_jobs_%s' % adv[a], 'value-type' => 'dnss.model.Job') do
+      xml['util'].list('id' => 'all_jobs_%s' % adv[a], 'value-type' => 'dnss.model.Job', 'scope' => 'singleton') do # should have 1 of this with its own unadulterated job
         jobs.select {|id, job| job['advancement'] == a}.each_value do |job|
           xml.ref('bean' => 'job_' + job['identifier'])
         end

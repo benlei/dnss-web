@@ -1,5 +1,7 @@
 package dnss.model;
 
+import dnss.enums.Advancement;
+
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
@@ -8,6 +10,8 @@ public class Jobs implements Iterable<Job> {
     private Job primary;
     private Job secondary;
     private Job tertiary;
+    private int level;
+    private int maxSP;
 
     public Job getPrimary() {
         return primary;
@@ -35,28 +39,19 @@ public class Jobs implements Iterable<Job> {
 
     public Iterator<Job> iterator() {
         return new Iterator<Job>() {
-            private Job job = primary;
+            private int i = 0;
             public boolean hasNext() {
-                return job != null;
+                return i < 3;
             }
 
             public Job next() {
-                Job curr = job;
-                if (curr != null) {
-                    switch (curr.getAdvancement()) {
-                        case PRIMARY:
-                            job = secondary;
-                            break;
-                        case SECONDARY:
-                            job = tertiary;
-                            break;
-                        case TERTIARY:
-                            job = null;
-                            break;
-                    }
+                switch (i++) {
+                    case 0: return primary;
+                    case 1: return secondary;
+                    case 2: return tertiary;
                 }
 
-                return curr;
+                return null;
             }
         };
     }
@@ -71,5 +66,54 @@ public class Jobs implements Iterable<Job> {
 
     public Spliterator<Job> spliterator() {
         return null; // not implementing
+    }
+
+    public int getMaxSP() {
+        return maxSP;
+    }
+
+    public void setMaxSP(int maxSP) {
+        setMaxSP(maxSP, tertiary.getSpRatio());
+    }
+
+    public void setMaxSP(int maxSP, float[] ratios) {
+        this.maxSP = maxSP;
+        for (Job job : this) {
+            if (job != null) {
+                job.setMaxSP((int) (ratios[job.getAdvancement().advancement] * maxSP));
+            }
+        }
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+
+        for (Job job : this) {
+            if (job != null) {
+                job.setMaxSkillRequiredLevel(level);
+            }
+        }
+    }
+
+    public void setJob(Job job) {
+        switch (job.getAdvancement()) {
+            case PRIMARY: setPrimary(job); break;
+            case SECONDARY: setSecondary(job); break;
+            case TERTIARY: setTertiary(job); break;
+        }
+    }
+
+    public Job getJob(Advancement advancement) {
+        switch (advancement) {
+            case PRIMARY: return primary;
+            case SECONDARY: return secondary;
+            case TERTIARY: return tertiary;
+        }
+
+        return null;
     }
 }

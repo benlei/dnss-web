@@ -97,7 +97,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
     # First create a bean for each skill
     jobs.each_value do |job|
       job['skills'].each do |id, skill|
-        xml.bean('id' => "skill_#{id}", 'class' => 'dnss.model.Skill') do
+        xml.bean('id' => "skill_#{id}", 'class' => 'dnss.model.Skill', 'scope' => 'prototype') do
           xml.property('name' => 'id', 'value' => id)
           xml.property('name' => 'sprite', 'value' => skill['image'])
           xml.property('name' => 'icon', 'value' => skill['icon'])
@@ -106,7 +106,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
             xml.list do
               skill['levels'].each_with_index do |level, i|
                 total += level['spcost']
-                xml.bean('class' => 'dnss.model.Level') do
+                xml.bean('class' => 'dnss.model.Level', 'scope' => 'prototype') do
                   xml.property('name' => 'level', 'value' => i+1)
                   xml.property('name' => 'requiredJobLevel', 'value' => level['required_level'])
                   xml.property('name' => 'spCost', 'value' => level['spcost'])

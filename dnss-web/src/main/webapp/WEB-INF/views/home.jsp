@@ -1,4 +1,4 @@
-<!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %><fmt:setBundle basename="dnss" var="dnss"/>
+<!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %><fmt:setBundle basename="dnss" var="dnss"/>
 <html lang="en">
 <title>${jobs.tertiary.name} - Dragon Nest Skill Simulator</title>
 <meta charset="utf-8">
@@ -10,8 +10,8 @@
 <nav id="jobs" class="no-select">
 <ul><c:forEach items="${primaries}" var="primary" varStatus="pLoop">
 <li class="primary">${primary.name}
-<ul class="sub-jobs"><c:forEach items="${secondaries}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent == primary}">
-<li class="secondary">${secondary.name}</li><c:forEach items="${tertiaries}" var="tertiary" varStatus="tLoop"><c:if test="${tertiary.parent == secondary}">
+<ul class="sub-jobs"><c:forEach items="${secondaries}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent.identifier == primary.identifier}">
+<li class="secondary">${secondary.name}</li><c:forEach items="${tertiaries}" var="tertiary" varStatus="tLoop"><c:if test="${tertiary.parent.identifier == secondary.identifier}">
 <li class="tertiary"><a href="/job/${tertiary.identifier}">${tertiary.name}</a></li></c:if></c:forEach></c:if></c:forEach></ul>
 </li></c:forEach>
 </ul>
@@ -26,11 +26,11 @@
 </aside>
 <section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
 <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
-<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${skill != 0}">
+<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
+<td class="container" /></c:when><c:otherwise>
 <td class="container">
-<div class="skill" id="skill-${skill}"/>
-<div class="lvl"></div><c:set var="i" value="${i + 1}"/></c:when><c:otherwise>
-<td class="container"/></c:otherwise></c:choose></c:forEach></c:forEach>
+<div class="skill" id="skill-${skill.id}"/>
+<div class="lvl"></div></c:otherwise></c:choose></c:forEach></c:forEach>
 </table></c:forEach>
 </section>
 <aside id="sidebar-2">
@@ -57,11 +57,11 @@
 <script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.js"></script>
 <script type="text/javascript">
 var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
-  max:{required_level:[<c:forEach items="${levels}" var="level" varStatus="loop">${level}<c:if test="${!loop.last}">,</c:if></c:forEach>],sp:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${max_sp}]},
+  max:{required_level:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSkillRequiredLevel}<c:if test="${!loop.last}">,</c:if></c:forEach>],sp:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${jobs.maxSP}]},
   version:{json:<fmt:message key="json.version" bundle="${dnss}"/>,skillicon:<fmt:message key="skillicon.version" bundle="${dnss}"/>},
   skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
   weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
-  base: "${path}"};
+  cap: ${jobs.level}};
 dnss.start();
 </script>
 </body>

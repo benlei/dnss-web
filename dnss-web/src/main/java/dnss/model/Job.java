@@ -10,6 +10,7 @@ public class Job {
     private Job parent;
     private Skill[][] skillTree;
     private int maxSP;
+    private int maxSkillRequiredLevel;
 
     public String getName() {
         return name;
@@ -65,5 +66,13 @@ public class Job {
 
     public void setMaxSP(int maxSP) {
         this.maxSP = maxSP;
+    }
+
+    public int getMaxSkillRequiredLevel() {
+        return maxSkillRequiredLevel;
+    }
+
+    public void setMaxSkillRequiredLevel(int maxSkillRequiredLevel) {
+        this.maxSkillRequiredLevel = Math.min(advancement.maxRequiredSkillLevel, maxSkillRequiredLevel);
     }
 }

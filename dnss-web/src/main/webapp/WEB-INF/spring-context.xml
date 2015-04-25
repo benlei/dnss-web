@@ -3,7 +3,7 @@
   <import resource="levels-context.xml"/>
   <import resource="types-context.xml"/>
   <import resource="skills-context.xml"/>
-  <bean id="job_warrior" class="dnss.model.Job">
+  <bean id="job_warrior" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Warrior"/>
     <property name="identifier" value="warrior"/>
     <property name="advancement" value="0"/>
@@ -55,7 +55,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_archer" class="dnss.model.Job">
+  <bean id="job_archer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Archer"/>
     <property name="identifier" value="archer"/>
     <property name="advancement" value="0"/>
@@ -107,7 +107,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_soceress" class="dnss.model.Job">
+  <bean id="job_soceress" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Sorceress"/>
     <property name="identifier" value="soceress"/>
     <property name="advancement" value="0"/>
@@ -159,7 +159,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_cleric" class="dnss.model.Job">
+  <bean id="job_cleric" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Cleric"/>
     <property name="identifier" value="cleric"/>
     <property name="advancement" value="0"/>
@@ -211,7 +211,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_academic" class="dnss.model.Job">
+  <bean id="job_academic" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Tinkerer"/>
     <property name="identifier" value="academic"/>
     <property name="advancement" value="0"/>
@@ -263,7 +263,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_kali" class="dnss.model.Job">
+  <bean id="job_kali" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Kali"/>
     <property name="identifier" value="kali"/>
     <property name="advancement" value="0"/>
@@ -315,7 +315,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_assassin" class="dnss.model.Job">
+  <bean id="job_assassin" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Assassin"/>
     <property name="identifier" value="assassin"/>
     <property name="advancement" value="0"/>
@@ -367,7 +367,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_lencea" class="dnss.model.Job">
+  <bean id="job_lencea" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Lencea"/>
     <property name="identifier" value="lencea"/>
     <property name="advancement" value="0"/>
@@ -419,7 +419,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_swordmaster" class="dnss.model.Job">
+  <bean id="job_swordmaster" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Swordsman"/>
     <property name="identifier" value="swordmaster"/>
     <property name="advancement" value="1"/>
@@ -472,7 +472,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_mercenary" class="dnss.model.Job">
+  <bean id="job_mercenary" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Mercenary"/>
     <property name="identifier" value="mercenary"/>
     <property name="advancement" value="1"/>
@@ -525,7 +525,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_bowmaster" class="dnss.model.Job">
+  <bean id="job_bowmaster" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Sharpshooter"/>
     <property name="identifier" value="bowmaster"/>
     <property name="advancement" value="1"/>
@@ -578,7 +578,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_acrobat" class="dnss.model.Job">
+  <bean id="job_acrobat" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Acrobat"/>
     <property name="identifier" value="acrobat"/>
     <property name="advancement" value="1"/>
@@ -631,7 +631,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_elementallord" class="dnss.model.Job">
+  <bean id="job_elementallord" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Elementalist"/>
     <property name="identifier" value="elementallord"/>
     <property name="advancement" value="1"/>
@@ -684,7 +684,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_forceuser" class="dnss.model.Job">
+  <bean id="job_forceuser" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Mystic"/>
     <property name="identifier" value="forceuser"/>
     <property name="advancement" value="1"/>
@@ -737,7 +737,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_paladin" class="dnss.model.Job">
+  <bean id="job_paladin" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Paladin"/>
     <property name="identifier" value="paladin"/>
     <property name="advancement" value="1"/>
@@ -790,7 +790,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_priest" class="dnss.model.Job">
+  <bean id="job_priest" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Priest"/>
     <property name="identifier" value="priest"/>
     <property name="advancement" value="1"/>
@@ -843,7 +843,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_gladiator" class="dnss.model.Job">
+  <bean id="job_gladiator" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Gladiator"/>
     <property name="identifier" value="gladiator"/>
     <property name="advancement" value="2"/>
@@ -896,7 +896,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_moonlord" class="dnss.model.Job">
+  <bean id="job_moonlord" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Lunar Knight"/>
     <property name="identifier" value="moonlord"/>
     <property name="advancement" value="2"/>
@@ -949,7 +949,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_barbarian" class="dnss.model.Job">
+  <bean id="job_barbarian" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Barbarian"/>
     <property name="identifier" value="barbarian"/>
     <property name="advancement" value="2"/>
@@ -1002,7 +1002,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_destroyer" class="dnss.model.Job">
+  <bean id="job_destroyer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Destroyer"/>
     <property name="identifier" value="destroyer"/>
     <property name="advancement" value="2"/>
@@ -1055,7 +1055,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_sniper" class="dnss.model.Job">
+  <bean id="job_sniper" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Sniper"/>
     <property name="identifier" value="sniper"/>
     <property name="advancement" value="2"/>
@@ -1108,7 +1108,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_artillery" class="dnss.model.Job">
+  <bean id="job_artillery" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Warden"/>
     <property name="identifier" value="artillery"/>
     <property name="advancement" value="2"/>
@@ -1161,7 +1161,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_tempest" class="dnss.model.Job">
+  <bean id="job_tempest" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Tempest"/>
     <property name="identifier" value="tempest"/>
     <property name="advancement" value="2"/>
@@ -1214,7 +1214,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_windwalker" class="dnss.model.Job">
+  <bean id="job_windwalker" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Windwalker"/>
     <property name="identifier" value="windwalker"/>
     <property name="advancement" value="2"/>
@@ -1267,7 +1267,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_saleana" class="dnss.model.Job">
+  <bean id="job_saleana" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Pyromancer"/>
     <property name="identifier" value="saleana"/>
     <property name="advancement" value="2"/>
@@ -1320,7 +1320,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_elestra" class="dnss.model.Job">
+  <bean id="job_elestra" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Ice Witch"/>
     <property name="identifier" value="elestra"/>
     <property name="advancement" value="2"/>
@@ -1373,7 +1373,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_smasher" class="dnss.model.Job">
+  <bean id="job_smasher" class="dnss.model.Job" scope="prototype">
     <property name="name" value="War Mage"/>
     <property name="identifier" value="smasher"/>
     <property name="advancement" value="2"/>
@@ -1426,7 +1426,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_majesty" class="dnss.model.Job">
+  <bean id="job_majesty" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Chaos Mage"/>
     <property name="identifier" value="majesty"/>
     <property name="advancement" value="2"/>
@@ -1479,7 +1479,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_guardian" class="dnss.model.Job">
+  <bean id="job_guardian" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Guardian"/>
     <property name="identifier" value="guardian"/>
     <property name="advancement" value="2"/>
@@ -1532,7 +1532,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_crusades" class="dnss.model.Job">
+  <bean id="job_crusades" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Crusader"/>
     <property name="identifier" value="crusades"/>
     <property name="advancement" value="2"/>
@@ -1585,7 +1585,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_saint" class="dnss.model.Job">
+  <bean id="job_saint" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Saint"/>
     <property name="identifier" value="saint"/>
     <property name="advancement" value="2"/>
@@ -1638,7 +1638,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_inquisitor" class="dnss.model.Job">
+  <bean id="job_inquisitor" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Inquisitor"/>
     <property name="identifier" value="inquisitor"/>
     <property name="advancement" value="2"/>
@@ -1691,7 +1691,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_engineer" class="dnss.model.Job">
+  <bean id="job_engineer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Engineer"/>
     <property name="identifier" value="engineer"/>
     <property name="advancement" value="1"/>
@@ -1744,7 +1744,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_shootingstar" class="dnss.model.Job">
+  <bean id="job_shootingstar" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Shooting Star"/>
     <property name="identifier" value="shootingstar"/>
     <property name="advancement" value="2"/>
@@ -1797,7 +1797,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_gearmaster" class="dnss.model.Job">
+  <bean id="job_gearmaster" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Gear Master"/>
     <property name="identifier" value="gearmaster"/>
     <property name="advancement" value="2"/>
@@ -1850,7 +1850,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_alchemist" class="dnss.model.Job">
+  <bean id="job_alchemist" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Alchemist"/>
     <property name="identifier" value="alchemist"/>
     <property name="advancement" value="1"/>
@@ -1903,7 +1903,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_adept" class="dnss.model.Job">
+  <bean id="job_adept" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Adept"/>
     <property name="identifier" value="adept"/>
     <property name="advancement" value="2"/>
@@ -1956,7 +1956,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_physician" class="dnss.model.Job">
+  <bean id="job_physician" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Physician"/>
     <property name="identifier" value="physician"/>
     <property name="advancement" value="2"/>
@@ -2009,7 +2009,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_screamer" class="dnss.model.Job">
+  <bean id="job_screamer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Screamer"/>
     <property name="identifier" value="screamer"/>
     <property name="advancement" value="1"/>
@@ -2062,7 +2062,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_darksummoner" class="dnss.model.Job">
+  <bean id="job_darksummoner" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Dark Summoner"/>
     <property name="identifier" value="darksummoner"/>
     <property name="advancement" value="2"/>
@@ -2115,7 +2115,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_souleater" class="dnss.model.Job">
+  <bean id="job_souleater" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Soul Eater"/>
     <property name="identifier" value="souleater"/>
     <property name="advancement" value="2"/>
@@ -2168,7 +2168,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_dancer" class="dnss.model.Job">
+  <bean id="job_dancer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Dancer"/>
     <property name="identifier" value="dancer"/>
     <property name="advancement" value="1"/>
@@ -2221,7 +2221,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_bladedancer" class="dnss.model.Job">
+  <bean id="job_bladedancer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Blade Dancer"/>
     <property name="identifier" value="bladedancer"/>
     <property name="advancement" value="2"/>
@@ -2274,7 +2274,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_spiritdancer" class="dnss.model.Job">
+  <bean id="job_spiritdancer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Spirit Dancer"/>
     <property name="identifier" value="spiritdancer"/>
     <property name="advancement" value="2"/>
@@ -2327,7 +2327,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_chaser" class="dnss.model.Job">
+  <bean id="job_chaser" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Shinobi"/>
     <property name="identifier" value="chaser"/>
     <property name="advancement" value="1"/>
@@ -2380,7 +2380,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_ripper" class="dnss.model.Job">
+  <bean id="job_ripper" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Reaper"/>
     <property name="identifier" value="ripper"/>
     <property name="advancement" value="2"/>
@@ -2433,7 +2433,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_raven" class="dnss.model.Job">
+  <bean id="job_raven" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Raven"/>
     <property name="identifier" value="raven"/>
     <property name="advancement" value="2"/>
@@ -2486,7 +2486,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_bringer" class="dnss.model.Job">
+  <bean id="job_bringer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Taoist"/>
     <property name="identifier" value="bringer"/>
     <property name="advancement" value="1"/>
@@ -2539,7 +2539,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_lightfury" class="dnss.model.Job">
+  <bean id="job_lightfury" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Light Bringer"/>
     <property name="identifier" value="lightfury"/>
     <property name="advancement" value="2"/>
@@ -2592,7 +2592,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_abysswalker" class="dnss.model.Job">
+  <bean id="job_abysswalker" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Abyss Walker"/>
     <property name="identifier" value="abysswalker"/>
     <property name="advancement" value="2"/>
@@ -2645,7 +2645,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_piercer" class="dnss.model.Job">
+  <bean id="job_piercer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Lancer"/>
     <property name="identifier" value="piercer"/>
     <property name="advancement" value="1"/>
@@ -2698,7 +2698,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_flurry" class="dnss.model.Job">
+  <bean id="job_flurry" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Dragoon"/>
     <property name="identifier" value="flurry"/>
     <property name="advancement" value="2"/>
@@ -2751,7 +2751,7 @@
       </list>
     </property>
   </bean>
-  <bean id="job_stingbreezer" class="dnss.model.Job">
+  <bean id="job_stingbreezer" class="dnss.model.Job" scope="prototype">
     <property name="name" value="Valkyrie"/>
     <property name="identifier" value="stingbreezer"/>
     <property name="advancement" value="2"/>
@@ -2804,157 +2804,157 @@
       </list>
     </property>
   </bean>
-  <bean id="jobs_gladiator" class="dnss.model.Jobs">
+  <bean id="jobs_gladiator" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_warrior"/>
     <property name="secondary" ref="job_swordmaster"/>
     <property name="tertiary" ref="job_gladiator"/>
   </bean>
-  <bean id="jobs_moonlord" class="dnss.model.Jobs">
+  <bean id="jobs_moonlord" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_warrior"/>
     <property name="secondary" ref="job_swordmaster"/>
     <property name="tertiary" ref="job_moonlord"/>
   </bean>
-  <bean id="jobs_barbarian" class="dnss.model.Jobs">
+  <bean id="jobs_barbarian" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_warrior"/>
     <property name="secondary" ref="job_mercenary"/>
     <property name="tertiary" ref="job_barbarian"/>
   </bean>
-  <bean id="jobs_destroyer" class="dnss.model.Jobs">
+  <bean id="jobs_destroyer" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_warrior"/>
     <property name="secondary" ref="job_mercenary"/>
     <property name="tertiary" ref="job_destroyer"/>
   </bean>
-  <bean id="jobs_sniper" class="dnss.model.Jobs">
+  <bean id="jobs_sniper" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_archer"/>
     <property name="secondary" ref="job_bowmaster"/>
     <property name="tertiary" ref="job_sniper"/>
   </bean>
-  <bean id="jobs_artillery" class="dnss.model.Jobs">
+  <bean id="jobs_artillery" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_archer"/>
     <property name="secondary" ref="job_bowmaster"/>
     <property name="tertiary" ref="job_artillery"/>
   </bean>
-  <bean id="jobs_tempest" class="dnss.model.Jobs">
+  <bean id="jobs_tempest" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_archer"/>
     <property name="secondary" ref="job_acrobat"/>
     <property name="tertiary" ref="job_tempest"/>
   </bean>
-  <bean id="jobs_windwalker" class="dnss.model.Jobs">
+  <bean id="jobs_windwalker" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_archer"/>
     <property name="secondary" ref="job_acrobat"/>
     <property name="tertiary" ref="job_windwalker"/>
   </bean>
-  <bean id="jobs_saleana" class="dnss.model.Jobs">
+  <bean id="jobs_saleana" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_soceress"/>
     <property name="secondary" ref="job_elementallord"/>
     <property name="tertiary" ref="job_saleana"/>
   </bean>
-  <bean id="jobs_elestra" class="dnss.model.Jobs">
+  <bean id="jobs_elestra" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_soceress"/>
     <property name="secondary" ref="job_elementallord"/>
     <property name="tertiary" ref="job_elestra"/>
   </bean>
-  <bean id="jobs_smasher" class="dnss.model.Jobs">
+  <bean id="jobs_smasher" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_soceress"/>
     <property name="secondary" ref="job_forceuser"/>
     <property name="tertiary" ref="job_smasher"/>
   </bean>
-  <bean id="jobs_majesty" class="dnss.model.Jobs">
+  <bean id="jobs_majesty" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_soceress"/>
     <property name="secondary" ref="job_forceuser"/>
     <property name="tertiary" ref="job_majesty"/>
   </bean>
-  <bean id="jobs_guardian" class="dnss.model.Jobs">
+  <bean id="jobs_guardian" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_cleric"/>
     <property name="secondary" ref="job_paladin"/>
     <property name="tertiary" ref="job_guardian"/>
   </bean>
-  <bean id="jobs_crusades" class="dnss.model.Jobs">
+  <bean id="jobs_crusades" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_cleric"/>
     <property name="secondary" ref="job_paladin"/>
     <property name="tertiary" ref="job_crusades"/>
   </bean>
-  <bean id="jobs_saint" class="dnss.model.Jobs">
+  <bean id="jobs_saint" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_cleric"/>
     <property name="secondary" ref="job_priest"/>
     <property name="tertiary" ref="job_saint"/>
   </bean>
-  <bean id="jobs_inquisitor" class="dnss.model.Jobs">
+  <bean id="jobs_inquisitor" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_cleric"/>
     <property name="secondary" ref="job_priest"/>
     <property name="tertiary" ref="job_inquisitor"/>
   </bean>
-  <bean id="jobs_shootingstar" class="dnss.model.Jobs">
+  <bean id="jobs_shootingstar" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_academic"/>
     <property name="secondary" ref="job_engineer"/>
     <property name="tertiary" ref="job_shootingstar"/>
   </bean>
-  <bean id="jobs_gearmaster" class="dnss.model.Jobs">
+  <bean id="jobs_gearmaster" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_academic"/>
     <property name="secondary" ref="job_engineer"/>
     <property name="tertiary" ref="job_gearmaster"/>
   </bean>
-  <bean id="jobs_adept" class="dnss.model.Jobs">
+  <bean id="jobs_adept" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_academic"/>
     <property name="secondary" ref="job_alchemist"/>
     <property name="tertiary" ref="job_adept"/>
   </bean>
-  <bean id="jobs_physician" class="dnss.model.Jobs">
+  <bean id="jobs_physician" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_academic"/>
     <property name="secondary" ref="job_alchemist"/>
     <property name="tertiary" ref="job_physician"/>
   </bean>
-  <bean id="jobs_darksummoner" class="dnss.model.Jobs">
+  <bean id="jobs_darksummoner" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_kali"/>
     <property name="secondary" ref="job_screamer"/>
     <property name="tertiary" ref="job_darksummoner"/>
   </bean>
-  <bean id="jobs_souleater" class="dnss.model.Jobs">
+  <bean id="jobs_souleater" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_kali"/>
     <property name="secondary" ref="job_screamer"/>
     <property name="tertiary" ref="job_souleater"/>
   </bean>
-  <bean id="jobs_bladedancer" class="dnss.model.Jobs">
+  <bean id="jobs_bladedancer" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_kali"/>
     <property name="secondary" ref="job_dancer"/>
     <property name="tertiary" ref="job_bladedancer"/>
   </bean>
-  <bean id="jobs_spiritdancer" class="dnss.model.Jobs">
+  <bean id="jobs_spiritdancer" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_kali"/>
     <property name="secondary" ref="job_dancer"/>
     <property name="tertiary" ref="job_spiritdancer"/>
   </bean>
-  <bean id="jobs_ripper" class="dnss.model.Jobs">
+  <bean id="jobs_ripper" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_assassin"/>
     <property name="secondary" ref="job_chaser"/>
     <property name="tertiary" ref="job_ripper"/>
   </bean>
-  <bean id="jobs_raven" class="dnss.model.Jobs">
+  <bean id="jobs_raven" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_assassin"/>
     <property name="secondary" ref="job_chaser"/>
     <property name="tertiary" ref="job_raven"/>
   </bean>
-  <bean id="jobs_lightfury" class="dnss.model.Jobs">
+  <bean id="jobs_lightfury" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_assassin"/>
     <property name="secondary" ref="job_bringer"/>
     <property name="tertiary" ref="job_lightfury"/>
   </bean>
-  <bean id="jobs_abysswalker" class="dnss.model.Jobs">
+  <bean id="jobs_abysswalker" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_assassin"/>
     <property name="secondary" ref="job_bringer"/>
     <property name="tertiary" ref="job_abysswalker"/>
   </bean>
-  <bean id="jobs_flurry" class="dnss.model.Jobs">
+  <bean id="jobs_flurry" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_lencea"/>
     <property name="secondary" ref="job_piercer"/>
     <property name="tertiary" ref="job_flurry"/>
   </bean>
-  <bean id="jobs_stingbreezer" class="dnss.model.Jobs">
+  <bean id="jobs_stingbreezer" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_lencea"/>
     <property name="secondary" ref="job_piercer"/>
     <property name="tertiary" ref="job_stingbreezer"/>
   </bean>
-  <util:list id="all_jobs_primary" value-type="dnss.model.Job">
+  <util:list id="all_jobs_primary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_warrior"/>
     <ref bean="job_archer"/>
     <ref bean="job_soceress"/>
@@ -2964,7 +2964,7 @@
     <ref bean="job_assassin"/>
     <ref bean="job_lencea"/>
   </util:list>
-  <util:list id="all_jobs_secondary" value-type="dnss.model.Job">
+  <util:list id="all_jobs_secondary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_swordmaster"/>
     <ref bean="job_mercenary"/>
     <ref bean="job_bowmaster"/>
@@ -2981,7 +2981,7 @@
     <ref bean="job_bringer"/>
     <ref bean="job_piercer"/>
   </util:list>
-  <util:list id="all_jobs_tertiary" value-type="dnss.model.Job">
+  <util:list id="all_jobs_tertiary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_gladiator"/>
     <ref bean="job_moonlord"/>
     <ref bean="job_barbarian"/>
