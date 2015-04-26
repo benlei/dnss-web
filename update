@@ -105,7 +105,7 @@ fi
 if [[ ${JSON} -eq 1 ]]; then
     mkdir -p ${CWD}/dnss-web/src/main/webapp/resources/json/min
     echo Removing ${CWD}/dnss-web/src/main/webapp/resources/json/min
-    rm -f ${CWD}/dnss-web/src/main/webapp/resources/json/min/*
+    git rm -f ${CWD}/dnss-web/src/main/webapp/resources/json/min/*
 
     ruby ${CWD}/dnss-tools/src/main/ruby/json_generator.rb
     version=$(ruby ${CWD}/dnss-tools/src/main/ruby/update_properties.rb json)
@@ -120,7 +120,7 @@ fi
 if [[ ${SKILLICONS} -eq 1 ]]; then
     cd ${CWD}/dnss-web/src/main/webapp/resources/images/skillicons
     echo Removing $(ls)
-    rm -f *
+    git rm -f *
     DNPATH=$(cygpath $(grep global.destination dnss-tools/src/main/resources/pak.properties  | head -1 | cut -d= -f2 | sed 's/ *//'))
     cd "${DNPATH}/resource/ui/mainbar"
     echo Formatting $(ls skillicon*.dds) to PNG
