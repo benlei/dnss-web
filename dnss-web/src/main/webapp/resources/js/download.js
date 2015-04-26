@@ -13,22 +13,27 @@ var download = new (function Download() {
       return;
     }
 
-    ids = ids.join(',');
+    ids = ids.join('-');
 
     var frame = $("<iframe />");
     frame.attr("src", window.location.protocol + "//" + window.location.host + "/download/" + alignment + "/" + ids + "/" + properties.cap + "/" + build.toString());
     frame.css({height: "1px", width: "1px"});
     frame.appendTo("body");
-    timedDelete(frame, 0);
-
+    timedDelete(frame, 0, alignment+"-"+ids);
   }
 
-  function timedDelete(frame, attempts) {
-    if (attempts < 12) { // 12*5 = 60s = 1min
-      if (attempts && frame.get(0).contentWindow.done) {
+  function timedDelete(frame, attempts, ids) {
+    if (attempts < 60) {
+      if (attempts && frame.get(0).contentWindow.data) {
+        var dl = document.createElement("a");
+        dl.href = frame.get(0).contentWindow.data;
+        dl.download = ids+".png";
+        document.body.appendChild(dl);
+        dl.click();
+        document.body.removeChild(dl);
         frame.remove();
       } else {
-        setTimeout(function() { timedDelete(frame, attempts+1) }, 5000); // check every 5 seconds
+        setTimeout(function() { timedDelete(frame, attempts+1, ids) }, 1000); // check every 1 seconds
       }
 
     } else { // just rmeove it, it still isn't done after 1 min
