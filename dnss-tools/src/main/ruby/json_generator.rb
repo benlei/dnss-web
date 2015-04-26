@@ -51,7 +51,6 @@ end
 query = <<sql_query
   SELECT _id,
          _nameid,
-         _iconimageindex,
          _needjob,
          _skilltype as type,
          _needweapontype1, _needweapontype2
@@ -68,15 +67,14 @@ conn.exec(query).each_dnt do |skill|
   jobs[skill['needjob']]['messages'][skill['nameid']] = messages[skill['nameid']]
 
   skill['levels'] = Array.new
-  skill['image'] = '%02d' % ((skill['iconimageindex'] / 200) + 1)
-  skill['icon'] = skill['iconimageindex'] % 200
+
 
   skill['needweapon'] = Array.new
   skill['needweapon'] << skill['needweapontype1'] unless skill['needweapontype1'] == -1
   skill['needweapon'] << skill['needweapontype2'] unless skill['needweapontype2'] == -1
 
   # delete these
-  ['id', 'needjob', 'iconimageindex', 'needweapontype1', 'needweapontype2'].each {|a| skill.delete(a)}
+  ['id', 'needjob', 'needweapontype1', 'needweapontype2'].each {|a| skill.delete(a)}
 end
 
 ##############################################################################

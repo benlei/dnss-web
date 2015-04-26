@@ -137,7 +137,7 @@ public class Jobs implements Iterable<Job> {
         return tertiary.getParent().equals(secondary) && secondary.getParent().equals(primary);
     }
 
-    public int getTotalValid() {
+    public int getNumJobs() {
         int sum = 0;
         for (Job j : this) {
             if (j != null) {

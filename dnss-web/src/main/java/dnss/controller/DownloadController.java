@@ -1,8 +1,6 @@
 package dnss.controller;
 
-import dnss.model.Job;
-import dnss.model.Jobs;
-import dnss.model.SP;
+import dnss.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -14,9 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
-import static dnss.enums.Advancement.PRIMARY;
-import static dnss.enums.Advancement.SECONDARY;
-import static dnss.enums.Advancement.TERTIARY;
 import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
 
 @Controller
@@ -32,7 +27,7 @@ public class DownloadController {
     public String download(HttpServletRequest request, HttpServletResponse response,
                            @PathVariable("identifiers") String identifiers,
                            @PathVariable("level") int level,
-                           @PathVariable("build") String build,
+                           @PathVariable("build") String query,
                            @PathVariable("alignment") String alignment,
                            ModelMap model) throws Exception {
         String[] r = identifiers.split(",");
@@ -40,8 +35,8 @@ public class DownloadController {
             response.sendError(SC_NOT_FOUND, "Not supported");
         }
 
-        ArrayList<Job> list = new ArrayList<Job>();
         // first make sure they are all valid jobs
+        ArrayList<Job> list = new ArrayList<Job>();
         for (String s : r) {
             if (!context.containsBean("job_" + s)) {
                 response.sendError(SC_NOT_FOUND, "No job '"+s+"'");
@@ -63,10 +58,30 @@ public class DownloadController {
         jobs.setLevel(level);
         jobs.setMaxSP(sp.forCap(level), tertiary.getSpRatio());
 
+        Build build = new Build(query);
+
+        int pos = 0;
+        for (Job job : jobs) {
+            if (job == null) {
+                pos += 24;
+                continue;
+            }
+
+            for (int i = 0; i < 24; i++, pos++) {
+                Skill skill = job.getSkill(i);
+                if (skill == null) {
+                    continue;
+                }
+
+                skill.setLevel(build.get(pos));
+//                System.out.println(skill.getId() + " - level " + skill.getLevel());
+            }
+        }
+
         model.addAttribute("alignment", alignment);
         model.addAttribute("jobs", jobs);
 
-        //
+
         return "download";
     }
 

@@ -19,9 +19,9 @@
 <aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build"/></aside>
 <aside id="sidebar-1">
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs.iterator}" var="job" varStatus="loop">
-<li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp"></div></li></c:forEach>
+<li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
 <li/>
-<li>Total SP<div class="sp"></div></li>
+<li>Total SP<div class="sp">0/${jobs.maxSP}</div></li>
 </ul>
 </aside>
 <section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
@@ -29,8 +29,8 @@
 <tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
 <td class="container" /></c:when><c:otherwise>
 <td class="container">
-<div class="skill" id="skill-${skill.id}"/>
-<div class="lvl"></div></c:otherwise></c:choose></c:forEach></c:forEach>
+<div class="skill" id="skill-${skill.id}" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>
+<div class="lvl">${skill.level}/${skill.maxLevel}</div></c:otherwise></c:choose></c:forEach></c:forEach>
 </table></c:forEach>
 </section>
 <aside id="sidebar-2">

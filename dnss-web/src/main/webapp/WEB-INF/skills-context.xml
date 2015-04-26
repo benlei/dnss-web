@@ -8603,25 +8603,25 @@
       <list>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="1"/>
-          <property name="requiredJobLevel" value="16"/>
+          <property name="requiredJobLevel" value="14"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="1"/>
         </bean>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="2"/>
-          <property name="requiredJobLevel" value="26"/>
+          <property name="requiredJobLevel" value="24"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="2"/>
         </bean>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="3"/>
-          <property name="requiredJobLevel" value="36"/>
+          <property name="requiredJobLevel" value="34"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="3"/>
         </bean>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="4"/>
-          <property name="requiredJobLevel" value="46"/>
+          <property name="requiredJobLevel" value="44"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="4"/>
         </bean>
@@ -8819,25 +8819,25 @@
       <list>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="1"/>
-          <property name="requiredJobLevel" value="16"/>
+          <property name="requiredJobLevel" value="14"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="1"/>
         </bean>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="2"/>
-          <property name="requiredJobLevel" value="26"/>
+          <property name="requiredJobLevel" value="24"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="2"/>
         </bean>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="3"/>
-          <property name="requiredJobLevel" value="36"/>
+          <property name="requiredJobLevel" value="34"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="3"/>
         </bean>
         <bean class="dnss.model.Level" scope="prototype">
           <property name="level" value="4"/>
-          <property name="requiredJobLevel" value="46"/>
+          <property name="requiredJobLevel" value="44"/>
           <property name="spCost" value="1"/>
           <property name="totalSPCost" value="4"/>
         </bean>

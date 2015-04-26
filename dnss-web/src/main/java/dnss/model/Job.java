@@ -74,9 +74,14 @@ public class Job {
 
     public void setMaxSkillRequiredLevel(int maxSkillRequiredLevel) {
         this.maxSkillRequiredLevel = Math.min(advancement.maxRequiredSkillLevel, maxSkillRequiredLevel);
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (skillTree[i][j] != null) {
+                    skillTree[i][j].setMaxLevelForCap(this.maxSkillRequiredLevel);
+                }
+            }
+        }
     }
-
-
 
     @Override
     public boolean equals(Object obj) {
@@ -84,10 +89,31 @@ public class Job {
             return false;
         }
 
-        if (! (obj instanceof Job)) {
-            return false;
+        if (obj instanceof Job) {
+            return identifier.equals(((Job) obj).identifier);
         }
 
-        return getIdentifier().equals(((Job)obj).getIdentifier());
+        return false;
+    }
+
+    public Skill getSkill(int row, int col) {
+        return skillTree[row][col];
+    }
+
+    public Skill getSkill(int position) {
+        return getSkill(position / 4, position % 4);
+    }
+
+    public int getUsedSP() {
+        int total = 0;
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (skillTree[i][j] != null && skillTree[i][j].getLevel() != 0) {
+                    total += skillTree[i][j].getLevel(skillTree[i][j].getLevel()).getTotalSPCost();
+                }
+            }
+        }
+
+        return total;
     }
 }

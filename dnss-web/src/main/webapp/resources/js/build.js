@@ -1,31 +1,29 @@
 var build = new (function Build() {
   // private
   var t = this;
-  var map = ["-", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ".", "+"];
-  var imap = {};
-  var r = Array(72 + 1 + 1).join(map[0]).split("");
+  var map = "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+";
+  var r = Array(72 + 1 + 1).join('-').split('');
 
   // public
   this.FLAG_POS = r.length - 1;
 
   this.get = function(position) {
-    return imap[r[position]];
+    return map.indexOf(r[position]);
   };
 
-  this.put = function(position, mapPos) {
-    r[position] = map[mapPos]
+  this.put = function(position, value) {
+    direct_put(position, map.charAt(value));
+  };
 
-    if (position == this.FLAG_POS) {
+  function direct_put(position, c) {
+    r[position] = c;
+    if (position == t.FLAG_POS) {
       description.hook();
     }
-  };
-
-  function iput(position, i) {
-    t.put(position, imap[i]);
   }
 
   this.commit = function() {
-    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + properties.jobs[2].id + "-" + properties.cap + "?" + r.join(""));
+    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + properties.jobs[2].id + '-' + properties.cap + "?" + r.join(""));
   };
 
   this.use = function(s) {
@@ -34,33 +32,29 @@ var build = new (function Build() {
       return;
     }
 
-    s = s.shift().split("");
+    s = s.shift().split('');
     var hasFlag = s.length % 2;
 
     // Kali & Sin fix for backwards compatibility
     if ((hasJob("screamer") && s.length == 64+hasFlag) ||
         (hasJob("dancer")|hasJob("assassin") && s.length == 68+hasFlag)) {
-      s.splice(20, 0, "-", "-", "-", "-");
+      s.splice(20, 0, '-', '-', '-', '-');
     }
 
     if (hasJob("screamer") && s.length == 68+hasFlag) {
-      s.splice(44, 0, "-", "-", "-", "-");
+      s.splice(44, 0, '-', '-', '-', '-');
     }
 
 
-    iput(this.FLAG_POS, hasFlag ? s[s.length - 1] : 0);
+    direct_put(this.FLAG_POS, hasFlag ? s[s.length - 1] : '-');
 
     for (var i = 0; i < s.length - 1; i++) {
-      iput(i, s[i]);
+      direct_put(i, s[i]);
     }
   };
 
   function hasJob(id) {
     var jobs = properties.jobs;
     return id == jobs[0].id || id == jobs[1].id || id == jobs[2].id;
-  }
-
-  for (var i = 0; i < map.length; i++) {
-    imap[map[i]] = i;
   }
 })();

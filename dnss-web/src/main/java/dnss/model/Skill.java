@@ -3,8 +3,10 @@ package dnss.model;
 public class Skill {
     private int id;
     private String sprite;
-    private String icon;
+    private int icon;
     private Level[] levels;
+    private int level;
+    private int maxLevel;
 
     public int getId() {
         return id;
@@ -15,6 +17,10 @@ public class Skill {
     }
 
     public String getSprite() {
+        if (! isDefault() && level == 0) {
+            return sprite + "_b";
+        }
+
         return sprite;
     }
 
@@ -22,11 +28,11 @@ public class Skill {
         this.sprite = sprite;
     }
 
-    public String getIcon() {
+    public int getIcon() {
         return icon;
     }
 
-    public void setIcon(String icon) {
+    public void setIcon(int icon) {
         this.icon = icon;
     }
 
@@ -38,7 +44,11 @@ public class Skill {
         this.levels = levels;
     }
 
-    public Level getMaxLevelForCap(int cap) {
+    public int getMaxLevel() {
+        return maxLevel;
+    }
+
+    public void setMaxLevelForCap(int cap) {
         Level max = null;
         for (int i = 0; i < levels.length; i++) {
             if (levels[i].getRequiredJobLevel() <= cap) {
@@ -46,7 +56,9 @@ public class Skill {
             }
         }
 
-        return max;
+        if (max != null) {
+            maxLevel = max.getLevel();
+        }
     }
 
     public Level getLevel(int level) {
@@ -67,4 +79,34 @@ public class Skill {
         return levels[0].getRequiredJobLevel() == 1;
     }
 
+    public int getLevel() {
+        if (isDefault() && level == 0) {
+            return 1;
+        }
+
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public String getSpriteXY() {
+        int x = (icon % 10) * - 50;
+        int y = (icon / 10) * - 50;
+        return x+"px "+y+"px";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (obj instanceof Skill) {
+            return id == ((Skill) obj).id;
+        }
+
+        return false;
+    }
 }

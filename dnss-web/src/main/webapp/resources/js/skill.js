@@ -8,6 +8,7 @@ function Skill(id, s, e) {
   var started = false;
   var nSP = {}; // notifiable sp
   var nSkills = {}; // notifiable skills
+  var balanced = -1;
 
   this.ultimate = s.levels.length == 2 && s.levels[0].required_level == 40 && s.levels[1].required_level == 60;
 
@@ -76,13 +77,15 @@ function Skill(id, s, e) {
   };
 
   this.commit = function() {
-    if (e.css("background-image").indexOf(getSpriteURL()) == -1) {
-      e.css("background-image", "url("+getSpriteURL()+")");
+    var bg = e.css("background-image");
+    if (this.getLevel() == 0 && bg.indexOf("_b.png") == -1) {
+      e.css("background-image", bg.replace(".png", "_b.png"));
+    } else if (this.getLevel() > 0 && bg.indexOf("_b.png") != -1) {
+      e.css("background-image", bg.replace("_b.png", ".png"));
     }
 
-    el.html(this.getLevel() + "/" + this.getMaxLevel());
-
     build.put(this.getPosition(), this.getLevel() - def);
+    el.html(this.getLevel() + "/" + this.getMaxLevel());
     if (started) {
       dnss.commit(t.getAdvancement());
       description.update();
@@ -96,12 +99,24 @@ function Skill(id, s, e) {
   };
 
   this.notifySP = function(a, b) {
+    // optimization: only check and set balance if the val will cahnge
+    if (nSP[a] == b) {
+      return;
+    }
+
     nSP[a] = b;
+    balanced = -1; // reset it
     this.checkAndSetBalance();
   };
 
   this.notifySkill = function(id, b) {
+    // optimization: only check and set balance if the val will cahnge
+    if (nSkills[id] == b) {
+      return;
+    }
+
     nSkills[id] = b;
+    balanced = -1; // reset it
     this.checkAndSetBalance();
   };
 
@@ -129,12 +144,16 @@ function Skill(id, s, e) {
   };
 
   this.isBalancedSP = function() {
-    for (var i in nSP) {
-      if (! nSP[i]) {
-        return false;
+    if (balanced == -1) {
+      for (var i in nSP) {
+        if (! nSP[i]) {
+          balanced = false;
+          return balanced;
+        }
       }
+      balanced = true;
     }
-    return true;
+    return balanced;
   };
 
   this.isBalancedRequirements = function() {
@@ -182,16 +201,6 @@ function Skill(id, s, e) {
 
     return list.length ? list.join(", ") : "None";
   };
-
-  function getSpriteURL() {
-    return "/skillicons/" + properties.version.skillicon + "_skillicon" + s.image + (t.getLevel() ? "" : "_b") + ".png"
-  }
-
-  function getSpriteXY() {
-    var x = (s.icon % 10) * -50;
-    var y = Math.floor(s.icon / 10) * -50;
-    return x+"px "+y+"px";
-  }
 
   // things for skill descriptions
   this.getName = function() {
@@ -252,10 +261,6 @@ function Skill(id, s, e) {
     return this.getLevel() < s.levels.length ? messages.get(s.levels[this.getLevel()].explanationid[mode],
       s.levels[this.getLevel()].explanationparams[mode]) : -1;
   };
-
-
-  // Set the background position
-  e.css("background-position", getSpriteXY());
 
   // bind click events
   e.bind({
