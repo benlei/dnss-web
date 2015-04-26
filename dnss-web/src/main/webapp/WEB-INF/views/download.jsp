@@ -3,30 +3,36 @@
 <meta charset="utf-8">
 <link href="/<fmt:message key="timestamp" bundle="${dnss}"/>-download.css" rel="stylesheet" type="text/css"/>
 <body>
-<main>
-	<section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop"><c:if test="${not empty job}">
+<main><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop"><c:if test="${not empty job}">
+	<section class="${alignment}">
+		<div class="job">${job.name}<div class="sp">${job.usedSP}/${job.maxSP}</div></div>
 		<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
-			<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
-				<td class="container" /></c:when><c:otherwise>
+			<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}"><c:if test="${jobLoop.last && skillLoop.index < 2}">
+				<td class="container" /></c:if></c:when><c:otherwise>
 				<td class="container">
 					<div class="skill" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>
 					<div class="lvl">${skill.level}/${skill.maxLevel}</div></c:otherwise></c:choose></c:forEach></c:forEach>
-		</table></c:if></c:forEach>
-	</section>
+		</table></c:if>
+	</section></c:forEach>
+	<aside>Total SP: ${jobs.totalSP}/${jobs.maxSP}</aside>
 </main>
 <script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-download.js"></script>
-<script type="text/javascript">
-<!-- THIS WORKS LOL
-html2canvas($("#job-sp"), {
-onrendered: function(canvas) {
-var dl = document.createElement("a");
-dl.href = canvas.toDataURL('image/png');
-dl.download = 'test.png';
-document.body.appendChild(dl);
-dl.click();
-document.body.removeChild(dl);
-}
-});-->
+<script type="text/javascript"><c:if test="${alignment == 'h'}">
+var width = document.getElementsByTagName("section").length*285;<c:if test="${not empty jobs.tertiary}">
+width -= 130;</c:if></c:if><c:if test="${alignment == 'v'}">
+width = 280;
+</c:if>
+document.getElementsByTagName("main")[0].style.width = width+"px";
+html2canvas(document.getElementsByTagName('main')[0], {
+  onrendered: function(canvas) {
+    var dl = document.createElement("a");
+    dl.href = canvas.toDataURL('image/png');
+    dl.download = 'test.png';
+    document.body.appendChild(dl);
+    dl.click();
+    document.body.removeChild(dl);
+  }
+});
 </script>
 </body>
 </html>

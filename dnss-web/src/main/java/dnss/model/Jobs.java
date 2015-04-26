@@ -137,14 +137,14 @@ public class Jobs implements Iterable<Job> {
         return tertiary.getParent().equals(secondary) && secondary.getParent().equals(primary);
     }
 
-    public int getNumJobs() {
-        int sum = 0;
+    public int getTotalSP() {
+        int total = 0;
         for (Job j : this) {
             if (j != null) {
-                sum++;
+                total += j.getUsedSP();
             }
         }
 
-        return sum;
+        return total;
     }
 }

@@ -62,12 +62,6 @@ public class Skill {
     }
 
     public Level getLevel(int level) {
-        if (isDefault() && level == 0) {
-            level = 1;
-        } else if (isDefault()) {
-          level++;
-        }
-
         if (level <= 0 || level > levels.length) {
             return null;
         }
@@ -80,8 +74,8 @@ public class Skill {
     }
 
     public int getLevel() {
-        if (isDefault() && level == 0) {
-            return 1;
+        if (isDefault()) {
+            return level + 1;
         }
 
         return level;
