@@ -88,7 +88,24 @@ public class JobController {
     public String job(HttpServletRequest request, HttpServletResponse response,
                       @PathVariable("identifier") String identifier,
                       ModelMap model) throws Exception {
-        return job(request, response, identifier, sp.getLatestCap(), model);
+        int cap = sp.getLatestCap();
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("mru_level")) {
+                    try {
+                        int c = Integer.parseInt(cookie.getValue());
+                        if (c > 0 && c <= cap) {
+                            cap = c;
+                        }
+                    } catch (Exception e) {
+                        // ignore
+                    }
+                }
+            }
+        }
+
+        return job(request, response, identifier, cap, model);
     }
 
     @RequestMapping("/")

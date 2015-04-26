@@ -26,6 +26,10 @@ var dnss = new (function DNSS() {
 
     $.getJSON("/api/level/" + newCap, function(json) {
       properties.cap = newCap;
+      $("#capbutton").val("Reset");
+      var date = new Date();
+      date.setTime(date.getTime()+31556926);
+      document.cookie = "mru_level=" + newCap + ";path=/;expires=" + date.toGMTString();
 
       // reset max required level
       for (var i = 0; i < 3; i++) {

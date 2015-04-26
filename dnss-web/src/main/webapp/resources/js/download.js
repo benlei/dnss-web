@@ -4,7 +4,7 @@ var download = new (function Download() {
 
   function dl(alignment) {
     var ids = [];
-    $("#job-sp input:checkbox:checked").each(function() {
+    $("#job-sp input:checked").each(function() {
       ids.push($(this).val());
     });
 

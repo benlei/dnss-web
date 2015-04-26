@@ -31,7 +31,9 @@ Level Cap<input type="button" id="capbutton" value="Reset"/><input type="text" i
 </form>
 </div>
 <div id="download">
-<form><input type="button" id="dlh" value="horizontal dl"/><input type="button" id="dlv" value="vertical dl"/>
+Download:
+<form>
+<input type="button" id="dlh" value="horizontal"/><input type="button" id="dlv" value="vertical"/>
 </form>
 </div>
 </aside>
