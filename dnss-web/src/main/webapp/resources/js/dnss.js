@@ -7,8 +7,16 @@ var dnss = new (function DNSS() {
   var loaded = 0;
   var ultimates = [];
 
-  this.changeLevelCap = function(lvl) {
-    // can be but will not be updated
+  function changeLevelCapOrReset() {
+    var newCap = parseInt($("#cap").val());
+    if (newCap == properties.cap) { // reset
+      return;
+    }
+
+    if (newCap < 1 || newCap > 80) {
+      alert($("#cap").val() + " is not a valid level cap.");
+      return;
+    }
   };
 
   this.start = function() {
@@ -94,4 +102,14 @@ var dnss = new (function DNSS() {
     });
     t.commit(someSkill.getAdvancement());
   }
+
+  $("#capbutton").click(changeLevelCapOrReset);
+  $("#cap").keyup(function(){
+    if ($(this).val() == properties.cap) {
+      $("#capbutton").val("Reset");
+      return;
+    }
+
+    $("#capbutton").val("Change");
+  });
 })();

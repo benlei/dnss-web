@@ -1,0 +1,16 @@
+#levelcap {
+  margin-top: 25px;
+}
+
+#cap {
+  width: 25px;
+  padding: 2px 5px;
+  float: right;
+  margin-right: 5px;
+  text-align: right;
+}
+
+#capbutton {
+  float: right;
+  padding: 2px 5px;
+}

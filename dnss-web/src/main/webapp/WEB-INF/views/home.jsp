@@ -23,6 +23,11 @@
 <li/>
 <li>Total SP<div class="sp">0/${jobs.maxSP}</div></li>
 </ul>
+<div id="levelcap">
+<form>
+Level Cap<input type="button" id="capbutton" value="Reset"/><input type="text" id="cap" value="${jobs.level}"/>
+</form>
+</div>
 <div id="download">
 <form>
 <fieldset>

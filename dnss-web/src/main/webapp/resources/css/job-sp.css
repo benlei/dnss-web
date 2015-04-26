@@ -3,9 +3,10 @@
   width: 250px;
   margin-top: 2.5px;
   margin-left: 10px;
+  font-size: .9em;
 }
 
-#job-sp li {
+#job-sp li, #levelcap, #download {
   background-color: rgb(240,240,240);
   color: #333;
   padding: 8px 14px;
