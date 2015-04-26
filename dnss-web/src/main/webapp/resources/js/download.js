@@ -1,7 +1,6 @@
 var download = new (function Download() {
   var vertical = $("#dlv");
   var horizontal = $("#dlh");
-  var frames = [];
 
   function dl(alignment) {
     var ids = [];
@@ -26,12 +25,10 @@ var download = new (function Download() {
 
   function timedDelete(frame, attempts) {
     if (attempts < 12) { // 12*5 = 60s = 1min
-      if (attempts && frame.contentWindow.done) {
+      if (attempts && frame.get(0).contentWindow.done) {
         frame.remove();
       } else {
-        setTimeout(function() {
-          timedDelete(frame, attempts+1);
-        }, 5000); // check every 5 seconds
+        setTimeout(function() { timedDelete(frame, attempts+1) }, 5000); // check every 5 seconds
       }
 
     } else { // just rmeove it, it still isn't done after 1 min
