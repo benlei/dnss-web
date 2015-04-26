@@ -52,6 +52,9 @@ function Skill(id, s, e) {
           break;
         }
       }
+      if (s.max_level === undefined) { // it's still undefined
+        s.max_level = 0;
+      }
     }
 
     return s.max_level;
@@ -77,7 +80,7 @@ function Skill(id, s, e) {
   };
 
   this.commit = function() {
-    var bg = e.css("background-image");
+    var bg = e.css("background-image"), isB = bg.indexOf("_b.png");
     if (this.getLevel() == 0 && bg.indexOf("_b.png") == -1) {
       e.css("background-image", bg.replace(".png", "_b.png"));
     } else if (this.getLevel() > 0 && bg.indexOf("_b.png") != -1) {
