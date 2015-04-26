@@ -13,4 +13,5 @@
 #capbutton {
   float: right;
   padding: 2px 5px;
+  text-transform: uppercase;
 }

@@ -20,6 +20,11 @@ function Skill(id, s, e) {
     return def && !level ? 1 : level;
   };
 
+  this.reset = function() {
+    s.levels[0].totalspcost = undefined;
+    s.max_level = undefined;
+  };
+
   this.getTotalSPUsage = function() {
     if (s.levels[0].totalspcost === undefined) {
       s.levels[0].totalspcost = s.levels[0].spcost;

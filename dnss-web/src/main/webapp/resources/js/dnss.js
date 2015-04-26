@@ -9,14 +9,37 @@ var dnss = new (function DNSS() {
 
   function changeLevelCapOrReset() {
     var newCap = parseInt($("#cap").val());
-    if (newCap == properties.cap) { // reset
+    if (newCap < 1 || newCap > 80 || newCap != newCap) {
+      alert($("#cap").val() + " is not a valid level cap.");
+      $("#cap").val(properties.cap);
       return;
     }
 
-    if (newCap < 1 || newCap > 80) {
-      alert($("#cap").val() + " is not a valid level cap.");
+
+    if (newCap == properties.cap) {
+      for (var id in skills) {
+        skills[id].setLevel(0);
+        skills[id].commit();
+      }
       return;
     }
+
+    $.getJSON("/api/level/" + newCap, function(json) {
+      properties.cap = newCap;
+
+      // reset max required level
+      for (var i = 0; i < 3; i++) {
+        properties.max.required_level[i] = i == 1 ? Math.min(70, newCap): newCap;
+      }
+
+      properties.max.sp = json.sp;
+
+      for (var id in skills) {
+        skills[id].reset();
+        skills[id].setLevel(0);
+        skills[id].commit();
+      }
+    });
   };
 
   this.start = function() {
@@ -112,4 +135,5 @@ var dnss = new (function DNSS() {
 
     $("#capbutton").val("Change");
   });
+  $("form").submit(function(){ return false; });
 })();

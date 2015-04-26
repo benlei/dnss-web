@@ -32,6 +32,10 @@ var description = new (function Description() {
   };
 
   this.update = function() {
+    if (!skill) {
+      return;
+    }
+
     setName();
     setLevel();
     setSP();

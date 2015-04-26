@@ -100,10 +100,10 @@
                     <aggregations>
                         <aggregation>
                             <!--Use below to NOT compress the aggregated file-->
-                            <inputDir>${project.basedir}/src/main/webapp/resources/js</inputDir>
+                            <!--<inputDir>${project.basedir}/src/main/webapp/resources/js</inputDir>-->
 
                             <!--Use below to compress the aggregated file-->
-                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/js</inputDir>-->
+                            <inputDir>${project.build.directory}/${project.build.finalName}/resources/js</inputDir>
                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-dnss.js</output>
                             <includes>
                                 <include>**/*.js</include>
@@ -111,10 +111,10 @@
                         </aggregation>
                         <aggregation>
                             <!--Use below to NOT compress the aggregated file-->
-                            <inputDir>${project.basedir}/src/main/webapp/resources/css</inputDir>
+                            <!--<inputDir>${project.basedir}/src/main/webapp/resources/css</inputDir>-->
 
                             <!--Use below to compress the aggregated file-->
-                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/css</inputDir>-->
+                            <inputDir>${project.build.directory}/${project.build.finalName}/resources/css</inputDir>
                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-dnss.css</output>
                             <includes>
                                 <include>**/*.css</include>
@@ -122,10 +122,10 @@
                         </aggregation>
                         <aggregation>
                             <!--Use below to NOT compress the aggregated file-->
-                            <inputDir>${project.basedir}/src/main/webapp/resources/download/js</inputDir>
+                            <!--<inputDir>${project.basedir}/src/main/webapp/resources/download/js</inputDir>-->
 
                             <!--Use below to compress the aggregated file-->
-                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>-->
+                            <inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>
                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-download.js</output>
                             <includes>
                                 <include>**/*.js</include>
@@ -136,7 +136,7 @@
                             <inputDir>${project.basedir}/src/main/webapp/resources/download/css</inputDir>
 
                             <!--Use below to compress the aggregated file-->
-                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>-->
+                            <inputDir>${project.build.directory}/${project.build.finalName}/resources/download</inputDir>
                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-download.css</output>
                             <includes>
                                 <include>**/*.css</include>

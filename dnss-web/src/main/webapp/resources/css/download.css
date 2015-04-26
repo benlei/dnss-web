@@ -2,20 +2,15 @@
   margin-top: 25px;
 }
 
-#download fieldset {
-  border: 0;
-}
-
-#download legend {
-  padding-bottom: 2px;
-}
-
-#dlh, #dlv {
-  margin-top: 5px;
+#dlh, #dlv, #job-sp input {
   padding: 2px 5px;
+  text-transform: uppercase;
 }
 
 #dlv {
-  margin-left: 10px;
+  float: right;
+}
 
+#job-sp input {
+  margin-right: 5px;
 }
