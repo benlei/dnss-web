@@ -2,6 +2,7 @@ package dnss.model;
 
 import dnss.enums.Advancement;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
@@ -146,5 +147,16 @@ public class Jobs implements Iterable<Job> {
         }
 
         return total;
+    }
+
+    public ArrayList<Job> getValidList() {
+        ArrayList<Job> identities = new ArrayList<Job>();
+        for (Job j : this) {
+            if (j != null) {
+                identities.add(j);
+            }
+        }
+
+        return identities;
     }
 }

@@ -23,7 +23,11 @@ var build = new (function Build() {
   }
 
   this.commit = function() {
-    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + properties.jobs[2].id + '-' + properties.cap + "?" + r.join(""));
+    $("#build").val(window.location.protocol + "//" + window.location.host + "/job/" + properties.jobs[2].id + "-" + properties.cap + "?" + r.join(''));
+  };
+
+  this.toString = function() {
+    return r.join('');
   };
 
   this.use = function(s) {
@@ -57,4 +61,7 @@ var build = new (function Build() {
     var jobs = properties.jobs;
     return id == jobs[0].id || id == jobs[1].id || id == jobs[2].id;
   }
+
+  // select the whole thing when clicked on
+  $("#build").click(function() {$(this).select() });
 })();

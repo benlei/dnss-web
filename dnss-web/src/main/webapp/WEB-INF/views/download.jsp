@@ -17,7 +17,8 @@
 	<aside>Total SP: ${jobs.totalSP}/${jobs.maxSP}</aside>
 </main>
 <script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-download.js"></script>
-<script type="text/javascript"><c:if test="${alignment == 'h'}">
+<script type="text/javascript">
+done = false;<c:if test="${alignment == 'h'}">
 var width = document.getElementsByTagName("section").length*285;<c:if test="${not empty jobs.tertiary}">
 width -= 130;</c:if></c:if><c:if test="${alignment == 'v'}">
 width = 280;
@@ -27,10 +28,11 @@ html2canvas(document.getElementsByTagName('main')[0], {
   onrendered: function(canvas) {
     var dl = document.createElement("a");
     dl.href = canvas.toDataURL('image/png');
-    dl.download = 'test.png';
+    dl.download = '${alignment}-<c:forEach items="${jobs.validList}" var="job" varStatus="loop">${job.identifier}<c:if test="${!loop.last}">-</c:if></c:forEach>.png';
     document.body.appendChild(dl);
     dl.click();
     document.body.removeChild(dl);
+    done = true;
   }
 });
 </script>

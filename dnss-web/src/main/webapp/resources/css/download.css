@@ -1,0 +1,17 @@
+#download {
+  margin-top: 25px;
+}
+
+#download fieldset {
+  padding: 0 10px 10px 10px;
+}
+
+#dlh, #dlv {
+  margin-top: 5px;
+  padding: 2px 5px;
+}
+
+#dlv {
+  margin-left: 10px;
+
+}

@@ -16,13 +16,22 @@
 </li></c:forEach>
 </ul>
 </nav>
-<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build"/></aside>
+<aside id="build-box"><form><div id="build-text">Build URL:</div><input type="text" id="build"/></form></aside>
 <aside id="sidebar-1">
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs.iterator}" var="job" varStatus="loop">
 <li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
 <li/>
 <li>Total SP<div class="sp">0/${jobs.maxSP}</div></li>
 </ul>
+<div id="download">
+<form>
+<fieldset>
+<legend>Download:</legend><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
+<input type="checkbox" value="${job.identifier}" checked> ${job.name}<br></c:forEach>
+<input type="button" id="dlh" value="Horizontal"/><input type="button" id="dlv" value="Vertical"/>
+</fieldset>
+</form>
+</div>
 </aside>
 <section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
 <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
@@ -62,6 +71,7 @@ var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus=
   skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
   weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
   cap: ${jobs.level}};
+$("form").submit(function(){ return false; });
 dnss.start();
 </script>
 </body>
