@@ -8,7 +8,7 @@
     <groupId>dnss</groupId>
     <artifactId>dnss</artifactId>
     <packaging>pom</packaging>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.5-SNAPSHOT</version>
     <properties>
         <slf4j.version>1.7.10</slf4j.version>
         <logback.version>1.1.2</logback.version>
