@@ -50,14 +50,23 @@ public class Skill {
 
     public void setMaxLevelForCap(int cap) {
         Level max = null;
-        for (int i = 0; i < levels.length; i++) {
+        int i;
+        for (i = 0; i < levels.length; i++) {
             if (levels[i].getRequiredJobLevel() <= cap) {
                 max = levels[i];
+            } else {
+                break;
             }
         }
 
         if (max != null) {
             maxLevel = max.getLevel();
+
+            // Fix SP cost
+            for (; i < levels.length; i++ ) {
+                levels[i].setSpCost(0);
+                levels[i].setTotalSPCost(max.getTotalSPCost());
+            }
         }
     }
 
@@ -66,7 +75,7 @@ public class Skill {
             return null;
         }
 
-        return levels[--level];
+        return levels[level-1];
     }
 
     public boolean isDefault() {
@@ -102,5 +111,10 @@ public class Skill {
         }
 
         return false;
+    }
+
+    public int getUsedSP() {
+        Level l = getLevel(getLevel());
+        return l == null ? 0 : l.getTotalSPCost();
     }
 }

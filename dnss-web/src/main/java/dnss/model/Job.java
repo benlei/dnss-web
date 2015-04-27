@@ -109,14 +109,12 @@ public class Job {
         if (usedSP != -1) {
             return usedSP;
         }
+
         int total = 0;
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 4; j++) {
-                if (skillTree[i][j] != null && skillTree[i][j].getLevel() != 0) {
-                    Level level = skillTree[i][j].getLevel(skillTree[i][j].getLevel());
-                    if (level != null) {
-                        total += level.getTotalSPCost();
-                    }
+                if (skillTree[i][j] != null) {
+                    total += skillTree[i][j].getUsedSP();
                 }
             }
         }
