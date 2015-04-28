@@ -7,8 +7,8 @@
 <section class="${alignment}">
 <div class="job">${job.name}<div class="sp">${job.usedSP}/${job.maxSP}</div></div>
 <table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
-<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}"><c:if test="${jobLoop.index != 2 || skillLoop.index < 2}">
-<td class="container" /></c:if></c:when><c:otherwise>
+<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
+<td class="container" /></c:when><c:otherwise>
 <td class="container">
 <div class="skill" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>
 <div class="lvl">${skill.level}/${skill.maxLevel}</div></c:otherwise></c:choose></c:forEach></c:forEach>

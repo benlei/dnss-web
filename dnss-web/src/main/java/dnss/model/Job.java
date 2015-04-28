@@ -111,8 +111,8 @@ public class Job {
         }
 
         int total = 0;
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < skillTree.length; i++) {
+            for (int j = 0; j < skillTree[i].length; j++) {
                 if (skillTree[i][j] != null) {
                     total += skillTree[i][j].getUsedSP();
                 }
@@ -121,5 +121,22 @@ public class Job {
 
         usedSP = total;
         return total;
+    }
+
+    public void compactSkillTree() {
+        if (skillTree.length == 6 && skillTree[5][0] == null && skillTree[5][1] == null && skillTree[5][2] == null && skillTree[5][3] == null) {
+            Skill[][] newSkillTree = new Skill[5][4]; // 5 rows, 4 cols
+            newSkillTree[0] = skillTree[0];
+            newSkillTree[1] = skillTree[1];
+            newSkillTree[2] = skillTree[2];
+            newSkillTree[3] = skillTree[3];
+            newSkillTree[4] = skillTree[4];
+            skillTree = newSkillTree;
+        }
+
+
+        for (int i = 0; advancement == Advancement.TERTIARY && i < skillTree.length; i++) {
+            skillTree[i] = new Skill[] {skillTree[i][0], skillTree[i][1]};
+        }
     }
 }
