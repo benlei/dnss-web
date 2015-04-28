@@ -74,8 +74,9 @@ public class DownloadController {
                 }
 
                 skill.setLevel(build.get(pos));
-//                System.out.println(skill.getId() + " - level " + skill.getLevel());
             }
+
+            job.compactSkillTree();
         }
 
         model.addAttribute("alignment", alignment);
