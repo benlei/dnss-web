@@ -16,6 +16,7 @@
 </section></c:forEach>
 <aside>Total SP: ${jobs.totalSP}/${jobs.maxSP}</aside>
 </main>
+</body>
 <script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-download.js"></script>
 <script type="text/javascript">
 var data=null;<c:if test="${alignment == 'h'}">
@@ -26,5 +27,4 @@ width = 280;
 document.getElementsByTagName("main")[0].style.width = width+"px";
 html2canvas(document.getElementsByTagName('main')[0], {onrendered: function(canvas) {data = canvas.toDataURL('image/png')}});
 </script>
-</body>
 </html>

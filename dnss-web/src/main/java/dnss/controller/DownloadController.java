@@ -86,6 +86,20 @@ public class DownloadController {
         return "download";
     }
 
+    @RequestMapping("/skill/{id:[0-9]+}")
+    public String downloadSkill(HttpServletRequest request, HttpServletResponse response,
+                                @PathVariable("id") int id,
+                                ModelMap model) throws Exception {
+        String bean = "skill_" + id;
+        if (! context.containsBean(bean)) {
+            response.sendError(SC_NOT_FOUND, "Skill " + id + " not found!");
+        }
+
+        Skill skill = (Skill)context.getBean(bean);
+        skill.setLevel(1); // only want the active icon
+        model.addAttribute("skill", skill);
+        return "download_skill";
+    }
 
     private Jobs sortJobList(ArrayList<Job> list) {
         Jobs jobs = new Jobs();

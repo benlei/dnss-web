@@ -66,7 +66,7 @@ var dnss = new (function DNSS() {
 
     // obtain json
     for (var i = 0; i < 3; i++) {
-      $.getJSON("/json/" + properties.version.json + "-" + properties.jobs[i].id + ".json", addSkills);
+      $.getJSON("/json/" + properties.version + "-" + properties.jobs[i].id + ".json", addSkills);
     }
   };
 
