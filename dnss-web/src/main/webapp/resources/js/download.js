@@ -2,33 +2,33 @@ var download = new (function Download() {
   var vertical = $("#dlv");
   var horizontal = $("#dlh");
 
-  function dl(alignment) {
-    var ids = [];
-    $("#job-sp input:checked").each(function() {
-      ids.push($(this).val());
-    });
+  function trees(alignment) {
+      var ids = [];
+      $("#job-sp input:checked").each(function() {
+        ids.push($(this).val());
+      });
 
-    if (! ids.length) {
-      alert("No job has been checked to be downloaded!");
-      return;
-    }
+      if (! ids.length) {
+        alert("No job has been checked to be downloaded!");
+        return;
+      }
 
-    ids = ids.join('-');
+      ids = ids.join('-');
 
+      dl(alignment+"-"+ids, alignment + "/" + ids + "/" + properties.cap + "/" + build.toString());
+  }
+
+  this.skill = function(id, name) {
+    dl(name.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,''), "skill/" + id);
+  };
+
+  function dl(path, name) {
     var frame = $("<iframe />");
-    frame.attr("src", window.location.protocol + "//" + window.location.host + "/download/" + alignment + "/" + ids + "/" + properties.cap + "/" + build.toString());
+    frame.attr("src", window.location.protocol + "//" + window.location.host + "/download/" + path);
     frame.css({height: "1px", width: "1px"});
     frame.appendTo("body");
     timedDelete(frame, 0, alignment+"-"+ids);
   }
-
-  this.skill = function(id, name) {
-    var frame = $("<iframe />");
-    frame.attr("src", window.location.protocol + "//" + window.location.host + "/download/skill/" + id);
-    frame.css({height: "1px", width: "1px"});
-    frame.appendTo("body");
-    timedDelete(frame, 0, name.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,''));
-  };
 
   function timedDelete(frame, attempts, name) {
     if (attempts < 60) {
@@ -49,6 +49,6 @@ var download = new (function Download() {
     }
   }
 
-  vertical.click(function() {dl("v")});
-  horizontal.click(function() {dl("h")});
+  vertical.click(function() {trees("v")});
+  horizontal.click(function() {trees("h")});
 })();
