@@ -33,10 +33,10 @@ var dnss = new (function DNSS() {
 
       // reset max required level
       for (var i = 0; i < 3; i++) {
-        properties.max.required_level[i] = i == 1 ? Math.min(70, newCap): newCap;
+        properties.required_level[i] = i == 1 ? Math.min(70, newCap): newCap;
       }
 
-      properties.max.sp = json.sp;
+      properties.sp = json.sp;
 
       for (var id in skills) {
         skills[id].reset();
@@ -46,7 +46,7 @@ var dnss = new (function DNSS() {
     });
   };
 
-  this.start = function() {
+  this.start = function(v) {
     if (started) { return; }
     started = true;
 
@@ -66,7 +66,7 @@ var dnss = new (function DNSS() {
 
     // obtain json
     for (var i = 0; i < 3; i++) {
-      $.getJSON("/json/" + properties.version + "-" + properties.jobs[i].id + ".json", addSkills);
+      $.getJSON("/json/" + v + "-" + properties.jobs[i].id + ".json", addSkills);
     }
   };
 
@@ -85,15 +85,15 @@ var dnss = new (function DNSS() {
     }
 
     new_total = total_sp - curr_sp + sum;
-    $("#job-sp-"+advancement+" .sp").html(sum + "/" + properties.max.sp[advancement]);
-    if (sum > properties.max.sp[advancement]) {
+    $("#job-sp-"+advancement+" .sp").html(sum + "/" + properties.sp[advancement]);
+    if (sum > properties.sp[advancement]) {
       $("#job-sp-"+advancement+" .sp").addClass("r");
     } else {
       $("#job-sp-"+advancement+" .sp").removeClass("r");
     }
 
-    $("#job-sp li:last .sp").html(new_total + "/" + properties.max.sp[3]);
-    if (new_total > properties.max.sp[3]) {
+    $("#job-sp li:last .sp").html(new_total + "/" + properties.sp[3]);
+    if (new_total > properties.sp[3]) {
       $("#job-sp li:last .sp").addClass("r");
     } else {
       $("#job-sp li:last .sp").removeClass("r");

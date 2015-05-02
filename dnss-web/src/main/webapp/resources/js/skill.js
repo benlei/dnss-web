@@ -52,7 +52,7 @@ function Skill(id, s, e) {
   this.getMaxLevel = function() {
     if (s.max_level === undefined) {
       for (var i = s.levels.length - 1; -1 < i; i--) {
-        if (s.levels[i].required_level <= properties.max.required_level[this.getAdvancement()]) {
+        if (s.levels[i].required_level <= properties.required_level[this.getAdvancement()]) {
           s.max_level = i+1;
           break;
         }
@@ -275,18 +275,25 @@ function Skill(id, s, e) {
     mousedown: function(b) {
       var extreme = b.shiftKey || b.ctrlKey;
       var curr = t.getLevel();
-      if (b.button == 0) { // left click
-        if (extreme && curr < t.getMaxLevel()) {
-          t.setLevel(t.getMaxLevel());
-        } else if (t.getNextLevel() != -1) {
-          t.setLevel(t.getNextLevel());
-        }
-      } else if(b.button == 2) { // right click
-        if (extreme && curr != t.getMinLevel()) {
-            t.setLevel(t.getMinLevel());
-        } else if (t.getPrevLevel() != -1) {
-            t.setLevel(t.getPrevLevel());
-        }
+      switch(b.button) {
+        case 0: // left click
+          if (extreme && curr < t.getMaxLevel()) {
+            t.setLevel(t.getMaxLevel());
+          } else if (t.getNextLevel() != -1) {
+            t.setLevel(t.getNextLevel());
+          }
+          break;
+        case 2: // right click
+          if (extreme && curr != t.getMinLevel()) {
+              t.setLevel(t.getMinLevel());
+          } else if (t.getPrevLevel() != -1) {
+              t.setLevel(t.getPrevLevel());
+          }
+          break;
+        case 1: // middle click
+          download.skill(id, t.getName());
+          return;
+        default: return;
       }
 
       curr != t.getLevel() && t.commit();

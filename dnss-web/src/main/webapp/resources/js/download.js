@@ -22,18 +22,26 @@ var download = new (function Download() {
     timedDelete(frame, 0, alignment+"-"+ids);
   }
 
-  function timedDelete(frame, attempts, ids) {
+  this.skill = function(id, name) {
+    var frame = $("<iframe />");
+    frame.attr("src", window.location.protocol + "//" + window.location.host + "/download/skill/" + id);
+    frame.css({height: "1px", width: "1px"});
+    frame.appendTo("body");
+    timedDelete(frame, 0, name.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,''));
+  };
+
+  function timedDelete(frame, attempts, name) {
     if (attempts < 60) {
       if (attempts && frame.get(0).contentWindow.data) {
         var dl = document.createElement("a");
         dl.href = frame.get(0).contentWindow.data;
-        dl.download = ids+".png";
+        dl.download = name+".png";
         document.body.appendChild(dl);
         dl.click();
         document.body.removeChild(dl);
         frame.remove();
       } else {
-        setTimeout(function() { timedDelete(frame, attempts+1, ids) }, 1000); // check every 1 seconds
+        setTimeout(function() { timedDelete(frame, attempts+1, name) }, 1000); // check every 1 seconds
       }
 
     } else { // just rmeove it, it still isn't done after 1 min
