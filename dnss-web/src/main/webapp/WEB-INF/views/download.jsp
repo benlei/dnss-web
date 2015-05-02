@@ -12,8 +12,8 @@
 <td class="container">
 <div class="skill" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>
 <div class="lvl">${skill.level}/${skill.maxLevel}</div></c:otherwise></c:choose></c:forEach></c:forEach>
-</table></c:if>
-</section></c:forEach>
+</table>
+</section></c:if></c:forEach>
 <aside>Total SP: ${jobs.totalSP}/${jobs.maxSP}</aside>
 </main>
 </body>
@@ -22,9 +22,8 @@
 var data=null;<c:if test="${alignment == 'h'}">
 var width = document.getElementsByTagName("section").length*285;<c:if test="${not empty jobs.tertiary}">
 width -= 130;</c:if></c:if><c:if test="${alignment == 'v'}">
-width = 280;
-</c:if>
+width = 280;</c:if>
 document.getElementsByTagName("main")[0].style.width = width+"px";
-html2canvas(document.getElementsByTagName('main')[0], {onrendered: function(canvas) {data = canvas.toDataURL('image/png')}});
+html2canvas(document.getElementsByTagName('main')[0],{onrendered:function(canvas){data=canvas.toDataURL("image/png")}});
 </script>
 </html>
