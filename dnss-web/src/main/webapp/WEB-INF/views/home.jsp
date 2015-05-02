@@ -21,19 +21,18 @@
 <form>
 <ul id="job-sp" class="no-select"><c:forEach items="${jobs.iterator}" var="job" varStatus="loop">
 <li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>><input type="checkbox" value="${job.identifier}" checked>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
-<li/>
-<li>Total SP<div class="sp">0/${jobs.maxSP}</div></li>
 </ul>
 </form>
+<ul id="job-sp-summary">
+<li id="remaining-sp">Remaining SP<div class="sp">${jobs.maxSP}</div></li>
+<li id="total-sp">Total SP<div class="sp">0/${jobs.maxSP}</div></li>
+</ul>
+<div id="download">
+<a href="javascript:download.skillTrees('h')" id="dlh">dl landscape</a> | <a href="javascript:download.skillTrees('v')" id="dlv">dl portrait</a>
+</div>
 <div id="levelcap">
 <form>
-Level Cap<input type="button" id="capbutton" value="Reset"/><input type="text" id="cap" value="${jobs.level}"/>
-</form>
-</div>
-<div id="download">
-Download:
-<form>
-<input type="button" id="dlh" value="horizontal"/><input type="button" id="dlv" value="vertical"/>
+Level Cap<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><input type="text" id="cap" value="${jobs.level}"/>
 </form>
 </div>
 </aside>

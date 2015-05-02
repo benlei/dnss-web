@@ -7,7 +7,7 @@ var dnss = new (function DNSS() {
   var loaded = 0;
   var ultimates = [];
 
-  function changeLevelCapOrReset() {
+  this.changeCapOrReset = function() {
     var newCap = parseInt($("#cap").val());
     if (newCap < 1 || newCap > 80 || newCap != newCap) {
       alert($("#cap").val() + " is not a valid level cap.");
@@ -26,7 +26,7 @@ var dnss = new (function DNSS() {
 
     $.getJSON("/api/level/" + newCap, function(json) {
       properties.cap = newCap;
-      $("#capbutton").val("Reset");
+      $("#capchanger").html("Reset");
       var date = new Date();
       date.setTime(date.getTime()+31556926);
       document.cookie = "mru_level=" + newCap + ";path=/;expires=" + date.toGMTString();
@@ -54,7 +54,7 @@ var dnss = new (function DNSS() {
 
     // event binding
     $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
-    $("#job-sp li[id]").each(function() {
+    $("#job-sp-0,#job-sp-1,#job-sp-2").each(function() {
       var advancement = $(this).attr("id").substr(-1);
       $(this).click(function() {
         $("#job-sp li").removeClass("active");
@@ -76,7 +76,7 @@ var dnss = new (function DNSS() {
 
   this.commit = function(advancement) {
     var curr_sp = this.getSP(advancement);
-    var total_sp = $("#job-sp li:last .sp").html().split("/")[0] || 0;
+    var total_sp = $("#total-sp .sp").html().split("/")[0] || 0;
     var sum = 0, new_total;
     for (var i = 24*advancement; i < 24*(advancement+1); i++) {
       if (positions[i]) {
@@ -92,11 +92,14 @@ var dnss = new (function DNSS() {
       $("#job-sp-"+advancement+" .sp").removeClass("r");
     }
 
-    $("#job-sp li:last .sp").html(new_total + "/" + properties.sp[3]);
+    $("#total-sp .sp").html(new_total + "/" + properties.sp[3]);
+    $("#remaining-sp .sp").html(properties.sp[3] - new_total);
     if (new_total > properties.sp[3]) {
-      $("#job-sp li:last .sp").addClass("r");
+      $("#total-sp .sp").addClass("r");
+      $("#remaining-sp .sp").addClass("r");
     } else {
-      $("#job-sp li:last .sp").removeClass("r");
+      $("#total-sp .sp").removeClass("r");
+      $("#remaining-sp .sp").removeClass("r");
     }
 
     build.commit();
@@ -128,16 +131,17 @@ var dnss = new (function DNSS() {
       someSkill = skill;
     });
     t.commit(someSkill.getAdvancement());
+    positions[0] && description.use(positions[0]);
   }
 
-  $("#capbutton").click(changeLevelCapOrReset);
   $("#cap").keyup(function(){
     if ($(this).val() == properties.cap) {
-      $("#capbutton").val("Reset");
+      $("#capchanger").html("Reset");
       return;
     }
 
-    $("#capbutton").val("Change");
+    $("#capchanger").html("Change");
   });
+
   $("form").submit(function(){ return false; });
 })();

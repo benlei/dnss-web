@@ -1,16 +1,20 @@
 #download {
-  margin-top: 25px;
-}
-
-#dlh, #dlv, #job-sp input {
-  padding: 2px 5px;
+  margin-top: 15px;
+  text-align: center;
   text-transform: uppercase;
-}
-
-#dlv {
-  float: right;
+  font-size: .7em;
+  font-weight: bold;
 }
 
 #job-sp input {
+  padding: 2px 5px;
   margin-right: 5px;
+}
+
+#dlh {
+  margin-right: 5px;
+}
+
+#dlv {
+  margin-left: 5px;
 }

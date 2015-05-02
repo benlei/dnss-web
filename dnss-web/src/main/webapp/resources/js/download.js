@@ -2,7 +2,7 @@ var download = new (function Download() {
   var vertical = $("#dlv");
   var horizontal = $("#dlh");
 
-  function trees(alignment) {
+  this.skillTrees = function(alignment) {
       var ids = [];
       $("#job-sp input:checked").each(function() {
         ids.push($(this).val());
@@ -16,18 +16,18 @@ var download = new (function Download() {
       ids = ids.join('-');
 
       dl(alignment+"-"+ids, alignment + "/" + ids + "/" + properties.cap + "/" + build.toString());
-  }
+  };
 
   this.skill = function(id, name) {
     dl(name.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,''), "skill/" + id);
   };
 
-  function dl(path, name) {
+  function dl(name, path) {
     var frame = $("<iframe />");
     frame.attr("src", window.location.protocol + "//" + window.location.host + "/download/" + path);
     frame.css({height: "1px", width: "1px"});
     frame.appendTo("body");
-    timedDelete(frame, 0, alignment+"-"+ids);
+    timedDelete(frame, 0, name);
   }
 
   function timedDelete(frame, attempts, name) {
@@ -48,7 +48,4 @@ var download = new (function Download() {
       frame.remove();
     }
   }
-
-  vertical.click(function() {trees("v")});
-  horizontal.click(function() {trees("h")});
 })();

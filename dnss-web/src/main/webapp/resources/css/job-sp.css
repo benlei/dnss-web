@@ -6,7 +6,7 @@
   font-size: .9em;
 }
 
-#job-sp li, #levelcap, #download {
+#job-sp li, #job-sp-summary li,#levelcap, #download {
   background-color: rgb(240,240,240);
   color: #333;
   padding: 8px 14px;
@@ -17,22 +17,19 @@
   background-color: rgb(225,225,225);
 }
 
-#job-sp .sp {
+#job-sp .sp, #job-sp-summary .sp {
   float: right;
 }
 
-#job-sp li:nth-last-child(2) {
-  background-color: #fff;
-  border: 0;
-  border-bottom: 1px solid #ccc;
-  padding: 0;
-  margin: 5px 0;
-}
-
-#job-sp li:last-of-type {
-  margin-top: 0;
-}
-
-#job-sp .r {
+#job-sp .r,#job-sp-summary .r {
   color: #ff0000;
+}
+
+#job-sp-summary {
+  padding-top: 5px;
+}
+
+#job-sp input {
+  padding: 2px 5px;
+  margin-right: 5px;
 }
