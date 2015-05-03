@@ -76,7 +76,7 @@ var dnss = new (function DNSS() {
 
   this.commit = function(advancement) {
     var curr_sp = this.getSP(advancement);
-    var total_sp = $("#total-sp .sp").html().split("/")[0] || 0;
+    var total_sp = $("#total-sp .sp").html().split("/")[1] || 0;
     var sum = 0, new_total;
     for (var i = 24*advancement; i < 24*(advancement+1); i++) {
       if (positions[i]) {
@@ -92,14 +92,12 @@ var dnss = new (function DNSS() {
       $("#job-sp-"+advancement+" .sp").removeClass("r");
     }
 
-    $("#total-sp .sp").html(new_total + "/" + properties.sp[3]);
-    $("#remaining-sp .sp").html(properties.sp[3] - new_total);
-    if (new_total > properties.sp[3]) {
+    var remaining = properties.sp[3] - new_total;
+    $("#total-sp .sp").html(remaining + "/" + new_total + "/" + properties.sp[3]);
+    if (remaining < 0) {
       $("#total-sp .sp").addClass("r");
-      $("#remaining-sp .sp").addClass("r");
     } else {
       $("#total-sp .sp").removeClass("r");
-      $("#remaining-sp .sp").removeClass("r");
     }
 
     build.commit();

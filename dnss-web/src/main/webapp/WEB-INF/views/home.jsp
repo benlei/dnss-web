@@ -23,9 +23,8 @@
 <li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>><input type="checkbox" value="${job.identifier}" checked>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
 </ul>
 </form>
-<ul id="job-sp-summary">
-<li id="remaining-sp">Remaining SP<div class="sp">${jobs.maxSP}</div></li>
-<li id="total-sp">Total SP<div class="sp">0/${jobs.maxSP}</div></li>
+<ul id="total-sp">
+<li>Total SP<div class="sp">${jobs.maxSP}/0/${jobs.maxSP}</div></li>
 </ul>
 <div id="download">
 <a href="javascript:download.skillTrees('h')" id="dlh">dl landscape</a> | <a href="javascript:download.skillTrees('v')" id="dlv">dl portrait</a>

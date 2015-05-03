@@ -6,7 +6,7 @@
   font-size: .9em;
 }
 
-#job-sp li, #job-sp-summary li,#levelcap, #download {
+#job-sp li, #total-sp li, #levelcap, #download {
   background-color: rgb(240,240,240);
   color: #333;
   padding: 8px 14px;
@@ -17,19 +17,19 @@
   background-color: rgb(225,225,225);
 }
 
-#job-sp .sp, #job-sp-summary .sp {
+#job-sp .sp, #total-sp .sp {
   float: right;
 }
 
-#job-sp .r,#job-sp-summary .r {
+#job-sp .r, #total-sp .r {
   color: #ff0000;
-}
-
-#job-sp-summary {
-  padding-top: 5px;
 }
 
 #job-sp input {
   padding: 2px 5px;
   margin-right: 5px;
+}
+
+#total-sp {
+  padding-top: 5px;
 }
