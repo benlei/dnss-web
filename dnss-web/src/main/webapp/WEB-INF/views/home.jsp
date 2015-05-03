@@ -66,7 +66,7 @@ Level Cap<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><
 </aside>
 </main>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.js"></script>
 <script type="text/javascript">
 var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
