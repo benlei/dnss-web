@@ -1,6 +1,8 @@
 var download = new (function Download() {
   var vertical = $("#dlv");
   var horizontal = $("#dlh");
+  var DELAY = 250; // ms
+  var WAIT_TIME = 60000;
 
   this.skillTrees = function(alignment) {
       var ids = [];
@@ -15,7 +17,7 @@ var download = new (function Download() {
 
       ids = ids.join('-');
 
-      dl(alignment+"-"+ids, alignment + "/" + ids + "/" + properties.cap + "/" + build.toString());
+      dl(ids+"-"+properties.cap, alignment + "/" + ids + "/" + properties.cap + "/" + build.toString());
   };
 
   this.skill = function(id, name) {
@@ -30,9 +32,9 @@ var download = new (function Download() {
     timedDelete(frame, 0, name);
   }
 
-  function timedDelete(frame, attempts, name) {
-    if (attempts < 60) {
-      if (attempts && frame.get(0).contentWindow.data) {
+  function timedDelete(frame, total_delayed, name) {
+    if (total_delayed < WAIT_TIME) {
+      if (total_delayed && frame.get(0).contentWindow.data) {
         var dl = document.createElement("a");
         dl.href = frame.get(0).contentWindow.data;
         dl.download = name+".png";
@@ -41,7 +43,7 @@ var download = new (function Download() {
         document.body.removeChild(dl);
         frame.remove();
       } else {
-        setTimeout(function() { timedDelete(frame, attempts+1, name) }, 1000); // check every 1 seconds
+        setTimeout(function() { timedDelete(frame, total_delayed + DELAY, name) }, DELAY); // check every 1 seconds
       }
 
     } else { // just rmeove it, it still isn't done after 1 min
