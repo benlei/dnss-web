@@ -70,24 +70,16 @@ public class JobController {
         model.addAttribute("skill_types", skillTypes);
         model.addAttribute("weapon_types", context.getBean(jobs.getPrimary().getIdentifier() + "_weapons"));
 
-        // setting the cookies
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie c : cookies) {
-                Cookie cookie = null;
-                if (c.getName().equals("mru_job") && ! identifier.equals(c.getValue())) {
-                    cookie = new Cookie("mru_job", identifier);
-                } else if (c.getName().equals("mru_level") && ! Integer.toString(level).equals(c.getValue())) {
-                    cookie = new Cookie("mru_level", Integer.toString(level));
-                }
+        // sets the most recent job
+        Cookie cookie = new Cookie("mru_job", identifier);
+        cookie.setMaxAge(31556926);
+        cookie.setPath("/");
+        response.addCookie(cookie);
 
-                if (cookie != null) {
-                    cookie.setMaxAge(31556926);
-                    cookie.setPath("/");
-                    response.addCookie(cookie);
-                }
-            }
-        }
+        cookie = new Cookie("mru_level", Integer.toString(level));
+        cookie.setMaxAge(31556926);
+        cookie.setPath("/");
+        response.addCookie(cookie);
 
         return "home";
     }
