@@ -1,10 +1,7 @@
 var description = new (function Description() {
   var t = this;
   var MODE_FLAG = 1;
-  var separator = "  &rarr; ";
   var skill = null;
-
-  var $ndesc = $("#next-description");
 
   var name = $("#skill-name"),
     level = $("#skill-level .w"),
@@ -19,10 +16,6 @@ var description = new (function Description() {
     ndesc = $("#next-description .d"),
     sp_required = $("#sp-required .w"),
     skills_required = $("#skills-required .w");
-
-  this.getSeparator = function() {
-    return separator;
-  };
 
   this.use = function(s) {
     $("#sidebar-2").show();
@@ -66,73 +59,80 @@ var description = new (function Description() {
     return build.get(build.FLAG_POS) & MODE_FLAG ? "pvp" : "pve";
   };
 
+  function currOrNext(e, curr, next) {
+    e.html(curr == -1 ? next : curr);
+  }
+
+  function showOrHide(e, _e, text) {
+    if (text == -1) {
+      e.hide();
+      return;
+    }
+
+    _e.html(text);
+    e.show();
+  }
+
+  // Name
   function setName() {
     name.html(skill.getName());
   }
 
-  function setSP() {
-    sp.html(skill.getNextSPUsage());
+  // main block
+  function setLevel() {
+    currOrNext(level, skill.getLevel() ? skill.getLevel() : -1, skill.getNextLevel());
   }
 
-  function setTotalSP() {
-    total_sp.html(skill.getTotalSPUsage());
+  function setMP() {
+    currOrNext(mp, skill.getLevel() ? skill.getMPUsage(t.getMode()) : -1,  skill.getNextMPUsage(t.getMode()));
   }
 
   function setRequiredWeapons() {
-    required_weaps.html(skill.getRequiredWeapons());
+    showOrHide(required_weaps.parent(), required_weaps, skill.getRequiredWeapons());
   }
 
   function setType() {
     type.html(skill.getType());
   }
 
+  function setTotalSP() {
+    total_sp.html(skill.getTotalSPUsage());
+  }
+
+  function setCD() {
+    currOrNext(cd, skill.getLevel() ? skill.getCD(t.getMode()) : -1, skill.getNextCD(t.getMode()));
+  }
+
+  // requirement block
+  function setRequiredLevel() {
+    showOrHide(required_level.parent(), required_level, skill.getNextRequiredLevel())
+  }
+
+  function setRequiredSkills() {
+    showOrHide(skills_required.parent(), skills_required, format(skill.getSkillRequirements()));
+  }
+
+  function setRequiredSP() {
+    showOrHide(sp_required.parent(), sp_required, format(skill.getSPRequirements()));
+  }
+
+  function setSP() {
+    sp.html(skill.getNextSPUsage());
+  }
+
+  // description block
   function setDescriptions() {
     var d = skill.getDescription(t.getMode()), n = skill.getNextDescription(t.getMode());
     desc.html(format(d == -1 ? n : d));
 
     ndesc.html(format(n));
-    d == -1  || n == -1 ? $ndesc.hide() : $ndesc.show();
+    d == -1  || n == -1 ? ndesc.parent().hide() : ndesc.parent().show();
   }
 
-  function setRequiredSP() {
-    sp_required.html(format(skill.getSPRequirements()));
-  }
-
-  function setRequiredSkills() {
-    skills_required.html(format(skill.getSkillRequirements()));
-  }
-
-  function html(e, curr, next) {
-    if (curr == -1) {
-      e.html(next);
-    } else if (next == -1) {
-      e.html(curr);
-    } else {
-      e.html(curr + separator + next);
-    }
-  }
-
-  function setLevel() {
-    html(level, skill.getLevel() ? skill.getLevel() : -1, skill.getNextLevel());
-  }
-
-  function setMP() {
-    html(mp, skill.getMPUsage(t.getMode()) == skill.getNextMPUsage(t.getMode()) ? -1 : skill.getMPUsage(t.getMode()),
-      skill.getNextMPUsage(t.getMode()));
-  }
-
-  function setCD() {
-    html(cd, skill.getCD(t.getMode()) == skill.getNextCD(t.getMode()) ? -1 : skill.getCD(t.getMode()),
-      skill.getNextCD(t.getMode()));
-  }
-
-  function setRequiredLevel() {
-    html(required_level, skill.getRequiredLevel(), skill.getNextRequiredLevel());
-  }
 
   function format(str) {
     if (str == -1) {
-      return "";
+      return -1;
     }
 
     var c = 0, w = 0, p = 0, newStr = "", startPos = 0;

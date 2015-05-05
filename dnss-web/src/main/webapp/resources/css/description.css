@@ -34,8 +34,15 @@ h2 {
   font-weight: normal;
 }
 
+#sidebar-2 .separator {
+  border-top: 1px solid #999;
+  margin: 5px auto;
+}
+
 #next-description {
   margin-top: 15px;
+  opacity: 0.9; /* Real browsers */
+  filter: alpha(opacity = 90); /* MSIE */
 }
 
 #mode {

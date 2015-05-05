@@ -181,14 +181,14 @@ function Skill(id, s, e) {
     var list = [];
 
     for (var i in s.need_sp) {
-      var str = properties.jobs[i].name + description.getSeparator() + s.need_sp[i] + " SP";
+      var str = properties.jobs[i].name + " SP Total " + s.need_sp[i] + " or above";
       if (nSP[i]) {
         list.push(str);
       } else {
         list.push("#r" + str + "#w");
       }
     }
-    return list.length ? list.join(", ") : "None";
+    return list.length ? list.join("\\n") : -1;
   };
 
   this.getSkillRequirements = function() {
@@ -197,9 +197,9 @@ function Skill(id, s, e) {
     for (var i in s.requires) {
       var other = dnss.getSkill(i);
       var str = other.getName() + " Lv. " + s.requires[i];
-      if (other.getAdvancement() != this.getAdvancement()) {
-        str = properties.jobs[other.getAdvancement()].name + description.getSeparator() + str;
-      }
+//      if (other.getAdvancement() != this.getAdvancement()) {
+//        str = properties.jobs[other.getAdvancement()].name + " " + str;
+//      }
       if (nSkills[i]) {
         list.push(str);
       } else {
@@ -207,7 +207,7 @@ function Skill(id, s, e) {
       }
     }
 
-    return list.length ? list.join(", ") : "None";
+    return list.length ? list.join("\\n") : -1;
   };
 
   // things for skill descriptions
@@ -235,17 +235,17 @@ function Skill(id, s, e) {
     return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].cd[mode] : -1;
   };
 
-  this.getRequiredLevel = function() {
-    return this.getLevel() ? s.levels[this.getLevel()-1].required_level : -1;
-  };
+//  this.getRequiredLevel = function() {
+//    return this.getLevel() ? s.levels[this.getLevel()-1].required_level : -1;
+//  };
 
   this.getNextRequiredLevel =  function() {
     return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].required_level : -1;
   };
 
   this.getRequiredWeapons = function() {
-    if (!s.needweapon.length) {
-      return "Any";
+    if (! s.needweapon.length) {
+      return -1;
     }
 
     weapons = [];
