@@ -24,11 +24,11 @@ public class DownloadController {
     private SP sp;
 
     @RequestMapping("/{alignment:[h|v]}/{identifiers:[a-z-]+}/{level:[1-9][0-9]*}/{build:[0-9a-zA-Z-\\.\\+]{48,}}")
-    public String download(HttpServletRequest request, HttpServletResponse response,
-                           @PathVariable("identifiers") String identifiers,
+    public String download(@PathVariable("identifiers") String identifiers,
                            @PathVariable("level") int level,
                            @PathVariable("build") String query,
                            @PathVariable("alignment") String alignment,
+                           HttpServletResponse response,
                            ModelMap model) throws Exception {
         String[] r = identifiers.split("-");
         if (r.length < 1 || r.length > 3) { // will do next release

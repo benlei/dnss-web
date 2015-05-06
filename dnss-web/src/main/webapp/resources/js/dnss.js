@@ -28,8 +28,8 @@ var dnss = new (function DNSS() {
       properties.cap = newCap;
       $("#capchanger").html("Reset");
       var date = new Date();
-      date.setTime(date.getTime()+31556926);
-      document.cookie = "mru_level=" + newCap + ";path=/;expires=" + date.toGMTString();
+      date.setTime(date.getTime()+1800000);
+      document.cookie = "mru_level=" + newCap + ";path=/;expires=" + date.toUTCString();
 
       // reset max required level
       for (var i = 0; i < 3; i++) {

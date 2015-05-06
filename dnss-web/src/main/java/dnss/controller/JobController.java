@@ -3,9 +3,11 @@ package dnss.controller;
 import dnss.model.Job;
 import dnss.model.Jobs;
 import dnss.model.SP;
+import dnss.web.Cookies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.WebApplicationContext;
@@ -41,9 +43,10 @@ public class JobController {
 
 
     @RequestMapping("/job/{identifier:[a-z]+}-{level:[1-9][0-9]*}")
-    public String job(HttpServletRequest request, HttpServletResponse response,
-                      @PathVariable("identifier") String identifier,
+    public String job(@PathVariable("identifier") String identifier,
                       @PathVariable("level") int level,
+                      @ModelAttribute("cookies") Cookies cookies,
+                      HttpServletResponse response,
                       ModelMap model) throws Exception {
         String bean = "jobs_"  +identifier;
         if (! context.containsBean(bean)) {
@@ -71,75 +74,85 @@ public class JobController {
         model.addAttribute("weapon_types", context.getBean(jobs.getPrimary().getIdentifier() + "_weapons"));
 
         // sets the most recent job
-        Cookie cookie = new Cookie("mru_job", identifier);
-        cookie.setMaxAge(31556926);
-        cookie.setPath("/");
-        response.addCookie(cookie);
+        if (! cookies.contains("mru_job") || ! identifier.equals(cookies.get("mru_job").getValue())) {
+            cookies.create("mru_job", identifier);
+        }
 
-        cookie = new Cookie("mru_level", Integer.toString(level));
-        cookie.setMaxAge(31556926);
-        cookie.setPath("/");
-        response.addCookie(cookie);
+        if (! cookies.contains("mru_level") || ! String.valueOf(level).equals(cookies.get("mru_level").getValue())) {
+            // lives for 30 minutes
+            cookies.create("mru_level", level, 1800);
+        }
 
         return "home";
     }
 
     @RequestMapping("/job/{identifier:[a-z]+}")
-    public String job(HttpServletRequest request, HttpServletResponse response,
-                      @PathVariable("identifier") String identifier,
+    public String job(@PathVariable("identifier") String identifier,
+                      @ModelAttribute("cookies") Cookies cookies,
+                      HttpServletResponse response,
                       ModelMap model) throws Exception {
         int cap = sp.getLatestCap();
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("mru_level")) {
-                    try {
-                        int c = Integer.parseInt(cookie.getValue());
-                        if (c > 0 && c <= cap) {
-                            cap = c;
-                        }
-                    } catch (Exception e) {
-                        // ignore
-                    }
+        if (cookies.contains("mru_level")) {
+            try {
+                int c = Integer.parseInt(cookies.get("mru_level").getValue());
+                if (c > 0 && c <= cap) {
+                    cap = c;
                 }
+            } catch (Exception ignorable) {
             }
         }
 
-        return job(request, response, identifier, cap, model);
+        return job(identifier, cap, cookies, response, model);
     }
 
     @RequestMapping("/")
-    public String job(HttpServletRequest request, HttpServletResponse response,
+    public String job(@ModelAttribute("cookies") Cookies cookies,
+                      HttpServletResponse response,
                       ModelMap model) throws Exception {
         String identifier = null;
-        int cap = -1;
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("mru_job")) {
-                    String bean = "jobs_"  +cookie.getValue();
-                    if (context.containsBean(bean)) {
-                        identifier = cookie.getValue();
-                    }
-                } else if (cookie.getName().equals("mru_level")) {
-                    try {
-                        int c = Integer.parseInt(cookie.getValue());
-                        if (c > 0 && c <= sp.getLatestCap()) {
-                            cap = c;
-                        }
-                    } catch (Exception e) {
-                        // ignore
-                    }
-                }
+        int cap = sp.getLatestCap();
+
+        if (cookies.contains("mru_job")) {
+            String bean = "jobs_"  + cookies.get("mru_job").getValue();
+            if (context.containsBean(bean)) {
+                identifier = cookies.get("mru_job").getValue();
             }
         }
 
-        if (identifier == null || cap == -1) {
-            Random random = new Random();
-            identifier = tertiaries.get(random.nextInt(tertiaries.size())).getIdentifier();
-            cap = sp.getLatestCap();
+        if (cookies.contains("mru_level")) {
+            try {
+                int c = Integer.parseInt(cookies.get("mru_level").getValue());
+                if (c > 0 && c <= sp.getLatestCap()) {
+                    cap = c;
+                }
+            } catch (Exception ignorable) {
+            }
         }
 
-        return job(request, response, identifier, cap, model);
+        if (identifier == null) {
+            identifier = getRandomIdentifier();
+        }
+
+        return job(identifier, cap, cookies, response, model);
+    }
+
+    private String getRandomIdentifier() {
+        Random random = new Random();
+        return tertiaries.get(random.nextInt(tertiaries.size())).getIdentifier();
+    }
+
+    @ModelAttribute("cookies")
+    private Cookies getCookies(HttpServletRequest request, HttpServletResponse response) {
+        Cookies cookies = new Cookies(request, response);
+        Cookie[] c = request.getCookies();
+        if (c == null) {
+            return cookies;
+        }
+
+        for (Cookie cookie : c) {
+            cookies.set(cookie.getName(), cookie);
+        }
+
+        return cookies;
     }
 }
