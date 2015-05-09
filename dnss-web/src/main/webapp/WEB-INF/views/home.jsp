@@ -26,13 +26,20 @@
 <ul id="total-sp">
 <li>Total SP<div class="sp">${jobs.maxSP}/0/${jobs.maxSP}</div></li>
 </ul>
-<div id="download">
-<a href="javascript:download.skillTrees('h')" id="dlh">dl landscape</a> | <a href="javascript:download.skillTrees('v')" id="dlv">dl portrait</a>
-</div>
 <div id="levelcap">
 <form>
 Level Cap<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><input type="text" id="cap" value="${jobs.level}"/>
 </form>
+</div>
+<div id="download">
+<ul>
+<li>Download Skill Tree
+<ul>
+<li><a href="javascript:download.skillTrees('h')">Landscape (Horizontal)</a></li>
+<li><a href="javascript:download.skillTrees('v')">Portrait (Vertical)</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </aside>
 <section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">

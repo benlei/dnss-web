@@ -1,20 +1,35 @@
 #download {
   margin-top: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: .7em;
-  font-weight: bold;
 }
 
-#job-sp input {
-  padding: 2px 5px;
-  margin-right: 5px;
+#download ul {
+  position: relative;
 }
 
-#dlh {
-  margin-right: 5px;
+#download ul:after {
+  content: "";
+  clear: both;
 }
 
-#dlv {
-  margin-left: 5px;
+#download ul ul {
+  display: none;
+  position: absolute;
+}
+
+#download ul li:hover > ul {
+  display: block;
+  width: 100%;
+  padding-top: 8px;
+}
+
+#download ul li ul li {
+  padding: 8px 14px;
+  margin-right: -14px;
+  margin-left: -14px;
+  background-color: rgb(240,240,240);
+  border-top: 1px solid #fff;
+}
+
+#download a {
+  display: block;
 }

@@ -13,7 +13,11 @@
   border-bottom: 1px solid #fff;
 }
 
-#job-sp .active {
+#levelcap {
+  background-color: transparent;
+}
+
+#job-sp .active, #download {
   background-color: rgb(225,225,225);
 }
 
@@ -32,4 +36,9 @@
 
 #total-sp {
   padding-top: 5px;
+}
+
+#job-sp input {
+  padding: 2px 5px;
+  margin-right: 5px;
 }
