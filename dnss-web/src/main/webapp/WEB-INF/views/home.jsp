@@ -7,83 +7,84 @@
 <link href="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.css" rel="stylesheet" type="text/css"/>
 <body>
 <main>
-<nav id="jobs" class="no-select">
-<ul><c:forEach items="${primaries}" var="primary" varStatus="pLoop">
-<li class="primary<c:if test="${primary == jobs.primary}"> active</c:if>">${primary.name}
-<ul class="sub-jobs"><c:forEach items="${secondaries}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent == primary}">
-<li class="secondary">${secondary.name}</li><c:forEach items="${tertiaries}" var="tertiary" varStatus="tLoop"><c:if test="${tertiary.parent == secondary}">
-<li class="tertiary"><a href="/job/${tertiary.identifier}">${tertiary.name}</a></li></c:if></c:forEach></c:if></c:forEach></ul>
-</li></c:forEach>
-</ul>
-</nav>
-<aside id="build-box"><form><div id="build-text">Build URL:</div><input type="text" id="build"/></form></aside>
-<aside id="sidebar-1">
-<form>
-<ul id="job-sp" class="no-select"><c:forEach items="${jobs.iterator}" var="job" varStatus="loop">
-<li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>><input type="checkbox" value="${job.identifier}" checked>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
-</ul>
-</form>
-<ul id="total-sp">
-<li>Total SP<div class="sp">${jobs.maxSP}/0/${jobs.maxSP}</div></li>
-</ul>
-<div id="levelcap">
-<form>
-Level Cap<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><input type="text" id="cap" value="${jobs.level}"/>
-</form>
-</div>
-<div id="download">
-<ul>
-<li>Download Skill Tree
-<ul>
-<li><a href="javascript:download.skillTrees('h')">Landscape (Horizontal)</a></li>
-<li><a href="javascript:download.skillTrees('v')">Portrait (Vertical)</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</aside>
-<section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
-<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
-<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
-<td class="container" /></c:when><c:otherwise>
-<td class="container">
-<div class="skill" id="skill-${skill.id}" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>
-<div class="lvl">${skill.level}/${skill.maxLevel}</div></c:otherwise></c:choose></c:forEach></c:forEach>
-</table></c:forEach>
-</section>
-<aside id="sidebar-2">
-<input type="button" id="mode" value="pve"/><h2 id="skill-name"></h2>
-<div class="skill-description">
-<ul class="meta">
-<li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span></li>
-<li id="skill-mp"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
-<li id="skill-required-weapon"><span class="y">Required Weapon(s): </span><span class="w"></span></li>
-<li id="skill-type"><span class="y">Skill Type: </span><span class="w"></span></li>
-<li id="skill-cd"><span class="y">Cooldown: </span><span class="w"></span> sec</li>
-<li id="skill-total-sp"><span class="y">Total SP: </span></span><span class="w"></span></li>
-<li class="separator"></li>
-<li><span class="y">Level Up Requirements:</span></li>
-<li id="skill-required-level">Character Level <span class="w"></span></li>
-<li id="skills-required"><span class="w"></span></li>
-<li id="sp-required"><span class="w"></span></li>
-<li id="skill-sp">SP <span class="w"></span></li>
-<li class="separator"></li>
-<li id="skill-description"><span class="y">Skill Description:</span><div class="d"></div></li>
-<li id="next-description"><span class="y">Next Description:</span><div class="d"></div></li>
-</ul>
-</div>
-</aside>
+	<nav id="jobs" class="no-select">
+		<ul><c:forEach items="${primaries}" var="primary" varStatus="pLoop">
+			<li class="primary<c:if test="${primary == jobs.primary}"> active</c:if>">${primary.name}
+			<ul class="sub-jobs"><c:forEach items="${secondaries}" var="secondary" varStatus="sLoop"><c:if test="${secondary.parent == primary}">
+				<li class="secondary">${secondary.name}</li><c:forEach items="${tertiaries}" var="tertiary" varStatus="tLoop"><c:if test="${tertiary.parent == secondary}">
+				<li class="tertiary"><a href="/job/${tertiary.identifier}">${tertiary.name}</a></li></c:if></c:forEach></c:if></c:forEach></ul>
+			</li></c:forEach>
+		</ul>
+	</nav>
+	<aside id="build-box"><form><div id="build-text">Build URL:</div><input type="text" id="build"/></form></aside>
+	<aside id="sidebar-1">
+		<form>
+			<ul id="job-sp" class="no-select"><c:forEach items="${jobs.iterator}" var="job" varStatus="loop">
+				<li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>><input type="checkbox" value="${job.identifier}" checked>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
+			</ul>
+		</form>
+		<ul id="total-sp">
+			<li>Total SP<div class="sp">${jobs.maxSP}/0/${jobs.maxSP}</div></li>
+		</ul>
+		<div id="levelcap">
+			<form>
+				Level Cap
+				<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><input type="text" id="cap" value="${jobs.level}"/>
+			</form>
+		</div>
+		<div id="download">
+			<ul>
+				<li>Download Skill Tree
+					<ul>
+						<li><a href="javascript:download.skillTrees('h')">Landscape (Horizontal)</a></li>
+						<li><a href="javascript:download.skillTrees('v')">Portrait (Vertical)</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</aside>
+	<section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
+		<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
+			<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
+				<td class="container" /></c:when><c:otherwise>
+				<td class="container">
+					<div class="skill" id="skill-${skill.id}" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>
+					<div class="lvl">${skill.level}/${skill.maxLevel}</div></c:otherwise></c:choose></c:forEach></c:forEach>
+		</table></c:forEach>
+	</section>
+	<aside id="sidebar-2">
+		<input type="button" id="mode" value="pve"/><h2 id="skill-name"></h2>
+		<div class="skill-description">
+			<ul class="meta">
+				<li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span></li>
+				<li id="skill-mp"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
+				<li id="skill-required-weapon"><span class="y">Required Weapon(s): </span><span class="w"></span></li>
+				<li id="skill-type"><span class="y">Skill Type: </span><span class="w"></span></li>
+				<li id="skill-cd"><span class="y">Cooldown: </span><span class="w"></span> sec</li>
+				<li id="skill-total-sp"><span class="y">Total SP: </span></span><span class="w"></span></li>
+				<li class="separator"></li>
+				<li><span class="y">Level Up Requirements:</span></li>
+				<li id="skill-required-level">Character Level <span class="w"></span></li>
+				<li id="skills-required"><span class="w"></span></li>
+				<li id="sp-required"><span class="w"></span></li>
+				<li id="skill-sp">SP <span class="w"></span></li>
+				<li class="separator"></li>
+				<li id="skill-description"><span class="y">Skill Description:</span><div class="d"></div></li>
+				<li id="next-description"><span class="y">Next Description:</span><div class="d"></div></li>
+			</ul>
+		</div>
+	</aside>
 </main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.js"></script>
 <script type="text/javascript">
 var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
-  required_level:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSkillRequiredLevel}<c:if test="${!loop.last}">,</c:if></c:forEach>],
-  sp:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${jobs.maxSP}],
-  skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
-  weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
-  cap: ${jobs.level}};
+	required_level:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSkillRequiredLevel}<c:if test="${!loop.last}">,</c:if></c:forEach>],
+	sp:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${jobs.maxSP}],
+	skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
+	weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
+	cap: ${jobs.level}};
 dnss.start(<fmt:message key="json.version" bundle="${dnss}"/>);
 </script>
 </html>
