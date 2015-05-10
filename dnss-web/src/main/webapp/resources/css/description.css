@@ -9,27 +9,31 @@ h2 {
   float: left;
   margin-left: 25px;
   font-size: 0.75em;
-  display: none;
   padding: 5px 15px 10px 15px;
-  color: rgb(0,0,15);
+  color: #000;
   line-height: 1.4em;
 }
 
-#sidebar-2 li span.y {
+#sidebar-2 > .y {
   color: rgb(45, 75, 115);
   font-weight: bold;
 }
 
-#sidebar-2 li span.r {
+#sidebar-2 .y > * {
+  color: initial;
+  font-weight: initial;
+}
+
+#sidebar-2 .r {
   color: #ff0000;
 }
 
-#sidebar-2 li .d .y {
+#sidebar-2 .d .y {
   color: rgb(0, 15, 180);
   font-weight: normal;
 }
 
-#sidebar-2 li .d .p {
+#sidebar-2 .d .p {
   color: rgb(70, 55, 255);
   font-weight: normal;
 }

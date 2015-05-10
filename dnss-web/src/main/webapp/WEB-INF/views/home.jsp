@@ -50,24 +50,24 @@
 	</section>
 	<aside id="sidebar-2">
 		<input type="button" id="mode" value="pve"/><h2 id="skill-name"></h2>
-		<div class="skill-description">
-			<ul class="meta">
-				<li id="skill-level"><span class="y">Skill Lv.: </span><span class="w"></span></li>
-				<li id="skill-mp"><span class="y">Fee MP: </span><span class="w"></span> of base MP</li>
-				<li id="skill-required-weapon"><span class="y">Required Weapon(s): </span><span class="w"></span></li>
-				<li id="skill-type"><span class="y">Skill Type: </span><span class="w"></span></li>
-				<li id="skill-cd"><span class="y">Cooldown: </span><span class="w"></span> sec</li>
-				<li id="skill-total-sp"><span class="y">Total SP: </span></span><span class="w"></span></li>
-				<li class="separator"></li>
-				<li><span class="y">Level Up Requirements:</span></li>
-				<li id="skill-required-level">Character Level <span class="w"></span></li>
-				<li id="skills-required"><span class="w"></span></li>
-				<li id="sp-required"><span class="w"></span></li>
-				<li id="skill-sp">SP <span class="w"></span></li>
-				<li class="separator"></li>
-				<li id="skill-description"><span class="y">Skill Description:</span><div class="d"></div></li>
-				<li id="next-description"><span class="y">Next Description:</span><div class="d"></div></li>
-			</ul>
+		<div id="skill-level" class="y">Skill Lv.: <span class="w"></span></div>
+		<div id="skill-mp" class="y">Fee MP: <span class="w" data-after="of base MP"></span></div>
+		<div id="skill-required-weapon" class="y">Required Weapon(s): <span class="w"></span></div>
+		<div id="skill-type" class="y">Skill Type: <span class="w"></span></div>
+		<div id="skill-cd" class="y">Cooldown: <span class="w" data-after="sec"></span></div>
+		<div id="skill-total-sp" class="y">Total SP: <span class="w"></span></div>
+		<div class="separator"></div>
+		<div class="y">Level Up Requirements:</div>
+		<div id="skill-required-level">Character Level <span class="w"></span></div>
+		<div id="skills-required"></div>
+		<div id="sp-required"></div>
+		<div id="skill-sp">SP <span class="w"></span></div>
+		<div class="separator"></div>
+		<div id="skill-description" class="y">Skill Description:
+			<div class="d"></div>
+		</div>
+		<div id="next-description" class="y">Next Description:
+			<div class="d"></div>
 		</div>
 	</aside>
 </main>

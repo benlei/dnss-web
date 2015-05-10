@@ -3,24 +3,35 @@ var description = new (function Description() {
   var MODE_FLAG = 1;
   var skill = null;
 
-  var name = $("#skill-name"),
+
+  var
+    // name
+    name = $("#skill-name"),
+
+    // main block
     level = $("#skill-level .w"),
-    sp = $("#skill-sp .w"),
-    total_sp = $("#skill-total-sp .w"),
-    cd = $("#skill-cd .w"),
     mp = $("#skill-mp .w"),
-    required_level = $("#skill-required-level .w"),
-    required_weaps = $("#skill-required-weapon .w"),
+    required_weaps = {main:$("#skill-required-weapon"), desc:$("#skill-required-weapon .w")},
     type = $("#skill-type .w"),
+    cd = $("#skill-cd .w"),
+    total_sp = $("#skill-total-sp .w"),
+
+    // level up reqs
+    required_level = {main:$("#skill-required-level"), desc:$("#skill-required-level .w")},
+    skills_required = {main:$("#skills-required"), desc:$("#skills-required")},
+    sp_required = {main:$("#sp-required"), desc:$("#sp-required")},
+    sp = {main:$("#skill-sp"), desc:$("#skill-sp .w")},
+
+    // descriptions
     desc = $("#skill-description .d"),
-    ndesc = $("#next-description .d"),
-    sp_required = $("#sp-required .w"),
-    skills_required = $("#skills-required .w");
+    ndesc = {main:$("#next-description"), desc:$("#next-description .d")};
 
   this.use = function(s) {
-    $("#sidebar-2").show();
-    skill = s;
+    if (skill == s) { // no need to update more than once
+      return;
+    }
 
+    skill = s;
     this.update();
   };
 
@@ -29,18 +40,35 @@ var description = new (function Description() {
       return;
     }
 
+    // name
     setName();
+
+    // main block
     setLevel();
-    setSP();
-    setTotalSP();
     setMP();
-    setCD();
-    setRequiredLevel();
     setRequiredWeapons();
     setType();
-    setDescriptions();
-    setRequiredSP();
+    setCD();
+    setTotalSP();
+
+    // level up reqs
+    setRequiredLevel();
     setRequiredSkills();
+    setRequiredSP();
+    setSP();
+
+    // descriptions
+    setDescriptions();
+
+    // if level up reqs are all hidden, just hide the level up req stuff
+    var sep = $("#sidebar-2 .separator").first();
+    if (required_level.main.is(":hidden") && skills_required.main.is(":hidden") && sp_required.main.is(":hidden") && sp.main.is(":hidden")) {
+      sep.hide();
+      sep.next().hide();
+    } else {
+      sep.show();
+      sep.next().show();
+    }
   };
 
   this.hook = function() {
@@ -60,17 +88,18 @@ var description = new (function Description() {
   };
 
   function currOrNext(e, curr, next) {
-    e.html(curr == -1 ? next : curr);
+    var after = e.data("after") ? " " + e.data("after") : "";
+    e.html((curr == -1 ? next : curr) + after);
   }
 
-  function showOrHide(e, _e, text) {
+  function showOrHide(e, text) {
     if (text == -1) {
-      e.hide();
+      e.main.hide();
       return;
     }
 
-    _e.html(text);
-    e.show();
+    e.desc.html(text);
+    e.main.show();
   }
 
   // Name
@@ -88,36 +117,36 @@ var description = new (function Description() {
   }
 
   function setRequiredWeapons() {
-    showOrHide(required_weaps.parent(), required_weaps, skill.getRequiredWeapons());
+    showOrHide(required_weaps, skill.getRequiredWeapons());
   }
 
   function setType() {
     type.html(skill.getType());
   }
 
-  function setTotalSP() {
-    total_sp.html(skill.getTotalSPUsage());
-  }
-
   function setCD() {
     currOrNext(cd, skill.getLevel() ? skill.getCD(t.getMode()) : -1, skill.getNextCD(t.getMode()));
   }
 
+  function setTotalSP() {
+    total_sp.html(skill.getTotalSPUsage());
+  }
+
   // requirement block
   function setRequiredLevel() {
-    showOrHide(required_level.parent(), required_level, skill.getNextRequiredLevel())
+    showOrHide(required_level, skill.getNextRequiredLevel())
   }
 
   function setRequiredSkills() {
-    showOrHide(skills_required.parent(), skills_required, format(skill.getSkillRequirements()));
+    showOrHide(skills_required, format(skill.getSkillRequirements()));
   }
 
   function setRequiredSP() {
-    showOrHide(sp_required.parent(), sp_required, format(skill.getSPRequirements()));
+    showOrHide(sp_required, format(skill.getSPRequirements()));
   }
 
   function setSP() {
-    sp.html(skill.getNextSPUsage());
+    showOrHide(sp, skill.getLevel() < skill.getMaxLevel() ? skill.getNextSPUsage() : -1);
   }
 
   // description block
@@ -125,8 +154,7 @@ var description = new (function Description() {
     var d = skill.getDescription(t.getMode()), n = skill.getNextDescription(t.getMode());
     desc.html(format(d == -1 ? n : d));
 
-    ndesc.html(format(n));
-    d == -1  || n == -1 ? ndesc.parent().hide() : ndesc.parent().show();
+    showOrHide(ndesc, d == -1  || n == -1 ? -1 : format(n));
   }
 
 

@@ -182,10 +182,16 @@ function Skill(id, s, e) {
 
     for (var i in s.need_sp) {
       var str = properties.jobs[i].name + " SP Total " + s.need_sp[i] + " or above";
-      if (nSP[i]) {
-        list.push(str);
+      if (this.getLevel()) {
+        if (! nSP[i]) {
+          list.push("#r" + str + "#w");
+        }
       } else {
-        list.push("#r" + str + "#w");
+        if (nSP[i]) {
+          list.push(str);
+        } else {
+          list.push("#r" + str + "#w");
+        }
       }
     }
     return list.length ? list.join("\\n") : -1;
@@ -200,10 +206,17 @@ function Skill(id, s, e) {
 //      if (other.getAdvancement() != this.getAdvancement()) {
 //        str = properties.jobs[other.getAdvancement()].name + " " + str;
 //      }
-      if (nSkills[i]) {
-        list.push(str);
+
+      if (this.getLevel()) {
+        if (!nSkills[i]) {
+          list.push("#r" + str + "#w");
+        }
       } else {
-        list.push("#r" + str + "#w");
+        if (nSkills[i]) {
+          list.push(str);
+        } else {
+          list.push("#r" + str + "#w");
+        }
       }
     }
 
