@@ -27,8 +27,8 @@ var download = new (function Download() {
   function dl(name, path) {
     var frame = $("<iframe />");
     frame.attr("src", window.location.protocol + "//" + window.location.host + "/download/" + path);
-    frame.css({height: "1px", width: "1px"});
-    frame.appendTo("body");
+    frame.css({height: "1px", width: "1px", border: 0});
+    frame.appendTo("section");
     timedDelete(frame, 0, name);
   }
 
