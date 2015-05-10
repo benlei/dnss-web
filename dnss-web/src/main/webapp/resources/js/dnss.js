@@ -140,6 +140,4 @@ var dnss = new (function DNSS() {
 
     $("#capchanger").html("Change");
   });
-
-  $("form").submit(function(){ return false; });
 })();
