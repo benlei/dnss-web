@@ -16,7 +16,20 @@
 			</li></c:forEach>
 		</ul>
 	</nav>
-	<aside id="build-box"><div id="build-text">Build URL:</div><input type="text" id="build"/></aside>
+	<aside id="build-box">
+		<div id="build-text">Build URL:</div>
+		<input type="text" id="build"/>
+		<div id="download">
+			<ul>
+				<li>Download
+					<ul>
+						<li><a href="javascript:download.skillTrees('h')">Landscape (Horizontal)</a></li>
+						<li><a href="javascript:download.skillTrees('v')">Portrait (Vertical)</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</aside>
 	<aside id="sidebar-1">
 		<ul id="job-sp" class="no-select"><c:forEach items="${jobs.iterator}" var="job" varStatus="loop">
 			<li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>><input type="checkbox" value="${job.identifier}" checked>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
@@ -27,16 +40,6 @@
 		<div id="levelcap">
 			Level Cap
 			<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><input type="text" id="cap" value="${jobs.level}"/>
-		</div>
-		<div id="download">
-			<ul>
-				<li>Download Skill Tree
-					<ul>
-						<li><a href="javascript:download.skillTrees('h')">Landscape (Horizontal)</a></li>
-						<li><a href="javascript:download.skillTrees('v')">Portrait (Vertical)</a></li>
-					</ul>
-				</li>
-			</ul>
 		</div>
 	</aside>
 	<section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">

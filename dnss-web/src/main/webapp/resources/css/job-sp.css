@@ -6,7 +6,7 @@
   font-size: .9em;
 }
 
-#job-sp li, #total-sp li, #levelcap, #download {
+#job-sp li, #total-sp li, #levelcap {
   background-color: rgb(240,240,240);
   color: #333;
   padding: 8px 14px;
@@ -17,7 +17,7 @@
   background-color: transparent;
 }
 
-#job-sp .active, #download {
+#job-sp .active {
   background-color: rgb(225,225,225);
 }
 
