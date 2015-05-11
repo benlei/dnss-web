@@ -106,10 +106,10 @@
                     <aggregations>
                         <aggregation>
                             <!--Use below to NOT compress the aggregated file-->
-                            <!--<inputDir>${project.basedir}/src/main/webapp/resources/js</inputDir>-->
+                            <inputDir>${project.basedir}/src/main/webapp/resources/js</inputDir>
 
                             <!--Use below to compress the aggregated file-->
-                            <inputDir>${project.build.directory}/${project.build.finalName}/resources/js</inputDir>
+                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/js</inputDir>-->
                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-dnss.js</output>
                             <includes>
                                 <include>**/*.js</include>
@@ -117,10 +117,10 @@
                         </aggregation>
                         <aggregation>
                             <!--Use below to NOT compress the aggregated file-->
-                            <!--<inputDir>${project.basedir}/src/main/webapp/resources/css</inputDir>-->
+                            <inputDir>${project.basedir}/src/main/webapp/resources/css</inputDir>
 
                             <!--Use below to compress the aggregated file-->
-                            <inputDir>${project.build.directory}/${project.build.finalName}/resources/css</inputDir>
+                            <!--<inputDir>${project.build.directory}/${project.build.finalName}/resources/css</inputDir>-->
                             <output>${project.build.directory}/${project.build.finalName}/resources/${project.build.timestamp}-dnss.css</output>
                             <includes>
                                 <include>**/*.css</include>

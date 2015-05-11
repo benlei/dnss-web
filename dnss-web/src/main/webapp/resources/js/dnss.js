@@ -6,6 +6,7 @@ var dnss = new (function DNSS() {
   var started = false;
   var loaded = 0;
   var ultimates = [];
+  var fullscreen = false;
 
   this.changeCapOrReset = function() {
     var newCap = parseInt($("#cap").val());
@@ -14,7 +15,6 @@ var dnss = new (function DNSS() {
       $("#cap").val(properties.cap);
       return;
     }
-
 
     if (newCap == properties.cap) {
       for (var id in skills) {
@@ -57,6 +57,10 @@ var dnss = new (function DNSS() {
     $("#job-sp-0,#job-sp-1,#job-sp-2").each(function() {
       var advancement = $(this).attr("id").substr(-1);
       $(this).click(function() {
+        if (isFullScreen()) {
+          return;
+        }
+
         $("#job-sp li").removeClass("active");
         $(this).addClass("active");
         $(".skill-tree").hide();
@@ -132,6 +136,21 @@ var dnss = new (function DNSS() {
     positions[0] && description.use(positions[0]);
   }
 
+  function isFullScreen() {
+    return window.fullScreen || (window.innerWidth == screen.width && window.innerHeight == screen.height);
+  }
+
+  function maybeFullScreen() {
+    if(isFullScreen()) {
+      $("#job-sp li").removeClass("active");
+      $(".skill-tree").show();
+    } else {
+      $("#job-sp-0").addClass("active");
+      $(".skill-tree").hide();
+      $("#skill-tree-0").show();
+    }
+  }
+
   $("#cap").keyup(function(){
     if ($(this).val() == properties.cap) {
       $("#capchanger").html("Reset");
@@ -140,4 +159,15 @@ var dnss = new (function DNSS() {
 
     $("#capchanger").html("Change");
   });
+
+  $(window).resize(maybeFullScreen);
+  maybeFullScreen();
+
+  (function(e) {
+    var originalY = e.offset().top;
+    $(window).on("scroll", function() {
+      var scrollTop = $(window).scrollTop();
+      e.stop(false, false).animate({top: scrollTop < originalY ? 0 : scrollTop - originalY + 10}, 0);
+    });
+  })($("#sidebar-1"));
 })();

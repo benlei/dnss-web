@@ -1,9 +1,6 @@
 var description = new (function Description() {
   var t = this;
-  var MODE_FLAG = 1;
   var skill = null;
-
-
   var
     // name
     name = $("#skill-name"),
@@ -84,7 +81,7 @@ var description = new (function Description() {
   };
 
   this.getMode = function() {
-    return build.get(build.FLAG_POS) & MODE_FLAG ? "pvp" : "pve";
+    return build.get(build.FLAG_POS) & 1 ? "pvp" : "pve";
   };
 
   function currOrNext(e, curr, next) {
@@ -202,9 +199,11 @@ var description = new (function Description() {
   }
 
   $("#mode").click(function() {
-    var mode = build.get(build.FLAG_POS) & MODE_FLAG;
+    var mode = build.get(build.FLAG_POS) & 1;
     var flag  = (build.get(build.FLAG_POS) >> 1) << 1;
     build.put(build.FLAG_POS, flag | (mode?0:1));
-    t.updateModeHook();
+    build.commit();
+
+    t.hook();
   });
 })();
