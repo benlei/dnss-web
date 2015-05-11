@@ -149,6 +149,7 @@ var dnss = new (function DNSS() {
       $(".skill-tree").hide();
       $("#skill-tree-0").show();
     }
+    description.updateTop();
   }
 
   // "constructor"

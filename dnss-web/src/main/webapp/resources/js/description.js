@@ -23,12 +23,21 @@ var description = new (function Description() {
     desc = $("#skill-description .d"),
     ndesc = {main:$("#next-description"), desc:$("#next-description .d")};
 
+  this.updateTop = function() {
+    if (!skill) {
+      return;
+    }
+
+    $("#sidebar-2").css("top", $("#skill-tree-" + skill.getAdvancement()).offset().top - $(".skill-tree:visible").first().offset().top);
+  };
+
   this.use = function(s) {
     if (skill == s) { // no need to update more than once
       return;
     }
 
     skill = s;
+    this.updateTop();
     this.update();
   };
 

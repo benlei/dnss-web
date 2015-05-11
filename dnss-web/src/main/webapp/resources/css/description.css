@@ -12,6 +12,7 @@ h2 {
   padding: 5px 15px 10px 15px;
   color: #000;
   line-height: 1.4em;
+  position: relative;
 }
 
 #sidebar-2 > .y {
