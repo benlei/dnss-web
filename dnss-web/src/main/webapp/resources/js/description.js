@@ -28,7 +28,12 @@ var description = new (function Description() {
       return;
     }
 
-    $("#sidebar-2").css("top", $("#skill-tree-" + skill.getAdvancement()).offset().top - $(".skill-tree:visible").first().offset().top);
+    if (dnss.isFullScreen()) {
+      var top = $("#skill-tree-" + skill.getAdvancement()).offset().top - $("#skill-tree-0").offset().top;
+      $("#sidebar-2").css("top", top + "px");
+    } else {
+      $("#sidebar-2").css("top",0);
+    }
   };
 
   this.use = function(s) {

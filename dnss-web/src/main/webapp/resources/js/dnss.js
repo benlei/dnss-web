@@ -51,13 +51,16 @@ var dnss = new (function DNSS() {
     started = true;
 
     window.location.search.substr(1).length > 48 && build.use(window.location.search.substr(1));
+    if (build.get(build.FLAG_POS) & 2) {
+      toggleFullScreen({which:27});
+    }
 
     // event binding
     $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
     $("#job-sp-0,#job-sp-1,#job-sp-2").each(function() {
       var advancement = $(this).attr("id").substr(-1);
       $(this).click(function() {
-        if (isFullScreen()) {
+        if (t.isFullScreen()) {
           return;
         }
 
@@ -136,19 +139,28 @@ var dnss = new (function DNSS() {
     positions[0] && description.use(positions[0]);
   }
 
-  function isFullScreen() {
-    return window.fullScreen || (window.innerWidth == screen.width && window.innerHeight == screen.height);
-  }
+  this.isFullScreen = function() {
+    return fullscreen;
+  };
 
-  function maybeFullScreen() {
-    if(isFullScreen()) {
+  function toggleFullScreen(e) {
+    if (e.which != 27) {
+      return;
+    }
+
+    var f = build.get(build.FLAG_POS);
+    fullscreen = ! fullscreen;
+    if(fullscreen) {
       $("#job-sp li").removeClass("active");
       $(".skill-tree").show();
+      build.put(build.FLAG_POS, f | 2);
     } else {
       $("#job-sp-0").addClass("active");
       $(".skill-tree").hide();
       $("#skill-tree-0").show();
+      build.put(build.FLAG_POS, f & 0xFD);
     }
+    build.commit();
     description.updateTop();
   }
 
@@ -163,8 +175,7 @@ var dnss = new (function DNSS() {
     $("#capchanger").html("Change");
   });
 
-  $(window).resize(maybeFullScreen);
-  maybeFullScreen();
+  $(document).keydown(toggleFullScreen);
 
   (function(e) {
     var originalY = e.offset().top;
