@@ -44,7 +44,7 @@
 	</aside>
 	<section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
 		<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">
-			<tr><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
+			<tr<c:if test="${skillRowLoop.last && job.compactable}"> style="display:none"</c:if>><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
 				<td class="container" /></c:when><c:otherwise>
 				<td class="container">
 					<div class="skill" id="skill-${skill.id}" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>

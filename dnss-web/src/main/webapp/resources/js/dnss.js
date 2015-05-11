@@ -151,6 +151,8 @@ var dnss = new (function DNSS() {
     }
   }
 
+  // "constructor"
+
   $("#cap").keyup(function(){
     if ($(this).val() == properties.cap) {
       $("#capchanger").html("Reset");

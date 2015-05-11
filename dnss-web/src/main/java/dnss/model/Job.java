@@ -123,8 +123,13 @@ public class Job {
         return total;
     }
 
+    public boolean isCompactable() {
+        return skillTree.length == 6 &&
+                skillTree[5][0] == null && skillTree[5][1] == null && skillTree[5][2] == null && skillTree[5][3] == null;
+    }
+
     public void compactSkillTree() {
-        if (skillTree.length == 6 && skillTree[5][0] == null && skillTree[5][1] == null && skillTree[5][2] == null && skillTree[5][3] == null) {
+        if (isCompactable()) {
             Skill[][] newSkillTree = new Skill[5][4]; // 5 rows, 4 cols
             newSkillTree[0] = skillTree[0];
             newSkillTree[1] = skillTree[1];
@@ -135,8 +140,10 @@ public class Job {
         }
 
 
-        for (int i = 0; advancement == Advancement.TERTIARY && i < skillTree.length; i++) {
-            skillTree[i] = new Skill[] {skillTree[i][0], skillTree[i][1]};
+        if (advancement == Advancement.TERTIARY) {
+            for (int i = 0; i < skillTree.length; i++) {
+                skillTree[i] = new Skill[]{skillTree[i][0], skillTree[i][1]};
+            }
         }
     }
 }
