@@ -314,6 +314,7 @@ function Skill(id, s, e) {
 
     mouseenter: function() {
       description.use(t);
+      dnss.isFullScreen() && dnss.setActive(t.getAdvancement());
     }
   });
 

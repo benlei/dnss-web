@@ -57,15 +57,14 @@ var dnss = new (function DNSS() {
 
     // event binding
     $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
-    $("#job-sp-0,#job-sp-1,#job-sp-2").each(function() {
+    $("#job-sp li").each(function() {
       var advancement = $(this).attr("id").substr(-1);
       $(this).click(function() {
-        if (t.isFullScreen()) {
+        if (fullscreen) {
           return;
         }
 
-        $("#job-sp li").removeClass("active");
-        $(this).addClass("active");
+        t.setActive(advancement);
         $(".skill-tree").hide();
         $("#skill-tree-"+advancement).show();
       });
@@ -74,6 +73,14 @@ var dnss = new (function DNSS() {
     // obtain json
     for (var i = 0; i < 3; i++) {
       $.getJSON("/json/" + v + "-" + properties.jobs[i].id + ".json", addSkills);
+    }
+  };
+
+  this.setActive = function(advancement) {
+    var e = $("#job-sp-"+advancement);
+    if (! e.hasClass("active")) {
+      $("#job-sp li").removeClass("active");
+      e.addClass("active");
     }
   };
 
@@ -151,13 +158,10 @@ var dnss = new (function DNSS() {
     var f = build.get(build.FLAG_POS);
     fullscreen = ! fullscreen;
     if(fullscreen) {
-      $("#job-sp li").removeClass("active");
       $(".skill-tree").show();
       build.put(build.FLAG_POS, f | 2);
     } else {
-      $("#job-sp-0").addClass("active");
-      $(".skill-tree").hide();
-      $("#skill-tree-0").show();
+      $("#job-sp li.active").click();
       build.put(build.FLAG_POS, f & 0xFD);
     }
     build.commit();
@@ -181,7 +185,7 @@ var dnss = new (function DNSS() {
     var originalY = e.offset().top;
     $(window).on("scroll", function() {
       var scrollTop = $(window).scrollTop();
-      e.stop(false, false).animate({top: scrollTop < originalY ? 0 : scrollTop - originalY + 10}, 0);
+      e.css("top", scrollTop < originalY ? 0 : (scrollTop - originalY + 10)+"px");
     });
   })($("#sidebar-1"));
 })();
