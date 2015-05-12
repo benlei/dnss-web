@@ -41,6 +41,10 @@
 			Level Cap
 			<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><input type="text" id="cap" value="${jobs.level}"/>
 		</div>
+		<div id="searchbox">
+			Search
+			<input type="search" id="search"/>
+		</div>
 	</aside>
 	<section><c:forEach items="${jobs.iterator}" var="job" varStatus="jobLoop">
 		<table class="skill-tree no-select" id="skill-tree-${jobLoop.index}"><c:forEach items="${job.skillTree}" var="skillRow" varStatus="skillRowLoop">

@@ -1,0 +1,12 @@
+#searchbox {
+  margin-top: 15px;
+  padding: 8px 14px;
+  font-weight: bold;
+}
+
+input[type=search] {
+	display: block;
+	width: 100%;
+	letter-spacing: 2px;
+	font-size: 1.2em;
+}

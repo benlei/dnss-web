@@ -232,20 +232,20 @@ function Skill(id, s, e) {
     return this.getLevel() < this.getMaxLevel() ? s.levels[this.getLevel()].spcost : 0;
   };
 
-  this.getMPUsage = function(mode) {
-    return this.getLevel() ? s.levels[this.getLevel()-1].mpcost[mode]+"%" : -1;
+  this.getMPUsage = function() {
+    return this.getLevel() ? s.levels[this.getLevel()-1].mpcost[description.getMode()]+"%" : -1;
   };
 
-  this.getNextMPUsage = function(mode) {
-    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].mpcost[mode]+"%" : -1;
+  this.getNextMPUsage = function() {
+    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].mpcost[description.getMode()]+"%" : -1;
   };
 
-  this.getCD = function(mode) {
-    return this.getLevel() ? s.levels[this.getLevel()-1].cd[mode] : -1;
+  this.getCD = function() {
+    return this.getLevel() ? s.levels[this.getLevel()-1].cd[description.getMode()] : -1;
   };
 
-  this.getNextCD = function(mode) {
-    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].cd[mode] : -1;
+  this.getNextCD = function() {
+    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].cd[description.getMode()] : -1;
   };
 
 //  this.getRequiredLevel = function() {
@@ -273,14 +273,14 @@ function Skill(id, s, e) {
     return properties.skilltypes[s.type];
   };
 
-  this.getDescription = function(mode) {
-    return this.getLevel() ? messages.get(s.levels[this.getLevel()-1].explanationid[mode],
-      s.levels[this.getLevel()-1].explanationparams[mode]) : -1;
+  this.getDescription = function() {
+    return this.getLevel() ? messages.get(s.levels[this.getLevel()-1].explanationid[description.getMode()],
+      s.levels[this.getLevel()-1].explanationparams[description.getMode()]) : -1;
   };
 
-  this.getNextDescription = function(mode) {
-    return this.getLevel() < s.levels.length ? messages.get(s.levels[this.getLevel()].explanationid[mode],
-      s.levels[this.getLevel()].explanationparams[mode]) : -1;
+  this.getNextDescription = function() {
+    return this.getLevel() < s.levels.length ? messages.get(s.levels[this.getLevel()].explanationid[description.getMode()],
+      s.levels[this.getLevel()].explanationparams[description.getMode()]) : -1;
   };
 
   // bind click events

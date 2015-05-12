@@ -124,7 +124,7 @@ var description = new (function Description() {
   }
 
   function setMP() {
-    currOrNext(mp, skill.getLevel() ? skill.getMPUsage(t.getMode()) : -1,  skill.getNextMPUsage(t.getMode()));
+    currOrNext(mp, skill.getLevel() ? skill.getMPUsage() : -1,  skill.getNextMPUsage());
   }
 
   function setRequiredWeapons() {
@@ -136,7 +136,7 @@ var description = new (function Description() {
   }
 
   function setCD() {
-    currOrNext(cd, skill.getLevel() ? skill.getCD(t.getMode()) : -1, skill.getNextCD(t.getMode()));
+    currOrNext(cd, skill.getLevel() ? skill.getCD() : -1, skill.getNextCD());
   }
 
   function setTotalSP() {
@@ -162,7 +162,7 @@ var description = new (function Description() {
 
   // description block
   function setDescriptions() {
-    var d = skill.getDescription(t.getMode()), n = skill.getNextDescription(t.getMode());
+    var d = skill.getDescription(), n = skill.getNextDescription();
     desc.html(format(d == -1 ? n : d));
 
     showOrHide(ndesc, d == -1  || n == -1 ? -1 : format(n));

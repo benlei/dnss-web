@@ -7,15 +7,11 @@
   position: relative;
 }
 
-#job-sp li, #total-sp li, #levelcap {
+#job-sp li, #total-sp li {
   background-color: rgb(240,240,240);
   color: #333;
   padding: 8px 14px;
   border-bottom: 1px solid #fff;
-}
-
-#levelcap {
-  background-color: transparent;
 }
 
 #job-sp .active {

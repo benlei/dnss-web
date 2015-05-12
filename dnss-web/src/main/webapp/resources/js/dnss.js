@@ -8,6 +8,36 @@ var dnss = new (function DNSS() {
   var ultimates = [];
   var fullscreen = false;
 
+  this.start = function(v) {
+    if (started) { return; }
+    started = true;
+
+    window.location.search.substr(1).length > 48 && build.use(window.location.search.substr(1));
+    if (build.get(build.FLAG_POS) & 2) {
+      toggleFullScreen({which:27});
+    }
+
+    // event binding
+    $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
+    $("#job-sp li").each(function() {
+      var advancement = $(this).attr("id").substr(-1);
+      $(this).click(function() {
+        if (fullscreen) {
+          return;
+        }
+
+        t.setActive(advancement);
+        $(".skill-tree").hide();
+        $("#skill-tree-"+advancement).show();
+      });
+    });
+
+    // obtain json
+    for (var i = 0; i < 3; i++) {
+      $.getJSON("/json/" + v + "-" + properties.jobs[i].id + ".json", addSkills);
+    }
+  };
+
   this.changeCapOrReset = function() {
     var newCap = parseInt($("#cap").val());
     if (newCap < 1 || newCap > 80 || newCap != newCap) {
@@ -44,36 +74,6 @@ var dnss = new (function DNSS() {
         skills[id].commit();
       }
     });
-  };
-
-  this.start = function(v) {
-    if (started) { return; }
-    started = true;
-
-    window.location.search.substr(1).length > 48 && build.use(window.location.search.substr(1));
-    if (build.get(build.FLAG_POS) & 2) {
-      toggleFullScreen({which:27});
-    }
-
-    // event binding
-    $(".skill-tree,#job-sp").on("contextmenu", function(){return false});
-    $("#job-sp li").each(function() {
-      var advancement = $(this).attr("id").substr(-1);
-      $(this).click(function() {
-        if (fullscreen) {
-          return;
-        }
-
-        t.setActive(advancement);
-        $(".skill-tree").hide();
-        $("#skill-tree-"+advancement).show();
-      });
-    });
-
-    // obtain json
-    for (var i = 0; i < 3; i++) {
-      $.getJSON("/json/" + v + "-" + properties.jobs[i].id + ".json", addSkills);
-    }
   };
 
   this.setActive = function(advancement) {
@@ -124,6 +124,10 @@ var dnss = new (function DNSS() {
 
   this.getUltimateSkills = function() {
     return ultimates;
+  };
+
+  this.getSkills = function() {
+    return skills;
   };
 
   function addSkills(json) {
