@@ -21,7 +21,7 @@
 		<input type="text" id="build"/>
 		<div id="download">
 			<ul>
-				<li>Download
+				<li>Image
 					<ul>
 						<li><a href="javascript:download.skillTrees('h')">Landscape (Horizontal)</a></li>
 						<li><a href="javascript:download.skillTrees('v')">Portrait (Vertical)</a></li>
@@ -39,7 +39,10 @@
 		</ul>
 		<div id="levelcap">
 			Level Cap
-			<a href="javascript:dnss.changeCapOrReset()" id="capchanger">Reset</a><input type="text" id="cap" value="${jobs.level}"/>
+			<div id="levelinputs">
+				<input type="text" id="cap" value="${jobs.level}"/>
+				<input type="button" id="capchanger" value="Reset"/>
+			</div>
 		</div>
 		<div id="searchbox">
 			Search

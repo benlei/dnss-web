@@ -19,6 +19,7 @@ var build = new (function Build() {
     r[position] = c;
     if (position == t.FLAG_POS) {
       description.hook();
+      search.hook();
     }
   }
 

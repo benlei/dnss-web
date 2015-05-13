@@ -9,6 +9,7 @@ function Skill(id, s, e) {
   var nSP = {}; // notifiable sp
   var nSkills = {}; // notifiable skills
   var balanced = -1;
+  var opacity = 1;
 
   this.ultimate = s.levels.length == 2 && s.levels[0].required_level == 40 && s.levels[1].required_level == 60;
 
@@ -281,6 +282,15 @@ function Skill(id, s, e) {
   this.getNextDescription = function() {
     return this.getLevel() < s.levels.length ? messages.get(s.levels[this.getLevel()].explanationid[description.getMode()],
       s.levels[this.getLevel()].explanationparams[description.getMode()]) : -1;
+  };
+
+  this.setOpacity = function(o) {
+    if (o < 0 || o > 1 || o == opacity) {
+      return;
+    }
+
+    opacity = o;
+    e.css("opacity", o);
   };
 
   // bind click events

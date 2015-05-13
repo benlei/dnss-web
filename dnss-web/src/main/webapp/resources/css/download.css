@@ -1,5 +1,5 @@
 #download {
-  width: 70px;
+  width: 40px;
   float: right;
 }
 
@@ -27,7 +27,7 @@
 #download ul li ul li {
   padding: 8px 14px;
   margin-right: -14px;
-  margin-left: -114px;
+  margin-left: -144px;
   background-color: rgb(240,240,240);
   border-bottom: 1px solid transparent;
   width: 165px;

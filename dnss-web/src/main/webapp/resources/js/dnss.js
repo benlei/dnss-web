@@ -14,7 +14,7 @@ var dnss = new (function DNSS() {
 
     window.location.search.substr(1).length > 48 && build.use(window.location.search.substr(1));
     if (build.get(build.FLAG_POS) & 2) {
-      toggleFullScreen({which:27});
+      toggleFullScreen({which:45});
     }
 
     // event binding
@@ -38,7 +38,7 @@ var dnss = new (function DNSS() {
     }
   };
 
-  this.changeCapOrReset = function() {
+  function changeCapOrReset() {
     var newCap = parseInt($("#cap").val());
     if (newCap < 1 || newCap > 80 || newCap != newCap) {
       alert($("#cap").val() + " is not a valid level cap.");
@@ -56,7 +56,7 @@ var dnss = new (function DNSS() {
 
     $.getJSON("/api/level/" + newCap, function(json) {
       properties.cap = newCap;
-      $("#capchanger").html("Reset");
+      $("#capchanger").val("Reset");
       var date = new Date();
       date.setTime(date.getTime()+1800000);
       document.cookie = "mru_level=" + newCap + ";path=/;expires=" + date.toUTCString();
@@ -74,7 +74,7 @@ var dnss = new (function DNSS() {
         skills[id].commit();
       }
     });
-  };
+  }
 
   this.setActive = function(advancement) {
     var e = $("#job-sp-"+advancement);
@@ -155,7 +155,7 @@ var dnss = new (function DNSS() {
   };
 
   function toggleFullScreen(e) {
-    if (e.which != 27) {
+    if (e.which != 45) {
       return;
     }
 
@@ -173,21 +173,16 @@ var dnss = new (function DNSS() {
   }
 
   // "constructor"
-
-  $("#cap").keyup(function(){
-    if ($(this).val() == properties.cap) {
-      $("#capchanger").html("Reset");
-      return;
-    }
-
-    $("#capchanger").html("Change");
+  $("#capchanger").click(changeCapOrReset);
+  $("#cap").on("input", function(){
+    $("#capchanger").val($(this).val() == properties.cap ? "Reset" : "Change");
   });
 
   $(document).keydown(toggleFullScreen);
 
   (function(e) {
     var originalY = e.offset().top;
-    $(window).on("scroll", function() {
+    $(window).scroll(function() {
       var scrollTop = $(window).scrollTop();
       e.css("top", scrollTop < originalY ? 0 : (scrollTop - originalY + 10)+"px");
     });

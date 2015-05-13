@@ -3,18 +3,23 @@
   padding: 8px 14px;
 }
 
+#levelinputs {
+  display: block;
+}
+
 #cap {
-  width: 25px;
-  padding: 2px 5px 0 5px;
-  float: right;
+  width: 35px;
   margin-right: 5px;
   text-align: right;
-  margin-top: 2px;
+  display: inline;
 }
 
 #capchanger {
-  margin-top: 3px;
   text-transform: lowercase;
+  display: inline;
+}
+
+#cap, #capchanger {
+  padding: 2px 5px;
   font-size: .9em;
-  float: right;
 }

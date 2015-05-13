@@ -28,9 +28,16 @@ var description = new (function Description() {
       return;
     }
 
-    if (dnss.isFullScreen()) {
-      var top = $("#skill-tree-" + skill.getAdvancement()).offset().top - $("#skill-tree-0").offset().top;
-      $("#sidebar-2").css("top", top + "px");
+    var top = $(window).scrollTop(),
+      minTop = $("#skill-tree-0").offset().top,
+      maxTop = $("#skill-tree-2").offset().top;
+
+    if (dnss.isFullScreen() && minTop < top) {
+      if (maxTop < top) {
+        $("#sidebar-2").css("top", (maxTop - minTop) + "px");
+      } else {
+        $("#sidebar-2").css("top", (top - minTop) + "px");
+      }
     } else {
       $("#sidebar-2").css("top",0);
     }
