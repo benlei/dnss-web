@@ -33,11 +33,7 @@ var description = new (function Description() {
       maxTop = $("#skill-tree-2").offset().top;
 
     if (dnss.isFullScreen() && minTop < top) {
-      if (maxTop < top) {
-        $("#sidebar-2").css("top", (maxTop - minTop) + "px");
-      } else {
-        $("#sidebar-2").css("top", (top - minTop) + "px");
-      }
+      $("#sidebar-2").css("top", (Math.min(top, maxTop) - minTop) + "px");
     } else {
       $("#sidebar-2").css("top",0);
     }
