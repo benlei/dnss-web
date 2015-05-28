@@ -1,16 +1,14 @@
-task :dnt => "dnt:all"
-namespace :dnt do
-  task :sql do
-    puts "sql"
+task :collect => "collect:all"
+namespace :collect do
+  task :beans do
+    ruby "collector/jobs.rb"
+    ruby "collector/skills.rb"
+    ruby "collector/levels.rb"
   end
   
   task :json do
-    puts "json"
+    ruby "collector/skilltrees.rb"
   end
   
-  task :xml do
-    puts "xml"
-  end
-  
-  task :all => [:sql, :json, :xml]
+  task :all => [:beans, :json]
 end

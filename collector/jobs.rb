@@ -1,6 +1,4 @@
 #!/bin/ruby
-require 'json'
-require 'nokogiri'
 require_relative 'common'
 
 conn = createPGConn()

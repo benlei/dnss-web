@@ -1,5 +1,4 @@
 #!/bin/ruby
-require 'nokogiri'
 require_relative 'common'
 
 conn = createPGConn()

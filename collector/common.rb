@@ -1,6 +1,5 @@
-require 'java-properties'
-require 'pg'
 require 'nokogiri'
+require 'pg'
 
 ##############################################################################
 # Extending base classes for own needs

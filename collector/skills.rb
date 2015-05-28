@@ -1,6 +1,4 @@
 #!/bin/ruby
-require "json"
-require "nokogiri"
 require_relative "common"
 
 # Gets each skill and its levels
