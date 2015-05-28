@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+  <util:list id="skill_types" value-type="java.lang.String" scope="singleton">
+    <value>Instant</value>
+    <value>Passive</value>
+    <value>Reactive Passive</value>
+    <value>Passive Enhanced</value>
+  </util:list>
+  <bean id="warrior_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="0" value="Greatsword"/>
+        <entry key="1" value="Gauntlet"/>
+        <entry key="2" value="Axe"/>
+        <entry key="3" value="Hammer"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="archer_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="4" value="Shortbow"/>
+        <entry key="5" value="Longbow"/>
+        <entry key="6" value="Crossbow"/>
+        <entry key="7" value="Quiver"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="soceress_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="8" value="Book"/>
+        <entry key="9" value="Orb"/>
+        <entry key="10" value="Puppet"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="cleric_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="11" value="Mace"/>
+        <entry key="12" value="Flail"/>
+        <entry key="13" value="Wand"/>
+        <entry key="14" value="Shield"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="academic_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="16" value="Cannon"/>
+        <entry key="17" value="Bubble Blaster"/>
+        <entry key="18" value="Powerglove"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="kali_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="19" value="Fan"/>
+        <entry key="20" value="Chakram"/>
+        <entry key="21" value="Focus"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="assassin_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="22" value="Scimtar"/>
+        <entry key="23" value="Dagger"/>
+        <entry key="24" value="Hook"/>
+      </map>
+    </constructor-arg>
+  </bean>
+  <bean id="lencea_weapons" class="java.util.HashMap" scope="singleton">
+    <constructor-arg>
+      <map key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="25" value="Spear"/>
+        <entry key="27" value="Bracelet"/>
+      </map>
+    </constructor-arg>
+  </bean>
+</beans>

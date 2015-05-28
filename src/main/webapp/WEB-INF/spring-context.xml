@@ -1,0 +1,3016 @@
+<?xml version="1.0"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+  <import resource="levels-context.xml"/>
+  <import resource="types-context.xml"/>
+  <import resource="skills-context.xml"/>
+  <bean id="job_warrior" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="warrior"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_28"/>
+          <ref bean="skill_2"/>
+          <ref bean="skill_11"/>
+          <ref bean="skill_10"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6"/>
+          <ref bean="skill_12"/>
+          <ref bean="skill_8"/>
+          <ref bean="skill_15"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5"/>
+          <ref bean="skill_18"/>
+          <ref bean="skill_29"/>
+          <ref bean="skill_9"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7"/>
+          <ref bean="skill_20"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_24"/>
+          <ref bean="skill_30"/>
+          <ref bean="skill_31"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_33"/>
+          <ref bean="skill_17"/>
+          <null/>
+          <ref bean="skill_32"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_archer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="archer"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1001"/>
+          <ref bean="skill_1026"/>
+          <ref bean="skill_1017"/>
+          <ref bean="skill_1013"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1008"/>
+          <ref bean="skill_1019"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1003"/>
+          <ref bean="skill_1027"/>
+          <ref bean="skill_1028"/>
+          <ref bean="skill_1023"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1021"/>
+          <ref bean="skill_1018"/>
+          <ref bean="skill_1016"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1009"/>
+          <ref bean="skill_1024"/>
+          <ref bean="skill_1029"/>
+          <ref bean="skill_1030"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1032"/>
+          <null/>
+          <null/>
+          <ref bean="skill_1031"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_soceress" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="soceress"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2002"/>
+          <ref bean="skill_2031"/>
+          <ref bean="skill_2015"/>
+          <ref bean="skill_2013"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2034"/>
+          <ref bean="skill_2026"/>
+          <ref bean="skill_2012"/>
+          <ref bean="skill_2016"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2035"/>
+          <ref bean="skill_2022"/>
+          <null/>
+          <ref bean="skill_2014"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2033"/>
+          <ref bean="skill_2029"/>
+          <ref bean="skill_2023"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2024"/>
+          <ref bean="skill_2036"/>
+          <ref bean="skill_2037"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2039"/>
+          <null/>
+          <null/>
+          <ref bean="skill_2038"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_cleric" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="cleric"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3028"/>
+          <ref bean="skill_3002"/>
+          <ref bean="skill_3015"/>
+          <ref bean="skill_3017"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3030"/>
+          <ref bean="skill_3022"/>
+          <ref bean="skill_3031"/>
+          <ref bean="skill_3020"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3019"/>
+          <ref bean="skill_3016"/>
+          <ref bean="skill_3018"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3029"/>
+          <ref bean="skill_3021"/>
+          <ref bean="skill_3003"/>
+          <ref bean="skill_3023"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3032"/>
+          <ref bean="skill_3024"/>
+          <ref bean="skill_3033"/>
+          <ref bean="skill_3034"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3036"/>
+          <null/>
+          <null/>
+          <ref bean="skill_3035"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_academic" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="academic"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4001"/>
+          <ref bean="skill_4002"/>
+          <ref bean="skill_4004"/>
+          <ref bean="skill_4006"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4222"/>
+          <ref bean="skill_4005"/>
+          <ref bean="skill_4009"/>
+          <ref bean="skill_4003"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4014"/>
+          <ref bean="skill_4011"/>
+          <ref bean="skill_4010"/>
+          <ref bean="skill_4007"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4015"/>
+          <ref bean="skill_4008"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4223"/>
+          <ref bean="skill_4016"/>
+          <ref bean="skill_4018"/>
+          <ref bean="skill_4017"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4020"/>
+          <null/>
+          <null/>
+          <ref bean="skill_4019"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_kali" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="kali"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5000"/>
+          <ref bean="skill_5001"/>
+          <ref bean="skill_5008"/>
+          <ref bean="skill_5009"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5003"/>
+          <ref bean="skill_5002"/>
+          <ref bean="skill_5011"/>
+          <ref bean="skill_5010"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5004"/>
+          <ref bean="skill_5005"/>
+          <ref bean="skill_5012"/>
+          <ref bean="skill_5014"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5006"/>
+          <ref bean="skill_5015"/>
+          <ref bean="skill_5013"/>
+          <ref bean="skill_5016"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5007"/>
+          <null/>
+          <ref bean="skill_5017"/>
+          <ref bean="skill_5018"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_assassin" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="assassin"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6001"/>
+          <ref bean="skill_6003"/>
+          <ref bean="skill_6010"/>
+          <ref bean="skill_6007"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6002"/>
+          <ref bean="skill_6013"/>
+          <ref bean="skill_6011"/>
+          <ref bean="skill_6012"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6004"/>
+          <ref bean="skill_6005"/>
+          <ref bean="skill_6015"/>
+          <ref bean="skill_6016"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6006"/>
+          <ref bean="skill_6008"/>
+          <ref bean="skill_6014"/>
+          <ref bean="skill_6019"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6009"/>
+          <ref bean="skill_6017"/>
+          <ref bean="skill_6018"/>
+          <ref bean="skill_6020"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_lencea" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="lencea"/>
+    <property name="advancement" value="0"/>
+    <property name="spRatio">
+      <list>
+        <value>1.0</value>
+        <value>0.0</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7001"/>
+          <ref bean="skill_7002"/>
+          <ref bean="skill_7003"/>
+          <ref bean="skill_7004"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7005"/>
+          <null/>
+          <ref bean="skill_7006"/>
+          <ref bean="skill_7007"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7008"/>
+          <ref bean="skill_7009"/>
+          <null/>
+          <ref bean="skill_7010"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7011"/>
+          <ref bean="skill_7012"/>
+          <ref bean="skill_7013"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7014"/>
+          <ref bean="skill_7015"/>
+          <ref bean="skill_7016"/>
+          <ref bean="skill_7017"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7019"/>
+          <null/>
+          <null/>
+          <ref bean="skill_7018"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_swordmaster" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="swordmaster"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_warrior"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_206"/>
+          <ref bean="skill_201"/>
+          <ref bean="skill_220"/>
+          <ref bean="skill_208"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_215"/>
+          <ref bean="skill_202"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_204"/>
+          <ref bean="skill_210"/>
+          <ref bean="skill_219"/>
+          <ref bean="skill_203"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_207"/>
+          <ref bean="skill_221"/>
+          <ref bean="skill_216"/>
+          <ref bean="skill_209"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_205"/>
+          <ref bean="skill_212"/>
+          <ref bean="skill_218"/>
+          <ref bean="skill_211"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_213"/>
+          <null/>
+          <null/>
+          <ref bean="skill_214"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_mercenary" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="mercenary"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_warrior"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_408"/>
+          <ref bean="skill_405"/>
+          <ref bean="skill_403"/>
+          <ref bean="skill_418"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_409"/>
+          <ref bean="skill_406"/>
+          <ref bean="skill_412"/>
+          <ref bean="skill_420"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_407"/>
+          <ref bean="skill_410"/>
+          <ref bean="skill_404"/>
+          <ref bean="skill_419"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_401"/>
+          <ref bean="skill_411"/>
+          <ref bean="skill_414"/>
+          <ref bean="skill_402"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <ref bean="skill_413"/>
+          <ref bean="skill_417"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_415"/>
+          <ref bean="skill_416"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_bowmaster" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="bowmaster"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_archer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1201"/>
+          <ref bean="skill_1208"/>
+          <null/>
+          <ref bean="skill_1205"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1202"/>
+          <ref bean="skill_1209"/>
+          <ref bean="skill_1215"/>
+          <ref bean="skill_1217"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <ref bean="skill_1212"/>
+          <ref bean="skill_1206"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1220"/>
+          <ref bean="skill_1210"/>
+          <ref bean="skill_1213"/>
+          <ref bean="skill_1221"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1207"/>
+          <ref bean="skill_1203"/>
+          <ref bean="skill_1218"/>
+          <ref bean="skill_1219"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1204"/>
+          <ref bean="skill_1211"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_acrobat" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="acrobat"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_archer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1405"/>
+          <ref bean="skill_1416"/>
+          <ref bean="skill_1408"/>
+          <ref bean="skill_1404"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1417"/>
+          <ref bean="skill_1409"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1402"/>
+          <ref bean="skill_1401"/>
+          <ref bean="skill_1418"/>
+          <ref bean="skill_1403"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1411"/>
+          <ref bean="skill_1415"/>
+          <ref bean="skill_1412"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1406"/>
+          <ref bean="skill_1410"/>
+          <ref bean="skill_1419"/>
+          <ref bean="skill_1407"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1413"/>
+          <null/>
+          <null/>
+          <ref bean="skill_1414"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_elementallord" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="elementallord"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_soceress"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2220"/>
+          <ref bean="skill_2217"/>
+          <ref bean="skill_2218"/>
+          <ref bean="skill_2204"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2206"/>
+          <null/>
+          <ref bean="skill_2363"/>
+          <ref bean="skill_2203"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2202"/>
+          <ref bean="skill_2207"/>
+          <ref bean="skill_2209"/>
+          <ref bean="skill_2211"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2213"/>
+          <ref bean="skill_2208"/>
+          <ref bean="skill_2212"/>
+          <ref bean="skill_2214"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2205"/>
+          <ref bean="skill_2219"/>
+          <ref bean="skill_2221"/>
+          <ref bean="skill_2210"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2215"/>
+          <null/>
+          <null/>
+          <ref bean="skill_2216"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_forceuser" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="forceuser"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_soceress"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2403"/>
+          <ref bean="skill_2409"/>
+          <null/>
+          <ref bean="skill_2406"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2404"/>
+          <ref bean="skill_2416"/>
+          <ref bean="skill_2417"/>
+          <ref bean="skill_2413"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2405"/>
+          <ref bean="skill_2412"/>
+          <ref bean="skill_2411"/>
+          <ref bean="skill_2420"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2408"/>
+          <ref bean="skill_2418"/>
+          <null/>
+          <ref bean="skill_2410"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2401"/>
+          <ref bean="skill_2415"/>
+          <ref bean="skill_2419"/>
+          <ref bean="skill_2407"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2402"/>
+          <null/>
+          <null/>
+          <ref bean="skill_2414"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_paladin" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="paladin"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_cleric"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3222"/>
+          <ref bean="skill_3208"/>
+          <ref bean="skill_3217"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3224"/>
+          <ref bean="skill_3223"/>
+          <ref bean="skill_3221"/>
+          <ref bean="skill_3218"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3207"/>
+          <ref bean="skill_3220"/>
+          <ref bean="skill_3219"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3202"/>
+          <null/>
+          <ref bean="skill_3205"/>
+          <ref bean="skill_3211"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3203"/>
+          <ref bean="skill_3201"/>
+          <ref bean="skill_3214"/>
+          <ref bean="skill_3213"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3209"/>
+          <null/>
+          <ref bean="skill_3210"/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_priest" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="priest"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_cleric"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3402"/>
+          <null/>
+          <ref bean="skill_3426"/>
+          <ref bean="skill_3409"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3425"/>
+          <ref bean="skill_3418"/>
+          <ref bean="skill_3414"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3407"/>
+          <ref bean="skill_3401"/>
+          <ref bean="skill_3416"/>
+          <ref bean="skill_3403"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3408"/>
+          <null/>
+          <ref bean="skill_3421"/>
+          <ref bean="skill_3422"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3406"/>
+          <ref bean="skill_3420"/>
+          <ref bean="skill_3423"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3411"/>
+          <null/>
+          <null/>
+          <ref bean="skill_3412"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_gladiator" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="gladiator"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_swordmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_301"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_303"/>
+          <ref bean="skill_302"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_304"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_305"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_307"/>
+          <ref bean="skill_306"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_308"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_moonlord" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="moonlord"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_swordmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_351"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_353"/>
+          <ref bean="skill_352"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_354"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_355"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_357"/>
+          <ref bean="skill_356"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_358"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_barbarian" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="barbarian"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_mercenary"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_501"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_503"/>
+          <ref bean="skill_502"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_504"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_505"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_507"/>
+          <ref bean="skill_506"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_511"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_destroyer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="destroyer"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_mercenary"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_551"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_553"/>
+          <ref bean="skill_552"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_554"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_555"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_557"/>
+          <ref bean="skill_556"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_558"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_sniper" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="sniper"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_bowmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1301"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1303"/>
+          <ref bean="skill_1302"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1304"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1305"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1307"/>
+          <ref bean="skill_1306"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1308"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_artillery" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="artillery"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_bowmaster"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1351"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1353"/>
+          <ref bean="skill_1352"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1354"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1355"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1357"/>
+          <ref bean="skill_1356"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1358"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_tempest" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="tempest"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_acrobat"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1501"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1503"/>
+          <ref bean="skill_1502"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1504"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1505"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1507"/>
+          <ref bean="skill_1506"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1508"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_windwalker" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="windwalker"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_acrobat"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1551"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1553"/>
+          <ref bean="skill_1552"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1554"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1555"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1557"/>
+          <ref bean="skill_1556"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1558"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_saleana" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="saleana"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_elementallord"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2301"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2303"/>
+          <ref bean="skill_2302"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2304"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2305"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2307"/>
+          <ref bean="skill_2306"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2308"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_elestra" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="elestra"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_elementallord"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2351"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2353"/>
+          <ref bean="skill_2352"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2354"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2355"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2357"/>
+          <ref bean="skill_2356"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2358"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_smasher" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="smasher"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_forceuser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2501"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2503"/>
+          <ref bean="skill_2502"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2504"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2505"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2507"/>
+          <ref bean="skill_2506"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2508"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_majesty" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="majesty"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_forceuser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2551"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2553"/>
+          <ref bean="skill_2552"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2554"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2555"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_2557"/>
+          <ref bean="skill_2556"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_2558"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_guardian" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="guardian"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_paladin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3302"/>
+          <ref bean="skill_3301"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3303"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3304"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3305"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3307"/>
+          <ref bean="skill_3306"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3308"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_crusades" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="crusades"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_paladin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3351"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3353"/>
+          <ref bean="skill_3352"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3354"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3355"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3357"/>
+          <ref bean="skill_3356"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3358"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_saint" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="saint"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_priest"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3501"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3503"/>
+          <ref bean="skill_3502"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3504"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3505"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3507"/>
+          <ref bean="skill_3506"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3508"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_inquisitor" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="inquisitor"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_priest"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3551"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3553"/>
+          <ref bean="skill_3552"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3554"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3555"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_3557"/>
+          <ref bean="skill_3556"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_3558"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_engineer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="engineer"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_academic"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4201"/>
+          <ref bean="skill_7303"/>
+          <ref bean="skill_4206"/>
+          <ref bean="skill_4216"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7301"/>
+          <ref bean="skill_4212"/>
+          <ref bean="skill_4203"/>
+          <ref bean="skill_4217"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7302"/>
+          <ref bean="skill_4213"/>
+          <ref bean="skill_4207"/>
+          <ref bean="skill_4219"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4202"/>
+          <ref bean="skill_4215"/>
+          <ref bean="skill_4209"/>
+          <ref bean="skill_4218"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4204"/>
+          <ref bean="skill_4214"/>
+          <ref bean="skill_4208"/>
+          <ref bean="skill_7304"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4205"/>
+          <null/>
+          <ref bean="skill_4221"/>
+          <ref bean="skill_4220"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_shootingstar" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="shootingstar"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_engineer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4301"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4303"/>
+          <ref bean="skill_4302"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4559"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4305"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4307"/>
+          <ref bean="skill_4306"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4308"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_gearmaster" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="gearmaster"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_engineer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4351"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4353"/>
+          <ref bean="skill_4352"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4354"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4355"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4357"/>
+          <ref bean="skill_4356"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4358"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_alchemist" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="alchemist"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_academic"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4409"/>
+          <ref bean="skill_4401"/>
+          <ref bean="skill_4405"/>
+          <ref bean="skill_4415"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4407"/>
+          <ref bean="skill_4404"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4410"/>
+          <ref bean="skill_4406"/>
+          <ref bean="skill_4414"/>
+          <ref bean="skill_4417"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4411"/>
+          <ref bean="skill_4408"/>
+          <ref bean="skill_4418"/>
+          <ref bean="skill_4416"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4412"/>
+          <ref bean="skill_4403"/>
+          <ref bean="skill_4402"/>
+          <ref bean="skill_4419"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4413"/>
+          <null/>
+          <null/>
+          <ref bean="skill_4420"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_adept" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="adept"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_alchemist"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4501"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4503"/>
+          <ref bean="skill_4502"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4504"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4505"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4507"/>
+          <ref bean="skill_4506"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4508"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_physician" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="physician"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_alchemist"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4551"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4553"/>
+          <ref bean="skill_4552"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4554"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4555"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_4557"/>
+          <ref bean="skill_4556"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_4558"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_screamer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="screamer"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_kali"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5201"/>
+          <ref bean="skill_5202"/>
+          <ref bean="skill_5211"/>
+          <ref bean="skill_5214"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5205"/>
+          <ref bean="skill_5204"/>
+          <ref bean="skill_5213"/>
+          <ref bean="skill_5215"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5208"/>
+          <ref bean="skill_5206"/>
+          <ref bean="skill_5212"/>
+          <ref bean="skill_5216"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5203"/>
+          <ref bean="skill_5207"/>
+          <ref bean="skill_5218"/>
+          <ref bean="skill_5217"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5210"/>
+          <ref bean="skill_5209"/>
+          <null/>
+          <ref bean="skill_5220"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_darksummoner" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="darksummoner"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_screamer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5301"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5303"/>
+          <ref bean="skill_5302"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5304"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5305"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5307"/>
+          <ref bean="skill_5306"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5308"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_souleater" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="souleater"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_screamer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5401"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5403"/>
+          <ref bean="skill_5402"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5404"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5405"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5407"/>
+          <ref bean="skill_5406"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5408"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_dancer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="dancer"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_kali"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5103"/>
+          <ref bean="skill_5101"/>
+          <ref bean="skill_5109"/>
+          <ref bean="skill_5111"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5104"/>
+          <ref bean="skill_5102"/>
+          <ref bean="skill_5110"/>
+          <ref bean="skill_5112"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5105"/>
+          <ref bean="skill_5121"/>
+          <ref bean="skill_5117"/>
+          <ref bean="skill_5113"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5106"/>
+          <ref bean="skill_5122"/>
+          <ref bean="skill_5118"/>
+          <ref bean="skill_5114"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5107"/>
+          <null/>
+          <ref bean="skill_5119"/>
+          <ref bean="skill_5115"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5108"/>
+          <null/>
+          <null/>
+          <ref bean="skill_5116"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_bladedancer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="bladedancer"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_dancer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5501"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5505"/>
+          <ref bean="skill_5502"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5503"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5504"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5507"/>
+          <ref bean="skill_5506"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5508"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_spiritdancer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="spiritdancer"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_dancer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5601"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5605"/>
+          <ref bean="skill_5602"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5603"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5604"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_5607"/>
+          <ref bean="skill_5606"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_5608"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_chaser" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="chaser"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_assassin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6201"/>
+          <ref bean="skill_6207"/>
+          <ref bean="skill_6214"/>
+          <ref bean="skill_6213"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6202"/>
+          <ref bean="skill_6209"/>
+          <ref bean="skill_6215"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6203"/>
+          <ref bean="skill_6210"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6204"/>
+          <ref bean="skill_6208"/>
+          <ref bean="skill_6217"/>
+          <ref bean="skill_6216"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6205"/>
+          <ref bean="skill_6211"/>
+          <ref bean="skill_6218"/>
+          <ref bean="skill_6219"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6206"/>
+          <ref bean="skill_6212"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_ripper" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="ripper"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_chaser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6501"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6502"/>
+          <ref bean="skill_6503"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6505"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6506"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6550"/>
+          <ref bean="skill_6507"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6554"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_raven" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="raven"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_chaser"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6401"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6402"/>
+          <ref bean="skill_6403"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6404"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6405"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6551"/>
+          <ref bean="skill_6407"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6553"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_bringer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="bringer"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_assassin"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6301"/>
+          <ref bean="skill_6313"/>
+          <ref bean="skill_6316"/>
+          <ref bean="skill_6308"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6303"/>
+          <ref bean="skill_6314"/>
+          <ref bean="skill_6317"/>
+          <ref bean="skill_6307"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6304"/>
+          <ref bean="skill_6320"/>
+          <ref bean="skill_6319"/>
+          <ref bean="skill_6309"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6305"/>
+          <null/>
+          <null/>
+          <ref bean="skill_6310"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6302"/>
+          <ref bean="skill_6315"/>
+          <ref bean="skill_6318"/>
+          <ref bean="skill_6311"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6306"/>
+          <null/>
+          <null/>
+          <ref bean="skill_6312"/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_lightfury" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="lightfury"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_bringer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6601"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6603"/>
+          <ref bean="skill_6604"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6606"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6607"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6602"/>
+          <ref bean="skill_6605"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6608"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_abysswalker" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="abysswalker"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_bringer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6701"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6703"/>
+          <ref bean="skill_6705"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6704"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6706"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_6702"/>
+          <ref bean="skill_6707"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_6708"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_piercer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="piercer"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_lencea"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7020"/>
+          <ref bean="skill_7021"/>
+          <ref bean="skill_7022"/>
+          <ref bean="skill_7023"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7024"/>
+          <null/>
+          <ref bean="skill_7025"/>
+          <ref bean="skill_7026"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7027"/>
+          <ref bean="skill_7028"/>
+          <ref bean="skill_7029"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7030"/>
+          <ref bean="skill_7031"/>
+          <ref bean="skill_7032"/>
+          <ref bean="skill_7033"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7034"/>
+          <ref bean="skill_7035"/>
+          <ref bean="skill_7036"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7037"/>
+          <null/>
+          <ref bean="skill_7038"/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_flurry" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="flurry"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_piercer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7101"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7102"/>
+          <ref bean="skill_7103"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7104"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7105"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7107"/>
+          <ref bean="skill_7106"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7108"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_stingbreezer" class="dnss.model.Job" scope="prototype">
+    <property name="name" value=""/>
+    <property name="identifier" value="stingbreezer"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_piercer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7201"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7202"/>
+          <ref bean="skill_7203"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7204"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7205"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7207"/>
+          <ref bean="skill_7206"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7208"/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="jobs_gladiator" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_swordmaster"/>
+    <property name="tertiary" ref="job_gladiator"/>
+  </bean>
+  <bean id="jobs_moonlord" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_swordmaster"/>
+    <property name="tertiary" ref="job_moonlord"/>
+  </bean>
+  <bean id="jobs_barbarian" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_mercenary"/>
+    <property name="tertiary" ref="job_barbarian"/>
+  </bean>
+  <bean id="jobs_destroyer" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_mercenary"/>
+    <property name="tertiary" ref="job_destroyer"/>
+  </bean>
+  <bean id="jobs_sniper" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_bowmaster"/>
+    <property name="tertiary" ref="job_sniper"/>
+  </bean>
+  <bean id="jobs_artillery" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_bowmaster"/>
+    <property name="tertiary" ref="job_artillery"/>
+  </bean>
+  <bean id="jobs_tempest" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_acrobat"/>
+    <property name="tertiary" ref="job_tempest"/>
+  </bean>
+  <bean id="jobs_windwalker" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_acrobat"/>
+    <property name="tertiary" ref="job_windwalker"/>
+  </bean>
+  <bean id="jobs_saleana" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_elementallord"/>
+    <property name="tertiary" ref="job_saleana"/>
+  </bean>
+  <bean id="jobs_elestra" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_elementallord"/>
+    <property name="tertiary" ref="job_elestra"/>
+  </bean>
+  <bean id="jobs_smasher" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_forceuser"/>
+    <property name="tertiary" ref="job_smasher"/>
+  </bean>
+  <bean id="jobs_majesty" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_soceress"/>
+    <property name="secondary" ref="job_forceuser"/>
+    <property name="tertiary" ref="job_majesty"/>
+  </bean>
+  <bean id="jobs_guardian" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_paladin"/>
+    <property name="tertiary" ref="job_guardian"/>
+  </bean>
+  <bean id="jobs_crusades" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_paladin"/>
+    <property name="tertiary" ref="job_crusades"/>
+  </bean>
+  <bean id="jobs_saint" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_priest"/>
+    <property name="tertiary" ref="job_saint"/>
+  </bean>
+  <bean id="jobs_inquisitor" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_cleric"/>
+    <property name="secondary" ref="job_priest"/>
+    <property name="tertiary" ref="job_inquisitor"/>
+  </bean>
+  <bean id="jobs_shootingstar" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_engineer"/>
+    <property name="tertiary" ref="job_shootingstar"/>
+  </bean>
+  <bean id="jobs_gearmaster" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_engineer"/>
+    <property name="tertiary" ref="job_gearmaster"/>
+  </bean>
+  <bean id="jobs_adept" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_alchemist"/>
+    <property name="tertiary" ref="job_adept"/>
+  </bean>
+  <bean id="jobs_physician" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_academic"/>
+    <property name="secondary" ref="job_alchemist"/>
+    <property name="tertiary" ref="job_physician"/>
+  </bean>
+  <bean id="jobs_darksummoner" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_screamer"/>
+    <property name="tertiary" ref="job_darksummoner"/>
+  </bean>
+  <bean id="jobs_souleater" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_screamer"/>
+    <property name="tertiary" ref="job_souleater"/>
+  </bean>
+  <bean id="jobs_bladedancer" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_dancer"/>
+    <property name="tertiary" ref="job_bladedancer"/>
+  </bean>
+  <bean id="jobs_spiritdancer" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_kali"/>
+    <property name="secondary" ref="job_dancer"/>
+    <property name="tertiary" ref="job_spiritdancer"/>
+  </bean>
+  <bean id="jobs_ripper" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_chaser"/>
+    <property name="tertiary" ref="job_ripper"/>
+  </bean>
+  <bean id="jobs_raven" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_chaser"/>
+    <property name="tertiary" ref="job_raven"/>
+  </bean>
+  <bean id="jobs_lightfury" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_bringer"/>
+    <property name="tertiary" ref="job_lightfury"/>
+  </bean>
+  <bean id="jobs_abysswalker" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_assassin"/>
+    <property name="secondary" ref="job_bringer"/>
+    <property name="tertiary" ref="job_abysswalker"/>
+  </bean>
+  <bean id="jobs_flurry" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_lencea"/>
+    <property name="secondary" ref="job_piercer"/>
+    <property name="tertiary" ref="job_flurry"/>
+  </bean>
+  <bean id="jobs_stingbreezer" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_lencea"/>
+    <property name="secondary" ref="job_piercer"/>
+    <property name="tertiary" ref="job_stingbreezer"/>
+  </bean>
+  <util:list id="all_jobs_primary" value-type="dnss.model.Job" scope="singleton">
+    <ref bean="job_warrior"/>
+    <ref bean="job_archer"/>
+    <ref bean="job_soceress"/>
+    <ref bean="job_cleric"/>
+    <ref bean="job_academic"/>
+    <ref bean="job_kali"/>
+    <ref bean="job_assassin"/>
+    <ref bean="job_lencea"/>
+  </util:list>
+  <util:list id="all_jobs_secondary" value-type="dnss.model.Job" scope="singleton">
+    <ref bean="job_swordmaster"/>
+    <ref bean="job_mercenary"/>
+    <ref bean="job_bowmaster"/>
+    <ref bean="job_acrobat"/>
+    <ref bean="job_elementallord"/>
+    <ref bean="job_forceuser"/>
+    <ref bean="job_paladin"/>
+    <ref bean="job_priest"/>
+    <ref bean="job_engineer"/>
+    <ref bean="job_alchemist"/>
+    <ref bean="job_screamer"/>
+    <ref bean="job_dancer"/>
+    <ref bean="job_chaser"/>
+    <ref bean="job_bringer"/>
+    <ref bean="job_piercer"/>
+  </util:list>
+  <util:list id="all_jobs_tertiary" value-type="dnss.model.Job" scope="singleton">
+    <ref bean="job_gladiator"/>
+    <ref bean="job_moonlord"/>
+    <ref bean="job_barbarian"/>
+    <ref bean="job_destroyer"/>
+    <ref bean="job_sniper"/>
+    <ref bean="job_artillery"/>
+    <ref bean="job_tempest"/>
+    <ref bean="job_windwalker"/>
+    <ref bean="job_saleana"/>
+    <ref bean="job_elestra"/>
+    <ref bean="job_smasher"/>
+    <ref bean="job_majesty"/>
+    <ref bean="job_guardian"/>
+    <ref bean="job_crusades"/>
+    <ref bean="job_saint"/>
+    <ref bean="job_inquisitor"/>
+    <ref bean="job_shootingstar"/>
+    <ref bean="job_gearmaster"/>
+    <ref bean="job_adept"/>
+    <ref bean="job_physician"/>
+    <ref bean="job_darksummoner"/>
+    <ref bean="job_souleater"/>
+    <ref bean="job_bladedancer"/>
+    <ref bean="job_spiritdancer"/>
+    <ref bean="job_ripper"/>
+    <ref bean="job_raven"/>
+    <ref bean="job_lightfury"/>
+    <ref bean="job_abysswalker"/>
+    <ref bean="job_flurry"/>
+    <ref bean="job_stingbreezer"/>
+  </util:list>
+</beans>
