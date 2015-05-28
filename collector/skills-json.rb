@@ -140,7 +140,7 @@ def add_skill(jobs, uistring, skill, mode)
   jobs[skill['needjob']]['messages'][skill['skillexplanationid']] = uistring[skill['skillexplanationid']]
 
   ['id', 'skilllevel', 'needjob',
-    'skillexplanationid', 'skillexplanationidparam', '_decreasesp', 'delaytime'].each {|a| skill.delete(a)}
+    'skillexplanationid', 'skillexplanationidparam', 'decreasesp', 'delaytime'].each {|a| skill.delete(a)}
 end
 
 tables.each do |table|
