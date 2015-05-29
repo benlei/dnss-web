@@ -21,7 +21,7 @@
 <script type="text/javascript">
 var data=null;<c:if test="${alignment == 'h'}">
 var width = document.getElementsByTagName("section").length*285;<c:if test="${not empty jobs.tertiary}">
-width -= ${jobs.tertiary.colSize*65};</c:if></c:if><c:if test="${alignment == 'v'}">
+width -= ${(4-jobs.tertiary.colSize)*65};</c:if></c:if><c:if test="${alignment == 'v'}">
 width = 280;</c:if>
 document.getElementsByTagName("main")[0].style.width = width+"px";
 html2canvas(document.getElementsByTagName('main')[0],{onrendered:function(canvas){data=canvas.toDataURL("image/png")}});
