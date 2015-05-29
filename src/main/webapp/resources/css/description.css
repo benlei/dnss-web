@@ -40,7 +40,12 @@ h2 {
 }
 
 #sidebar-2 .d .s {
-  color: rgb(70, 55, 255);
+  color: #C0C0C0;
+  font-weight: normal;
+}
+
+#sidebar-2 .d .v {
+  color: #8D38C9;
   font-weight: normal;
 }
 
