@@ -180,7 +180,7 @@ var description = new (function Description() {
     var c = 0, w = 0, p = 0, newStr = "", startPos = 0;
     for (var i = 0; i < str.length - 1; i++) {
       switch (str.substr(i, 2)) {
-        case "#y": case "#p": case "#r":
+        case "#y": case "#p": case "#r": case "#s":
           if (c - w == 1) { // needed a closing </span>
             newStr += str.substring(startPos, i) + "</span><span class=\"" + str.substr(i+1,1) + "\">";
           } else {

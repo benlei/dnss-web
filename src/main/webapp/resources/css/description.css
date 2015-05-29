@@ -39,6 +39,11 @@ h2 {
   font-weight: normal;
 }
 
+#sidebar-2 .d .s {
+  color: rgb(70, 55, 255);
+  font-weight: normal;
+}
+
 #sidebar-2 .separator {
   border-top: 1px solid #999;
   margin: 5px auto;
