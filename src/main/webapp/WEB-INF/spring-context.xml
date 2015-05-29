@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
   <import resource="levels-context.xml"/>
   <import resource="types-context.xml"/>
@@ -2804,6 +2804,112 @@
       </list>
     </property>
   </bean>
+  <bean id="job_avenger" class="dnss.model.Job" scope="prototype">
+    <property name="name" value="Avenger"/>
+    <property name="identifier" value="avenger"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_warrior"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7501"/>
+          <ref bean="skill_7506"/>
+          <null/>
+          <ref bean="skill_7516"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7502"/>
+          <ref bean="skill_7515"/>
+          <ref bean="skill_7517"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7503"/>
+          <ref bean="skill_7507"/>
+          <ref bean="skill_7510"/>
+          <ref bean="skill_7519"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7505"/>
+          <ref bean="skill_7509"/>
+          <ref bean="skill_7508"/>
+          <ref bean="skill_7520"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7511"/>
+          <ref bean="skill_7504"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_40"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_darkavenger" class="dnss.model.Job" scope="prototype">
+    <property name="name" value="다크어벤저"/>
+    <property name="identifier" value="darkavenger"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_avenger"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7512"/>
+          <ref bean="skill_7530"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7513"/>
+          <ref bean="skill_7521"/>
+          <ref bean="skill_7522"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7523"/>
+          <ref bean="skill_7524"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_7525"/>
+          <ref bean="skill_7526"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_7529"/>
+          <ref bean="skill_7527"/>
+          <ref bean="skill_7528"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
   <bean id="jobs_gladiator" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_warrior"/>
     <property name="secondary" ref="job_swordmaster"/>
@@ -2954,6 +3060,11 @@
     <property name="secondary" ref="job_piercer"/>
     <property name="tertiary" ref="job_stingbreezer"/>
   </bean>
+  <bean id="jobs_darkavenger" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_warrior"/>
+    <property name="secondary" ref="job_avenger"/>
+    <property name="tertiary" ref="job_darkavenger"/>
+  </bean>
   <util:list id="all_jobs_primary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_warrior"/>
     <ref bean="job_archer"/>
@@ -2980,6 +3091,7 @@
     <ref bean="job_chaser"/>
     <ref bean="job_bringer"/>
     <ref bean="job_piercer"/>
+    <ref bean="job_avenger"/>
   </util:list>
   <util:list id="all_jobs_tertiary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_gladiator"/>
@@ -3012,5 +3124,6 @@
     <ref bean="job_abysswalker"/>
     <ref bean="job_flurry"/>
     <ref bean="job_stingbreezer"/>
+    <ref bean="job_darkavenger"/>
   </util:list>
 </beans>

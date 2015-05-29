@@ -22575,6 +22575,1671 @@
       </list>
     </property>
   </bean>
+  <bean id="skill_40" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="40"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="113"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="40"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7501" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7501"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="40"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="15"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="18"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="21"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="24"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="27"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="30"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="33"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="36"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="39"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="42"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="45"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="48"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="51"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="15"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="14"/>
+          <property name="requiredJobLevel" value="54"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="16"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="15"/>
+          <property name="requiredJobLevel" value="57"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="17"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="16"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="18"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="17"/>
+          <property name="requiredJobLevel" value="63"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="19"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="18"/>
+          <property name="requiredJobLevel" value="66"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="20"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="19"/>
+          <property name="requiredJobLevel" value="69"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="21"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="20"/>
+          <property name="requiredJobLevel" value="72"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="22"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="21"/>
+          <property name="requiredJobLevel" value="75"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="23"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7502" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7502"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="42"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="19"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="22"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="25"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="28"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="31"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="34"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="37"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="40"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="43"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="46"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="49"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="52"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="15"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="14"/>
+          <property name="requiredJobLevel" value="58"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="16"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="15"/>
+          <property name="requiredJobLevel" value="61"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="17"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="16"/>
+          <property name="requiredJobLevel" value="64"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="18"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="17"/>
+          <property name="requiredJobLevel" value="67"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="19"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="18"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="20"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="19"/>
+          <property name="requiredJobLevel" value="73"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="21"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="20"/>
+          <property name="requiredJobLevel" value="76"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="22"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7503" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7503"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="46"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="24"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="27"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="30"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="33"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="36"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="39"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="42"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="45"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="48"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="51"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="54"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="57"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="15"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="14"/>
+          <property name="requiredJobLevel" value="63"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="16"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="15"/>
+          <property name="requiredJobLevel" value="66"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="17"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="16"/>
+          <property name="requiredJobLevel" value="69"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="18"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="17"/>
+          <property name="requiredJobLevel" value="72"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="19"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="18"/>
+          <property name="requiredJobLevel" value="75"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="20"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7504" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7504"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="121"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="36"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="41"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="46"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="51"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="56"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="61"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="66"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="71"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="76"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7505" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7505"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="114"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="28"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="31"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="34"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="37"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="40"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="43"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="46"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="49"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="52"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="58"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="61"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="64"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="15"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="14"/>
+          <property name="requiredJobLevel" value="67"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="16"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="15"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="17"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="16"/>
+          <property name="requiredJobLevel" value="73"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="18"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="17"/>
+          <property name="requiredJobLevel" value="76"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="19"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7506" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7506"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="123"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="15"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="20"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="25"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="30"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="35"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="40"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="45"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="50"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="75"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="15"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="14"/>
+          <property name="requiredJobLevel" value="80"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="16"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7507" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7507"/>
+    <property name="sprite" value="08"/>
+    <property name="icon" value="4"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="25"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="30"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="35"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="40"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="45"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="50"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="75"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="80"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7508" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7508"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="128"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="30"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="35"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="40"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="45"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="50"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="75"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="80"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7509" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7509"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="116"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="29"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="34"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="39"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="44"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="49"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="54"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="59"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="64"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="69"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="74"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="79"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7510" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7510"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="117"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="26"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="36"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="46"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="56"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="66"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="76"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="86"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7511" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7511"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="115"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="32"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="35"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="38"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="41"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="44"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="47"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="50"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="53"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="56"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="59"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="62"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="68"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="15"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="14"/>
+          <property name="requiredJobLevel" value="71"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="16"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="15"/>
+          <property name="requiredJobLevel" value="74"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="17"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7512" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7512"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="107"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="45"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="75"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="85"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="95"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7513" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7513"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="126"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="50"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="53"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="56"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="59"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="62"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="68"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="71"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="74"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="77"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="80"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="83"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="86"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="15"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7515" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7515"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="110"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="21"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7516" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7516"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="21"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="15"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="20"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="2"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="25"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="30"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="35"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="40"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="45"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="50"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="13"/>
+          <property name="requiredJobLevel" value="75"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="13"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="14"/>
+          <property name="requiredJobLevel" value="80"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="14"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7517" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7517"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="127"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="22"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="27"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="2"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="32"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="37"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="42"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="47"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="52"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="57"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="62"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="67"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="72"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="12"/>
+          <property name="requiredJobLevel" value="77"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="12"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7519" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7519"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="39"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="27"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="32"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="2"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="37"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="42"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="47"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="52"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="57"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="62"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="67"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="72"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="11"/>
+          <property name="requiredJobLevel" value="77"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="11"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7520" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7520"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="33"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="31"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="2"/>
+          <property name="requiredJobLevel" value="36"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="2"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="3"/>
+          <property name="requiredJobLevel" value="41"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="4"/>
+          <property name="requiredJobLevel" value="46"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="4"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="5"/>
+          <property name="requiredJobLevel" value="51"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="5"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="6"/>
+          <property name="requiredJobLevel" value="56"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="6"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="7"/>
+          <property name="requiredJobLevel" value="61"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="7"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="8"/>
+          <property name="requiredJobLevel" value="66"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="8"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="9"/>
+          <property name="requiredJobLevel" value="71"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="9"/>
+        </bean>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="10"/>
+          <property name="requiredJobLevel" value="76"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="10"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7521" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7521"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="102"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="48"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7522" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7522"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="102"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="48"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7523" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7523"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="100"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7524" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7524"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="100"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7525" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7525"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="101"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7526" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7526"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="101"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="60"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7527" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7527"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="106"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7528" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7528"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="106"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="70"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7529" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7529"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="34"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="65"/>
+          <property name="spCost" value="1"/>
+          <property name="totalSPCost" value="1"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  <bean id="skill_7530" class="dnss.model.Skill" scope="prototype">
+    <property name="id" value="7530"/>
+    <property name="sprite" value="01"/>
+    <property name="icon" value="4"/>
+    <property name="levels">
+      <list>
+        <bean class="dnss.model.Level" scope="prototype">
+          <property name="level" value="1"/>
+          <property name="requiredJobLevel" value="55"/>
+          <property name="spCost" value="3"/>
+          <property name="totalSPCost" value="3"/>
+        </bean>
+      </list>
+    </property>
+  </bean>
   <bean id="skill_5000" class="dnss.model.Skill" scope="prototype">
     <property name="id" value="5000"/>
     <property name="sprite" value="09"/>

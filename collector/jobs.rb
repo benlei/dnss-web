@@ -53,7 +53,7 @@ end
 ##############################################################################
 # generate the bean file
 ##############################################################################
-builder = Nokogiri::XML::Builder.new do |xml|
+builder = Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
   xml.beans(SPRING_BEAN_HEADER) do
     xml.import('resource' => 'levels-context.xml')
     xml.import('resource' => 'types-context.xml')

@@ -1,4 +1,4 @@
-<!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page pageEncoding="UTF-8" %><!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <title>${jobs.tertiary.name} - Dragon Nest Skill Simulator</title>
 <meta charset="utf-8">
