@@ -7,10 +7,7 @@ import dnss.web.Cookies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.annotation.Resource;
@@ -23,6 +20,7 @@ import java.util.Random;
 import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
 
 @Controller
+@RequestMapping("/")
 public class JobController {
     @Autowired
     private WebApplicationContext context;
@@ -42,6 +40,7 @@ public class JobController {
     @Resource(name="skill_types")
     private List<String> skillTypes; // singleton, do not alter
 
+    private final static long TIME = System.currentTimeMillis() / 1000;
 
     @RequestMapping("/job/{identifier:[a-z]+}-{level:[1-9][0-9]*}")
     public String job(@PathVariable("identifier") String identifier,
@@ -58,6 +57,9 @@ public class JobController {
 
         jobs.setLevel(level);
         jobs.setMaxSP(sp.forCap(level));
+
+        // for prefixing stuff
+        model.addAttribute("time", TIME);
 
         // the jobs
         model.addAttribute("jobs", jobs);
@@ -156,10 +158,4 @@ public class JobController {
 
         return cookies;
     }
-
-//    @RequestMapping("/[1-9][0-9]*-dnss\\.css")
-//    @RequestMapping("/[1-9][0-9]*-dnss\\.js")
-//    @RequestMapping("/[1-9][0-9]*-download\\.css")
-//    @RequestMapping("/[1-9][0-9]*-download\\.js")
-
 }

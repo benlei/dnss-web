@@ -23,6 +23,8 @@ public class DownloadController {
     @Autowired
     private SP sp;
 
+    private final static long TIME = System.currentTimeMillis() / 1000;
+
     @RequestMapping("/{alignment:[h|v]}/{identifiers:[a-z-]+}/{level:[1-9][0-9]*}/{build:[0-9a-zA-Z-\\.\\+]{48,}}")
     public String download(@PathVariable("identifiers") String identifiers,
                            @PathVariable("level") int level,
@@ -82,6 +84,7 @@ public class DownloadController {
         model.addAttribute("alignment", alignment);
         model.addAttribute("jobs", jobs);
 
+        model.addAttribute("time", TIME);
 
         return "download";
     }
@@ -98,6 +101,7 @@ public class DownloadController {
         Skill skill = (Skill)context.getBean(bean);
         skill.setLevel(1); // only want the active icon
         model.addAttribute("skill", skill);
+        model.addAttribute("time", TIME);
         return "download_skill";
     }
 

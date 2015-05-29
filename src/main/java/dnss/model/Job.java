@@ -128,6 +128,26 @@ public class Job {
                 skillTree[5][0] == null && skillTree[5][1] == null && skillTree[5][2] == null && skillTree[5][3] == null;
     }
 
+    private boolean canCompactThirdCol() {
+        for (int i = 0; i < skillTree.length; i++) {
+            if (skillTree[i][2] != null) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean canCompactFourthCol() {
+        for (int i = 0; i < skillTree.length; i++) {
+            if (skillTree[i][3] != null) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public void compactSkillTree() {
         if (isCompactable()) {
             Skill[][] newSkillTree = new Skill[5][4]; // 5 rows, 4 cols
@@ -141,9 +161,21 @@ public class Job {
 
 
         if (advancement == Advancement.TERTIARY) {
-            for (int i = 0; i < skillTree.length; i++) {
-                skillTree[i] = new Skill[]{skillTree[i][0], skillTree[i][1]};
+            boolean canCompactThirdCol = canCompactThirdCol();
+            boolean canCompactFourthCol = canCompactFourthCol();
+            if (canCompactThirdCol || canCompactFourthCol) {
+                for (int i = 0; i < skillTree.length; i++) {
+                    if (canCompactThirdCol) {
+                        skillTree[i] = new Skill[]{skillTree[i][0], skillTree[i][1]};
+                    } else {
+                        skillTree[i] = new Skill[]{skillTree[i][0], skillTree[i][1], skillTree[i][2]};
+                    }
+                }
             }
         }
+    }
+
+    public int getColSize() {
+        return skillTree[0].length;
     }
 }

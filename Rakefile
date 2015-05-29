@@ -49,3 +49,12 @@ namespace :collect do
   
   task :all => [:icons, :beans, :json]
 end
+
+task :clean do
+  sh "mvn clean"
+end
+
+task :default do
+  sh "mvn install"
+  sh "foreman start"
+end

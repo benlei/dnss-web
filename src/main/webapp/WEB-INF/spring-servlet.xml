@@ -11,13 +11,21 @@
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:component-scan base-package="dnss.controller"/>
-    <context:property-placeholder location="classpath:dnss.properties"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <mvc:resources mapping="/dnss.css" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/dnss.js" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/download.css" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/download.js" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/json/*.json" location="/resources/json/" cache-period="31556926"/>
+    <mvc:resources mapping="/icons/*.png" location="/resources/icons/" cache-period="31556926"/>
+    <mvc:resources mapping="/favicon.ico" location="/" cache-period="31556926"/>
+
 
     <mvc:annotation-driven/>
 </beans>

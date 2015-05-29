@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.WebApplicationContext;
 
-import javax.servlet.http.HttpServletResponse;
-
 @Controller
 @RequestMapping("/api/[1-9][0-9]*")
 public class ApiController {
@@ -32,16 +30,4 @@ public class ApiController {
         int tertiarySP = (int)(maxSP * ratios[2]);
         return "{\"sp\":[" + primarySP + "," + secondarySP + "," + tertiarySP + "," + maxSP + "]}";
     }
-
-
-    @RequestMapping(value = "/job/{identifier:[a-z]+}", method = RequestMethod.GET, produces="application/json")
-    public @ResponseBody String getJSON(@PathVariable("identifier") String identifier,
-                                        HttpServletResponse response) {
-        String bean = "jobs_"  +identifier;
-        if (! context.containsBean(bean)) {
-            return "{\"error\":\"Unknown Job\"}";
-        }
-        return "";
-    }
-
 }

@@ -1,10 +1,10 @@
-<!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %><fmt:setBundle basename="dnss" var="dnss"/>
+<!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <title>${jobs.tertiary.name} - Dragon Nest Skill Simulator</title>
 <meta charset="utf-8">
 <meta name="description" content="Simulate and share your Dragon Nest skill builds using the Dragon Nest Skill Simulator (North America)!">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
-<link href="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.css" rel="stylesheet" type="text/css"/>
+<link href="/dnss.css?${time}" rel="stylesheet" type="text/css"/>
 <body>
 <main>
 	<nav id="jobs" class="no-select">
@@ -54,7 +54,7 @@
 			<tr<c:if test="${skillRowLoop.last && job.compactable}"> style="display:none"</c:if>><c:forEach items="${skillRow}" var="skill" varStatus="skillLoop"><c:choose><c:when test="${empty skill}">
 				<td class="container" /></c:when><c:otherwise>
 				<td class="container">
-					<div class="skill" id="skill-${skill.id}" style="background:url('/skillicons/<fmt:message key="skillicon.version" bundle="${dnss}"/>_skillicon${skill.sprite}.png') ${skill.spriteXY};"/>
+					<div class="skill" id="skill-${skill.id}" style="background:url('/icons/skillicon${skill.sprite}.png?${time}') ${skill.spriteXY};"/>
 					<div class="lvl">${skill.level}/${skill.maxLevel}</div></c:otherwise></c:choose></c:forEach></c:forEach>
 		</table></c:forEach>
 	</section>
@@ -83,7 +83,7 @@
 </main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/<fmt:message key="timestamp" bundle="${dnss}"/>-dnss.js"></script>
+<script src="/dnss.js?${time}"></script>
 <script type="text/javascript">
 var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	required_level:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSkillRequiredLevel}<c:if test="${!loop.last}">,</c:if></c:forEach>],
@@ -91,6 +91,6 @@ var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus=
 	skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
 	cap: ${jobs.level}};
-dnss.start(<fmt:message key="json.version" bundle="${dnss}"/>);
+dnss.start(${time});
 </script>
 </html>
