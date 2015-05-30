@@ -53,6 +53,13 @@ li.secondary {
   width: 150px;
 }
 
+li.secondary, li.tertiary {
+-webkit-box-shadow: -4px 8px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 8px 10px 0px rgba(0,0,0,0.75);
+box-shadow: -4px 8px 10px 0px rgba(0,0,0,0.75);
+}
+
+
 li.tertiary:hover {
   background: #fff;
 }
