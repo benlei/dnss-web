@@ -32,7 +32,7 @@ namespace :collect do
     end
       
     Dir.chdir(resource + "/resource/ui/mainbar")
-    puts "Converting .dss files to .png..."
+    puts "Converting .dds files to .png..."
     sh "mogrify -verbose -format png skillicon*.dds"
     puts
     Dir["*.png"].each do |png|
