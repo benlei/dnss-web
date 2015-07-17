@@ -4,7 +4,7 @@
     <groupId>dnss</groupId>
     <artifactId>dnss-heroku</artifactId>
     <packaging>war</packaging>
-    <version>1.14-SNAPSHOT</version>
+    <version>1.15-SNAPSHOT</version>
 
     <properties>
         <spring.version>4.1.5.RELEASE</spring.version>
