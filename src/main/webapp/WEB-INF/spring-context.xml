@@ -2858,7 +2858,7 @@
     </property>
   </bean>
   <bean id="job_darkavenger" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="다크어벤저"/>
+    <property name="name" value="Dark Avenger"/>
     <property name="identifier" value="darkavenger"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_avenger"/>

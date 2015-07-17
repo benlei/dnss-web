@@ -1,5 +1,6 @@
 package dnss.controller;
 
+import dnss.DragonNest;
 import dnss.model.Job;
 import dnss.model.Jobs;
 import dnss.model.SP;
@@ -59,7 +60,7 @@ public class JobController {
         jobs.setMaxSP(sp.forCap(level));
 
         // for prefixing stuff
-        model.addAttribute("time", TIME);
+        model.addAttribute("time", DragonNest.getVersion());
 
         // the jobs
         model.addAttribute("jobs", jobs);
@@ -133,15 +134,10 @@ public class JobController {
         }
 
         if (identifier == null) {
-            identifier = getRandomIdentifier();
+            identifier = tertiaries.get(tertiaries.size() - 1).getIdentifier();
         }
 
         return job(identifier, cap, cookies, response, model);
-    }
-
-    private String getRandomIdentifier() {
-        Random random = new Random();
-        return tertiaries.get(random.nextInt(tertiaries.size())).getIdentifier();
     }
 
     @ModelAttribute("cookies")

@@ -11,6 +11,7 @@ namespace :collect do
     ruby "collector/jobs.rb"
     ruby "collector/skills.rb"
     ruby "collector/levels.rb"
+    FileUtils.cp("#{resource}/version.cfg", Dir.pwd + "/src/main/resources/version.cfg")
   end
   
   task :json do

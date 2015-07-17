@@ -1,5 +1,6 @@
 package dnss.controller;
 
+import dnss.DragonNest;
 import dnss.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -84,7 +85,7 @@ public class DownloadController {
         model.addAttribute("alignment", alignment);
         model.addAttribute("jobs", jobs);
 
-        model.addAttribute("time", TIME);
+        model.addAttribute("time", DragonNest.getVersion());
 
         return "download";
     }

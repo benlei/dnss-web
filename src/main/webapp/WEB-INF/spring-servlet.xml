@@ -18,6 +18,8 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean name="dnss_initializer" init-method="init" class="dnss.DragonNest" />
+
     <mvc:resources mapping="/dnss.css" location="/resources/" cache-period="31556926"/>
     <mvc:resources mapping="/dnss.js" location="/resources/" cache-period="31556926"/>
     <mvc:resources mapping="/download.css" location="/resources/" cache-period="31556926"/>
