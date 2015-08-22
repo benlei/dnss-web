@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.WebApplicationContext;
 
 @Controller
-@RequestMapping("/api/[1-9][0-9]*")
+@RequestMapping("/api")
 public class ApiController {
     @Autowired
     private WebApplicationContext context;
