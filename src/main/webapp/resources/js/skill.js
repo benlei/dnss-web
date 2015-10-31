@@ -234,11 +234,11 @@ function Skill(id, s, e) {
   };
 
   this.getMPUsage = function() {
-    return this.getLevel() ? s.levels[this.getLevel()-1].mpcost[description.getMode()]+"%" : -1;
+    return this.getLevel() ? s.levels[this.getLevel()-1].mpcost[description.getMode()]: -1;
   };
 
   this.getNextMPUsage = function() {
-    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].mpcost[description.getMode()]+"%" : -1;
+    return this.getLevel() < s.levels.length ? s.levels[this.getLevel()].mpcost[description.getMode()] : -1;
   };
 
   this.getCD = function() {

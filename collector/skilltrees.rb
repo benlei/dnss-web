@@ -137,7 +137,7 @@ def add_skill(jobs, uistring, skill, mode)
   cd = cd.to_i if cd == cd.to_i
   
   s["cd"][mode] = cd
-  s['mpcost'][mode] = skill['decreasesp'] / 10.0
+  s['mpcost'][mode] = skill['decreasesp']
   
   s['explanationparams'][mode] = skill['skillexplanationidparam'].to_s.split(',').map {|str| str.strip.message_format(uistring)}
   s['explanationid'][mode] = skill['skillexplanationid']
