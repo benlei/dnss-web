@@ -39,14 +39,19 @@ FROM jobtable
 WHERE _service is TRUE
 QUERY
 
+character_union = ["SELECT * FROM skilltable_character90passive"]
 conn.exec(query).each_dnt do |job|
   job['jobname'] = uistring[job['jobname']]
   job['skills'] = Hash.new
   job['messages'] = Hash.new    # prepare to store messages needed for skill descriptions
   jobs[job['id']] = job
   jobs[job['id']].delete('id')
+  if job['advancement'] == 0
+    character_union << "SELECT * FROM skilltable_character#{job['englishname']}"
+  end
 end
 
+character_union = character_union.join(" UNION ")
 
 ##############################################################################
 # get all the skills of all classes
@@ -60,7 +65,7 @@ SELECT s._id,
        _parentskillid1, _parentskillid2,
        _needparentskilllevel1, _needparentskilllevel2,
        _needbasicsp1, _needfirstsp1
-FROM skilltable_character s
+FROM (#{character_union}) s
 INNER JOIN skilltreetable
 ON s._id = _skilltableid
 ORDER BY _needjob ASC
@@ -103,7 +108,7 @@ SELECT _needjob,
        _decreasesp,
        _delaytime
 FROM %s c
-INNER JOIN skilltable_character s
+INNER JOIN (#{character_union}) s
   ON _skillindex = s._id
 INNER JOIN jobtable j
   ON j._id = _needjob

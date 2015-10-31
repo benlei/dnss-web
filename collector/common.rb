@@ -84,7 +84,7 @@ def createPGConn()
 end
 
 def load_uistring()
-  uistring = "C:/Users/Ben/IdeaProjects/dnss-static/resource/uistring/uistring.xml"
+  uistring = "/home/blei/resource/uistring.xml"
   doc = Nokogiri::XML(File.open(uistring))
   list = doc.xpath("//messages/message")
   h = Hash.new

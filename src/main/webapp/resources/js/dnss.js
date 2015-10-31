@@ -40,7 +40,7 @@ var dnss = new (function DNSS() {
 
   function changeCapOrReset() {
     var newCap = parseInt($("#cap").val());
-    if (newCap < 1 || newCap > 80 || newCap != newCap) {
+    if (newCap < 1 || newCap > 90 || newCap != newCap) {
       alert($("#cap").val() + " is not a valid level cap.");
       $("#cap").val(properties.cap);
       return;
@@ -63,7 +63,7 @@ var dnss = new (function DNSS() {
 
       // reset max required level
       for (var i = 0; i < 3; i++) {
-        properties.required_level[i] = i == 1 ? Math.min(70, newCap): newCap;
+        properties.required_level[i] = newCap;
       }
 
       properties.sp = json.sp;

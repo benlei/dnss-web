@@ -1,6 +1,6 @@
 require 'fileutils'
 
-resource = "/cygdrive/c/Users/Ben/IdeaProjects/dnss-static"
+resource = "/home/blei"
 
 pwd = Dir.pwd
 

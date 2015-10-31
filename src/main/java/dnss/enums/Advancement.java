@@ -1,9 +1,9 @@
 package dnss.enums;
 
 public enum Advancement {
-    PRIMARY    (0, 80),
-    SECONDARY  (1, 70),
-    TERTIARY   (2, 80);
+    PRIMARY    (0, 90),
+    SECONDARY  (1, 90),
+    TERTIARY   (2, 90);
 
     public final int advancement;
     public final int maxRequiredSkillLevel;

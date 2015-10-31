@@ -24,6 +24,7 @@ query = <<sql_query
   ORDER BY _id ASC
 sql_query
 
+character_union = ["SELECT * FROM skilltable_character90passive"]
 conn.exec(query).each_dnt do |job|
   job['jobname'] = uistring[job['jobname']]
   job['skilltree'] = Array.new
@@ -31,7 +32,13 @@ conn.exec(query).each_dnt do |job|
   job['spRatio'] = [job['maxspjob0'], job['maxspjob1'], job['maxspjob2']]
   ['maxspjob0', 'maxspjob1', 'maxspjob2'].each {|a| job.delete(a)}
   jobs[job['id']].delete('id')
+
+  if job['advancement'] == 0
+    character_union << "SELECT * FROM skilltable_character#{job['identifier']}"
+  end
 end
+
+character_union = character_union.join(" UNION ")
 
 ##############################################################################
 # get the skill tree for each class
@@ -41,7 +48,7 @@ query = <<sql_query
          _skilltableid as skillid,
          _treeslotindex
   FROM skilltreetable
-  INNER JOIN skilltable_character skills
+  INNER JOIN (#{character_union}) skills
     ON _skilltableid = skills._id
 sql_query
 conn.exec(query).each_dnt do |tree|

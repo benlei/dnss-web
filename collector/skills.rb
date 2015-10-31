@@ -34,6 +34,19 @@ rs.each do |r|
 end
 
 query = <<QUERY
+SELECT LOWER(_englishname) as englishname
+FROM jobtable
+WHERE _service is TRUE AND _jobnumber = 0
+QUERY
+
+character_union = ["SELECT * FROM skilltable_character90passive"]
+conn.exec(query).each_dnt do |job|
+  character_union << "SELECT * FROM skilltable_character#{job['englishname']}"
+end
+
+character_union = character_union.join(" UNION ")
+
+query = <<QUERY
 SELECT _needjob,
        _skillindex as id,
        _skilllevel,
@@ -41,7 +54,7 @@ SELECT _needjob,
        _needskillpoint as spcost,
        _iconimageindex
 FROM %s
-INNER JOIN skilltable_character skills
+INNER JOIN (#{character_union}) skills
   ON _skillindex = skills._id
 INNER JOIN skilltreetable t
   ON _skillindex = _skilltableid

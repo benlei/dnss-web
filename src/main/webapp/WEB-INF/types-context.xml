@@ -80,4 +80,6 @@
       </map>
     </constructor-arg>
   </bean>
+  <bean id="machina_weapons" class="java.util.HashMap" scope="singleton">
+  </bean>
 </beans>

@@ -11,7 +11,18 @@ public class DragonNest {
         try (InputStream in = DragonNest.class.getClassLoader().getResourceAsStream("version.cfg")) {
             byte[] b = new byte[in.available()];
             in.read(b);
-            version = Integer.parseInt(new String(b).trim().substring(VERSION_PREFIX.length()));
+            String cfg = new String(b);
+            int i = 0, j = 0;
+            while (! Character.isDigit(cfg.charAt(i))) {
+                i++;
+                j++;
+            }
+
+            while (Character.isDigit(cfg.charAt(j))) {
+                j++;
+            }
+
+            version = Integer.parseInt(cfg.substring(i, j));
         }
     }
 
