@@ -61,7 +61,7 @@
 	<aside id="sidebar-2">
 		<input type="button" id="mode" value="pve"/><h2 id="skill-name"></h2>
 		<div id="skill-level" class="y">Skill Lv.: <span class="w"></span></div>
-		<div id="skill-mp" class="y">Fee MP: <span class="w" data-after="of base MP"></span></div>
+		<div id="skill-mp" class="y">Fee MP: <span class="w" data-after="of MP"></span></div>
 		<div id="skill-required-weapon" class="y">Required Weapon(s): <span class="w"></span></div>
 		<div id="skill-type" class="y">Skill Type: <span class="w"></span></div>
 		<div id="skill-cd" class="y">Cooldown: <span class="w" data-after="sec"></span></div>
