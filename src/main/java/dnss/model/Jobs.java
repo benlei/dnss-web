@@ -92,12 +92,6 @@ public class Jobs implements Iterable<Job> {
 
     public void setLevel(int level) {
         this.level = level;
-
-        for (Job job : this) {
-            if (job != null) {
-                job.setMaxSkillRequiredLevel(level);
-            }
-        }
     }
 
     public void setJob(Job job) {

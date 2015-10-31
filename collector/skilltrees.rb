@@ -64,7 +64,8 @@ SELECT s._id,
        _needweapontype1, _needweapontype2,
        _parentskillid1, _parentskillid2,
        _needparentskilllevel1, _needparentskilllevel2,
-       _needbasicsp1, _needfirstsp1
+       _needbasicsp1, _needfirstsp1,
+       _spmaxlevel
 FROM (#{character_union}) s
 INNER JOIN skilltreetable
 ON s._id = _skilltableid

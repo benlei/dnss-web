@@ -53,7 +53,7 @@ function Skill(id, s, e) {
   this.getMaxLevel = function() {
     if (s.max_level === undefined) {
       for (var i = s.levels.length - 1; -1 < i; i--) {
-        if (s.levels[i].required_level <= properties.required_level[this.getAdvancement()]) {
+        if (s.levels[i].required_level <= properties.cap) {
           s.max_level = i+1;
           break;
         }
@@ -63,7 +63,7 @@ function Skill(id, s, e) {
       }
     }
 
-    return s.max_level;
+    return Math.min(s.max_level, s.levels.length - s.spmaxlevel);
   };
 
   this.getNextLevel = function() {

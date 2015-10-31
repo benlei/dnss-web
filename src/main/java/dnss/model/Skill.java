@@ -6,7 +6,7 @@ public class Skill {
     private int icon;
     private Level[] levels;
     private int level;
-    private int maxLevel;
+    private int spMaxLevel;
 
     public int getId() {
         return id;
@@ -45,29 +45,15 @@ public class Skill {
     }
 
     public int getMaxLevel() {
-        return maxLevel;
+        return levels.length - spMaxLevel;
     }
 
-    public void setMaxLevelForCap(int cap) {
-        Level max = null;
-        int i;
-        for (i = 0; i < levels.length; i++) {
-            if (levels[i].getRequiredJobLevel() <= cap) {
-                max = levels[i];
-            } else {
-                break;
-            }
-        }
+    public int getSpMaxLevel() {
+        return spMaxLevel;
+    }
 
-        if (max != null) {
-            maxLevel = max.getLevel();
-
-            // Fix SP cost
-            for (; i < levels.length; i++ ) {
-                levels[i].setSpCost(0);
-                levels[i].setTotalSPCost(max.getTotalSPCost());
-            }
-        }
+    public void setSpMaxLevel(int spMaxLevel) {
+        this.spMaxLevel = spMaxLevel;
     }
 
     public Level getLevel(int level) {

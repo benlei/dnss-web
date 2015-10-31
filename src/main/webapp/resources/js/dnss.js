@@ -40,7 +40,7 @@ var dnss = new (function DNSS() {
 
   function changeCapOrReset() {
     var newCap = parseInt($("#cap").val());
-    if (newCap < 1 || newCap > 90 || newCap != newCap) {
+    if (newCap < 1 || newCap > properties.max_cap || newCap != newCap) {
       alert($("#cap").val() + " is not a valid level cap.");
       $("#cap").val(properties.cap);
       return;
@@ -60,11 +60,6 @@ var dnss = new (function DNSS() {
       var date = new Date();
       date.setTime(date.getTime()+1800000);
       document.cookie = "mru_level=" + newCap + ";path=/;expires=" + date.toUTCString();
-
-      // reset max required level
-      for (var i = 0; i < 3; i++) {
-        properties.required_level[i] = newCap;
-      }
 
       properties.sp = json.sp;
 

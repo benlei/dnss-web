@@ -52,7 +52,8 @@ SELECT _needjob,
        _skilllevel,
        _levellimit as required_level,
        _needskillpoint as spcost,
-       _iconimageindex
+       _iconimageindex,
+       _spmaxlevel
 FROM %s
 INNER JOIN (#{character_union}) skills
   ON _skillindex = skills._id
@@ -78,6 +79,7 @@ tables.each do |table|
       skills[r["id"]]["id"] = r["id"]
       skills[r["id"]]["image"] = "%02d" % ((r["iconimageindex"] / 200) + 1)
       skills[r["id"]]["icon"] = r["iconimageindex"] % 200
+      skills[r["id"]]["spmaxlevel"] = r["spmaxlevel"]
       skills[r["id"]]["levels"] = Array.new
     end
 
@@ -99,6 +101,7 @@ builder = Nokogiri::XML::Builder.new do |xml|
         xml.property("name" => "id", "value" => id)
         xml.property("name" => "sprite", "value" => skill["image"])
         xml.property("name" => "icon", "value" => skill["icon"])
+        xml.property("name" => "spMaxLevel", "value" => skill["spmaxlevel"])
         total = 0
         xml.property("name" => "levels") do
           xml.list do

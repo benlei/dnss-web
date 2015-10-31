@@ -1,15 +1,13 @@
 package dnss.enums;
 
 public enum Advancement {
-    PRIMARY    (0, 90),
-    SECONDARY  (1, 90),
-    TERTIARY   (2, 90);
+    PRIMARY    (0),
+    SECONDARY  (1),
+    TERTIARY   (2);
 
     public final int advancement;
-    public final int maxRequiredSkillLevel;
-    Advancement(int job, int maxRequiredSkillLevel) {
+    Advancement(int job) {
         this.advancement = job;
-        this.maxRequiredSkillLevel = maxRequiredSkillLevel;
     }
 
     public static Advancement getAdvancement(int job) {

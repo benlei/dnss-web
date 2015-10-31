@@ -8,15 +8,16 @@ import dnss.web.Cookies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Cookie;
 import java.util.List;
-import java.util.Random;
 
 import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
 
@@ -61,6 +62,7 @@ public class JobController {
 
         // for prefixing stuff
         model.addAttribute("time", DragonNest.getVersion());
+        model.addAttribute("max_cap", sp.getLatestCap());
 
         // the jobs
         model.addAttribute("jobs", jobs);

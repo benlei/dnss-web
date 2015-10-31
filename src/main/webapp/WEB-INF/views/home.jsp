@@ -86,11 +86,11 @@
 <script src="/dnss.js?${time}"></script>
 <script type="text/javascript">
 var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
-	required_level:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSkillRequiredLevel}<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	sp:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${jobs.maxSP}],
 	skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
-	cap: ${jobs.level}};
+	cap: ${jobs.level},
+	max_cap: ${max_cap}};
 dnss.start(${time});
 </script>
 </html>
