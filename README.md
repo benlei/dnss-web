@@ -67,5 +67,5 @@ In an ideal scenario where everything is right, all that needs to be done is:
 # Future
 At some point I do want to decomission work on this particular repo. The future I am envisioning is:
  - <https://github.com/ben-lei/dncli> - a single toolset that uses JavaScript to gather and compile data.
- - <https://github.com/ben-lei/dnss-nodejs> - a NodeJS implementation for DNSS. DNSS isn't computation hungry is actually a really simple app. Writing a Java webapp was overkill for this project. But it's already here, so I'll leave it here.
+ - <https://github.com/ben-lei/dnss-nodejs> - a NodeJS implementation for DNSS. DNSS isn't computation hungry. It is actually a really simple app. Writing a Java webapp was overkill for this project. But it's already here, so I'll leave it here.
 
