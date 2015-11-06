@@ -32,6 +32,7 @@ Here is my recommendation about how to handle data extraction/updating your own 
    - Ruby Nokogiri Gem
    - Ruby pg Gem
    - Ruby inifile Gem
+   - Ruby foreman Gem
    - ImageMagick
    - pngcrush
 
