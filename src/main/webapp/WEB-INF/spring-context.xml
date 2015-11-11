@@ -440,24 +440,24 @@
         </list>
         <list value-type="dnss.model.Skill">
           <ref bean="skill_7712"/>
-          <ref bean="skill_7716"/>
+          <null/>
           <ref bean="skill_7705"/>
           <ref bean="skill_7706"/>
         </list>
         <list value-type="dnss.model.Skill">
           <ref bean="skill_7710"/>
-          <ref bean="skill_7714"/>
+          <ref bean="skill_7716"/>
           <ref bean="skill_7711"/>
           <ref bean="skill_7707"/>
         </list>
         <list value-type="dnss.model.Skill">
           <ref bean="skill_7709"/>
-          <ref bean="skill_7721"/>
+          <ref bean="skill_7714"/>
           <ref bean="skill_7713"/>
           <ref bean="skill_7708"/>
         </list>
         <list value-type="dnss.model.Skill">
-          <null/>
+          <ref bean="skill_7721"/>
           <ref bean="skill_7717"/>
           <ref bean="skill_7718"/>
           <ref bean="skill_7719"/>
@@ -3121,6 +3121,112 @@
       </list>
     </property>
   </bean>
+  <bean id="job_hunter" class="dnss.model.Job" scope="prototype">
+    <property name="name" value="헌터"/>
+    <property name="identifier" value="hunter"/>
+    <property name="advancement" value="1"/>
+    <property name="parent" ref="job_archer"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.0</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1611"/>
+          <ref bean="skill_1602"/>
+          <ref bean="skill_1603"/>
+          <ref bean="skill_1604"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1605"/>
+          <ref bean="skill_1606"/>
+          <ref bean="skill_1609"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1608"/>
+          <null/>
+          <ref bean="skill_1613"/>
+          <ref bean="skill_1607"/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1601"/>
+          <ref bean="skill_1612"/>
+          <ref bean="skill_1620"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1615"/>
+          <ref bean="skill_1616"/>
+          <ref bean="skill_1619"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1618"/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
+  <bean id="job_silverhunter" class="dnss.model.Job" scope="prototype">
+    <property name="name" value="실버헌터"/>
+    <property name="identifier" value="silverhunter"/>
+    <property name="advancement" value="2"/>
+    <property name="parent" ref="job_hunter"/>
+    <property name="spRatio">
+      <list>
+        <value>0.625</value>
+        <value>0.645</value>
+        <value>0.625</value>
+      </list>
+    </property>
+    <property name="skillTree">
+      <list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1701"/>
+          <ref bean="skill_1702"/>
+          <null/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1703"/>
+          <ref bean="skill_1704"/>
+          <ref bean="skill_1705"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <ref bean="skill_1706"/>
+          <ref bean="skill_1707"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1708"/>
+          <ref bean="skill_1709"/>
+          <ref bean="skill_1710"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <ref bean="skill_1711"/>
+          <ref bean="skill_1712"/>
+          <ref bean="skill_1713"/>
+          <null/>
+        </list>
+        <list value-type="dnss.model.Skill">
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+        </list>
+      </list>
+    </property>
+  </bean>
   <bean id="jobs_gladiator" class="dnss.model.Jobs" scope="prototype">
     <property name="primary" ref="job_warrior"/>
     <property name="secondary" ref="job_swordmaster"/>
@@ -3286,6 +3392,11 @@
     <property name="secondary" ref="job_patrona"/>
     <property name="tertiary" ref="job_ruina"/>
   </bean>
+  <bean id="jobs_silverhunter" class="dnss.model.Jobs" scope="prototype">
+    <property name="primary" ref="job_archer"/>
+    <property name="secondary" ref="job_hunter"/>
+    <property name="tertiary" ref="job_silverhunter"/>
+  </bean>
   <util:list id="all_jobs_primary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_warrior"/>
     <ref bean="job_archer"/>
@@ -3315,6 +3426,7 @@
     <ref bean="job_piercer"/>
     <ref bean="job_avenger"/>
     <ref bean="job_patrona"/>
+    <ref bean="job_hunter"/>
   </util:list>
   <util:list id="all_jobs_tertiary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_gladiator"/>
@@ -3350,5 +3462,6 @@
     <ref bean="job_darkavenger"/>
     <ref bean="job_defensio"/>
     <ref bean="job_ruina"/>
+    <ref bean="job_silverhunter"/>
   </util:list>
 </beans>

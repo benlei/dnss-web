@@ -28,7 +28,7 @@ namespace :collect do
       FileUtils.mkpath images_path
     elsif
       Dir[images_path + "/*.png"].each do |png|
-        FileUtils.rm(png)
+#        FileUtils.rm(png)
       end
     end
       
