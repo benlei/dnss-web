@@ -1,6 +1,6 @@
 require 'fileutils'
 
-resource = "/home/blei"
+resource = "/home/blei/stuff"
 
 pwd = Dir.pwd
 
@@ -11,7 +11,7 @@ namespace :collect do
     ruby "collector/jobs.rb"
     ruby "collector/skills.rb"
     ruby "collector/levels.rb"
-    FileUtils.cp("#{resource}/resource/version.cfg", Dir.pwd + "/src/main/resources/version.cfg")
+#    FileUtils.cp("#{resource}/resource/version.cfg", Dir.pwd + "/src/main/resources/version.cfg")
   end
   
   task :json do

@@ -13,7 +13,7 @@ uistring = load_uistring()
 ##############################################################################
 jobs = Hash.new
 query = <<sql_query
-  SELECT _id,
+  SELECT _primaryid as _id,
          _jobname,
          LOWER(_englishname) as identifier,
          _jobnumber as advancement,
@@ -49,7 +49,7 @@ query = <<sql_query
          _treeslotindex
   FROM skilltreetable
   INNER JOIN (#{character_union}) skills
-    ON _skilltableid = skills._id
+    ON _skilltableid = skills._primaryid
 sql_query
 conn.exec(query).each_dnt do |tree|
   job = jobs[tree['needjob']]

@@ -30,7 +30,7 @@ end
 #   jobnumber => 0 = base, 1 = first advancement, etc.
 ##############################################################################
 query = <<QUERY
-SELECT _id,
+SELECT _primaryid as _id,
        _jobname,
        LOWER(_englishname) as englishname,
        _parentjob,
@@ -57,7 +57,7 @@ character_union = character_union.join(" UNION ")
 # get all the skills of all classes
 ##############################################################################
 query = <<sql_query
-SELECT s._id,
+SELECT s._primaryid as id,
        _nameid,
        _needjob,
        _skilltype as type,
@@ -68,7 +68,7 @@ SELECT s._id,
        _spmaxlevel
 FROM (#{character_union}) s
 INNER JOIN skilltreetable
-ON s._id = _skilltableid
+ON s._primaryid = _skilltableid
 ORDER BY _needjob ASC
 sql_query
 
@@ -110,9 +110,9 @@ SELECT _needjob,
        _delaytime
 FROM %s c
 INNER JOIN (#{character_union}) s
-  ON _skillindex = s._id
+  ON _skillindex = s._primaryid
 INNER JOIN jobtable j
-  ON j._id = _needjob
+  ON j._primaryid = _needjob
 INNER JOIN skilltreetable
   ON _skillindex = _skilltableid
 WHERE _service IS TRUE

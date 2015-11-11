@@ -14,10 +14,10 @@ LEVEL_CAP = 90
 sp_by_level = Array.new
 sp_by_level << 0
 query = <<sql_query
-  SELECT _id, _skillpoint
+  SELECT _primaryid as _id, _skillpoint
   FROM playerleveltable
-  WHERE _id <= %d
-  ORDER BY _id ASC
+  WHERE _primaryid <= %d
+  ORDER BY _primaryid ASC
 sql_query
 
 conn.exec(query % LEVEL_CAP).each_dnt do |level|

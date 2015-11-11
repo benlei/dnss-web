@@ -56,11 +56,11 @@ SELECT _needjob,
        _spmaxlevel
 FROM %s
 INNER JOIN (#{character_union}) skills
-  ON _skillindex = skills._id
+  ON _skillindex = skills._primaryid
 INNER JOIN skilltreetable t
   ON _skillindex = _skilltableid
 INNER JOIN jobtable j
-  ON _needjob = j._id
+  ON _needjob = j._primaryid
 WHERE _applytype = %d
   AND _service IS TRUE
   AND _skilllevel <= _maxlevel
