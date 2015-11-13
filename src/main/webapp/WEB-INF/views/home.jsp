@@ -60,10 +60,10 @@
 	<aside id="sidebar-2">
 		<input type="button" id="mode" value="pve"/><h2 id="skill-name"></h2>
 		<div id="skill-level" class="y">제한스킬 Lv.: <span class="w"></span></div>
-		<div id="skill-mp" class="y">수수료 MP: <span class="w" data-after="of MP"></span></div>
+		<div id="skill-mp" class="y">수수료 MP: <span class="w"></span></div>
 		<div id="skill-required-weapon" class="y">필요 무기: <span class="w"></span></div>
 		<div id="skill-type" class="y">스킬발동: <span class="w"></span></div>
-		<div id="skill-cd" class="y">재사용시간: <span class="w" data-after="sec"></span></div>
+		<div id="skill-cd" class="y">재사용시간: <span class="w" data-after="초"></span></div>
 		<div id="skill-total-sp" class="y">사용한 스킬 포인트: <span class="w"></span></div>
 		<div class="separator"></div>
 		<div class="y">스킬 레벨업 조건:</div>
