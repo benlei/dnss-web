@@ -1,8 +1,7 @@
 <%@page pageEncoding="UTF-8" %><!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
-<title>${jobs.tertiary.name} - Dragon Nest Skill Simulator</title>
+<title>${jobs.tertiary.name} - 드래곤네스트 스킬 시뮬레이터</title>
 <meta charset="utf-8">
-<meta name="description" content="Simulate and share your Dragon Nest skill builds using the Dragon Nest Skill Simulator (North America)!">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 <link href="/dnss.css?${time}" rel="stylesheet" type="text/css"/>
 <body>
@@ -17,14 +16,14 @@
 		</ul>
 	</nav>
 	<aside id="build-box">
-		<div id="build-text">Build URL:</div>
+		<div id="build-text">링크:</div>
 		<input type="text" id="build"/>
 		<div id="download">
 			<ul>
-				<li>Image
+				<li>그림
 					<ul>
-						<li><a href="javascript:download.skillTrees('h')">Landscape (Horizontal)</a></li>
-						<li><a href="javascript:download.skillTrees('v')">Portrait (Vertical)</a></li>
+						<li><a href="javascript:download.skillTrees('h')">경치</a></li>
+						<li><a href="javascript:download.skillTrees('v')">초상화</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -35,17 +34,17 @@
 			<li id="job-sp-${loop.index}"<c:if test="${loop.first}"> class="active"</c:if>><input type="checkbox" value="${job.identifier}" checked>${job.name}<div class="sp">0/${job.maxSP}</div></li></c:forEach>
 		</ul>
 		<ul id="total-sp">
-			<li>Total SP<div class="sp">${jobs.maxSP}/0/${jobs.maxSP}</div></li>
+			<li>남은 포인트<div class="sp">${jobs.maxSP}/0/${jobs.maxSP}</div></li>
 		</ul>
 		<div id="levelcap">
-			Level Cap
+			한계 레벨
 			<div id="levelinputs">
 				<input type="text" id="cap" value="${jobs.level}"/>
 				<input type="button" id="capchanger" value="Reset"/>
 			</div>
 		</div>
 		<div id="searchbox">
-			Search
+			수색
 			<input type="search" id="search"/>
 		</div>
 	</aside>
@@ -60,23 +59,23 @@
 	</section>
 	<aside id="sidebar-2">
 		<input type="button" id="mode" value="pve"/><h2 id="skill-name"></h2>
-		<div id="skill-level" class="y">Skill Lv.: <span class="w"></span></div>
-		<div id="skill-mp" class="y">Fee MP: <span class="w" data-after="of MP"></span></div>
-		<div id="skill-required-weapon" class="y">Required Weapon(s): <span class="w"></span></div>
-		<div id="skill-type" class="y">Skill Type: <span class="w"></span></div>
-		<div id="skill-cd" class="y">Cooldown: <span class="w" data-after="sec"></span></div>
-		<div id="skill-total-sp" class="y">Total SP: <span class="w"></span></div>
+		<div id="skill-level" class="y">제한스킬 Lv.: <span class="w"></span></div>
+		<div id="skill-mp" class="y">수수료 MP: <span class="w" data-after="of MP"></span></div>
+		<div id="skill-required-weapon" class="y">필요 무기: <span class="w"></span></div>
+		<div id="skill-type" class="y">스킬발동: <span class="w"></span></div>
+		<div id="skill-cd" class="y">재사용시간: <span class="w" data-after="sec"></span></div>
+		<div id="skill-total-sp" class="y">사용한 스킬 포인트: <span class="w"></span></div>
 		<div class="separator"></div>
-		<div class="y">Level Up Requirements:</div>
-		<div id="skill-required-level">Character Level <span class="w"></span></div>
+		<div class="y">스킬 레벨업 조건:</div>
+		<div id="skill-required-level">캐릭터 레벨 <span class="w"></span></div>
 		<div id="skills-required"></div>
 		<div id="sp-required"></div>
-		<div id="skill-sp">SP <span class="w"></span></div>
+		<div id="skill-sp">필요 SP <span class="w"></span></div>
 		<div class="separator"></div>
-		<div id="skill-description" class="y">Skill Description:
+		<div id="skill-description" class="y">스킬 효과:
 			<div class="d"></div>
 		</div>
-		<div id="next-description" class="y">Next Description:
+		<div id="next-description" class="y">다음 레벨 효과:
 			<div class="d"></div>
 		</div>
 	</aside>

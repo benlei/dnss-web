@@ -182,7 +182,7 @@ function Skill(id, s, e) {
     var list = [];
 
     for (var i in s.need_sp) {
-      var str = properties.jobs[i].name + " SP Total " + s.need_sp[i] + " or above";
+      var str = properties.jobs[i].name + " SP 합계 " + s.need_sp[i] + " 이상";
       if (this.getLevel()) {
         if (! nSP[i]) {
           list.push("#r" + str + "#w");

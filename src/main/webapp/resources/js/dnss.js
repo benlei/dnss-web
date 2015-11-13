@@ -41,7 +41,7 @@ var dnss = new (function DNSS() {
   function changeCapOrReset() {
     var newCap = parseInt($("#cap").val());
     if (newCap < 1 || newCap > properties.max_cap || newCap != newCap) {
-      alert($("#cap").val() + " is not a valid level cap.");
+//      alert($("#cap").val() + "????");
       $("#cap").val(properties.cap);
       return;
     }
@@ -56,7 +56,7 @@ var dnss = new (function DNSS() {
 
     $.getJSON("/api/level/" + newCap, function(json) {
       properties.cap = newCap;
-      $("#capchanger").val("Reset");
+      $("#capchanger").val("다시 놓기");
       var date = new Date();
       date.setTime(date.getTime()+1800000);
       document.cookie = "mru_level=" + newCap + ";path=/;expires=" + date.toUTCString();
@@ -170,7 +170,7 @@ var dnss = new (function DNSS() {
   // "constructor"
   $("#capchanger").click(changeCapOrReset);
   $("#cap").on("input", function(){
-    $("#capchanger").val($(this).val() == properties.cap ? "Reset" : "Change");
+    $("#capchanger").val($(this).val() == properties.cap ? "다시 놓기" : "변화");
   });
 
   $(document).keydown(toggleFullScreen);
