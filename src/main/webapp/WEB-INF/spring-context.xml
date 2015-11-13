@@ -4,7 +4,7 @@
   <import resource="types-context.xml"/>
   <import resource="skills-context.xml"/>
   <bean id="job_warrior" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="워리어"/>
+    <property name="name" value="Warrior"/>
     <property name="identifier" value="warrior"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -56,7 +56,7 @@
     </property>
   </bean>
   <bean id="job_archer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="아처"/>
+    <property name="name" value="Archer"/>
     <property name="identifier" value="archer"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -108,7 +108,7 @@
     </property>
   </bean>
   <bean id="job_soceress" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="소서리스"/>
+    <property name="name" value="Sorceress"/>
     <property name="identifier" value="soceress"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -160,7 +160,7 @@
     </property>
   </bean>
   <bean id="job_cleric" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="클레릭"/>
+    <property name="name" value="Cleric"/>
     <property name="identifier" value="cleric"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -212,7 +212,7 @@
     </property>
   </bean>
   <bean id="job_academic" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="아카데믹"/>
+    <property name="name" value="Tinkerer"/>
     <property name="identifier" value="academic"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -264,7 +264,7 @@
     </property>
   </bean>
   <bean id="job_kali" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="칼리"/>
+    <property name="name" value="Kali"/>
     <property name="identifier" value="kali"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -316,7 +316,7 @@
     </property>
   </bean>
   <bean id="job_assassin" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="어쌔신"/>
+    <property name="name" value="Assassin"/>
     <property name="identifier" value="assassin"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -368,7 +368,7 @@
     </property>
   </bean>
   <bean id="job_lencea" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="렌시아"/>
+    <property name="name" value="Lencea"/>
     <property name="identifier" value="lencea"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -419,60 +419,8 @@
       </list>
     </property>
   </bean>
-  <bean id="job_machina" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="마키나"/>
-    <property name="identifier" value="machina"/>
-    <property name="advancement" value="0"/>
-    <property name="spRatio">
-      <list>
-        <value>1.0</value>
-        <value>0.0</value>
-        <value>0.0</value>
-      </list>
-    </property>
-    <property name="skillTree">
-      <list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7701"/>
-          <ref bean="skill_7702"/>
-          <ref bean="skill_7704"/>
-          <ref bean="skill_7703"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7712"/>
-          <null/>
-          <ref bean="skill_7705"/>
-          <ref bean="skill_7706"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7710"/>
-          <ref bean="skill_7716"/>
-          <ref bean="skill_7711"/>
-          <ref bean="skill_7707"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7709"/>
-          <ref bean="skill_7714"/>
-          <ref bean="skill_7713"/>
-          <ref bean="skill_7708"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7721"/>
-          <ref bean="skill_7717"/>
-          <ref bean="skill_7718"/>
-          <ref bean="skill_7719"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7715"/>
-          <null/>
-          <null/>
-          <ref bean="skill_7720"/>
-        </list>
-      </list>
-    </property>
-  </bean>
   <bean id="job_swordmaster" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="소드마스터"/>
+    <property name="name" value="Swordsman"/>
     <property name="identifier" value="swordmaster"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_warrior"/>
@@ -525,7 +473,7 @@
     </property>
   </bean>
   <bean id="job_mercenary" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="머셔너리"/>
+    <property name="name" value="Mercenary"/>
     <property name="identifier" value="mercenary"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_warrior"/>
@@ -578,7 +526,7 @@
     </property>
   </bean>
   <bean id="job_bowmaster" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="보우마스터"/>
+    <property name="name" value="Sharpshooter"/>
     <property name="identifier" value="bowmaster"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_archer"/>
@@ -631,7 +579,7 @@
     </property>
   </bean>
   <bean id="job_acrobat" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="아크로벳"/>
+    <property name="name" value="Acrobat"/>
     <property name="identifier" value="acrobat"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_archer"/>
@@ -684,7 +632,7 @@
     </property>
   </bean>
   <bean id="job_elementallord" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="엘리멘탈로드"/>
+    <property name="name" value="Elementalist"/>
     <property name="identifier" value="elementallord"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_soceress"/>
@@ -737,7 +685,7 @@
     </property>
   </bean>
   <bean id="job_forceuser" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="포스유저"/>
+    <property name="name" value="Mystic"/>
     <property name="identifier" value="forceuser"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_soceress"/>
@@ -790,7 +738,7 @@
     </property>
   </bean>
   <bean id="job_paladin" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="팔라딘"/>
+    <property name="name" value="Paladin"/>
     <property name="identifier" value="paladin"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_cleric"/>
@@ -843,7 +791,7 @@
     </property>
   </bean>
   <bean id="job_priest" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="프리스트"/>
+    <property name="name" value="Priest"/>
     <property name="identifier" value="priest"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_cleric"/>
@@ -896,7 +844,7 @@
     </property>
   </bean>
   <bean id="job_gladiator" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="글라디에이터"/>
+    <property name="name" value="Gladiator"/>
     <property name="identifier" value="gladiator"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_swordmaster"/>
@@ -949,7 +897,7 @@
     </property>
   </bean>
   <bean id="job_moonlord" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="문로드"/>
+    <property name="name" value="Lunar Knight"/>
     <property name="identifier" value="moonlord"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_swordmaster"/>
@@ -1002,7 +950,7 @@
     </property>
   </bean>
   <bean id="job_barbarian" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="바바리안"/>
+    <property name="name" value="Barbarian"/>
     <property name="identifier" value="barbarian"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_mercenary"/>
@@ -1055,7 +1003,7 @@
     </property>
   </bean>
   <bean id="job_destroyer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="디스트로이어"/>
+    <property name="name" value="Destroyer"/>
     <property name="identifier" value="destroyer"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_mercenary"/>
@@ -1108,7 +1056,7 @@
     </property>
   </bean>
   <bean id="job_sniper" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="스나이퍼"/>
+    <property name="name" value="Sniper"/>
     <property name="identifier" value="sniper"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_bowmaster"/>
@@ -1161,7 +1109,7 @@
     </property>
   </bean>
   <bean id="job_artillery" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="아틸러리"/>
+    <property name="name" value="Warden"/>
     <property name="identifier" value="artillery"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_bowmaster"/>
@@ -1214,7 +1162,7 @@
     </property>
   </bean>
   <bean id="job_tempest" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="템페스트"/>
+    <property name="name" value="Tempest"/>
     <property name="identifier" value="tempest"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_acrobat"/>
@@ -1267,7 +1215,7 @@
     </property>
   </bean>
   <bean id="job_windwalker" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="윈드워커"/>
+    <property name="name" value="Windwalker"/>
     <property name="identifier" value="windwalker"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_acrobat"/>
@@ -1320,7 +1268,7 @@
     </property>
   </bean>
   <bean id="job_saleana" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="셀레아나"/>
+    <property name="name" value="Pyromancer"/>
     <property name="identifier" value="saleana"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_elementallord"/>
@@ -1373,7 +1321,7 @@
     </property>
   </bean>
   <bean id="job_elestra" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="엘레스트라"/>
+    <property name="name" value="Ice Witch"/>
     <property name="identifier" value="elestra"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_elementallord"/>
@@ -1426,7 +1374,7 @@
     </property>
   </bean>
   <bean id="job_smasher" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="스매셔"/>
+    <property name="name" value="War Mage"/>
     <property name="identifier" value="smasher"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_forceuser"/>
@@ -1479,7 +1427,7 @@
     </property>
   </bean>
   <bean id="job_majesty" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="마제스티"/>
+    <property name="name" value="Chaos Mage"/>
     <property name="identifier" value="majesty"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_forceuser"/>
@@ -1532,7 +1480,7 @@
     </property>
   </bean>
   <bean id="job_guardian" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="가디언"/>
+    <property name="name" value="Guardian"/>
     <property name="identifier" value="guardian"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_paladin"/>
@@ -1585,7 +1533,7 @@
     </property>
   </bean>
   <bean id="job_crusades" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="크루세이더"/>
+    <property name="name" value="Crusader"/>
     <property name="identifier" value="crusades"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_paladin"/>
@@ -1638,7 +1586,7 @@
     </property>
   </bean>
   <bean id="job_saint" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="세인트"/>
+    <property name="name" value="Saint"/>
     <property name="identifier" value="saint"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_priest"/>
@@ -1691,7 +1639,7 @@
     </property>
   </bean>
   <bean id="job_inquisitor" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="인퀴지터"/>
+    <property name="name" value="Inquisitor"/>
     <property name="identifier" value="inquisitor"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_priest"/>
@@ -1744,7 +1692,7 @@
     </property>
   </bean>
   <bean id="job_engineer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="엔지니어"/>
+    <property name="name" value="Engineer"/>
     <property name="identifier" value="engineer"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_academic"/>
@@ -1797,7 +1745,7 @@
     </property>
   </bean>
   <bean id="job_shootingstar" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="슈팅스타"/>
+    <property name="name" value="Shooting Star"/>
     <property name="identifier" value="shootingstar"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_engineer"/>
@@ -1850,7 +1798,7 @@
     </property>
   </bean>
   <bean id="job_gearmaster" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="기어마스터"/>
+    <property name="name" value="Gear Master"/>
     <property name="identifier" value="gearmaster"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_engineer"/>
@@ -1903,7 +1851,7 @@
     </property>
   </bean>
   <bean id="job_alchemist" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="알케미스트"/>
+    <property name="name" value="Alchemist"/>
     <property name="identifier" value="alchemist"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_academic"/>
@@ -1956,7 +1904,7 @@
     </property>
   </bean>
   <bean id="job_adept" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="어뎁트"/>
+    <property name="name" value="Adept"/>
     <property name="identifier" value="adept"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_alchemist"/>
@@ -2009,7 +1957,7 @@
     </property>
   </bean>
   <bean id="job_physician" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="피지션"/>
+    <property name="name" value="Physician"/>
     <property name="identifier" value="physician"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_alchemist"/>
@@ -2062,7 +2010,7 @@
     </property>
   </bean>
   <bean id="job_screamer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="스크리머"/>
+    <property name="name" value="Screamer"/>
     <property name="identifier" value="screamer"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_kali"/>
@@ -2115,7 +2063,7 @@
     </property>
   </bean>
   <bean id="job_darksummoner" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="다크서머너"/>
+    <property name="name" value="Dark Summoner"/>
     <property name="identifier" value="darksummoner"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_screamer"/>
@@ -2168,7 +2116,7 @@
     </property>
   </bean>
   <bean id="job_souleater" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="소울이터"/>
+    <property name="name" value="Soul Eater"/>
     <property name="identifier" value="souleater"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_screamer"/>
@@ -2221,7 +2169,7 @@
     </property>
   </bean>
   <bean id="job_dancer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="댄서"/>
+    <property name="name" value="Dancer"/>
     <property name="identifier" value="dancer"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_kali"/>
@@ -2274,7 +2222,7 @@
     </property>
   </bean>
   <bean id="job_bladedancer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="블레이드댄서"/>
+    <property name="name" value="Blade Dancer"/>
     <property name="identifier" value="bladedancer"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_dancer"/>
@@ -2327,7 +2275,7 @@
     </property>
   </bean>
   <bean id="job_spiritdancer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="스피릿댄서"/>
+    <property name="name" value="Spirit Dancer"/>
     <property name="identifier" value="spiritdancer"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_dancer"/>
@@ -2380,7 +2328,7 @@
     </property>
   </bean>
   <bean id="job_chaser" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="체이서"/>
+    <property name="name" value="Shinobi"/>
     <property name="identifier" value="chaser"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_assassin"/>
@@ -2433,7 +2381,7 @@
     </property>
   </bean>
   <bean id="job_ripper" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="리퍼"/>
+    <property name="name" value="Reaper"/>
     <property name="identifier" value="ripper"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_chaser"/>
@@ -2486,7 +2434,7 @@
     </property>
   </bean>
   <bean id="job_raven" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="레이븐"/>
+    <property name="name" value="Raven"/>
     <property name="identifier" value="raven"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_chaser"/>
@@ -2539,7 +2487,7 @@
     </property>
   </bean>
   <bean id="job_bringer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="브링어"/>
+    <property name="name" value="Taoist"/>
     <property name="identifier" value="bringer"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_assassin"/>
@@ -2592,7 +2540,7 @@
     </property>
   </bean>
   <bean id="job_lightfury" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="라이트퓨리"/>
+    <property name="name" value="Light Bringer"/>
     <property name="identifier" value="lightfury"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_bringer"/>
@@ -2645,7 +2593,7 @@
     </property>
   </bean>
   <bean id="job_abysswalker" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="어비스워커"/>
+    <property name="name" value="Abyss Walker"/>
     <property name="identifier" value="abysswalker"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_bringer"/>
@@ -2698,7 +2646,7 @@
     </property>
   </bean>
   <bean id="job_piercer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="피어서"/>
+    <property name="name" value="Lancer"/>
     <property name="identifier" value="piercer"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_lencea"/>
@@ -2751,7 +2699,7 @@
     </property>
   </bean>
   <bean id="job_flurry" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="플러리"/>
+    <property name="name" value="Dragoon"/>
     <property name="identifier" value="flurry"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_piercer"/>
@@ -2804,7 +2752,7 @@
     </property>
   </bean>
   <bean id="job_stingbreezer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="스팅브리저"/>
+    <property name="name" value="Valkyrie"/>
     <property name="identifier" value="stingbreezer"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_piercer"/>
@@ -2857,7 +2805,7 @@
     </property>
   </bean>
   <bean id="job_avenger" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="어벤저"/>
+    <property name="name" value="Avenger"/>
     <property name="identifier" value="avenger"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_warrior"/>
@@ -2910,7 +2858,7 @@
     </property>
   </bean>
   <bean id="job_darkavenger" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="다크어벤저"/>
+    <property name="name" value="Dark Avenger"/>
     <property name="identifier" value="darkavenger"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_avenger"/>
@@ -2951,271 +2899,6 @@
           <ref bean="skill_7531"/>
           <ref bean="skill_7527"/>
           <ref bean="skill_7528"/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <null/>
-          <null/>
-          <null/>
-          <null/>
-        </list>
-      </list>
-    </property>
-  </bean>
-  <bean id="job_patrona" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="패트로나"/>
-    <property name="identifier" value="patrona"/>
-    <property name="advancement" value="1"/>
-    <property name="parent" ref="job_machina"/>
-    <property name="spRatio">
-      <list>
-        <value>0.625</value>
-        <value>0.645</value>
-        <value>0.0</value>
-      </list>
-    </property>
-    <property name="skillTree">
-      <list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7726"/>
-          <ref bean="skill_7725"/>
-          <ref bean="skill_7736"/>
-          <ref bean="skill_7724"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7727"/>
-          <ref bean="skill_7728"/>
-          <ref bean="skill_7729"/>
-          <ref bean="skill_7740"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7732"/>
-          <ref bean="skill_7731"/>
-          <ref bean="skill_7730"/>
-          <ref bean="skill_7739"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7733"/>
-          <ref bean="skill_7734"/>
-          <ref bean="skill_7723"/>
-          <ref bean="skill_7742"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <null/>
-          <null/>
-          <null/>
-          <ref bean="skill_7738"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7735"/>
-          <null/>
-          <ref bean="skill_7737"/>
-          <null/>
-        </list>
-      </list>
-    </property>
-  </bean>
-  <bean id="job_defensio" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="디펜시오"/>
-    <property name="identifier" value="defensio"/>
-    <property name="advancement" value="2"/>
-    <property name="parent" ref="job_patrona"/>
-    <property name="spRatio">
-      <list>
-        <value>0.625</value>
-        <value>0.645</value>
-        <value>0.625</value>
-      </list>
-    </property>
-    <property name="skillTree">
-      <list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7761"/>
-          <null/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7762"/>
-          <ref bean="skill_7764"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <null/>
-          <ref bean="skill_7765"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <null/>
-          <ref bean="skill_7766"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7763"/>
-          <ref bean="skill_7767"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7769"/>
-          <ref bean="skill_7768"/>
-          <null/>
-          <null/>
-        </list>
-      </list>
-    </property>
-  </bean>
-  <bean id="job_ruina" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="루이나"/>
-    <property name="identifier" value="ruina"/>
-    <property name="advancement" value="2"/>
-    <property name="parent" ref="job_patrona"/>
-    <property name="spRatio">
-      <list>
-        <value>0.625</value>
-        <value>0.645</value>
-        <value>0.625</value>
-      </list>
-    </property>
-    <property name="skillTree">
-      <list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7751"/>
-          <null/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7752"/>
-          <ref bean="skill_7754"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <null/>
-          <ref bean="skill_7755"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <null/>
-          <ref bean="skill_7756"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7753"/>
-          <ref bean="skill_7757"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_7759"/>
-          <ref bean="skill_7758"/>
-          <null/>
-          <null/>
-        </list>
-      </list>
-    </property>
-  </bean>
-  <bean id="job_hunter" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="헌터"/>
-    <property name="identifier" value="hunter"/>
-    <property name="advancement" value="1"/>
-    <property name="parent" ref="job_archer"/>
-    <property name="spRatio">
-      <list>
-        <value>0.625</value>
-        <value>0.645</value>
-        <value>0.0</value>
-      </list>
-    </property>
-    <property name="skillTree">
-      <list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1611"/>
-          <ref bean="skill_1602"/>
-          <ref bean="skill_1603"/>
-          <ref bean="skill_1604"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1605"/>
-          <ref bean="skill_1606"/>
-          <ref bean="skill_1609"/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1608"/>
-          <null/>
-          <ref bean="skill_1613"/>
-          <ref bean="skill_1607"/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1601"/>
-          <ref bean="skill_1612"/>
-          <ref bean="skill_1620"/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1615"/>
-          <ref bean="skill_1616"/>
-          <ref bean="skill_1619"/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1618"/>
-          <null/>
-          <null/>
-          <null/>
-        </list>
-      </list>
-    </property>
-  </bean>
-  <bean id="job_silverhunter" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="실버헌터"/>
-    <property name="identifier" value="silverhunter"/>
-    <property name="advancement" value="2"/>
-    <property name="parent" ref="job_hunter"/>
-    <property name="spRatio">
-      <list>
-        <value>0.625</value>
-        <value>0.645</value>
-        <value>0.625</value>
-      </list>
-    </property>
-    <property name="skillTree">
-      <list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1701"/>
-          <ref bean="skill_1702"/>
-          <null/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1703"/>
-          <ref bean="skill_1704"/>
-          <ref bean="skill_1705"/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <null/>
-          <ref bean="skill_1706"/>
-          <ref bean="skill_1707"/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1708"/>
-          <ref bean="skill_1709"/>
-          <ref bean="skill_1710"/>
-          <null/>
-        </list>
-        <list value-type="dnss.model.Skill">
-          <ref bean="skill_1711"/>
-          <ref bean="skill_1712"/>
-          <ref bean="skill_1713"/>
           <null/>
         </list>
         <list value-type="dnss.model.Skill">
@@ -3382,21 +3065,6 @@
     <property name="secondary" ref="job_avenger"/>
     <property name="tertiary" ref="job_darkavenger"/>
   </bean>
-  <bean id="jobs_defensio" class="dnss.model.Jobs" scope="prototype">
-    <property name="primary" ref="job_machina"/>
-    <property name="secondary" ref="job_patrona"/>
-    <property name="tertiary" ref="job_defensio"/>
-  </bean>
-  <bean id="jobs_ruina" class="dnss.model.Jobs" scope="prototype">
-    <property name="primary" ref="job_machina"/>
-    <property name="secondary" ref="job_patrona"/>
-    <property name="tertiary" ref="job_ruina"/>
-  </bean>
-  <bean id="jobs_silverhunter" class="dnss.model.Jobs" scope="prototype">
-    <property name="primary" ref="job_archer"/>
-    <property name="secondary" ref="job_hunter"/>
-    <property name="tertiary" ref="job_silverhunter"/>
-  </bean>
   <util:list id="all_jobs_primary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_warrior"/>
     <ref bean="job_archer"/>
@@ -3406,7 +3074,6 @@
     <ref bean="job_kali"/>
     <ref bean="job_assassin"/>
     <ref bean="job_lencea"/>
-    <ref bean="job_machina"/>
   </util:list>
   <util:list id="all_jobs_secondary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_swordmaster"/>
@@ -3425,8 +3092,6 @@
     <ref bean="job_bringer"/>
     <ref bean="job_piercer"/>
     <ref bean="job_avenger"/>
-    <ref bean="job_patrona"/>
-    <ref bean="job_hunter"/>
   </util:list>
   <util:list id="all_jobs_tertiary" value-type="dnss.model.Job" scope="singleton">
     <ref bean="job_gladiator"/>
@@ -3460,8 +3125,5 @@
     <ref bean="job_flurry"/>
     <ref bean="job_stingbreezer"/>
     <ref bean="job_darkavenger"/>
-    <ref bean="job_defensio"/>
-    <ref bean="job_ruina"/>
-    <ref bean="job_silverhunter"/>
   </util:list>
 </beans>

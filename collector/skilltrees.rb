@@ -39,7 +39,8 @@ FROM jobtable
 WHERE _service is TRUE
 QUERY
 
-character_union = ["SELECT * FROM skilltable_character90passive"]
+character_union = []
+#character_union = ["SELECT * FROM skilltable_character90passive"]
 conn.exec(query).each_dnt do |job|
   job['jobname'] = uistring[job['jobname']]
   job['skills'] = Hash.new

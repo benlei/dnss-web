@@ -24,7 +24,8 @@ query = <<sql_query
   ORDER BY _id ASC
 sql_query
 
-character_union = ["SELECT * FROM skilltable_character90passive"]
+character_union = []
+#character_union = ["SELECT * FROM skilltable_character90passive"]
 conn.exec(query).each_dnt do |job|
   job['jobname'] = uistring[job['jobname']]
   job['skilltree'] = Array.new
