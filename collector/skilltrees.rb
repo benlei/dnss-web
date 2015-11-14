@@ -132,7 +132,11 @@ def add_skill(jobs, uistring, skill, mode)
   end
 
   s = jobs[skill['needjob']]['skills'][skill['id']]['levels'][skill["skilllevel"] - 1]
-  
+
+  if mode == "pve"
+    s["spcost"] = skill["spcost"]
+  end
+
   cd = skill['delaytime'] / 1000.0
   cd = cd.to_i if cd == cd.to_i
   
