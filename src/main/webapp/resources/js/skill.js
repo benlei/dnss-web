@@ -39,10 +39,11 @@ function Skill(id, s, e) {
       }
     }
 
-    if (s.levels[this.getLevel()-1] === undefined) {
+    try {
+        return this.getLevel() ? s.levels[this.getLevel()-1].totalspcost : 0;
+    } catch(e) {
         dnss.t5Alert();
     }
-    return this.getLevel() ? s.levels[this.getLevel()-1].totalspcost : 0;
   };
 
 
