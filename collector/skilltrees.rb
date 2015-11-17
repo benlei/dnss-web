@@ -39,7 +39,8 @@ FROM jobtable
 WHERE _service is TRUE
 QUERY
 
-character_union = ["SELECT * FROM skilltable_character90passive"]
+character_union = []
+#character_union = ["SELECT * FROM skilltable_character90passive"]
 conn.exec(query).each_dnt do |job|
   job['jobname'] = uistring[job['jobname']]
   job['skills'] = Hash.new
@@ -107,7 +108,8 @@ SELECT _needjob,
        _skillexplanationid,
        _skillexplanationidparam,
        _decreasesp,
-       _delaytime
+       _delaytime,
+      _globalcooltimepve, _globalcooltimepvp
 FROM %s c
 INNER JOIN (#{character_union}) s
   ON _skillindex = s._primaryid
@@ -137,9 +139,15 @@ def add_skill(jobs, uistring, skill, mode)
     s["spcost"] = skill["spcost"]
   end
 
-  cd = skill['delaytime'] / 1000.0
+  cd = skill['delaytime']
+  if mode == "pve" && skill['globalcooltimepve'] > 0
+    cd = skill['globalcooltimepve']
+  elsif mode == "pvp" && skill['globalcooltimepvp'] > 0
+    cd = skill['globalcooltimepvp']
+  end
+  cd = cd / 1000.0
   cd = cd.to_i if cd == cd.to_i
-  
+
   s["cd"][mode] = cd
   s['mpcost'][mode] = skill['decreasesp']
   
