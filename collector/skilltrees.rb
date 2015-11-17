@@ -108,7 +108,8 @@ SELECT _needjob,
        _skillexplanationid,
        _skillexplanationidparam,
        _decreasesp,
-       _delaytime
+       _delaytime,
+      _globalcooltimepve, _globalcooltimepvp
 FROM %s c
 INNER JOIN (#{character_union}) s
   ON _skillindex = s._primaryid
@@ -140,6 +141,11 @@ def add_skill(jobs, uistring, skill, mode)
 
   cd = skill['delaytime'] / 1000.0
   cd = cd.to_i if cd == cd.to_i
+  if mode == "pve" && skill['globalcooltimepve'] > 0
+    cd = skill['globalcooltimepve']
+  elsif mode == "pvp" && skill['globalcooltimepvp'] > 0
+    cd = skill['globalcooltimepvp']
+  end
   
   s["cd"][mode] = cd
   s['mpcost'][mode] = skill['decreasesp']
