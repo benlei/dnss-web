@@ -139,14 +139,15 @@ def add_skill(jobs, uistring, skill, mode)
     s["spcost"] = skill["spcost"]
   end
 
-  cd = skill['delaytime'] / 1000.0
-  cd = cd.to_i if cd == cd.to_i
+  cd = skill['delaytime']
   if mode == "pve" && skill['globalcooltimepve'] > 0
     cd = skill['globalcooltimepve']
   elsif mode == "pvp" && skill['globalcooltimepvp'] > 0
     cd = skill['globalcooltimepvp']
   end
-  
+  cd = cd / 1000.0
+  cd = cd.to_i if cd == cd.to_i
+
   s["cd"][mode] = cd
   s['mpcost'][mode] = skill['decreasesp']
   
