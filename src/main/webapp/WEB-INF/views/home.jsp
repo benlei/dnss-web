@@ -64,6 +64,7 @@
 		<div id="skill-mp" class="y">Fee MP: <span class="w" data-after="of MP"></span></div>
 		<div id="skill-required-weapon" class="y">Required Weapon(s): <span class="w"></span></div>
 		<div id="skill-type" class="y">Skill Type: <span class="w"></span></div>
+		<div id="skill-element" class="y">Attribute: <span class="w"></span></div>
 		<div id="skill-cd" class="y">Cooldown: <span class="w" data-after="sec"></span></div>
 		<div id="skill-total-sp" class="y">Total SP: <span class="w"></span></div>
 		<div class="separator"></div>
@@ -88,6 +89,7 @@
 var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	sp:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${jobs.maxSP}],
 	skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
+	skillelements:[<c:forEach items="${skill_elements}" var="element" varStatus="loop">"${element}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
 	cap: ${jobs.level},
 	max_cap: ${max_cap}};

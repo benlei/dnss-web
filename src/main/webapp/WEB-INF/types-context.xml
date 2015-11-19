@@ -3,8 +3,16 @@
   <util:list id="skill_types" value-type="java.lang.String" scope="singleton">
     <value>Instant</value>
     <value>Passive</value>
-    <value>Reactive Passive</value>
+    <value>Passive</value>
     <value>Passive Enhanced</value>
+    <value>Debuff</value>
+    <value>Buff</value>
+  </util:list>
+  <util:list id="skill_elements" value-type="java.lang.String" scope="singleton">
+    <value>Fire</value>
+    <value>Water</value>
+    <value>Light</value>
+    <value>Dark</value>
   </util:list>
   <bean id="warrior_weapons" class="java.util.HashMap" scope="singleton">
     <constructor-arg>

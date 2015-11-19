@@ -278,6 +278,10 @@ function Skill(id, s, e) {
     return properties.skilltypes[s.type];
   };
 
+  this.getElement = function() {
+    return s.element != -1 ? properties.skillelements[s.element] : -1;
+  };
+
   this.getDescription = function() {
     return this.getLevel() ? messages.get(s.levels[this.getLevel()-1].explanationid[description.getMode()],
       s.levels[this.getLevel()-1].explanationparams[description.getMode()]) : -1;

@@ -10,6 +10,7 @@ var description = new (function Description() {
     mp = $("#skill-mp .w"),
     required_weaps = {main:$("#skill-required-weapon"), desc:$("#skill-required-weapon .w")},
     type = $("#skill-type .w"),
+    element = {main:$("#skill-element"), desc:$("#skill-element .w")},
     cd = $("#skill-cd .w"),
     total_sp = $("#skill-total-sp .w"),
 
@@ -62,6 +63,7 @@ var description = new (function Description() {
     setMP();
     setRequiredWeapons();
     setType();
+    setElement();
     setCD();
     setTotalSP();
 
@@ -136,6 +138,10 @@ var description = new (function Description() {
 
   function setType() {
     type.html(skill.getType());
+  }
+
+  function setElement() {
+    showOrHide(element, skill.getElement());
   }
 
   function setCD() {
