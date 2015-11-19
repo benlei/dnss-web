@@ -64,7 +64,7 @@ public class JobController {
         jobs.setMaxSP(sp.forCap(level));
 
         // for prefixing stuff
-        model.addAttribute("time", DragonNest.getVersion());
+        model.addAttribute("time", "version=" + DragonNest.getVersion() + "&time=" + TIME);
         model.addAttribute("max_cap", sp.getLatestCap());
 
         // the jobs
