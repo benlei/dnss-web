@@ -93,6 +93,6 @@ var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus=
 	weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
 	cap: ${jobs.level},
 	max_cap: ${max_cap}};
-dnss.start(${time});
+dnss.start("${time}");
 </script>
 </html>
