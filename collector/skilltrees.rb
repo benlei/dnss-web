@@ -61,7 +61,8 @@ query = <<sql_query
 SELECT s._primaryid as id,
        _nameid,
        _needjob,
-       _skilltype as type,
+       _bufficonimageindex as buff, _debufficonimageindex as debuff, _skilltype as type,
+       _element,
        _needweapontype1, _needweapontype2,
        _parentskillid1, _parentskillid2,
        _needparentskilllevel1, _needparentskilllevel2,
@@ -78,6 +79,14 @@ conn.exec(query).each_dnt do |skill|
   jobs[skill['needjob']]['messages'][skill['nameid']] = uistring[skill['nameid']]
 
   skill['levels'] = Array.new
+
+  if skill['type'] == 0
+    if skill['debuff'] != -1
+      skill['type'] = 4
+    elsif skill['buff'] != -1
+      skill['type'] = 5
+    end
+  end
 
   skill['needweapon'] = Array.new
   skill['needweapon'] << skill['needweapontype1'] unless skill['needweapontype1'] == -1
@@ -96,7 +105,8 @@ conn.exec(query).each_dnt do |skill|
     'needweapontype1', 'needweapontype2',
     'needbasicsp1', 'needfirstsp1',
     'needparentskilllevel1', 'needparentskilllevel2',
-    'parentskillid1', 'parentskillid2'].each {|a| skill.delete(a)}
+    'parentskillid1', 'parentskillid2',
+    'buff', 'debuff'].each {|a| skill.delete(a)}
 end
 
 query = <<QUERY

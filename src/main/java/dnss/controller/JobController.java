@@ -42,6 +42,9 @@ public class JobController {
     @Resource(name="skill_types")
     private List<String> skillTypes; // singleton, do not alter
 
+    @Resource(name="skill_elements")
+    private List<String> skillElements; // singleton, do not alter
+
     private final static long TIME = System.currentTimeMillis() / 1000;
 
     @RequestMapping("/job/{identifier:[a-z]+}-{level:[1-9][0-9]*}")
@@ -77,6 +80,7 @@ public class JobController {
 
         // the skill + weapon types
         model.addAttribute("skill_types", skillTypes);
+        model.addAttribute("skill_elements", skillElements);
         model.addAttribute("weapon_types", context.getBean(jobs.getPrimary().getIdentifier() + "_weapons"));
 
         // sets the most recent job

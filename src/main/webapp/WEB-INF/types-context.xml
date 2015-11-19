@@ -5,6 +5,14 @@
     <value>패시브</value>
     <value>패시브</value>
     <value>강화패시브</value>
+    <value>디버프</value>
+    <value>버프</value>
+  </util:list>
+  <util:list id="skill_elements" value-type="java.lang.String" scope="singleton">
+    <value>불</value>
+    <value>물</value>
+    <value>빛</value>
+    <value>암흑</value>
   </util:list>
   <bean id="warrior_weapons" class="java.util.HashMap" scope="singleton">
     <constructor-arg>

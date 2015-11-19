@@ -39,7 +39,8 @@ FROM jobtable
 WHERE _service is TRUE AND _jobnumber = 0
 QUERY
 
-character_union = ["SELECT * FROM skilltable_character90passive"]
+character_union = []
+#character_union = ["SELECT * FROM skilltable_character90passive"]
 conn.exec(query).each_dnt do |job|
   character_union << "SELECT * FROM skilltable_character#{job['englishname']}"
 end

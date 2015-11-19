@@ -7,6 +7,14 @@ var dnss = new (function DNSS() {
   var loaded = 0;
   var ultimates = [];
   var fullscreen = false;
+  var alerted = false;
+
+  this.t5Alert = function() {
+    if (! alerted) {
+        alert("Hey! You're using a T4 build! This simulator is for T5 builds and is not backwards compatible.");
+        alerted = true;
+    }
+  };
 
   this.start = function(v) {
     if (started) { return; }

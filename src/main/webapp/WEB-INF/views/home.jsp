@@ -63,6 +63,7 @@
 		<div id="skill-mp" class="y">수수료 MP: <span class="w"></span></div>
 		<div id="skill-required-weapon" class="y">필요 무기: <span class="w"></span></div>
 		<div id="skill-type" class="y">스킬발동: <span class="w"></span></div>
+        <div id="skill-element" class="y">속성: <span class="w"></span></div>
 		<div id="skill-cd" class="y">재사용시간: <span class="w" data-after="초"></span></div>
 		<div id="skill-total-sp" class="y">사용한 스킬 포인트: <span class="w"></span></div>
 		<div class="separator"></div>
@@ -87,6 +88,7 @@
 var properties = {jobs:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">{id:"${job.identifier}",name:"${job.name}"}<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	sp:[<c:forEach items="${jobs.iterator}" var="job" varStatus="loop">${job.maxSP},</c:forEach>${jobs.maxSP}],
 	skilltypes:[<c:forEach items="${skill_types}" var="type" varStatus="loop">"${type}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
+	skillelements:[<c:forEach items="${skill_elements}" var="element" varStatus="loop">"${element}"<c:if test="${!loop.last}">,</c:if></c:forEach>],
 	weapontypes:{<c:forEach items="${weapon_types}" var="e" varStatus="loop">${e.key}:"${e.value}"<c:if test="${!loop.last}">,</c:if></c:forEach>},
 	cap: ${jobs.level},
 	max_cap: ${max_cap}};

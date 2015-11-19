@@ -39,7 +39,11 @@ function Skill(id, s, e) {
       }
     }
 
-    return this.getLevel() ? s.levels[this.getLevel()-1].totalspcost : 0;
+    try {
+        return this.getLevel() ? s.levels[this.getLevel()-1].totalspcost : 0;
+    } catch(e) {
+        dnss.t5Alert();
+    }
   };
 
 
@@ -272,6 +276,10 @@ function Skill(id, s, e) {
 
   this.getType = function() {
     return properties.skilltypes[s.type];
+  };
+
+  this.getElement = function() {
+    return s.element != -1 ? properties.skillelements[s.element] : -1;
   };
 
   this.getDescription = function() {
