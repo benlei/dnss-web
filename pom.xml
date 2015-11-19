@@ -19,7 +19,7 @@
     <scm>
         <connection>scm:git:git@github.com:ben-lei/dnss-web.git</connection>
         <developerConnection>scm:git:git@github.com:ben-lei/dnss-web.git</developerConnection>
-		<url>scm:git:git@github.com:ben-lei/dnss-web.git</url>
+        <url>https://github.com/ben-lei/dnss-web</url>
         <tag>HEAD</tag>
     </scm>
 
