@@ -4,7 +4,7 @@
     <groupId>dnss</groupId>
     <artifactId>dnss-heroku</artifactId>
     <packaging>war</packaging>
-    <version>1.15-SNAPSHOT</version>
+    <version>1.16-SNAPSHOT</version>
 
     <properties>
         <spring.version>4.1.5.RELEASE</spring.version>
@@ -17,9 +17,9 @@
 
 
     <scm>
-        <connection>scm:git:git@github.com:ben-lei/dn-skill-sim.git</connection>
-        <developerConnection>scm:git:git@github.com:ben-lei/dn-skill-sim.git</developerConnection>
-        <url>https://github.com/ben-lei/dn-skill-sim</url>
+        <connection>scm:git:git@github.com:ben-lei/dnss-web.git</connection>
+        <developerConnection>scm:git:git@github.com:ben-lei/dnss-web.git</developerConnection>
+        <url>https://github.com/ben-lei/dnss-web</url>
         <tag>HEAD</tag>
     </scm>
 

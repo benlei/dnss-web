@@ -61,7 +61,7 @@ query = <<sql_query
 SELECT s._primaryid as id,
        _nameid,
        _needjob,
-       _bufficonimageindex as buff, _debufficonimageindex as debuff, _skilltype as type,
+       _durationtype, _skilltype as type,
        _element,
        _needweapontype1, _needweapontype2,
        _parentskillid1, _parentskillid2,
@@ -81,10 +81,10 @@ conn.exec(query).each_dnt do |skill|
   skill['levels'] = Array.new
 
   if skill['type'] == 0
-    if skill['debuff'] != -1
-      skill['type'] = 4
-    elsif skill['buff'] != -1
+    if skill['durationtype'] == 1 # buff
       skill['type'] = 5
+    elsif skill['durationtype'] == 2 # debuff
+      skill['type'] = 4
     end
   end
 
@@ -106,7 +106,7 @@ conn.exec(query).each_dnt do |skill|
     'needbasicsp1', 'needfirstsp1',
     'needparentskilllevel1', 'needparentskilllevel2',
     'parentskillid1', 'parentskillid2',
-    'buff', 'debuff'].each {|a| skill.delete(a)}
+    'durationtype'].each {|a| skill.delete(a)}
 end
 
 query = <<QUERY
