@@ -1,8 +1,8 @@
 <%@page pageEncoding="UTF-8" %><!DOCTYPE html><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
-<title>${jobs.tertiary.name} - Dragon Nest Skill Simulator</title>
+<title>${jobs.tertiary.name} - DN SEA Skill Simulator</title>
 <meta charset="utf-8">
-<meta name="description" content="Simulate and share your Dragon Nest skill builds using the Dragon Nest Skill Simulator (North America)!">
+<meta name="description" content="Simulate and share your Dragon Nest skill builds using the Dragon Nest Skill Simulator (South East Asia)!">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 <link href="/dnss.css?${time}" rel="stylesheet" type="text/css"/>
 <body>

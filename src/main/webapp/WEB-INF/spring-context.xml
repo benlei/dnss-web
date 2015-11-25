@@ -212,7 +212,7 @@
     </property>
   </bean>
   <bean id="job_academic" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Tinkerer"/>
+    <property name="name" value="Academic"/>
     <property name="identifier" value="academic"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -368,7 +368,7 @@
     </property>
   </bean>
   <bean id="job_lencea" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Lencea"/>
+    <property name="name" value="Lancea"/>
     <property name="identifier" value="lencea"/>
     <property name="advancement" value="0"/>
     <property name="spRatio">
@@ -420,7 +420,7 @@
     </property>
   </bean>
   <bean id="job_swordmaster" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Swordsman"/>
+    <property name="name" value="Sword Master"/>
     <property name="identifier" value="swordmaster"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_warrior"/>
@@ -526,7 +526,7 @@
     </property>
   </bean>
   <bean id="job_bowmaster" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Sharpshooter"/>
+    <property name="name" value="Bow Master"/>
     <property name="identifier" value="bowmaster"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_archer"/>
@@ -632,7 +632,7 @@
     </property>
   </bean>
   <bean id="job_elementallord" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Elementalist"/>
+    <property name="name" value="Elemental Lord"/>
     <property name="identifier" value="elementallord"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_soceress"/>
@@ -685,7 +685,7 @@
     </property>
   </bean>
   <bean id="job_forceuser" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Mystic"/>
+    <property name="name" value="Force User"/>
     <property name="identifier" value="forceuser"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_soceress"/>
@@ -897,7 +897,7 @@
     </property>
   </bean>
   <bean id="job_moonlord" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Lunar Knight"/>
+    <property name="name" value="Moonlord"/>
     <property name="identifier" value="moonlord"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_swordmaster"/>
@@ -1109,7 +1109,7 @@
     </property>
   </bean>
   <bean id="job_artillery" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Warden"/>
+    <property name="name" value="Artillery"/>
     <property name="identifier" value="artillery"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_bowmaster"/>
@@ -1268,7 +1268,7 @@
     </property>
   </bean>
   <bean id="job_saleana" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Pyromancer"/>
+    <property name="name" value="Saleana"/>
     <property name="identifier" value="saleana"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_elementallord"/>
@@ -1321,7 +1321,7 @@
     </property>
   </bean>
   <bean id="job_elestra" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Ice Witch"/>
+    <property name="name" value="Elestra"/>
     <property name="identifier" value="elestra"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_elementallord"/>
@@ -1374,7 +1374,7 @@
     </property>
   </bean>
   <bean id="job_smasher" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="War Mage"/>
+    <property name="name" value="Smasher"/>
     <property name="identifier" value="smasher"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_forceuser"/>
@@ -1427,7 +1427,7 @@
     </property>
   </bean>
   <bean id="job_majesty" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Chaos Mage"/>
+    <property name="name" value="Majesty"/>
     <property name="identifier" value="majesty"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_forceuser"/>
@@ -2328,7 +2328,7 @@
     </property>
   </bean>
   <bean id="job_chaser" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Shinobi"/>
+    <property name="name" value="Chaser"/>
     <property name="identifier" value="chaser"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_assassin"/>
@@ -2381,7 +2381,7 @@
     </property>
   </bean>
   <bean id="job_ripper" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Reaper"/>
+    <property name="name" value="Ripper"/>
     <property name="identifier" value="ripper"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_chaser"/>
@@ -2487,7 +2487,7 @@
     </property>
   </bean>
   <bean id="job_bringer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Taoist"/>
+    <property name="name" value="Bringer"/>
     <property name="identifier" value="bringer"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_assassin"/>
@@ -2540,7 +2540,7 @@
     </property>
   </bean>
   <bean id="job_lightfury" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Light Bringer"/>
+    <property name="name" value="Light Fury"/>
     <property name="identifier" value="lightfury"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_bringer"/>
@@ -2646,7 +2646,7 @@
     </property>
   </bean>
   <bean id="job_piercer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Lancer"/>
+    <property name="name" value="Piercer"/>
     <property name="identifier" value="piercer"/>
     <property name="advancement" value="1"/>
     <property name="parent" ref="job_lencea"/>
@@ -2699,7 +2699,7 @@
     </property>
   </bean>
   <bean id="job_flurry" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Dragoon"/>
+    <property name="name" value="Flurry"/>
     <property name="identifier" value="flurry"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_piercer"/>
@@ -2752,7 +2752,7 @@
     </property>
   </bean>
   <bean id="job_stingbreezer" class="dnss.model.Job" scope="prototype">
-    <property name="name" value="Valkyrie"/>
+    <property name="name" value="Sting Breezer"/>
     <property name="identifier" value="stingbreezer"/>
     <property name="advancement" value="2"/>
     <property name="parent" ref="job_piercer"/>
