@@ -98,7 +98,7 @@ public class JobController {
         String query = request.getQueryString();
         query = query == null ? "" : query.substring(0, 72);
         if (query.length() != 72) {
-            query = "-----------------------------------------------------------------------";
+            query = "------------------------------------------------------------------------";
         }
 
         return String.format("redirect:https://dnmaze.com/%s-%d/%s", identifier, level, query);
