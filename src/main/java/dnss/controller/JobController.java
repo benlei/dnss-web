@@ -1,8 +1,6 @@
 package dnss.controller;
 
-import dnss.DragonNest;
 import dnss.model.Job;
-import dnss.model.Jobs;
 import dnss.model.SP;
 import dnss.web.Cookies;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +16,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
-
-import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
 
 @Controller
 @RequestMapping("/")
@@ -51,8 +47,10 @@ public class JobController {
     public String job(@PathVariable("identifier") String identifier,
                       @PathVariable("level") int level,
                       @ModelAttribute("cookies") Cookies cookies,
+                      HttpServletRequest request,
                       HttpServletResponse response,
                       ModelMap model) throws Exception {
+        /*
         String bean = "jobs_"  +identifier;
         if (! context.containsBean(bean)) {
             response.sendError(SC_NOT_FOUND, "No tertiary job '" + identifier + "'");
@@ -94,11 +92,22 @@ public class JobController {
         }
 
         return "home";
+        */
+
+//        Build build = new Build();
+        String query = request.getQueryString();
+        query = query == null ? "" : query.substring(0, 72);
+        if (query.length() != 72) {
+            query = "-----------------------------------------------------------------------";
+        }
+
+        return String.format("redirect:https://dnmaze.com/%s-%d/%s", identifier, level, query);
     }
 
     @RequestMapping("/job/{identifier:[a-z]+}")
     public String job(@PathVariable("identifier") String identifier,
                       @ModelAttribute("cookies") Cookies cookies,
+                      HttpServletRequest request,
                       HttpServletResponse response,
                       ModelMap model) throws Exception {
         int cap = sp.getLatestCap();
@@ -112,11 +121,13 @@ public class JobController {
             }
         }
 
-        return job(identifier, cap, cookies, response, model);
+
+        return String.format("redirect:https://dnmaze.com/%s", identifier);
     }
 
     @RequestMapping("/")
     public String job(@ModelAttribute("cookies") Cookies cookies,
+                      HttpServletRequest request,
                       HttpServletResponse response,
                       ModelMap model) throws Exception {
         String identifier = null;
@@ -143,7 +154,7 @@ public class JobController {
             identifier = tertiaries.get(tertiaries.size() - 1).getIdentifier();
         }
 
-        return job(identifier, cap, cookies, response, model);
+        return "redirect:https://dnmaze.com/";
     }
 
     @ModelAttribute("cookies")
