@@ -1,7 +1,6 @@
 package dnss.controller;
 
-import dnss.model.Job;
-import dnss.model.SP;
+import dnss.model.*;
 import dnss.web.Cookies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -50,10 +49,10 @@ public class JobController {
                       HttpServletRequest request,
                       HttpServletResponse response,
                       ModelMap model) throws Exception {
-        /*
+
         String bean = "jobs_"  +identifier;
         if (! context.containsBean(bean)) {
-            response.sendError(SC_NOT_FOUND, "No tertiary job '" + identifier + "'");
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "No tertiary job '" + identifier + "'");
         }
 
         Jobs jobs = (Jobs)context.getBean(bean);
@@ -61,6 +60,7 @@ public class JobController {
         jobs.setLevel(level);
         jobs.setMaxSP(sp.forCap(level));
 
+        /*
         // for prefixing stuff
         model.addAttribute("time", "version=" + DragonNest.getVersion() + "&time=" + TIME);
         model.addAttribute("max_cap", sp.getLatestCap());
@@ -94,11 +94,33 @@ public class JobController {
         return "home";
         */
 
-//        Build build = new Build();
-        String query = request.getQueryString();
-        query = query == null ? "" : query.substring(0, 72);
-        if (query.length() != 72) {
-            query = "------------------------------------------------------------------------";
+        Build build = new Build(request.getQueryString());
+
+        int pos = 0;
+        for (Job job : jobs) {
+            if (job == null) {
+                pos += 24;
+                continue;
+            }
+
+            for (int i = 0; i < 24; i++, pos++) {
+                Skill skill = job.getSkill(i);
+                if (skill == null) {
+                    continue;
+                }
+
+                int lvl = build.get(pos);
+                if (lvl > skill.getMaxLevel()) {
+                    lvl = skill.getMaxLevel();
+                }
+                build.put(pos, lvl);
+                skill.setLevel(lvl);
+            }
+        }
+
+        String query = build.toString().substring(0, 72);
+        if (query.length() < 72) {
+            query = new Build(null).toString().substring(0, 72); // vanilla build
         }
 
         return String.format("redirect:https://dnmaze.com/%s-%d/%s", identifier, level, query);
